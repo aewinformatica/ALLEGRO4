@@ -66,14 +66,13 @@ void LevelClass::DesenhaCenario(BITMAP *Cenario, int iFase){
    tile.CarregaTexturas();
    CarregaMatriz();
 
-   for (y=0; y < iTilesY; y++)
-   {
-      for (x=0; x < iTilesX; x++)
-      {
+   
+   for (y=0; y < iTilesY; y++){
+       
+      for (x=0; x < iTilesX; x++){
+      
          if  ((char)Mapa[iFase][x][y] == '#') // Parede
            draw_sprite(Cenario,tile.Textura[0], x*tile.w , y * this->tile.h);
-       
-
          else
          if  ((char)Mapa[iFase][x][y] == '-') // Grama
             draw_sprite(Cenario,tile.Textura[1], x*tile.w, y*tile.h);
@@ -82,7 +81,8 @@ void LevelClass::DesenhaCenario(BITMAP *Cenario, int iFase){
             draw_sprite(Cenario,tile.Textura[2], x*tile.w, y*tile.h);
 
       }
-   }     
+   }  
+   
 }
 
 LevelClass::~LevelClass(){

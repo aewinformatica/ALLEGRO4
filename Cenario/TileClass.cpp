@@ -9,7 +9,7 @@ TileClass::TileClass(){
     this->w = this->h = 32;
     this->qtdTextura = 3;
     
-    for(int i=0; i < this->qtdTextura -1;this->qtdTextura++){ 
+    for(int i=0; i < this->qtdTextura -1;i++){ 
     this->Textura[i] = NULL; 
     }
 };
@@ -33,7 +33,7 @@ void TileClass::CarregaTexturas()
 
 TileClass::~TileClass(){
 
-    for(int i=0; i < this->qtdTextura -1;this->qtdTextura++){ 
+    for(int i=0; i < this->qtdTextura -1;i++){ 
      destroy_bitmap(this->Textura[i]); 
     }
     

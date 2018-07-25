@@ -1,7 +1,7 @@
 #include <allegro.h>
 #include <iostream>
 #include <fstream>
-#include "TileClass.h"
+
 #include "LevelClass.h"
 
 using namespace std;
@@ -19,10 +19,10 @@ void status(BITMAP * Buffer);
 
 const int iQtdeFases = 3;    // Jogo com 3 fases
 
-
 int iFaseAtual = 0; // Guarda o index da fase atual.
-   TileClass tiles;
-   LevelClass level;
+   
+LevelClass level;
+
 int main()
 {
    allegro_init();
@@ -41,7 +41,7 @@ int main()
    BITMAP *Buffer = NULL;
    Buffer = create_bitmap(SCREEN_W, SCREEN_H);
  
-  // funciona tiles.CarregaTexturas();
+
 
 
    while (!key[KEY_ESC])
@@ -58,7 +58,7 @@ int main()
          ::fps++;
       }
       blit (Buffer,screen, 0, 0, 0, 0,SCREEN_W, SCREEN_H);
-      vsync();
+      //vsync();
    }
    //Desaloca as imagens da memória
    destroy_bitmap(Buffer);
