@@ -70,7 +70,7 @@ void LevelClass::DesenhaCenario(BITMAP *Cenario, int iFase){
    for (y=0; y < iTilesY; y++){
        
       for (x=0; x < iTilesX; x++){
-      
+       
          if  ((char)Mapa[iFase][x][y] == '#') // Parede
            draw_sprite(Cenario,tile.Textura[0], x*tile.w , y * this->tile.h);
          else

@@ -4,6 +4,7 @@
 #include <time.h>
 #include <allegro.h>
 
+
 #include "mario.h"
 #include "imagens.h"
 #include "scroll.h"

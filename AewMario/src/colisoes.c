@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <allegro.h>
+#include <winalleg.h>
 
 #include "mario.h"
 #include "imagens.h"
