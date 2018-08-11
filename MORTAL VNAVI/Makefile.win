@@ -1,0 +1,39 @@
+# Project: GRAB
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = obj/GRAB_private.res
+OBJ  = obj/main.o obj/sistema.o obj/CAnim.o $(RES)
+LINKOBJ  = obj/main.o obj/sistema.o obj/CAnim.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -mwindows -lldpng -lpng -lz -lalpng -lalleg  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = GRAB.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before GRAB.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "GRAB.exe" $(LIBS)
+
+obj/main.o: main.cpp
+	$(CPP) -c main.cpp -o obj/main.o $(CXXFLAGS)
+
+obj/sistema.o: sistema.cpp
+	$(CPP) -c sistema.cpp -o obj/sistema.o $(CXXFLAGS)
+
+obj/CAnim.o: CAnim.cpp
+	$(CPP) -c CAnim.cpp -o obj/CAnim.o $(CXXFLAGS)
+
+obj/GRAB_private.res: GRAB_private.rc 
+	$(WINDRES) -i GRAB_private.rc --input-format=rc -o obj/GRAB_private.res -O coff 

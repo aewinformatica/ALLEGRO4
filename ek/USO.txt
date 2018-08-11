@@ -1,0 +1,13 @@
+int main(int argc, char *argv[])
+{
+   Sistema Jogo;
+
+	// Fica em loop até pressionar a tecla ESC
+	while(!Jogo.Fim())
+	{
+
+while ( spdCounter > 0 ){
+             
+            clear(Buffer);
+            if ( key[KEY_ESC] || key[KEY_F4] ) { Jogo.Sair(); }
+            if ( key[KEY_F5] ) { Jogo.Mudar_Tela(); }

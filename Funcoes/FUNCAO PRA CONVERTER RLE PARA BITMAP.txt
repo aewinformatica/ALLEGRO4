@@ -1,0 +1,12 @@
+              //CRIADA POR WAGNER G JESUS Aka HITMAN
+              BITMAP *rle_to_bitmap(RLE_SPRITE *source){
+              //CRIA UM BITMAP Temporario para tirar a cor de fundo           
+              BITMAP *RLEBMP;
+              RLEBMP = create_bitmap_ex(source->color_depth, source->w, source->h);
+            
+              clear_to_color(RLEBMP, bitmap_mask_color(RLEBMP));
+              draw_rle_sprite(RLEBMP, source, 0, 0);    
+              source = NULL;
+              
+              return RLEBMP;
+              };  

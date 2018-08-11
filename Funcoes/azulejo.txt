@@ -1,0 +1,16 @@
+static void azulejo(BITMAP *b)
+{
+    int c1, c2, c;
+    int x, y;
+
+    c1 = makecol(0x00, 0x00, 0xe0);
+    c2 = makecol(0xe0, 0xe0, 0xf0);
+
+    for (y = 0; y < b->h; y += 16) {
+	c = (y % 32) ? c1 : c2;
+	for (x = 0; x < b->w; x += 16) {
+	    rectfill(b, x, y, x+15, y+15, c);
+	    c = (c == c1) ? c2 : c1;
+	}
+    }
+}

@@ -1,0 +1,53 @@
+
+
+              //CRIADA POR WAGNER G JESUS Aka HITMAN
+              BITMAP *rle_to_bitmap(RLE_SPRITE *source){
+              //CRIA UM BITMAP Temporario para tirar a cor de fundo           
+              BITMAP *RLEBMP;
+              RLEBMP = create_bitmap_ex(source->color_depth, source->w, source->h);
+            
+              clear_to_color(RLEBMP, bitmap_mask_color(RLEBMP));
+              draw_rle_sprite(RLEBMP, source, 0, 0);    
+              source = NULL;
+              
+              return RLEBMP;
+              };   
+
+uso:
+no exemplo foi pego um RLE de um arquivo DAT e transformado  pra BITMAP e recortado usando  GRAB melhorado
+e guardando em um array de BITMAPs de uma classe SPRITE. 
+
+//PEGA A IMAGEM RLE COMO SPRITE
+RLE_SPRITE *spritesheetTemp;
+            spritesheetTemp = (RLE_SPRITE*) dados[RLEindex].dat;
+
+BITMAP *RLE_BITMAP = rle_to_bitmap(spritesheetTemp);
+
+int QtdH = xcolunas;// variavel criada que recebe o valor do DAT
+int QtdV = ylinhas; //variavel criada que recebe o valor do DAT atraves    
+
+int total = (QtdH * QtdV);
+
+  for(int frame=0;frame<total-1;frame++){
+    rleAnimations[frame] = grabframe(RLE_BITMAP,0,0,QtdH,QtdV,frame);
+  }
+
+//como foi obtida as variaveis//
+
+   for (indice=0; dados[indice].type != DAT_END; indice++) {
+      if (stricmp(get_datafile_property(dados+indice, name_type),
+                  busca) == 0) {
+
+const char* busca = " ";
+
+    data_prop = get_datafile_property(dados+indice,DAT_FRAME_WIDTH);
+    if((data_prop != "-1")&&(data_prop != empty_string)){
+    xcolunas = atoi(data_prop);
+    }
+
+    data_prop = get_datafile_property(dados+indice,DAT_FRAME_HEIGHT);
+   if((data_prop != "-1")&&(data_prop != empty_string)){
+    ylinhas = atoi(data_prop);
+    }
+
+}

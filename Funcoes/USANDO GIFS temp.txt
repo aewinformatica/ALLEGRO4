@@ -1,0 +1,30 @@
+      BITMAP **frames;
+      int *durations;
+      char const *name = "fundos/2010.gif";
+      int f,iFrame;
+
+            iFrame = algif_load_animation (name, &frames, &durations); 
+     
+             for (f = 0; f < iFrame; f++){
+             draw_sprite(screen, frames[f], 0, 0);
+             }
+
+void gifTimer(){
+giftempo++;
+}
+END_OF_FUNCTION(gifTimer);  
+LOCK_FUNCTION(gifTimer);  
+LOCK_VARIABLE(gifTimer);
+void draw_gif_animation(){
+
+BITMAP **frames;
+      int *durations;
+      int f,iFrame;
+
+           iFrame = algif_load_animation (name, &frames, &durations); 
+     
+             for (f = 0; f < iFrame; f++){
+             draw_sprite(screen, frames[f], 0, 0);
+             }
+
+}

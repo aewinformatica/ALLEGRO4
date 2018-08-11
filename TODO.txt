@@ -1,0 +1,78 @@
+ Engine:
+    Sistema Gráfico:
+        [x] carregador de pacotes de sprites dinâmicos;
+    Sistema Sonoro:
+        [ ] carregador de sons dinâmicos;
+    Sistema de Animação:
+        [x] carregador de animações dinâmicas;
+    Sistema de Colisão:
+        [ ] carregador de colisões dinâmicas;
+    Sistema de Scripts:
+        [x] Criar funções para encapsular métodos de classes
+        [x] Classe Inimigo genérica
+        [x] Classe Jogador genérica *
+        [x] Classe Cenário genérica
+        [x] Classe Objeto genérica
+        [x] Script em lua com as funções básicas a serem usadas pelos objetos
+        [x] Classe Personagem genérica
+        [x] Script em lua com as funções básicas a serem usadas pelos personagens
+        [x] Possibilidade de um personagem chamar outros personagens como ajudantes
+        [x] Possibilidade de se chamar mais de um ajudante
+        [x] Métodos comuns a serem usados nos scripts
+    Sistema de Input:
+        [x] Classe de input configuravel
+        [ ] Permitir o uso de joysticks com a classe de input
+        [x] Funções de input para serem usadas nos scripts
+        
+- Personagens
+    Estados Comuns:
+        [x] Parado
+        [x] Levando dano
+        [x] Morrendo
+        [ ] Morto
+ 
+    Jogadores:
+        Estados Comuns:
+            [x] Andando
+            [x] Preparando para pular                 
+            [x] Pulando
+            [x] Caindo do pulo 
+            [x] Aterrisando
+ 
+        Lemin
+            [x] Chutando
+
+    Inimigos:
+        Comuns:
+            [x] scripts 
+            [x] definir ações e estados dos inimigos através de scripts em lua                                       
+
+        Caterpie:
+            [x] Andando
+            [x] AI
+ 
+        Slime vermelho:
+            [x] Pulando em cima do personagem            
+
+        Aranha:
+            [x] Cuspindo ácido                                      
+            [x] Ácido caindo no chão e desaparecendo   
+        
+- Cenários
+    Visualiação:
+        [x] Scrooling
+        [x] Parallax scrooling 
+        [x] Carregar o cenário de um arquivo  
+        [x] Layers Suport
+        [x] Scripts  
+        [ ] Importar inimigos no cenário através de um script lua
+ 
+    Objetos
+        [x] Importar objetos de arquivos 
+        [x] scripts 
+        [ ] definir a interação dos objetos com o personagem, e cenário por scripts em lua  
+ Editores:
+
+    [ ] Editor de Cenários
+    [ ] Editor de Personagens
+    [ ] Editor de Objetos interativos

@@ -1,0 +1,42 @@
+if(this->tipo== RLESHEET){
+    data_prop = get_datafile_property(dados,DAT_NAME);
+    if(data_prop){
+    textprintf_ex(screen, font, 0, 100, palette_color[15],-1, "nome %s", data_prop);
+    //while (!keypressed()) ;
+    }
+    
+    data_prop = get_datafile_property(dados,DAT_WIDTH);
+    if(data_prop){
+    textprintf_ex(screen, font, 0, 110, palette_color[15],-1, "frame width %s", data_prop);
+    //while (!keypressed()) ;
+    }
+    
+    data_prop = get_datafile_property(dados,DAT_HEIGHT);
+    if(data_prop){
+    textprintf_ex(screen, font, 0, 120, palette_color[15],-1, "frame height %s", data_prop);
+    //while (!keypressed()) ;
+    }
+    
+    data_prop = get_datafile_property(dados,DAT_FRAME_COUNT);
+    if(data_prop){
+    textprintf_ex(screen, font, 0, 130, palette_color[15],-1, "frame count %s", data_prop);
+    //while (!keypressed()) ;
+    }
+    
+    data_prop = get_datafile_property(dados,DAT_ID('T','B','F','A'));
+    if(data_prop){
+    textprintf_ex(screen, font, 0, 140, palette_color[15],-1, "speed or Time Before Frame Advance (in one-sevenths of a second) %s", data_prop);
+   // while (!keypressed()) ;
+    }
+    
+    data_prop = get_datafile_property(dados,DAT_X_ORIG);
+    if(data_prop){
+    textprintf_ex(screen, font, 0, 150, palette_color[15],-1, "x-origin) %s", data_prop);
+   // while (!keypressed()) ;
+    }
+        data_prop = get_datafile_property(dados,DAT_Y_ORIG);
+    if(data_prop){
+    textprintf_ex(screen, font, 0, 160, palette_color[15],-1, "y-origin) %s", data_prop);
+    while (!keypressed()) ;
+    }
+}

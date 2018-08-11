@@ -1,0 +1,3 @@
+#PRAGMA ONCE
+usado para impedir que um include seja colocado novamente onde já foi incluso
+uma vez durante aquela unidade de compilação

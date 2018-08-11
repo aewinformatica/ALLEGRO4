@@ -1,0 +1,1 @@
+-laldmb -ldumb -lldpng -lpng -lz -lalleg    -lfreetype  -luser32 -lgdi32
