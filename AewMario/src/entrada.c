@@ -13,10 +13,10 @@
 
 void configura_teclas(void)
 {
-   cima = KEY_8_PAD;
-   baixo = KEY_2_PAD;
-   esquerda = KEY_4_PAD;
-   direita = KEY_6_PAD;
+   cima = KEY_W;
+   baixo = KEY_S;
+   esquerda = KEY_A;
+   direita = KEY_D;
    pula = KEY_SPACE;
    corre = KEY_LCONTROL;
 }
