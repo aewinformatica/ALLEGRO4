@@ -27,10 +27,10 @@ volatile int counter;
 int lacos;
 
 /* opcoes de linha de comando */
-char modo_16_bits, arq_fase[256], vol_musica, vol_som;
+char modo_16_bits, arq_fase[2][256], vol_musica, vol_som;
 
 /* totais de jogo do mario */
-int mario_vidas,mario_moedas;
+int mario_vidas,mario_moedas,fase_atual;
 char passou_de_fase;
 
 /* wavs para efeitos sonoros de jogo */

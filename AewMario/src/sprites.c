@@ -65,8 +65,11 @@ void pega_moeda(SPRITE *moeda)
    if (mario_moedas == 100)
    {
       mario_moedas = 0;
+      if(mario_vidas <98){
       mario_vidas++;
-      play_sample(wav_1up,255,128,1000,FALSE);
+      play_sample(wav_1up,255,128,1000,FALSE);	  
+	  }
+	  
    }
 }
 
@@ -269,6 +272,7 @@ void mario_morre(int morre_direto)
       mario->contador = 0;
       stop_midi();
       play_sample(wav_morreu,255,128,1000,FALSE);
+      mario_vidas--;
    }
    else
    {

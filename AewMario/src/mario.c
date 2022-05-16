@@ -168,11 +168,11 @@ void inicia_jogo(void)
    wav_1up = load_wav("sfx/1up.wav");
    wav_fim = load_wav("sfx/fim.wav");
 
-   mario_vidas = 2;
+   mario_vidas = 3;
    mario_moedas = 0;
 
    le_imagens();
-   le_fase(arq_fase);
+   le_fase(arq_fase[fase_atual]);
 }
 
 void processa_linha_de_comando(int argc, char **argv)
@@ -181,15 +181,18 @@ void processa_linha_de_comando(int argc, char **argv)
 
    /* opcoes default */
    modo_16_bits = FALSE;
-   strcpy(arq_fase,"maps/default.map");
+   strcpy(arq_fase[0],"maps/level1-1.map");
+   strcpy(arq_fase[1],"maps/castelo.map");
    vol_musica = 255;
    vol_som = 128;
+   fase_atual = 0;
+   
 
    for(i = 0; i < argc; i++)
    {
       if (strcmp(argv[i],"-mapa") == 0)
          if (i < argc - 1)
-            strcpy(arq_fase,argv[i+1]);
+            strcpy(arq_fase[fase_atual],argv[i+1]);
       if (strcmp(argv[i],"-som") == 0)
          if (i < argc - 1)
             vol_som = atoi(argv[i+1]);
@@ -213,7 +216,7 @@ int main(int argc, char **argv)
    counter = 0;
    lacos = 1;
 
-   while(!key[KEY_ESC] && mario_vidas > -1 && !passou_de_fase)
+   while(!key[KEY_ESC] && mario_vidas > -1)
    {
       if (counter)
       {
@@ -227,11 +230,16 @@ int main(int argc, char **argv)
          lacos++;
       }
 
-      blit_scrolled();
-      if (mario->estado == ESTADO_MORTO) le_fase(arq_fase);
+     
+      
+      if (mario->estado == ESTADO_MORTO) le_fase(arq_fase[fase_atual]);
+      if (passou_de_fase) le_fase(arq_fase[1]);
+  	 blit_scrolled(); 
    }
 
-   if (passou_de_fase) fim_de_jogo();
+   // if (passou_de_fase) le_fase(arq_fase[1]);
+	 fim_de_jogo();
+
 
    allegro_exit();
 	return(0);

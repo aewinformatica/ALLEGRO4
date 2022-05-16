@@ -26,6 +26,7 @@ void fim_de_jogo(void)
       blit(fim,screen,0,0,0,88,fim->w,fim->h);
    #endif
    while(!key[KEY_ENTER]);
+   le_fase(arq_fase[1]);
 }
 
 void inicia_fase(void)
@@ -35,7 +36,6 @@ void inicia_fase(void)
    counter = 0;
 
    clear_to_color(screen,0);
-   mario_vidas--;
 
    #ifdef VERSAO_640_480
       if (mario_vidas > -1)
@@ -110,7 +110,8 @@ void le_fase(char *arquivo_fase)
    /* tira o \n final */
    nome_fase[strlen(nome_fase)-1] = 0;
    textout_centre_ex(status,font,nome_fase,208,5,-1,-1);
-
+   printf("NOME DO MAPA: %s \n",nome_fase);
+   printf("VIDAS: %d \n",mario_vidas);
    /* musica midi */
    fgets(arquivo,256,fp);
    /* tira o \n final */

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
-	<Libs Value="-mwindows -lalleg"/>
+	<Libs Value="-lalleg"/>
 	<Flags Value="-Iinclude -Isrc"/>
 	<Target Value="SuperMario.exe"/>
 	<CommandLine Value=""/>
@@ -12,7 +12,7 @@
 	<EnableTheme Value="Yes"/>
 	<RequiresAdmin Value="No"/>
 	<CompilerType Value="C"/>
-	<AppType Value="GUI"/>
+	<AppType Value="CONSOLE"/>
 	<Files>
 		<File Name="include\colisoes.h"/>
 		<File Name="include\entrada.h"/>
