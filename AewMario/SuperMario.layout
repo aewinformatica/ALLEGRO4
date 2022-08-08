@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Layout>
 	<Files>
-		<File Name="src\mario.c" Top="No" Tabpos="1" TopLine="193">
-			<Cursor Line="234" Column="7"/>
+		<File Name="include\sprites.h" Top="No" Tabpos="1" TopLine="35">
+			<Cursor Line="1" Column="1"/>
 		</File>
-		<File Name="include\fase.h" Top="No" Tabpos="2" TopLine="1">
-			<Cursor Line="49" Column="24"/>
+		<File Name="include\scroll.h" Top="No" Tabpos="2" TopLine="1">
+			<Cursor Line="1" Column="1"/>
 		</File>
-		<File Name="src\fase.c" Top="Yes" Tabpos="3" TopLine="86">
-			<Cursor Line="108" Column="1"/>
+		<File Name="src\entrada.c" Top="No" Tabpos="3" TopLine="22">
+			<Cursor Line="1" Column="1"/>
 		</File>
-		<File Name="include\scroll.h" Top="No" Tabpos="4" TopLine="1">
-			<Cursor Line="11" Column="19"/>
-			<Selection Line="11" Column="6"/>
-		</File>
-		<File Name="src\scroll.c" Top="No" Tabpos="5" TopLine="1">
-			<Cursor Line="14" Column="19"/>
-			<Selection Line="14" Column="6"/>
+		<File Name="src\mario.c" Top="Yes" Tabpos="4" TopLine="29">
+			<Cursor Line="1" Column="1"/>
 		</File>
 	</Files>
 </Layout>

@@ -34,8 +34,8 @@ personagem.setFrame(0,8);
 //ryu.carregarSprite("gfx/dados.dat",ryu.tipo=RLESHEET,RYU) ;
 //ryu.setFrame(0,5);
 
-//karate.carregarSprite("gfx/karate.bmp");
-//karate.setFrame(0,5);
+karate.carregarSprite("gfx/karate.bmp");
+karate.setFrame(0,5);
 
                                                           
  while(!key[KEY_ESC]){ 

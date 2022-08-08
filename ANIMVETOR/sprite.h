@@ -18,7 +18,7 @@ class Sprite{
              Sprite();
              vector<anim_t*>animations;
              
-             void Sprite::getAnim(DATAFILE *d);
+             void getAnim(DATAFILE *d);
              void draw(BITMAP *pBuffer);
              void logstr();
 };

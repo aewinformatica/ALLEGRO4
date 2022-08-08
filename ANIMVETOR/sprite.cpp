@@ -20,7 +20,7 @@ void Sprite::getAnim(DATAFILE *d) {
 	    return;
 	 
 	  //logstr("Loading %s...", animation.name); // dump
-	  printf("Loading %s...", animation.name); // dump
+	  // printf("Loading %s...", animation.name); // dump
       
       //descobrir como pegar a tela sem passar como parametro
       textprintf_ex(screen, font, 0, 70, palette_color[15],-1,"Loading: %s...",animation.name);
@@ -62,7 +62,7 @@ void Sprite::getAnim(DATAFILE *d) {
 	    /* create the rle sprite from a sub-bitmap of a image containing
 	    all the animations in a film strip */
 	    textprintf_ex(screen, font, 0, 210, palette_color[15],-1, "nome %s", animation.name);
-	    animation.anim_data.push_back( get_rle_sprite( create_sub_bitmap( (BITMAP*)d->dat, , 0, animation.w, animation.h ) ) ); 
+	    animation.anim_data.push_back( get_rle_sprite( create_sub_bitmap( (BITMAP*)d->dat, 0, 0, animation.w, animation.h ) ) ); 
 	  }	 
 	  // store the pointer to the animation data in the vector
 	  animations.push_back(&animation);
