@@ -1,0 +1,6 @@
+Tokenizer bug?
+-crahes if we parse a trigger on the last line of the text file / fixed
+
+-Input parser bug with Successive direction symbols  / fixed
+
+

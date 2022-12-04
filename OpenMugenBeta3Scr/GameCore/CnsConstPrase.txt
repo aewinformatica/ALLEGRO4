@@ -1,0 +1,178 @@
+%{
+#include <malloc.h>  // _alloca is used by the parser
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "lex.h"
+#include "Structs.h"
+#include "Player.h"
+
+
+extern CPlayer *m_pPlayer;
+
+
+void yyerror(char *msg);
+
+
+#define YYSTYPE myType
+
+%}
+%token EQUAL
+
+%token DATA
+%token LIFE
+%token ATTACK
+%token DEFENCE
+%token FALLDEFUP
+%token LIEDOWTIME
+%token AIRJUGGLE
+%token SPARKNO
+%token GUARDSPARKNO
+%token KOECHO
+%token VOLUME
+%token INTEGERINDEX
+%token FLOATINDEX
+
+%token SIZE
+%token XSCALE
+%token YSCALE
+%token GROUNDBACK
+%token GROUNDFRONT
+%token AIRBACK
+%token AIRFRONT
+%token HEIGHT
+%token ATTACKDIST
+%token PROJATTDIST
+%token PROJDOSCALE
+%token HEADPOS
+%token MIDPOS
+%token SHADOWOFFSET
+%token DRAWOFFSET
+
+%token VELOCITY
+%token WALKFWD
+%token WALKBACK
+%token RUNFWD
+%token RUNBACK
+%token JUMPNEU
+%token JUMPBACK
+%token JUMPFWD
+%token RUNJUMPBACK
+%token RUNJUMPFWD
+%token AIRJUMPNEU
+%token AIRJUMPBACK
+%token AIRJUMPFWD
+
+%token MOVEMENT
+%token AIRJUMPNUM
+%token AIRJUMPHEIGHT
+%token YACCEL
+%token STANDFRICTION
+%token CROUCHFRICTION
+
+%token NUMBER
+%%
+lines: /* empty */
+     | lines SECTIONS
+     | error
+     ;	
+
+
+SECTIONS: DATASECTION 
+	| SIZESECTION
+	| VELOCITYSECTION
+	| MOVEMENTSECTION
+	;
+
+DATASECTION:	DATA						{/**/}
+	| LIFE 		EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerData.nLife			=(int)	$3.nFloat;}
+	| ATTACK 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerData.nAttack		=(int)	$3.nFloat;}
+	| DEFENCE 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerData.nDefence		=(int)	$3.nFloat;}
+	| FALLDEFUP 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerData.nFallDefenceUp	=(int)	$3.nFloat;}
+	| LIEDOWTIME 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerData.nLieDownTime		=(int)	$3.nFloat;}
+	| AIRJUGGLE 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerData.nAirjuggle		=(int)	$3.nFloat;}
+	| SPARKNO 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerData.nSparkno		=(int)	$3.nFloat;}
+	| GUARDSPARKNO 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerData.nGuardSparkno		=(int)	$3.nFloat;}
+	| KOECHO 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerData.bKoEcho		=(int)	$3.nFloat;}
+	| VOLUME 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerData.nVolumen		=(int)	$3.nFloat;}
+	| INTEGERINDEX 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerData.nIntPersistIndex	=(int)	$3.nFloat;}
+	| FLOATINDEX 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerData.nFloatPersistIndex	=(int)	$3.nFloat;}
+	;
+
+SIZESECTION: SIZE						{/*Check Size Section*/}
+	| XSCALE	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerSize.nXscale		=(int)	$3.nFloat;}
+	| YSCALE	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerSize.nYscale		=(int)	$3.nFloat;}
+	| GROUNDBACK	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerSize.nGroundBack		=(int)	$3.nFloat;}
+	| GROUNDFRONT	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerSize.nGroundFront		=(int)	$3.nFloat;}
+	| AIRBACK	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerSize.nAirBack		=(int)	$3.nFloat;}
+	| AIRFRONT	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerSize.nAirFront		=(int)	$3.nFloat;}
+	| HEIGHT	EQUAL NUMBER				{m_pPlayer->myPlayerConst.PlayerSize.nHeight		=(int)	$3.nFloat;}
+	| ATTACKDIST	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerSize.nAttackDistance	=(int)	$3.nFloat;}
+	| PROJATTDIST	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerSize.nProjAttackDist	=(int)	$3.nFloat;}
+	| PROJDOSCALE	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerSize.bProjDoScale  	=(int)	$3.nFloat;}
+	| HEADPOS	EQUAL NUMBER ',' NUMBER	{m_pPlayer->myPlayerConst.PlayerSize.nHeadPos.x  		=(int)	$3.nFloat;
+							 m_pPlayer->myPlayerConst.PlayerSize.nHeadPos.y  		=(int)	$5.nFloat;}
+	
+	| MIDPOS	EQUAL NUMBER ',' NUMBER		{m_pPlayer->myPlayerConst.PlayerSize.nMidPos.x  		=(int)	$3.nFloat;
+								 m_pPlayer->myPlayerConst.PlayerSize.nMidPos.y  		=(int)	$5.nFloat;}
+
+	| SHADOWOFFSET	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerSize.nShadowOffset  	=(int)	$3.nFloat;}
+
+	| DRAWOFFSET	EQUAL NUMBER ',' NUMBER		{m_pPlayer->myPlayerConst.PlayerSize.nDrawOffset.x  	=(int)	$3.nFloat;
+								 m_pPlayer->myPlayerConst.PlayerSize.nDrawOffset.y  	=(int)	$5.nFloat;}
+	;
+
+VELOCITYSECTION: VELOCITY					{/*Check Velocity Section*/}
+	| WALKFWD 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerVelocity.nWalkFwd		=	$3.nFloat;}
+	| WALKBACK 	EQUAL NUMBER			{m_pPlayer->myPlayerConst.PlayerVelocity.nWalkBack		=	$3.nFloat;}
+
+	| RUNFWD 	EQUAL NUMBER ',' NUMBER		{m_pPlayer->myPlayerConst.PlayerVelocity.RunFwd.x		=	$3.nFloat;
+							 	m_pPlayer->myPlayerConst.PlayerVelocity.RunFwd.y		=	$5.nFloat;}
+	| RUNFWD 	EQUAL NUMBER  			{m_pPlayer->myPlayerConst.PlayerVelocity.RunFwd.x		=	$3.nFloat;}
+
+	| RUNBACK 	EQUAL NUMBER ',' NUMBER		{m_pPlayer->myPlayerConst.PlayerVelocity.RunBack.x		=	$3.nFloat;
+							 	m_pPlayer->myPlayerConst.PlayerVelocity.RunBack.y		=	$5.nFloat;}
+	| RUNBACK 	EQUAL NUMBER  			{m_pPlayer->myPlayerConst.PlayerVelocity.RunBack.x		=	$3.nFloat;}
+
+	| JUMPNEU 	EQUAL NUMBER ',' NUMBER		{m_pPlayer->myPlayerConst.PlayerVelocity.JumpNeu.x		=	$3.nFloat;
+							 m_pPlayer->myPlayerConst.PlayerVelocity.JumpNeu.y		=	$5.nFloat;}
+	| JUMPNEU 	EQUAL NUMBER 			{m_pPlayer->myPlayerConst.PlayerVelocity.JumpNeu.x		=	$3.nFloat;}
+
+	| JUMPBACK 	EQUAL NUMBER ',' NUMBER		{m_pPlayer->myPlayerConst.PlayerVelocity.JumpBack.x	=	$3.nFloat;
+							 m_pPlayer->myPlayerConst.PlayerVelocity.JumpBack.y	=	$5.nFloat;}
+	| JUMPBACK 	EQUAL NUMBER 			{m_pPlayer->myPlayerConst.PlayerVelocity.JumpBack.x	=	$3.nFloat;}
+
+	| JUMPFWD 	EQUAL NUMBER ',' NUMBER		{m_pPlayer->myPlayerConst.PlayerVelocity.JumpFwd.x		=	$3.nFloat;
+							m_pPlayer->myPlayerConst.PlayerVelocity.JumpFwd.y		=	$5.nFloat;}
+	| JUMPFWD 	EQUAL NUMBER 			{m_pPlayer->myPlayerConst.PlayerVelocity.JumpFwd.x		=	$3.nFloat;}
+
+	| RUNJUMPBACK 	EQUAL NUMBER ',' NUMBER		{m_pPlayer->myPlayerConst.PlayerVelocity.RunjumpBack.x	=	$3.nFloat;
+							 m_pPlayer->myPlayerConst.PlayerVelocity.RunjumpBack.y	=	$5.nFloat;}
+	| RUNJUMPBACK 	EQUAL NUMBER 			{m_pPlayer->myPlayerConst.PlayerVelocity.RunjumpBack.x	=	$3.nFloat;}
+
+	| RUNJUMPFWD 	EQUAL NUMBER ',' NUMBER		{m_pPlayer->myPlayerConst.PlayerVelocity.RunjumpFwd.x	=	$3.nFloat;
+							m_pPlayer-> myPlayerConst.PlayerVelocity.RunjumpFwd.y	=	$5.nFloat;}
+	| RUNJUMPFWD 	EQUAL NUMBER 			{m_pPlayer->myPlayerConst.PlayerVelocity.RunjumpFwd.x	=	$3.nFloat;}
+
+	| AIRJUMPNEU 	EQUAL NUMBER ',' NUMBER		{m_pPlayer->myPlayerConst.PlayerVelocity.AirjumpNeu.x	=	$3.nFloat;
+							 m_pPlayer->myPlayerConst.PlayerVelocity.AirjumpNeu.y	=	$5.nFloat;}
+	| AIRJUMPNEU 	EQUAL NUMBER 			{m_pPlayer->myPlayerConst.PlayerVelocity.AirjumpNeu.x	=	$3.nFloat;}
+
+	| AIRJUMPBACK 	EQUAL NUMBER ',' NUMBER		{m_pPlayer->myPlayerConst.PlayerVelocity.AirjumpBack.x	=	$3.nFloat;
+							 m_pPlayer->myPlayerConst.PlayerVelocity.AirjumpBack.y	=	$5.nFloat;}
+	| AIRJUMPBACK 	EQUAL NUMBER 			{m_pPlayer->myPlayerConst.PlayerVelocity.AirjumpBack.x	=	$3.nFloat;}
+
+	| AIRJUMPFWD 	EQUAL NUMBER ',' NUMBER		{m_pPlayer->myPlayerConst.PlayerVelocity.AirjumpFwd.x	=	$3.nFloat;
+								 m_pPlayer->myPlayerConst.PlayerVelocity.AirjumpFwd.y	=	$5.nFloat;}
+	| AIRJUMPFWD 	EQUAL NUMBER 			{m_pPlayer->myPlayerConst.PlayerVelocity.AirjumpFwd.x	=	$3.nFloat;}
+	;
+
+MOVEMENTSECTION: MOVEMENT				{/*check movement section*/ }
+	| 	 AIRJUMPNUM 	EQUAL NUMBER		{m_pPlayer->myPlayerConst.PlayerMovement.AirJumpNum	=(int)	$3.nFloat;}
+	|	 AIRJUMPHEIGHT 	EQUAL NUMBER		{m_pPlayer->myPlayerConst.PlayerMovement.nAirJumpHight	=(int)	$3.nFloat;}
+	|	 YACCEL		EQUAL NUMBER		{m_pPlayer->myPlayerConst.PlayerMovement.yaccel		=	$3.nFloat;}
+	|	 STANDFRICTION	EQUAL NUMBER		{m_pPlayer->myPlayerConst.PlayerMovement.StandFriction	= 	$3.nFloat;}
+	|	 CROUCHFRICTION EQUAL NUMBER		{m_pPlayer->myPlayerConst.PlayerMovement.CrouchFriction	=	$3.nFloat;}
+	;
+%%

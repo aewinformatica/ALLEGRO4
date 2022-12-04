@@ -1,0 +1,427 @@
+%{
+#include <io.h>
+#include <stdio.h>
+#include <string.h>
+#include "token.h"
+#include "lex.h"
+#ifdef MSVC
+#define  isatty _isatty  // for some reason isatty is called _isatty in VC..
+#endif
+
+void DestroyComment();
+void CopyString();
+void CopyID();
+int  CharToInt();	
+
+int nLineNr=1;
+
+%}
+
+%option caseless
+
+digit	[0123456789]
+STR      \"[^\"]*\"
+CHAR	[a-zA-z_]
+IDENT [\32-\176]+
+
+
+
+
+%%
+{digit}+"."{digit}+	|
+"."{digit}+		|
+{digit}+ 		{sscanf(yytext,"%f",&yylval.nFloat); 
+				     return NUMBER;}
+
+
+[ \t]+		{/*NOTHING*/}
+
+\n		{nLineNr++;}
+","		return ',';
+
+"[data]" {/**/}     
+
+"+"		return '+';
+"-"		return '-';
+"*"		return '*';
+"/"		return '/';
+"("		return '(';
+")"		return ')';
+";"		{DestroyComment();}
+":"     return ':';
+{STR}		{CopyString();return STRING;}
+"["		return '[';
+"]"		return ']';
+
+"%"     return MOD;
+"**"    return SQUARE;
+
+"!"     return LOGNOT;
+"&&"    return LOGAND;
+"||"    return LOGOR;
+"^^"    return LOGXOR;
+"~"     return NOT;
+"&"     return AND;
+"|"     return OR;
+"^"     return XOR;
+
+
+"="			return EQUAL;
+"!="			return NOTEQUAL;
+">"			return GREATER;
+"<"			return LESS;
+"<="			return LESSEQUAL;
+">="			return GREATEREQUAL;
+
+
+"data.life"				return LIFE;
+"data.attack"			return ATTACK;
+"data.defence"			return DEFENCE;
+"data.fall.defence_mul"		return FALLDEFUP;
+
+"data.liedown.time"			return LIEDOWTIME;
+"data.airjuggle"			return AIRJUGGLE;
+"data.sparkno"			return SPARKNO;
+"data.guard.sparkno"			return GUARDSPARKNO;
+"data.KO.echo"			return KOECHO;
+"data.volume"			return VOLUME;
+"data.IntPersistIndex"		return INTEGERINDEX;
+"data.FloatPersistIndex"		return FLOATINDEX;
+
+
+"size.xscale"			return XSCALE;
+"size.yscale"			return YSCALE;
+"size.ground.back"			return GROUNDBACK;
+"size.ground.front"			return GROUNDFRONT;
+"size.air.back"			return AIRBACK;
+"size.air.front"			return AIRFRONT;
+"size.height"			return HEIGHT;
+"size.attack.dist"			return ATTACKDIST;
+"size.proj.attack.dist"		return PROJATTDIST;
+"size.proj.doscale"			return PROJDOSCALE;
+
+"size.head.pos.x"			return HEADPOSX;
+"size.head.pos.y"			return HEADPOSY;
+
+"size.mid.pos.x"			return MIDPOSX;
+"size.mid.pos.y"			return MIDPOSY;
+
+"size.shadowoffset"			return SHADOWOFFSET;
+
+"size.draw.offset.x"			return DRAWOFFSETX;
+"size.draw.offset.y"			return DRAWOFFSETY;
+
+
+"velocity.walk.fwd.x"			return WALKFWD;
+"velocity.walk.back.x"			return WALKBACK;
+
+"velocity.run.fwd.x"			return RUNFWDX;
+"velocity.run.fwd.y"			return RUNFWDY;
+
+"velocity.run.back.x"			return RUNBACKX;
+"velocity.run.back.y"			return RUNBACKY;
+
+"velocity.jump.neu.x"			return JUMPNEU;
+"velocity.jump.back.x"			return JUMPBACK;
+"velocity.jump.fwd.x"			return JUMPFWD;
+"velocity.runjump.back.x"			return RUNJUMPBACK;
+"velocity.runjump.fwd.x"			return RUNJUMPFWD;
+"velocity.airjump.neu.x"			return AIRJUMPNEU;
+"velocity.airjump.back.x"			return AIRJUMPBACK;
+"velocity.airjump.fwd.x"			return AIRJUMPFWD;
+
+
+"movement.airjump.num"			return AIRJUMPNUM;
+"movement.airjump.height"		return AIRJUMPHEIGHT;
+"movement.yaccel"			return YACCEL;
+"movement.stand.friction"		return STANDFRICTION;
+"movement.crouch.friction"		return CROUCHFRICTION;
+
+
+
+
+"Statedef"		return STATEDEF;
+"type"			return TYPE;
+"physics"		return PHYSICS;
+"airjuggle"     {}
+"juggle"		return JUGGLE;
+
+"facep2"		return FACEP2;
+"hitdefpersist"		return HITDEFPERSIST;
+"movehitpersist"	return MOVEHITPERSIST;
+"hitcountpersist"	return HITCOUNTPERSIST;
+"state"			return STATE;
+
+"trigger"{digit}+       sscanf(yytext,"trigger%f",&yylval.nFloat);return TRIGGER;
+"triggerall"    return TRIGGERALL;
+
+
+"Abs"			return ABS;
+"Acos"			return ACOS;
+"Alive"			return ALIVE;
+"Anim"			return ANIM;
+"AnimElem"		return ANIMELEM;
+"AnimElemNo"		return ANIMELEMNO;
+"AnimElemTime"		return ANIMELEMTIME;
+"AnimExist"		return ANIMEXIST;
+"AnimTime"		return ANIMTIME;
+"Asin"			return ASIN;
+"Atan"			return ATAN;
+"AuthorName"		return AUTHORNAME;
+"BackEdgeBodyDist"	return BACKEEDGEBODYDIST;
+"BackEdgeDist"		return BACKEDGEDIST;
+"CanRecover"		return CANRECOVER;
+"Ceil"			return CEIL;		
+"Command"		return COMMAND;
+"Const"			return CONST;
+"Cos"			return COS;
+"Ctrl"			return CTRL;
+"DrawGame"		return DRAWGAME;
+"Exp"			return EXP;
+"Facing"		return FACING;
+"Floor"			return FLOOR;
+"FrontEdgeBodyDist"	return FRONTEDGEBODYDIST;
+"FrontEdgeDist"		return FRONTEDGEDIST;
+"FVar"			return FVAR;
+"GameTime"		return GAMETIME;
+"GetHitVar"		return GETHITVAR;
+"HitCount"		return HITCOUNT;
+"HitDefAttr"		return HITDEFATTR;
+"HitFall"		return HITFALL;
+"HitOver"		return HITOVER;
+"HitPauseTime"		return HITPAUSETIME;
+"HitShakeOver"		return HITSHAKEOVER;
+"HitVel X"		return HITVELX;
+"HitVel Y"		return HITVELY;
+"ID"			return PLID;
+"IfElse"		return IFELSE;
+"IsHelper"		return ISHELPER;
+"InGuardDist"   return INGUARDDIST;
+"IsHomeTeam"		return ISHOMETEAM;
+"Life"			return LIFE;
+"LifeMax"       return LIFEMAX;
+"Ln"			return LN;
+"Log"			return LOG;
+"Lose"			return LOSE;
+"LoseKO"			return LOSEKO;
+"LoseTime"			return LOSETIME;
+"MatchNo"		return MATCHNO;
+"MatchOver"		return MATCHOVER;
+"MoveContact"		return MOVECONTACT;
+"MoveGuarded"		return MOVEGUARDED;
+"MoveHit"		return MOVEHIT;
+"MoveType"		return MOVETYPE;
+"MoveReversed"  return MOVEREVERSED;
+"Name"			return NAME;
+"NumEnemy"		return NUMENEMY;
+"NumExplod"		return NUMEXPLOD;
+"NumHelper" 		return NUMHELPER;
+"NumPartner"		return NUMPARTNER;
+"NumProj"		return NUMPROJ;
+"NumProjID"		return NUMPROJID;
+"NumTarget"		return NUMTARGET;
+"P1Name"		return P1NAME;
+"P2BodyDist X"		return P2BODYDISTX;
+"P2BodyDist Y"		return P2BODYDISTY;
+"P2Dist X"		return P2DISTX;
+"P2Dist Y"		return P2DISTY;
+"P2Life"		return P2LIFE;
+"P2MoveType"		return P2MOVETYPE;
+"P2Name"		return P2NAME;
+"P2StateNo"		return P2STATENO;
+"P2StateType"		return P2STATETYP;
+"P3Name"		return P3NAME;
+"P4Name"		return P4NAME;
+"PalNo"			return PALNO;
+"ParentDist X"		return PARENTDISTX;
+"ParentDist Y"		return PARENTDISTY;
+"Pi"			return PI;
+"PlayerIDExist"		return PLAYERIDEXIST;
+"PrevStateNo"		return PREVSTATENO;
+"Pos X"			return POSX;
+"Pos Y"			return POSY;
+"Power"         return POWER;
+"PowerMax"      return POWERMAX;
+"ProjCancelTime"	return PROJCANCLETIME;
+"ProjContact"		return PROJCONTACT;
+"ProjContactTime"	return PROJCONTACTTIME;
+"ProjGuarded"		return PROJGUARDED;
+"ProjGuardedTime"	return PROJGUARDEDTIME;
+"ProjHit"		return PROJHIT;
+"ProjHitTime"		return PROJHITTIME;
+"Random"		return RANDOM;
+"RootDist X"		return ROOTDISTX;
+"RootDist Y"		return ROOTDISTY;
+"RoundNo"		return ROUNDNO;
+"RoundsExisted"		return ROUNDSEXISTED;
+"RoundState"		return ROUNDSTATE;
+"ScreenPos X"		return SCREENPOSX;
+"ScreenPos Y"		return SCREENPOSY;
+"SelfAnimExist"		return SELFANIMEXIST;
+"Sin"			return SIN;
+"StateNo"		return STATENO;
+"StateType"		return STATETYPE;
+"SysFVar"		return SYSFVAR;
+"SysVar"		return SYSVAR;
+"Tan"			return TAN;
+"TeamMode"		return TEAMMODE;
+"TeamSide"		return TEAMSIDE;
+"TicksPerSecond"	return TICKSPERSECOND;
+"TimeMod"		return TIMEMODE;
+"UniqHitCount"		return UNIQHITCOUNT;
+"Var"			return VAR;
+"Vel X"			return VELX;
+"Vel Y"			return VELY;
+"Win"			return WIN;
+"WinKO"			return WINKO;
+"WinTime"			return WINTIME;
+"WinPerfect"			return WINPERFECT;
+
+"AfterImage"		return AFTERIMAGE;
+	"Time"			return TIME;
+	"length"		return LENGTH;
+	"palcolor"		return PALCOLOR;
+	"palinvertall"		return PALINVERTALL;
+	"palbright"		return PALBRIGHT;
+	"palcontrast"		return PALCONTRAST;
+	"palpostbright"		return PALPOSTBRIGHT;
+	"paladd"		return PALADD;
+	"palmul"		return PALMUL;
+	"timegap"		return TIMEGAP;
+	"framegap"		return FRAMEGAP;
+	"trans"			return TRANS; 
+	
+"AfterImageTime"	return AFTERIMAGETIME;
+"AllPalFX"		return ALLPALFX;
+"AngleAdd"		return ANGLEADD;
+"AngleDraw"		return ANGLEDRAW;
+"AngleMul"		return ANGLEMUL;
+"AngleSet"		return ANGLESET;
+"AppendToClipboard"	return APPENDTOCLIPBOARD;
+"AssertSpecial"		return ASSERTSPECIAL;
+"AttackDist"		return ATTACKDIST;
+"AttackMulSet"		return ATTACKMULSET;
+"BGPalFX"		return BGPALFX;
+"BindToParent"		return BINDTOPARENT;
+"BindToRoot"		return BINDTOROOT;
+"BindToTarget"		return BINDTOTARGET;
+"ChangeAnim"		return CHANGEANIME;
+"ChangeAnim2"		return CHANGEANIME2;
+"ChangeState"		return CHANGESTATE;
+"ClearClipboard"	return CLEARCLIPBOARD;
+"CtrlSet"		return CTRLSET;
+"DefenceMulSet"		return DEFENCEMULSET;
+"DestroySelf"		return DESTROYSELF;
+"DisplayToClipboard"	return DISPLAYTOCLIPBORAD;
+"EnvShake"		return ENVSHAKE;
+"Explod"		return EXPLOD;
+"ExplodBindTime"	return EXPLODBINDTIME;
+"FallEnvShake"		return FALLENVSHAKE;
+"ForceFeedback"		return FORCEFEDDBACK;
+"GameMakeAnim"		return GAMEMAKEANIM;
+"Gravity"		return GRAVITY;
+"Helper"		return HELPER;
+"HitAdd"		return HITADD;
+"HitBy"			return HITBY;
+"HitDef"		return HITDEF;
+"HitFallDamage"		return HITFALLDAMAGE;
+"HitFallSet"		return HITFALLSET;
+"HitFallVel"		return HITFALLVEL;
+"HitOverride"		return HITOVERRIDE;
+"HitVelSet"		return HITVELSET;
+"LifeAdd"		return LIFEADD;
+"LifeSet"		return LIFESET;
+"MakeDust"		return MAKEDUST;
+"ModifyExplod"		return MODIFYEXPLOD;
+"MoveHitReset"		return MOVEHITRESET;
+"NotHitBy"		return NOTHITBY;
+"Null"			return TNULL;
+"Offset"		return OFFSET;
+"PalFX"			return PALFX;
+"ParentVarAdd"		return PARENTVARADD;
+"ParentVarSet"		return PARENTVARSET;
+"Pause"			return PAUSE;
+"PlayerPush"		return PLAYERPUSH;
+"PlaySnd"		return PLAYSND;
+"PosAdd"		return POSADD;
+"PosFreeze"		return POSFREEZ;
+"PosSet"		return POSSET;
+"PowerAdd"		return POWERADD;
+"PowerSet"		return POWERSET;
+"Projectile"		return PROJECTILE;
+"RemoveExplod"		return REMOVEEXPLOD;
+"ReversalDef"		return REVERSALDEF;
+"ScreenBound"		return SCREENBOUND;
+"SelfState"		return SELFSTATE;
+"SndPan"		return SNDPAN;
+"SprPriority"		return SPRPRIORITY;
+"StateTypeSet"		return STATETYPESET;
+"StopSnd"		return STOPSND;
+"SuperPause"		return SUPERPAUSE;
+"TargetBind"		return TARGETBIND;
+"TargetDrop"		return TARGETDROP;
+"TargetFacing"		return TARGETFACING;
+"TargetLifeAdd"		return TARGETLIFEADD;
+"TargetPowerAdd"	return TARGETPOWERADD;
+"TargetState"		return TARGETSTATE;
+"TargetVelAdd"		return TARGETVELADD;
+"TargetVelSet"		return TARGETVELSET;
+"Turn"			return TURN;
+"VarAdd"		return VARADD;
+"VarRandom"		return VARRANDOM;
+"VarRangeSet"		return VARRANGESET;
+"VarSet"		return VARSET;
+"VelAdd"		return VELADD;
+"VelMul"		return VELMUL;
+"VelSet"		return VELSET;
+"Width"			return WIDTH;
+
+
+"Value"         return VALUE;
+"x"             return XVALUE;
+"y"             return YVALUE;
+
+{CHAR}         return CharToInt();
+
+%%
+
+void DestroyComment()
+{
+char c;
+
+   c= yyinput();
+   while (c != '\n' && c != 0)
+   {	
+	c=yyinput();
+
+   }
+   nLineNr++;
+ 
+}
+
+void CopyString()
+{
+   int l = strlen(yytext)-2;
+   strncpy (yylval.str, &yytext[1], l); yylval.str[l] = 0;
+ 
+}
+
+void CopyID()
+{
+	int l=strlen(yytext);
+	memcpy(yylval.str,yytext,l);
+	yylval.str[l]=0;
+ 	printf("ID %s line %i \n",yytext,nLineNr);
+}
+
+int CharToInt()
+{	
+	char c;
+	c = yytext[0];
+	if(c > 90)
+	   c-=32;
+	yylval.nFloat=(float)c;
+	return NUMBER; 
+
+
+}

@@ -1,0 +1,122 @@
+%{
+#include <io.h>
+#include <stdio.h>
+#include <string.h>
+#include "airtoken.h"
+#include "lex.h"
+#ifdef MSVC
+#define  isatty _isatty  // for some reason isatty is called _isatty in VC..
+#endif
+
+void DestroyAirComment();
+void CopyAirString();
+void CopyAirID();
+int  CharAirToInt();
+
+
+
+
+
+%}
+
+%option caseless
+
+digit	[-0123456789]
+STR      \"[^\"]*\"
+CHAR	[a-zA-z_]
+
+
+
+
+%%
+{digit}+"."{digit}+	|
+"."{digit}+		|
+{digit}+ 		{sscanf(airtext,"%f",&airlval.nFloat); 
+				     return NUMBER;}
+
+
+[ \t]+		{/*NOTHING*/}
+
+\n		{nLineNr++;}
+
+","		return ',';
+"H"     return HORIZONTALFLIP;
+"V"     return VERTIKALFLIP;
+"HV"    return HVFLIP;
+"VH"    return HVFLIP;
+"A"     return ALPHA;
+"A"{digit}+   return ALPHA; 
+"AS"{digit}+"D"{digit}+ return ALPHA;
+
+";"		{DestroyAirComment();}
+"Loopstart" return LOOPSTART;
+"+"		return '+';
+"-"		return '-';
+"*"		return '*';
+"/"		return '/';
+"("		return '(';
+")"		return ')';
+":"     return ':';
+"="     return EQUAL;
+{STR}		{CopyAirString();return STRING;}
+"["		return '[';
+"]"		return ']';
+
+
+"Begin"		return ACBEGIN;
+"Action"	return ACTION;
+"Loopstart"	return LOOPSTART;
+"Clsn2Default"	return CLSN2DEFAULT;
+"Clsn1Default"	return CLSN1DEFAULT;
+"Clsn2"		return CLSN2;
+"Clsn1"		return CLSN1;
+
+
+
+
+
+
+%%
+
+void DestroyAirComment()
+{
+char c;
+
+   c= yyinput();
+   while (c != '\n' && c != 0)
+   {	
+	c=yyinput();
+
+   }
+   nLineNr++;
+   
+   
+}
+
+void CopyAirString()
+{
+   int l = strlen(yytext)-2;
+   strncpy (yylval.str, &yytext[1], l); yylval.str[l] = 0;
+ 
+}
+
+void CopyAirID()
+{
+	int l=strlen(yytext);
+	memcpy(yylval.str,yytext,l);
+	yylval.str[l]=0;
+ 	printf("ID %s line %i \n",yytext,nLineNr);
+}
+
+int CharAirToInt()
+{	
+	char c;
+	c = yytext[0];
+	if(c>=97)
+	   c-=32;
+	yylval.nFloat=(float)c;
+	return NUMBER; 
+
+
+}
+

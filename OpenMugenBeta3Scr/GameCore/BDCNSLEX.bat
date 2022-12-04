@@ -1,0 +1,1 @@
+flex -ocnsflex.cpp  -Pcns CnsLexer.txt

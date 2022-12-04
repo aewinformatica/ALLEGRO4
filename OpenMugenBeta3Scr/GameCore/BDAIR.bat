@@ -1,0 +1,1 @@
+flex -oairflex.cpp  -Pair AirLexer.txt

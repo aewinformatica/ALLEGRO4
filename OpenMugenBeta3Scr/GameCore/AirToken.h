@@ -1,0 +1,14 @@
+#define	NUMBER	258
+#define	EQUAL	259
+#define	STRING	260
+#define	ACBEGIN	261
+#define	ACTION	262
+#define	LOOPSTART	263
+#define	CLSN2DEFAULT	264
+#define	CLSN1DEFAULT	265
+#define	CLSN2	266
+#define	CLSN1	267
+#define	HORIZONTALFLIP	268
+#define	VERTIKALFLIP	269
+#define	HVFLIP	270
+#define	ALPHA	271

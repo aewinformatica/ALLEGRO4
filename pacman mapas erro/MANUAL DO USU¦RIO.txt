@@ -1,0 +1,23 @@
+UFRJ Informática Projeto 2004/2
+
+Jogo Pac-Man
+
+Autores:
+Carlos Henrique Pinto Rodriguez
+Fabio Cunha Pinto Coelho
+
+Instalação:
+
+1 - Descompactar o arquivo pacman.zip em uma pasta de sua escolha.
+
+2 - Procure o arquivo "alleg40.dll" na pasta onde o jogo foi descompactado e o copie para a pasta ...\windows\system32
+
+3 - Execute o jogo a partir do arquivo pacman.exe
+
+
+Comandos:
+
+SETAS  -  controlam o Pac-Man
+ESC    -  sai do jogo
+ESPAÇO -  pausa o jogo
+ENTER  -  continua o jogo

@@ -1,0 +1,119 @@
+# Project: OpenMugen
+# Makefile created by Dev-C++ 4.9.8.0
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = NextMugen_private.res
+OBJ  = Object/VideoSystem.o Object/SdlManager.o Object/global.o Object/SffSpriteManager.o Object/SffSpriteList.o Object/AirList.o Object/AirManager.o Object/ImageList.o Object/Player.o Object/Compiler.o Object/yacc.o Object/flex.o Object/main.o Object/SDL_console.o Object/internal.o Object/DT_drawtext.o Object/StateManager.o Object/Stack.o Object/VM.o Object/airyacc.o Object/airflex.o Object/Game.o Object/FightEngine.o Object/SDL_framerate.o Object/scale2x.o Object/scale2xSDL.o Object/cnsyacc.o Object/cnsflex.o Object/ControllerExecuter.o Object/Input.o $(RES)
+LINKOBJ  = Object/VideoSystem.o Object/SdlManager.o Object/global.o Object/SffSpriteManager.o Object/SffSpriteList.o Object/AirList.o Object/AirManager.o Object/ImageList.o Object/Player.o Object/Compiler.o Object/yacc.o Object/flex.o Object/main.o Object/SDL_console.o Object/internal.o Object/DT_drawtext.o Object/StateManager.o Object/Stack.o Object/VM.o Object/airyacc.o Object/airflex.o Object/Game.o Object/FightEngine.o Object/SDL_framerate.o Object/scale2x.o Object/scale2xSDL.o Object/cnsyacc.o Object/cnsflex.o Object/ControllerExecuter.o Object/Input.o $(RES)
+LIBS =  -L"D:/Programmierung/Dev-Cpp/lib" -L"D:/Programmierung/SDL/lib" -L"D:/Programmierung/Dev-Cpp/lib" -mwindows -lmingw32  -lSDLmain -lSDL 
+INCS =  -I"D:/Programmierung/Dev-Cpp/include"  -I"D:/Programmierung/SDL/include/SDL"  -I"D:/Programmierung/Dev-Cpp/include" 
+CXXINCS =  -I"D:/Programmierung/Dev-Cpp/include/c++"  -I"D:/Programmierung/Dev-Cpp/include/c++/mingw32"  -I"D:/Programmierung/Dev-Cpp/include/c++/backward"  -I"D:/Programmierung/Dev-Cpp/include"  -I"D:/Programmierung/SDL/include/SDL"  -I"D:/Programmierung/Dev-Cpp/include" 
+BIN  = Bin/OpenMugen.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS) 
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before Bin/OpenMugen.exe all-after
+
+
+clean: clean-custom
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(LINKOBJ)
+	$(CPP) $(LINKOBJ) -o "Bin\OpenMugen.exe" $(LIBS)
+
+Object/VideoSystem.o: GameCore/VideoSystem.cpp
+	$(CPP) -c GameCore/VideoSystem.cpp -o Object/VideoSystem.o $(CXXFLAGS)
+
+Object/SdlManager.o: GameCore/SdlManager.cpp
+	$(CPP) -c GameCore/SdlManager.cpp -o Object/SdlManager.o $(CXXFLAGS)
+
+Object/global.o: GameCore/global.cpp
+	$(CPP) -c GameCore/global.cpp -o Object/global.o $(CXXFLAGS)
+
+Object/SffSpriteManager.o: GameCore/SffSpriteManager.cpp
+	$(CPP) -c GameCore/SffSpriteManager.cpp -o Object/SffSpriteManager.o $(CXXFLAGS)
+
+Object/SffSpriteList.o: GameCore/SffSpriteList.cpp
+	$(CPP) -c GameCore/SffSpriteList.cpp -o Object/SffSpriteList.o $(CXXFLAGS)
+
+Object/AirList.o: GameCore/AirList.cpp
+	$(CPP) -c GameCore/AirList.cpp -o Object/AirList.o $(CXXFLAGS)
+
+Object/AirManager.o: GameCore/AirManager.cpp
+	$(CPP) -c GameCore/AirManager.cpp -o Object/AirManager.o $(CXXFLAGS)
+
+Object/ImageList.o: GameCore/ImageList.cpp
+	$(CPP) -c GameCore/ImageList.cpp -o Object/ImageList.o $(CXXFLAGS)
+
+Object/Player.o: GameCore/Player.cpp
+	$(CPP) -c GameCore/Player.cpp -o Object/Player.o $(CXXFLAGS)
+
+Object/Compiler.o: GameCore/Compiler.cpp
+	$(CPP) -c GameCore/Compiler.cpp -o Object/Compiler.o $(CXXFLAGS)
+
+Object/yacc.o: GameCore/yacc.cpp
+	$(CPP) -c GameCore/yacc.cpp -o Object/yacc.o $(CXXFLAGS)
+
+Object/flex.o: GameCore/flex.cpp
+	$(CPP) -c GameCore/flex.cpp -o Object/flex.o $(CXXFLAGS)
+
+Object/main.o: GameCore/main.cpp
+	$(CPP) -c GameCore/main.cpp -o Object/main.o $(CXXFLAGS)
+
+Object/SDL_console.o: GameCore/SDL_console.c
+	$(CPP) -c GameCore/SDL_console.c -o Object/SDL_console.o $(CXXFLAGS)
+
+Object/internal.o: GameCore/internal.c
+	$(CPP) -c GameCore/internal.c -o Object/internal.o $(CXXFLAGS)
+
+Object/DT_drawtext.o: GameCore/DT_drawtext.c
+	$(CPP) -c GameCore/DT_drawtext.c -o Object/DT_drawtext.o $(CXXFLAGS)
+
+Object/StateManager.o: GameCore/StateManager.cpp
+	$(CPP) -c GameCore/StateManager.cpp -o Object/StateManager.o $(CXXFLAGS)
+
+Object/Stack.o: GameCore/Stack.cpp
+	$(CPP) -c GameCore/Stack.cpp -o Object/Stack.o $(CXXFLAGS)
+
+Object/VM.o: GameCore/VM.cpp
+	$(CPP) -c GameCore/VM.cpp -o Object/VM.o $(CXXFLAGS)
+
+Object/airyacc.o: GameCore/airyacc.cpp
+	$(CPP) -c GameCore/airyacc.cpp -o Object/airyacc.o $(CXXFLAGS)
+
+Object/airflex.o: GameCore/airflex.cpp
+	$(CPP) -c GameCore/airflex.cpp -o Object/airflex.o $(CXXFLAGS)
+
+Object/Game.o: GameCore/Game.cpp
+	$(CPP) -c GameCore/Game.cpp -o Object/Game.o $(CXXFLAGS)
+
+Object/FightEngine.o: GameCore/FightEngine.cpp
+	$(CPP) -c GameCore/FightEngine.cpp -o Object/FightEngine.o $(CXXFLAGS)
+
+Object/SDL_framerate.o: GameCore/SDL_framerate.c
+	$(CPP) -c GameCore/SDL_framerate.c -o Object/SDL_framerate.o $(CXXFLAGS)
+
+Object/scale2x.o: GameCore/scale2x.c
+	$(CPP) -c GameCore/scale2x.c -o Object/scale2x.o $(CXXFLAGS)
+
+Object/scale2xSDL.o: GameCore/scale2xSDL.c
+	$(CPP) -c GameCore/scale2xSDL.c -o Object/scale2xSDL.o $(CXXFLAGS)
+
+Object/cnsyacc.o: GameCore/cnsyacc.cpp
+	$(CPP) -c GameCore/cnsyacc.cpp -o Object/cnsyacc.o $(CXXFLAGS)
+
+Object/cnsflex.o: GameCore/cnsflex.cpp
+	$(CPP) -c GameCore/cnsflex.cpp -o Object/cnsflex.o $(CXXFLAGS)
+
+Object/ControllerExecuter.o: GameCore/ControllerExecuter.cpp
+	$(CPP) -c GameCore/ControllerExecuter.cpp -o Object/ControllerExecuter.o $(CXXFLAGS)
+
+Object/Input.o: GameCore/Input.cpp
+	$(CPP) -c GameCore/Input.cpp -o Object/Input.o $(CXXFLAGS)
+
+NextMugen_private.res: NextMugen_private.rc 
+	$(WINDRES) -i NextMugen_private.rc -I rc -o NextMugen_private.res -O coff 

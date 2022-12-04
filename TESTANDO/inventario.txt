@@ -1,0 +1,61 @@
+#include <iostream>
+#include <cstdlib>
+#include <time.h>
+#define WEAPON 1
+#define POTION 2
+using namespace std;
+
+void fill_inventory();
+
+class Object{
+    char *name; // this is all private
+    unsigned char type; // this creates a 1-byte long integer wich can never be negative
+    char *script; // this will hold the effects of the current object, won't be covered in this tut(yet?)
+public:
+    Object(){} // 2 constructors are required for the inventory part
+    Object(char *n_name, unsigned char n_type, char *script_file){ // this constructor will initialize the object
+        name = n_name;
+        type = n_type;
+        script = script_file;
+    }
+    void print_name(){ // prints the name of the object
+        cout << name << "\n";
+    }
+};
+
+class Inventory{
+public:
+    Object *object; // this is an array of Objects
+    Inventory(int  alloc){ // This is the constructor, it will allocate the required memory for the array of Objects
+        object = new Object[alloc];
+    }
+    void print(){
+        for (int i = 0; i < 20; i++)
+            object[i].print_name(); // call the Object method print_name (method is a function of a class)
+    }
+};
+
+Inventory inventory(20); // This inventory can store 20 objects
+Object scythe("Scythe", WEAPON, "scythe.script"); // We create a object called scythe of type weapon and
+                                                  // it's effects are in the script scythe.script
+Object mana_potion("Mana potion", POTION, "manapotion.script");
+Object health_potion("Health potion", POTION, "healthpotion.script");
+
+int main(){
+    srand(time(NULL));
+    fill_inventory(); // lets fill up our inventory
+    inventory.print(); // print it's contents
+    system("pause");
+}
+
+void fill_inventory(){
+    for (int i = 0; i < 20; i++){
+        int t = rand()%3 + 1;
+        switch (t){
+            case 1: inventory.object[i] = scythe; break;
+            case 2: inventory.object[i] = mana_potion; break;
+            case 3: inventory.object[i] = health_potion; break;
+        }
+    }
+}
+

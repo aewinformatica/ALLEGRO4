@@ -1,0 +1,85 @@
+%{
+#include <malloc.h>  // _alloca is used by the parser
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "lex.h"
+#include "Structs.h"
+#include "Player.h"
+//#include "StateManager.h"
+
+
+
+CAirManager *m_pAir;
+
+
+void yyerror(char *msg);
+void SetAir(CAirManager *p);
+
+
+
+#define YYSTYPE myType
+
+%}
+
+
+
+%token NUMBER
+%token EQUAL
+%token STRING
+
+//Air File tokens
+%token ACBEGIN
+%token ACTION
+%token LOOPSTART
+%token CLSN2DEFAULT
+%token CLSN1DEFAULT
+%token CLSN2
+%token CLSN1
+%token HORIZONTALFLIP
+%token VERTIKALFLIP
+%token HVFLIP
+%token LOOPSTART
+%token ALPHA
+
+
+
+
+%%
+lines :   /* empty */
+      |   lines AIRFILE
+      |   error /* empty */
+      ;
+
+
+     
+
+
+
+AIRFILE: '[' ACBEGIN ACTION NUMBER ']' {m_pAir->AddAction((int)$4.nFloat); }
+        | CLSN1DEFAULT ':' NUMBER     {m_pAir->CreateClsnBox((int)$3.nFloat,true,true);}
+        | CLSN2DEFAULT ':' NUMBER     {m_pAir->CreateClsnBox((int)$3.nFloat,false,true);}    
+        | CLSN1 ':' NUMBER            {m_pAir->CreateClsnBox((int)$3.nFloat,true,false);}
+        | CLSN2 ':' NUMBER            {m_pAir->CreateClsnBox((int)$3.nFloat,false,false);}
+        | CLSN1 '[' NUMBER ']' EQUAL NUMBER ',' NUMBER ',' NUMBER ',' NUMBER  {m_pAir->AddClsnBox((short)$6.nFloat,(short)$8.nFloat,(short)$10.nFloat,(short)$12.nFloat,(short)$3.nFloat);}
+        | CLSN2 '[' NUMBER ']' EQUAL NUMBER ',' NUMBER ',' NUMBER ',' NUMBER  {m_pAir->AddClsnBox((short)$6.nFloat,(short)$8.nFloat,(short)$10.nFloat,(short)$12.nFloat,(short)$3.nFloat);}
+        | NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' NUMBER {m_pAir->AddElement((int)$1.nFloat,(int)$3.nFloat,(int)$5.nFloat,(int)$7.nFloat,(int)$9.nFloat,0,0);}
+        
+        | NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' HORIZONTALFLIP {m_pAir->AddElement((int)$1.nFloat,(int)$3.nFloat,(int)$5.nFloat,(int)$7.nFloat,(int)$9.nFloat,HFLIPFLAG,0);}
+        | NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' VERTIKALFLIP {m_pAir->AddElement((int)$1.nFloat,(int)$3.nFloat,(int)$5.nFloat,(int)$7.nFloat,(int)$9.nFloat,VFLIPFLAG,0);}
+        | NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' HVFLIP {m_pAir->AddElement((int)$1.nFloat,(int)$3.nFloat,(int)$5.nFloat,(int)$7.nFloat,(int)$9.nFloat,HVFLIPFLAG,0);}
+        
+        | NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' HORIZONTALFLIP ',' ALPHA {m_pAir->AddElement((int)$1.nFloat,(int)$3.nFloat,(int)$5.nFloat,(int)$7.nFloat,(int)$9.nFloat,HFLIPFLAG,0);}
+        | NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' VERTIKALFLIP  ',' ALPHA  {m_pAir->AddElement((int)$1.nFloat,(int)$3.nFloat,(int)$5.nFloat,(int)$7.nFloat,(int)$9.nFloat,VFLIPFLAG,0);}
+        | NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' HVFLIP  ','  ALPHA       {m_pAir->AddElement((int)$1.nFloat,(int)$3.nFloat,(int)$5.nFloat,(int)$7.nFloat,(int)$9.nFloat,HVFLIPFLAG,0);}
+        
+        | NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ',' NUMBER ','  ',' ALPHA {m_pAir->AddElement((int)$1.nFloat,(int)$3.nFloat,(int)$5.nFloat,(int)$7.nFloat,(int)$9.nFloat,0,0);}
+       
+        
+        | LOOPSTART {m_pAir->SetLoop();}
+        ;    
+        
+
+
+%%

@@ -1,0 +1,147 @@
+%{
+#include <io.h>
+#include <stdio.h>
+#include <string.h>
+#include "airtoken.h"
+#include "lex.h"
+#include "cnstoken.h"
+#ifdef MSVC
+#define  isatty _isatty  // for some reason isatty is called _isatty in VC..
+#endif
+
+void DestroyCnsComment();
+void CopyCnsString();
+void CopyCnsID();
+int  CharCnsToInt();
+
+
+
+
+
+%}
+
+%option caseless
+
+digit	[-0123456789]
+STR      \"[^\"]*\"
+CHAR	[a-zA-z_]
+
+
+
+
+%%
+{digit}+"."{digit}+	|
+"."{digit}+		|
+{digit}+ 		{sscanf(cnstext,"%f",&cnslval.nFloat); 
+				     return NUMBER;}
+
+
+[ \t]+		{/*NOTHING*/}
+
+\n		{nLineNr++;}
+
+
+";"		{DestroyCnsComment();}
+
+"="     return EQUAL;
+{STR}		{CopyCnsString();return STRING;}
+"[data]"			return DATA;
+"life"				return LIFE;
+"attack"			return ATTACK;
+"defence"			return DEFENCE;
+"fall.defence_up"		return FALLDEFUP;
+"liedown.time"			return LIEDOWTIME;
+"airjuggle"			return AIRJUGGLE;
+"sparkno"			return SPARKNO;
+"guard.sparkno"			return GUARDSPARKNO;
+"KO.echo"			return KOECHO;
+"volume"			return VOLUME;
+"IntPersistIndex"		return INTEGERINDEX;
+"FloatPersistIndex"		return FLOATINDEX;
+
+"[size]"			return SIZE;
+"xscale"			return XSCALE;
+"yscale"			return YSCALE;
+"ground.back"			return GROUNDBACK;
+"ground.front"			return GROUNDFRONT;
+"air.back"			return AIRBACK;
+"air.front"			return AIRFRONT;
+"height"			return HEIGHT;
+"attack.dist"			return ATTACKDIST;
+"proj.attack.dist"		return PROJATTDIST;
+"proj.doscale"			return PROJDOSCALE;
+"head.pos"			return HEADPOS;
+"mid.pos"			return MIDPOS;
+"shadowoffset"			return SHADOWOFFSET;
+"draw.offset"			return DRAWOFFSET;
+
+"[velocity]"			return VELOCITY;
+"walk.fwd"			return WALKFWD;
+"walk.back"			return WALKBACK;
+"run.fwd"			return RUNFWD;
+"run.back"			return RUNBACK;
+"jump.neu"			return JUMPNEU;
+"jump.back"			return JUMPBACK;
+"jump.fwd"			return JUMPFWD;
+"runjump.back"			return RUNJUMPBACK;
+"runjump.fwd"			return RUNJUMPFWD;
+"airjump.neu"			return AIRJUMPNEU;
+"airjump.back"			return AIRJUMPBACK;
+"airjump.fwd"			return AIRJUMPFWD;
+
+"[Movement]"			return MOVEMENT;
+"airjump.num"			return AIRJUMPNUM;
+"airjump.height"		return AIRJUMPHEIGHT;
+"yaccel"			return YACCEL;
+"stand.friction"		return STANDFRICTION;
+"crouch.friction"		return CROUCHFRICTION;
+
+","             return ',';
+
+
+
+
+%%
+
+void DestroyCnsComment()
+{
+char c;
+
+   c= yyinput();
+   while (c != '\n' && c != 0)
+   {	
+	c=yyinput();
+
+   }
+   nLineNr++;
+   
+   
+}
+
+void CopyCnsString()
+{
+   int l = strlen(yytext)-2;
+   strncpy (yylval.str, &yytext[1], l); yylval.str[l] = 0;
+ 
+}
+
+void CopyCnsID()
+{
+	int l=strlen(yytext);
+	memcpy(yylval.str,yytext,l);
+	yylval.str[l]=0;
+ 	printf("ID %s line %i \n",yytext,nLineNr);
+}
+
+int CharCnsToInt()
+{	
+	char c;
+	c = yytext[0];
+	if(c>=97)
+	   c-=32;
+	yylval.nFloat=(float)c;
+	return NUMBER; 
+
+
+}
+

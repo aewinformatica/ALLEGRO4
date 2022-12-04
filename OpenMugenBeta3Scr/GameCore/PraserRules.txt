@@ -1,0 +1,846 @@
+%{
+#include <malloc.h>  // _alloca is used by the parser
+#include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "lex.h"
+#include "Structs.h"
+#include "Player.h"
+//#include "StateManager.h"
+
+
+CPlayer *m_pPlayer;
+CStateManager *myStateManager;
+
+void yyerror(char *msg);
+void SetPlayer(CPlayer *p);
+void SetStateManager(CStateManager *p);
+
+
+#define YYSTYPE myType
+
+%}
+
+%left ','
+%left MOD,LOGNOT,LOGAND,LOGOR,LOGXOR,NOT,AND,OR,XOR
+%left EQUAL,NOTEQUAL,GREATER,LESS,LESSEQUAL,GREATEREQUAL
+%left '+','-'
+%left '*',SQUARE,'/' 
+%left ACOS,ABS,ANIMELEMNO,ANIMELEMTIME,ANIMEXIST,ASIN,ATAN,CEIL,COS,EXP,FLOOR,GETHITVAR,LN
+%left NUMEXPLOD,NUMHELPER,NUMPROJID,NUMTARGET,PLAYERIDEXIST,PROJCANCLETIME,SELFANIMEXIST,SIN,SYSFVAR,SYSVAR
+%left TAN,VAR,PROJCONTACTTIME,PROJGUARDEDTIME
+%right IFELSE,LOG,CONST
+
+
+%left UMINUS
+%right UPLUS
+
+
+%token ID
+%token STRING
+
+%token NEGONE
+
+
+%token DATA
+%token ATTACK
+%token DEFENCE
+%token FALLDEFUP
+%token LIEDOWTIME
+%token AIRJUGGLE
+%token SPARKNO
+%token GUARDSPARKNO
+%token KOECHO
+%token VOLUME
+%token INTEGERINDEX
+%token FLOATINDEX
+
+%token SIZE
+%token XSCALE
+%token YSCALE
+%token GROUNDBACK
+%token GROUNDFRONT
+%token AIRBACK
+%token AIRFRONT
+%token HEIGHT
+%token ATTACKDIST
+%token PROJATTDIST
+%token PROJDOSCALE
+%token HEADPOSX
+%token HEADPOSY
+%token MIDPOSX
+%token MIDPOSY
+%token SHADOWOFFSET
+%token DRAWOFFSETX
+%token DRAWOFFSETY
+
+%token VELOCITY
+%token WALKFWD
+%token WALKBACK
+
+%token RUNFWDX
+%token RUNFWDY
+
+%token RUNBACKX
+%token RUNBACKY
+
+%token JUMPNEU
+%token JUMPBACK
+%token JUMPFWD
+%token RUNJUMPBACK
+%token RUNJUMPFWD
+%token AIRJUMPNEU
+%token AIRJUMPBACK
+%token AIRJUMPFWD
+
+%token MOVEMENT
+%token AIRJUMPNUM
+%token AIRJUMPHEIGHT
+%token YACCEL
+%token STANDFRICTION
+%token CROUCHFRICTION
+
+%token NUMBER
+%token TRIGGER
+%token TRIGGERALL
+
+
+
+%token STATEDEF
+%token TYPE
+%token MOVETYPE
+%token PHYSICS
+%token ANIM
+%token JUGGLE
+%token FACEP2
+%token HITDEFPERSIST
+%token MOVEHITPERSIST
+%token HITCOUNTPERSIST
+%token STATE
+
+
+%token ALIVE
+%token ANIMELEM
+%token ANIM
+
+
+
+%token ANIMTIME
+
+
+%token AUTHORNAME
+%token BACKEEDGEBODYDIST
+%token BACKEDGEDIST
+%token CANRECOVER
+
+%token COMMAND
+
+
+%token CTRL
+%token DRAWGAME
+
+%token FACING
+
+%token FRONTEDGEBODYDIST
+%token FRONTEDGEDIST
+%token FVAR
+%token GAMETIME
+
+%token HITCOUNT
+%token HITDEFATTR
+%token HITFALL
+%token HITOVER
+%token HITPAUSETIME
+%token HITSHAKEOVER
+%token HITVELX
+%token HITVELY
+%token PLID
+%token INGUARDDIST
+%token ISHELPER
+%token ISHOMETEAM
+%token LIFE
+%token LIFEMAX
+
+
+%token LOSE
+%token LOSEKO
+%token LOSETIME
+%token MATCHNO
+%token MATCHOVER
+%token MOVECONTACT
+%token MOVEGUARDED
+%token MOVEHIT
+%token MOVETYPE
+%token MOVEREVERSED
+%token NAME
+%token NUMENEMY
+
+
+%token NUMPARTNER
+%token NUMPROJ
+
+
+%token P1NAME
+%token P2BODYDISTX
+%token P2BODYDISTY
+%token P2DISTX
+%token P2DISTY
+
+%token P2LIFE
+%token P2MOVETYPE
+%token P2NAME
+%token P2STATENO
+%token P2STATETYP
+%token P3NAME
+%token P4NAME
+%token PALNO
+%token PARENTDISTX
+%token PARENTDISTY
+%token PI
+
+%token PREVSTATENO
+%token POSX
+%token POSY
+%token POWER
+%token POWERMAX
+
+%token PROJCONTACT
+
+%token PROJGUARDED
+
+%token PROJHIT
+%token PROJHITTIME
+%token RANDOM
+%token ROOTDISTX
+%token ROOTDISTY
+%token ROUNDNO
+%token ROUNDSEXISTED
+%token ROUNDSTATE
+%token SCREENPOSX
+%token SCREENPOSY
+
+
+%token STATENO
+%token STATETYPE
+
+%token TEAMMODE
+%token TEAMSIDE
+%token TICKSPERSECOND
+%token TIME
+%token TIMEMODE
+%token UNIQHITCOUNT
+
+%token VELX
+%token VELY
+%token WIN
+%token WINKO
+%token WINTIME
+%token WINPERFECT
+
+%token TNULL
+%token AFTERIMAGE
+%token AFTERIMAGETIME
+%token ALLPALFX
+%token ANGLEADD
+%token ANGLEDRAW
+%token ANGLEMUL
+%token ANGLESET
+%token APPENDTOCLIPBOARD
+%token ASSERTSPECIAL
+%token ATTACKDIST
+%token ATTACKMULSET
+%token BGPALFX
+%token BINDTOPARENT
+%token BINDTOROOT
+%token BINDTOTARGET
+%token CHANGEANIME
+%token CHANGEANIME2
+%token CHANGESTATE
+%token CLEARCLIPBOARD
+%token CTRLSET
+%token DEFENCEMULSET
+%token DESTROYSELF
+%token DISPLAYTOCLIPBORAD
+%token ENVSHAKE
+%token EXPLOD
+%token EXPLODBINDTIME
+%token FALLENVSHAKE
+%token FORCEFEDDBACK
+%token GAMEMAKEANIM
+%token GRAVITY
+%token HELPER
+%token HITADD
+%token HITBY
+%token HITDEF
+%token HITFALLDAMAGE
+%token HITFALLSET
+%token HITFALLVEL
+%token HITOVERRIDE
+%token HITVELSET
+%token LIFEADD
+%token LIFESET
+%token MAKEDUST
+%token MODIFYEXPLOD
+%token MOVEHITRESET
+%token NOTHITBY
+%token NUL
+%token OFFSET
+%token PALFX
+%token PARENTVARADD
+%token PARENTVARSET
+%token PAUSE
+%token PLAYERPUSH
+%token PLAYSND
+%token POSADD
+%token POSFREEZ
+%token POSSET
+%token POWERADD
+%token POWERSET
+%token PROJECTILE
+%token REMOVEEXPLOD
+%token REVERSALDEF
+%token SCREENBOUND
+%token SELFSTATE
+%token SNDPAN
+%token SPRPRIORITY
+%token STATETYPESET
+%token STOPSND
+%token SUPERPAUSE
+%token TARGETBIND
+%token TARGETDROP
+%token TARGETFACING
+%token TARGETLIFEADD
+%token TARGETPOWERADD
+%token TARGETSTATE
+%token TARGETVELADD
+%token TARGETVELSET
+%token TURN
+%token VARADD
+%token VARRANDOM
+%token VARRANGESET
+%token VARSET
+%token VELADD
+%token VELMUL
+%token VELSET
+%token WIDTH
+
+%token TIME
+%token LENGTH
+%token PALCOLOR
+%token PALINVERTALL
+%token PALBRIGHT
+%token PALCONTRAST
+%token PALPOSTBRIGHT
+%token PALADD
+%token PALMUL
+%token TIMEGAP
+%token FRAMEGAP
+%token TRANS 
+
+//Air File tokens
+%token ACBEGIN
+%token ACTION
+%token LOOPSTART
+%token CLSN2DEFAULT
+%token CLSN1DEFAULT
+%token CLSN2
+%token CLSN1
+%token HORIZONTALFLIP
+%token VERTIKALFLIP
+%token HVFLIP
+%token LOOPSTART
+%token ALPHA
+
+//Def File Tokens
+%token INFO
+%token NAME
+%token DISPLAYNAME
+%token VERSIONSDATA
+%token MUGENVERSION
+%token AUTHOR
+%token FILES
+%token CMD
+%token CNS
+%token ST
+%token STCOMMON
+%token SPRITE
+%token ANIM
+%token SOUND
+%token PAL
+%token PALDEF
+%token ARCADE
+%token INTROSTORYBOARD
+%token ENDINGSTORYBOARD
+
+%token VALUE
+%token XVALUE
+%token YVALUE
+
+
+
+%%
+lines : /* empty */
+        | lines STATEDEFSECTION 
+        | error {yyclearin;}
+        ;
+
+
+STATEDEFSECTION: '[' STATEDEF expression ']'	{myStateManager->AddStateDef((int)$3.nFloat);}
+	|	TYPE 		EQUAL expression			{myStateManager->GetCurrStateDef()->type=(int)$3.nFloat;}
+	|	MOVETYPE 	EQUAL expression			{myStateManager->GetCurrStateDef()->movetype=(int)$3.nFloat;}
+	|	PHYSICS		EQUAL expression			{myStateManager->GetCurrStateDef()->physics=(int)$3.nFloat;}
+	|	ANIM		EQUAL expression			{myStateManager->GetCurrStateDef()->nAnim=(int)$3.nFloat;}
+	|	CTRL		EQUAL expression			{myStateManager->GetCurrStateDef()->bCtrl=(int)$3.nFloat;}
+	|	POWERADD	EQUAL expression			{myStateManager->GetCurrStateDef()->nPoweradd=(int)$3.nFloat;}
+	|	JUGGLE		EQUAL expression			{myStateManager->GetCurrStateDef()->nJuggle=(int)$3.nFloat;}
+	|	HITDEFPERSIST	EQUAL expression			{myStateManager->GetCurrStateDef()->bHitdefpersist=(int)$3.nFloat;}
+	|	MOVEHITPERSIST	EQUAL expression			{myStateManager->GetCurrStateDef()->bMovehitpersist=(int)$3.nFloat;}
+	|	HITCOUNTPERSIST	EQUAL expression			{myStateManager->GetCurrStateDef()->bHitcountpersist=(int)$3.nFloat;}
+	|	SPRPRIORITY	EQUAL expression			{myStateManager->GetCurrStateDef()->nSprpriority=(int)$3.nFloat;}
+	|	FACEP2		EQUAL expression			{myStateManager->GetCurrStateDef()->bFacep2=(int)$3.nFloat;}
+	|	VELSET		EQUAL expression ',' expression		{myStateManager->GetCurrStateDef()->Velset.x=$3.nFloat;
+                                                         myStateManager->GetCurrStateDef()->Velset.y=$5.nFloat;}
+	| 	STATESECTION
+	;
+
+STATESECTION: '[' STATE expression ',' expression ']'		{myStateManager->AddState((int)$3.nFloat,"Nothing");}
+	    | '[' STATE expression ',' ID ']'		            {myStateManager->AddState((int)$3.nFloat,$5.str);}
+	    | '[' STATE expression ',' ID expression ']'	    {myStateManager->AddState((int)$3.nFloat,$5.str);} 
+	    | '[' STATE expression ',' error ']'                {myStateManager->AddState((int)$3.nFloat,"Nothing");}
+        | TYPESECTION
+	    | TRIGGERSECTION
+	    | PARAMSECTION
+	   
+	   ;
+
+TYPESECTION:       TYPE EQUAL TNULL                     {myStateManager->AddTypeToState(TNULL);}
+                 | TYPE EQUAL AFTERIMAGE				{myStateManager->AddTypeToState(AFTERIMAGE);} 
+                 | TYPE EQUAL AFTERIMAGETIME    		{myStateManager->AddTypeToState(AFTERIMAGETIME);} 
+                 | TYPE EQUAL ALLPALFX                  {myStateManager->AddTypeToState(ALLPALFX);} 
+                 | TYPE EQUAL ANGLEADD                  {myStateManager->AddTypeToState(ANGLEADD);} 
+                 | TYPE EQUAL ANGLEDRAW                 {myStateManager->AddTypeToState(ANGLEDRAW);} 
+                 | TYPE EQUAL ANGLEMUL                  {myStateManager->AddTypeToState(ANGLEMUL);} 
+                 | TYPE EQUAL ANGLESET                  {myStateManager->AddTypeToState(ANGLESET);} 
+                 | TYPE EQUAL APPENDTOCLIPBOARD         {myStateManager->AddTypeToState(APPENDTOCLIPBOARD);}         
+                 | TYPE EQUAL ASSERTSPECIAL             {myStateManager->AddTypeToState(ASSERTSPECIAL);}     
+                 | TYPE EQUAL ATTACKDIST                {myStateManager->AddTypeToState(ATTACKDIST);}  
+                 | TYPE EQUAL ATTACKMULSET              {myStateManager->AddTypeToState(ATTACKMULSET);}    
+                 | TYPE EQUAL BGPALFX                   {myStateManager->AddTypeToState(BGPALFX);} 
+                 | TYPE EQUAL BINDTOPARENT              {myStateManager->AddTypeToState(BINDTOPARENT);}    
+                 | TYPE EQUAL BINDTOROOT                {myStateManager->AddTypeToState(BINDTOROOT);}  
+                 | TYPE EQUAL BINDTOTARGET              {myStateManager->AddTypeToState(BINDTOTARGET);}    
+                 | TYPE EQUAL CHANGEANIME               {myStateManager->AddTypeToState(CHANGEANIME);}                    
+                 | TYPE EQUAL CHANGEANIME2              {myStateManager->AddTypeToState(CHANGEANIME2);}    
+                 | TYPE EQUAL CHANGESTATE               {myStateManager->AddTypeToState(CHANGESTATE);}   
+                 | TYPE EQUAL CLEARCLIPBOARD            {myStateManager->AddTypeToState(CLEARCLIPBOARD);}      
+                 | TYPE EQUAL CTRLSET                   {myStateManager->AddTypeToState(CTRLSET);} 
+                 | TYPE EQUAL DEFENCEMULSET             {myStateManager->AddTypeToState(DEFENCEMULSET);}     
+                 | TYPE EQUAL DESTROYSELF               {myStateManager->AddTypeToState(DESTROYSELF);}   
+                 | TYPE EQUAL DISPLAYTOCLIPBORAD        {myStateManager->AddTypeToState(DISPLAYTOCLIPBORAD);}          
+                 | TYPE EQUAL ENVSHAKE                  {myStateManager->AddTypeToState(ENVSHAKE);} 
+                 | TYPE EQUAL EXPLOD                    {myStateManager->AddTypeToState(EXPLOD);}               
+                 | TYPE EQUAL EXPLODBINDTIME            {myStateManager->AddTypeToState(EXPLODBINDTIME);}      
+                 | TYPE EQUAL FALLENVSHAKE              {myStateManager->AddTypeToState(FALLENVSHAKE);}    
+                 | TYPE EQUAL FORCEFEDDBACK             {myStateManager->AddTypeToState(FORCEFEDDBACK);}     
+                 | TYPE EQUAL GAMEMAKEANIM              {myStateManager->AddTypeToState(GAMEMAKEANIM);}    
+                 | TYPE EQUAL GRAVITY                   {myStateManager->AddTypeToState(GRAVITY);} 
+                 | TYPE EQUAL HELPER                    {myStateManager->AddTypeToState(HELPER);}               
+                 | TYPE EQUAL HITADD                    {myStateManager->AddTypeToState(HITADD);}               
+                 | TYPE EQUAL HITBY                     {myStateManager->AddTypeToState(HITBY);}              
+                 | TYPE EQUAL HITDEF                    {myStateManager->AddTypeToState(HITDEF);}               
+                 | TYPE EQUAL HITFALLDAMAGE             {myStateManager->AddTypeToState(HITFALLDAMAGE);}     
+                 | TYPE EQUAL HITFALLSET                {myStateManager->AddTypeToState(HITFALLSET);}  
+                 | TYPE EQUAL HITFALLVEL                {myStateManager->AddTypeToState(HITFALLVEL);}  
+                 | TYPE EQUAL HITOVERRIDE               {myStateManager->AddTypeToState(HITOVERRIDE);}   
+                 | TYPE EQUAL HITVELSET                 {myStateManager->AddTypeToState(HITVELSET);} 
+                 | TYPE EQUAL LIFEADD                   {myStateManager->AddTypeToState(LIFEADD);} 
+                 | TYPE EQUAL LIFESET                   {myStateManager->AddTypeToState(LIFESET);} 
+                 | TYPE EQUAL MAKEDUST                  {myStateManager->AddTypeToState(MAKEDUST);}  
+                 | TYPE EQUAL MODIFYEXPLOD              {myStateManager->AddTypeToState(MODIFYEXPLOD);}    
+                 | TYPE EQUAL MOVEHITRESET              {myStateManager->AddTypeToState(MOVEHITRESET);}    
+                 | TYPE EQUAL NOTHITBY                  {myStateManager->AddTypeToState(NOTHITBY);} 
+                 | TYPE EQUAL NUL                       {myStateManager->AddTypeToState(NUL);}            
+                 | TYPE EQUAL OFFSET                    {myStateManager->AddTypeToState(OFFSET);}               
+                 | TYPE EQUAL PALFX                     {myStateManager->AddTypeToState(PALFX);}              
+                 | TYPE EQUAL PARENTVARADD              {myStateManager->AddTypeToState(PARENTVARADD);}    
+                 | TYPE EQUAL PARENTVARSET              {myStateManager->AddTypeToState(PARENTVARSET);}    
+                 | TYPE EQUAL PAUSE                     {myStateManager->AddTypeToState(PAUSE);}              
+                 | TYPE EQUAL PLAYERPUSH                {myStateManager->AddTypeToState(PLAYERPUSH);}  
+                 | TYPE EQUAL PLAYSND                   {myStateManager->AddTypeToState(PLAYSND);} 
+                 | TYPE EQUAL POSADD                    {myStateManager->AddTypeToState(POSADD);}               
+                 | TYPE EQUAL POSFREEZ                  {myStateManager->AddTypeToState(POSFREEZ);} 
+                 | TYPE EQUAL POSSET                    {myStateManager->AddTypeToState(POSSET);} 
+                 | TYPE EQUAL POWERADD                  {myStateManager->AddTypeToState(POWERADD);} 
+                 | TYPE EQUAL POWERSET                  {myStateManager->AddTypeToState(POWERSET);} 
+                 | TYPE EQUAL PROJECTILE                {myStateManager->AddTypeToState(PROJECTILE);}  
+                 | TYPE EQUAL REMOVEEXPLOD              {myStateManager->AddTypeToState(REMOVEEXPLOD);}    
+                 | TYPE EQUAL REVERSALDEF               {myStateManager->AddTypeToState(REVERSALDEF);}   
+                 | TYPE EQUAL SCREENBOUND               {myStateManager->AddTypeToState(SCREENBOUND);}   
+                 | TYPE EQUAL SELFSTATE                 {myStateManager->AddTypeToState(SELFSTATE);} 
+                 | TYPE EQUAL SNDPAN                    {myStateManager->AddTypeToState(SNDPAN);} 
+                 | TYPE EQUAL SPRPRIORITY               {myStateManager->AddTypeToState(SPRPRIORITY);}   
+                 | TYPE EQUAL STATETYPESET              {myStateManager->AddTypeToState(STATETYPESET);}    
+                 | TYPE EQUAL STOPSND                   {myStateManager->AddTypeToState(STOPSND);} 
+                 | TYPE EQUAL SUPERPAUSE                {myStateManager->AddTypeToState(SUPERPAUSE);}                   
+                 | TYPE EQUAL TARGETBIND                {myStateManager->AddTypeToState(TARGETBIND);}  
+                 | TYPE EQUAL TARGETDROP                {myStateManager->AddTypeToState(TARGETDROP);}  
+                 | TYPE EQUAL TARGETFACING              {myStateManager->AddTypeToState(TARGETFACING);}    
+                 | TYPE EQUAL TARGETLIFEADD             {myStateManager->AddTypeToState(TARGETLIFEADD);}     
+                 | TYPE EQUAL TARGETPOWERADD            {myStateManager->AddTypeToState(TARGETPOWERADD);}      
+                 | TYPE EQUAL TARGETSTATE               {myStateManager->AddTypeToState(TARGETSTATE);}   
+                 | TYPE EQUAL TARGETVELADD              {myStateManager->AddTypeToState(TARGETVELADD);}    
+                 | TYPE EQUAL TARGETVELSET              {myStateManager->AddTypeToState(TARGETVELSET);}    
+                 | TYPE EQUAL TURN                      {myStateManager->AddTypeToState(TURN);}             
+                 | TYPE EQUAL VARADD                    {myStateManager->AddTypeToState(VARADD);} 
+                 | TYPE EQUAL VARRANDOM                 {myStateManager->AddTypeToState(VARRANDOM);} 
+                 | TYPE EQUAL VARRANGESET               {myStateManager->AddTypeToState(VARRANGESET);}   
+                 | TYPE EQUAL VARSET                    {myStateManager->AddTypeToState(VARSET);} 
+                 | TYPE EQUAL VELADD                    {myStateManager->AddTypeToState(VELADD);} 
+                 | TYPE EQUAL VELMUL                    {myStateManager->AddTypeToState(VELMUL);} 
+                 | TYPE EQUAL VELSET                    {myStateManager->AddTypeToState(VELSET);} 
+                 | TYPE EQUAL WIDTH                     {myStateManager->AddTypeToState(WIDTH);}              
+                 ;
+                       
+		 	
+TRIGGERSECTION: TRIGGER        EQUAL expression {myStateManager->AddInstruction(OP_STOP,0,"#");myStateManager->AddTriggerToState((int)$1.nFloat);}
+              | TRIGGERALL     EQUAL expression {myStateManager->AddInstruction(OP_STOP,0,"#");myStateManager->AddTriggerToState(192);}
+              ;	
+              
+
+
+expression
+    : NUMBER             {myStateManager->AddInstruction(OP_PUSH,$1.nFloat,"#");/*printf("%f\n",$1.nFloat);*/}
+    | STRING             {myStateManager->AddInstruction(OP_PUSH,0,$1.str);}
+    
+    
+	| ABS  	expression                         {myStateManager->AddInstruction(OP_ABS,0,"#");}
+	| ACOS  expression                         {myStateManager->AddInstruction(OP_ACOS,0,"#");}
+	| ALIVE                                    {myStateManager->AddInstruction(OP_ALIVE,0,"#");}
+	| ANIM                                     {myStateManager->AddInstruction(OP_ANIM,0,"#");}
+	
+    | ANIMELEM                                 {myStateManager->AddInstruction(OP_ANIMELEM,0,"#");}
+    	
+    | ANIMELEMNO expression                    {myStateManager->AddInstruction(OP_ANIMELEMNO,0,"#");}
+	| ANIMELEMTIME expression                  {myStateManager->AddInstruction(OP_ANIMELEMTIME,0,"#");}
+	| ANIMEXIST    expression                  {myStateManager->AddInstruction(OP_ANIMEXIST,0,"#");}
+	| ANIMTIME                                 {myStateManager->AddInstruction(OP_ANIMTIME,0,"#");}
+	| ASIN    expression                       {myStateManager->AddInstruction(OP_ASIN,0,"#");}
+	| ATAN    expression                       {myStateManager->AddInstruction(OP_ATAN,0,"#");}
+	| AUTHORNAME                               {myStateManager->AddInstruction(OP_AUTHORNAME,0,"#");}
+	| BACKEEDGEBODYDIST                        {myStateManager->AddInstruction(OP_BACKEDGEBODY,0,"#");}
+	| BACKEDGEDIST                             {myStateManager->AddInstruction(OP_BACKEDGE,0,"#");}
+	| CANRECOVER                               {myStateManager->AddInstruction(OP_CANRECOVER,0,"#");}
+	| CEIL    expression                       {myStateManager->AddInstruction(OP_CEIL,0,"#");}
+	| COMMAND                                  {myStateManager->AddInstruction(OP_COMMAND,0,"#");}
+	| CONST  '(' CONSTPARAM ')'                                   {myStateManager->AddInstruction(OP_CONST,0,"#");}
+	| COS    expression                        {myStateManager->AddInstruction(OP_COS,0,"#");}
+	| CTRL                                     {myStateManager->AddInstruction(OP_CTRL,0,"#");}
+	| DRAWGAME                                 {myStateManager->AddInstruction(OP_DRAWGAME,0,"#");}
+	| EXP    expression                        {myStateManager->AddInstruction(OP_EXP,0,"#");}
+	| FACING                                   {myStateManager->AddInstruction(OP_FACING,0,"#");}
+	| FLOOR  expression                        {myStateManager->AddInstruction(OP_FLOOR,0,"#");}
+	| FRONTEDGEBODYDIST                        {myStateManager->AddInstruction(OP_FEBD,0,"#");}
+	| FRONTEDGEDIST                            {myStateManager->AddInstruction(OP_FED,0,"#");}
+	| FVAR                                     {myStateManager->AddInstruction(OP_FVAR,0,"#");}
+	| GAMETIME                                 {myStateManager->AddInstruction(OP_GAMETIME,0,"#");}
+	| GETHITVAR expression                     {myStateManager->AddInstruction(OP_GETHITVAR,0,"#");}
+	| HITCOUNT                                 {myStateManager->AddInstruction(OP_HITCOUNT,0,"#");}
+	| HITDEFATTR                               {}
+	| HITFALL                                  {myStateManager->AddInstruction(OP_HITFALL,0,"#");}
+	| HITOVER                                  {myStateManager->AddInstruction(OP_HITOVER,0,"#");}
+	| HITPAUSETIME                             {myStateManager->AddInstruction(OP_HITPAUSETIME,0,"#");}
+	| HITSHAKEOVER                             {myStateManager->AddInstruction(OP_HITSHAKEOVER,0,"#");} 
+
+	| HITVELX                                  {myStateManager->AddInstruction(OP_PUSH,1,"#");
+                                                myStateManager->AddInstruction(OP_HITVAL,0,"#");}
+	
+    | HITVELY                                  {myStateManager->AddInstruction(OP_PUSH,2,"#");
+                                                myStateManager->AddInstruction(OP_HITVAL,0,"#");}	
+	| PLID                                     {myStateManager->AddInstruction(OP_ID,0,"#");}                  
+
+	| IFELSE   '(' expression ',' expression ',' expression ')'       {myStateManager->AddInstruction(OP_IFELSE,0,"#");}
+
+	| INGUARDDIST                              {myStateManager->AddInstruction(OP_INGUARDDIST,0,"#");}
+	| ISHELPER                                 {myStateManager->AddInstruction(OP_ISHELPER,0,"#");}
+	| ISHOMETEAM                               {myStateManager->AddInstruction(OP_ISHOMETEAM,0,"#");}
+	| LIFE                                     {myStateManager->AddInstruction(OP_LIFE,0,"#");}
+	| LIFEMAX                                  {myStateManager->AddInstruction(OP_LIFEMAX,0,"#");}
+	| LN      expression                       {myStateManager->AddInstruction(OP_LN,0,"#");}
+	| LOG  '(' expression ',' expression ')'   {myStateManager->AddInstruction(OP_LOG,0,"#");}
+
+	| LOSE                                                {myStateManager->AddInstruction(OP_PUSH,1,"#");
+                                                           myStateManager->AddInstruction(OP_LOSE,0,"#");}
+	
+    | LOSEKO                                              {myStateManager->AddInstruction(OP_PUSH,2,"#");
+                                                           myStateManager->AddInstruction(OP_LOSE,0,"#");}
+	
+    | LOSETIME                                            {myStateManager->AddInstruction(OP_PUSH,3,"#");
+                                                           myStateManager->AddInstruction(OP_LOSE,0,"#");}
+
+	| MATCHNO                                             {myStateManager->AddInstruction(OP_MATCHNO,0,"#");}
+	| MATCHOVER                                           {myStateManager->AddInstruction(OP_MATCHOVER,0,"#");}
+	| MOVECONTACT                                         {myStateManager->AddInstruction(OP_MOVECONTACT,0,"#");}
+	| MOVEGUARDED                                         {myStateManager->AddInstruction(OP_MOVEGUARDED,0,"#");}
+	| MOVEHIT                                             {myStateManager->AddInstruction(OP_MOVEHIT,0,"#");}   
+	| MOVETYPE                                            {myStateManager->AddInstruction(OP_MOVETYPE,0,"#");}
+	| MOVEREVERSED                                        {myStateManager->AddInstruction(OP_MOVEREVERSED,0,"#");}
+    | NAME                                                {myStateManager->AddInstruction(OP_NAME,0,"#");}
+	| NUMENEMY                                            {myStateManager->AddInstruction(OP_NUMENEMY,0,"#");}
+
+	| NUMEXPLOD expression                                {myStateManager->AddInstruction(OP_PUSH,1,"#");
+                                                           myStateManager->AddInstruction(OP_NUMEXPLOD,0,"#");}
+                                                           
+	| NUMEXPLOD                                           {myStateManager->AddInstruction(OP_PUSH,0,"#");
+                                                           myStateManager->AddInstruction(OP_NUMEXPLOD,0,"#");}
+
+	| NUMHELPER expression                                {myStateManager->AddInstruction(OP_PUSH,1,"#");
+                                                           myStateManager->AddInstruction(OP_NUMHELPER,0,"#");}
+
+	| NUMHELPER                                           {myStateManager->AddInstruction(OP_PUSH,0,"#");
+                                                           myStateManager->AddInstruction(OP_NUMHELPER,0,"#");}
+	| NUMPARTNER                                          {myStateManager->AddInstruction(OP_NUMPARTNER,0,"#");}
+	| NUMPROJ                                             {myStateManager->AddInstruction(OP_NUMPROJ,0,"#");}           
+	| NUMPROJID  expression                               {myStateManager->AddInstruction(OP_NUMPROJID,0,"#");}
+
+	| NUMTARGET expression                                {myStateManager->AddInstruction(OP_PUSH,1,"#");
+                                                           myStateManager->AddInstruction(OP_NUMTARGET,1,"#");}
+	| NUMTARGET                                           {myStateManager->AddInstruction(OP_PUSH,0,"#");
+                                                           myStateManager->AddInstruction(OP_NUMTARGET,1,"#");} 
+                                                           
+	| P1NAME                                              {myStateManager->AddInstruction(OP_NAME,0,"#");} 
+
+	| P2BODYDISTX                                         {myStateManager->AddInstruction(OP_PUSH,1,"#");
+                                                           myStateManager->AddInstruction(OP_P2BODYDIST,0,"#");}
+                                                           
+	| P2BODYDISTY                                         {myStateManager->AddInstruction(OP_PUSH,0,"#");
+                                                           myStateManager->AddInstruction(OP_P2BODYDIST,0,"#");}
+
+	| P2DISTX                                             {myStateManager->AddInstruction(OP_PUSH,1,"#");
+                                                           myStateManager->AddInstruction(OP_P2DIST,1,"#");}
+
+	| P2DISTY                                             {myStateManager->AddInstruction(OP_PUSH,0,"#");
+	                                                       myStateManager->AddInstruction(OP_P2DIST,0,"#");}
+	| P2LIFE                                              {myStateManager->AddInstruction(OP_P2LIFE,0,"#");}             
+	
+	| P2MOVETYPE                                          {myStateManager->AddInstruction(OP_P2MOVETYPE,0,"#");}
+	| P2NAME                                              {myStateManager->AddInstruction(OP_P2NAME,0,"#");}
+	| P2STATENO                                           {myStateManager->AddInstruction(OP_P2STATENO,0,"#");}
+	| P2STATETYP                                          {myStateManager->AddInstruction(OP_P2STATETYPE,0,"#");}
+	| P3NAME                                              {myStateManager->AddInstruction(OP_P3NAME,0,"#");}
+	| P4NAME                                              {myStateManager->AddInstruction(OP_P4NAME,0,"#");}
+	| PALNO                                               {myStateManager->AddInstruction(OP_PALNO,0,"#");}
+	
+    | PARENTDISTX                                         {myStateManager->AddInstruction(OP_PUSH,1,"#");
+                                                           myStateManager->AddInstruction(OP_PARENTDIST,0,"#");}
+	| PARENTDISTY                                         {myStateManager->AddInstruction(OP_PUSH,0,"#");
+                                                           myStateManager->AddInstruction(OP_PARENTDIST,0,"#");}
+	
+    | PI                                                  {myStateManager->AddInstruction(OP_PI,0,"#");}
+	| PLAYERIDEXIST  expression                           {myStateManager->AddInstruction(OP_PLAYERIDEXIST,0,"#");}
+	| PREVSTATENO                                         {myStateManager->AddInstruction(OP_PREVSTATENO,0,"#");}
+
+	| POSX                                                {myStateManager->AddInstruction(OP_PUSH,1,"#");
+                                                           myStateManager->AddInstruction(OP_POS,0,"#");}
+	| POSY                                                {myStateManager->AddInstruction(OP_PUSH,0,"#");
+                                                           myStateManager->AddInstruction(OP_POS,0,"#");}
+    | POWER                                               {myStateManager->AddInstruction(OP_POWER,0,"#");}
+    | POWERMAX                                            {myStateManager->AddInstruction(OP_POWERMAX,0,"#");}               
+	| PROJCANCLETIME  expression                          {myStateManager->AddInstruction(OP_PROJCANCTIME,0,"#");}
+	| PROJCONTACT                                         {myStateManager->AddInstruction(OP_PROJCONTACT,0,"#");}
+	| PROJCONTACTTIME  expression                         {myStateManager->AddInstruction(OP_PROJCONTACTTIME,0,"#");}
+	| PROJGUARDED                                         {myStateManager->AddInstruction(OP_PROJGUARDED,0,"#");}
+	| PROJGUARDEDTIME expression                          {myStateManager->AddInstruction(OP_PROJGUARDEDTIME,0,"#");}
+	| PROJHIT                                             {}
+	| PROJHITTIME                                         {}
+	| RANDOM                                              {myStateManager->AddInstruction(OP_RANDOM,0,"#");}  
+
+	| ROOTDISTX                                            {myStateManager->AddInstruction(OP_PUSH,1,"#");
+                                                           myStateManager->AddInstruction(OP_ROOTDIST,0,"#");}
+                                                           
+	| ROOTDISTY                                            {myStateManager->AddInstruction(OP_PUSH,0,"#");
+                                                           myStateManager->AddInstruction(OP_ROOTDIST,0,"#");}
+                                                           
+	| ROUNDNO                                             {myStateManager->AddInstruction(OP_ROUNDNO,0,"#");}
+	| ROUNDSEXISTED                                       {myStateManager->AddInstruction(OP_ROUNDSEXISTED,0,"#");}    
+	| ROUNDSTATE                                          {myStateManager->AddInstruction(OP_ROUNDSTATE,0,"#");}
+
+	| SCREENPOSX                                          {myStateManager->AddInstruction(OP_PUSH,1,"#");
+                                                           myStateManager->AddInstruction(OP_SCREENPOS,0,"#");}
+	| SCREENPOSY                                          {myStateManager->AddInstruction(OP_PUSH,0,"#");
+                                                           myStateManager->AddInstruction(OP_SCREENPOS,0,"#");}
+	
+	| SELFANIMEXIST expression                            {myStateManager->AddInstruction(OP_SELFANIMEXIST,0,"#");}  
+	| SIN   expression                                    {myStateManager->AddInstruction(OP_SIN,0,"#");}
+	| STATENO                                             {myStateManager->AddInstruction(OP_STAGENO,0,"#");}
+	| STATETYPE                                           {myStateManager->AddInstruction(OP_STATETYPE,0,"#");}
+	| SYSFVAR expression                                  {myStateManager->AddInstruction(OP_SYSFVAR,0,"#");}
+	| SYSVAR  expression                                  {myStateManager->AddInstruction(OP_SYSVAR,0,"#");}
+	| TAN     expression                                  {myStateManager->AddInstruction(OP_TAN,0,"#");}
+	| TEAMMODE                                            {myStateManager->AddInstruction(OP_TEAMMODE,0,"#");}
+	| TEAMSIDE                                            {myStateManager->AddInstruction(OP_TEAMSIDE,0,"#");}
+	| TICKSPERSECOND                                      {myStateManager->AddInstruction(OP_TICKSPERSCOND,0,"#");}
+	| TIME                                                {myStateManager->AddInstruction(OP_TIME,0,"#");}
+	| TIMEMODE                                            {}
+	| UNIQHITCOUNT                                        {myStateManager->AddInstruction(OP_UNIQHITCOUNT,0,"#");}
+	| VAR     expression                                  {myStateManager->AddInstruction(OP_VAR,0,"#");}
+
+	| VELX                                                {myStateManager->AddInstruction(OP_PUSH,1,"#");
+                                                           myStateManager->AddInstruction(OP_VEL,0,"#");}
+
+	| VELY                                                {myStateManager->AddInstruction(OP_PUSH,0,"#");
+                                                           myStateManager->AddInstruction(OP_VEL,0,"#");}
+
+	| WIN                                                 {myStateManager->AddInstruction(OP_PUSH,1,"#");myStateManager->AddInstruction(OP_WIN,0,"#")}
+    | WINKO                                               {myStateManager->AddInstruction(OP_PUSH,2,"#");myStateManager->AddInstruction(OP_WIN,0,"#")}                                                          
+    | WINTIME                                             {myStateManager->AddInstruction(OP_PUSH,3,"#");myStateManager->AddInstruction(OP_WIN,0,"#")}
+    | WINPERFECT                                          {myStateManager->AddInstruction(OP_PUSH,4,"#");myStateManager->AddInstruction(OP_WIN,0,"#")}
+    
+    | NOT expression                          {myStateManager->AddInstruction(OP_NOT,0,"#");}
+    | expression AND expression               {myStateManager->AddInstruction(OP_AND,0,"#");}
+    | expression OR expression                {myStateManager->AddInstruction(OP_OR,0,"#");}
+    | expression XOR expression                {myStateManager->AddInstruction(OP_XOR,0,"#");}
+      
+    | LOGNOT expression                       {myStateManager->AddInstruction(OP_LOGNOT,0,"#");}
+    | expression LOGAND expression            {myStateManager->AddInstruction(OP_LOGAND,0,"#");}
+    | expression LOGOR  expression            {myStateManager->AddInstruction(OP_LOGOR,0,"#");}
+    | expression LOGXOR  expression           {myStateManager->AddInstruction(OP_LOGXOR,0,"#");}
+       
+     
+   
+    | expression'+'expression			{myStateManager->AddInstruction(OP_ADD,0,"#");}
+	| expression'-'expression			{myStateManager->AddInstruction(OP_SUB,0,"#");}
+	| expression'*'expression			{myStateManager->AddInstruction(OP_MUL,0,"#");}
+	| expression'/'expression			{myStateManager->AddInstruction(OP_DIV,0,"#");}
+	
+	| expression SQUARE expression      {myStateManager->AddInstruction(OP_SQUARE,0,"#");}
+	
+	| expression EQUAL      expression                  {myStateManager->AddInstruction(OP_EQUAL,0,"#");/*printf("=\n");*/}
+    | expression EQUAL      '[' expression ',' expression ']' {myStateManager->AddInstruction(OP_INTERVALOP1,0,"#");}
+    | expression EQUAL      '[' expression ',' expression ')' {myStateManager->AddInstruction(OP_INTERVALOP2,0,"#");}
+    | expression EQUAL      '(' expression ',' expression ']' {myStateManager->AddInstruction(OP_INTERVALOP3,0,"#");}
+    | expression EQUAL      '(' expression ',' expression ')' {myStateManager->AddInstruction(OP_INTERVALOP4,0,"#");}
+    
+    | expression NOTEQUAL   expression                   {myStateManager->AddInstruction(OP_NOTEQUAL,0,"#");} 
+    | expression NOTEQUAL      '[' expression ',' expression ']' {myStateManager->AddInstruction(OP_INTERVALOP5,0,"#");}
+    | expression NOTEQUAL      '[' expression ',' expression ')' {myStateManager->AddInstruction(OP_INTERVALOP6,0,"#");}
+    | expression NOTEQUAL      '(' expression ',' expression ']' {myStateManager->AddInstruction(OP_INTERVALOP7,0,"#");}
+    | expression NOTEQUAL      '(' expression ',' expression ')' {myStateManager->AddInstruction(OP_INTERVALOP8,0,"#");}
+    
+    | expression GREATER     expression                   {myStateManager->AddInstruction(OP_GREATER,0,"#");}       
+    | expression LESS       expression                   {myStateManager->AddInstruction(OP_LESS,0,"#");}           
+    | expression LESSEQUAL  expression                   {myStateManager->AddInstruction(OP_LESSEQUAL,0,"#");}             
+    | expression GREATEREQUAL expression                {myStateManager->AddInstruction(OP_GRAETEREQUAL,0,"#");}
+	    
+    | '(' expression ')' 		{/*expression Add*/}
+
+	| '(' expression error		{/*expression Add*/}
+	
+	
+    | expression  ',' EQUAL   expression {myStateManager->AddInstruction(OP_SAVE,0,"#");
+                                          myStateManager->ExchangeIns();
+                                          myStateManager->AddInstruction(OP_EQUAL,0,"#");printf("=\n");
+                                          myStateManager->AddInstruction(OP_RESTORE,0,"#");
+                                          myStateManager->AddInstruction(OP_LOGAND,0,"#");
+                                          }  
+	
+    | expression  ',' NOTEQUAL   expression {myStateManager->AddInstruction(OP_SAVE,0,"#");
+                                          myStateManager->ExchangeIns();
+                                          myStateManager->AddInstruction(OP_NOTEQUAL,0,"#");printf("=\n");
+                                          myStateManager->AddInstruction(OP_RESTORE,0,"#");
+                                          myStateManager->AddInstruction(OP_LOGAND,0,"#");
+                                          }  
+	
+	| expression  ',' GREATER   expression {myStateManager->AddInstruction(OP_SAVE,0,"#");
+                                          myStateManager->ExchangeIns();
+                                          myStateManager->AddInstruction(OP_GREATER,0,"#");printf("=\n");
+                                          myStateManager->AddInstruction(OP_RESTORE,0,"#");
+                                          myStateManager->AddInstruction(OP_LOGAND,0,"#");
+                                          }  
+	
+	| expression  ',' LESS      expression {myStateManager->AddInstruction(OP_SAVE,0,"#");
+                                          myStateManager->ExchangeIns();
+                                          myStateManager->AddInstruction(OP_LESS,0,"#");printf("=\n");
+                                          myStateManager->AddInstruction(OP_RESTORE,0,"#");
+                                          myStateManager->AddInstruction(OP_LOGAND,0,"#");
+                                          }  
+	
+	| expression  ',' LESSEQUAL      expression {myStateManager->AddInstruction(OP_SAVE,0,"#");
+                                          myStateManager->ExchangeIns();
+                                          myStateManager->AddInstruction(OP_LESSEQUAL,0,"#");printf("=\n");
+                                          myStateManager->AddInstruction(OP_RESTORE,0,"#");
+                                          myStateManager->AddInstruction(OP_LOGAND,0,"#");
+                                          }
+                                          
+   	| expression  ',' GREATEREQUAL      expression {myStateManager->AddInstruction(OP_SAVE,0,"#");
+                                          myStateManager->ExchangeIns();
+                                          myStateManager->AddInstruction(OP_GRAETEREQUAL,0,"#");printf("=\n");
+                                          myStateManager->AddInstruction(OP_RESTORE,0,"#");
+                                          myStateManager->AddInstruction(OP_LOGAND,0,"#");
+                                          }
+	
+	| expression MOD expression           {myStateManager->AddInstruction(OP_MOD,0,"#");}                                 
+	| '-' expression %prec UMINUS {$$.nFloat=-$2.nFloat;myStateManager->AddInstruction(OP_NEG,0,"#");}
+
+	;
+	
+CONSTPARAM: LIFE             {myStateManager->AddInstruction(OP_PUSH,0,"#");}
+          | ATTACK           {myStateManager->AddInstruction(OP_PUSH,1,"#");}
+          | DEFENCE          {myStateManager->AddInstruction(OP_PUSH,2,"#");}
+          | FALLDEFUP        {myStateManager->AddInstruction(OP_PUSH,3,"#");}  
+          | LIEDOWTIME       {myStateManager->AddInstruction(OP_PUSH,4,"#");}   
+          | AIRJUGGLE        {myStateManager->AddInstruction(OP_PUSH,5,"#");}  
+          | SPARKNO          {myStateManager->AddInstruction(OP_PUSH,6,"#");}
+          | GUARDSPARKNO     {myStateManager->AddInstruction(OP_PUSH,7,"#");}     
+          | KOECHO           {myStateManager->AddInstruction(OP_PUSH,8,"#");}         
+          | INTEGERINDEX     {myStateManager->AddInstruction(OP_PUSH,9,"#");}     
+          | FLOATINDEX       {myStateManager->AddInstruction(OP_PUSH,10,"#");}   
+          | XSCALE           {myStateManager->AddInstruction(OP_PUSH,11,"#");} 
+          | YSCALE           {myStateManager->AddInstruction(OP_PUSH,12,"#");} 
+          | GROUNDBACK       {myStateManager->AddInstruction(OP_PUSH,13,"#");}    
+          | GROUNDFRONT      {myStateManager->AddInstruction(OP_PUSH,14,"#");} 
+          | AIRBACK          {myStateManager->AddInstruction(OP_PUSH,15,"#");} 
+          | AIRFRONT         {myStateManager->AddInstruction(OP_PUSH,16,"#");} 
+          | ATTACKDIST       {myStateManager->AddInstruction(OP_PUSH,17,"#");}    
+          | PROJATTDIST      {myStateManager->AddInstruction(OP_PUSH,18,"#");}     
+          | PROJDOSCALE      {myStateManager->AddInstruction(OP_PUSH,19,"#");}    
+          | HEADPOSX         {myStateManager->AddInstruction(OP_PUSH,20,"#");}  
+          | HEADPOSY         {myStateManager->AddInstruction(OP_PUSH,21,"#");} 
+          | MIDPOSX          {myStateManager->AddInstruction(OP_PUSH,22,"#");}
+          | MIDPOSY          {myStateManager->AddInstruction(OP_PUSH,23,"#");}
+          | SHADOWOFFSET     {myStateManager->AddInstruction(OP_PUSH,24,"#");}     
+          | DRAWOFFSETX      {myStateManager->AddInstruction(OP_PUSH,25,"#");}    
+          | DRAWOFFSETY      {myStateManager->AddInstruction(OP_PUSH,26,"#");}
+          | WALKFWD          {myStateManager->AddInstruction(OP_PUSH,27,"#");}
+          | WALKBACK         {myStateManager->AddInstruction(OP_PUSH,28,"#");}
+          | RUNFWDX          {myStateManager->AddInstruction(OP_PUSH,29,"#");}     
+          | RUNFWDY          {myStateManager->AddInstruction(OP_PUSH,30,"#");}
+          | RUNBACKX         {myStateManager->AddInstruction(OP_PUSH,31,"#");} 
+          | RUNBACKY         {myStateManager->AddInstruction(OP_PUSH,32,"#");} 
+          | JUMPNEU          {myStateManager->AddInstruction(OP_PUSH,33,"#");} 
+          | JUMPBACK         {myStateManager->AddInstruction(OP_PUSH,34,"#");}  
+          | JUMPFWD          {myStateManager->AddInstruction(OP_PUSH,35,"#");}
+          | RUNJUMPBACK      {myStateManager->AddInstruction(OP_PUSH,36,"#");}              
+          | RUNJUMPFWD       {myStateManager->AddInstruction(OP_PUSH,37,"#");}
+          | AIRJUMPNEU       {myStateManager->AddInstruction(OP_PUSH,38,"#");}   
+          | AIRJUMPBACK      {myStateManager->AddInstruction(OP_PUSH,39,"#");}    
+          | AIRJUMPFWD       {myStateManager->AddInstruction(OP_PUSH,40,"#");}
+          | AIRJUMPNUM       {myStateManager->AddInstruction(OP_PUSH,41,"#");}   
+          | AIRJUMPHEIGHT    {myStateManager->AddInstruction(OP_PUSH,42,"#");}      
+          | YACCEL           {myStateManager->AddInstruction(OP_PUSH,43,"#");}
+          | STANDFRICTION    {myStateManager->AddInstruction(OP_PUSH,44,"#");}      
+          | CROUCHFRICTION   {myStateManager->AddInstruction(OP_PUSH,45,"#");}
+          ;
+
+PARAMSECTION: VALUE  EQUAL  expression  {myStateManager->AddInstruction(OP_STOP,0,"#");myStateManager->SetParam(PA_VALUE);}
+            | XVALUE  EQUAL  expression  {myStateManager->AddInstruction(OP_STOP,0,"#");myStateManager->SetParam(PA_XVALUE);}
+            | YVALUE  EQUAL  expression  {myStateManager->AddInstruction(OP_STOP,0,"#");myStateManager->SetParam(PA_YVALUE);}
+          ;
+          
+
+
+
+
+
+
+%%

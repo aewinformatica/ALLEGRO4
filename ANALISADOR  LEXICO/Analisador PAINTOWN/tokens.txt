@@ -1,0 +1,130 @@
+void TokenReader::readTokens(std::istream & stream) throw( TokenException ){
+
+	if ( !ifile ) throw TokenException("Could not load file");
+
+	char open_paren = 'x';
+	
+	while ( ifile.good() && open_paren != '(' ){
+		ifile >> open_paren;
+	}
+
+	Token * token_atual = new Token();
+	
+	token_atual->setFile( meu_Arquivo);
+	
+    meus_tokens.push_back( token_atual );
+	
+	Token * Primeiro = token_atual;
+	
+    vector< Token * > pilha_token;
+	pilha_token.push_back( token_atual );
+	
+	char n;
+	string string_atual = "";
+	bool entre_asp = false; //diz se esta entre aspas ou nao
+	bool ignorar = false; // se deve saltar o caracter seguinte
+	while ( !pilha_token.empty() ){
+		if ( !ifile ){
+		
+			//Primeiro->print( " " );
+			throw TokenException("Número errado de parênteses");
+		}
+
+		ifile >> n;
+		
+		const char * alpha = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789./-_!";
+		const char * nonalpha = " ;()#\"";
+		
+        // cout<<"Alpha char: "<<n<<endl;
+
+        if (ignorar){
+            switch (n){
+                case 'n' : {
+                    string_atual += "\n";
+                    break;
+                }
+                default : {
+                    string_atual += n;
+                    break;
+                }
+            }
+            ignorar = false;
+            continue;
+        }
+		
+		if ( n == '\\' ){
+			ignorar = true;
+			continue;
+		}
+
+		if ( entre_asp ){
+			if ( n == '"' ){
+				entre_asp = false;
+				
+				Token * sub = new Token( string_atual, false );
+				sub->setParent( token_atual );
+				token_atual->addToken( sub );
+				string_atual = "";
+
+			} else
+				string_atual += n;
+
+		} else {
+			if ( n == '"' )
+				entre_asp = true;
+				
+			if ( strchr( alpha, n ) != NULL ){
+				string_atual += n;
+			} else if ( string_atual != "" && strchr( nonalpha, n ) != NULL ){
+
+                 //cout<<"Fez novo token "<<string_atual<<endl;
+                Token * sub = new Token( string_atual, false );
+                
+				sub->setParent( token_atual );
+				
+				token_atual->addToken( sub );
+				
+				string_atual = "";
+			}
+		}
+		if ( n == '#' || n == ';' ){
+			while ( n != '\n' && !ifile.eof() ){
+				ifile >> n;
+			}
+			continue;
+		} else if ( n == '(' ){
+               
+			Token * another = new Token();
+			
+            //Token_atual e o token pai 
+			another->setParent( token_atual );
+			
+            //adiciona ao vetor de tokens da classe Token
+            token_atual->addToken( another );
+            //recebe o valor do outro token
+			token_atual = another;
+			
+			//insere um elemento no fim do vetor
+			pilha_token.push_back( token_atual );
+
+		} else if ( n == ')' ){
+			
+			if ( pilha_token.empty() ){
+				//cout<<"Stack is empty"<<endl;
+				throw TokenException("Stack is empty");
+			}
+			//remove o elemento do fim
+			pilha_token.pop_back();
+			//acessa o ultimo elemento
+			token_atual = pilha_token.back();
+			
+		}
+
+	}
+	
+    //Primeiro->print("");
+	
+    //Primeiro->finalize();
+	//return Primeiro;
+
+}

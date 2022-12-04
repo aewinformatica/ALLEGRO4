@@ -1,0 +1,2 @@
+- O menu é feito com DO WHILE  que retorna um inteiro na escolha, usa um SWITCH
+- As telas que são escolhidas tem uma FLAG no do WHILE

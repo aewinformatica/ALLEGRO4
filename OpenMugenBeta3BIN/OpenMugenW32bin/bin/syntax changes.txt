@@ -1,0 +1,16 @@
+explode
+--------
+anim = F space expression
+
+Hitdef
+--------
+sparkno       = S space expression
+guard.sparkno = S space expression
+hitsound      = S space expression,expression
+guardsound    = S space expression,expression
+
+SuperPause
+-----------
+anim = S space expression
+
+       

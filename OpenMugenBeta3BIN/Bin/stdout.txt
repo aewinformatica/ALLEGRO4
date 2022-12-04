@@ -1,0 +1,48 @@
+Welcome to OpenMugen Version Beta FSM
+CGame:Init SDL system
+CSDLManager:: Init()
+CSDLManager:: SDL_Init OK
+CVideoSystem::InitSystem()
+CSDLManager::VideoSystem Init OK
+CFightEngine:Init FightEngine
+3051a58 lpPlayer1
+30556f0 lpPlayer2
+CFightEngine:Loading Player1(chars\kfm\kfm.def)
+CPLayer Loading chars\kfm\kfm.def
+SetPlayer 3051a58
+CSffSpriteManager Loading chars\kfm\kfm.SFF
+CSffSpriteManager 264 images are Decoded
+CSffSpriteManager Sff File has used 674 KBytes of ram
+CSffSpriteManager Sff images loaded in 25 milliseconds!
+CAirManager Loading chars\kfm\kfm.AIR
+CAirManager chars\kfm\kfm.AIR has 108 action ellements
+[Statedef]typeSctrlanimvelset[State]typeNotHitBytriggerReading the common1.cns file...
+......................................*****Show Player Const******
+Life		 1000
+Defence		 100
+Attack		 100
+PresistIndex		 60
+Velocity forward		 2.400000
+Velocity backward		 -2.200000
+Player Width		 31
+******End of Show***********
+CFightEngine:Loading Player2(chars\kfm\kfm.def)
+CPLayer Loading chars\kfm\kfm.def
+SetPlayer 30556f0
+CSffSpriteManager Loading chars\kfm\kfm.SFF
+CSffSpriteManager 264 images are Decoded
+CSffSpriteManager Sff File has used 674 KBytes of ram
+CSffSpriteManager Sff images loaded in 19 milliseconds!
+CAirManager Loading chars\kfm\kfm.AIR
+CAirManager chars\kfm\kfm.AIR has 108 action ellements
+[Statedef]typeSctrlanimvelset[State]typeNotHitBytriggerReading the common1.cns file...
+......................................*****Show Player Const******
+Life		 1000
+Defence		 100
+Attack		 100
+PresistIndex		 60
+Velocity forward		 2.400000
+Velocity backward		 -2.200000
+Player Width		 31
+******End of Show***********
+CSDLManager:: Cleaning SDL

@@ -1,0 +1,83 @@
+1
+0
+6
+Margarita
+flor del campo
+0
+1
+2
+1
+6
+Raiz
+Una raiz que contiene poderes curativos
+0
+5
+3
+2
+6
+Flores
+Ramo de flores perfumadas
+0
+5
+4
+3
+3
+Armadura de placas
+Esta armadura esta formada por placas de acero de gran dureza.
+7
+1000
+5
+4
+3
+Ropa casual 
+Tipica ropa de heroe.
+6
+500
+6
+5
+1
+Espada ancha de doble hoja
+Pues eso una espada ancha de doble hoja super afilada
+9
+1500
+7
+8
+1
+Lanza larga de punta mellada
+Esta lanza larga fue usada para matar el ultimo dragon
+10
+20000
+8
+11
+2
+Casco
+Como una cacerola pero sin asas y mas resistente 
+12
+200
+9
+13
+4
+Anillo de Fuego
+Con este poderoso anillo podras lanzar grandes llamaradas de fuego
+0
+10000
+10
+5
+1
+Espada
+Espada ligera, especial para principiantes.
+9
+250
+11
+8
+1
+Lanza
+Simple lanza de bambu, con una piedra afilada en la punta.
+10
+250
+11
+2
+Casco Vikingo
+Este casco vikingo viene con dos cuernos incorporados de serie
+12
+500

@@ -1,0 +1,12 @@
+(character
+(name bruno)
+(health 100)
+(sobre maximiano)
+(raca Humano)
+(speed 1.1)
+(type enemy)
+(arma Espada)
+(shadow 1)
+(posicao 50 60)
+) 
+)

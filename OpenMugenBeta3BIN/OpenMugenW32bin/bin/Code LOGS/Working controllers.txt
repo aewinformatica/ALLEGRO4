@@ -1,0 +1,21 @@
+AssertSpecial 	// have to implement it
+ChangeState
+ChangeAnim
+HitDef		// not fully working
+HitBy		// not fully working
+ForceFeedBack  // not fully working
+HitVelSet	
+CtrlSet
+VelSet
+VelAdd
+VelMul
+VarSet
+PosSet
+PosFreez
+SuperPause
+Pause
+Explod
+SelfState
+TargetState
+TargetBind
+ChangeAnim2

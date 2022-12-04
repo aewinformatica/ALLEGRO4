@@ -1,0 +1,49 @@
+
+[State -1, jump]
+type = ChangeState
+value = 40
+triggerall = command = "holdup"
+triggerall = ctrl
+triggerall = statetype = S
+trigger1 = stateno != 40
+
+
+[State -1, walk]
+type = ChangeState
+value = 20
+triggerall = ctrl
+triggerall = anim != 20 && anim != 21 && anim != 12
+triggerall = StateType = S
+triggerall = command != "holddown"
+;triggerall = stateno != 100
+trigger1 = command = "holdfwd"
+trigger2 = command = "holdback"
+
+
+[State -1, crouching]
+type = ChangeState
+value = 10
+triggerall = ctrl = 1
+triggerall = command = "holddown"
+triggerall = stateno != 10
+triggerall = statetype != C
+triggerall = statetype != A
+trigger1 = stateno != 11
+
+
+[state -1, crouch to stand]
+type = ChangeState
+value = 12
+triggerall = ctrl = 1
+triggerall = stateno = 11
+trigger1 = command != "holddown"
+
+
+[State -1, stand]
+type = ChangeState
+value = 0
+triggerall = command = "none"
+;triggerall = anim != 0
+triggerall = ctrl = 1
+trigger1 = anim = 21
+trigger2 = anim = 20

@@ -1,0 +1,14 @@
+Ok you see the char.txt file in this directory.
+In the first line you type the path of the char`s def file.
+In the second line you write the animation.
+
+Example:
+chars\kfm\kfm.def		(first line)
+0				(second line)
+
+If you want look at the at the log.txt file.It is a output from open mugen.
+
+{CHAR}+                     |
+{CHAR}+{digit}+             |
+{CHAR}+{digit}+"."{CHAR}+   |
+{CHAR}+"."{CHAR}+             {CopyID(); return ID;}

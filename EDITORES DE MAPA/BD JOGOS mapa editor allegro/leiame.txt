@@ -1,0 +1,83 @@
+/** 
+ * Esta é a licença de uso dos arquivos baixados do site http://www.bdjogos.com 
+ * 
+ * @link 	http://www.bdjogos.com/conteudo.php?link=capitulo_45.php
+ * @copyright 	2009 Biblioteca dos Desenvolvedores de Jogos -  http://www.bdjogos.com  
+ * @version 	1.0.0
+ * @license 	http://opensource.org/licenses/gpl-license.php 
+ *
+ * GNU Public License 
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
+ *
+ */
+
+
+
+	- CUIDADO: Não nos responsabilizados pela execução do exemplo em sua máquina!
+	- No arquivo compactado você deve encontrar o projeto feito no Dev-cpp, com as imagens e bibliotecas dll.
+	- Aconselhamos você sempre a compilar o projeto. Apesar disso, estamos enviando também o executável.
+
+	- Verifique sempre o que está sendo feito no tutorial. 
+	Alguns exemplos podem travar a sua máquina caso você não tenha as bibliotecas necessárias.
+
+	- O objetivo dos exemplos executáveis é para que você tenha praticidade.
+
+
+
+
+
+01/06/2007 (C) Copyright. Todos os Direitos Reservados. Leia a política de privacidade do portal. 
+É proibida a cópia de conteúdo deste site de acordo com a Lei Brasileira de Direitos Autorais.
+
+http://www.bdjogos.com/copy.php
+
+Informações legais
+
+2007 (C) Copyright. Todos os Direitos Reservados.
+Nenhum texto publicado neste site pode ser vendido ou utilizado como curso.
+
+É proibida a cópia de conteúdo deste site para comercio de acordo com a Lei Brasileira de Direitos Autorais. 
+
+O objetivo da Biblioteca dos Desenvolvedores de Jogos ( BDJogos.com ) é criar uma fonte de informação que esteja disponível livremente. A licença que usamos dá livre acesso aos nossos conteúdos no mesmo sentido em que o software livre é livre. 
+
+Ou seja, o conteúdo da BDJogos pode ser copiado, modificado e redistribuído desde que a nova versão garanta as mesmas liberdades a terceiros e atribua crédito aos autores do artigo da BDJogos que foi usado (um link directo para esse artigo satisfaz as nossas exigências de crédito aos autores). 
+
+A biblioteca da BDJogos irá, portanto, permanecer livre para sempre e poderá ser usada por qualquer pessoa desde que sejam satisfeitas algumas restrições, a maioria das quais serve para assegurar essa liberdade.
+
+Para cumprir estes objectivos, o texto contido na BDJogos é licenciado ao público sob a licença GNU Free Documentation License (tradução oficiosa).
+Dá-se autorização para copiar, distribuir e/ou modificar este documento segundo os termos da GNU Free Documentation License, Versão 1.2 ou qualquer versão posterior publicada pela Free Software Foundation; sem Invariant Sections, sem Front-Cover Texts, e sem Back-Cover Texts. 
+Uma cópia da licença, em tradução oficiosa para português, pode ser encontrada na secção intitulada "GNU Free Documentation License"
+
+O texto da GNU FDL é o único documento que acarreta obrigação legal. O que se segue é a nossa interpretação do GFDL e os direitos e deveres dos utilizadores e contributores.
+
+Direitos e obrigações dos utilizadores
+
+Se você desejar utilizar material da BDJogos nos seus próprios livros, artigos, sítios ou outras publicações, pode fazê-lo, mas tem de obedecer à GNU FDL. Se estiver simplesmente a duplicar o artigo da BDJogos deverá obedecer à secção 2 da GFDL, sobre cópia textual.
+
+Se criar uma versão derivada pela alteração ou adição de conteúdo, isto implica o seguinte:
+O seu material também deve estar licenciado pela GFDL, 
+Deve reconhecer a autoria do artigo (secção 4B), e 
+Deve dar acesso à "cópia transparente" do material (secção 4J). (A "cópia transparente" de um artigo da BDJogos é o seu texto.) 
+
+As duas últimas obrigações podem ser cumpridas em parte pela existência de um link directo e conspícuo para o artigo da BDJogos hospedado neste sítio. Também deve dar acesso à cópia transparente do novo texto.
+
+ 
+Exemplo de nota de créditos
+
+Por exemplo, uma nota de créditos que obedece correctamente ao GNU FDL para um texto pode estar redigida da seguinte forma:
+Este artigo está licenciado sob a <a href="http://www.gnu.org/copyleft/fdl.html">GNU Free Documentation License</a>. Usa material da <a href="link para artigo ">Biblioteca dos Desenvolvedores de Jogos - Nome do Artigo</a>.
+
+
+

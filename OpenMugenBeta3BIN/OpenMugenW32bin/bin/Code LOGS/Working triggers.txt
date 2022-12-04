@@ -1,0 +1,55 @@
+abs
+acos
+alive
+anim
+animElem
+AnimeElemNo  ; check for loop handeling of this trigger
+AnimeElemTime
+AnimExist
+AnimTime
+asin
+atan
+AuthorName
+Ceil
+Command ;works but we have to handle special behaviours of mugen holdup and holdfwd at the same time / done.
+const
+cos
+ctrl
+exp
+e
+Facing
+Floor
+Fvar
+GameTime
+IfElse
+Life
+LifeMax  ; have to handle teammode life max
+MoveType
+Name
+P1Name
+P2Life
+P2MoveType
+P2BodyDist
+P2Dist
+P2StateNo
+StateType
+Pi
+PrevStateNo
+Pos
+Power
+PowerMax ;Fixed size of 3000(level 3)
+ScreenPos
+sin
+StateNo
+SysFVar
+SysVar
+SelfAnimExist
+tan
+TicksPerSecond	;fixed to 60 ticks per second
+Time
+Var
+Vel
+GetHitVar
+HitFall
+InGuardDist
+396

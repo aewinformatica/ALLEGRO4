@@ -1,0 +1,17 @@
+^^ operator is not handelet
+pal.defaults is not handled int the def file
+pal file info is not readed out in the def file only the first pal path is readed out
+check Path handling in other OS
+Handle ,[oper] format in ProjGuarded(like AnimElem) .... done
+
+-hitdef controller 
+  this are not implemented and maybe the never will 
+  mindist = x_pos, y_pos (int)
+  maxdist = x_pos, y_pos (int)   
+  snap = x_pos, y_pos (int)
+
+
+-GetHitVar
+ xoff and yoff not implemented
+
+-Add BufferCmdTime function to pause controller
