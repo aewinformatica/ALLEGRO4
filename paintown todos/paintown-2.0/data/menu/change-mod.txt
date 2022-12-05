@@ -1,0 +1,8 @@
+(menu
+  (name change-mod)
+  (position 100 200 450 250)
+  (position-body 0 0 0 128)
+  (position-border 200 200 200 255)
+  (select-sound menu/sounds/menu-select.wav)
+  (back-sound menu/sounds/menu-back.wav)
+  (ok-sound menu/sounds/menu-ok.wav))

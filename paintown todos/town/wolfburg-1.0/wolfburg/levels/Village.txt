@@ -1,0 +1,35 @@
+
+(level 
+  (z 
+    (minimum 158) 
+    (maximum 208)) 
+  (background-parallax 5.0) 
+  (foreground-parallax 1.2) 
+  (panel 0 "./wolfburg/bgs/village/v1.png" junk junk) 
+  (order 0) 
+  (block 
+    (length 223)) 
+  (block 
+    (length 280) 
+    (object 
+      (type enemy) 
+      (name "blanka") 
+      (path "./wolfburg/chars/blanka/turboblanka.txt") 
+      (map 8) 
+      (health 400) 
+      (coords 116 54))) 
+  (block 
+    (length 300)) 
+  (block 
+    (length 280)) 
+  (block 
+    (length 245)) 
+  (block 
+    (length 300)) 
+  (block 
+    (length 359)) 
+  (block 
+    (length 310)) 
+  (block 
+    (length 26) 
+    (finish 2)))

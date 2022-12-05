@@ -1,0 +1,51 @@
+Here's Future Naruto's Read-Me
+
+===========================================================================================================================
+
+Regular Movelist:
+
+A - Light Punch
+Down+A - Kunai Slice
+B - Heavy Punch
+Down+B - Headbutt
+Forward+B - Hard Punch (Unblockable)
+C - Shuriken Throw
+Down+C - Kage Bunshin Shuriken Throw
+A(Air) - Axe Kick
+B(Air) - Missle Kick
+C(Air) - Shuriken Throw(can hit lying opponents)
+X (When hit) - Kawarimi (Have to have 1000 or more power)
+Start - Oiroike no Jutsu(100 Power, paralyzes opponent for 1 second)
+A+x - Gather Chakra
+Kyuubi Transformation - Down + X(When life is less then 500 and power is 3000)
+
+===========================================================================================================================
+
+Kyuubi Movelist:
+
+Combo 1: A,A,A
+Combo 2: B,B,B then press B again on the last frame of the last attack to get extra hits
+Combo 3: A,A,B,B,B then press B again on the last frame of last attack to get extra hits
+Combo 4: B,B,A,A,A
+Combo 5: A,A,Down + A(Launch)
+Combo 6: B,B,Down + A(Launch)
+Air Tail Whip: (Air) A
+Missle HeadButt: (Air) B
+Kyuubi Scream: Start (Blows opponent back, great for creating space between you and your opponent
+UpperSlash: Down + A
+
+===========================================================================================================================
+
+When you transform into Kyuubi Mode you gain 300 life. Instead of using chakra for attacks in Kyuubi Mode, you will use
+your own life instead. Every attack that you use will cost you a little bit of your life, so make it worth it.
+
+This has a beta version of the Kyuubi Transformation, I haven't added any special moves to him yet and I plan to do it by
+the next version, so bye for now.
+
+Note: I've also added AI to this version, so don't expect him to be as easy to beat as before ^_^ 
+
+This Character is free-source, if you want to use him as coding reference or base as one of your characters, then go right
+on ahead, but give credit.
+
+Also, when facing this character, DO NOT TAKE IT LIGHTLY JUST CUZ IT'S CHIBI! NARUTO WILL, I REPEAT WILL KICK YOUR
+ASS. I reccomend setting him as a boss.

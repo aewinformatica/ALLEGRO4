@@ -1,0 +1,4 @@
+(item
+ (name box2)
+ (sound sounds/get.wav)
+ (frame wolfburg/misc/box2/box2.png))

@@ -1,0 +1,64 @@
+#占到位以后的事
+
+midi_out();
+
+#和强人对话
+delay(9);
+NPC_turn(0,3);
+talk(0,"Alai:Da Xuan,I all depend on you in this exam.");
+
+delay(9);
+NPC_turn(6,1);
+talk(50,"Alai:No problem,I will transfer the answer to you when I finish.");
+
+delay(9);
+NPC_turn(6,2);
+NPC_turn(0,2);
+
+delay(18);
+talk(0,"Alai:(I think this time I am able to pass the exam...)");
+
+#################################
+#老师来啦
+go_inout(0,1);
+
+talk(50,"(An hour later)");
+
+set_game_status(1);
+init_NPC(8,5,0,4,0,4,"Script_En/blank.txt");
+init_NPC(14,19,0,8,0,15,"Script_En/blank.txt");
+set_screen_status(1);
+screen_set(64,64);
+set_game_status(0);
+
+play_midi("music/test.mid");
+
+go_inout(0,0);
+
+talk(50,"Quantum Teacher: Everybody ready? The exam is beginning. Let's sit according to the student number. I call your name and you take the right seat.");
+talk(0,"Alai:(Oh god. I'm dead.)");
+talk(50,"Quantum Teacher: 101----Zhang...");
+delay(36);
+talk(50,"Quantum Teacher: Is he here? I don't know how to pronounce this word.");
+talk(0,"Alai:(Do I still have a chance?)...(shouting)Give out the paper quickly. It's time to start the exam!");
+talk(50,"Voiceover:But the fact is not that simple! Something unpredictable has not appeared yet.");
+
+#辅导员的出现
+NPC_walk(8,2,4);
+NPC_walk(8,1,3);
+NPC_walk(8,2,9);
+delay(9);
+NPC_turn(8,1);
+talk(50,"Grade Assistant: Mr Shao, I will deal it for you!");
+delay(9);
+NPC_turn(7,3);
+talk(50,"Quantum Teacher: Ah, you have come at the right time!");
+delay(9);
+NPC_turn(7,0);
+NPC_turn(8,0);
+talk(50,"Grade Assistant: 101------Zhang ×￥＃,you sit here. 102------Wang ◎＃《, sit here......");
+talk(50,"Voiceover:Alas, the children's name are so odd.");
+talk(50,"Grade Assistant: 115------Alai,sit in the first row......")
+talk(2,"Alai:(It's over......Everything is over......)");
+
+return();

@@ -1,0 +1,55 @@
+#找中药的老师
+
+if(43,0,"STILL_NOT");
+if(43,1,"OK");
+
+@END
+end();
+
+########################################
+@STILL_NOT
+
+talk(50,"Bio teacher:Sigh, I need only Glory Herb to make medcine to cure SARS. But where can I find it?");
+
+goto("END");
+
+########################################
+@OK
+
+if(44,0,"GIVE");
+if(44,1,"NO_MORE");
+
+@CONT
+goto("END");
+
+##########################
+
+@GIVE
+
+talk(50,"Bio teacher:Sigh, I need only Glory Herb to make medcine to cure SARS. But where can I find it?");
+talk(0,"Alai:Glory Herb, are my ears working properly?");
+talk(50,"Bio teacher:What, you've seen it? ... Forget it, you mustn't have seen it.");
+talk(0,"Alai:I have it, you see, is this what you want?");
+talk(50,"Bio teacher:Oh, that is it! Glory Herb, which grows only on the abruptest cliff in Sichuan Province.");
+talk(0,"Alai:(Sigh, for the good of all the socialist people...)");
+talk(50,"Bio teacher:I can apply for the Nobel Price with this, wait a moment.");
+go_inout(0,1);
+delay(32);
+go_inout(0,0);
+talk(50,"Bio teacher:Here is the SARS pills I just made, just sell it to some rich man who've got SARS.");
+talk(0,"Alai:(Those who got SARS are all the doctors striking at the first line, not rich men.)");
+
+kill_obj(9);
+add_obj(1,1);
+set(44,1);
+set(34,1);
+
+talk(50,"(Received SARS medicine)");
+
+goto("CONT");
+
+############################
+@NO_MORE
+talk(50,"Bio teacher:Thank you young man, do you want to make your Master Paper after me?");
+talk(0,"Alai:Sigh, I have already been tortured in Dep. Physics for 3 years, and I'd like to stay here.");
+goto("CONT");

@@ -1,0 +1,11 @@
+(menu
+  (name options2)
+  (position 100 300 450 95)
+  ; **Optional** This is body color of above menu red | blue | green | alpha
+  (position-body 0 0 0 128)
+  ; **Optional** This is border color of above menu red | blue | green | alpha
+  (position-border 200 200 200 255)
+  (option (adventure (name "Adventure Mode")))
+  ; Write more menus
+  (option (versus (name "Versus Mode")))
+  )

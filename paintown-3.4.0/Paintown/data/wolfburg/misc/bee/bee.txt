@@ -1,0 +1,4 @@
+(item
+ (name bee)
+ (sound sounds/squish.wav)
+ (frame wolfburg/misc/bee/bee.png))

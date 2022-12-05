@@ -1,0 +1,165 @@
+# Project: CharDev
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = CharDev_private.res
+OBJ  = buystuff.o Cheats.o client.o cmd_args.o ComputerAI.o conalleg.o concmds.o Config.o console.o ConsoleCmd.o Cvars.o Defense.o Dialogs.o Drawing.o drectangles.o gametext.o Ground.o GUI.o Intermission.o Keycfg.o LEVELS.o multiplayer.o Music.o ngui.o Particles.o peffect.o PlayerSetup.o save_jpeg.o Scorch.o secrets.o server.o serveradmin.o Shot.o Specials.o Sprites.o Tank.o tankdeaths.o TonyJpegEncoder.o Editor/Editor.o Editor/FFormat.o PPCol_Src/PPAMOUNT.o PPCol_Src/PPCOL.o PPCol_Src/PPMAMOUN.o PPCol_Src/PPMASKC.o script.o $(RES)
+LINKOBJ  = buystuff.o Cheats.o client.o cmd_args.o ComputerAI.o conalleg.o concmds.o Config.o console.o ConsoleCmd.o Cvars.o Defense.o Dialogs.o Drawing.o drectangles.o gametext.o Ground.o GUI.o Intermission.o Keycfg.o LEVELS.o multiplayer.o Music.o ngui.o Particles.o peffect.o PlayerSetup.o save_jpeg.o Scorch.o secrets.o server.o serveradmin.o Shot.o Specials.o Sprites.o Tank.o tankdeaths.o TonyJpegEncoder.o Editor/Editor.o Editor/FFormat.o PPCol_Src/PPAMOUNT.o PPCol_Src/PPCOL.o PPCol_Src/PPMAMOUN.o PPCol_Src/PPMASKC.o script.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" ../Dev-Cpp/lib/libfmod.a ../Dev-Cpp/lib/libws2_32.a ../Dev-Cpp/lib/liballeg.a ../Dev-Cpp/lib/libwinmm.a ../Dev-Cpp/lib/libfblend.a ../Dev-Cpp/lib/liballeg.a  -s 
+INCS =  -I"C:/Dev-Cpp/include"  -I"./Editor"  -I"./PPCol_Src" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include"  -I"./Editor"  -I"./PPCol_Src" 
+BIN  = CharDev.exe
+CXXFLAGS = $(CXXINCS)    -w -fverbose-asm
+CFLAGS = $(INCS)   -w -fverbose-asm
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before CharDev.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "CharDev.exe" $(LIBS)
+
+buystuff.o: buystuff.cpp
+	$(CPP) -c buystuff.cpp -o buystuff.o $(CXXFLAGS)
+
+Cheats.o: Cheats.cpp
+	$(CPP) -c Cheats.cpp -o Cheats.o $(CXXFLAGS)
+
+client.o: client.cpp
+	$(CPP) -c client.cpp -o client.o $(CXXFLAGS)
+
+cmd_args.o: cmd_args.cpp
+	$(CPP) -c cmd_args.cpp -o cmd_args.o $(CXXFLAGS)
+
+ComputerAI.o: ComputerAI.cpp
+	$(CPP) -c ComputerAI.cpp -o ComputerAI.o $(CXXFLAGS)
+
+conalleg.o: conalleg.cpp
+	$(CPP) -c conalleg.cpp -o conalleg.o $(CXXFLAGS)
+
+concmds.o: concmds.cpp
+	$(CPP) -c concmds.cpp -o concmds.o $(CXXFLAGS)
+
+Config.o: Config.cpp
+	$(CPP) -c Config.cpp -o Config.o $(CXXFLAGS)
+
+console.o: console.cpp
+	$(CPP) -c console.cpp -o console.o $(CXXFLAGS)
+
+ConsoleCmd.o: ConsoleCmd.cpp
+	$(CPP) -c ConsoleCmd.cpp -o ConsoleCmd.o $(CXXFLAGS)
+
+Cvars.o: Cvars.cpp
+	$(CPP) -c Cvars.cpp -o Cvars.o $(CXXFLAGS)
+
+Defense.o: Defense.cpp
+	$(CPP) -c Defense.cpp -o Defense.o $(CXXFLAGS)
+
+Dialogs.o: Dialogs.cpp
+	$(CPP) -c Dialogs.cpp -o Dialogs.o $(CXXFLAGS)
+
+Drawing.o: Drawing.cpp
+	$(CPP) -c Drawing.cpp -o Drawing.o $(CXXFLAGS)
+
+drectangles.o: drectangles.cpp
+	$(CPP) -c drectangles.cpp -o drectangles.o $(CXXFLAGS)
+
+gametext.o: gametext.cpp
+	$(CPP) -c gametext.cpp -o gametext.o $(CXXFLAGS)
+
+Ground.o: Ground.cpp
+	$(CPP) -c Ground.cpp -o Ground.o $(CXXFLAGS)
+
+GUI.o: GUI.Cpp
+	$(CPP) -c GUI.Cpp -o GUI.o $(CXXFLAGS)
+
+Intermission.o: Intermission.cpp
+	$(CPP) -c Intermission.cpp -o Intermission.o $(CXXFLAGS)
+
+Keycfg.o: Keycfg.cpp
+	$(CPP) -c Keycfg.cpp -o Keycfg.o $(CXXFLAGS)
+
+LEVELS.o: LEVELS.Cpp
+	$(CPP) -c LEVELS.Cpp -o LEVELS.o $(CXXFLAGS)
+
+multiplayer.o: multiplayer.cpp
+	$(CPP) -c multiplayer.cpp -o multiplayer.o $(CXXFLAGS)
+
+Music.o: Music.cpp
+	$(CPP) -c Music.cpp -o Music.o $(CXXFLAGS)
+
+ngui.o: ngui.cpp
+	$(CPP) -c ngui.cpp -o ngui.o $(CXXFLAGS)
+
+Particles.o: Particles.cpp
+	$(CPP) -c Particles.cpp -o Particles.o $(CXXFLAGS)
+
+peffect.o: peffect.cpp
+	$(CPP) -c peffect.cpp -o peffect.o $(CXXFLAGS)
+
+PlayerSetup.o: PlayerSetup.cpp
+	$(CPP) -c PlayerSetup.cpp -o PlayerSetup.o $(CXXFLAGS)
+
+save_jpeg.o: save_jpeg.cpp
+	$(CPP) -c save_jpeg.cpp -o save_jpeg.o $(CXXFLAGS)
+
+Scorch.o: Scorch.cpp
+	$(CPP) -c Scorch.cpp -o Scorch.o $(CXXFLAGS)
+
+secrets.o: secrets.cpp
+	$(CPP) -c secrets.cpp -o secrets.o $(CXXFLAGS)
+
+server.o: server.cpp
+	$(CPP) -c server.cpp -o server.o $(CXXFLAGS)
+
+serveradmin.o: serveradmin.cpp
+	$(CPP) -c serveradmin.cpp -o serveradmin.o $(CXXFLAGS)
+
+Shot.o: Shot.cpp
+	$(CPP) -c Shot.cpp -o Shot.o $(CXXFLAGS)
+
+Specials.o: Specials.cpp
+	$(CPP) -c Specials.cpp -o Specials.o $(CXXFLAGS)
+
+Sprites.o: Sprites.cpp
+	$(CPP) -c Sprites.cpp -o Sprites.o $(CXXFLAGS)
+
+Tank.o: Tank.cpp
+	$(CPP) -c Tank.cpp -o Tank.o $(CXXFLAGS)
+
+tankdeaths.o: tankdeaths.cpp
+	$(CPP) -c tankdeaths.cpp -o tankdeaths.o $(CXXFLAGS)
+
+TonyJpegEncoder.o: TonyJpegEncoder.cpp
+	$(CPP) -c TonyJpegEncoder.cpp -o TonyJpegEncoder.o $(CXXFLAGS)
+
+Editor/Editor.o: Editor/Editor.cpp
+	$(CPP) -c Editor/Editor.cpp -o Editor/Editor.o $(CXXFLAGS)
+
+Editor/FFormat.o: Editor/FFormat.cpp
+	$(CPP) -c Editor/FFormat.cpp -o Editor/FFormat.o $(CXXFLAGS)
+
+PPCol_Src/PPAMOUNT.o: PPCol_Src/PPAMOUNT.C
+	$(CPP) -c PPCol_Src/PPAMOUNT.C -o PPCol_Src/PPAMOUNT.o $(CXXFLAGS)
+
+PPCol_Src/PPCOL.o: PPCol_Src/PPCOL.C
+	$(CPP) -c PPCol_Src/PPCOL.C -o PPCol_Src/PPCOL.o $(CXXFLAGS)
+
+PPCol_Src/PPMAMOUN.o: PPCol_Src/PPMAMOUN.C
+	$(CPP) -c PPCol_Src/PPMAMOUN.C -o PPCol_Src/PPMAMOUN.o $(CXXFLAGS)
+
+PPCol_Src/PPMASKC.o: PPCol_Src/PPMASKC.C
+	$(CPP) -c PPCol_Src/PPMASKC.C -o PPCol_Src/PPMASKC.o $(CXXFLAGS)
+
+script.o: script.cpp
+	$(CPP) -c script.cpp -o script.o $(CXXFLAGS)
+
+CharDev_private.res: CharDev_private.rc Resources/CharredDirt.rc 
+	$(WINDRES) -i CharDev_private.rc --input-format=rc -o CharDev_private.res -O coff  --include-dir ./RESOUR~1

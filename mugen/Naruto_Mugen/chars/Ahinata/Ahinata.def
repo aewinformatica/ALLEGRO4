@@ -1,0 +1,26 @@
+[Info]
+name ="Hinata"
+displayname ="Hinata"
+versiondate =12-07-07
+mugenversion =06,14,2003
+author ="Anjel"
+pal.defaults =
+[Files]
+sprite =hinata.sff
+sound =hinata.snd
+anim =hinata.air
+cmd =hinata.cmd
+cns =hinata.cns
+st =hinata.cns
+stcommon =common.cns
+pal1=hinata.act
+pal2=Black.act
+pal3=Black_pants.act
+pal4=i_like_black.act
+pal5=purple.act
+pal6=red_pants.act
+st1=basics.cns
+st2=specials.cns
+[Arcade]
+intro.storyboard =
+ending.storyboard =

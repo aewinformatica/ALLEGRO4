@@ -1,0 +1,1 @@
+talk(50,"Schoolmate:The wooden house is No.8 canteen. The food is bad and the price is high.");

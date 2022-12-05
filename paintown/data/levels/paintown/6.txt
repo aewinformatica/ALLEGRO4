@@ -1,0 +1,193 @@
+
+(level 
+  (z 
+    (minimum 153) 
+    (maximum 240)) 
+  (background "./bgs/boat2/back2.png") 
+  (panel 2 "./bgs/boat2/p02.png" junk junk) 
+  (panel 4 "./bgs/boat2/p04.png" junk junk) 
+  (panel 1 "./bgs/boat2/p01.png" junk junk) 
+  (panel 3 "./bgs/boat2/p03.png" junk junk) 
+  (panel 5 "./bgs/boat2/p05.png" junk junk) 
+  (panel 0 "./bgs/boat2/p00.png" junk junk) 
+  (order 0 1 2 3 4 3 1 2 2 3 4 5 1 2 3 1 2 3 0 0) 
+  (block 
+    (length 320)) 
+  (block 
+    (length 500) 
+    (object 
+      (type enemy) 
+      (name "Roland") 
+      (path "chars/robert/robert.txt") 
+      (map 0) 
+      (health 50) 
+      (coords 274 34)) 
+    (object 
+      (type enemy) 
+      (name "Ragnar") 
+      (path "chars/joe/joe.txt") 
+      (map 2) 
+      (health 50) 
+      (coords 338 72)) 
+    (object 
+      (type enemy) 
+      (name "Sally") 
+      (path "chars/shermie/shermie.txt") 
+      (map 1) 
+      (health 45) 
+      (coords 587 48))) 
+  (block 
+    (length 600) 
+    (object 
+      (type enemy) 
+      (name "Stilts") 
+      (path "chars/billy/billy.txt") 
+      (map 4) 
+      (health 50) 
+      (coords 283 27)) 
+    (object 
+      (type enemy) 
+      (name "Eris") 
+      (path "chars/eiji/eiji.txt") 
+      (map 1) 
+      (health 60) 
+      (coords 412 78)) 
+    (object 
+      (type enemy) 
+      (name "Bum") 
+      (path "chars/yashiro/yashiro.txt") 
+      (map 3) 
+      (health 30) 
+      (coords 556 24)) 
+    (object 
+      (type enemy) 
+      (name "HIllary") 
+      (path "chars/angel/angel.txt") 
+      (map 1) 
+      (health 40) 
+      (coords -616 48)) 
+    (object 
+      (name "null") 
+      (type item) 
+      (path misc/chicken/chicken.txt) 
+      (stimulation
+	(health 40))
+      (coords 339 74))) 
+  (block 
+    (length 450) 
+    (object 
+      (type enemy) 
+      (name "Rick") 
+      (path "chars/jhun/jhun.txt") 
+      (map 1) 
+      (health 50) 
+      (coords 329 40)) 
+    (object 
+      (type enemy) 
+      (name "Claude") 
+      (path "chars/robert/robert.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 421 78)) 
+    (object 
+      (type enemy) 
+      (name "Fernando") 
+      (path "chars/rugal/rugal.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 574 24))) 
+  (block 
+    (length 450) 
+    (object 
+      (type enemy) 
+      (name "Duane") 
+      (path "chars/heavy/heavy.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 360 18)) 
+    (object 
+      (type enemy) 
+      (name "Fred") 
+      (path "chars/jhun/jhun.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 490 15)) 
+    (object 
+      (type enemy) 
+      (name "Justin") 
+      (path "chars/jhun/jhun.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 449 87)) 
+    (object 
+      (name "null") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (stimulation
+	(health 15))
+      (coords 149 59))) 
+  (block 
+    (length 500) 
+    (object 
+      (type enemy) 
+      (name "Craig") 
+      (path "chars/billy/billy.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 410 33)) 
+    (object 
+      (type enemy) 
+      (name "Nicholas") 
+      (path "chars/ralf/ralf.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 695 11)) 
+    (object 
+      (type enemy) 
+      (name "Leo") 
+      (path "chars/ralf/ralf.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 718 74))) 
+  (block 
+    (length 510) 
+    (object 
+      (type enemy) 
+      (name "Clarence") 
+      (path "chars/robert/robert.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 485 22)) 
+    (object 
+      (type enemy) 
+      (name "Josie") 
+      (path "chars/angel/angel.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 409 72)) 
+    (object 
+      (type enemy) 
+      (name "Gary") 
+      (path "chars/jhun/jhun.txt") 
+      (map 0) 
+      (health 40) 
+      (coords -526 62))) 
+  (block 
+    (length 480) 
+    (object 
+      (type enemy) 
+      (name "Lewis") 
+      (path "chars/yamazaki/yamazaki.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 347 20)) 
+    (object 
+      (type enemy) 
+      (name "Hugh") 
+      (path "chars/rugal/rugal.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 430 75))) 
+  (block 
+    (length 100) 
+    (finish 60)))

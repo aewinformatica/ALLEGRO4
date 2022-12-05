@@ -1,0 +1,21 @@
+#9栋的门
+
+go_inout(0,1);
+
+set_game_status(1);
+
+call("script/room/load.txt");
+NPC_set(0,9,13);
+NPC_turn(0,2);
+
+set_game_status(0);
+
+go_inout(0,0);
+
+if(31,0,"WHY_BACK");
+if(31,1,"WHY_BACK");
+ goto("END");
+ @WHY_BACK
+ talk(0,"阿莱:好像没忘什么东西吧,还是赶快上教学楼吧.");
+
+@END

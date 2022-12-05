@@ -1,0 +1,460 @@
+;MUGEN用 ステージ NO.15	サムライスピリッツ 天草降臨：串山
+;製作		せろり　
+
+;このデータの無断転載・無断配布はご勘弁ください。
+
+[Info]
+Name = "Nejis Stage"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -152
+boundright = 152
+boundhigh = -204
+boundlow = 0
+verticalfollow = .2
+tension = 50
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+leftbound  = -1000
+rightbound =  1000
+topbound  = 0
+botbound  = 0
+
+[Scaling]
+topz     = 0
+botz     = 50
+topscale = 1
+botscale = 1.2
+
+[Bound]
+screenleft = 30
+screenright = 30
+
+[StageInfo]
+zoffset   = 225
+autoturn  = 1
+resetBG  = 1
+
+[Shadow]
+color = 128,128,128
+yscale = .27
+reflect = 0
+
+[Music]
+bgmusic = sound/Naruto_9_-_Loneliness.mid
+
+[BGdef]
+spr = stages/kushiyama.sff
+debugbg = 1 
+
+;-----------------------------------------------------------
+[BG sky]
+type  = nomal
+spriteno = 0,0
+start = 0, 240
+tile  = 1, 0
+
+;-----------------------------------------------------------
+[BG main]
+type  = nomal
+spriteno = 1,0
+start = 0, 240
+mask = 1
+
+;-----------------------------------------------------------
+[BG left]
+type  = anim
+actionno = 2
+start = 0, 240
+
+[Begin Action 2]
+-1,-1,0,0,800
+2,0,0,0,15
+2,1,0,0,15
+2,2,0,0,150
+2,1,0,0,10 
+2,0,0,0,10
+
+[BG left_t]
+type  = anim
+actionno = 20
+start = 0, 240
+
+[Begin Action 20]
+-1,-1,0,0,800 
+2,10,0,0,200
+
+;-----------------------------------------------------------
+[BG right]
+type  = anim
+actionno = 3
+start = 0, 240
+
+[Begin Action 3]
+-1,-1,0,0,800 
+3,0,0,0,15
+3,1,0,0,15
+3,2,0,0,150
+3,1,0,0,10 
+3,0,0,0,10
+
+[BG right_t]
+type  = anim
+actionno = 30
+start = 0, 240
+mask = 1
+
+[Begin Action 30]
+-1,-1,0,0,800 
+3,10,0,0,200
+
+;-----------------------------------------------------------
+[BG bamboo1]
+type  = nomal
+spriteno = 4,0
+layerno = 1
+start = 210, 240
+mask = 1
+
+;-----------------------------------------------------------
+[BG bamboo2]
+type  = nomal
+spriteno = 4,1
+layerno = 1
+start = -254, 240
+mask = 1
+
+;-----------------------------------------------------------
+[BG bamboo3]
+type  = nomal
+spriteno = 4,2
+layerno = 1
+start = -174, 240
+mask = 1
+
+;-----------------------------------------------------------
+[BG shine_L1]
+type  = anim
+actionno = 50
+layerno = 1
+start = -500, -100
+mask = 1
+id = 1
+
+[BG shine_L2]
+type  = anim
+actionno = 51
+layerno = 1
+start = -500, -100
+mask = 1
+id = 2
+
+[BG shine_L3]
+type  = anim
+actionno = 52
+layerno = 1
+start = -500, -100
+mask = 1
+id = 3
+
+[BG shine_L4]
+type  = anim
+actionno = 53
+layerno = 1
+start = -500, -100
+mask = 1
+id = 4
+
+[BG shine_L5]
+type  = anim
+actionno = 54
+layerno = 1
+start = -500, -100
+mask = 1
+id = 5
+
+[BG shine_L6]
+type  = anim
+actionno = 55
+layerno = 1
+start = -500, -100
+mask = 1
+id = 6
+
+;-----------------------------------------------------------
+[BG shine_R1]
+type  = anim
+actionno = 50
+layerno = 1
+start = -500, -100
+mask = 1
+id = 10
+
+[BG shine_R2]
+type  = anim
+actionno = 51
+layerno = 1
+start = -500, -100
+mask = 10
+id = 11
+
+[BG shine_R3]
+type  = anim
+actionno = 52
+layerno = 1
+start = -500, -100
+mask = 1
+id = 12
+
+[BG shine_R4]
+type  = anim
+actionno = 53
+layerno = 1
+start = -500, -100
+mask = 1
+id = 13
+
+[BG shine_R5]
+type  = anim
+actionno = 54
+layerno = 1
+start = -500, -100
+mask = 1
+id = 14
+
+[BG shine_R6]
+type  = anim
+actionno = 55
+layerno = 1
+start = -500, -100
+mask = 1
+id = 15
+
+
+[Begin Action 50]
+5,0,0,0,2
+9,9,9,9,1
+
+[Begin Action 51]
+5,1,0,0,2
+9,9,9,9,1
+
+[Begin Action 52]
+5,2,0,0,2
+9,9,9,9,1
+
+[Begin Action 53]
+5,3,0,0,2
+9,9,9,9,1
+
+[Begin Action 54]
+5,4,0,0,2
+9,9,9,9,1
+
+[Begin Action 55]
+5,5,0,0,2
+9,9,9,9,1
+
+
+[BGCtrlDef 50]
+looptime = 1000
+ctrlID = 1
+
+[BGCtrl 1]
+type = PosSet
+time = 850
+x = 205
+y = 0
+
+[BGCtrl 1]
+type = VelSet
+time = 850
+x = 3.6
+y = 10.8
+
+[BGCtrlDef 51]
+looptime = 1000
+ctrlID = 2
+
+[BGCtrl 1]
+type = PosSet
+time = 850
+x = 205
+y = 0
+
+[BGCtrl 1]
+type = VelSet
+time = 850
+x = 2.4
+y = 7.2
+
+[BGCtrlDef 52]
+looptime = 1000
+ctrlID = 3
+
+[BGCtrl 1]
+type = PosSet
+time = 850
+x = 205
+y = 0
+
+[BGCtrl 1]
+type = VelSet
+time = 850
+x = 1.8
+y = 5.4
+
+[BGCtrlDef 53]
+looptime = 1000
+ctrlID = 4
+
+[BGCtrl 1]
+type = PosSet
+time = 850
+x = 205
+y = 0
+
+[BGCtrl 1]
+type = VelSet
+time = 850
+x = 1.5
+y = 4.5
+
+[BGCtrlDef 54]
+looptime = 1000
+ctrlID = 5
+
+[BGCtrl 1]
+type = PosSet
+time = 850
+x = 205
+y = 0
+
+[BGCtrl 1]
+type = VelSet
+time = 850
+x = 1.2
+y = 3.6
+
+[BGCtrlDef 55]
+looptime = 1000
+ctrlID = 6
+
+[BGCtrl 1]
+type = PosSet
+time = 850
+x = 205
+y = 0
+
+[BGCtrl 1]
+type = VelSet
+time = 850
+x = 1.0
+y = 3.0
+
+[BGCtrlDef 50b]
+looptime = 1000
+ctrlID = 10
+
+[BGCtrl 1]
+type = PosSet
+time = 850
+x = 645
+y = 0
+
+[BGCtrl 1]
+type = VelSet
+time = 850
+x = 3.6
+y = 10.8
+
+[BGCtrlDef 51b]
+looptime = 1000
+ctrlID = 11
+
+[BGCtrl 1]
+type = PosSet
+time = 850
+x = 645
+y = 0
+
+[BGCtrl 1]
+type = VelSet
+time = 850
+x = 2.4
+y = 7.2
+
+[BGCtrlDef 52b]
+looptime = 1000
+ctrlID = 12
+
+[BGCtrl 1]
+type = PosSet
+time = 850
+x = 645
+y = 0
+
+[BGCtrl 1]
+type = VelSet
+time = 850
+x = 1.8
+y = 5.4
+
+[BGCtrlDef 53b]
+looptime = 1000
+ctrlID = 13
+
+[BGCtrl 1]
+type = PosSet
+time = 850
+x = 645
+y = 0
+
+[BGCtrl 1]
+type = VelSet
+time = 850
+x = 1.5
+y = 4.5
+
+[BGCtrlDef 54b]
+looptime = 1000
+ctrlID = 14
+
+[BGCtrl 1]
+type = PosSet
+time = 850
+x = 645
+y = 0
+
+[BGCtrl 1]
+type = VelSet
+time = 850
+x = 1.2
+y = 3.6
+
+[BGCtrlDef 55b]
+looptime = 1000
+ctrlID = 15
+
+[BGCtrl 1]
+type = PosSet
+time = 850
+x = 645
+y = 0
+
+[BGCtrl 1]
+type = VelSet
+time = 850
+x = 1.0
+y = 3.0
+

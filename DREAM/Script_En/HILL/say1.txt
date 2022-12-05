@@ -1,0 +1,3 @@
+#ĹѨһ
+
+talk(50,"(My god Sadis, I must praise your name! Beg you save my soul and kill my enimies...)");

@@ -1,0 +1,28 @@
+; Definition file for Blank
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Rock Lee"        ;Name of character
+displayname = "Rock Lee" ;Name of character to display
+versiondate = 05,23,2006    ;Version date of character (MM-DD-YYYY)
+mugenversion = 04,14,2002   ;Version of M.U.G.E.N character works on
+author = "UchihaCody"         ;Character author name
+pal.defaults = 1      ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = RockLee.cmd   ;Command set
+cns     = RockLee.cns   ;Constants
+st      = RockLee.cns   ;States
+stcommon = common1.cns ;Common states
+sprite  = RockLee.sff   ;Sprite
+anim    = RockLee.air   ;Animation
+sound   = RockLee.snd   ;Sound
+pal1    = RockLee.act  ;Palettes (can have up to 12)
+
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def

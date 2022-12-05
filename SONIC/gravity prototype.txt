@@ -1,0 +1,8 @@
+int checkGravity(SPRITE *checking){
+    if(checking.y>30)
+    {
+    for(int i=30;i<=0;i--)
+    {
+    checking.y--;
+}
+}

@@ -1,0 +1,133 @@
+Credits and Movelist for the Complete* HKakashi by Tyler
+
+
+
+-Credits-
+
+Kakashi ripped by Nemu with slight edits by myself
+Kakashi intro/reading sprites ripped by Alejo with slight edits by myself
+Kakashi Lose, Dash, Air Kunai Slash, Bunshin Rendan, and Shiruken Throw ripped by myself
+Shiruken Throw Fixes by l2agnarok
+Reading sprites, upward bunshin kick, kawarimi/smoke, Reading kick, Sennen Goroshi, and Mangekyou Sharingan ripped by Neimad 
+log sprites ripped by _dimps_
+Nindogs ripped by ZombieXD
+Raikiri effects from Cyanide's Sasuke
+Exploding Tag effects, kunai, and shirukens ripped by Naruto[NU]
+Suiton: Suiryudan no Jutsu ripped by deekman
+Suiton: Daibakufu no Jutsu ripped by myself
+
+
+
+-Movelist-
+
+Basics:
+	a - Punch
+	b - Summon Large Nindog
+	x - Shiruken Throw
+	y - Kick and Slash
+	D+a - Bunshin Attack I
+	D+x - Read/Gather Chakra
+	D+b - Summon Pa-kun
+	D+y - Bunshin Attack II
+	Jump+a - Summon Nindog
+	Jump+b - Normal Kunai Throw
+	Jump+x - Kunai Throw up
+	Jump+y - Air Kunai Slash
+
+Combos:  
+	ComboI - a, y
+	ComboII - D+y, a, y
+	ComboIII - x, x
+
+Specials:
+	Kawarimi ( Costs 200 chakra ) - c while hit
+	Kawarimi with Exploding Tag ( Costs 500 chakra ) - z while hit
+	Sennen Goroshi ( Costs 750 chakra ) - D, F, c
+	Summon two Nindogs ( Costs 1000 chakra ) - D, F, z
+	Hatake Kakashi Rendan ( Costs 1250 chakra ) - F, D, z
+	Suiton: Suiryudan no Jutsu ( Costs 1500 chakra ) - D, B, c
+	Suiton: Daibakufu no Jutsu ( Costs 2000 chakra ) - D, D, c
+	Raikiri ( Costs 3000 chakra ) - D, B, z
+	Mangekyou Sharingan** ( Costs 4000 chakra ) - D, D, z
+
+Leftovers:
+	Kick away while Reading/Gathering Chakra - c while Reading/Gathering Chakra
+
+
+
+-Updates since BETA version-
+
+New basics:
+Shuriken Throws
+Reading/Gathering Chakra
+Kunai Jump Slash
+Dash added
+Kick while Reading/Gathering Chakra
+
+New specials:
+Sennen Goroshi
+Hatake Kakashi Rendan
+Suiton: Suiryudan no Jutsu
+Suiton: Daibakufu no Jutsu
+
+Fixes/Tweaks/Upgrades:
+4 Levels of Chakra to accommodate for all the specials
+Remastered Sounds
+Added Dub sounds ( EKakashi.snd )
+Tweaked Mangekyou Sharingan for better control ( No longer unblockable though )
+Summon Two Dogs now a TargetBind so opponent doesn't slide
+Mangekyou Sharingan's chakra requirement increased
+Raikiri's chakra requirement increased along with it's power
+Some attacks decreased in power
+New Smoke Effects
+
+
+
+-FAQ-
+
+Q: Why are you still using the Saikyou Ninja Daikesshuu Raikiri effects?
+A: I personally like them better than the Jump series' effects.
+
+Q: Why didn't you add the special where Kakashi summons all the dogs to attack?
+A: I was going to but I did not want to change the large dog's sprites with Jumps'
+   version so I left that special out because then there would be two different styles
+   for the large dog.
+
+Q: Why didn't you add a double Raikiri special?
+A: From what I've seen it's only a defence against powerful Ninjutsu attacks. May be
+   added in future updates if he uses it again offensively. That and when I stop 
+   being lazy long enough to make some sprites of it ^_^
+
+Q: Why didn't you add -insert name- jutsu?
+A: I like to keep my character's canon so if he hasn't done it in the manga I won't add
+   it. That or I plan on adding it in a future release.
+
+Q: Why did you add the Hatake Kakashi Rendan if you like to keep it canon?
+A: Got me there, truth is I had those extra sprites that I didn't know
+   what to do with but I didn't want them to go to waste so the Hatake Kakashi Rendan
+   was born!
+
+Q: Can I use any coding, editted sprites, or sounds from your Kakashi?
+A: Yes, of course. Though credit would be nice ^_^
+
+
+Extra information:
+
+		*Though stated as complete there will be updates in the 
+		 future with new specials. Though all bugs should be fixed.
+		 Also when I get the time, the reversed side of Kakashi will  
+		 be added as the "second palette".
+		   
+
+		**Since in the manga Kakashi seems to have a problem
+                  aiming this attack I made it slow. You have five 
+                  seconds to lock on before the strain causes Kakashi
+                  to lose concentration and it goes off before the 
+                  target is locked on. Aim using the direction pad, 
+                  when locked on press start to trigger the attack. If 
+                  you are hit while aiming you lose concentration and 
+                  it goes off early as well. Basically a super risky 
+                  attack though because of this it can do massive 
+                  damage.
+
+

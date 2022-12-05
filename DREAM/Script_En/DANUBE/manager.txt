@@ -1,0 +1,144 @@
+#网吧老板娘
+
+if(31,2,"WHY_HERE");
+if(31,3,"SIT_HERE");
+
+@END
+end();
+
+#################################
+#如果没捉过猴子
+@WHY_HERE
+talk(0,"Alai:Madam,are there any free computers?");
+talk(4,"Emma:Hey,let's have a walk,don't always play games.");
+talk(50,"Proprietress:Beg yout pardon?");
+talk(50,"Alai:Nothing,just looking for somebody.");
+goto("END");
+
+##################################
+#如果捉过猴子
+@SIT_HERE
+talk(0,"Alai:Madam,are there any free computers? Two near ones,whole night.");
+talk(50,"Proprietress:Yep,there,No.110 and 111. Do you have student identity cards or something?");
+talk(0,"Alai:Here...");
+talk(50,"Proprietress(look at Emma):And hers?");
+delay(9);
+talk(0,"Alai:Ahhh?... Oh,she's my girlfriend.");
+talk(50,"Proprietress:Here are your computer cards.");
+talk(0,"Alai:Thanks.");
+
+go_inout(0,1);
+clr_all_NPC();
+init_NPC(5,4,2,$36,0,0,"Script_En/blank.txt");
+init_NPC(4,4,2,8,0,1,"Script_En/blank.txt");
+init_NPC(14,10,1,4,0,13,"Script_En/danube/manager.txt");
+init_NPC(9,4,2,4,0,10,"Script_En/danube/NPC_2.txt");
+init_NPC(13,4,2,4,0,10,"Script_En/danube/NPC_3.txt");
+init_NPC(5,8,2,4,0,10,"Script_En/danube/NPC_4.txt");
+init_NPC(9,8,2,4,0,10,"Script_En/danube/NPC_5.txt");
+midi_out();
+go_inout(0,0);
+
+play_midi("music/game.mid");
+
+delay(18);
+NPC_turn(1,3);
+delay(9);
+talk(3,"Emma:You just said I'm your GF?");
+talk(50,"Alai(staring at the screen):Ahhh? What?");
+talk(5,"Emma:No...nothing. Let's play games,OK?");
+talk(0,"Alai:OK,which one do you like?");
+
+#开始玩游戏
+go_inout(65534,1);
+clr_all_NPC();
+load_map("map/game/blank.map","map/game/red.bmp","map/game/blank_sky.bmp");
+go_inout(65534,0);
+
+talk(1,"Alai:Let's try this. Red Alert,an old game.");
+talk(3,"Emma:OK, game connected!");
+delay(18);
+talk(1,"Alai:Haha,I've got more funds");
+talk(3,"Emma:Oh, my soldiers! How can you send dogs!");
+talk(1,"Alai:Tee-hee,my soviet tanks' coming :)");
+talk(3,"Emma:Come on,lightning tanks~~~~");
+delay(9);
+talk(1,"Alai:Hoho,I've taken your mine refineries!");
+delay(9);
+talk(4,"Emma:Go,lightning tanks!");
+delay(18);
+talk(4,"Emma:My god, why are lightning tanks so weak?");
+talk(1,"Alai:Of course,mine are LV3 soviet tanks. I'll send the miner to take you base,hoho.");
+talk(4,"Emma:Grrrrr.Let's play that one!");
+talk(1,"Alai:OK, I build, you join.");
+
+go_inout(65534,1);
+clr_all_NPC();
+load_map("map/game/blank.map","map/game/warcraft.bmp","map/game/blank_sky.bmp");
+go_inout(65534,0);
+
+talk(1,"Alai:Connected?");
+talk(3,"Emma:Connected,Tee-hee.");
+delay(18);
+talk(1,"Alai:I'm not very familiar to this game.I always play Star Craft.");
+talk(4,"Emma:That's good!");
+talk(1,"Emma:OOOPS,your army comes so fast!");
+talk(3,"Emma:Yep,there are magics here,and don't forget I'm a mage :P");
+delay(18);
+talk(1,"Alai:My hero!");
+talk(3,"Emma:Haha,I conjure!");
+delay(18);
+
+
+go_inout(65534,1);
+clr_all_NPC();
+load_map("map/game/blank.map","map/game/CS.bmp","map/game/blank_sky.bmp");
+go_inout(65534,0);
+
+talk(3,"Emma:And what's this?");
+talk(1,"Alai:This is Counter-Strike. Whitch team would you join?");
+talk(3,"Emma:Of course the police.");
+talk(1,"Alai:Hehe,I'd like terrorists, the voice of AK-47 is the most beautiful!");
+delay(18);
+talk(1,"Alai:Shot in the head,Tee-hee.");
+talk(4,"Emma:Nosense,play again!");
+delay(18);
+talk(3,"Emma:Bread,hot one!");
+talk(1,"Alai:My god,you are born grenade thrower!");
+delay(18);
+talk(3,"Emma:Hey hey,where are you?");
+talk(1,"Alai:Stab you,stab you~~");
+delay(18);
+
+go_inout(65534,1);
+clr_all_NPC();
+load_map("map/game/blank.map","map/game/diablo.bmp","map/game/blank_sky.bmp");
+go_inout(65534,0);
+
+talk(1,"Alai:Let's try this.");
+talk(3,"Emma:Look,the sun's rising,let's goto the lab.");
+talk(1,"Alai:Alright,let me pay the check.");
+talk(5,"Emma:I'm sorry I made you pay...");
+talk(1,"Alai:Don't be so formality.Come on,the bus stop is right outside there.");
+
+
+#切换到鼓楼校区
+go_inout(0,1);
+
+talk(50,".........");
+talk(50,"Emma:Wow,what a long bridge!");
+talk(50,"Alai:Hehe,this is Nanjing Changjiang River Bridge,it's famous.");
+talk(50,"......");
+talk(50,"............");
+talk(50,".....................");
+talk(50,"Alai:The Gulou Campus is near.");
+
+delay(18);
+set_game_status(1);
+call("Script_En/phyout/load.txt");
+set_game_status(0);
+go_inout(0,0);
+
+talk(3,"Emma:Is here where the lab is?");
+talk(0,"Alai:The building in front is the Physics Building,but I've never heard of any secret lab.");
+talk(3,"Emma:Let's check it out.");

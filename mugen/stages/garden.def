@@ -1,0 +1,77 @@
+[Info]
+name = "Sakuras Stage"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -152
+boundright = 152
+boundhigh = -62
+boundlow = 0
+verticalfollow = .2
+tension = 50
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound =  1000
+topbound  =  0
+botbound  =  0
+
+[Scaling]
+topz     = 0
+botz     = 50
+topscale = 1
+botscale = 1.2
+
+[Bound]
+screenleft = 15
+screenright = 15
+
+[StageInfo]
+zoffset = 217
+autoturn = 1
+resetBG = 0
+
+[Shadow]
+color = 128,128,128
+yscale = .3
+
+[Music]
+bgmusic = sound/Naruto_10_-_Sakuras_theme.mid
+bgvolume = 0
+
+[BGdef]
+spr = stages/garden.sff
+
+[BG Temple]
+type = normal
+spriteno = 0,0
+start = 0,240
+delta = 1,1
+
+[BG Tree]
+type = anim
+actionno = 1
+start = 0,240
+delta = 1,1
+
+[Begin action 1]
+
+1,0, 0,0, 18
+1,1, 0,0, 18
+1,2, 0,0, 18
+1,3, 0,0, 18
+1,4, 0,0, 18
+1,5, 0,0, 18
+1,6, 0,0, 18
+1,7, 0,0, 18

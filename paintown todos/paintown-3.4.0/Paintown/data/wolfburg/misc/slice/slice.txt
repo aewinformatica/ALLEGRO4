@@ -1,0 +1,4 @@
+(item
+ (name slice)
+ (sound sounds/get.wav)
+ (frame wolfburg/misc/slice/slice.png))

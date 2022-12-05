@@ -1,0 +1,17 @@
+#回到山口,因为中魔法
+
+go_inout(65534,1);
+
+set_game_status(1);
+
+call("script/hill/load.txt");
+NPC_set(0,0,44);
+NPC_turn(0,3);
+
+set_game_status(0);
+
+go_inout(65534,0);
+
+talk(50,"(两人被一股强大的魔法推了出来)");
+
+@END

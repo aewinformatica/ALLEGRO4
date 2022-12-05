@@ -1,0 +1,21 @@
+# ≥Ã√µƒ√≈
+
+if(31,0,"WHY_HERE0");
+if(31,1,"WHY_HERE0");
+goto("WHY_HERE1");
+
+@WHY_HERE0
+ talk(0,"Alai:No time for breakfast.");
+
+ NPC_walk(0,0,1);
+
+ goto("END");
+
+@WHY_HERE1
+ talk(0,"Alai:In vacation time, the dining hall is closed. But food can be bought from the super market outside the campus.");
+
+ NPC_walk(0,0,1);
+
+ goto("END");
+
+@END

@@ -1,0 +1,231 @@
+# Project: PAINTOWN
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = PAINTOWN_private.res
+OBJ  = configuration.o globals.o init.o loading.o main.o music.o nameplacer.o scale2x.o scalebit.o select_player.o test.o world.o xmain.o util/bitmap.o util/ebox.o util/font.o util/ftalleg.o util/funcs.o util/keyboard.o util/lit_bitmap.o util/load_exception.o util/sound.o util/timedifference.o util/token.o util/token_exception.o util/tokenreader.o object/animation.o object/animation_event.o object/animation_event_attack.o object/animation_event_bbox.o object/animation_event_coords.o object/animation_event_delay.o object/animation_event_face.o object/animation_event_frame.o object/animation_event_jump.o object/animation_event_move.o object/animation_event_nop.o object/animation_event_offset.o object/animation_event_projectile.o object/animation_event_shadow.o object/animation_event_sound.o object/animation_event_status.o object/animation_event_zdistance.o object/attack.o object/character.o object/display_character.o object/effect.o object/enemy.o object/health_stimulation.o object/heart.o object/item.o object/object.o object/object_attack.o object/object_nonattack.o object/player.o object/projectile.o object/stimulation.o factory/collector.o factory/font_factory.o factory/font_render.o factory/heart_factory.o factory/object_factory.o factory/shadow.o level/block.o level/blockobject.o level/scene.o editor/editor.o $(RES)
+LINKOBJ  = configuration.o globals.o init.o loading.o main.o music.o nameplacer.o scale2x.o scalebit.o select_player.o test.o world.o xmain.o util/bitmap.o util/ebox.o util/font.o util/ftalleg.o util/funcs.o util/keyboard.o util/lit_bitmap.o util/load_exception.o util/sound.o util/timedifference.o util/token.o util/token_exception.o util/tokenreader.o object/animation.o object/animation_event.o object/animation_event_attack.o object/animation_event_bbox.o object/animation_event_coords.o object/animation_event_delay.o object/animation_event_face.o object/animation_event_frame.o object/animation_event_jump.o object/animation_event_move.o object/animation_event_nop.o object/animation_event_offset.o object/animation_event_projectile.o object/animation_event_shadow.o object/animation_event_sound.o object/animation_event_status.o object/animation_event_zdistance.o object/attack.o object/character.o object/display_character.o object/effect.o object/enemy.o object/health_stimulation.o object/heart.o object/item.o object/object.o object/object_attack.o object/object_nonattack.o object/player.o object/projectile.o object/stimulation.o factory/collector.o factory/font_factory.o factory/font_render.o factory/heart_factory.o factory/object_factory.o factory/shadow.o level/block.o level/blockobject.o level/scene.o editor/editor.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -mwindows -lfreetype -lalpng -laldmb -ldumb -lpthreadgc2 -lalleg  
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = PAINTOWN.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before PAINTOWN.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "PAINTOWN.exe" $(LIBS)
+
+configuration.o: configuration.cpp
+	$(CPP) -c configuration.cpp -o configuration.o $(CXXFLAGS)
+
+globals.o: globals.cpp
+	$(CPP) -c globals.cpp -o globals.o $(CXXFLAGS)
+
+init.o: init.cpp
+	$(CPP) -c init.cpp -o init.o $(CXXFLAGS)
+
+loading.o: loading.cpp
+	$(CPP) -c loading.cpp -o loading.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+music.o: music.cpp
+	$(CPP) -c music.cpp -o music.o $(CXXFLAGS)
+
+nameplacer.o: nameplacer.cpp
+	$(CPP) -c nameplacer.cpp -o nameplacer.o $(CXXFLAGS)
+
+scale2x.o: scale2x.cpp
+	$(CPP) -c scale2x.cpp -o scale2x.o $(CXXFLAGS)
+
+scalebit.o: scalebit.cpp
+	$(CPP) -c scalebit.cpp -o scalebit.o $(CXXFLAGS)
+
+select_player.o: select_player.cpp
+	$(CPP) -c select_player.cpp -o select_player.o $(CXXFLAGS)
+
+test.o: test.cpp
+	$(CPP) -c test.cpp -o test.o $(CXXFLAGS)
+
+world.o: world.cpp
+	$(CPP) -c world.cpp -o world.o $(CXXFLAGS)
+
+xmain.o: xmain.cpp
+	$(CPP) -c xmain.cpp -o xmain.o $(CXXFLAGS)
+
+util/bitmap.o: util/bitmap.cpp
+	$(CPP) -c util/bitmap.cpp -o util/bitmap.o $(CXXFLAGS)
+
+util/ebox.o: util/ebox.cpp
+	$(CPP) -c util/ebox.cpp -o util/ebox.o $(CXXFLAGS)
+
+util/font.o: util/font.cpp
+	$(CPP) -c util/font.cpp -o util/font.o $(CXXFLAGS)
+
+util/ftalleg.o: util/ftalleg.cpp
+	$(CPP) -c util/ftalleg.cpp -o util/ftalleg.o $(CXXFLAGS)
+
+util/funcs.o: util/funcs.cpp
+	$(CPP) -c util/funcs.cpp -o util/funcs.o $(CXXFLAGS)
+
+util/keyboard.o: util/keyboard.cpp
+	$(CPP) -c util/keyboard.cpp -o util/keyboard.o $(CXXFLAGS)
+
+util/lit_bitmap.o: util/lit_bitmap.cpp
+	$(CPP) -c util/lit_bitmap.cpp -o util/lit_bitmap.o $(CXXFLAGS)
+
+util/load_exception.o: util/load_exception.cpp
+	$(CPP) -c util/load_exception.cpp -o util/load_exception.o $(CXXFLAGS)
+
+util/sound.o: util/sound.cpp
+	$(CPP) -c util/sound.cpp -o util/sound.o $(CXXFLAGS)
+
+util/timedifference.o: util/timedifference.cpp
+	$(CPP) -c util/timedifference.cpp -o util/timedifference.o $(CXXFLAGS)
+
+util/token.o: util/token.cpp
+	$(CPP) -c util/token.cpp -o util/token.o $(CXXFLAGS)
+
+util/token_exception.o: util/token_exception.cpp
+	$(CPP) -c util/token_exception.cpp -o util/token_exception.o $(CXXFLAGS)
+
+util/tokenreader.o: util/tokenreader.cpp
+	$(CPP) -c util/tokenreader.cpp -o util/tokenreader.o $(CXXFLAGS)
+
+object/animation.o: object/animation.cpp
+	$(CPP) -c object/animation.cpp -o object/animation.o $(CXXFLAGS)
+
+object/animation_event.o: object/animation_event.cpp
+	$(CPP) -c object/animation_event.cpp -o object/animation_event.o $(CXXFLAGS)
+
+object/animation_event_attack.o: object/animation_event_attack.cpp
+	$(CPP) -c object/animation_event_attack.cpp -o object/animation_event_attack.o $(CXXFLAGS)
+
+object/animation_event_bbox.o: object/animation_event_bbox.cpp
+	$(CPP) -c object/animation_event_bbox.cpp -o object/animation_event_bbox.o $(CXXFLAGS)
+
+object/animation_event_coords.o: object/animation_event_coords.cpp
+	$(CPP) -c object/animation_event_coords.cpp -o object/animation_event_coords.o $(CXXFLAGS)
+
+object/animation_event_delay.o: object/animation_event_delay.cpp
+	$(CPP) -c object/animation_event_delay.cpp -o object/animation_event_delay.o $(CXXFLAGS)
+
+object/animation_event_face.o: object/animation_event_face.cpp
+	$(CPP) -c object/animation_event_face.cpp -o object/animation_event_face.o $(CXXFLAGS)
+
+object/animation_event_frame.o: object/animation_event_frame.cpp
+	$(CPP) -c object/animation_event_frame.cpp -o object/animation_event_frame.o $(CXXFLAGS)
+
+object/animation_event_jump.o: object/animation_event_jump.cpp
+	$(CPP) -c object/animation_event_jump.cpp -o object/animation_event_jump.o $(CXXFLAGS)
+
+object/animation_event_move.o: object/animation_event_move.cpp
+	$(CPP) -c object/animation_event_move.cpp -o object/animation_event_move.o $(CXXFLAGS)
+
+object/animation_event_nop.o: object/animation_event_nop.cpp
+	$(CPP) -c object/animation_event_nop.cpp -o object/animation_event_nop.o $(CXXFLAGS)
+
+object/animation_event_offset.o: object/animation_event_offset.cpp
+	$(CPP) -c object/animation_event_offset.cpp -o object/animation_event_offset.o $(CXXFLAGS)
+
+object/animation_event_projectile.o: object/animation_event_projectile.cpp
+	$(CPP) -c object/animation_event_projectile.cpp -o object/animation_event_projectile.o $(CXXFLAGS)
+
+object/animation_event_shadow.o: object/animation_event_shadow.cpp
+	$(CPP) -c object/animation_event_shadow.cpp -o object/animation_event_shadow.o $(CXXFLAGS)
+
+object/animation_event_sound.o: object/animation_event_sound.cpp
+	$(CPP) -c object/animation_event_sound.cpp -o object/animation_event_sound.o $(CXXFLAGS)
+
+object/animation_event_status.o: object/animation_event_status.cpp
+	$(CPP) -c object/animation_event_status.cpp -o object/animation_event_status.o $(CXXFLAGS)
+
+object/animation_event_zdistance.o: object/animation_event_zdistance.cpp
+	$(CPP) -c object/animation_event_zdistance.cpp -o object/animation_event_zdistance.o $(CXXFLAGS)
+
+object/attack.o: object/attack.cpp
+	$(CPP) -c object/attack.cpp -o object/attack.o $(CXXFLAGS)
+
+object/character.o: object/character.cpp
+	$(CPP) -c object/character.cpp -o object/character.o $(CXXFLAGS)
+
+object/display_character.o: object/display_character.cpp
+	$(CPP) -c object/display_character.cpp -o object/display_character.o $(CXXFLAGS)
+
+object/effect.o: object/effect.cpp
+	$(CPP) -c object/effect.cpp -o object/effect.o $(CXXFLAGS)
+
+object/enemy.o: object/enemy.cpp
+	$(CPP) -c object/enemy.cpp -o object/enemy.o $(CXXFLAGS)
+
+object/health_stimulation.o: object/health_stimulation.cpp
+	$(CPP) -c object/health_stimulation.cpp -o object/health_stimulation.o $(CXXFLAGS)
+
+object/heart.o: object/heart.cpp
+	$(CPP) -c object/heart.cpp -o object/heart.o $(CXXFLAGS)
+
+object/item.o: object/item.cpp
+	$(CPP) -c object/item.cpp -o object/item.o $(CXXFLAGS)
+
+object/object.o: object/object.cpp
+	$(CPP) -c object/object.cpp -o object/object.o $(CXXFLAGS)
+
+object/object_attack.o: object/object_attack.cpp
+	$(CPP) -c object/object_attack.cpp -o object/object_attack.o $(CXXFLAGS)
+
+object/object_nonattack.o: object/object_nonattack.cpp
+	$(CPP) -c object/object_nonattack.cpp -o object/object_nonattack.o $(CXXFLAGS)
+
+object/player.o: object/player.cpp
+	$(CPP) -c object/player.cpp -o object/player.o $(CXXFLAGS)
+
+object/projectile.o: object/projectile.cpp
+	$(CPP) -c object/projectile.cpp -o object/projectile.o $(CXXFLAGS)
+
+object/stimulation.o: object/stimulation.cpp
+	$(CPP) -c object/stimulation.cpp -o object/stimulation.o $(CXXFLAGS)
+
+factory/collector.o: factory/collector.cpp
+	$(CPP) -c factory/collector.cpp -o factory/collector.o $(CXXFLAGS)
+
+factory/font_factory.o: factory/font_factory.cpp
+	$(CPP) -c factory/font_factory.cpp -o factory/font_factory.o $(CXXFLAGS)
+
+factory/font_render.o: factory/font_render.cpp
+	$(CPP) -c factory/font_render.cpp -o factory/font_render.o $(CXXFLAGS)
+
+factory/heart_factory.o: factory/heart_factory.cpp
+	$(CPP) -c factory/heart_factory.cpp -o factory/heart_factory.o $(CXXFLAGS)
+
+factory/object_factory.o: factory/object_factory.cpp
+	$(CPP) -c factory/object_factory.cpp -o factory/object_factory.o $(CXXFLAGS)
+
+factory/shadow.o: factory/shadow.cpp
+	$(CPP) -c factory/shadow.cpp -o factory/shadow.o $(CXXFLAGS)
+
+level/block.o: level/block.cpp
+	$(CPP) -c level/block.cpp -o level/block.o $(CXXFLAGS)
+
+level/blockobject.o: level/blockobject.cpp
+	$(CPP) -c level/blockobject.cpp -o level/blockobject.o $(CXXFLAGS)
+
+level/scene.o: level/scene.cpp
+	$(CPP) -c level/scene.cpp -o level/scene.o $(CXXFLAGS)
+
+editor/editor.o: editor/editor.cpp
+	$(CPP) -c editor/editor.cpp -o editor/editor.o $(CXXFLAGS)
+
+PAINTOWN_private.res: PAINTOWN_private.rc 
+	$(WINDRES) -i PAINTOWN_private.rc --input-format=rc -o PAINTOWN_private.res -O coff 

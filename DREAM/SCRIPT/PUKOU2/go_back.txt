@@ -1,0 +1,26 @@
+#遇到辅导员时执行的脚本
+
+if(31,0,"WHY_HERE0");
+if(31,1,"WHY_HERE1");
+
+@WHY_HERE0
+  talk(0,"阿莱:等一下!");
+  set_screen_status(1);
+  screen_move(448,448,4);
+  talk(0,"阿莱:咦,那不是年级辅导员吗,这么早站在路上干什么?");
+  talk(0,"阿莱:一定是在查作弊的事情!全怪大二某些磋人非要搞什么作弊调查,才弄成这样的!");
+  talk(0,"阿莱:这条路看来是不能走了，豁出去了，走名人园!");
+  go_inout(0,1);
+  set_screen_status(0);
+  go_inout(0,0);
+  NPC_walk(0,2,1);
+  add(31,1,1);
+  
+  goto("END");
+
+@WHY_HERE1
+  talk(0,"阿莱:前面的路已经被辅导员封锁了,改道名人园吧。");
+  NPC_walk(0,2,1);
+  goto("END");
+
+@END

@@ -1,0 +1,31 @@
+; Definition file for Blank
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Sasuke without Headband"
+displayname ="Sasuke without Headband"
+versiondate =08,20,2006
+mugenversion =04,14,2002
+author ="Unknownkid"
+pal.defaults =1
+
+; Files for the player
+[Files]
+cmd     =sasuke.cmd
+cns     =sasuke.cns
+st      =sasuke.cns
+stcommon =common1.cns
+sprite  =sasuke.sff
+anim    =sasuke.air
+sound   =sasuke.snd
+pal1=sasuke.act
+
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def
+[Arcade]
+intro.storyboard=
+ending.storyboard=

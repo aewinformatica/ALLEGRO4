@@ -1,0 +1,7 @@
+#кчиА╣дце
+
+go_inout(1,1);
+
+call("Script_En/pukou1/load.txt");
+
+go_inout(1,0);

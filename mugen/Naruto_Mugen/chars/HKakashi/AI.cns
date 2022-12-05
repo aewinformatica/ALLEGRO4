@@ -1,0 +1,256 @@
+[Statedef -3]
+
+;This controller plays a sound from a jump, or
+;from back-dash.
+[State -3, Landing Sound]
+type = PlaySnd
+triggerall = Time = 1
+trigger1 = stateno = 52 ;Jump land
+trigger2 = stateno = 106 ;Run-back land
+value = 52, 0
+
+;---------------------------------------------------------
+;AI code
+;---------------------------------------------------------
+
+;Punch
+[state -3,1]
+type = changestate
+value = 200
+triggerall = var(50) = 1
+triggerall = statetype = S
+triggerall = random <= 300
+triggerall = p2dist X< 30
+trigger1 = ctrl = 1
+trigger2 = stateno = 426 && animelemtime(3) > 0
+trigger2 = random <= 400
+
+;Kick and Slash
+[state -3,2]
+type = ChangeState
+value = 225
+triggerall = var(50) = 1
+triggerall = statetype = S
+triggerall = random <= 250
+triggerall = p2dist X< 50
+trigger1 = ctrl = 1
+trigger2 = stateno = 200 && animelemtime(3) > 0
+trigger2 = random <= 500
+
+;Summon Large Dog
+[state -3,3]
+type = changestate
+value = 250
+triggerall = var(50) = 1
+triggerall = statetype = S
+triggerall = random <= 250
+triggerall = p2dist X > 50
+trigger1 = ctrl = 1
+
+;Summon Pa-kun
+[State -3,4]
+type = ChangeState
+value = 275
+triggerall = var(50) = 1
+triggerall = statetype = S
+triggerall = random <= 150
+triggerall = p2dist X > 50
+trigger1 = ctrl = 1
+
+;Bunshin Attack I
+[state -3,5]
+type = changestate
+value = 420
+triggerall = var(50) = 1
+triggerall = statetype = C
+triggerall = random <= 400
+triggerall = p2dist X > 50
+trigger1 = ctrl = 1
+
+;Bunshin Attack II
+[state -3,6]
+type = changestate
+value = 426
+triggerall = var(50) = 1
+triggerall = statetype = C
+triggerall = random <= 150
+triggerall = p2dist X > 50
+trigger1 = ctrl = 1
+
+;Summon Dogs
+[state -3,7]
+type = changestate
+value = 400
+triggerall = var(50) = 1
+triggerall = statetype = S && p2statetype != A && power >= 4000
+triggerall = random <= 100
+trigger1 = ctrl = 1
+
+;Raikiri
+[state -3,8]
+type = changestate
+value = 375
+triggerall = var(50) = 1
+triggerall = statetype = S && p2statetype != A && power >= 3000
+triggerall = random = [600,680]
+triggerall = p2dist X > 50
+trigger1 = ctrl = 1
+trigger2 = stateno = 400 && animelemtime(7) > 0
+trigger2 = random <= 700
+
+;Air Kunai I
+[state -3,9]
+type = changestate
+value = 325
+triggerall = var(50) = 1
+triggerall = statetype = A && p2statetype = A
+triggerall = random <= 50
+triggerall = p2dist y >15
+trigger1 = ctrl = 1
+
+;Air Kunai II
+[state -3,10]
+type = changestate
+value = 350
+triggerall = var(50) = 1
+triggerall = statetype = A
+triggerall = random <= 300
+trigger1 = ctrl = 1
+
+;Air Slash
+[state -3,11]
+type = changestate
+value = 950
+triggerall = var(50) = 1
+triggerall = statetype = A
+triggerall = random <= 300
+trigger1 = ctrl = 1
+
+;Air Summon Dog
+[state -3,12]
+type = changestate
+value = 450
+triggerall = var(50) = 1
+triggerall = statetype = A
+triggerall = random <= 500
+trigger1 = ctrl = 1
+
+;run
+[state -3,13]
+type = changestate
+value = 100
+triggerall = var(50) = 1 && stateno != 100
+triggerall = p2dist X > 200 && statetype = S
+triggerall = random < 700
+trigger1 = ctrl = 1
+
+;Mangekyou Sharingan
+[state -3,14]
+type = changestate
+value = 900
+triggerall = var(50) = 1 && power >= 4000
+triggerall = statetype = S
+triggerall = random <= 10
+trigger1 = ctrl = 1
+
+;Suiton: Suiryudan no Jutsu
+[State -3, 15]
+type = changestate
+value = 725
+triggerall = var(50) = 1 && power >= 1500
+triggerall = statetype = S
+triggerall = random = [800,999]
+trigger1 = ctrl = 1
+
+;Suiton: Daibakufu no Jutsu
+[State -3, 16]
+type = changestate
+value = 800
+triggerall = var(50) = 1 && power >= 2000
+triggerall = statetype = S
+triggerall = random = [550,700]
+trigger1 = 1
+
+;Kawarimi
+[state -3,17]
+type = changestate
+value = 650
+triggerall = var(50) = 1 && power >= 200
+triggerall = statetype = S && movetype = H
+triggerall = random <= 200
+trigger1 = ctrl = 1
+
+;Kawarimi + Explosive Tag
+[state -3,18]
+type = changestate
+value = 500
+triggerall = var(50) = 1 && power >= 500
+triggerall = statetype = S && movetype = H
+triggerall = random = [600,700]
+trigger1 = ctrl = 1
+
+;Gather Chakra
+[state -3, 19]
+type = changestate
+value = 700
+triggerall = var(50) = 1
+triggerall = statetype = C && power < 3000
+triggerall = random < 1 && p2dist X > 200
+triggerall = p2movetype != A
+trigger1 = ctrl = 1
+
+;Shiruken Throw I
+[state -3, 20]
+type = changestate
+value = 1225
+triggerall = var(50) = 1
+triggerall = statetype = S
+triggerall = random < 200
+triggerall = p2dist X > 200
+trigger1 = ctrl = 1
+
+;Shiruken Throw II
+[state -3, 21]
+type = changestate
+value = 1226
+triggerall = var(50) = 1
+triggerall = statetype = S
+triggerall = stateno = 1225
+triggerall = animelemtime(6) > 0 && animelemtime(7) < 0
+triggerall = random < 800
+trigger1 = ctrl = 1
+
+;Sennen Goroshi
+[state -3, 22]
+type = changestate
+value = 3125
+triggerall = var(50) = 1
+triggerall = statetype = S
+triggerall = power >= 750
+triggerall = random = [600,700]
+trigger1 = ctrl = 1
+
+;guarding
+[state -3,23]
+type = changestate
+triggerall = var(50) = 1
+triggerall = statetype = S
+triggerall = inguarddist && random < 300
+trigger1 = ctrl = 1
+value = 130
+
+[state -3,24]
+type = changestate
+triggerall = var(50) = 1
+triggerall = statetype = C
+triggerall = inguarddist && random < 300
+trigger1 = ctrl = 1
+value = 131
+
+[state -3,25]
+type = changestate
+triggerall = var(50) = 1
+triggerall = statetype = A
+triggerall = inguarddist && random < 300
+trigger1 = ctrl = 1
+value = 132

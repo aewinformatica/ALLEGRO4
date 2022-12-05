@@ -1,0 +1,26 @@
+#遇到辅导员时执行的脚本
+
+if(31,0,"WHY_HERE0");
+if(31,1,"WHY_HERE1");
+
+@WHY_HERE0
+  talk(0,"Alai:Wait a minute!");
+  set_screen_status(1);
+  screen_move(448,448,4);
+  talk(0,"Alai:Oh,that is the Grade Assistant. Why is she standing here so early?");
+  talk(0,"Alai:She must be investigating affair of cheating!");
+  talk(0,"Alai:It seems that I cannot go this way. I have to go through the Minren Garden!");
+  go_inout(0,1);
+  set_screen_status(0);
+  go_inout(0,0);
+  NPC_walk(0,2,1);
+  add(31,1,1);
+  
+  goto("END");
+
+@WHY_HERE1
+  talk(0,"Alai:The Grade Assistant is there,I can only go through the Minren Garden.");
+  NPC_walk(0,2,1);
+  goto("END");
+
+@END

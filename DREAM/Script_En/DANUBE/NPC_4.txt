@@ -1,0 +1,2 @@
+talk(50,"University Student:Shit!!!Team,Hold back!");
+NPC_turn(4,2);

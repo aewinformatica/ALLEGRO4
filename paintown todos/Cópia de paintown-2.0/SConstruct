@@ -1,0 +1,73 @@
+import os;
+
+def isWindows():
+	import re
+	import sys
+	return "win32" in sys.platform
+
+def useMingw():
+    try:
+	return "mingw" in ARGUMENTS[ 'env' ]
+    except KeyError:
+	return False
+
+def getEnvironment():
+    if useMingw():
+	return Environment( ENV = os.environ, tools = ['mingw'] )
+    else:
+	return Environment( ENV = os.environ )
+
+if isWindows():
+    print "Try 'scons env=mingw' if you want to use mingw's gcc instead of visual studio or borland"
+    
+env = getEnvironment()
+# config = env.Configure();
+
+def getDebug():
+	try:
+		return int(os.environ[ 'DEBUG' ])
+	except KeyError:
+		return 0
+
+debug = getDebug()
+
+cflags = [ '-Wall', '-Werror' ]
+cppflags = [ '-fno-rtti', '-Woverloaded-virtual' ]
+
+if debug:
+	cflags.append( '-g3' )
+else:
+	cflags.append( '-O2' )
+
+env.Append( CCFLAGS = cflags, CXXFLAGS = cppflags, CPPPATH = [ "." ] );
+
+if False:
+	env.Append( CCFLAGS = '-pg' )
+	env.Append( LINKFLAGS = '-pg' )
+
+env.Append( LIBS = [ 'aldmb', 'dumb' ] );
+if isWindows():
+	env.Append( LIBS = [ 'alleg', 'pthreadGC2', 'png', 'freetype', 'z' ] )
+	env.Append( CPPDEFINES = 'WINDOWS' )
+else:
+	env.Append( LIBS = [ 'pthread' ] )
+	env.ParseConfig( 'libpng-config --libs --cflags' );
+	env.ParseConfig( 'allegro-config --libs --cflags' );
+	env.ParseConfig( 'freetype-config --libs --cflags' );
+
+SConscript( 'src/SConstruct', build_dir='build', exports = 'env' );
+if isWindows():
+	env.Install( '.', 'build/paintown.exe' )
+	env.Install( '.', 'build/test.exe' )
+else:
+	env.Install( '.', 'build/paintown' )
+	env.Install( '.', 'build/test' )
+
+# editorEnv = Environment()
+# 
+# editorEnv.BuildDir( 'build-editor', 'src' )
+# editorEnv.Append( CPPPATH = ['saggui/include'] )
+# editorEnv.ParseConfig( 'allegro-config --libs' )
+# editorEnv.Append( LIBS = ['saggui-alleg','saggui'] )
+# editorEnv.Append( LIBPATH = 'saggui/lib' )
+# editorEnv.Program( 'level-editor', 'build-editor/editor/editor.cpp' )

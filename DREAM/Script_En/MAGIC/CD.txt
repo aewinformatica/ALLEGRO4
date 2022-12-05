@@ -1,0 +1,46 @@
+#ÃÔ»óµÄÕ¼ÐÇÊ¦
+
+if(33,0,"NOTHING");
+if(33,1,"NOTHING");
+if(33,2,"OK");
+if(33,3,"NO_MORE");
+
+@END
+end();
+
+#######################################
+@NOTHING
+
+talk(50,"Thinker:What is life, what is destiny?");
+goto("END");
+
+@OK
+talk(50,"Thinker:What is life, what is destiny?");
+talk(0,"Alai:destiny is frustration, and life is struggling against frustration.");
+talk(50,"Thinker:You can't be one of us, or you won't talk in this way!");
+talk(2,"Alai:Only those who experienced frustration can understand the meaning of destiny.");
+talk(50,"Thinker:Wow,that's it!!!");
+talk(2,"Alai:Only those who suffered frustration and stand up again, can understand the meaning of life...");
+talk(50,"Thinker:.....");
+talk(0,"Alai:Have you listened to Beethoven No.5?");
+talk(50,"Thinker:Nope, what's that?");
+talk(0,"Alai:It's the course that a man struggled against the destiny. (Show CD of Beethoven No.5)");
+talk(50,"Thinker:May ~~~ I ~~~ have this? I think I found the answer!");
+talk(0,"Alai:Sure, good luck!");
+talk(50,"Thinker:Thanks a lot, I will exchange with this, Crystal of Struggle.");
+talk(0,"Alai:For Faith!");
+
+kill_obj(2);
+add_obj(4,1);
+set(33,3);
+add(35,1,1);
+talk(50,"(Get the Crystal of Struggle)");
+
+goto("END");
+
+############################################
+
+@NO_MORE
+
+talk(50,"Thinker:For Faith!");
+goto("END");

@@ -1,0 +1,4 @@
+#ÎÞ·¨·µ»Ø
+
+talk(0,"Alai:Come on, go to activate the Time-Space Machine.");
+player_walk(3,1);

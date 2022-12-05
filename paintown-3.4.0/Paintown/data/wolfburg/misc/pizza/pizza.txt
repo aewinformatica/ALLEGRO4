@@ -1,0 +1,4 @@
+(item
+ (name pizza)
+ (sound sounds/get.wav)
+ (frame wolfburg/misc/pizza/pizza.png))

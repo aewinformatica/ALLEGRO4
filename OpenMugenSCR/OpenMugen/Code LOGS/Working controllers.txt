@@ -1,0 +1,46 @@
+AssertSpecial -
+ChangeState
+CtrlSet
+ChangeAnim
+ChangeAnim2
+Explod    -
+GameMakeAnim
+HitVelSet
+NotHitBy
+HitBy
+PosFreez
+TargetBind
+TargetFacing
+TargetLifeAdd
+TargetState
+PlaySnd -
+SuperPause -
+StateTypeSet
+HitDef -
+PosSet
+PosAdd
+VelAdd
+VelMul
+VelSet
+VarAdd
+VarSet
+Turn
+HitFallVel
+LifeAdd
+LifeSet
+Pause
+PowerAdd
+PowerSet
+TargetPowerAdd
+TargetVelAdd
+TargetVelSet
+TargetDrop
+DefenceMulSet
+AttackMulSet
+MoveHitReset
+HitFallDamage
+VarRangeSet
+Graviy
+PlayerPush
+AttackDist
+Offset

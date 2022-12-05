@@ -1,0 +1,88 @@
+Skinnable GUI Routines for the allegro game library
+
+Version 0.9.1
+Written by Lennart Steinke (http://www.steinke.net)
+Latest version can be found here: http://www.steinke.net/allegro/
+
+If you use any of these gui routines, please mention me in your credits
+
+   "I do not accept responsibility for any effects, adverse or otherwise, 
+    that this code may have on you, your computer, your sanity, your dog, 
+    and anything else that you can think of. Use it at your own risk."
+
+The Allegro GUI is a very flexible and easy to use user interface. But, as we all know it doesn't look very pleasing. For your normal set of tools this doesn't really matter. But if you want to use the GUI inside your game, it's a different story. The GUI has to look modern and fit the theme of the game. Most of the time, this means that we re-implement many widgets already existing in the Allegro GUI.
+
+On the other hand, it's very easy to change the look of the widgets. You just need to write your own dialog_proc function, and handle only the MSG_DRAW event, and route all other messages to the default dialog proc.
+
+int my_button_proc(int msg, DIALOG *d, int c) {
+    int ret = D_O_K;
+    if (msg == MSG_DRAW) {
+        /* All drawing code here */
+    } else {
+        ret =  d_button_proc(msg,d,c);
+    }
+    return ret;
+}
+
+While this is not that hard, it's still a repeating task. So, why not write a set of dialog functions which let's us change the look of the GUI in a very easy way? Easy as in exchanging some bitmaps and maybe adjusting some INI file settings? Yeah why not? So I decided to do exactly this: Writing a set of truly skinnable dialog functions, so I can change the look of the GUI by just replacing some image files.
+
+
+      A screenshot showing the currently available themes. 
+
+What's new
+
+Version 0.9.1
+
+    * Fixed a bug in the slider skin loading code
+    * Added 2 new themes (bill32 and yellow)
+    * Added better doublebuffering support
+    * Allowed for dynamic skin switching
+    * Added global background color attribute to the dialog skin
+    * Added title text alignment attribute
+    * Added title text color attribute
+
+Version 0.9.0
+First release of the routines
+How to compile it
+
+Using these functions in your own programs is very simple. Just add the lexgui.c and lexgui.h to your project. Include the lexgui.h in the source file using the dialog functions. That's it. Now you can start using the functions. If you're still not sure how to do use the functions, have a look at the test.c source file.
+
+Overloaded Dialog Functions
+I've prefixed all of my functions with "lex_" to avoid namespace clutter (LEX is 3 letter entry I normally use for Hiscores). The following functions have been overloaded:
+
+    * lex_button_proc
+    * lex_slider_proc
+    * lex_check_proc
+    * lex_radio_proc
+    * lex_edit_proc
+    * lex_list_proc 
+
+Differeneces between lexgui and Allegro's gui?
+
+I added a few extra extra features to the button and listbox.
+lex_button_proc
+
+You can specify a callback function for the button as dp2 which will be called once you click the button. You can use this callback to check the dialog content before it is closed. You can also make change the return type of the button, say from D_CLOSE (close dialog) to D_O_K (do nothing) to ensure that the dialog is not closed.
+The prototype for the button callback function is:
+
+int button_callback(int id)
+
+The submitted id is the d1 member of the dialog struct. Set it to NULL if you don't want to use a callback function.
+
+I also created one new function
+lex_dialog_proc
+
+which can be used to create a movable dialog. If you want to create a moveable dialog box just place this function as the first dialog proc in your DIALOG structure like this:
+
+DIALOG the_dialog[] =
+{
+   /* (dialog proc)     (x)   (y)   (w)   (h)   (fg)  (bg)  (key) (flags)     (d1)                    (d2)  (dp)              (dp2) (dp3) */
+   { lex_dialog_proc,   100,  100,  440,  200,    0,  -1,    0,    0,          0,                      0,    "Dialog",    NULL, NULL  },
+   /* Dialog box content goes here */
+}
+
+The dp member is used for the dialog title.
+The remainder works as you would expect it from the normal Allegro functions. To use it, simply use the lex_ prefixed dialog functions.
+
+I've also added a slightly enhanced version of do_dialog() called (be prepared for a surprise...) lex_do_dialog() which allows you to doubleBuffer your UI. Check the test.c sample to see how it works. If you want to create new skins, have a look at the provided aqua.skin file... it's heavily commented, so you should be able to create your own skins. If you have done skins on your own, please drop me a mail.
+

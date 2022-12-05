@@ -1,0 +1,30 @@
+; Player information
+[Info]
+name ="Kyuubi(S) Naruto"
+displayname ="KYUUBI NARUTO"
+versiondate =07,27,2006
+mugenversion =04,14,2002
+author ="Shadow02143"
+pal.defaults =1,2,3,4,5
+
+; Files for the player
+[Files]
+cmd     =Kyuubi(S)Naruto.cmd
+cns     =Kyuubi(S)Naruto.cns
+st      =Kyuubi(S)Naruto.cns
+st2     =AI.cns
+st3     =bunshin.cns
+stcommon =common.cns
+sprite  =Kyuubi(S)Naruto.sff
+anim    =Kyuubi(S)Naruto.air
+sound   =Kyuubi(S)Naruto.snd
+pal1=Kyuubi(S)Naruto.act
+
+
+;*** delete lines with palettes you are not using ***
+
+; Arcade mode
+[Arcade]
+intro.storyboard =
+ending.storyboard =
+

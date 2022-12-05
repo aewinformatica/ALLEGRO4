@@ -1,0 +1,30 @@
+<panel layout="GridBagLayout">
+	<vbox>
+		<gridbagconstraints
+			gridx="0"
+			gridy="0"
+			weightx="1"
+			weighty="1"
+			gridheight="1"
+			anchor="GridBagConstraints.NORTHWEST"
+			fill="GridBagConstraints.HORIZONTAL"
+			/>
+		<label text="Choose a file" />
+		<hbox>
+			<label text="Path" />
+			<!-- TODO: change some colors -->
+			<textfield editable="false" id="path" />
+		</hbox>
+		<button id="up" text="Back" />
+		<scrollpane minimumsize="100,200">
+			<list id="files" />
+		</scrollpane>
+		<glue />
+		<hbox>
+			<button id="ok" text="OK" />
+			<glue size="1" />
+			<button id="cancel" text="Cancel" />
+			<glue />
+		</hbox>
+	</vbox>
+</panel>

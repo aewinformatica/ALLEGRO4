@@ -1,0 +1,52 @@
+;Sand Jump
+[Statedef 9999]
+type = S 
+movetype = A 
+physics = S 
+ctrl = 0 
+velset = 0, 0
+anim = 9999 
+poweradd = 40 
+sprpriority = 2 
+
+[State 9999, -1]
+type = Velset
+trigger1 = animelem = 8
+x = 15
+
+[State 9999, 0]
+type = Velset
+trigger1 = AnimElem = 9
+x = 5
+
+[State 9999, 1]  
+type = HitDef  
+trigger1 = animelem = 5 
+trigger2 = animelem = 6
+trigger3 = animelem = 7
+trigger4 = animelem = 8
+trigger5 = animelem = 9
+trigger6 = animelem = 10
+attr = S, SA
+animtype = Hard
+damage = 40, 20
+guardflag =  MA 
+pausetime = 12,12 
+sparkno = 1  
+sparkxy = -5,-20 
+hitsound = 5,2 
+guardsound = 6,0 
+ground.type = High  
+ground.slidetime = 10  
+ground.hittime = 15  
+guard.velocity = -1
+ground.velocity = 0,0
+air.velocity = -0,-0
+fall = 0 
+fall.recover = 0
+
+[State 9999, 2] 
+type = ChangeState
+trigger1 = animtime = 0
+value = 0 
+ctrl = 1

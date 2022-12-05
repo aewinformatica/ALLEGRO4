@@ -1,0 +1,2592 @@
+; ================================================================
+; Open Sonic
+; Sprite Data
+;
+; Please do NOT modify this file unless you know
+; what you're doing ;)
+; ================================================================
+
+
+; ----------------------------------------------------------------
+; Sprite data
+; ----------------------------------------------------------------
+
+; Sonic
+sprite SD_SONIC
+{
+    source_file     images/player.png
+    source_rect     0 20 200 540
+    frame_size      40 45
+    hot_spot        20 45
+
+    ; stopped
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; walking
+    animation 1
+    {
+        repeat      TRUE
+        fps         8
+        data        30 31 32 33 34 35 36 37
+    }
+
+    ; running
+    animation 2
+    {
+        repeat      TRUE
+        fps         8
+        data        26 27 28 29   
+    }
+
+    ; jumping
+    animation 3
+    {
+        repeat      TRUE
+        fps         16
+        data        15 16 17 18 19
+    }
+
+    ; crouch down
+    animation 4
+    {
+        repeat      FALSE
+        fps         12
+        data        5 6
+    }
+
+    ; look up
+    animation 5
+    {
+        repeat      FALSE
+        fps         12
+        data        3 4
+    }
+
+    ; spin dash
+    animation 6
+    {
+        repeat      TRUE
+        fps         16
+        data        20 21 22 23 24 25
+    }
+
+    ; braking
+    animation 7
+    {
+        repeat      FALSE
+        fps         8
+        data        7 8 9
+    }
+
+    ; dead
+    animation 8
+    {
+        repeat      FALSE
+        fps         8
+        data        13
+    }
+
+    ; drowned
+    animation 9
+    {
+        repeat      FALSE
+        fps         8
+        data        14
+    }
+
+    ; ledge
+    animation 10
+    {
+        repeat      TRUE
+        fps         6
+        data        39 40 41
+    }
+
+    ; ringless
+    animation 11
+    {
+        repeat      FALSE
+        fps         8
+        data        10 11
+    }
+
+    ; breathing
+    animation 12
+    {
+        repeat      FALSE
+        fps         8
+        data        38
+    }
+
+    ; spring
+    animation 13
+    {
+        repeat      TRUE
+        fps         8
+        data        12
+    }
+
+    ; pushing
+    animation 14
+    {
+        repeat      TRUE
+        fps         8
+        data        42 43 44 45
+    }
+
+    ; waiting
+    animation 15
+    {
+        repeat      TRUE
+        fps         6
+        data        1 2
+    }
+
+    ; -----
+    animation 16
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+
+    ; -----
+    animation 17
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }    
+
+    ; -----
+    animation 18
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+
+    ; -----
+    animation 19
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+
+    ; -----
+    animation 20
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+
+    ; -----
+    animation 21
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+
+    ; -----
+    animation 22
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+
+    ; -----
+    animation 23
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+
+    ; victory
+    animation 24
+    {
+        repeat      TRUE
+        fps         8
+        data        49 47 48 47
+    }
+}
+
+
+
+; Tails
+sprite SD_TAILS
+{
+    source_file     images/player.png
+    source_rect     200 20 250 550
+    frame_size      50 50
+    hot_spot        25 50
+
+    ; stopped
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3
+    }
+
+    ; walking
+    animation 1
+    {
+        repeat      TRUE
+        fps         8
+        data        4 5 6 7 8 9 10 11
+    }
+
+    ; running
+    animation 2
+    {
+        repeat      TRUE
+        fps         8
+        data        12 13
+    }
+
+    ; jumping
+    animation 3
+    {
+        repeat      TRUE
+        fps         16
+        data        17 18 19 20
+    }
+
+    ; crouch down
+    animation 4
+    {
+        repeat      FALSE
+        fps         12
+        data        27
+    }
+
+    ; look up
+    animation 5
+    {
+        repeat      FALSE
+        fps         12
+        data        28
+    }
+
+    ; spin dash
+    animation 6
+    {
+        repeat      TRUE
+        fps         16
+        data        14 15 16
+    }
+
+    ; braking
+    animation 7
+    {
+        repeat      FALSE
+        fps         8
+        data        25 26
+    }
+
+    ; dead
+    animation 8
+    {
+        repeat      FALSE
+        fps         8
+        data        23
+    }
+
+    ; drowned
+    animation 9
+    {
+        repeat      FALSE
+        fps         8
+        data        23
+    }
+
+    ; ledge
+    animation 10
+    {
+        repeat      TRUE
+        fps         6
+        data        39 40
+    }
+
+    ; ringless
+    animation 11
+    {
+        repeat      FALSE
+        fps         8
+        data        21 22
+    }
+
+    ; breathing
+    animation 12
+    {
+        repeat      FALSE
+        fps         8
+        data        24
+    }
+
+    ; spring
+    animation 13
+    {
+        repeat      TRUE
+        fps         16
+        data        29 30
+    }
+
+    ; pushing
+    animation 14
+    {
+        repeat      TRUE
+        fps         8
+        data        35 36 37 38
+    }
+
+    ; waiting
+    animation 15
+    {
+        repeat      TRUE
+        fps         8
+        data        41 42 43 44 43 44 43 42 41 41 41
+    }
+
+    ; -----
+    animation 16
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+
+    ; -----
+    animation 17
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }    
+
+    ; -----
+    animation 18
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+
+    ; tired of flying (custom)
+    animation 19
+    {
+        repeat      TRUE
+        fps         8
+        data        33 34
+    }
+
+    ; flying (custom)
+    animation 20
+    {
+        repeat      TRUE
+        fps         16
+        data        31 32
+    }
+
+    ; -----
+    animation 21
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+
+    ; -----
+    animation 22
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+
+    ; -----
+    animation 23
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+
+    ; -----
+    animation 24
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+}
+
+
+
+; Knuckles
+sprite SD_KNUCKLES
+{
+    source_file     images/player.png
+    source_rect     450 20 250 550
+    frame_size      50 50
+    hot_spot        25 50
+
+    ; stopped
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; walking
+    animation 1
+    {
+        repeat      TRUE
+        fps         8
+        data        3 4 5 6 7 8 9 10
+    }
+
+    ; running
+    animation 2
+    {
+        repeat      TRUE
+        fps         8
+        data        11 12 13 14
+    }
+
+    ; jumping
+    animation 3
+    {
+        repeat      TRUE
+        fps         16
+        data        15 16 17 18 19
+    }
+
+    ; crouch down
+    animation 4
+    {
+        repeat      FALSE
+        fps         12
+        data        20 21
+    }
+
+    ; look up
+    animation 5
+    {
+        repeat      FALSE
+        fps         12
+        data        24 25
+    }
+
+    ; spin dash
+    animation 6
+    {
+        repeat      TRUE
+        fps         16
+        data        40 41 42 43 44 45
+    }
+
+    ; braking
+    animation 7
+    {
+        repeat      FALSE
+        fps         8
+        data        23
+    }
+
+    ; dead
+    animation 8
+    {
+        repeat      FALSE
+        fps         8
+        data        34
+    }
+
+    ; drowned
+    animation 9
+    {
+        repeat      FALSE
+        fps         8
+        data        49
+    }
+
+    ; ledge
+    animation 10
+    {
+        repeat      TRUE
+        fps         6
+        data        46 47
+    }
+
+    ; ringless
+    animation 11
+    {
+        repeat      FALSE
+        fps         8
+        data        35
+    }
+
+    ; breathing
+    animation 12
+    {
+        repeat      FALSE
+        fps         8
+        data        50
+    }
+
+    ; spring
+    animation 13
+    {
+        repeat      TRUE
+        fps         8
+        data        48
+    }
+
+    ; pushing
+    animation 14
+    {
+        repeat      TRUE
+        fps         8
+        data        3 4 5 6 7 8 9 10
+    }
+
+    ; waiting
+    animation 15
+    {
+        repeat      TRUE
+        fps         6
+        data        1 2
+    }
+
+    ; no more climbing (custom)
+    animation 16
+    {
+        repeat      FALSE
+        fps         8
+        data        26 27 28
+    }
+
+    ; climbing (custom)
+    animation 17
+    {
+        repeat      TRUE
+        fps         8
+        data        29 30 31 32 33 28
+    }    
+
+    ; end of flight (custom)
+    animation 18
+    {
+        repeat      FALSE
+        fps         16
+        data        26 27
+    }
+
+    ; flying - ground (custom)
+    animation 19
+    {
+        repeat      FALSE
+        fps         8
+        data        39
+    }
+
+    ; flying - air (custom)
+    animation 20
+    {
+        repeat      FALSE
+        fps         8
+        data        22
+    }
+
+    ; flying - turn around (custom)
+    animation 21
+    {
+        repeat      FALSE
+        fps         8
+        data        53 52 51 
+    }
+
+    ; climbing - stopped (custom)
+    animation 22
+    {
+        repeat      FALSE
+        fps         8
+        data        28
+    }
+
+    ; climbing - reached the top (custom)
+    animation 23
+    {
+        repeat      FALSE
+        fps         8
+        data        36 37 38
+    }
+
+    ; -----
+    animation 24
+    {
+        repeat      FALSE
+        fps         1
+        data        0
+    }
+}
+
+
+; Arrow
+sprite SD_ARROW
+{
+    source_file     images/items.png
+    source_rect     3 37 14 14
+    frame_size      14 14
+    hot_spot        0 0
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+
+; Ring
+sprite SD_RING
+{
+    source_file     images/items.png
+    source_rect     278 178 64 48
+    frame_size      16 16
+    hot_spot        9 12
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         16
+        data        0 1 2 3 4 5 6 7
+    }
+
+    ; end
+    animation 1
+    {
+        repeat      FALSE
+        fps         8
+        data        8 9 10
+    }
+}
+
+; Blue ring
+sprite SD_BLUERING
+{
+    source_file     images/items.png
+    source_rect     358 178 64 48
+    frame_size      16 16
+    hot_spot        9 12
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         16
+        data        0 1 2 3 4 5 6 7
+    }
+
+    ; end
+    animation 1
+    {
+        repeat      FALSE
+        fps         8
+        data        8 9 10
+    }
+}
+
+
+; Big ring
+sprite SD_BIGRING
+{
+    source_file     images/items.png
+    source_rect     0 486 500 200
+    frame_size      100 100
+    hot_spot        50 50
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         16
+        data        0 1 2 3 4 5 6 7 8 9
+    }
+}
+
+
+
+; Enemy: Joan
+sprite SD_JOAN
+{
+    source_file     images/baddies.png
+    source_rect     0 0 126 28
+    frame_size      42 28
+    hot_spot        21 27
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2
+    }
+}
+
+
+; Enemy: Flying Boy
+sprite SD_FLYINGBOY
+{
+    source_file     images/baddies.png
+    source_rect     4 242 64 59
+    frame_size      32 59
+    hot_spot        14 37
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1
+    }
+}
+
+
+
+; Enemy: Flying Eyes
+sprite SD_FLYINGEYES
+{
+    source_file     images/baddies.png
+    source_rect     243 246 192 60
+    frame_size      48 60
+    hot_spot        26 52
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3
+    }
+}
+
+
+
+; Enemy: Kleps
+sprite SD_KLEPS
+{
+    source_file     images/baddies.png
+    source_rect     308 319 60 25
+    frame_size      30 25
+    hot_spot        15 24
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1
+    }
+}
+
+
+
+; Enemy: Gold Fish
+sprite SD_GOLDFISH
+{
+    source_file     images/baddies.png
+    source_rect     9 359 90 34
+    frame_size      45 34
+    hot_spot        30 28
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1
+    }
+}
+
+; Enemy: Surpreyes
+sprite SD_SURPREYES
+{
+    source_file     images/baddies.png
+    source_rect     8 410 70 56
+    frame_size      70 28
+    hot_spot        35 27
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1
+    }
+}
+
+; Enemy: Oranjection
+sprite SD_ORANJECTION
+{
+    source_file     images/baddies.png
+    source_rect     95 414 39 48
+    frame_size      39 24
+    hot_spot        20 23
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1
+    }
+}
+
+; Enemy: Roboxer
+sprite SD_ROBOXER
+{
+    source_file     images/baddies.png
+    source_rect     0 33 111 34
+    frame_size      37 34
+    hot_spot        19 33
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2
+    }
+}
+
+
+; Enemy: Nafder
+sprite SD_NAFDER
+{
+    source_file     images/baddies.png
+    source_rect     0 70 174 42
+    frame_size      58 42
+    hot_spot        29 41
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2
+    }
+}
+
+; Enemy: Chef
+sprite SD_CHEF
+{
+    source_file     images/baddies.png
+    source_rect     152 418 168 45
+    frame_size      42 45
+    hot_spot        21 44
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3
+    }
+}
+
+
+; Boss: Simple Boss
+sprite SD_SIMPLEBOSS
+{
+    source_file     images/boss.png
+    source_rect     0 0 216 56
+    frame_size      54 56
+    hot_spot        27 54
+
+    ; walking
+    animation 0
+    {
+        repeat      TRUE
+        fps         16
+        data        0 1
+    }
+
+    ; got damaged
+    animation 1
+    {
+        repeat      FALSE
+        fps         8
+        data        2 2 2
+    }
+
+    ; defeated
+    animation 2
+    {
+        repeat      TRUE
+        fps         8
+        data        3
+    }
+}
+
+; Boss: Mecha Shadow
+sprite SD_MECHASHADOW
+{
+    source_file     images/boss.png
+    source_rect     0 71 300 50
+    frame_size      50 50
+    hot_spot        25 25
+
+    ; levitating
+    animation 0
+    {
+        repeat      TRUE
+        fps         16
+        data        0 1
+    }
+
+    ; levitating - got damaged
+    animation 1
+    {
+        repeat      FALSE
+        fps         8
+        data        4 4
+    }
+
+    ; attacking
+    animation 2
+    {
+        repeat      TRUE
+        fps         16
+        data        2 3
+    }
+
+    ; attacking - got damaged
+    animation 3
+    {
+        repeat      FALSE
+        fps         8
+        data        5 5
+    }
+
+    ; dead
+    animation 4
+    {
+        repeat      TRUE
+        fps         32
+        data        4 0
+    }
+}
+
+
+
+; Mecha Shadow's Attack
+sprite SD_DANGPOWER
+{
+    source_file     images/boss.png
+    source_rect     0 121 48 24
+    frame_size      24 24
+    hot_spot        12 12
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         16
+        data        0 1
+    }
+}
+
+
+
+
+
+
+; Main GUI
+sprite SD_MAINGUI
+{
+    source_file     images/gui.png
+    source_rect     0 0 39 86
+    frame_size      39 43
+    hot_spot        0 0
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; blinking
+    animation 1
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1
+    }
+}
+
+
+; Life GUI
+sprite SD_LIFEGUI
+{
+    source_file     images/gui.png
+    source_rect     0 90 48 48
+    frame_size      48 16
+    hot_spot        0 0
+
+    ; Sonic
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; Tails
+    animation 1
+    {
+        repeat      TRUE
+        fps         8
+        data        1
+    }
+
+    ; Knuckles
+    animation 2
+    {
+        repeat      TRUE
+        fps         8
+        data        2
+    }
+}
+
+
+; Pause
+sprite SD_PAUSE
+{
+    source_file     images/gui.png
+    source_rect     182 56 88 24
+    frame_size      88 24
+    hot_spot        0 0
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+; Item Box
+sprite SD_ITEMBOX
+{
+    source_file     images/items.png
+    source_rect     73 0 180 64
+    frame_size      30 32
+    hot_spot        15 33
+
+    ; sonic life box
+    animation 0
+    {
+        repeat      TRUE
+        fps         24
+        data        1 1 1 1 1 0 1 0 1 0 0 0 1 1 0 0 1 1 1 1 1 1 1 1
+    }
+
+    ; miles prower life box
+    animation 1
+    {
+        repeat      TRUE
+        fps         24
+        data        2 2 2 2 2 0 2 0 2 0 0 0 2 2 0 0 2 2 2 2 2 2 2 2
+    }
+
+    ; knuckles life box
+    animation 2
+    {
+        repeat      TRUE
+        fps         24
+        data        3 3 3 3 3 0 3 0 3 0 0 0 3 3 0 0 3 3 3 3 3 3 3 3
+    }
+
+    ; ring box
+    animation 3
+    {
+        repeat      TRUE
+        fps         24
+        data        4 4 4 4 4 0 4 0 4 0 0 0 4 4 0 0 4 4 4 4 4 4 4 4
+    }
+
+    ; invencibility box
+    animation 4
+    {
+        repeat      TRUE
+        fps         24
+        data        5 5 5 5 5 0 5 0 5 0 0 0 5 5 0 0 5 5 5 5 5 5 5 5
+    }
+
+    ; speed shoes box
+    animation 5
+    {
+        repeat      TRUE
+        fps         24
+        data        6 6 6 6 6 0 6 0 6 0 0 0 6 6 0 0 6 6 6 6 6 6 6 6
+    }
+
+    ; glasses box
+    animation 6
+    {
+        repeat      TRUE
+        fps         24
+        data        7 7 7 7 7 0 7 0 7 0 0 0 7 7 0 0 7 7 7 7 7 7 7 7
+    }
+
+    ; shield box
+    animation 7
+    {
+        repeat      TRUE
+        fps         24
+        data        8 8 8 8 8 0 8 0 8 0 0 0 8 8 0 0 8 8 8 8 8 8 8 8
+    }
+
+    ; eggman box
+    animation 8
+    {
+        repeat      TRUE
+        fps         24
+        data        9 9 9 9 9 0 9 0 9 0 0 0 9 9 0 0 9 9 9 9 9 9 9 9
+    }
+
+    ; none
+    animation 9
+    {
+        repeat      TRUE
+        fps         24
+        data        10 10 10 10 10 0 10 0 10 0 0 0 10 10 0 0 10 10 10 10 10 10 10 10
+    }
+
+    ; crushed box
+    animation 10
+    {
+        repeat      TRUE
+        fps         24
+        data        11
+    }
+}
+
+
+
+; Box Icon
+sprite SD_ICON
+{
+    source_file     images/items.png
+    source_rect     254 1 96 28
+    frame_size      16 14
+    hot_spot        8 20
+
+    ; sonic life icon
+    animation 0
+    {
+        repeat      TRUE
+        fps         24
+        data        1
+    }
+
+    ; miles prower life icon
+    animation 1
+    {
+        repeat      TRUE
+        fps         24
+        data        2
+    }
+
+    ; knuckles life icon
+    animation 2
+    {
+        repeat      TRUE
+        fps         24
+        data        3
+    }
+
+    ; ring icon
+    animation 3
+    {
+        repeat      TRUE
+        fps         24
+        data        4
+    }
+
+    ; invencibility icon
+    animation 4
+    {
+        repeat      TRUE
+        fps         24
+        data        5
+    }
+
+    ; speed shoes icon
+    animation 5
+    {
+        repeat      TRUE
+        fps         24
+        data        6
+    }
+
+    ; glasses icon
+    animation 6
+    {
+        repeat      TRUE
+        fps         24
+        data        7
+    }
+
+    ; shield icon
+    animation 7
+    {
+        repeat      TRUE
+        fps         24
+        data        8
+    }
+
+    ; none
+    animation 8
+    {
+        repeat      TRUE
+        fps         24
+        data        9
+    }
+
+    ; none
+    animation 9
+    {
+        repeat      TRUE
+        fps         24
+        data        10
+    }
+
+    ; none
+    animation 10
+    {
+        repeat      TRUE
+        fps         24
+        data        11
+    }
+}
+
+
+; Glasses
+sprite SD_GLASSES
+{
+    source_file     images/items.png
+    source_rect     51 23 16 55
+    frame_size      16 11
+    ; hot_spot        8 5
+    hot_spot        8 10
+
+    ; glasses
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; glasses
+    animation 1
+    {
+        repeat      TRUE
+        fps         8
+        data        1
+    }
+
+    ; glasses
+    animation 2
+    {
+        repeat      TRUE
+        fps         8
+        data        2
+    }
+
+    ; glasses
+    animation 3
+    {
+        repeat      TRUE
+        fps         8
+        data        3
+    }
+
+    ; glasses
+    animation 4
+    {
+        repeat      TRUE
+        fps         8
+        data        4
+    }
+
+    ; glasses
+    animation 5
+    {
+        repeat      TRUE
+        fps         8
+        data        5
+    }
+}
+
+
+
+; Shield
+sprite SD_SHIELD
+{
+    source_file     images/items.png
+    source_rect     0 233 230 42
+    frame_size      46 42
+    hot_spot        23 19
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         12
+        data        0 1 2 3 4
+    }
+}
+
+
+
+; Invencibility stars
+sprite SD_INVSTAR
+{
+    source_file     images/items.png
+    source_rect     0 58 42 12
+    frame_size      14 12
+    hot_spot        9 9
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2
+    }
+}
+
+
+
+; Level opening
+sprite SD_LEVELOP
+{
+    source_file     images/gui.png
+    source_rect     0 200 125 240
+    frame_size      125 240
+    hot_spot        0 0
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+
+; Level Act
+sprite SD_LEVELACT
+{
+    source_file     images/gui.png
+    source_rect     0 141 144 32
+    frame_size      48 32
+    hot_spot        0 0
+
+    ; act 1
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; act 2
+    animation 1
+    {
+        repeat      TRUE
+        fps         8
+        data        1
+    }
+
+    ; act 3
+    animation 2
+    {
+        repeat      TRUE
+        fps         8
+        data        2
+    }
+}
+
+
+; Explosion
+sprite SD_EXPLOSION
+{
+    source_file     images/items.png
+    source_rect     0 177 266 40
+    frame_size      38 40
+    hot_spot        19 20
+
+    ; explosion type I
+    animation 0
+    {
+        repeat      FALSE
+        fps         8
+        data        0 1 6
+    }
+
+    ; explosion type II
+    animation 1
+    {
+        repeat      FALSE
+        fps         8
+        data        2 3 4 5 6
+    }
+}
+
+
+; Pixel
+sprite SD_PIXEL
+{
+    source_file     images/items.png
+    source_rect     31 38 5 15
+    frame_size      1 1
+    hot_spot        0 0
+
+    ; gray
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3
+    }
+
+    ; blue
+    animation 1
+    {
+        repeat      TRUE
+        fps         8
+        data        5 6 7
+    }
+
+    ; orange
+    animation 2
+    {
+        repeat      TRUE
+        fps         8
+        data        10 11 12 13
+    }
+
+    ; red
+    animation 3
+    {
+        repeat      TRUE
+        fps         8
+        data        15 16 17 18 19
+    }
+}
+
+
+; Animal
+sprite SD_ANIMAL
+{
+    source_file     images/animals.png
+    source_rect     0 0 180 180
+    frame_size      30 30
+    hot_spot        15 30
+
+    ; animal 0: stopped
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; animal 0: running
+    animation 1
+    {
+        repeat      TRUE
+        fps         8
+        data        1 2
+    }
+
+    ; animal 1: stopped
+    animation 2
+    {
+        repeat      TRUE
+        fps         8
+        data        3
+    }
+
+    ; animal 1: running
+    animation 3
+    {
+        repeat      TRUE
+        fps         8
+        data        4 5
+    }
+
+    ; animal 2: stopped
+    animation 4
+    {
+        repeat      TRUE
+        fps         8
+        data        6
+    }
+
+    ; animal 2: running
+    animation 5
+    {
+        repeat      TRUE
+        fps         8
+        data        7 8
+    }
+
+    ; animal 3: stopped
+    animation 6
+    {
+        repeat      TRUE
+        fps         8
+        data        9
+    }
+
+    ; animal 3: running
+    animation 7
+    {
+        repeat      TRUE
+        fps         8
+        data        10 11
+    }
+
+    ; animal 4: stopped
+    animation 8
+    {
+        repeat      TRUE
+        fps         8
+        data        12
+    }
+
+    ; animal 4: running
+    animation 9
+    {
+        repeat      TRUE
+        fps         8
+        data        13 14
+    }
+
+    ; animal 5: stopped
+    animation 10
+    {
+        repeat      TRUE
+        fps         8
+        data        15
+    }
+
+    ; animal 5: running
+    animation 11
+    {
+        repeat      TRUE
+        fps         8
+        data        16 17
+    }
+
+    ; animal 6: stopped
+    animation 12
+    {
+        repeat      TRUE
+        fps         8
+        data        18
+    }
+
+    ; animal 6: running
+    animation 13
+    {
+        repeat      TRUE
+        fps         8
+        data        19 20
+    }
+
+    ; animal 7: stopped
+    animation 14
+    {
+        repeat      TRUE
+        fps         8
+        data        21
+    }
+
+    ; animal 7: running
+    animation 15
+    {
+        repeat      TRUE
+        fps         8
+        data        22 23
+    }
+
+    ; animal 8: stopped
+    animation 16
+    {
+        repeat      TRUE
+        fps         8
+        data        24
+    }
+
+    ; animal 8: running
+    animation 17
+    {
+        repeat      TRUE
+        fps         8
+        data        25 26
+    }
+
+    ; animal 9: stopped
+    animation 18
+    {
+        repeat      TRUE
+        fps         8
+        data        27
+    }
+
+    ; animal 9: running
+    animation 19
+    {
+        repeat      TRUE
+        fps         8
+        data        28 29
+    }
+
+    ; animal 10: stopped
+    animation 20
+    {
+        repeat      TRUE
+        fps         8
+        data        30
+    }
+
+    ; animal 10: running
+    animation 21
+    {
+        repeat      TRUE
+        fps         8
+        data        31 32
+    }
+
+    ; animal 11: stopped
+    animation 22
+    {
+        repeat      TRUE
+        fps         8
+        data        33
+    }
+
+    ; animal 11: running
+    animation 23
+    {
+        repeat      TRUE
+        fps         8
+        data        34 35
+    }
+}
+
+
+; LoopRight - Special object
+sprite SD_LOOPRIGHT
+{
+    source_file     images/items.png
+    source_rect     4 79 32 96
+    frame_size      32 96
+    hot_spot        0 0
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+; LoopMiddle - Special object
+sprite SD_LOOPMIDDLE
+{
+    source_file     images/items.png
+    source_rect     68 79 32 16
+    frame_size      32 16
+    hot_spot        0 0
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+
+; LoopLeft - Special object
+sprite SD_LOOPLEFT
+{
+    source_file     images/items.png
+    source_rect     36 79 32 96
+    frame_size      32 96
+    hot_spot        0 0
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+
+; LoopNone - Special object
+sprite SD_LOOPNONE
+{
+    source_file     images/items.png
+    source_rect     100 79 32 96
+    frame_size      32 96
+    hot_spot        0 0
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+; LoopFloor - Special object
+sprite SD_LOOPFLOOR
+{
+    source_file     images/items.png
+    source_rect     68 95 32 32
+    frame_size      32 32
+    hot_spot        0 0
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+; LoopFloorNone - Special object
+sprite SD_LOOPFLOORNONE
+{
+    source_file     images/items.png
+    source_rect     68 127 32 32
+    frame_size      32 32
+    hot_spot        0 0
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+; LoopFloorTop - Special Object
+sprite SD_LOOPFLOORTOP
+{
+    source_file     images/items.png
+    source_rect     132 79 64 16
+    frame_size      64 16
+    hot_spot        0 0
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+
+; Yellow spring
+sprite SD_YELLOWSPRING
+{
+    source_file     images/items.png
+    source_rect     281 136 64 32
+    frame_size      32 32
+    hot_spot        16 16
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; action!
+    animation 1
+    {
+        repeat      FALSE
+        fps         8
+        data        1 1 1
+    }
+}
+
+
+; Red spring
+sprite SD_REDSPRING
+{
+    source_file     images/items.png
+    source_rect     281 104 64 32
+    frame_size      32 32
+    hot_spot        16 16
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; action!
+    animation 1
+    {
+        repeat      FALSE
+        fps         8
+        data        1 1 1
+    }
+}
+
+
+; Right red spring
+sprite SD_RREDSPRING
+{
+    source_file     images/items.png
+    source_rect     345 104 64 32
+    frame_size      32 32
+    hot_spot        16 16
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; action!
+    animation 1
+    {
+        repeat      FALSE
+        fps         8
+        data        1 1 1
+    }
+}
+
+; Left red spring
+sprite SD_LREDSPRING
+{
+    source_file     images/items.png
+    source_rect     409 104 64 32
+    frame_size      32 32
+    hot_spot        16 16
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; action!
+    animation 1
+    {
+        repeat      FALSE
+        fps         8
+        data        1 1 1
+    }
+}
+
+; Switch
+sprite SD_SWITCH
+{
+    source_file     images/items.png
+    source_rect     433 178 32 32
+    frame_size      32 16
+    hot_spot        16 16
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; pressed
+    animation 1
+    {
+        repeat      TRUE
+        fps         8
+        data        1
+    }
+}
+
+; Door
+sprite SD_DOOR
+{
+    source_file     images/items.png
+    source_rect     471 146 24 64
+    frame_size      24 64
+    hot_spot        0 0
+
+    ; default
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+; Teleporter
+sprite SD_TELEPORTER
+{
+    source_file     images/items.png
+    source_rect     0 291 220 111
+    frame_size      110 111
+    hot_spot        55 110
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; active
+    animation 1
+    {
+        repeat      TRUE
+        fps         16
+        data        1 0
+    }
+}
+
+
+; Checkpoint
+sprite SD_CHECKPOINT
+{
+    source_file     images/items.png
+    source_rect     0 415 210 64
+    frame_size      30 64
+    hot_spot        15 63
+
+    ; disabled
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; activating...
+    animation 1
+    {
+        repeat      FALSE
+        fps         16
+        data        1 2 3 4 5
+    }
+
+    ; active
+    animation 2
+    {
+        repeat      TRUE
+        fps         8
+        data        6 0
+    }
+}
+
+
+; Bumper
+sprite SD_BUMPER
+{
+    source_file     images/items.png
+    source_rect     228 299 40 80
+    frame_size      40 40
+    hot_spot        20 20
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        1
+    }
+
+    ; active
+    animation 1
+    {
+        repeat      FALSE
+        fps         8
+        data        0 1
+    }
+}
+
+
+; Goal
+sprite SD_GOAL
+{
+    source_file     images/items.png
+    source_rect     282 743 76 55
+    frame_size      38 55
+    hot_spot        20 54
+
+    ; --->
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; <---
+    animation 1
+    {
+        repeat      TRUE
+        fps         8
+        data        1
+    }
+}
+
+
+; End sign
+sprite SD_ENDSIGN
+{
+    source_file     images/items.png
+    source_rect     286 362 192 116
+    frame_size      48 58
+    hot_spot        26 57
+
+    ; idle (Eggman)
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+
+    ; active
+    animation 1
+    {
+        repeat      FALSE
+        fps         16
+        data        1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3 0 1 2 3
+    }
+
+    ; Sonic
+    animation 2
+    {
+        repeat      TRUE
+        fps         8
+        data        4
+    }
+
+    ; Tails
+    animation 3
+    {
+        repeat      TRUE
+        fps         8
+        data        5
+    }
+
+    ; Knuckles
+    animation 4
+    {
+        repeat      TRUE
+        fps         8
+        data        6
+    }
+}
+
+
+; End level
+sprite SD_ENDLEVEL
+{
+    source_file     images/items.png
+    source_rect     0 707 256 93
+    frame_size      64 93
+    hot_spot        32 93
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1
+    }
+
+    ; hit
+    animation 1
+    {
+        repeat      FALSE
+        fps         8
+        data        3 3
+    }
+
+    ; broken
+    animation 2
+    {
+        repeat      TRUE
+        fps         8
+        data        2
+    }
+}
+
+
+; Ring Bonus
+sprite SD_RINGBONUS
+{
+    source_file     images/gui.png
+    source_rect     156 391 104 11
+    frame_size      104 11
+    hot_spot        0 0
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+; Secret Bonus
+sprite SD_SECRETBONUS
+{
+    source_file     images/gui.png
+    source_rect     156 405 104 11
+    frame_size      104 11
+    hot_spot        0 0
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+; Total
+sprite SD_TOTAL
+{
+    source_file     images/gui.png
+    source_rect     156 419 40 11
+    frame_size      40 11
+    hot_spot        0 0
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+; Dialog Box
+sprite SD_DIALOGBOX
+{
+    source_file     images/gui.png
+    source_rect     12 450 272 61
+    frame_size      272 61
+    hot_spot        0 0
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+
+; Title Screen - Sonic
+sprite SD_TITLESONIC
+{
+    source_file     images/title.png
+    source_rect     0 0 412 260
+    frame_size      103 130
+    hot_spot        0 0
+
+    ; entrance
+    animation 0
+    {
+        repeat      FALSE
+        fps         12
+        data        0 0 0 0 0 0 0 1 2 3
+    }
+
+    ; idle
+    animation 1
+    {
+        repeat      TRUE
+        fps         12
+        data        7 6 5 4 5 6
+    }
+}
+
+; Title screen - Sonic Background
+sprite SD_TITLESONICBG
+{
+    source_file     images/title.png
+    source_rect     420 0 214 137
+    frame_size      214 137
+    hot_spot        0 0
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+
+; Title screen - game name
+sprite SD_TITLEGAMENAME
+{
+    source_file     images/title.png
+    source_rect     650 115 230 82
+    frame_size      230 82
+    hot_spot        0 0
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+; Title screen - foot sprite
+sprite SD_TITLEFOOT
+{
+    source_file     images/title.png
+    source_rect     682 212 14 5
+    frame_size      14 5
+    hot_spot        0 0
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+; Danger special object
+sprite SD_DANGER
+{
+    source_file     images/items.png
+    source_rect     68 159 32 16
+    frame_size      32 16
+    hot_spot        0 0
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+; Spikes
+sprite SD_SPIKES
+{
+    source_file     images/items.png
+    source_rect     383 767 32 32
+    frame_size      32 32
+    hot_spot        16 31
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0
+    }
+}
+
+
+; DNA Door
+sprite SD_DNADOOR
+{
+    source_file     images/items.png
+    source_rect     427 735 48 64
+    frame_size      16 64
+    hot_spot        8 63
+
+    ; idle
+    animation 0
+    {
+        repeat      TRUE
+        fps         16
+        data        0 1 2
+    }
+}
+
+
+; Fireball
+sprite SD_FIREBALL
+{
+    source_file     images/items.png
+    source_rect     223 403 51 66
+    frame_size      17 33
+    hot_spot        8 32
+
+    ; long fireball
+    animation 0
+    {
+        repeat      TRUE
+        fps         16
+        data        0 1
+    }
+
+    ; long fireball - end
+    animation 1
+    {
+        repeat      FALSE
+        fps         8
+        data        2
+    }
+
+    ; small fireball
+    animation 2
+    {
+        repeat      TRUE
+        fps         16
+        data        3 4
+    }
+}
+
+
+
+
+; ----------------------------------------------------------------
+; Font data
+; ----------------------------------------------------------------
+
+; Font 0
+sprite FT_FONT0
+{
+    source_file     images/gui.png
+    source_rect     52 0 104 21
+    frame_size      8 7
+    hot_spot        4 3
+
+    ; font sheet
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38
+    }
+}
+
+; Font 1
+sprite FT_FONT1
+{
+    source_file     images/gui.png
+    source_rect     52 21 104 21
+    frame_size      8 7
+    hot_spot        0 0
+
+    ; font sheet
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38
+    }
+}
+
+; Font 2
+sprite FT_FONT2
+{
+    source_file     images/gui.png
+    source_rect     52 42 88 11
+    frame_size      8 11
+    hot_spot        0 0
+
+    ; font sheet
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3 4 5 6 7 8 9 10
+    }
+}
+
+; Font 3
+sprite FT_FONT3
+{
+    source_file     images/gui.png
+    source_rect     182 0 160 48
+    frame_size      16 16
+    hot_spot        0 0
+
+    ; font sheet
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+    }
+}
+
+
+; Font 4
+sprite FT_FONT4
+{
+    source_file     images/gui.png
+    source_rect     154 91 95 108
+    frame_size      19 18
+    hot_spot        0 0
+
+    ; font sheet
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+    }
+}
+
+
+
+; Font 5
+sprite FT_FONT5
+{
+    source_file     images/gui.png
+    source_rect     259 91 95 108
+    frame_size      19 18
+    hot_spot        0 0
+
+    ; font sheet
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+    }
+}
+
+
+
+; Font 6
+sprite FT_FONT6
+{
+    source_file     images/gui.png
+    source_rect     154 208 95 108
+    frame_size      19 18
+    hot_spot        0 0
+
+    ; font sheet
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+    }
+}
+
+
+
+; Font 7
+sprite FT_FONT7
+{
+    source_file     images/gui.png
+    source_rect     259 208 95 108
+    frame_size      19 18
+    hot_spot        0 0
+
+    ; font sheet
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25
+    }
+}
+
+
+
+; Font 8
+sprite FT_FONT8
+{
+    source_file     images/gui.png
+    source_rect     157 326 128 56
+    frame_size      8 8
+    hot_spot        0 0
+
+    ; font sheet
+    animation 0
+    {
+        repeat      TRUE
+        fps         8
+        data        0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98
+    }
+}
+

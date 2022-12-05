@@ -1,0 +1,4 @@
+#组织参观的老师
+
+talk(50,"Teacher:Just go for Academician Feng Duan.");
+NPC_turn(1,0);

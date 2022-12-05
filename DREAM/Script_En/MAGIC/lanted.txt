@@ -1,0 +1,26 @@
+#ю╪ль
+
+if(45,0,"SAY");
+if(45,1,"NO_MORE");
+
+@END
+end();
+
+#################################
+@SAY
+talk(50,"Unknown Swordman:...........");
+talk(0,"Alai:????");
+talk(50,"Unknown Swordman:....!Who are you?");
+talk(0,"Alai:I'm Alay. I'm from the Human Field. What's the problem?");
+talk(50,"Unknown Swordman:There is some kind of breath around you...No,it's a kind of power!!! Even higher than me. Who are you in hell?");
+talk(0,"Alai:I'm just a human, in Physics Department of Nanjing University, and that's all about me.");
+talk(50,"Unknown Swordman:You have the power, but you can't feel it. You have to awake, and you will bring great change to this world.");
+talk(0,"Alai:Preach again. I'm have been bored with this.");
+talk(50,"Unknown Swordman:I have already warned you. It all depends on yourself.");
+set(45,1);
+goto("END");
+
+#################################
+@NO_MORE
+talk(50,"Unknown Swordman:Exert your power and change the world.");
+goto("END");

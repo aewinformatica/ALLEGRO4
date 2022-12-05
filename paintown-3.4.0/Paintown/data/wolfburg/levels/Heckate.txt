@@ -1,0 +1,905 @@
+
+(level 
+  (z 
+    (minimum 139) 
+    (maximum 226)) 
+  (background-parallax 5.0) 
+  (foreground-parallax 1.2) 
+  (background "./wolfburg/bgs/heckate/bgk.png") 
+  (frontpanel "./wolfburg/bgs/heckate/heckfront.png") 
+  (panel 0 "./wolfburg/bgs/heckate/h1.png" junk junk) 
+  (panel 1 "./wolfburg/bgs/heckate/h2.png" junk junk) 
+  (panel 2 "./wolfburg/bgs/heckate/h3.png" junk junk) 
+  (panel 3 "./wolfburg/bgs/heckate/h4.png" junk junk) 
+  (panel 4 "./wolfburg/bgs/heckate/h5.png" junk junk) 
+  (order 0 0 0 0 0 0 0 1 3 3 3 2 1 3 2 1 3 3 2 0 0 0 0 0 4 1) 
+  (block 
+    (length 420) 
+    (object 
+      (name "null") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 259 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "null") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 355 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "null") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 172 87) 
+      (stimulation 
+        (health -1)))) 
+  (block 
+    (length 320) 
+    (object 
+      (name "null") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 38 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (type enemy) 
+      (name "Buer") 
+      (path "wolfburg/chars/joe/joe.txt") 
+      (map 5) 
+      (health 100) 
+      (aggression 35) 
+      (coords 788 0)) 
+    (object 
+      (type enemy) 
+      (name "Balan") 
+      (path "wolfburg/chars/mandy/mandy.txt") 
+      (map 8) 
+      (health 69) 
+      (aggression 89) 
+      (coords 375 78)) 
+    (object 
+      (type enemy) 
+      (name "Bune") 
+      (path "wolfburg/chars/mandy/mandy.txt") 
+      (map 8) 
+      (health 69) 
+      (aggression 83) 
+      (coords 623 44)) 
+    (object 
+      (name "bee") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 154 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "fromage") 
+      (type item) 
+      (path ./wolfburg/misc/cheeze/cheeze.txt) 
+      (coords 305 39) 
+      (stimulation 
+        (health 100)))) 
+  (block 
+    (length 420) 
+    (object 
+      (type enemy) 
+      (name "Unsere") 
+      (path "wolfburg/chars/kula/kula.txt") 
+      (map 6) 
+      (health 69) 
+      (aggression 91) 
+      (coords 1142 36)) 
+    (object 
+      (type enemy) 
+      (name "Verin") 
+      (path "wolfburg/chars/kula/kula.txt") 
+      (map 6) 
+      (health 69) 
+      (aggression 87) 
+      (coords -783 57)) 
+    (object 
+      (type enemy) 
+      (name "Merihim") 
+      (path "wolfburg/chars/eiji/eiji2.txt") 
+      (map 7) 
+      (health 75) 
+      (coords 442 0)) 
+    (object 
+      (type enemy) 
+      (name "Urian") 
+      (path "wolfburg/chars/eiji/eiji2.txt") 
+      (map 7) 
+      (health 75) 
+      (coords 367 87)) 
+    (object 
+      (type enemy) 
+      (name "Kobal") 
+      (path "wolfburg/chars/ryu/ryu.txt") 
+      (map 7) 
+      (health 100) 
+      (aggression 90) 
+      (coords 1916 54)) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 213 0) 
+      (stimulation 
+        (health 50))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 288 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 408 0) 
+      (stimulation 
+        (health -1)))) 
+  (block 
+    (length 210) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 71 45) 
+      (stimulation 
+        (health 50))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 196 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 135 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (type enemy) 
+      (name "Behemoth") 
+      (path "wolfburg/chars/venom/venom.txt") 
+      (map 1) 
+      (health 200) 
+      (aggression 60) 
+      (coords 556 0))) 
+  (block 
+    (length 700) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 17 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 110 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 67 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 151 0) 
+      (stimulation 
+        (health 50))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 232 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 183 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 362 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 288 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 602 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 519 87) 
+      (stimulation 
+        (health 25))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 652 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (type enemy) 
+      (name "Baal") 
+      (path "wolfburg/chars/blanka/blanka.txt") 
+      (map 6) 
+      (health 60) 
+      (coords 563 65)) 
+    (object 
+      (type enemy) 
+      (name "Babeal") 
+      (path "wolfburg/chars/blanka/blanka.txt") 
+      (map 6) 
+      (health 60) 
+      (coords -1364 44)) 
+    (object 
+      (type enemy) 
+      (name "Baphomet") 
+      (path "wolfburg/chars/blanka/blanka.txt") 
+      (map 6) 
+      (health 60) 
+      (coords 1662 36)) 
+    (object 
+      (type enemy) 
+      (name "Bunk") 
+      (path "wolfburg/chars/mandy/mandy.txt") 
+      (map 8) 
+      (health 69) 
+      (coords 756 34)) 
+    (object 
+      (type enemy) 
+      (name "Bast") 
+      (path "wolfburg/chars/mandy/mandy.txt") 
+      (map 8) 
+      (health 69) 
+      (coords 1583 82))) 
+  (block 
+    (length 330) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 135 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 58 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 312 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 20 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "luckybee") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 167 55) 
+      (stimulation 
+        (health 500))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 247 29) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 245 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (type enemy) 
+      (name "Agramon") 
+      (path "wolfburg/chars/ryu/shinryu.txt") 
+      (map 8) 
+      (health 150) 
+      (aggression 1) 
+      (coords -729 36))) 
+  (block 
+    (length 276) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 22 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 87 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 250 0) 
+      (stimulation 
+        (health 500))) 
+    (object 
+      (name "stinkbug") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 165 87) 
+      (stimulation 
+        (health -2))) 
+    (object 
+      (type enemy) 
+      (name "Cimeries") 
+      (path "wolfburg/chars/ryu/shinryu.txt") 
+      (map 8) 
+      (health 75) 
+      (coords 366 43)) 
+    (object 
+      (type enemy) 
+      (name "Bechard") 
+      (path "wolfburg/chars/ryu/shinryu.txt") 
+      (map 8) 
+      (health 75) 
+      (aggression 77) 
+      (coords 1666 56)) 
+    (object 
+      (type enemy) 
+      (name "Azazel") 
+      (path "wolfburg/chars/ryu/shinryu.txt") 
+      (map 8) 
+      (health 75) 
+      (coords -666 67)) 
+    (object 
+      (type enemy) 
+      (name "Avatar") 
+      (path "wolfburg/chars/akuma/superakumaX.txt") 
+      (map 4) 
+      (health 150) 
+      (aggression 68) 
+      (coords 1666 37))) 
+  (block 
+    (length 290) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 18 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 95 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 212 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "null") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 276 0)) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 154 41) 
+      (stimulation 
+        (health 500))) 
+    (object 
+      (type enemy) 
+      (name "Bifrons") 
+      (path "wolfburg/chars/venom/venom.txt") 
+      (map 1) 
+      (health 122) 
+      (aggression 83) 
+      (coords -649 55)) 
+    (object 
+      (type enemy) 
+      (name "Vern") 
+      (path "wolfburg/chars/joe/joe.txt") 
+      (map 5) 
+      (health 75) 
+      (coords 439 0)) 
+    (object 
+      (type enemy) 
+      (name "Eblis") 
+      (path "wolfburg/chars/joe/joe.txt") 
+      (map 5) 
+      (health 75) 
+      (coords 195 63))) 
+  (block 
+    (length 460) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 20 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 86 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 208 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 130 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 394 87) 
+      (stimulation 
+        (health 50))) 
+    (object 
+      (type enemy) 
+      (name "Lotic") 
+      (path "wolfburg/chars/ryu/ryu.txt") 
+      (map 7) 
+      (health 80) 
+      (coords 295 87)) 
+    (object 
+      (type enemy) 
+      (name "Geryon") 
+      (path "wolfburg/chars/ryu/ryu.txt") 
+      (map 7) 
+      (health 80) 
+      (coords 3966 76)) 
+    (object 
+      (type enemy) 
+      (name "Mictain") 
+      (path "wolfburg/chars/ryu/ryu.txt") 
+      (map 7) 
+      (health 80) 
+      (coords 1992 10)) 
+    (object 
+      (type enemy) 
+      (name "O'Yama") 
+      (path "wolfburg/chars/akuma/akuma.txt") 
+      (map 8) 
+      (health 88) 
+      (coords 2816 18)) 
+    (object 
+      (type enemy) 
+      (name "Rahu") 
+      (path "wolfburg/chars/akuma/akuma.txt") 
+      (map 8) 
+      (health 88) 
+      (coords -1999 53)) 
+    (object 
+      (type enemy) 
+      (name "Deuce") 
+      (path "wolfburg/chars/akuma/akuma.txt") 
+      (map 8) 
+      (health 88) 
+      (coords -2604 54)) 
+    (object 
+      (type enemy) 
+      (name "Xanthas") 
+      (path "wolfburg/chars/akuma/akuma.txt") 
+      (map 8) 
+      (health 80) 
+      (coords 3666 46)) 
+    (object 
+      (type enemy) 
+      (name "Fallen") 
+      (path "wolfburg/chars/akuma/superakumaX.txt") 
+      (map 4) 
+      (health 120) 
+      (aggression 80) 
+      (coords -2438 65)) 
+    (object 
+      (type enemy) 
+      (name "Damn") 
+      (path "wolfburg/chars/akuma/superakumaX.txt") 
+      (map 4) 
+      (health 120) 
+      (aggression 77) 
+      (coords 1666 43))) 
+  (block 
+    (length 320) 
+    (object 
+      (name "null") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 120 0)) 
+    (object 
+      (name "null") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 43 87)) 
+    (object 
+      (name "null") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 19 0)) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 191 87) 
+      (stimulation 
+        (health 50))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 289 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (type enemy) 
+      (name "Bile") 
+      (path "wolfburg/chars/venom/venom.txt") 
+      (map 1) 
+      (health 100) 
+      (coords 2222 47)) 
+    (object 
+      (type enemy) 
+      (name "Riel") 
+      (path "wolfburg/chars/akuma/akuma.txt") 
+      (map 8) 
+      (health 80) 
+      (coords 353 87)) 
+    (object 
+      (type enemy) 
+      (name "Typhon") 
+      (path "wolfburg/chars/ryu/ryu.txt") 
+      (map 7) 
+      (health 80) 
+      (coords 1967 30)) 
+    (object 
+      (type enemy) 
+      (name "Set") 
+      (path "wolfburg/chars/akuma/akuma.txt") 
+      (map 8) 
+      (health 80) 
+      (coords -666 49))) 
+  (block 
+    (length 420) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 17 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 103 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 166 87) 
+      (stimulation 
+        (health 75))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 241 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 319 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 407 0) 
+      (stimulation 
+        (health 500))) 
+    (object 
+      (type enemy) 
+      (name "Sekhmet") 
+      (path "wolfburg/chars/kula/kula.txt") 
+      (map 6) 
+      (health 120) 
+      (aggression 1) 
+      (coords 2666 0)) 
+    (object 
+      (name "heal") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 70 52) 
+      (stimulation 
+        (health 99))) 
+    (object 
+      (type enemy) 
+      (name "Feurety") 
+      (path "wolfburg/chars/akuma/akuma.txt") 
+      (map 4) 
+      (health 99) 
+      (aggression 84) 
+      (coords -6666 34)) 
+    (object 
+      (type enemy) 
+      (name "Leviathan") 
+      (path "wolfburg/chars/akuma/akuma.txt") 
+      (map 4) 
+      (health 99) 
+      (coords 305 66)) 
+    (object 
+      (type enemy) 
+      (name "Blood-Shank") 
+      (path "wolfburg/chars/kage/kage.txt") 
+      (map 6) 
+      (health 150) 
+      (aggression 84) 
+      (coords 1927 44)) 
+    (object 
+      (type enemy) 
+      (name "Nergal") 
+      (path "wolfburg/chars/eiji/eiji2.txt") 
+      (map 7) 
+      (health 75) 
+      (coords -666 72)) 
+    (object 
+      (type enemy) 
+      (name "Leonard") 
+      (path "wolfburg/chars/eiji/eiji2.txt") 
+      (map 7) 
+      (health 75) 
+      (coords 2999 83)) 
+    (object 
+      (type enemy) 
+      (name "Haborym") 
+      (path "wolfburg/chars/eiji/eiji2.txt") 
+      (map 7) 
+      (health 75) 
+      (coords 666 0)) 
+    (object 
+      (type enemy) 
+      (name "Arioch") 
+      (path "wolfburg/chars/eiji/eiji2.txt") 
+      (map 7) 
+      (health 75) 
+      (coords -2981 52))) 
+  (block 
+    (length 420) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 65 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 114 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 16 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 212 87) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 162 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 267 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 354 0) 
+      (stimulation 
+        (health -1))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 316 87) 
+      (stimulation 
+        (health 50))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 400 87) 
+      (stimulation 
+        (health 99))) 
+    (object 
+      (type enemy) 
+      (name "Gwar") 
+      (path "wolfburg/chars/blanka/turboblanka.txt") 
+      (map 6) 
+      (health 420) 
+      (aggression 69) 
+      (coords 1503 43)) 
+    (object 
+      (type enemy) 
+      (name "Metztli") 
+      (path "wolfburg/chars/mandy/mandy.txt") 
+      (map 8) 
+      (health 69) 
+      (coords 1666 0)) 
+    (object 
+      (type enemy) 
+      (name "Ansitif") 
+      (path "wolfburg/chars/mandy/mandy.txt") 
+      (map 8) 
+      (health 69) 
+      (coords 666 75)) 
+    (object 
+      (type enemy) 
+      (name "Shiva") 
+      (path "wolfburg/chars/mandy/mandy.txt") 
+      (map 8) 
+      (health 69) 
+      (coords 337 61)) 
+    (object 
+      (type enemy) 
+      (name "Ardat-Lile") 
+      (path "wolfburg/chars/mandy/mandy.txt") 
+      (map 8) 
+      (health 69) 
+      (coords -2666 40))) 
+  (block 
+    (length 320) 
+    (finish 110) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 58 87) 
+      (stimulation 
+        (health 10))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 21 0) 
+      (stimulation 
+        (health 10))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 168 87) 
+      (stimulation 
+        (health 10))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee/bee.txt) 
+      (coords 128 0) 
+      (stimulation 
+        (health 10))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 196 0) 
+      (stimulation 
+        (health 50))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 232 87) 
+      (stimulation 
+        (health 50))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path ./wolfburg/misc/bee2/bee2.txt) 
+      (coords 266 0) 
+      (stimulation 
+        (health 80))) 
+    (object 
+      (name "treasure") 
+      (type item) 
+      (path ./wolfburg/misc/box/box.txt) 
+      (coords 202 25) 
+      (stimulation 
+        (health 420))) 
+    (object 
+      (name "treasure") 
+      (type item) 
+      (path ./wolfburg/misc/box/box.txt) 
+      (coords 234 49) 
+      (stimulation 
+        (health 420)))))

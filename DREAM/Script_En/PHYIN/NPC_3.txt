@@ -1,0 +1,1 @@
+talk(50,"Schoolmate:If the lunch is not served, I wouldn't come to visit.");

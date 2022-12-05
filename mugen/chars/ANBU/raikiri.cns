@@ -1,0 +1,143 @@
+;---------------------------------------------------------
+;Raikiri
+[Statedef 888]
+type = S
+movetype = A
+physics = S
+velset = 0,0
+juggle = 1
+anim = 888
+poweradd = -1000
+ctrl = 0
+sprpriority = 2
+poweradd = 0
+
+[State 888, 1]
+type = SuperPause
+trigger1 = Time = 0
+time = 90
+movetime = 90
+
+
+[State 888, 2]
+type = envshake
+trigger1 = time = 0
+time = 90
+freq = 50
+
+[state 888, 0]
+type = explod
+trigger1 = AnimElem = 2
+id = 888
+anim = 860
+postype = p1
+pos = 0, 0
+bindtime = -1
+removetime = -2
+supermovetime = -2
+ontop= 1
+
+[state 888, 0]
+type = explod
+trigger1 = AnimElem = 2
+id = 888
+anim = 820
+postype = p1
+pos = 0, 0
+bindtime = -1
+removetime = -2
+supermovetime = -1
+ontop= 1
+
+[state 888, sound]
+type = playsnd
+trigger1 = time = 1
+value = S5,12
+volume = 225
+
+[state 888, sound]
+type = playsnd
+trigger1 = time = 9
+value = S4,14
+volume = 225
+
+[state 888, sound]
+type = playsnd
+trigger1 = time = 10
+value = S5,11
+volume = 225
+
+[State 888, 2]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 0
+
+[state 888, 3]
+type = Changestate
+trigger1 = AnimTime = 0
+value = 889
+ctrl = 1
+
+;-----------------------------------------------------------------------
+;Raikiri Hit 
+[statedef 889]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+velset = 0,0
+anim = 889
+ctrl = 0
+sprpriority = 2
+
+[state 889, vel]
+type = velset
+trigger1 = animelem = 2
+x = 25
+
+[state 889,0]
+type = removeexplod
+trigger1 = time = 3
+
+[State 889,1]
+type = HitDef
+trigger1 = animelem = 2
+attr = S, SA
+animtype  = Hard
+damage    = 250, 0
+guardflag = MA
+pausetime = 5,5
+sparkno = S830
+sparkxy = -10,-70
+hitsound = S4,654
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+fall = 1
+
+[State 889, 0]
+type = envshake
+trigger1 = movehit = 1
+time = 40
+freq = 30
+
+[state 889, fade]
+type = allpalfx
+trigger1 = movehit = 1
+time = 20
+add = 100,75,67
+mul = 256-time*4,256-time*4,256-time*4
+
+
+
+[state 889,5]
+type = Changestate
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+

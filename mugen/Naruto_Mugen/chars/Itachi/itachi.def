@@ -1,0 +1,26 @@
+[Info]
+name="itachi"
+displayname="Uchiha Itachi"
+versiondate=24-04-07
+mugenversion=
+author="Anjel"
+pal.defaults=1,2,3,4
+[Files]
+sprite=itachi.sff
+sound=itachi.snd
+anim=itachi.air
+cmd=itachi.cmd
+cns=itachi.cns
+st=itachi.cns
+stcommon=common.cns
+pal1=itachi.act
+pal2=red.act
+pal3=green.act
+pal4=blue.act
+st1=basics.cns
+st2=specials.cns
+st3=bunshin.cns
+st4=mizu.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard=

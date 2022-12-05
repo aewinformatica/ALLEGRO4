@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project>
+	<Libs Value="-lmingw32 -lSDLmain -lSDL"/>
+	<Flags Value="-Iheader"/>
+	<Target Value="OpenMugen.exe"/>
+	<CommandLine Value=""/>
+	<CompilerOptions Value="-Wall -O2"/>
+	<DeleteObjectsBefore Value="Yes"/>
+	<DeleteObjectsAfter Value="Yes"/>
+	<DeleteMakefileAfter Value="Yes"/>
+	<DeleteResourcesAfter Value="Yes"/>
+	<EnableTheme Value="No"/>
+	<RequiresAdmin Value="No"/>
+	<CompilerType Value="CPP"/>
+	<AppType Value="CONSOLE"/>
+	<Files>
+		<Folder Name="header">
+			<File Name="MemManager.h"/>
+			<File Name="SDL_framerate.h"/>
+			<File Name="StateParser.h"/>
+			<File Name="SffManager.h"/>
+			<File Name="CmdManager.h"/>
+			<File Name="tokenizer.h"/>
+			<File Name="ControllerExecuter.h"/>
+			<File Name="Timer.h"/>
+			<File Name="AirManager.h"/>
+			<File Name="StateManager.h"/>
+			<File Name="VM.h"/>
+			<File Name="Stack.h"/>
+			<File Name="player.h"/>
+			<File Name="engine.h"/>
+			<File Name="structs.h"/>
+			<File Name="scale2x.h"/>
+			<File Name="VideoSystem.h"/>
+			<File Name="SDLManager.h"/>
+			<File Name="game.h"/>
+			<File Name="global.h"/>
+		</Folder>
+		<Folder Name="source">
+			<File Name="SDL_framerate.cpp"/>
+			<File Name="scale2xSDL.cpp"/>
+			<File Name="tokenizer.cpp"/>
+			<File Name="player.cpp"/>
+			<File Name="global.cpp"/>
+			<File Name="main.cpp"/>
+			<File Name="game.cpp"/>
+			<File Name="SDLManager.cpp"/>
+			<File Name="VideoSystem.cpp"/>
+			<File Name="ControllerExecuter.cpp"/>
+			<File Name="scale2x.cpp"/>
+			<File Name="MemManager.cpp"/>
+			<File Name="Stack.cpp"/>
+			<File Name="SffManager.cpp"/>
+			<File Name="VM.cpp"/>
+			<File Name="StateManager.cpp"/>
+			<File Name="AirManager.cpp"/>
+			<File Name="StateParser.cpp"/>
+			<File Name="engine.cpp"/>
+			<File Name="CmdManager.cpp"/>
+		</Folder>
+	</Files>
+</Project>

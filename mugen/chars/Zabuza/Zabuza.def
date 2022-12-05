@@ -1,0 +1,27 @@
+; Definition file for Kung Fu Man
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Momochi Zabuza"
+displayname ="Momochi Zabuza"
+versiondate =04,14,2002
+mugenversion =04,14,2002
+author ="Yamato and CommanderCool"
+pal.defaults =6,3,4,2
+
+; Files for the player
+[Files]
+cmd     =Zabuza.cmd
+cns     =Zabuza.cns
+st      =Zabuza.cns
+stcommon =common1.cns
+sprite  =Zabuza.sff
+anim    =Zabuza.air
+sound   =Zabuza.snd
+pal1=zabuza2.act
+
+; Arcade mode
+[Arcade]
+intro.storyboard =
+ending.storyboard =

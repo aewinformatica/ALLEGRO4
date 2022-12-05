@@ -1,0 +1,34 @@
+; Definition file for SASUKE_KUN
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="sasuke-kun"
+displayname ="SASUKE KUN"
+versiondate =23,12,2005
+mugenversion =11,01,2001
+author ="YOUKAI"
+pal.defaults =1,2,3,4
+
+; Files for the player
+[Files]
+cmd     =sasuke-kun.cmd
+cns     =sasuke-kun.cns
+st      =sasuke-kun.cns
+stcommon =common1.cns
+sprite  =sasuke-kun.sff
+anim    =sasuke-kun.air
+sound   =sasuke-kun.snd
+pal1=sasuke1.act
+pal2=sasuke2.act
+pal3=sasuke3.act
+pal4=sasuke4.act
+pal5=sasuke5.act
+pal6=sasuke6.act
+
+
+; Arcade mode
+[Arcade]
+;intro.storyboard = ending.def
+ending.storyboard =
+intro.storyboard=

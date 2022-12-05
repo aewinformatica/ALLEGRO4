@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!DOCTYPE CodeBlocks_layout_file>
+<CodeBlocks_layout_file>
+	<File name="Cheats.cpp" open="0" top="0">
+		<Cursor position="3184" topLine="118"/>
+	</File>
+	<File name="ComputerAI.cpp" open="0" top="0">
+		<Cursor position="4557" topLine="221"/>
+	</File>
+	<File name="ConsoleCmd.cpp" open="0" top="0">
+		<Cursor position="17171" topLine="977"/>
+	</File>
+	<File name="Dialogs.cpp" open="0" top="0">
+		<Cursor position="4323" topLine="211"/>
+	</File>
+	<File name="Drawing.cpp" open="0" top="0">
+		<Cursor position="948" topLine="40"/>
+	</File>
+	<File name="Editor\Editor.cpp" open="0" top="0">
+		<Cursor position="18542" topLine="629"/>
+	</File>
+	<File name="Editor\Editor.h" open="0" top="0">
+		<Cursor position="137" topLine="0"/>
+	</File>
+	<File name="Editor\FFormat.cpp" open="0" top="0">
+		<Cursor position="5622" topLine="177"/>
+	</File>
+	<File name="Ground.cpp" open="0" top="0">
+		<Cursor position="2930" topLine="29"/>
+	</File>
+	<File name="PPCol_Src\PPMASKC.C" open="0" top="0">
+		<Cursor position="1450" topLine="26"/>
+	</File>
+	<File name="Particles.cpp" open="0" top="0">
+		<Cursor position="9343" topLine="158"/>
+	</File>
+	<File name="Particles.h" open="0" top="0">
+		<Cursor position="3053" topLine="92"/>
+	</File>
+	<File name="PlayerSetup.cpp" open="0" top="0">
+		<Cursor position="1009" topLine="35"/>
+	</File>
+	<File name="Resources\CharredDirt.rc" open="0" top="0">
+		<Cursor position="139" topLine="0"/>
+	</File>
+	<File name="Scorch.cpp" open="0" top="0">
+		<Cursor position="12175" topLine="556"/>
+	</File>
+	<File name="Scorch.h" open="0" top="0">
+		<Cursor position="6495" topLine="241"/>
+	</File>
+	<File name="Shot.cpp" open="0" top="0">
+		<Cursor position="190437" topLine="6762"/>
+	</File>
+	<File name="Shot.h" open="0" top="0">
+		<Cursor position="8330" topLine="262"/>
+	</File>
+	<File name="Sprites.cpp" open="0" top="0">
+		<Cursor position="198442" topLine="7259"/>
+	</File>
+	<File name="Sprites.h" open="0" top="0">
+		<Cursor position="15508" topLine="673"/>
+	</File>
+	<File name="Tank.cpp" open="0" top="0">
+		<Cursor position="61532" topLine="2642"/>
+	</File>
+	<File name="Tank.h" open="0" top="0">
+		<Cursor position="7852" topLine="289"/>
+	</File>
+	<File name="agup\aase.cpp" open="0" top="0">
+		<Cursor position="9100" topLine="420"/>
+	</File>
+	<File name="allegro.h" open="0" top="0">
+		<Cursor position="47" topLine="0"/>
+	</File>
+	<File name="client.cpp" open="0" top="0">
+		<Cursor position="48636" topLine="2293"/>
+	</File>
+	<File name="conalleg.h" open="0" top="0">
+		<Cursor position="2826" topLine="94"/>
+	</File>
+	<File name="fmodapi370\api\inc\fmod.h" open="0" top="0">
+		<Cursor position="824" topLine="0"/>
+	</File>
+	<File name="fmodapi370\api\inc\fmod_errors.h" open="0" top="0">
+		<Cursor position="95" topLine="0"/>
+	</File>
+	<File name="multiplayer.cpp" open="0" top="0">
+		<Cursor position="8188" topLine="374"/>
+	</File>
+	<File name="multiplayer.h" open="0" top="0">
+		<Cursor position="46" topLine="0"/>
+	</File>
+	<File name="netcommon\include\netcommon.h" open="0" top="0">
+		<Cursor position="4969" topLine="199"/>
+	</File>
+	<File name="netcommon\src\netcommon.cpp" open="0" top="0">
+		<Cursor position="13644" topLine="719"/>
+	</File>
+	<File name="peffect.cpp" open="0" top="0">
+		<Cursor position="654" topLine="37"/>
+	</File>
+	<File name="secrets.cpp" open="0" top="0">
+		<Cursor position="10337" topLine="475"/>
+	</File>
+	<File name="server.cpp" open="0" top="0">
+		<Cursor position="5817" topLine="282"/>
+	</File>
+	<Expand folder="/Sources"/>
+</CodeBlocks_layout_file>

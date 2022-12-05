@@ -1,0 +1,2 @@
+talk(50,"ÐÂ½®Í¬Ñ§:Shit!!!Team,Hold back!");
+NPC_turn(4,2);

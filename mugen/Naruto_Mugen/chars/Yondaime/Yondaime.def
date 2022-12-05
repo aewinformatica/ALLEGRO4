@@ -1,0 +1,25 @@
+; Definition file for Yondaime.
+; Contains all the filenames needed for the character.
+
+; Player information
+[Info]
+name = "Yellow Flash"       
+displayname = "Yondaime" 
+versiondate = 27,09,2005    
+mugenversion = 04,14,2002   
+author = "Marvin"         
+pal.defaults =1  
+
+; Yondaime Files
+[Files]
+cmd     = Yondaime.cmd   
+cns      = Yondaime.cns   
+st        = Yondaime.cns
+st2       = rasengan.cns
+stcommon = Yondaimecommon.cns 
+sprite  = Yondaime.sff   
+anim   = Yondaime.air   
+sound  = Yondaime.snd  
+pal1    = Yondaime.act  
+
+

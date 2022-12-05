@@ -1,0 +1,16 @@
+#回到魔法学院
+
+go_inout(0,1);
+
+set_game_status(1);
+
+call("script/magic/load.txt");
+NPC_set(0,32,33);
+NPC_turn(0,0);
+
+set_game_status(0);
+
+go_inout(0,0);
+
+@END
+

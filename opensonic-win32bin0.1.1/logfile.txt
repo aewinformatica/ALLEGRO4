@@ -1,0 +1,1098 @@
+Open Sonic version 0.1.1
+logfile_init()
+game arguments:
+argv[0]: 'E:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\opensonic.exe'
+Unable to set gfx mode.
+Can not set video mode
+Trying GFX_AUTODETECT...
+audio_init()
+Initializing Allegro sound...
+Initializing DUMB...
+audio_init() ok
+hash_init()
+video_init()
+spritedata_load()...
+Reading sprite 'SD_SONIC'
+load_sprite() with 25 animations and 60 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\player.png)
+hash_search('images/player.png') returned NULL
+hash_insert('images/player.png', 0x7e13fb0, 1)...
+image_load() ok
+load_sprite() ok!
+Registering sprite 'SD_SONIC'...
+hash_insert('SD_SONIC', 0x7e87a40, 2)...
+Reading sprite 'SD_TAILS'
+load_sprite() with 25 animations and 55 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\player.png)
+load_sprite() ok!
+Registering sprite 'SD_TAILS'...
+hash_insert('SD_TAILS', 0xab80f60, 2)...
+Reading sprite 'SD_KNUCKLES'
+load_sprite() with 25 animations and 55 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\player.png)
+load_sprite() ok!
+Registering sprite 'SD_KNUCKLES'...
+hash_insert('SD_KNUCKLES', 0xabc2058, 2)...
+Reading sprite 'SD_ARROW'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+hash_search('images/items.png') returned NULL
+hash_insert('images/items.png', 0x7f01dc8, 1)...
+image_load() ok
+load_sprite() ok!
+Registering sprite 'SD_ARROW'...
+hash_insert('SD_ARROW', 0x7f03ef0, 2)...
+Reading sprite 'SD_RING'
+load_sprite() with 2 animations and 12 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_RING'...
+hash_insert('SD_RING', 0x7f041a8, 2)...
+Reading sprite 'SD_BLUERING'
+load_sprite() with 2 animations and 12 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_BLUERING'...
+hash_insert('SD_BLUERING', 0x7f08fc8, 2)...
+Reading sprite 'SD_BIGRING'
+load_sprite() with 1 animations and 10 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_BIGRING'...
+hash_insert('SD_BIGRING', 0x7f09660, 2)...
+Reading sprite 'SD_JOAN'
+load_sprite() with 1 animations and 3 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\baddies.png)
+hash_search('images/baddies.png') returned NULL
+hash_insert('images/baddies.png', 0x7f04ba0, 1)...
+image_load() ok
+load_sprite() ok!
+Registering sprite 'SD_JOAN'...
+hash_insert('SD_JOAN', 0x7f09e40, 2)...
+Reading sprite 'SD_FLYINGBOY'
+load_sprite() with 1 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\baddies.png)
+load_sprite() ok!
+Registering sprite 'SD_FLYINGBOY'...
+hash_insert('SD_FLYINGBOY', 0xacb6490, 2)...
+Reading sprite 'SD_FLYINGEYES'
+load_sprite() with 1 animations and 4 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\baddies.png)
+load_sprite() ok!
+Registering sprite 'SD_FLYINGEYES'...
+hash_insert('SD_FLYINGEYES', 0xacb6998, 2)...
+Reading sprite 'SD_KLEPS'
+load_sprite() with 1 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\baddies.png)
+load_sprite() ok!
+Registering sprite 'SD_KLEPS'...
+hash_insert('SD_KLEPS', 0xad25670, 2)...
+Reading sprite 'SD_GOLDFISH'
+load_sprite() with 1 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\baddies.png)
+load_sprite() ok!
+Registering sprite 'SD_GOLDFISH'...
+hash_insert('SD_GOLDFISH', 0xad29dd8, 2)...
+Reading sprite 'SD_SURPREYES'
+load_sprite() with 1 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\baddies.png)
+load_sprite() ok!
+Registering sprite 'SD_SURPREYES'...
+hash_insert('SD_SURPREYES', 0xad29f28, 2)...
+Reading sprite 'SD_ORANJECTION'
+load_sprite() with 1 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\baddies.png)
+load_sprite() ok!
+Registering sprite 'SD_ORANJECTION'...
+hash_insert('SD_ORANJECTION', 0xac1a3b8, 2)...
+Reading sprite 'SD_ROBOXER'
+load_sprite() with 1 animations and 3 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\baddies.png)
+load_sprite() ok!
+Registering sprite 'SD_ROBOXER'...
+hash_insert('SD_ROBOXER', 0xac1b438, 2)...
+Reading sprite 'SD_NAFDER'
+load_sprite() with 1 animations and 3 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\baddies.png)
+load_sprite() ok!
+Registering sprite 'SD_NAFDER'...
+hash_insert('SD_NAFDER', 0xac1d6e8, 2)...
+Reading sprite 'SD_CHEF'
+load_sprite() with 1 animations and 4 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\baddies.png)
+load_sprite() ok!
+Registering sprite 'SD_CHEF'...
+hash_insert('SD_CHEF', 0xac21d90, 2)...
+Reading sprite 'SD_SIMPLEBOSS'
+load_sprite() with 3 animations and 4 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\boss.png)
+hash_search('images/boss.png') returned NULL
+hash_insert('images/boss.png', 0xad254c0, 1)...
+image_load() ok
+load_sprite() ok!
+Registering sprite 'SD_SIMPLEBOSS'...
+hash_insert('SD_SIMPLEBOSS', 0xac21610, 2)...
+Reading sprite 'SD_MECHASHADOW'
+load_sprite() with 5 animations and 6 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\boss.png)
+load_sprite() ok!
+Registering sprite 'SD_MECHASHADOW'...
+hash_insert('SD_MECHASHADOW', 0xac21f90, 2)...
+Reading sprite 'SD_DANGPOWER'
+load_sprite() with 1 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\boss.png)
+load_sprite() ok!
+Registering sprite 'SD_DANGPOWER'...
+hash_insert('SD_DANGPOWER', 0xac22090, 2)...
+Reading sprite 'SD_MAINGUI'
+load_sprite() with 2 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+hash_search('images/gui.png') returned NULL
+hash_insert('images/gui.png', 0xb2e0360, 1)...
+image_load() ok
+load_sprite() ok!
+Registering sprite 'SD_MAINGUI'...
+hash_insert('SD_MAINGUI', 0xac21e10, 2)...
+Reading sprite 'SD_LIFEGUI'
+load_sprite() with 3 animations and 3 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'SD_LIFEGUI'...
+hash_insert('SD_LIFEGUI', 0xac21890, 2)...
+Reading sprite 'SD_PAUSE'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'SD_PAUSE'...
+hash_insert('SD_PAUSE', 0xac21490, 2)...
+Reading sprite 'SD_ITEMBOX'
+load_sprite() with 11 animations and 12 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_ITEMBOX'...
+hash_insert('SD_ITEMBOX', 0xac21390, 2)...
+Reading sprite 'SD_ICON'
+load_sprite() with 11 animations and 12 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_ICON'...
+hash_insert('SD_ICON', 0xac22010, 2)...
+Reading sprite 'SD_GLASSES'
+load_sprite() with 6 animations and 5 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_GLASSES'...
+hash_insert('SD_GLASSES', 0xac21590, 2)...
+Reading sprite 'SD_SHIELD'
+load_sprite() with 1 animations and 5 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_SHIELD'...
+hash_insert('SD_SHIELD', 0xac21690, 2)...
+Reading sprite 'SD_INVSTAR'
+load_sprite() with 1 animations and 3 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_INVSTAR'...
+hash_insert('SD_INVSTAR', 0xac21790, 2)...
+Reading sprite 'SD_LEVELOP'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'SD_LEVELOP'...
+hash_insert('SD_LEVELOP', 0xac21b90, 2)...
+Reading sprite 'SD_LEVELACT'
+load_sprite() with 3 animations and 3 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'SD_LEVELACT'...
+hash_insert('SD_LEVELACT', 0xac21810, 2)...
+Reading sprite 'SD_EXPLOSION'
+load_sprite() with 2 animations and 7 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_EXPLOSION'...
+hash_insert('SD_EXPLOSION', 0xac21c90, 2)...
+Reading sprite 'SD_PIXEL'
+load_sprite() with 4 animations and 75 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_PIXEL'...
+hash_insert('SD_PIXEL', 0xac21d10, 2)...
+Reading sprite 'SD_ANIMAL'
+load_sprite() with 24 animations and 36 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\animals.png)
+hash_search('images/animals.png') returned NULL
+hash_insert('images/animals.png', 0xad442b0, 1)...
+image_load() ok
+load_sprite() ok!
+Registering sprite 'SD_ANIMAL'...
+hash_insert('SD_ANIMAL', 0xac21910, 2)...
+Reading sprite 'SD_LOOPRIGHT'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_LOOPRIGHT'...
+hash_insert('SD_LOOPRIGHT', 0xac21a10, 2)...
+Reading sprite 'SD_LOOPMIDDLE'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_LOOPMIDDLE'...
+hash_insert('SD_LOOPMIDDLE', 0xac21a90, 2)...
+Reading sprite 'SD_LOOPLEFT'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_LOOPLEFT'...
+hash_insert('SD_LOOPLEFT', 0xb4027c8, 2)...
+Reading sprite 'SD_LOOPNONE'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_LOOPNONE'...
+hash_insert('SD_LOOPNONE', 0xb402d48, 2)...
+Reading sprite 'SD_LOOPFLOOR'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_LOOPFLOOR'...
+hash_insert('SD_LOOPFLOOR', 0xb402b48, 2)...
+Reading sprite 'SD_LOOPFLOORNONE'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_LOOPFLOORNONE'...
+hash_insert('SD_LOOPFLOORNONE', 0xb402448, 2)...
+Reading sprite 'SD_LOOPFLOORTOP'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_LOOPFLOORTOP'...
+hash_insert('SD_LOOPFLOORTOP', 0xb402948, 2)...
+Reading sprite 'SD_YELLOWSPRING'
+load_sprite() with 2 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_YELLOWSPRING'...
+hash_insert('SD_YELLOWSPRING', 0xb4024c8, 2)...
+Reading sprite 'SD_REDSPRING'
+load_sprite() with 2 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_REDSPRING'...
+hash_insert('SD_REDSPRING', 0xb402748, 2)...
+Reading sprite 'SD_RREDSPRING'
+load_sprite() with 2 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_RREDSPRING'...
+hash_insert('SD_RREDSPRING', 0xb402ec8, 2)...
+Reading sprite 'SD_LREDSPRING'
+load_sprite() with 2 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_LREDSPRING'...
+hash_insert('SD_LREDSPRING', 0xb4030c8, 2)...
+Reading sprite 'SD_SWITCH'
+load_sprite() with 2 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_SWITCH'...
+hash_insert('SD_SWITCH', 0xb402548, 2)...
+Reading sprite 'SD_DOOR'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_DOOR'...
+hash_insert('SD_DOOR', 0xb402bc8, 2)...
+Reading sprite 'SD_TELEPORTER'
+load_sprite() with 2 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_TELEPORTER'...
+hash_insert('SD_TELEPORTER', 0xb402848, 2)...
+Reading sprite 'SD_CHECKPOINT'
+load_sprite() with 3 animations and 7 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_CHECKPOINT'...
+hash_insert('SD_CHECKPOINT', 0xb4029c8, 2)...
+Reading sprite 'SD_BUMPER'
+load_sprite() with 2 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_BUMPER'...
+hash_insert('SD_BUMPER', 0xb4028c8, 2)...
+Reading sprite 'SD_GOAL'
+load_sprite() with 2 animations and 2 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_GOAL'...
+hash_insert('SD_GOAL', 0xb402a48, 2)...
+Reading sprite 'SD_ENDSIGN'
+load_sprite() with 5 animations and 8 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_ENDSIGN'...
+hash_insert('SD_ENDSIGN', 0xb402ac8, 2)...
+Reading sprite 'SD_ENDLEVEL'
+load_sprite() with 3 animations and 4 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_ENDLEVEL'...
+hash_insert('SD_ENDLEVEL', 0xb403148, 2)...
+Reading sprite 'SD_RINGBONUS'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'SD_RINGBONUS'...
+hash_insert('SD_RINGBONUS', 0xb402c48, 2)...
+Reading sprite 'SD_SECRETBONUS'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'SD_SECRETBONUS'...
+hash_insert('SD_SECRETBONUS', 0xb402cc8, 2)...
+Reading sprite 'SD_TOTAL'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'SD_TOTAL'...
+hash_insert('SD_TOTAL', 0xb402dc8, 2)...
+Reading sprite 'SD_DIALOGBOX'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'SD_DIALOGBOX'...
+hash_insert('SD_DIALOGBOX', 0xb4025c8, 2)...
+Reading sprite 'SD_TITLESONIC'
+load_sprite() with 2 animations and 8 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\title.png)
+hash_search('images/title.png') returned NULL
+hash_insert('images/title.png', 0xad65d00, 1)...
+image_load() ok
+load_sprite() ok!
+Registering sprite 'SD_TITLESONIC'...
+hash_insert('SD_TITLESONIC', 0xb402e48, 2)...
+Reading sprite 'SD_TITLESONICBG'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\title.png)
+load_sprite() ok!
+Registering sprite 'SD_TITLESONICBG'...
+hash_insert('SD_TITLESONICBG', 0xb4032c8, 2)...
+Reading sprite 'SD_TITLEGAMENAME'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\title.png)
+load_sprite() ok!
+Registering sprite 'SD_TITLEGAMENAME'...
+hash_insert('SD_TITLEGAMENAME', 0xb402648, 2)...
+Reading sprite 'SD_TITLEFOOT'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\title.png)
+load_sprite() ok!
+Registering sprite 'SD_TITLEFOOT'...
+hash_insert('SD_TITLEFOOT', 0xb402f48, 2)...
+Reading sprite 'SD_DANGER'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_DANGER'...
+hash_insert('SD_DANGER', 0xb402fc8, 2)...
+Reading sprite 'SD_SPIKES'
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_SPIKES'...
+hash_insert('SD_SPIKES', 0xb403048, 2)...
+Reading sprite 'SD_DNADOOR'
+load_sprite() with 1 animations and 3 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_DNADOOR'...
+hash_insert('SD_DNADOOR', 0xb4031c8, 2)...
+Reading sprite 'SD_FIREBALL'
+load_sprite() with 3 animations and 6 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\items.png)
+load_sprite() ok!
+Registering sprite 'SD_FIREBALL'...
+hash_insert('SD_FIREBALL', 0xb403248, 2)...
+Reading sprite 'FT_FONT0'
+load_sprite() with 1 animations and 39 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'FT_FONT0'...
+hash_insert('FT_FONT0', 0xb403348, 2)...
+Reading sprite 'FT_FONT1'
+load_sprite() with 1 animations and 39 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'FT_FONT1'...
+hash_insert('FT_FONT1', 0xb4033c8, 2)...
+Reading sprite 'FT_FONT2'
+load_sprite() with 1 animations and 11 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'FT_FONT2'...
+hash_insert('FT_FONT2', 0xb4026c8, 2)...
+Reading sprite 'FT_FONT3'
+load_sprite() with 1 animations and 30 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'FT_FONT3'...
+hash_insert('FT_FONT3', 0xb4035c8, 2)...
+Reading sprite 'FT_FONT4'
+load_sprite() with 1 animations and 30 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'FT_FONT4'...
+hash_insert('FT_FONT4', 0xb403f48, 2)...
+Reading sprite 'FT_FONT5'
+load_sprite() with 1 animations and 30 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'FT_FONT5'...
+hash_insert('FT_FONT5', 0xb403648, 2)...
+Reading sprite 'FT_FONT6'
+load_sprite() with 1 animations and 30 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'FT_FONT6'...
+hash_insert('FT_FONT6', 0xb403448, 2)...
+Reading sprite 'FT_FONT7'
+load_sprite() with 1 animations and 30 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'FT_FONT7'...
+hash_insert('FT_FONT7', 0xb404348, 2)...
+Reading sprite 'FT_FONT8'
+load_sprite() with 1 animations and 112 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\gui.png)
+load_sprite() ok!
+Registering sprite 'FT_FONT8'...
+hash_insert('FT_FONT8', 0xb403dc8, 2)...
+spritedata_load() ok!
+font_init()
+font_init() ok
+input_init()
+scenestack_push(0xb3c6050)
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\intro.png)
+hash_search('images/intro.png') returned NULL
+hash_insert('images/intro.png', 0xb3c6248, 1)...
+image_load() ok
+scenestack_push() ok
+scenestack_pop()
+scenestack_pop() ok
+scenestack_push(0xb3c6038)
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\sourcecode.png)
+hash_search('images/sourcecode.png') returned NULL
+hash_insert('images/sourcecode.png', 0xb3c6170, 1)...
+image_load() ok
+load_quest_list()
+load_quest('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\master.qst')
+Reading quest "e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\master.qst"...
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\master.png)
+hash_search('quests/master.png') returned NULL
+hash_insert('quests/master.png', 0xb3c6278, 1)...
+image_load() ok
+ok!
+load_quest('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\tutorial.qst')
+Reading quest "e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\tutorial.qst"...
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\tutorial.png)
+hash_search('quests/tutorial.png') returned NULL
+hash_insert('quests/tutorial.png', 0xb3c6200, 1)...
+image_load() ok
+ok!
+2 quests found.
+music_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\musics\title.it')
+hash_search('musics/title.it') returned NULL
+hash_insert('musics/title.it', 0xb35da60, 3)...
+music_load() ok
+scenestack_push() ok
+hash_search('samples/choose.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\choose.wav')
+hash_insert('samples/choose.wav', 0xb35d920, 4)...
+hash_search('samples/select.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\select.wav')
+hash_insert('samples/select.wav', 0xb35d990, 4)...
+load_quest('quests/tutorial.qst')
+Reading quest "quests/tutorial.qst"...
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\tutorial.png)
+ok!
+Running quest quests/tutorial.qst, 'Tutorial quest'...
+scenestack_pop()
+release_quest_list()
+scenestack_pop() ok
+scenestack_push(0xb3c6140)
+scenestack_push() ok
+level_setfile('levels/tutorial_1.lev')
+scenestack_push(0xb3c62d8)
+level_init()
+level_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\levels\tutorial_1.lev)
+brickdata_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\themes\island.brk')
+Reading brick 0
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+hash_search('images/island.png') returned NULL
+hash_insert('images/island.png', 0xb3c6260, 1)...
+image_load() ok
+load_sprite() ok!
+done.
+Reading brick 1
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 2
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 3
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 4
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 5
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 6
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 7
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 8
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 9
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 10
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 11
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 12
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 13
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 14
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 15
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 16
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 17
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 18
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 19
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 20
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 21
+Reading brick sprite...
+load_sprite() with 1 animations and 4 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 22
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 23
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 24
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 25
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 26
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 27
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 28
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 29
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 30
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 31
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 32
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 33
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 34
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 35
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 36
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 37
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 38
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 39
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 40
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 41
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 42
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 43
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 44
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 45
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 46
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 47
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 48
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 49
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 50
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 51
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 52
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 53
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 54
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 55
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 56
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 57
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 58
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 59
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 60
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 61
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 62
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 63
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 64
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 65
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 66
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading brick 67
+Reading brick sprite...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+brickdata_load() ok!
+background_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\themes\island.bg')
+Reading background 0...
+Reading background sprite/animation data...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading background 1...
+Reading background sprite/animation data...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading background 2...
+Reading background sprite/animation data...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading background 3...
+Reading background sprite/animation data...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading background 4...
+Reading background sprite/animation data...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading background 5...
+Reading background sprite/animation data...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading background 6...
+Reading background sprite/animation data...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading background 7...
+Reading background sprite/animation data...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+Reading background 8...
+Reading background sprite/animation data...
+load_sprite() with 1 animations and 1 frames
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\island.png)
+load_sprite() ok!
+done.
+background_load() ok!
+music_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\musics\tutorial.it')
+hash_search('musics/tutorial.it') returned NULL
+hash_insert('musics/tutorial.it', 0xb6bff30, 3)...
+music_load() ok
+level_load() ok
+Creating players...
+player_create(0)
+player_create() ok
+player_create(1)
+player_create() ok
+player_create(2)
+player_create() ok
+Loading hud...
+level_init() ok
+scenestack_push() ok
+hash_search('samples/ring.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\ring.wav')
+hash_insert('samples/ring.wav', 0xb6cd1f8, 4)...
+hash_search('samples/brake.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\brake.wav')
+hash_insert('samples/brake.wav', 0xb6cd438, 4)...
+hash_search('samples/jump.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\jump.wav')
+hash_insert('samples/jump.wav', 0xb6cd308, 4)...
+hash_search('samples/spin.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\spin.wav')
+hash_insert('samples/spin.wav', 0xb6cd6a8, 4)...
+hash_search('samples/spindash1.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\spindash1.wav')
+hash_insert('samples/spindash1.wav', 0xb6cd778, 4)...
+hash_search('samples/spindash2.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\spindash2.wav')
+hash_insert('samples/spindash2.wav', 0xb6cca88, 4)...
+hash_search('samples/spring.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\spring.wav')
+hash_insert('samples/spring.wav', 0xb6cd7a8, 4)...
+hash_search('samples/switch.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\switch.wav')
+hash_insert('samples/switch.wav', 0xb6cd6b8, 4)...
+hash_search('samples/door1.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\door1.wav')
+hash_insert('samples/door1.wav', 0xb6cd6c8, 4)...
+hash_search('samples/door2.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\door2.wav')
+hash_insert('samples/door2.wav', 0xb6cd808, 4)...
+hash_search('samples/tfly1.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\tfly1.wav')
+hash_insert('samples/tfly1.wav', 0xb6cd5d8, 4)...
+hash_search('samples/deny.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\deny.wav')
+hash_insert('samples/deny.wav', 0xb6cd698, 4)...
+hash_search('samples/tfly2.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\tfly2.wav')
+hash_insert('samples/tfly2.wav', 0xb6cd658, 4)...
+hash_search('samples/touch2.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\touch2.wav')
+hash_insert('samples/touch2.wav', 0xb6ccac8, 4)...
+hash_search('samples/teleporter.wav') returned NULL
+sound_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\samples\teleporter.wav')
+hash_insert('samples/teleporter.wav', 0xb6ccbd8, 4)...
+scenestack_pop()
+level_release()
+level_unload()
+releasing brick list...
+releasing item list...
+releasing enemy list...
+unloading brickdata...
+unloading backgrounds...
+level_unload() ok
+level_release() ok
+scenestack_pop() ok
+Quest aborted!
+scenestack_pop()
+scenestack_pop() ok
+scenestack_push(0xb3c6038)
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\images\sourcecode.png)
+load_quest_list()
+load_quest('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\master.qst')
+Reading quest "e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\master.qst"...
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\master.png)
+ok!
+load_quest('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\tutorial.qst')
+Reading quest "e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\tutorial.qst"...
+image_load(e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\quests\tutorial.png)
+ok!
+2 quests found.
+music_load('e:\PROGRAMACAO\01c++\00Allegro\jogos\opensonic-win32bin0.1.1\musics\title.it')
+music_load() ok
+scenestack_push() ok
+scenestack_pop()
+release_quest_list()
+scenestack_pop() ok
+input_release()
+video_release()
+hash_release()
+audio_release()
+audio_release() ok
+logfile_release()

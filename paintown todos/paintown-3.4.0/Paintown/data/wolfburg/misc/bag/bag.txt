@@ -1,0 +1,4 @@
+(item
+ (name bag)
+ (sound sounds/get.wav)
+ (frame wolfburg/misc/bag/bag.png))

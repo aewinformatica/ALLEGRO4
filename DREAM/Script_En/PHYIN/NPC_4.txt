@@ -1,0 +1,1 @@
+talk(50,"Schoolmate:I should be a good student of the great scientists here. They are so great!");

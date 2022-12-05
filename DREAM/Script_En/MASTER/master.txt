@@ -1,0 +1,99 @@
+#与校长的对话
+
+midi_out();
+go_inout(0,1);
+
+set_game_status(1);
+init_NPC(14,10,2,8,0,1,"Script_En/blank.txt");
+NPC_set(0,16,10);
+NPC_turn(0,2);
+NPC_turn(1,0);
+set_game_status(0);
+
+go_inout(0,0);
+
+talk(3,"Emma:Headmaster,is this man who you are looking for?");
+talk(50,"Headmaster:Oh...Ah! Well done,Emma,how did you do this task so fast?");
+talk(50,"Emma&Alai:Ah??? (How can he believe this?)");
+talk(50,"Headmaster:(That's right,this kid... has an incredible power inside,is this the power of human?)");
+talk(50,"Emma:...Headmaster... In thuth...");
+talk(50,"Headmaster:Your task is done here,I want to talk with this man,alone.");
+talk(4,"Emma:Yes...");
+
+NPC_walk(2,1,2);
+NPC_walk(2,0,15);
+NPC_walk(1,3,1);
+NPC_walk(1,0,1);
+
+talk(50,"Headmaster:So,you are the man with the strongest imagination?");
+talk(0,"Alai:You made me here,you are the man to ask.");
+talk(50,"Headmaster:Hehehaha,seems I've got the right person! You are having some difficulty in your study,is it right?");
+talk(0,"Alai:That's none of your business!");
+talk(50,"Headmaster:Hehe ,I know, but what if I can make you get through?");
+talk(0,"Alai:How?");
+talk(50,"Headmaster:It's because of your imagination!");
+talk(50,"Headmaster:You are thinking of too much thing in your study, that makes you conflict with your courses.");
+talk(0,"Alai:So what?");
+talk(50,"Headmaster:Give your imagination to me. In the next semester, you will be the best in Tofel and GRE, and I'm sure you will enter the P&G corporation.");
+talk(0,"Alai:What can you get from this?");
+talk(50,"Headmaster:(What a strong psyche field,even a LV30 Psyche Hex can't tell his mind...) I... do this for free...");
+NPC_walk(0,3,4);
+delay(9);
+talk(0,"Alai:So, you send Emma to Human Space,and tell me of the scret of Time-Space Machine, and just for free?");
+
+NPC_turn(1,3);
+delay(18);
+
+talk(50,"Headmaster:What if I tell you a bigger secret?");
+talk(0,"Alai:Yes,there's another secret for me,just for free? Who would believe! Just tell me what you want!");
+talk(50,"Headmaster:(He is now in my control,it's OK to tell him)Has Emma mentioned the Lord Sadis?");
+NPC_turn(0,1);
+delay(9);
+talk(0,"Alai:What?");
+talk(50,"Headmaster:Sadis is dead.");
+talk(0,"Alai:Pardon?");
+talk(50,"Headmaster:Yes it's true. He was killed by the devil king Philis.");
+NPC_walk(0,2,1);
+NPC_walk(0,1,4);
+talk(0,"Alai:What happened?");
+talk(50,"Headmaster:When Sadis created the world,he divided it into three spaces,Human Space,Fairy Space,Devil Space.");
+talk(50,"Headmaster:And he fovored the three powers to the three spaces,those is Imagination,Light and Dark. ");
+talk(50,"Headmaster:Time went by, people of the three found ways to travel between spaces. And it's highest developed in the Devil Space.");
+talk(50,"Headmaster:Then the devil king Philis hexed himself into the 4-D Space where the Lord was in.");
+talk(50,"Headmaster:Philis killed Sadis, and got the whole world in control. He hexed the Human Space and the Fairy Space and killed many people.");
+talk(50,"Headmaster:And the only man who can fight Philis was Paratin of the Fairy. But Fairy didn't have the power to travel to the 4-D Space.");
+talk(50,"Headmaster:So you Human gathered all the power to activate a Super Time-Space Facility,and sent Paratin into the God's Space.");
+talk(50,"Headmaster:But the Human's tech is not very well developed, the Time-Space Facility exploded after that.");
+talk(50,"Headmaster:Which make the Human's technology went back to five thousand years before.");
+talk(0,"Alai:What about Paratin and The Sword?");
+talk(50,"Headmaster:After Paratin entered the 4-D Space, he killed Philis, and died of wound.");
+talk(0,"Alai:So what's the relationship with my imagination?");
+delay(18);
+talk(50,"Headmaster:Because I found the Devil is doing something again.");
+talk(0,"Alai:So what?");
+talk(50,"Headmaster:Someone is needed to stop them! I have this power, but not enough, if you give your imagination to me ,my power would be 10 times stronger!");
+talk(0,"Alai:What about me?");
+talk(50,"Headmaster:And you, will study hard, and get a high score. After you graduation,you will enter the P&G.");
+NPC_turn(0,3);
+delay(9);
+talk(0,"Alai:Enough,this is not I want!");
+talk(50,"Headmaster:You Human is weak,you need protection. Think about it!");
+talk(0,"Alai:I,I...");
+talk(50,"Headmaster:Till the next Solar Eclipse, it will be the time to show my Light Power, hope you would have made a choice then. HEHEHE HAHAHAHA!");
+talk(0,"Alai:(Why, something invades into my mind)Errr...");
+
+go_inout(0,1);
+
+set_game_status(1);
+call("Script_En/prison/load.txt");
+set_game_status(0);
+
+talk(2,"Alai:Errr...");
+talk(2,"Alai:Where... the heck am I...");
+delay(18);
+
+go_inout(0,0);
+
+play_midi("music/prison.mid");
+
+@END

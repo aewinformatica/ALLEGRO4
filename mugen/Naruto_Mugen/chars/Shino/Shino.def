@@ -1,0 +1,25 @@
+; Definition file for Shino
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Shino"
+displayname ="Little Shino"
+versiondate =04,14,2002
+mugenversion =04,14,2002
+author ="Coding: Jay (CommanderCool), Spriting: Marvin (some bug attacks by CommanderCool and Yamato)"
+pal.defaults =6,3,4,2
+
+; Files for the player
+[Files]
+cmd     =Shino.cmd
+cns     =Shino.cns
+st      =Shino.cns
+stcommon =common1.cns
+sprite  =Shino.sff
+anim    =Shino.air
+sound   =Shino.snd
+pal1=Shino.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=

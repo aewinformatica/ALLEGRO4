@@ -1,0 +1,4 @@
+CMD defalt Backup
+
+Este cmd é o que ja vem usado pelo char,se vc optar em usar os outros cmds opcionais,esse servira
+de backup caso vc queira retornar a AI novamente no char. 

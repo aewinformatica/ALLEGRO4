@@ -1,0 +1,28 @@
+; Definition file for sakon
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Sakon"        ;Name of character
+displayname = "Sakon" ;Name of character to display
+versiondate = 05,23,2006    ;Version date of character (MM-DD-YYYY)
+mugenversion = 04,14,2002   ;Version of M.U.G.E.N character works on
+author = "itachi-kun"         ;Character author name
+pal.defaults = 1      ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = sakon.cmd   ;Command set
+cns     = sakon.cns   ;Constants
+st      = sakon.cns   ;States
+stcommon = common1.cns ;Common states
+sprite  = sakon.sff   ;Sprite
+anim    = sakon.air   ;Animation
+sound   = sakon.snd   ;Sound
+pal1    = sakon.act  ;Palettes (can have up to 12)
+
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def

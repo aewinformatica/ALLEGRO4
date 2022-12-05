@@ -1,0 +1,14 @@
+#到物理楼外
+go_inout(0,1);
+
+set_game_status(1);
+
+call("script/phyout/load.txt");
+NPC_set(0,22,16);
+NPC_turn(0,0);
+
+set_game_status(0);
+
+go_inout(0,0);
+
+@END

@@ -1,0 +1,23 @@
+#Íþ¶û
+
+talk(7,"Will:Hi...You have waken up.");
+talk(0,"Alai:Where is Emma? How is her?");
+talk(7,"Will:Emma,she also asked about you when she woke up.");
+talk(0,"Alai:Is she okay?");
+talk(7,"Will:Relax, she's fine. Maybe she's praying for you on the seashore.");
+talk(0,"Alai:Where's the Headmaster? You should catch him, don't let him go. He's going to distroy the whole space-time.");
+talk(7,"Will:Your magic made the Headmaster and all his followers sleep. They have been suspects of us for a long time.");
+talk(7,"Will:We found them robbing the Black Magic Stone, a powerful magic power source.");
+talk(7,"Will:But we don't have any direct evidence to arrest them, so I sent my sister Emma here, and tell her to inform us if anything unsual happens.");
+talk(7,"Will:This action proved my dicision right. Finally we found the black sheep of the Fairy.");
+talk(0,"Alai:And... what about Mary?");
+talk(7,"Will:A week ago, we sent her back to the Devil's Space. She didn't know the existence of the Three Spaces.");
+talk(0,"Alai:What, a week ago? I...");
+talk(7,"Will:You've slept for half a month. Emma looked after you everyday. I've never seen her being so good to anyone other.");
+talk(7,"Will:But it is impossible for a man without any magic training to make such a powerful hex. Is it the power of human spirit?");
+talk(7,"Will:Oh, it is the day to declare the Headmaster guilty. I'm attending the jury. Are you coming?");
+talk(0,"Alai:Th...thanks, I'm going to see Emma.");
+talk(7,"Will:So, good luck.");
+
+NPC_walk(2,0,7);
+NPC_set(2,2,14);

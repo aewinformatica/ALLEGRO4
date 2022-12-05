@@ -1,0 +1,32 @@
+; Definition file for HKakashi
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Jump Hatake Kakashi"
+displayname ="Hatake Kakashi"
+versiondate =05,23,2006
+mugenversion =04,14,2002
+author ="Tyler"
+pal.defaults =1
+
+; Files for the player
+[Files]
+cmd     =Kakashi.cmd
+cns     =Kakashi.cns
+st      =Kakashi.cns
+stcommon =common1.cns
+sprite  =Kakashi.sff
+anim    =Kakashi.air
+sound   =Kakashi.snd
+pal1=Kakashi.act
+st1=AI.cns
+
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def
+[Arcade]
+intro.storyboard=
+ending.storyboard=

@@ -1,0 +1,22 @@
+; Definition file for kfm
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Chuunin Shikamaru"
+displayname = "Nara Shikamaru"
+versiondate = 11,22,2000  
+mugenversion = 11,22,2000 
+author = "jordz187"
+pal.defaults = 6,3,4,2    
+
+; Files for the player
+[Files]
+cmd     = cshikamaru.cmd   ;Command set
+cns     = cshikamaru.cns   ;Constants
+st      = cshikamaru.cns   ;States
+stcommon = common1.cns ;Common states
+sprite  = cshikamaru.sff   ;Sprite
+anim    = cshikamaru.air   ;Animation
+sound   = cshikamaru.snd  ;Sound
+pal1    = cshikamaru.act  ;Palettes (can have up to 12)

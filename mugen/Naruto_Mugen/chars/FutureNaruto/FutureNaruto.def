@@ -1,0 +1,30 @@
+; Definition file for Blank
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "FutureNaruto"        ;Name of character
+displayname = "Future Naruto" ;Name of character to display
+versiondate = 04,28,2007    ;Version date of character (MM-DD-YYYY)
+mugenversion = 04,14,2002   ;Version of M.U.G.E.N character works on
+author = "Princefluffy09"         ;Character author name
+pal.defaults = 1      ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = FutureNaruto.cmd   ;Command set
+cns     = FutureNaruto.cns   ;Constants
+st      = FutureNaruto.cns   ;States
+stcommon = common1.cns ;Common states
+sprite  = FutureNaruto.sff   ;Sprite
+anim    = FutureNaruto.air   ;Animation
+sound   = FutureNaruto.snd   ;Sound
+pal1    = FutureNaruto.act  ;Palettes (can have up to 12)
+st1     = FutureNarutobunshin.cns
+st2     = KyuubiTransformation.cns
+
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def

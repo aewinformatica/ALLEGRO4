@@ -1,0 +1,3 @@
+@ECHO OFF
+ECHO Compilando %1.c...
+make -o ../bin/%1.exe %1.c -Wall -lalleg

@@ -1,0 +1,49 @@
+#丢失了Palm的同学
+
+if(41,0,"STILL_NOT");
+if(41,1,"OK");
+
+@END
+end();
+
+########################################
+@STILL_NOT
+
+talk(50,"Boy:Where are you, my dear PALM?");
+
+goto("END");
+
+########################################
+@OK
+
+if(42,0,"GIVE");
+if(42,1,"NO_MORE");
+
+@CONT
+goto("END");
+
+##########################
+
+@GIVE
+
+talk(50,"Boy:Where are you, my dear PALM?");
+talk(0,"Alai:Hey,dude, are you looking for a Palm?");
+talk(50,"Boy:Yes, after I come back from classroom, I found it lost...");
+talk(0,"Alai:Oh...I found one in the classroom, would you please describe it?");
+talk(50,"Boy:◎＃￥％※×");
+talk(0,"Alai:Err, it is yours. Here you are. Take care of your things.");
+talk(50,"Boy:Ahh, thanks a lot. Here is a train ticket for Sichuan, I was going to Sichuan with my girl, but she went by herself. Now it's yours.");
+talk(0,"Alai:...What can I do with this...");
+
+kill_obj(7);
+add_obj(8,1);
+set(42,1);
+
+talk(50,"(Received train ticket)");
+
+goto("CONT");
+
+############################
+@NO_MORE
+talk(50,"Boy:How nice are you! Thanks...");
+goto("CONT");

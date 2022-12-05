@@ -1,0 +1,3 @@
+#南京大学星
+
+talk(50,"(The stele says: In memo of the asteroid named after Nanjing University.)");

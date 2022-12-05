@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>Open Sonic</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <style type="text/css" title="mystyle" media="all">
+    <!--
+    body {
+      background-color: #e8eae8;
+      color: #5d665b;
+      font-family: sans-serif;
+      font-size: medium;
+      line-height: 140%;
+      margin: -55px 15px 15px 15px;
+    }
+
+    p {
+      text-indent: 40px;
+    }
+
+    p.note {
+      font-size: x-small;
+      font-style: italic;
+      line-height: 105%;
+      margin-top: 20px;
+    }
+
+    h2 {
+      color: #d00;
+      width: 100%;
+      border-bottom: 1px solid #d00;
+      margin-top: 70px;
+    }
+
+    h3 {
+      color: #d00;
+      margin-bottom: -10px;
+    }
+
+    pre {
+      font-family: monospace;
+      overflow: scroll;
+      width: 80%;
+      height: 200px;
+      background-color: black;
+      color: white;
+      font-size: small;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    a {
+      color: #03f;
+      text-decoration: underline;
+    }
+
+    a.section {
+      color: #d00;
+      text-decoration: none;
+    }
+
+    ul {
+      margin-left: 10px;
+      list-style-position: inside;
+      list-style-type: square;
+    }
+
+    span.cmd {
+      color: #0a0;
+      font-style: italic;  
+    }
+
+    table {
+      margin: 10px auto 10px auto;
+      border: 1px solid #aaa;
+      border-collapse: collapse;
+      width: 70%;
+    }
+
+    table th {
+      font-weight: bold;
+      background-color: #ddd;
+      border-bottom: 1px solid #aaa;
+      padding: 2px 10px 0 10px;
+      text-align: left;
+    }
+
+    table td {
+      background-color: #eee;
+      padding: 0 10px 0 10px;
+    }
+
+    div.tip {
+      font-size: small;
+      border: 1px dashed #555;
+      margin: 10px;
+      padding: 2px;
+    }
+
+    div.tip em {
+      color: red;
+    }
+
+    #index {
+      position: absolute;
+      left: 20px;
+    }
+
+    #web {
+      position: absolute;
+      right: 20px;
+      padding: 5px;
+      border: 1px solid #cc0;
+      background-color: #ee8;
+      text-align: center;
+      margin-top: 50px;
+      font-size: small;
+    }
+
+    #menu {
+      margin-top: -20px;
+      padding-bottom: 180px;
+    }
+
+    #ulmenu {
+      color: #d00;
+    }
+    -->
+    </style>
+  </head>
+  <body>
+
+
+
+  <!-- introduction -->
+  <h2>Open Sonic</h2>
+
+  <p><strong>Open Sonic</strong> is a <strong>free</strong> <strong>open-source</strong> game based on the "Sonic the Hedgehog" universe. It introduces a different style of gameplay called <strong>cooperative play</strong>, in which it's possible to control 3 characters simultaneosly. Unlike most similar games, <strong>Open Sonic</strong> provides a greater level of interaction between the player and the levels. It's more than just a jump'n'run; the user must come up with some strategy in order to get through the levels.</p>
+  <p>Currently the game works on MS Windows and GNU/Linux.</p>
+
+  <div id="menu">
+    <div id="index">
+      <h3><a id="indlink" class="section">Index</a></h3>
+      <ul id="ulmenu">
+        <li><a href="#howto">How to play</a></li>
+        <li><a href="#coop">Cooperative play</a></li>
+        <li><a href="#advanced">Advanced features</a></li>
+        <li><a href="#license">License</a></li>
+        <li><a href="#compile">How to compile</a></li>
+        <li><a href="#credits">Credits</a></li>
+      </ul>
+    </div>
+
+    <div id="web">
+      Visit us on the web!<br />
+      <a href="http://opensnc.sourceforge.net">http://opensnc.sourceforge.net</a>
+    </div>
+  </div>
+
+  <p class="note">This game is not endorsed, produced or affiliated with Sega, or any of its subsidiaries. Sega did not make this. This is a non-profit unofficial fangame based on the "Sonic" universe and should be categorized under the same criteria as fanart or fanfiction. The creator of this game is not liable for any and all damages you incur while playing. Sonic, Tails, Knuckles, Eggman, and all related characters, objects and locations are property of their respective owners. All other copyrighted characters contained within belong to their own respective companies and organizations.</p>
+
+
+
+  <!-- how to play -->
+  <h2><a id="howto" class="section">How to play</a></h2>
+
+  <h3>How to execute the game</h3>
+  <p>To start Open Sonic, you can run the <em>opensonic</em> executable. You can also run the <em>opensonic_launcher</em> binary if you want to use special options like improve the graphics of the game or play at a specific level of your choice. Launcher is a program that complements the main game by providing additional features.</p>
+  <p>Under MS Windows, just double-click the file <span class="cmd">opensonic_launcher.exe</span> that's inside the folder you uncompressed the game.</p>
+  <p>Under GNU/Linux, open a terminal, go to the game folder and type <span class="cmd">./opensonic_launcher</span></p>
+
+  <h3>Menu options</h3>
+  <ul>
+    <li><strong>1P Game:</strong> starts the regular 1-player mode game;</li>
+    <li><strong>Custom quests:</strong> one can play on custom levels too! Basically a quest is a sequence of levels;</li>
+    <li><strong>Tutorial:</strong> starts the Tutorial, a quest where one can learn-by-doing how to play Open Sonic;</li>
+    <li><strong>Exit:</strong> quits the game.</li>
+  </ul>
+
+  <h3>Moving the characters</h3>
+  <p>Once you're playing at any level, use the keyboard to control the characters:</p>
+  <table>
+    <tr>
+      <th>Key</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Arrow keys</td>
+      <td>Move the character</td>
+    </tr>
+    <tr>
+      <td>ENTER</td>
+      <td>Pause the game</td>
+    </tr>
+    <tr>
+      <td>Left CTRL</td>
+      <td>Change the active team member<a href="#coop">*</a></td>
+    </tr>
+    <tr>
+      <td>ESC</td>
+      <td>Quit the game</td>
+    </tr>
+  </table>
+
+  <div class="tip"><strong>Tip:</strong> you can press anytime either the '=' or the PrintScreen key to take a snapshot of the game.</div>
+
+
+
+  <!-- cooperative play -->
+  <h2><a id="coop" class="section">Cooperative play</a></h2>
+
+  <p>Cooperative play is an exciting feature of Open Sonic which allows you to control 3 characters simultaneosly! Each character has unique advantages and disadvantages, so some team work is needed in order to get through the levels.</p>
+  <p>To learn more about cooperative play, please play the Tutorial.</p>
+
+
+
+  <!-- advanced features -->
+  <h2><a id="advanced" class="section">Advanced features</a></h2>
+
+  <h3>Command line options</h3>
+  <p>Open Sonic provides several features via command line. You can use the command line options instead of the launcher program if you want. If you are under MS Windows, run <span class="cmd">opensonic.exe --help</span> at the Command Prompt. If you're using GNU/Linux, open a terminal, go to the directory of the game and type <span class="cmd">./opensonic --help</span></p>
+
+  <h3>Level editor</h3>
+  <p>When you're playing at any level, press F12 to access the level editor. The level editor has three edit modes: brick mode, item mode and enemy mode. Basically a brick is a background object or a platform; an item is something like a ring, a life box or a checkpoint; and it's obvious what an enemy is. In the table below, an 'object' may be a brick, an item or an enemy, depending on the current edit mode.</p>
+  <table>
+    <tr>
+      <th>Key</th>
+      <th>Effect</th>
+    </tr>
+    <tr>
+      <td>Arrow keys</td>
+      <td>Move the camera</td>
+    </tr>
+    <tr>
+      <td>B / N</td>
+      <td>Select the previous/next object</td>
+    </tr>
+    <tr>
+      <td>Ctrl+B / Ctrl+N</td>
+      <td>Previous/next edit mode</td>
+    </tr>
+    <tr>
+      <td>F12</td>
+      <td>Quit the editor</td>
+    </tr>
+    <tr>
+      <td>Left mouse button</td>
+      <td>Put the selected object under the mouse cursor</td>
+    </tr>
+    <tr>
+      <td>Middle mouse button</td>
+      <td>Pick the object that's under the mouse cursor</td>
+    </tr>
+    <tr>
+      <td>Right mouse button</td>
+      <td>Delete the object that's under the mouse cursor</td>
+    </tr>
+    <tr>
+      <td>Ctrl + left mouse button</td>
+      <td>Change the spawn point of the team</td>
+    </tr>
+  </table>
+
+  <div class="tip"><strong>Tip #0:</strong> use the <em>left</em> control key.</div>
+  <div class="tip"><strong>Tip #1:</strong> you can press Ctrl+F12 to save the level with your modifications. This operation is irreversible! If you want to modify a level permanently, we urge you to <em>backup</em> the level/ folder! Under Linux, if you have no write privileges on the GAME_DIRECTORY/levels/ folder, the game will save it on $HOME/.opensonic/levels instead.</div>
+  <div class="tip"><strong>Tip #2:</strong> if you want to make your own levels, you <em>MUST</em> read the tutorials about the level editor at our <a href="#indlink">website</a>.</div>
+  <div class="tip"><strong>Tip #3:</strong> to pick up (or delete) an item, you must select the item mode. To pick up (or delete) a brick, you must select the brick mode. Same about the enemies. Use Ctrl+N or Ctrl+B to change the edit mode.</div>
+
+  <h3>Game resources</h3>
+  <p><strong>Important for GNU/Linux users!</strong> Since Open Sonic 0.1.1, you can store custom levels, quests, images, sounds and so on in GAME_DIRECTORY/ (default) and also in $HOME/.opensonic/ . GAME_DIRECTORY is the directory where you installed the game. In other words, if the game is located in some folder which you don't have write privileges, you can, for example, make your own levels with the level editor and save them in the $HOME/.opensonic/levels/ folder.</p>
+
+  <!-- license -->
+  <h2><a id="license" class="section">License</a></h2>
+  <p>The <strong>code</strong> of this game is licensed under the GPL version 2. Please read the file license.txt that comes with this software.</p>
+
+
+
+  <!-- how to compile -->
+  <h2><a id="compile" class="section">How to compile</a></h2>
+
+  <h3>Overview</h3>
+  <p>If you've downloaded the binary files of Open Sonic, then you don't need to compile anything: the game is ready to run! However, if you've downloaded the source-code of this game, then you must compile it manually.</p>
+  <p>To compile Open Sonic you must have a C-language compiler and the programming libraries that this game uses. You also need <a href="http://www.cmake.org/">CMake</a>, a cross-platform open-source build system.</p>
+  <p><strong>Note:</strong> for simplicity, let's call GAMEDIR the directory where you unpacked the game. GAMEDIR stores, among other things, this readme.html page and a file called CMakeLists.txt</p>
+
+  <h3>Obtaining the libraries</h3>
+  <p>Once your compiler is working well, you'll need to install the following free programming libraries:</p>
+  <ul>
+    <li><a href="http://alleg.sourceforge.net">Allegro</a> (version 4.2.2)</li>
+    <li><a href="http://dumb.sourceforge.net">DUMB</a></li>
+    <li><a href="http://alpng.sourceforge.net">AllegroPNG</a></li>
+  </ul>
+  <p>I won't get into details on how to install these libraries. Please check out their websites to know the detailed instructions.</p>
+  <p>After you installed <strong>correctly</strong> the libraries, you can finally compile the game. CMake will automate this process ;)</p>
+
+  <h3>Compiling on GNU/Linux - gcc</h3>
+  <p>Please open a terminal, go to GAMEDIR and follow the example below:</p>
+  <pre>
+alexandre@pcname:/alex/proj/opensonic/trunk$ cmake .
+Open Sonic version X.Y.Z
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /alex/proj/opensonic/trunk
+
+alexandre@pcname:/alex/proj/opensonic/trunk$ make
+Scanning dependencies of target opensonic
+[  3%] Building C object CMakeFiles/opensonic.dir/src/2xsai.o
+[  7%] Building C object CMakeFiles/opensonic.dir/src/actor.o
+[ 10%] Building C object CMakeFiles/opensonic.dir/src/audio.o
+[ 14%] Building C object CMakeFiles/opensonic.dir/src/boss.o
+[ 17%] Building C object CMakeFiles/opensonic.dir/src/brick.o
+[ 21%] Building C object CMakeFiles/opensonic.dir/src/endofdemo.o
+[ 25%] Building C object CMakeFiles/opensonic.dir/src/enemy.o
+[ 28%] Building C object CMakeFiles/opensonic.dir/src/font.o
+[ 32%] Building C object CMakeFiles/opensonic.dir/src/input.o
+[ 35%] Building C object CMakeFiles/opensonic.dir/src/intro.o
+[ 39%] Building C object CMakeFiles/opensonic.dir/src/item.o
+[ 42%] Building C object CMakeFiles/opensonic.dir/src/level.o
+[ 46%] Building C object CMakeFiles/opensonic.dir/src/main.o
+[ 50%] Building C object CMakeFiles/opensonic.dir/src/menu.o
+[ 53%] Building C object CMakeFiles/opensonic.dir/src/osspec.o
+[ 57%] Building C object CMakeFiles/opensonic.dir/src/player.o
+[ 60%] Building C object CMakeFiles/opensonic.dir/src/quest.o
+[ 64%] Building C object CMakeFiles/opensonic.dir/src/questover.o
+[ 67%] Building C object CMakeFiles/opensonic.dir/src/scene.o
+[ 71%] Building C object CMakeFiles/opensonic.dir/src/screenshot.o
+[ 75%] Building C object CMakeFiles/opensonic.dir/src/sprite.o
+[ 78%] Building C object CMakeFiles/opensonic.dir/src/util.o
+[ 82%] Building C object CMakeFiles/opensonic.dir/src/video.o
+[ 85%] Building C object CMakeFiles/opensonic.dir/src/iconlin.o
+Linking C executable opensonic
+[ 85%] Built target opensonic
+Scanning dependencies of target opensonic_launcher
+[ 89%] Building C object CMakeFiles/opensonic_launcher.dir/src/launcher.o
+[ 92%] Building C object CMakeFiles/opensonic_launcher.dir/src/lexgui.o
+[ 96%] Building C object CMakeFiles/opensonic_launcher.dir/src/osspec.o
+[100%] Building C object CMakeFiles/opensonic_launcher.dir/src/iconlin.o
+Linking C executable opensonic_launcher
+[100%] Built target opensonic_launcher
+
+alexandre@pcname:/alex/proj/opensonic/trunk$ sudo make install
+[sudo] password for alexandre: 
+[ 85%] Built target opensonic
+[100%] Built target opensonic_launcher
+Linking C executable CMakeFiles/CMakeRelink.dir/opensonic
+Install the project...
+-- Install configuration: "Release"
+Installing Open Sonic X.Y.Z... Make sure you have root privileges.
+-- Installing /usr/share/opensonic/opensonic
+-- Installing /usr/share/opensonic/opensonic_launcher
+-- Installing /usr/share/opensonic/license.txt
+-- Installing /usr/share/opensonic/readme.html
+-- Installing /usr/share/opensonic/config
+-- Installing /usr/share/opensonic/config/sprite.def
+-- Installing /usr/share/opensonic/gui
+-- Installing /usr/share/opensonic/gui/button1.tga
+-- Installing /usr/share/opensonic/gui/buttonhi.tga
+-- Installing /usr/share/opensonic/gui/buttonpress.tga
+-- Installing /usr/share/opensonic/gui/button_disabled.tga
+-- Installing /usr/share/opensonic/gui/checkbox.tga
+-- Installing /usr/share/opensonic/gui/dialog.tga
+-- Installing /usr/share/opensonic/gui/gui.dat
+-- Installing /usr/share/opensonic/gui/listbox.tga
+-- Installing /usr/share/opensonic/gui/logo.tga
+-- Installing /usr/share/opensonic/gui/radio.tga
+-- Installing /usr/share/opensonic/gui/scrollbar.tga
+-- Installing /usr/share/opensonic/gui/slider.tga
+-- Installing /usr/share/opensonic/gui/textbox.tga
+-- Installing /usr/share/opensonic/gui/vscroll.tga
+-- Installing /usr/share/opensonic/images
+-- Installing /usr/share/opensonic/images/animals.png
+-- Installing /usr/share/opensonic/images/baddies.png
+-- Installing /usr/share/opensonic/images/boss.png
+-- Installing /usr/share/opensonic/images/gui.png
+-- Installing /usr/share/opensonic/images/icon.png
+-- Installing /usr/share/opensonic/images/intro.png
+-- Installing /usr/share/opensonic/images/island.png
+-- Installing /usr/share/opensonic/images/island2.png
+-- Installing /usr/share/opensonic/images/island3.png
+-- Installing /usr/share/opensonic/images/items.png
+-- Installing /usr/share/opensonic/images/null.png
+-- Installing /usr/share/opensonic/images/ocean.png
+-- Installing /usr/share/opensonic/images/ocean2.png
+-- Installing /usr/share/opensonic/images/player.png
+-- Installing /usr/share/opensonic/images/prototype1.png
+-- Installing /usr/share/opensonic/images/prototype2.png
+-- Installing /usr/share/opensonic/images/sourcecode.png
+-- Installing /usr/share/opensonic/images/title.png
+-- Installing /usr/share/opensonic/levels
+-- Installing /usr/share/opensonic/levels/blue_ocean_1.lev
+-- Installing /usr/share/opensonic/levels/blue_ocean_1m.lev
+-- Installing /usr/share/opensonic/levels/blue_ocean_2.lev
+-- Installing /usr/share/opensonic/levels/blue_ocean_2m.lev
+-- Installing /usr/share/opensonic/levels/blue_ocean_3.lev
+-- Installing /usr/share/opensonic/levels/blue_ocean_3m.lev
+-- Installing /usr/share/opensonic/levels/exotic_1.lev
+-- Installing /usr/share/opensonic/levels/exotic_1m.lev
+-- Installing /usr/share/opensonic/levels/exotic_2.lev
+-- Installing /usr/share/opensonic/levels/exotic_2m.lev
+-- Installing /usr/share/opensonic/levels/exotic_3.lev
+-- Installing /usr/share/opensonic/levels/exotic_3m.lev
+-- Installing /usr/share/opensonic/levels/prototype.lev
+-- Installing /usr/share/opensonic/levels/testzone.lev
+-- Installing /usr/share/opensonic/levels/tutorial_1.lev
+-- Installing /usr/share/opensonic/levels/tutorial_2.lev
+-- Installing /usr/share/opensonic/licenses
+-- Installing /usr/share/opensonic/licenses/2xsai.txt
+-- Installing /usr/share/opensonic/licenses/Allegro.txt
+-- Installing /usr/share/opensonic/licenses/AllegroPNG.txt
+-- Installing /usr/share/opensonic/licenses/DUMB.txt
+-- Installing /usr/share/opensonic/licenses/lexgui.txt
+-- Installing /usr/share/opensonic/musics
+-- Installing /usr/share/opensonic/musics/boss.it
+-- Installing /usr/share/opensonic/musics/credits.txt
+-- Installing /usr/share/opensonic/musics/endofquest.it
+-- Installing /usr/share/opensonic/musics/exotic.it
+-- Installing /usr/share/opensonic/musics/invencible.it
+-- Installing /usr/share/opensonic/musics/ocean.it
+-- Installing /usr/share/opensonic/musics/speed.it
+-- Installing /usr/share/opensonic/musics/title.it
+-- Installing /usr/share/opensonic/musics/tutorial.it
+-- Installing /usr/share/opensonic/quests
+-- Installing /usr/share/opensonic/quests/master.png
+-- Installing /usr/share/opensonic/quests/master.qst
+-- Installing /usr/share/opensonic/quests/tutorial.png
+-- Installing /usr/share/opensonic/quests/tutorial.qst
+-- Installing /usr/share/opensonic/samples
+-- Installing /usr/share/opensonic/samples/jump.wav
+-- Installing /usr/share/opensonic/samples/1up.wav
+-- Installing /usr/share/opensonic/samples/bigring.wav
+-- Installing /usr/share/opensonic/samples/bigshot.wav
+-- Installing /usr/share/opensonic/samples/bosshit.wav
+-- Installing /usr/share/opensonic/samples/brake.wav
+-- Installing /usr/share/opensonic/samples/break.wav
+-- Installing /usr/share/opensonic/samples/bumper.wav
+-- Installing /usr/share/opensonic/samples/cash.wav
+-- Installing /usr/share/opensonic/samples/checkpoint.wav
+-- Installing /usr/share/opensonic/samples/choose.wav
+-- Installing /usr/share/opensonic/samples/credits.txt
+-- Installing /usr/share/opensonic/samples/death.wav
+-- Installing /usr/share/opensonic/samples/deny.wav
+-- Installing /usr/share/opensonic/samples/destroypop.wav
+-- Installing /usr/share/opensonic/samples/door1.wav
+-- Installing /usr/share/opensonic/samples/door2.wav
+-- Installing /usr/share/opensonic/samples/endsign.wav
+-- Installing /usr/share/opensonic/samples/fire.wav
+-- Installing /usr/share/opensonic/samples/fire2.wav
+-- Installing /usr/share/opensonic/samples/floorfall.wav
+-- Installing /usr/share/opensonic/samples/glasses.wav
+-- Installing /usr/share/opensonic/samples/goal.wav
+-- Installing /usr/share/opensonic/samples/puff.wav
+-- Installing /usr/share/opensonic/samples/return.wav
+-- Installing /usr/share/opensonic/samples/ring.wav
+-- Installing /usr/share/opensonic/samples/ringcount.wav
+-- Installing /usr/share/opensonic/samples/ringless.wav
+-- Installing /usr/share/opensonic/samples/scratch.wav
+-- Installing /usr/share/opensonic/samples/select.wav
+-- Installing /usr/share/opensonic/samples/shield.wav
+-- Installing /usr/share/opensonic/samples/shot.wav
+-- Installing /usr/share/opensonic/samples/spikes.wav
+-- Installing /usr/share/opensonic/samples/spin.wav
+-- Installing /usr/share/opensonic/samples/spindash1.wav
+-- Installing /usr/share/opensonic/samples/spindash2.wav
+-- Installing /usr/share/opensonic/samples/spring.wav
+-- Installing /usr/share/opensonic/samples/switch.wav
+-- Installing /usr/share/opensonic/samples/teleporter.wav
+-- Installing /usr/share/opensonic/samples/tfly1.wav
+-- Installing /usr/share/opensonic/samples/tfly2.wav
+-- Installing /usr/share/opensonic/samples/touch.wav
+-- Installing /usr/share/opensonic/samples/touch2.wav
+-- Installing /usr/share/opensonic/screenshots
+-- Installing /usr/share/opensonic/screenshots/screenshots.txt
+-- Installing /usr/share/opensonic/themes
+-- Installing /usr/share/opensonic/themes/island.bg
+-- Installing /usr/share/opensonic/themes/island.brk
+-- Installing /usr/share/opensonic/themes/island2.bg
+-- Installing /usr/share/opensonic/themes/island2.brk
+-- Installing /usr/share/opensonic/themes/island3.bg
+-- Installing /usr/share/opensonic/themes/island3.brk
+-- Installing /usr/share/opensonic/themes/ocean.bg
+-- Installing /usr/share/opensonic/themes/ocean.brk
+-- Installing /usr/share/opensonic/themes/ocean2.bg
+-- Installing /usr/share/opensonic/themes/ocean2.brk
+-- Installing /usr/share/opensonic/themes/ocean2b.bg
+-- Installing /usr/share/opensonic/themes/oceanb.bg
+-- Installing /usr/share/opensonic/themes/prototype.bg
+-- Installing /usr/share/opensonic/themes/prototype.brk
+Creating symbolic links...
+Done! Type opensonic to start the game. :)
+
+alexandre@pcname:/alex/proj/opensonic/trunk$ 
+  </pre>
+  <p>If everything worked well, the executables <em>opensonic</em> and <em>opensonic_launcher</em> should be in the GAMEDIR folder. If no Makefile is found, please run the <span class="cmd">cmake .</span> (note that little dot '.') command twice before <span class="cmd">make</span></p>
+  <div class="tip"><strong>Note #0:</strong> the <span class="cmd">make install</span> command is optional. You must have root privileges to execute it.</div>
+  <div class="tip"><strong>Note #1:</strong> if you find errors about the &quot;allegro-config&quot; script, it's recommended that you compile Allegro from the source code yourself.</div>
+
+  <h3>Compiling on MS Windows - MinGW</h3>
+  <p>If you use <a href="http://www.mingw.org/">MingW</a>, make sure both <em>lib\</em> and <em>bin\</em> folders are listed on your PATH. If MinGW is installed on C:\MinGW\, you can use the command <span class="cmd">set PATH=%PATH%;C:\MinGW\bin;C:\MinGW\lib</span> (on the Command Prompt) to achieve that goal.</p>
+  <p>On the same Command Prompt, please go to GAMEDIR and follow the example below:</p>
+  <pre>
+D:\proj\opensonic&gt;cmake -G "MinGW Makefiles" .
+-- The C compiler identification is GNU
+-- Check for working C compiler: C:/MinGW/bin/gcc.exe
+-- Check for working C compiler: C:/MinGW/bin/gcc.exe -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+Open Sonic version X.Y.Z
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/proj/opensonic
+
+D:\proj\opensonic&gt;mingw32-make
+Scanning dependencies of target opensonic
+[  4%] Building C object CMakeFiles/opensonic.dir/src/2xsai.obj
+[  8%] Building C object CMakeFiles/opensonic.dir/src/actor.obj
+[ 12%] Building C object CMakeFiles/opensonic.dir/src/audio.obj
+[ 16%] Building C object CMakeFiles/opensonic.dir/src/boss.obj
+[ 20%] Building C object CMakeFiles/opensonic.dir/src/brick.obj
+[ 25%] Building C object CMakeFiles/opensonic.dir/src/endofdemo.obj
+[ 29%] Building C object CMakeFiles/opensonic.dir/src/enemy.obj
+[ 33%] Building C object CMakeFiles/opensonic.dir/src/font.obj
+[ 37%] Building C object CMakeFiles/opensonic.dir/src/input.obj
+[ 41%] Building C object CMakeFiles/opensonic.dir/src/intro.obj
+[ 45%] Building C object CMakeFiles/opensonic.dir/src/item.obj
+[ 50%] Building C object CMakeFiles/opensonic.dir/src/level.obj
+[ 54%] Building C object CMakeFiles/opensonic.dir/src/main.obj
+[ 58%] Building C object CMakeFiles/opensonic.dir/src/menu.obj
+[ 62%] Building C object CMakeFiles/opensonic.dir/src/player.obj
+[ 66%] Building C object CMakeFiles/opensonic.dir/src/quest.obj
+[ 70%] Building C object CMakeFiles/opensonic.dir/src/questover.obj
+[ 75%] Building C object CMakeFiles/opensonic.dir/src/scene.obj
+[ 79%] Building C object CMakeFiles/opensonic.dir/src/screenshot.obj
+[ 83%] Building C object CMakeFiles/opensonic.dir/src/sprite.obj
+[ 87%] Building C object CMakeFiles/opensonic.dir/src/util.obj
+[ 91%] Building C object CMakeFiles/opensonic.dir/src/video.obj
+Linking C executable opensonic.exe
+[ 91%] Built target opensonic
+Scanning dependencies of target opensonic_launcher
+[ 95%] Building C object CMakeFiles/opensonic_launcher.dir/src/launcher.obj
+[100%] Building C object CMakeFiles/opensonic_launcher.dir/src/lexgui.obj
+Linking C executable opensonic_launcher.exe
+[100%] Built target opensonic_launcher
+
+D:\proj\opensonic&gt;
+  </pre>
+  <p>If everything worked well, the executables <em>opensonic.exe</em> and <em>opensonic_launcher.exe</em> should be in the GAMEDIR folder.</p>
+
+  <h3>Compiling on MS Windows - Microsoft Visual C++</h3>
+  <p>In this example I'm using Microsoft Visual C++ 2008 Express. A similar approach should work on different versions of MSVC. On my computer, this software is installed at C:\Program Files\Microsoft Visual Studio 9.0\VC\. Make sure the <em>lib\</em> folder is listed on your PATH. If you're not sure, on a Command Prompt, run <span class="cmd">set PATH=%PATH%;C:\Program Files\Microsoft Visual Studio 9.0\VC\lib</span></p>
+  <p>On the same Command Prompt, please go to GAMEDIR and follow the example below:</p>
+  <pre>
+D:\proj\opensonic&gt;cmake -G "Visual Studio 9 2008" .
+-- Check for working C compiler: cl
+-- Check for working C compiler: cl -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+Open Sonic version X.Y.Z
+-- Configuring done
+-- Generating done
+-- Build files have been written to: D:/proj/opensonic
+
+D:\proj\opensonic&gt;
+  </pre>
+  <p>Now a Microsoft Visual Studio Solution file should be located on GAMEDIR. Open it, select <em>Release</em> as the Active Configuration and compile. After that you should see both <em>opensonic.exe</em> and <em>opensonic_launcher.exe</em> inside the GAMEDIR\Release folder. Copy them to GAMEDIR.</p>
+  <p>On different versions of MSVC, you must change the "Visual Studio 9 2008" argument when you run cmake. Type <span class="cmd">cmake --help</span> on a Command Prompt for more information.</p>
+
+  <h3>Other compilers/other IDEs</h3>
+  <p>If you want to compile this game using other software, please run <span class="cmd">cmake --help</span> on a terminal for more information. Using CMake, it's possible to generate the data needed for other compilers. CMake can also generate project files for other popular IDEs like Code::Blocks, KDevelop, etc.</p>
+
+
+
+  <!-- credits -->
+  <h2><a id="credits" class="section">Credits</a></h2>
+
+  <p>Open Sonic is written from the ground up in C language and uses the <a href="http://alleg.sourceforge.net/">Allegro game programming library</a> for graphics, sounds, player input and timers. It also uses the <a href="http://dumb.sourceforge.net/">DUMB Library</a> for music playback, <a href="http://alpng.sourceforge.net/">AllegroPNG</a> for working with png images, <a href="http://bob.allegronetwork.com/projects.html">lib2xSaI</a> for improved graphic rendering and <a href="http://www.steinke.net/allegro/">lexgui</a> (by Lennart Steinke) for the launcher. This game was originally written by <a href="http://www.linux.ime.usp.br/~alemart">Alexandre Martins</a>, a 20-year-old computer science student at University of Sao Paulo (USP), Brazil. Game development is a such a beautiful and fascinating area, and one can learn a lot while making a game! That's why I love it so much.</p>
+  <p>Open Sonic is still in development. Currently it uses mostly "ripped" graphics, but we want to replace those by original graphics. We also want to use original musics/sound effects. If you feel you can help in anything, please <a href="#indlink">contact us</a>.</p>
+  <p>Thank you very much for reading. :)</p>
+
+
+
+  </body>
+</html>
+

@@ -1,0 +1,5 @@
+#7,8╤╟╣дце
+
+talk(0,"Alai:I don't live here.");
+
+NPC_walk(0,0,1);

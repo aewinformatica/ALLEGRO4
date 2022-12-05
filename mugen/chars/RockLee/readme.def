@@ -1,0 +1,30 @@
+[Fighting System]
+K, the way you fight with this character is like this (mugen controls):
+a - light punch, b - medium punch, c - strong punch
+x - light kick, y - medium kick, z - strong kick
+
+The way you combo is you start with either a light punch or light kick. Then, you either press b or y to combo into either a medium punch or  medium kick.
+You can then combo into a strong punch or strong kick with c or z. This will make it so your not just mashing one button the whole time. Kicks are stronger than 
+punches but are slower and punches are weaker than kicks but are faster. Also, all the attacks have crouch and air moves.
+
+[Special Moves]
+Down, a - Teleport behind the enemy
+Down, b - Teleport above the enemy
+Down, c - Konoha Senpu (requires 100 power)
+Down, Foward, c - Taijutsu Combo (requires 1500 power)
+*Down, Back, c - Remove Weights (requires 2000 power)
+Down, Foward, z - Omote Renge (requires 1000 power)
+**Down, Back, z - Ura Renge (requires 3000 power)
+
+* - It raises the speed of everything including attacks except Ura Renge cause it screws up the timing if it does. (Lasts the whole round unlike the old one)
+** - Unblockable because you would be wasting 3000 power everytime if it wasn't.
+
+[Things i might add:]
+- Summon Gai to do dynamic entry.
+- AI (i got really irritated and i just didn't do it)
+
+[Credits to:]
+- Bonzai for ripping sprites.
+- Cyanide for his tutorial.
+- hyuga cause I used his sound file from his Rock Lee.
+- UchihaCody (That's me XD) for... coding it O.O

@@ -1,0 +1,5 @@
+#以后所有剧情中天文台都没人
+
+talk(0,"Alai:No one is in the astronomical observatory in day time.");
+
+NPC_walk(0,0,1);

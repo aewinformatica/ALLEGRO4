@@ -1,0 +1,98 @@
+; Definition of KFM's stage
+; *** denotes values you should change/check for each stage.
+; The term "background" is used to mean both backgrounds and foregrounds.
+
+;--------------------------------------------------------
+[Info]
+name = "C2 Sasuke`s Stage"
+
+;--------------------------------------------------------
+[Camera]
+startx = 0
+starty = 0
+
+boundleft = -100
+boundright = 150
+boundhigh = -25
+boundlow = 
+verticalfollow =
+floortension = .2
+tension = 60
+
+;--------------------------------------------------------
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound = 1000
+topbound  =  0
+botbound  =  0
+
+;--------------------------------------------------------
+[Scaling]
+topz  = 0
+botz  = 50
+topscale = 1
+botscale = 1.2
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 15
+screenright = 15
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 200
+autoturn = 1
+resetBG = 1
+
+;--------------------------------------------------------
+[Shadow]
+intensity = 50
+color = 0,0,0
+yscale = 0.4
+fade.range = -400,100
+
+;--------------------------------------------------------
+[Reflection]
+intensity= 64
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/rocks.mid
+bgvolume =
+
+;--------------------------------------------------------
+[BGDef]
+spr = Ocean.sff
+debugbg = 0
+
+;--------------------------------------------------------
+[BG Parallax Floor]
+type = normal
+spriteno = 0,0
+start = 0, 185
+delta = .25, .25
+xscale = 1, 1.75
+yscalestart = 100
+yscaledelta = 1.2
+mask = 1
+
+
+[BG Parallax Sky]
+type  = normal
+spriteno = 0,1
+start = 0, 181
+delta = .75,.78
+xscale = 1, 1.75
+yscalestart = 100
+yscaledelta = 1.2
+mask        = 1

@@ -1,0 +1,127 @@
+#回答吕晓一地问题
+
+
+if(33,0,"ASK");
+if(33,1,"MA");
+if(33,2,"KUA");
+
+@END
+end();
+
+###################################
+@ASK
+
+midi_out();
+talk(0,"Alai:Ahhh, you are still practising singing here,Mr Lu.");
+talk(50,"Music Teacher:Hehe, study has no end. Come here, let me ask you some questions.");
+talk(50,"Music Teacher:Now, I gonna play a section of music, you listen, it's about the first question...");
+play_midi("music/empire.mid");
+delay(500);
+midi_out();
+
+delay(2);
+map_choice(19,"Which game does this music come from?","1.Age of Empires","2.Empire Earth","3.Rise of Nations");
+if(19,1,"ADD_1");
+talk(50,"Music Teacher:Wrong! The right answer is Age of Empires.");
+@CONT1
+
+delay(2);
+map_choice(19,"Which company made this game?","1.Square Enix","2.Blizzard","3.MicroSoft");
+if(19,3,"ADD_2");
+talk(50,"Music Teacher:Wrong! The right answer is MicroSoft.");
+@CONT2
+
+delay(2);
+map_choice(19,"Which game is made by Blizzard?","1.Microsoft Flight Simulator","2.Diablo","3.Red Alert");
+if(19,2,"ADD_3");
+talk(50,"Music Teacher:Wrong! The right answer is Diablo.");
+@CONT3
+
+delay(2);
+map_choice(19,"Which is MicroSoft's game platform?","1.X-Box","2.PS2","3.X-Plane");
+if(19,1,"ADD_4");
+talk(50,"Music Teacher:Wrong! The right answer is X-Box.");
+@CONT4
+
+delay(2);
+map_choice(19,"Which film is adapted from game?","1.Cabin Fever","2.House Of The Dead","3.Dead Alive");
+if(19,2,"ADD_5");
+talk(50,"Music Teacher:Wrong! The right answer is House Of The Dead.");
+@CONT5
+
+delay(2);
+map_choice(19,"Which is boys' favorite?","1.Red Alert","2.Star Craft","3.War Craft");
+if(19,3,"ADD_6");
+talk(50,"Music Teacher:Wrong! The right answer is WarCraft.");
+@CONT6
+
+if(20,5,"GOOD");
+if(20,6,"GOOD");
+
+talk(50,"Music Teacher:Alas, seems you know little about games, but it's the trend of the time.");
+set(33,1);
+
+goto("END");
+#############
+@ADD_1
+add(20,1,1);
+talk(50,"Music Teacher:Right!");
+goto("CONT1");
+#############
+@ADD_2
+add(20,1,1);
+talk(50,"Music Teacher:Right!");
+goto("CONT2");
+#############
+@ADD_3
+add(20,1,1);
+talk(50,"Music Teacher:Right!");
+goto("CONT3");
+#############
+@ADD_4
+add(20,1,1);
+talk(50,"Music Teacher:Right!");
+goto("CONT4");
+#############
+@ADD_5
+add(20,1,1);
+talk(50,"Music Teacher:Right!");
+goto("CONT5");
+#############
+@ADD_6
+add(20,1,1);
+talk(50,"Music Teacher:Right!");
+goto("CONT6");
+
+########################################
+@GOOD
+
+talk(50,"Music Teacher:Your answers are quite good.");
+talk(50,"Music Teacher:Here's a CD player and the CD of Beethoven No. 5. You deserve it.");
+
+add_obj(2,1);
+set(33,2);
+
+if(31,1,"MIDI_1");
+if(31,2,"MIDI_2");
+if(31,3,"MIDI_2");
+
+@MIDI_1
+play_midi("music/gogo.mid");
+goto("END");
+
+@MIDI_2
+play_midi("music/emma.mid");
+goto("END");
+
+#####################################################
+
+##########################
+@MA
+talk(50,"Music Teacher:You need to work hard, young man.");
+goto("END");
+
+##########################
+@KUA
+talk(50,"Music Teacher:Nice young man, you will have a brilliant future.");
+goto("END");

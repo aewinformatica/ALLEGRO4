@@ -1,0 +1,3485 @@
+; KFM's constants and state file.
+; There are comments scattered through this file, so you may like to
+; take a look if would like to learn more about the cns.
+
+; これはKFMの定数と状態のファイルです。
+; このファイルの中には注釈が散らされているので、CNSを習いたいお方は
+; 読んでみたらいいです。
+
+[Data]
+  ;Amount of life to start with
+  ;体力ゲージの初期値
+life = 1000
+  ;attack power (more is stronger)
+  ;攻撃ダメージ
+attack = 100
+  ;defensive power (more is stronger)
+  ;体力パワー
+defence = 100
+  ;Percentage to increase defense everytime player is knocked down
+fall.defence_up = 50
+  ;Time which player lies down for, before getting up
+liedown.time = 60
+  ;Number of points for juggling
+airjuggle = 15
+  ;Default hit spark number for HitDefs
+sparkno = 2
+  ;Default guard spark number
+guard.sparkno = 40
+  ;1 to enable echo on KO
+KO.echo = 0
+  ;Volume offset (negative for softer)
+volume = 0
+  ;Variables with this index and above will not have their values
+  ;reset to 0 between rounds or matches. There are 60 int variables,
+  ;indexed from 0 to 59, and 40 float variables, indexed from 0 to 39.
+  ;If omitted, then it defaults to 60 and 40 for integer and float
+  ;variables repectively, meaning that none are persistent, i.e. all
+  ;are reset. If you want your variables to persist between matches,
+  ;you need to override state 5900 from common1.cns.
+IntPersistIndex = 60
+FloatPersistIndex = 40
+
+[Size]
+xscale = 1           ;Horizontal scaling factor.
+yscale = 1           ;Vertical scaling factor.
+ground.back = 15     ;Player width (back, ground)
+ground.front = 16    ;Player width (front, ground)
+air.back = 12        ;Player width (back, air)
+air.front = 12       ;Player width (front, air)
+height = 60	     ;Height of player (for opponent to jump over)
+attack.dist = 160    ;Default attack distance
+proj.attack.dist = 90 ;Default attack distance for projectiles
+proj.doscale = 0     ;Set to 1 to scale projectiles too   
+head.pos = -5, -90   ;Approximate position of head
+mid.pos = -5, -60    ;Approximate position of midsection
+shadowoffset = 0     ;Number of pixels to vertically offset the shadow
+draw.offset = 0,0    ;Player drawing offset in pixels (x, y)
+
+[Velocity]
+walk.fwd  = 2.4
+walk.back = -2.2
+run.fwd  = 5.6, 0    ;Run forward (x, y)
+run.back = -4.5,-3.8 ;Hop backward (x, y)
+jump.neu = 0,-8.4    ;Neutral jumping velocity (x, y)
+jump.back = -2.55    ;Jump back Speed (x, y)
+jump.fwd = 2.8       ;Jump forward Speed (x, y)
+runjump.back = -2.55,-8.1 ;Running jump speeds (opt)
+runjump.fwd = 4,-6.1      ;.
+airjump.neu = 0,-6.1      ;.
+airjump.back = -2.55      ;Air jump speeds (opt)
+airjump.fwd = 2.5         ;.
+
+[Movement]
+airjump.num = 1      ;Number of air jumps allowed (opt)
+airjump.height = 35  ;Minimum distance from ground before you can air jump (opt)
+yaccel = .44         ;Vertical acceleration
+stand.friction = .85  ;Friction coefficient when standing
+crouch.friction = .82 ;Friction coefficient when crouching
+
+;---------------------------------------------------------------------------
+; Format:
+; [Statedef STATENO]
+; type = ?      S/C/A/L  stand/crouch/air/liedown
+; movetype = ?  I/A/H    idle/attack/gethit
+; physics = ?   S/C/A/N  stand/crouch/air/none
+; juggle = ?             air juggle points move requires
+;
+; [State STATENO, ?]     ? - any number you choose
+; type = ?
+; ...
+
+;---------------------------------------------------------------------------
+; Lose by Time Over
+; CNS difficulty: basic
+; CNS レベル: 基本
+[Statedef 170]
+type = S
+ctrl = 0
+anim = 5300
+velset = 0,0
+
+[State 170, 1]
+type = NotHitBy
+trigger1 = 1
+value = 5300
+time = 1
+;---------------------------------------------------------------------------
+; Win state decider
+; CNS difficulty: basic
+; CNS レベル: 基本
+[Statedef 180]
+type = S
+
+[State 180, 1]
+type = ChangeState
+trigger1 = Time = 0
+value = 181
+
+;---------------------------------------------------------------------------
+; Win pose 1 - Bow
+; CNS difficulty: basic
+; CNS レベル: 基本
+[Statedef 181]
+type = S
+ctrl = 0
+anim = 181
+velset = 0,0
+
+[State 181, 1]
+type = NotHitBy
+trigger1 = 1
+value = SCA
+time = 1
+
+[State 181, 3]
+type = PlaySnd
+trigger1 = animtime = 1
+value = 9000 ,0
+;---------------------------------------------------------------------------
+; Introduction
+; CNS difficulty: basic
+; CNS レベル: 基本
+[Statedef 191]
+type = S
+ctrl = 0
+anim = 190
+velset = 0,0
+
+[State 191, 0]
+type = PlaySnd
+value = 140,4
+trigger1 = time = 0
+
+[State 191, 1] ;Freeze animation until PreIntro is over
+type = ChangeAnim
+trigger1 = RoundState = 0
+value = 190
+
+[State 191, Explod]
+type = Explod
+trigger1 =  animelem = 2
+anim = 903
+ID = 903
+pos = -5,5
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = 19
+supermove
+pausemove
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = 0
+;persistent =
+
+[State 191, 2] ;Assert this until you want "round 1, fight" to begin
+type = AssertSpecial
+trigger1 = 1
+flag = Intro
+
+[State 191, 3] ;Change to stand state when done
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+
+;------------------------------------------------------------------------
+;Taunt
+[Statedef 195]
+type = S
+movetype = I
+physics = S
+velset = 0,0
+anim = 195
+poweradd = 10
+ctrl = 0
+sprpriority = 10
+
+[State 195, 0]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; C-Shikamaru Combo Punch
+; CNS difficulty: easy
+[Statedef 200]
+anim = 200
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+poweradd = 10
+juggle = 7
+
+[State 200, 4]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 10
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 200, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 25
+guardflag = MA
+pausetime = 12,12
+hitsound = S1,4
+guardsound = 6,0
+sparkno = S10000
+sparkxy = -5, -25
+animtype = Medium
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 200, 1]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 5
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 7, 2
+
+[State 200, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 1, 1
+
+[State 200, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+; C-Shikamaru Combo Punch 2
+; CNS difficulty: easy
+[Statedef 205]
+anim = 205
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+poweradd = 30
+juggle = 7
+
+[State 205, 4]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 10
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 205, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 25
+guardflag = MA
+pausetime = 12,24
+hitsound = S1,4
+guardsound = 6,0
+sparkno = S10000
+sparkxy = -5, -25
+animtype = Medium
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 205, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 1, 1
+
+[State 215, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 7, 1
+
+[State 205, 1]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 7
+
+[State 205, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; C-Shikamaru Combo Punch 3
+; CNS difficulty: easy
+[Statedef 210]
+anim = 210
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+poweradd = 30
+juggle = 7
+
+[State 210,***]
+type = AssertSpecial
+trigger1 =1
+flag = noautoturn
+
+[State 210, 4]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 14
+palbright = 6,6,6
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 210, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 35
+guardflag = MA
+pausetime = 12,12
+hitsound = S1,4
+guardsound = 6,0
+sparkno = S10000
+sparkxy = -5, -25
+animtype = Medium
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 20
+ground.velocity = -6,-2
+air.velocity = -2.2,-8
+fall = 1
+fall.recover = 0
+
+[State 210, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 1, 1
+
+[State 210, 1]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 9
+
+[State 210, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 7, 0
+
+[State 210, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; C-Shikamaru Combo Punch 4
+; CNS difficulty: easy
+[Statedef 215]
+anim = 215
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+poweradd = 30
+juggle = 7
+
+[State 215, 4]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 10
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 215, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 45
+guardflag = MA
+pausetime = 12,12
+hitsound = S1,4
+guardsound = 6,0
+sparkno = S10000
+sparkxy = -5, -25
+animtype = Medium
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 0
+ground.velocity = -7,-5
+air.velocity = 0,-3
+fall = 1
+
+[State 215, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 1, 1
+
+[State 215, 1]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 7
+
+[State 215, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 7, 2
+
+[State 215, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+; C-Shikamaru Kick Combo
+; CNS difficulty: easy
+[Statedef 453]
+anim = 453
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+poweradd = 10
+juggle = 7
+
+[State 453, 4]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 10
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 453, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 25
+guardflag = MA
+pausetime = 12,12
+hitsound = S1,4
+guardsound = 6,0
+sparkno = S10000
+sparkxy = -5, -25
+animtype = Medium
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 453, 1]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 5
+
+[State 453, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 7, 3
+
+[State 453, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 1, 1
+
+[State 453, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+; C-Shikamaru Kick Combo 2
+; CNS difficulty: easy
+[Statedef 454]
+anim = 210
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+poweradd = 30
+juggle = 7
+
+[State 454, 4]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 10
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 454, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 25
+guardflag = MA
+pausetime = 12,24
+hitsound = S1,4
+guardsound = 6,0
+sparkno = S10000
+sparkxy = -5, -25
+animtype = Medium
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 454, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 1, 1
+
+[State 454, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 7, 2
+
+[State 454, 1]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 7
+
+[State 454, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; Shikamaru Kick Combo 3
+; CNS difficulty: easy.
+[Statedef 455]
+anim = 406
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+poweradd = 35
+juggle = 15
+
+[State 455, 4]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 406, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = A, NA
+damage = 60
+guardflag = HA
+priority = 3
+pausetime = 8,8
+sparkno = S10000
+sparkxy = -5,-25
+hitsound = S1, 2
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 6
+ground.hittime  = 15
+ground.velocity = -1,-8
+air.velocity = -1,-7
+fall = 1
+
+[State 455, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 1, 1
+
+[State 455, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 7, 1
+
+[State 455, 1]
+type = VelSet
+trigger1 = Animelem = 1
+x = 8
+
+[State 455, 2]
+type = ChangeState
+trigger1 = time = 33
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; C-Shikamaru Kunai Combo 1
+; CNS difficulty: easy
+[Statedef 444]
+anim = 444
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+poweradd = 30
+juggle = 7
+
+[State 444,***]
+type = AssertSpecial
+trigger1 =1
+flag = noautoturn
+
+[State 455, 4]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 444, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 80
+guardflag = MA
+pausetime = 12,12
+hitsound = S3,5
+guardsound = 6,0
+sparkno = S10000
+sparkxy = -5, -25
+animtype = Medium
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -15,-3
+air.velocity = -15,-3.5
+fall = 1
+
+[State 444, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 1, 1
+
+[State 444, 1]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 8
+
+[State 444, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 7, 0
+
+[State 444, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+; C-Shikamaru Jump Kick
+; CNS difficulty: easy.
+[Statedef 395]
+type    = A
+movetype= A
+physics = A
+juggle  = 4
+poweradd= 30
+ctrl = 0
+anim = 395
+sprpriority = 2
+
+[State 395, 1]
+type = VelSet
+trigger1 = animelem = 1
+x = 6
+y = 4
+
+[State 395, 4];←成功したときの残像
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 395, 2]
+type = PlaySnd
+trigger1 = Time = 2
+value = 0, 1
+
+[State 395,***]
+type = AssertSpecial
+trigger1 =1
+flag = noautoturn
+
+[State 395, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 1, 1
+
+[State 395, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 7, 0
+
+[State 395, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = A, NA
+damage = 70
+guardflag = HA
+priority = 3
+pausetime = 8,8
+sparkno = S10000
+sparkxy = -5,-25
+hitsound = S1, 2
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 6
+ground.hittime  = 15
+ground.velocity = -4,-3
+air.velocity = -2,-3
+fall = 1
+
+[State 395, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+trigger1 = movecontact
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; C-Shikamaru Duck Kick
+; CNS difficulty: easy.
+[Statedef 406]
+type    = C
+movetype= A
+physics = C
+juggle  = 4
+poweradd= 30
+ctrl = 0
+anim = 406
+
+[State 406, 1]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 8
+
+[State 406, 4];←成功したときの残像
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 406, 2]
+type = PlaySnd
+trigger1 = Time = 2
+value = 1, 1
+
+[State 406, 2]
+type = PlaySnd
+trigger1 = Time = 2
+value = 7, 2
+
+[State 406,***]
+type = AssertSpecial
+trigger1 =1
+flag = noautoturn
+
+[State 406, 1]
+type = HitDef
+trigger1 = Time = 0
+attr = A, NA
+damage = 60
+guardflag = HA
+priority = 3
+pausetime = 8,8
+sparkno = S10000
+sparkxy = -5,-25
+hitsound = S1, 2
+guardsound = 6, 0
+ground.type = High
+ground.slidetime = 6
+ground.hittime  = 15
+ground.velocity = -1,-8
+air.velocity = -1,-7
+fall = 1
+
+[State 406, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; C-Shikamaru Kawa Punch
+; CNS difficulty: easy
+[Statedef 285]
+anim = 205
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+poweradd = 30
+juggle = 7
+
+[State 285, 4]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 10
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 285, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 45
+guardflag = MA
+pausetime = 12,24
+hitsound = S1,4
+guardsound = 6,0
+sparkno = S10000
+sparkxy = -5, -25
+animtype = Medium
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -7,-3
+fall = 1
+
+[State 285, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 1, 1
+
+[State 285]
+type = PlaySnd
+trigger1 = animtime = 1
+value = 150, 0
+
+[State 285, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 7, 0
+
+[State 285, 1]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 15
+
+[State 285, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+; C-Shikamaru Kunai Throw
+; CNS difficulty: easy
+[Statedef 225]
+anim = 225
+ctrl = 0
+type = S
+sprpriority = 2
+movetype = A
+physics = S
+velset = 0,0
+juggle = 0
+
+[State 225, 4];←成功したときの残像
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 225, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 40
+guardflag = MA
+pausetime = 24,12
+hitsound = 5,0
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Medium
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 225, 2]
+type = Helper
+trigger1 = animelem = 3
+helpertype = normal
+pos = 12,-0
+postype = p1
+stateno = 226
+ownpal = 1
+
+[State 225, 4]
+type = Projectile
+trigger1 = NumProjID(2000) = 0
+trigger1 = AnimElem = 5
+attr = S, SP
+projid = 2000
+projanim = 1150
+projhitanim = -1
+projremanim = -1
+destroyself = 1
+projshadow = -1
+projstagebound = 100
+projedgebound = 100
+projhits = 1
+offset = 20,-67
+postype = p1,front
+velocity = 5
+damage = 15,1
+animtype = Hard
+hitflag = MA
+guardflag = MA
+pausetime = 0,5
+sparkno = S1170
+guard.sparkno = S9999
+sparkxy = 20,80
+hitsound   = S215,1
+guardsound = S200,2
+ground.type = High
+ground.slidetime = 14
+ground.hittime  = 16
+ground.velocity = -6
+air.velocity = -2.5,-4
+palfx.time = 32
+palfx.add = 0,8,32
+palfx.mul = 192,192,240
+sprpriority = 1
+;p2stateno = 1151
+id = 3849
+
+[State 225, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 4, 2
+
+[State -3, Stunning]
+type = TargetState
+trigger1 = ProjHit2000 = 1
+ID = 3849
+value = 226
+IgnoreHitPause = 1
+
+[State 225, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;----------------------------------------------------------------------------
+; C-Shikamaru Double Kunai Throw
+; CNS difficulty: easy
+[Statedef 228]
+anim = 228
+ctrl = 0
+type = S
+sprpriority = 2
+movetype = A
+physics = S
+velset = 0,0
+juggle = 0
+
+[State 228, 4];←成功したときの残像
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 228, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 40
+guardflag = MA
+pausetime = 24,12
+hitsound = 5,0
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Medium
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 228, 2]
+type = Helper
+trigger1 = animelem = 3
+helpertype = normal
+pos = 12,-0
+postype = p1
+stateno = 227
+ownpal = 1
+
+[State 228, 4]
+type = Projectile
+trigger1 = NumProjID(2000) = 0
+trigger1 = AnimElem = 5
+attr = S, SP
+projid = 2000
+projanim = 227
+projhitanim = 1
+destroyself = 1
+projremanim = 1
+projshadow = -1
+projstagebound = 100
+projedgebound = 100
+projhits = 1
+offset = 2,-67
+velocity = 5
+damage = 15,1
+animtype = Hard
+hitflag = MA
+guardflag = MA
+pausetime = 0,5
+sparkno = S1170
+guard.sparkno = S9999
+sparkxy = 20,80
+hitsound   = S215,1
+guardsound = S200,2
+ground.type = High
+ground.slidetime = 14
+ground.hittime  = 16
+ground.velocity = -6
+air.velocity = -2.5,-4
+palfx.time = 32
+palfx.add = 0,8,32
+palfx.mul = 192,192,240
+sprpriority = 1
+;p2stateno = 1151
+id = 3849
+
+[State -3, Stunning]
+type = TargetState
+trigger1 = ProjHit2000 = 1
+ID = 3849
+value = 226
+IgnoreHitPause = 1
+
+[State 228, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 4, 2
+
+[State 228, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+; Kunai
+; CNS difficulty: medium
+[Statedef 226]
+type    = S
+movetype= A
+physics = N
+juggle = 15
+airjuggle = 15
+poweradd= 0
+velset = 8,0
+anim = 226
+ctrl = 0
+sprpriority = 0
+
+[State 226, 2]
+type = hitdef
+triggerall = var(40) = 0
+trigger1 = time = 0
+attr = S, SP
+hitflag = MAF
+getpower = 25
+givepower = 25
+animtype  = hard
+damage  = 20,4
+guardflag = MA
+pausetime = 0,10
+sparkno = S10000
+sparkxy = -5, -25
+hitsound   = S1,3
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 6
+ground.hittime  = 9
+ground.velocity = -2,0
+air.velocity = -4,-2
+air.fall = 1
+
+[State 226, 3]
+type = AfterImage
+triggerall = var(40) = 0
+trigger1 = time = 0
+time = 15
+length = 5
+palcolor = 256
+palinvertall = 0
+palbright = 30,30,30
+palcontrast = 255,108,69
+palpostbright = 0,0,0
+paladd = 50,10,25
+palmul = .65,.65,.75
+timegap = 1
+trans = add1
+
+[State 226, 4]
+type = destroyself
+trigger1 = movecontact
+trigger2 = frontedgedist < -40
+
+; Double Kunai
+; CNS difficulty: medium
+[Statedef 227]
+type    = S
+movetype= A
+physics = N
+juggle = 15
+airjuggle = 15
+poweradd= 0
+velset = 8,0
+anim = 227
+ctrl = 0
+sprpriority = 0
+
+[State 227, 2]
+type = hitdef
+triggerall = var(40) = 0
+trigger1 = time = 0
+attr = S, SP
+hitflag = MAF
+getpower = 25
+givepower = 25
+animtype  = hard
+damage  = 20,4
+guardflag = MA
+pausetime = 0,10
+sparkno = S10000
+sparkxy = -5, -25
+hitsound   = S1,3
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 6
+ground.hittime  = 9
+ground.velocity = -2,0
+air.velocity = -4,-2
+air.fall = 1
+
+[State 227, 3]
+type = AfterImage
+triggerall = var(40) = 0
+trigger1 = time = 0
+time = 15
+length = 5
+palcolor = 256
+palinvertall = 0
+palbright = 30,30,30
+palcontrast = 255,108,69
+palpostbright = 0,0,0
+paladd = 50,10,25
+palmul = .65,.65,.75
+timegap = 1
+trans = add1
+
+[State 227, 4]
+type = Destroyself
+trigger1 = movecontact
+trigger2 = frontedgedist < -40
+
+;----------------------------------------------------------------------------
+; C-Shikamaru Summon Asuma
+; CNS difficulty: easy
+[Statedef 410]
+anim = 410
+ctrl = 0
+type = S
+sprpriority = 2
+movetype = A
+physics = S
+velset = 0,0
+juggle = 0
+
+[State 410, Explod]
+type = Explod
+trigger1 = time = 0
+anim = 500
+ID = 500
+pos = 85,-0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove = 1
+supermovetime = 20
+pausemove
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = -1
+;persistent =
+
+[State 410, Explod]
+type = Explod
+trigger1 = time = 0
+anim = 815
+ID = 815
+pos = 60,-2
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = 20
+supermove
+pausemove
+scale = 1,1
+sprpriority = 2
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = -1
+;persistent =
+
+[State 410, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 40
+guardflag = MA
+pausetime = 24,12
+hitsound = 5,0
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Medium
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 410, 2]
+type = Helper
+trigger1 = animelem = 3
+helpertype = normal
+pos = 85,-0
+postype = p1
+stateno = 405
+ownpal = 1
+
+[State 410, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;----------------------------------------------------------------------------
+; C-Shikamaru Summon Dad
+; CNS difficulty: easy
+[Statedef 414]
+anim = 410
+ctrl = 0
+type = S
+sprpriority = 2
+movetype = A
+physics = S
+velset = 0,0
+juggle = 0
+
+[State 414, Explod]
+type = Explod
+trigger1 = time = 0
+anim = 500
+ID = 500
+pos = -50,-0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove = 1
+supermovetime = 20
+pausemove
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = -1
+;persistent =
+
+[State 414, Explod]
+type = Explod
+trigger1 = time = 0
+anim = 815
+ID = 815
+pos = 60,-2
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = 35
+supermove
+pausemove
+scale = 1,1
+sprpriority = 2
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = -1
+;persistent =
+
+[State 414, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 40
+guardflag = MA
+pausetime = 24,12
+hitsound = 5,0
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Medium
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 414, 2]
+type = Helper
+trigger1 = animelem = 3
+helpertype = player
+pos = -50,-0
+postype = p1
+stateno = 415
+ownpal = 1
+
+[State 414, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;----------------------------------------------------------------------------
+; C-Shikamaru Summon Temari
+; CNS difficulty: easy
+[Statedef 430]
+anim = 410
+ctrl = 0
+type = S
+sprpriority = 2
+movetype = A
+physics = S
+velset = 0,0
+juggle = 0
+
+[State 430, Explod]
+type = Explod
+trigger1 = time = 0
+anim = 500
+ID = 500
+pos = -50,-0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove = 1
+supermovetime = 20
+pausemove
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = -1
+;persistent =
+
+[State 430, Explod]
+type = Explod
+trigger1 = time = 0
+anim = 815
+ID = 815
+pos = 60,-2
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = 50
+supermove
+pausemove
+scale = 1,1
+sprpriority = 2
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = -1
+;persistent =
+
+[State 430, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 40
+guardflag = MA
+pausetime = 24,12
+hitsound = 5,0
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Medium
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 430, 2]
+type = Helper
+trigger1 = animelem = 3
+helpertype = player
+pos = -50,-0
+postype = p1
+stateno = 435
+ownpal = 1
+
+[State 430, 2]
+type = Helper
+trigger1 = time = 60
+helpertype = player
+pos = 50,-0
+postype = p1
+stateno = 440
+ownpal = 1
+sprpriority = 1
+
+[State 430, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;----------------------------------------------------------------------------
+; C-Shikamaru Summon Temari 2
+; CNS difficulty: easy
+[Statedef 431]
+anim = 410
+ctrl = 0
+type = S
+sprpriority = 2
+movetype = A
+physics = S
+velset = 0,0
+juggle = 0
+
+[State 431, Explod]
+type = Explod
+trigger1 = time = 0
+anim = 500
+ID = 500
+pos = -50,-0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove = 1
+pausemove
+supermovetime = 20
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = -1
+;persistent =
+
+[State 431, Explod]
+type = Explod
+trigger1 = time = 0
+anim = 815
+ID = 815
+pos = 60,-2
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = 60
+supermove
+pausemove
+scale = 1,1
+sprpriority = 2
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = -1
+;persistent =
+
+[State 431, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 40
+guardflag = MA
+pausetime = 24,12
+hitsound = 5,0
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Medium
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 431, 2]
+type = Helper
+trigger1 = animelem = 3
+helpertype = player
+pos = -50,-0
+postype = p1
+stateno = 436
+ownpal = 1
+
+[State 431, 2]
+type = Helper
+trigger1 = time = 60
+helpertype = player
+pos = 50,-0
+postype = p1
+stateno = 440
+ownpal = 1
+sprpriority = 1
+
+[State 431, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;-------------------------------------------------------------------------------------
+; C-Shikamaru Asuma
+; CNS difficulty: medium
+[Statedef 405]
+anim = 405
+ctrl = 0
+type = S
+poweradd = -1000
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+
+[state 405, pause]
+type = superpause
+trigger1 = animelem = 1
+time = 80
+movetime = 47
+darken = 0
+
+[State 405, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 5, 4
+volume = 50
+
+[State 405, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 250
+pausetime = 12,12
+hitsound = S3,5
+guardsound = 6,0
+sparkno = S10000
+sparkxy = -5, -25
+animtype = Medium
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -15,-3
+air.velocity = -15,-3.5
+fall = 1
+
+[State 405, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[State 415, Explod]
+type = Explod
+trigger1 = time = 80
+anim = 500
+ID = 500
+pos = -0,-0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove
+pausemove
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = 1
+;persistent =
+
+[State 405, 1]
+type = destroyself
+trigger1 = time = 80
+;-------------------------------------------------------------------------------------
+; C-Shikamaru Dad
+; CNS difficulty: medium
+[Statedef 415]
+anim = 415
+ctrl = 0
+type = S
+poweradd = -2000
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+
+[state 415, pause]
+type = superpause
+trigger1 = animelem = 1
+time = 80
+movetime = 18
+darken = 0
+
+[State 415, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 5, 7
+volume = 50
+
+[State 415, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 250
+pausetime = 12,129
+sparkno = S420
+sparkxy = -5,-5
+hitsound = S5,8
+sound.velocity = 2
+guardsound = 6,0
+animtype = Hard
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 415, 4]
+type = Projectile
+trigger1 = NumProjID(2000) = 0
+trigger1 = time = 100
+attr = S, SP
+projid = 2001
+projanim = 236
+projhitanim = 20000
+projremanim = -1
+destroyself = 1
+projshadow = -1
+projstagebound = 100
+projedgebound = 100
+projhits = 1
+offset = 20,-0
+postype = p1,front
+velocity = 5
+damage = 150
+animtype = Hard
+hitflag = MA
+guardflag = MA
+pausetime = 0,20
+sparkno = 20000
+guard.sparkno = S9999
+sparkxy = 20,80
+hitsound   = S3,2
+guardsound = S200,2
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -15,-3
+air.velocity = -15,-3.5
+fall = 1
+palfx.time = 32
+palfx.add = 0,8,32
+palfx.mul = 192,192,240
+sprpriority = 1
+;p2stateno = 1151
+id = 3849
+
+
+
+[State 415, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[State 415, Explod]
+type = Explod
+trigger1 = time = 139
+anim = 500
+ID = 500
+pos = -0,-0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove
+pausemove
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = 1
+;persistent =
+
+[State 415, 1]
+type = destroyself
+trigger1 = time = 139
+
+;-------------------------------------------------------------------------------------
+; C-Shikamaru Temari
+; CNS difficulty: medium
+[Statedef 435]
+anim = 430
+ctrl = 0
+type = S
+poweradd = -1000
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+
+[state 435, pause]
+type = superpause
+trigger1 = animelem = 1
+time = 80
+movetime = 64
+darken = 0
+
+[State 405, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 5, 5
+volume = 50
+
+[State 435, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 250
+pausetime = 12,56
+sparkno = S520
+sparkxy = -5,-5
+hitsound = S210,0
+guardsound = 6,0
+animtype = Hard
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 12
+ground.velocity = -3,-10
+air.velocity = -2,-3
+fall = 1
+
+
+
+[State 435, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[State 435, Explod]
+type = Explod
+trigger1 = time = 90
+anim = 500
+ID = 500
+pos = -0,-0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove
+pausemove
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = 1
+;persistent =
+
+[State 435, 1]
+type = destroyself
+trigger1 = time = 90
+
+;-------------------------------------------------------------------------------------
+; C-Shikamaru Temari 2
+; CNS difficulty: medium
+[Statedef 436]
+anim = 431
+ctrl = 0
+type = S
+poweradd = -2000
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+
+[State 436, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 5, 9
+volume = 50
+
+[state 436, pause]
+type = superpause
+trigger1 = animelem = 1
+time = 135
+movetime = 135
+darken = 0
+
+[State 436, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 200
+pausetime = 12,56
+sparkno = S520
+sparkxy = -5,-5
+hitsound = S210,0
+guardsound = 6,0
+animtype = Hard
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 12
+ground.velocity = -3,-10
+air.velocity = -2,-3
+fall = 1
+
+[State 436, Explod]
+type = Explod
+trigger1 = time = 139
+anim = 550
+ID = 500
+pos = 10,0
+postype = p1,front  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove
+pausemove
+scale = 1,1
+sprpriority = 2
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = 1
+;persistent =
+
+[State 436, Explod]
+type = Explod
+trigger1 = time = 139
+anim = 560
+ID = 500
+pos = 150,-15
+postype = p1,front  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove
+pausemove
+scale = 1,1
+sprpriority = 2
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = 1
+;persistent =
+
+[State 436, Explod]
+type = Explod
+trigger1 = time = 139
+anim = 570
+ID = 500
+pos = 150,-15
+postype = p1,front  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove
+pausemove
+scale = 1,1
+sprpriority = 2
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = 1
+;persistent =
+
+[State 436, Explod]
+type = Explod
+trigger1 = time = 139
+anim = 580
+ID = 500
+pos = 150,-15
+postype = p1,front  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove
+pausemove
+scale = 1,1
+sprpriority = 2
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = 1
+;persistent =
+
+[State 436, 4]
+type = Projectile
+trigger1 = NumProjID(2000) = 0
+trigger1 = time = 139
+attr = S, SP
+projid = 2000
+projanim = 440
+projhitanim = 30000
+projremanim = time = 39
+projshadow = -1
+projstagebound = 100
+projedgebound = 100
+projhits = 1
+offset = 2,-15
+postype = p1,front
+velocity = 5
+damage = 400
+animtype = Hard
+hitflag = MA
+pausetime = 0,40
+sparkno = S1170
+guard.sparkno = S9999
+sparkxy = 20,80
+hitsound   = S210,0
+guardsound = S200,2
+animtype = Hard
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 12
+ground.velocity = -3,-15
+air.velocity = -2,-5
+fall = 1
+palfx.time = 32
+palfx.add = 0,8,32
+palfx.mul = 192,192,240
+sprpriority = 1
+;p2stateno = 1151
+id = 3849
+
+
+[State 436, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[State 436, Explod]
+type = Explod
+trigger1 = time = 139
+anim = 500
+ID = 500
+pos = -0,-0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove
+pausemove
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = 1
+;persistent =
+
+[State 436, 1]
+type = destroyself
+trigger1 = time = 139
+
+;-------------------------------------------------------------------------------------
+; C-Shikamaru Temari Summon
+; CNS difficulty: medium
+[Statedef 440]
+anim = 440
+ctrl = 0
+type = S
+poweradd = -1000
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+sprpriority = 1
+
+[State 440, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 320
+pausetime = 12,12
+hitsound = S1,4
+guardsound = 6,0
+sparkno = S30000
+sparkxy = -5, -25
+animtype = Medium
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 0
+ground.velocity = -0,-0
+air.velocity = -15,-3.5
+fall = 1
+
+[State 440,0]
+type = BGPalfx
+trigger1 = Animelem = 3
+add = 255,255,255
+sinadd = 10, 10, 10
+invertall = 0
+color =0
+time = 45
+
+[State 440, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[State 436, Explod]
+type = Explod
+trigger1 = time = 139
+anim = 500
+ID = 500
+pos = 2,-15
+postype = p1,front  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove
+pausemove
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = 1
+;persistent =
+
+[State 440, Explod]
+type = Explod
+trigger1 = time = 80
+anim = 500
+ID = 500
+pos = -0,-0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = -2
+supermove
+pausemove
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = 1
+;persistent =
+
+[State 440, 1]
+type = destroyself
+trigger1 = movecontact
+;-------------------------------------------------------------------------------------
+; C-Shikamaru Special Stun
+; CNS difficulty: medium
+[Statedef 160]
+anim = 160
+ctrl = 0
+type = S
+poweradd = -50
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+
+[State 160, hit]
+type = hitdef
+trigger1 = time = 0
+attr = S, NA
+poweradd = 10
+animtype  = hard
+guardflag = 1
+damage    = 0,5
+pausetime = 0,0
+sparkno = S123
+sparkxy = -5,-20
+p2stateno = 6001
+hitsound   = S5,15
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -3,0
+air.velocity = -3,0
+
+[State 160, TargetBind]
+type = TargetBind
+trigger1 = (stateno = 160 && time > 1)
+time = 1
+id = -1
+pos = 130,0
+ignorehitpause = 1
+;persistent =
+
+[State 160, 1]
+type = PowerAdd
+trigger1 = Time > 0
+trigger1 = Time < 1600
+value = -5
+
+[State 160,0]
+type = BGPalfx
+trigger1 = 1
+time = 15
+add = 255,255,255
+sinadd = 10, 10, 10
+invertall = 0
+color =0
+movecontact = 1
+
+[State 160, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 5, 1
+
+[State 160, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[State 160, 3]
+type = ChangeState
+triggerall = AnimTime = 0
+trigger1 = Command = "Stun"
+value = 162
+ctrl = 0
+
+[State 160, 4]
+type = ChangeState
+trigger1 = Command != "Stun"
+value = 162
+ctrl = 0
+
+[State 160, 4]
+type = ChangeState
+trigger1 = AnimTime = 0
+trigger1 = movetype = H
+trigger2 = power < 5
+value = 162
+ctrl = 0
+;-------------------------------------
+[statedef 161]
+type = S
+ctrl = 0
+anim = 162
+
+[state 161, 1]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1
+;--------------------------------------
+[Statedef 6001]
+type    = A
+movetype= H
+physics = N
+velset = 0,0
+
+[State 6001, 1]
+type = ChangeAnim2
+Trigger1 = Time = 0
+value = 6001
+
+[State 6001, 2]
+type = SelfState
+trigger1 = !gethitvar(isbound)
+value = 5035
+
+;-------------------------------------------------------------------------------------
+; C-Shikamaru Shadow
+; CNS difficulty: medium
+[Statedef 810]
+anim = 810
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+sprpriority = 1
+
+[State 810, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 400
+pausetime = 0,50
+hitsound = S5,2
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Hard
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 810, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[State 810, 1]
+type = destroyself
+trigger1 = time = 57
+
+;-------------------------------------------------------------------------------------
+; C-Shikamaru Shadow Go-Back
+; CNS difficulty: medium
+[Statedef 162]
+anim = 162
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+sprpriority = 1
+
+[State 162, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 350
+pausetime = 0,50
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Hard
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 162,0]
+type = BGPalfx
+trigger1 = Animelem = 3
+add = 255,255,255
+sinadd = 10, 10, 10
+invertall = 0
+color =0
+time = 25
+
+[State 162, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[State 162, 1]
+type = destroyself
+trigger1 = time = 30
+;---------------------------------------------------------------------------
+; C-Shikamaru Shadow Grab
+; CNS difficulty: easy
+[Statedef 800]
+anim = 803
+ctrl = 0
+type = S
+poweradd = -1500
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+sprpriority = 1
+
+[State 800, superpause]
+type = superpause
+anim = S422
+trigger1 = time = 0
+time = 52
+movetime = 1
+darken = 0
+
+[State 800, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 400
+guardflag = MA
+pausetime = 12,12
+hitsound = S1,4
+guardsound = 6,0
+sparkno = S10000
+sparkxy = -5, -25
+animtype = Medium
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 0
+ground.velocity = -0,-0
+air.velocity = -15,-3.5
+fall = 1
+
+[State 800, 1]
+type = ChangeState
+trigger1 = Animelem = 3
+value = 0
+ctrl = 1
+
+[State 800]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 11, 3
+
+[State 800, Explod]
+type = Explod
+trigger1 = time = 0
+anim = 815
+ID = 815
+pos = 60,-2
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = 57
+supermove
+pausemove
+scale = 1,1
+sprpriority = 2
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = -1
+;persistent =
+
+[State 800, 2]
+type = Helper
+trigger1 = time = 1
+helpertype = player
+pos = 30,-0
+postype = p2
+facing = -1
+stateno = 810
+ownpal = 1
+sprpriority = 1
+shadow = 0,0,0
+
+[State 800, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+; Kawarimi
+[Statedef 905]
+type    = S
+movetype= A
+physics = S
+juggle  = 5
+poweradd= -100
+ctrl = 0
+velset = 0,0
+anim = 901
+sprpriority = 2
+
+[State 905]
+type = PlaySnd
+trigger1 = time = 2
+value = S150, 0
+
+[State 905, Explod]
+type = Explod
+trigger1 = time = 1
+anim = 901
+ID = 901
+pos = 0,0
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = 20
+supermove
+pausemove
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = -1
+;persistent =
+
+[State 905, 1]
+type = PosAdd
+trigger1 = time = 2
+x = (P2BodyDist X- 60)
+
+[State 905, 3]
+type = Turn
+trigger1 = time = 0
+
+[State 905, 4]
+type = ChangeState
+trigger1 = Time = 2
+value = 285
+ctrl = 1
+
+;-------------------------------------------------------------------
+; Shadow Get-Hit
+[Statedef 323]
+anim = 162
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+sprpriority = 1
+
+[State 323,0]
+type = BGPalfx
+trigger1 = Animelem = 3
+add = 255,255,255
+sinadd = 10, 10, 10
+invertall = 0
+color =0
+time = 45
+
+[State 323, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+[State 323, 1]
+type = destroyself
+trigger1 = time = 30
+
+;---------------------------------------------------------------------------
+; C-Shikamaru Chakra Gain
+; CNS difficulty: easy
+[Statedef 700]
+anim = 700
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+poweradd = 30
+sprpriority = 3
+juggle = 5
+
+[State 700, Explod]
+type = Explod
+trigger1 = time = 1
+anim = 666
+ID = 666
+pos = -3,30
+postype = p1  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = 600
+sprpriority = -3
+supermove
+pausemove
+scale = 1, 1
+shadow = 0,0,0
+ownpal = 1
+removeongethit = 1
+ignorehitpause = 1
+;persistent =
+
+[State 700, removeexplod]
+trigger1 = Command != "chakra"
+trigger2 = power = 3000
+type = removeexplod
+id = 666
+
+
+[State 700, 1]
+type = PowerAdd
+trigger1 = Time > 0
+trigger1 = Time < 1600
+value = 5
+
+[State 700, 4]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 10
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 700, 4]
+type = ChangeState
+trigger1 = command != "chakra"
+trigger2 = power >= 3000
+trigger3 = animtime = 0
+trigger4 = power < 5
+value = 701
+;-------------------------------------
+[statedef 701]
+type = S
+ctrl = 0
+anim = 11
+
+[State 701, removeexplod]
+trigger1 = Command != "chakra"
+trigger2 = power = 3000
+type = removeexplod
+id = 666
+
+[state 701, 1]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1
+
+; C-Shika Ultra
+[Statedef 1005]
+anim = 1005
+ctrl = 0
+type = S
+poweradd = -3000
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+
+[State 1005, 3]
+type = VelSet
+trigger1 = animelem = 3
+trigger2 = AnimElem = 4
+trigger3 = animelem = 5
+trigger4 = animelem = 6
+x = 13
+
+[state 1005, 2]
+type = explod
+trigger1 = time = 0
+anim = 3333
+pos = 0,0
+postype = back
+sprpriority = -2
+supermovetime =93
+removeongethit = 1
+bindtime = -1
+
+[state 1005, pause]
+type = superpause
+trigger1 = animelem = 1
+anim = -1
+time = 120
+movetime = 1
+darken = 1
+sound = S15000,0
+unhittable = 1
+
+
+[State 1005, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 250
+pausetime = 12,200
+sparkno = S10000
+sparkxy = -5,-5
+hitsound = S1,2
+sound.velocity = 2
+guardsound = 6,0
+animtype = Hard
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 12
+ground.velocity = 0
+air.velocity = 0,0
+
+[State 1005, 1]
+type = ChangeState
+trigger1 = movecontact
+value = 105
+ctrl = 1
+
+[State 1005, 1]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1
+
+;-------------------------------------
+[statedef 3333]
+type = S
+ctrl = 0
+anim = 3333
+
+[State 3333, 4]
+type = destroyself
+trigger1 = time = 1
+
+
+;---------------------------------------------------------------------------
+; C-Shikamaru Needle Stab
+; CNS difficulty: easy
+[Statedef 175]
+anim = 175
+ctrl = 0
+type = S
+poweradd = -3000
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+
+[State 175, pause]
+type = pause
+trigger1 = time = 0
+time = 30
+movetime = 15
+
+[State 175, 4]
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 10
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 175, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, SA
+damage = 180
+guardflag = MA
+pausetime = 12,24
+hitsound = S1,4
+guardsound = 6,0
+sparkno = S10000
+sparkxy = -5, -25
+animtype = Medium
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 175, 1]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+
+
+;----------------------------------------------------------------------------
+; C-Shikamaru Air Ball Throw
+; CNS difficulty: easy
+[Statedef 2000]
+anim = 228
+ctrl = 0
+type = S
+sprpriority = 2
+movetype = A
+physics = S
+velset = 0,0
+juggle = 0
+
+[State 2000, 4];←成功したときの残像
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 2000, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 40
+guardflag = MA
+pausetime = 24,12
+hitsound = 5,0
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Medium
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 2000, 2]
+type = Helper
+trigger1 = animelem = 3
+helpertype = normal
+pos = 12,-0
+postype = p1
+stateno = 2001
+ownpal = 1
+
+[State 2000, 4]
+type = Projectile
+trigger1 = NumProjID(2000) = 0
+trigger1 = AnimElem = 5
+attr = S, SP
+projid = 2001
+projanim = 226
+projhitanim = 1
+destroyself = 1
+projremanim = 1
+projshadow = -1
+projstagebound = 100
+projedgebound = 100
+projhits = 1
+offset = 2,-67
+velocity = -50
+damage = 15,1
+animtype = Hard
+hitflag = MA
+guardflag = MA
+pausetime = 0,5
+sparkno = S1170
+guard.sparkno = S9999
+sparkxy = 20,80
+hitsound   = S215,1
+guardsound = S200,2
+ground.type = High
+ground.slidetime = 14
+ground.hittime  = 16
+ground.velocity = -6
+air.velocity = -2.5,-4
+palfx.time = 32
+palfx.add = 0,8,32
+palfx.mul = 192,192,240
+sprpriority = 1
+;p2stateno = 1151
+id = 3849
+
+[State -3, Stunning]
+type = TargetState
+trigger1 = ProjHit2000 = 1
+ID = 3849
+value = 226
+IgnoreHitPause = 1
+
+[State 2000, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 4, 2
+
+[State 2000, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+; C-Shika ULTRA Air Ball Kunai
+; CNS difficulty: medium
+[Statedef 2001]
+type    = S
+movetype= A
+physics = N
+juggle = 15
+airjuggle = 15
+poweradd= 0
+velset = 8,0
+anim = 2001
+ctrl = 0
+sprpriority = 0
+
+[State 2001, 2]
+type = VelSet
+trigger1 = animelem = 1
+velocity = -2
+y = -14
+x = 8
+
+[State 2001, 2]
+type = hitdef
+triggerall = var(40) = 0
+trigger1 = time = 0
+attr = S, SP
+hitflag = MAF
+getpower = 25
+givepower = 25
+animtype  = hard
+damage  = 20,4
+guardflag = MA
+pausetime = 0,10
+sparkno = S10000
+sparkxy = -5, -25
+hitsound   = S1,3
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 6
+ground.hittime  = 9
+ground.velocity = -2,0
+air.velocity = -4,-2
+air.fall = 1
+
+[State 2001, 4]
+type = destroyself
+trigger1 = movecontact
+trigger2 = frontedgedist < -40
+
+;----------------------------------------------------------------------------
+; C-Shikamaru Ultra Fire Kunai Throw
+; CNS difficulty: easy
+[Statedef 556]
+anim = 228
+ctrl = 0
+type = S
+sprpriority = 2
+movetype = A
+physics = S
+velset = 0,0
+juggle = 0
+
+[State 556,0]
+type = BGPalfx
+trigger1 = time = 23
+add = 255,255,255
+sinadd = 10, 10, 10
+invertall = 0
+color =0
+time = 88
+
+[State 556, Explod]
+type = Explod
+trigger1 = time = 5
+anim = 555
+ID = 555
+pos = -0,-160
+postype = p2  ;p2,front,back,left,right
+facing = 1
+vfacing = 1
+bindtime = 1
+vel = 0,0
+accel = 0,0
+random = 0,0
+removetime = 42
+supermove
+pausemove
+scale = 1,1
+sprpriority = 1
+ontop = 0
+shadow = 0,0,0
+ownpal = 0
+removeongethit = 0
+ignorehitpause = 1
+;persistent =
+
+[State 556, 1]
+type = PlaySnd
+trigger1 = time = 23
+value = 15000, 0
+
+[State 556, 4];←成功したときの残像
+type = AfterImage
+trigger1 =AnimElem = 1
+time = 20
+trans = add1
+timegap = 1
+framegap = 2
+length = 8
+palbright = 12,12,12
+palcontrast = 225,225,225
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[State 556, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 40
+guardflag = MA
+pausetime = 24,12
+hitsound = 5,0
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Medium
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 556, 2]
+type = Helper
+trigger1 = animelem = 3
+helpertype = normal
+pos = 12,-0
+postype = p1
+stateno = 557
+ownpal = 1
+
+[State 556, 4]
+type = Projectile
+trigger1 = NumProjID(2000) = 0
+trigger1 = AnimElem = 5
+attr = S, SP
+projid = 2000
+projanim = 557
+projhitanim = 1
+destroyself = 1
+projremanim = 1
+projshadow = -1
+projstagebound = 100
+projedgebound = 100
+projhits = 1
+offset = 2,-67
+velocity = 5
+damage = 15,1
+animtype = Hard
+hitflag = MA
+guardflag = MA
+pausetime = 0,5
+sparkno = S1170
+guard.sparkno = S9999
+sparkxy = 20,80
+hitsound   = S215,1
+guardsound = S200,2
+ground.type = High
+ground.slidetime = 14
+ground.hittime  = 16
+ground.velocity = -6
+air.velocity = -2.5,-4
+palfx.time = 32
+palfx.add = 0,8,32
+palfx.mul = 192,192,240
+sprpriority = 2
+;p2stateno = 1151
+id = 3849
+
+[State 556, Stunning]
+type = TargetState
+trigger1 = ProjHit2000 = 1
+ID = 3849
+value = 226
+IgnoreHitPause = 1
+
+[State 556, 1]
+type = PlaySnd
+trigger1 = AnimElem = 1
+value = 4, 2
+
+[State 556, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+; Kunai Fire
+; CNS difficulty: medium
+[Statedef 557]
+type    = S
+movetype= A
+physics = N
+juggle = 15
+airjuggle = 15
+poweradd= 0
+velset = 8,0
+anim = 557
+ctrl = 0
+sprpriority = 0
+
+[State 557, 2]
+type = VelSet
+trigger1 = animelem = 1
+y = 4
+x = 12
+
+[State 557, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 40
+guardflag = MA
+pausetime = 180,150
+hitsound = 5,0
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Medium
+ground.type = Low
+ground.slidetime = 10
+ground.hittime  = 12
+ground.velocity = -5
+air.velocity = -2,-3
+
+[State 557, 3]
+type = AfterImage
+triggerall = var(40) = 0
+trigger1 = time = 0
+time = 15
+length = 5
+palcolor = 256
+palinvertall = 0
+palbright = 30,30,30
+palcontrast = 255,108,69
+palpostbright = 0,0,0
+paladd = 50,10,25
+palmul = .65,.65,.75
+timegap = 1
+trans = add1
+
+[State 557, 4]
+type = destroyself
+trigger1 = movecontact
+trigger2 = frontedgedist < -40
+
+;---------------------------------------------------------------------------
+; C-Shika ULTRA Run back
+[Statedef 10005]
+type    = A
+physics = A
+ctrl = 0
+anim = 105
+sprpriority = 1
+
+[State 10005, 1]
+type = VelSet
+trigger1 = Time = 0
+x = const(velocity.run.back.x)
+y = const(velocity.run.back.y)
+
+[State 10005, 1]
+type = VelSet
+trigger1 = Time = 0
+trigger1 = var(10) > 0
+x = const(velocity.run.back.x) - 2
+y = const(velocity.run.back.y) - .5
+
+[State 10005, 2]
+type = CtrlSet
+trigger1 = Time = 2
+value = 1
+
+[State 10005, 3]
+type = ChangeState
+trigger1 = Vel Y > 0
+trigger1 = Pos Y >= 0
+value = 106
+
+;---------------------------------------------------------------------------
+; C-Shika Ultra Runback 2
+[Statedef 10006]
+type    = S
+physics = S
+ctrl = 0
+anim = 47
+
+[State 10006, 1]
+type = VelSet
+trigger1 = Time = 0
+y = 0
+
+[State 10006, 2]
+type = PosSet
+trigger1 = Time = 0
+y = 0
+
+[State 10006, 3]
+type = MakeDust
+trigger1 = Time = 2
+pos = -5,-2
+spacing = 1
+
+[State 10006, 4]
+type = ChangeState
+trigger1 = Time = 7
+value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------------------------
+; C-Shikamaru Ultra Special Stun
+; CNS difficulty: medium
+[Statedef 1601]
+anim = 160
+ctrl = 0
+type = S
+poweradd = -50
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+
+[State 1601, HitDef]
+type = HitDef
+trigger1 = Time = 5
+attr = S, NA
+damage = 0
+pausetime = 0, 145
+hitsound = S5,2
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Medium
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 0
+ground.velocity = -15,-3
+air.velocity = -30,-3.5
+
+[State 1601, 2]
+type = Helper
+trigger1 = time = 145
+helpertype = player
+pos = 35,-0
+postype = p2
+facing = -1
+stateno = 1602
+ownpal = 1
+sprpriority = 1
+shadow = 0,0,0
+
+[State 1601, 1]
+type = PlaySnd
+trigger1 = time = 145
+value = 3, 2
+
+
+[State 1601,0]
+type = BGPalfx
+trigger1 = Animelem = 1
+add = 255,255,255
+sinadd = 10, 10, 10
+invertall = 0
+color =0
+time = 165
+movecontact = 1
+
+[State 1601, 1]
+type = PlaySnd
+trigger1 = time = 40
+value = 14, 1
+
+[State 1601, 4]
+type = ChangeState
+trigger1 = Time = 150
+value = 162
+ctrl = 0
+
+[State 1601, 2]
+type = ChangeState
+trigger1 = time = 160
+value = 0
+ctrl = 1
+
+;-----------------------------------------------------------------------
+[Statedef 1602]
+anim = 20000
+ctrl = 0
+type = S
+movetype = A
+physics = S
+velset = 0,0
+juggle = 5
+
+[State 1602, HitDef]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+damage = 250
+pausetime = 0, 0
+hitsound = S5,2
+guardsound = 6,0
+sparkxy = 0,-70
+animtype = Medium
+ground.type = Low
+ground.slidetime = 0
+ground.hittime  = 0
+ground.velocity = -15,-3
+air.velocity = -30,-3.5
+fall = 1
+
+[State 1602, DestroySelf]
+type = destroyself
+trigger1 = time = 20
+
+
+
+
+
+;-----------------------------------------------------------------
+;---------------------------------------------------------------------------
+; Override common states (use same number to override) :
+;---------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------
+; States that are always executed (use statedef -2)
+;---------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------
+; States that are executed when in self's state file (use statedef -3)
+;---------------------------------------------------------------------------
+
+[Statedef -3]
+
+;This controller plays a sound everytime KFM lands from a jump, or
+;from his back-dash.
+[State -3, Landing Sound]
+type = PlaySnd
+triggerall = Time = 1
+trigger1 = stateno = 52 ;Jump land
+trigger2 = stateno = 10006 ;Run-back land
+value = 40, 0

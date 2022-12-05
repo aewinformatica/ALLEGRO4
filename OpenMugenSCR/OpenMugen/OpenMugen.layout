@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout>
+	<Files>
+		<File Name="source\game.cpp" Top="Yes" Tabpos="1" TopLine="1">
+			<Cursor Line="131" Column="2"/>
+		</File>
+	</Files>
+	<Folders>
+		<Folder Name="header" Expanded="Yes"/>
+		<Folder Name="source" Expanded="Yes"/>
+	</Folders>
+</Layout>

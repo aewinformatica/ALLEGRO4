@@ -1,0 +1,43 @@
+HAKU_COSPLAY for Mugen10414
+
+
+制作人 : MRSS
+
+火影人物下載頁http://mugenchina.net/naruto.html
+感謝Misamu提供人物下載空間^^
+                
+
+[ 特殊技 ]
+
+
+特殊技1   :  →→ or ←←
+
+
+[ 必殺技 ]
+
+
+必殺技1   :  ↓ →+X or A
+
+必殺技2   :  ↓ ←+X or A
+
+必殺技3   :  ↓ →+Y or B
+
+必殺技4   :  ↓ ←+Y or B
+
+必殺技5   :  空中 ↓ →+X or A
+
+
+
+[ 超必殺技 ]
+
+
+超必殺技1   : ↓ → ↓ →+X <LEVER1>
+
+超必殺技2   : 中至近敵 ↓ → ↓ →+A <LEVER2>
+
+
+
+
+
+
+

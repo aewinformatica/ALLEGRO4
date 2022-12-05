@@ -1,0 +1,63 @@
+This source can be compiled by Microsoft Visual C++ 6 or Dev C++ or Codeblocks.
+
+
+Microsoft Visual C++ 6  - no longer supported by Microsoft.
+Other MS versions of C++ compilers should work.
+
+Dev-C++ 
+http://www.bloodshed.net/dev/devcpp.html
+Install and load the devpak for allegro.
+
+Codeblocks
+http://www.codeblocks.org
+Install and load the devpak for allegro.
+
+Try and build all.
+If you get errors then validate the lib and
+ include paths for the errors.
+
+
+==========================
+
+******** MS VC++6 ********
+Project - Settings 
+  tab C/C++ - Category(Preprocessor)
+      Check if the include paths are correct for your system.
+      
+  tab Link - Object/library modules:
+      Check if system LIB paths are correct.
+
+In FileView - ResourceFiles
+  Check the path of the LIB files. (Rightclick Properties).
+  
+============================
+********* Dev-C++  *********
+Project - Project Options
+  tab Directories
+    tabs Library/Include/Resources Directories
+    Check file paths.
+
+============================
+******** Codeblocks ********
+Project - Build options
+  tag Linker
+    Check paths of lib(*.a) files.
+  tag Directories
+    Check paths for include files.
+
+============================
+
+Executable file is built in the run directory
+the data, music and level directories also need to be
+in the run directory.
+
+
+
+
+
+
+
+
+      
+      
+      

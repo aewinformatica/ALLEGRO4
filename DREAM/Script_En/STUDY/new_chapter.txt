@@ -1,0 +1,133 @@
+#考试事件结束,回到宿舍
+
+rgb2color(47,255,100,100);
+go_inout($47,1);
+
+talk(0,"Alai:I gave in the blank paper 30 min after the exam started. Have you experienced the feeling of this? I won't forget.");
+delay(18);
+talk(0,"Alai:I can't go home and tell this news to my parents, I would be better to spend the Winter Vacation in the campus.");
+talk(0,"Alai:And finish an RPG.");
+
+
+set_game_status(1);
+
+call("Script_En/room/load.txt");
+NPC_set(0,10,8);
+NPC_turn(0,2);
+set_screen_status(0);
+add(31,1,1);
+
+set_game_status(0);
+
+midi_out();
+go_inout($47,0);
+
+#电话铃响
+play_sound("sound/phone_call.wav");
+talk(0,"Alay:Somebody is calling me.");
+NPC_walk(0,3,3);
+NPC_walk(0,2,4);
+delay(9);
+talk(0,"Alay:Hello?");
+talk(50,"Mum:Hello,is that Alay?What are you doing there?");
+delay(9);
+talk(0,"Alai:......I was readingmy book.");
+talk(50,"Mum:You are so industrious to read in vacation.How about your exam?");
+delay(9);
+talk(0,"Alai:It's......fine......I think......I can pass......");
+talk(50,"Mum:Take care of yourself in the school. Notice your diet. Don't just eat Mcdonald's and Kentucky.");
+talk(0,"Alai:I know.");
+talk(50,"Mum:And,it's cold these days. Remember to add clothes. How many quilts are you covering?");
+talk(0,"Alai:Two.");
+talk(50,"Mum:It's getting warm soon,SARS may be epidemic. Don't get cold!");
+talk(0,"Alai:I know.");
+talk(50,"Mum:Your dad is not working well these days. You can phone him if you have time.");
+talk(0,"Alai:But I don't have telephone card.");
+talk(50,"Mum:You can also use your cellphone to send short message. Your dad's cellphone is just waiting your short message.");
+talk(0,"Alai:I know.");
+talk(50,"Mum:That's just OK. Tell me if your money is not enough.");
+talk(0,"Alai:I still have much money.");
+talk(50,"Mum:Well,I will hang up");
+talk(0,"Alai:Oh.");
+#电话的嘟声
+play_sound("sound/phone_off.wav");
+
+NPC_turn(0,0);
+talk(2,"Alai:How can I pass the coming graduate student entrance exam? It is coming, within a year.");
+
+delay(32);
+
+#结界声
+play_sound("sound/emma_come.wav");
+go_inout(65534,0);
+
+delay(18);
+NPC_turn(0,1);
+delay(9);
+NPC_turn(0,0);
+
+talk(0,"Alai:What's that noise?");
+NPC_walk(0,0,5);
+delay(9);
+NPC_turn(0,1);
+delay(18);
+
+talk(50,"Alai:Ahhhhhhh~~~~Ahhhhhhh~~~");
+
+set_game_status(1);
+init_NPC(6,13,2,8,0,1,"Script_En/blank.txt");
+set_game_status(0);
+
+NPC_walk(1,2,4);
+talk(3,"Emma:OOOOPS! All over, landed safely!");
+play_midi("music/emma.mid");
+delay(18);
+talk(50,"Alai:Ghost,Ghost!!!");
+delay(9);
+NPC_turn(1,3);
+delay(9);
+talk(4,"Emma:Ghost!?");
+NPC_turn(1,0);
+delay(9);
+NPC_turn(1,3);
+delay(9);
+talk(4,"Emma:Where is it?");
+talk(0,"Alai:Come on, dude, I'm talking about you!");
+NPC_walk(1,3,3);
+talk(4,"Emma:What, do I look like a ghost?");
+talk(0,"Alai:Grrrr, if I get into your room suddenly with a flash, would you scream?");
+talk(4,"Emma:Oh,that's right. I'm busy here, I'm going now.");
+NPC_walk(1,0,3);
+NPC_turn(0,0);
+talk(0,"Alai:Hey,hey...");
+delay(9);
+NPC_turn(1,2);
+talk(4,"Emma:What,again?");
+NPC_walk(0,1,4);
+NPC_turn(0,0);
+delay(9);
+talk(0,"Alai:You want to go like this? Never, I'll send you to the police, you thief!");
+talk(5,"Emma:I...I'm not thief, I do really have something important to do here!");
+talk(0,"Alai:What business, tell me!");
+talk(5,"Emma:Nope!");
+talk(0,"Alai(picked out the cell phone):I will call,I mean it!");
+talk(3,"Emma:Forget it, stupid boy, it's okay to tell you...");
+talk(3,"Emma:I come from the Fairy Space, our headmaster asked me to find the man with the most powerful imagination.");
+talk(0,"Alai:What? You consider me stupid enough to believe that? nonsense!");
+talk(3,"Emma:Believe it or not. I'm telling you the truth. I'm a student of the Sadis Magic College.");
+talk(0,"Alai:Do you... have makeups?");
+talk(3,"Emma:Tee-hee, we don't spent much time on computers because we don't have any. So we needn't makeups.");
+talk(0,"Alai:How do you know so much about Human? You are a thief right? I won't believe your fiction.");
+talk(4,"Emma:Human is my major. Alright, no wonder my headmaster said it's very hard to find a man with even a little imagination.");
+talk(0,"Alai:OK,OK,I believed it. Let's find 'the one' together, okay? (I'll see what would you do, you thief)");
+talk(5,"Emma:Really? OK! Let's go. My name is Emma, and you?");
+talk(0,"Alai:Me?... I'm Alai.");
+talk(5,"Emma:So let's look around outside there.");
+NPC_walk(1,2,3);
+clr_all_NPC();
+init_NPC(9,9,0,$36,0,0,"Script_En/blank.txt");
+add_actor(1);
+talk(50,"(Emma joined the team)");
+
+
+return();

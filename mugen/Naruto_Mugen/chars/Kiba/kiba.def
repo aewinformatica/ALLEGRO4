@@ -1,0 +1,19 @@
+[Info]
+name="kiba"
+displayname="kiba"
+versiondate=04,14,2002
+mugenversion=04,14,2002
+author="Naruto and Asian "
+pal.defaults=6,3,4,2
+[Files]
+sprite=kiba.sff
+sound=
+anim=kiba.air
+cmd=kiba.cmd
+cns=kiba.cns
+st=kiba.cns
+stcommon=common1.cns
+st1=trasformation.cns
+[Arcade]
+intro.storyboard=
+ending.storyboard=

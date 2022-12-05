@@ -1,0 +1,47 @@
+#治不好SARS的医生
+
+if(34,0,"NOTHING");
+if(34,1,"OK");
+if(34,2,"NO_MORE");
+
+@END
+end();
+
+#######################################
+@NOTHING
+
+talk(50,"Doctor:Oh!Recently,a new strange disease has appeared.I have no idea to cure it.It is really troublesome.");
+goto("END");
+
+@OK
+talk(50,"Doctor:Oh!Recently,a new strange disease has appeared.I have no idea to cure it.It is really troublesome.");
+talk(0,"Alay:What's the symptom of it?");
+talk(50,"Doctor:Firstly they got cold,and then continued fever,and at last their seven orifices bled.Several persons have been dead for this disease.");
+talk(0,"Alay:(It's quite like SARS.Or even infection is in synchronism in the two fields?)I came from the Human Field.There is the same disease there.");
+talk(50,"Doctor:Oh,you are a human.It seems that there were no human beings here for hundreds of years.Are there any way that can cure it in your field?");
+talk(0,"Alay:Yes,a professor gave me this.(Show the 'SARS specific medicine')");
+talk(50,"Doctor:A professor?In which university?");
+talk(0,"Alay:Nanjing University.Have you heard of it?");
+talk(50,"Doctor:I will feel relieved if it is Nanjing University.The professors there will not make fake medicine.Can you show it clear for me?");
+talk(0,"Alay:Of course.");
+talk(50,"Doctor:Wow......I've never seen medcine like this before!");
+talk(0,"Alay:Can this cure the patients?");
+talk(50,"Doctor:......Or else I will make an exchange with you!");
+talk(0,"Alay:(Oh,this is for a man of wealth who gets SARS)There's no need for this.Just use it to save the people!!!");
+talk(50,"Doctor:What I will give you is not an ordinary thing.Look,this is the Crystal of Confidence, a mage give this to me. You deserve it!");
+talk(0,"Alay:...Okay...I accept...Thanks.");
+
+kill_obj(1);
+add_obj(5,1);
+set(34,2);
+add(35,1,1);
+talk(50,"(Received Crystal of Confidence)");
+
+goto("END");
+
+############################################
+
+@NO_MORE
+
+talk(50,"Doctor:I'm so happy, the patients can be cured!");
+goto("END");

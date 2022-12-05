@@ -1,0 +1,34 @@
+#ÍµÁËPalmµÄNPC
+
+if(41,0,"GIVE");
+if(41,1,"NO_MORE");
+
+@END
+end();
+
+#############################
+@GIVE
+
+talk(50,"Boy:......");
+talk(0,"Alai:What's up, dude, you okay?");
+talk(50,"Boy:I want to be a good guy, I don't want to be a bad guy...");
+talk(0,"Alai:Are you a fan of Infernal Affairs?");
+talk(50,"Boy:...I've stolen my classmate's PALM... Now I want to be a good person... But I dare not return it to him.");
+talk(0,"Alai:I see, what about I return it for you?");
+talk(50,"Boy:Really?");
+talk(0,"Alai:Of course, it my duty to help others ,especially ones like you.");
+talk(50,"Boy:That's so good... Here you are!");
+talk(0,"Alai:Oh, what does the owner look like?");
+talk(50,"Boy:He is standing in very front of No.8 dorm, ask him and you will know... I'm a good person now!");
+
+add_obj(7,1);
+set(41,1);
+talk(50,"(Recieved PALM)");
+goto("END");
+
+##########################################
+@NO_MORE
+
+talk(50,"Boy:I'm a good person now!");
+
+goto("END");

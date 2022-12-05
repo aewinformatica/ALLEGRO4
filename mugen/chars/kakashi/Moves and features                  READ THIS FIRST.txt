@@ -1,0 +1,122 @@
+Kakashi Version 1 by MugenGuru
+Progress - 70%
+__________________________________________________________________________________
+
+Status - 
+-All basic moves and combos done
+-Only 2/3 of special moves are done
+-No sound file yet
+-Some speical moves need "Polishing"
+-Win animation not done.
+-AI barely programmed
+__________________________________________________________________________________
+
+Authors Comments:
+Yeah, so this is the first beta version of my kakashi. 
+If you got this with the Naruto Battle Arena download, check the site.
+There will be a patch released that has the rest of his specials, his sound file,
+and his polished-off, already existing specials. This version may not be the most
+effective in combat, but keep in mind, this is the beta version and isn't quite
+finished. His AI isnt programmed totally in this version either, so he may
+be pretty cheap with the kawarimi, just bear with it.
+__________________________________________________________________________________
+NOTE: All other MUGEN saavy people out there
+
+If any other mugen skilled person goes snooping around 
+in my CNS file, i don't really care if you look at what i did and use it to better
+learn how to do something for your character, just don't steal my codes. Also, if 
+you find a code for a move that isnt in the cmd, there's a reason why I haven't 
+implemented it yet, Even if the move technically works, it may look horrible or 
+not work like i want it to. They will be included once i finish them and release 
+the patch.
+__________________________________________________________________________________
+How to install the patch:
+
+If the patch is available, to make him the full character, download it,
+and open it using WinZip. Extract the files into kakashi's folder. If it
+says something like "Do you wish to replace this file?" click "Yes to all"
+Thats all.
+__________________________________________________________________________________
+
+MOVES KEY:
+I will be referring to moves in the forms of A,B,C,X,Y,Z
+Here is what keys those commands correspond to
+
+a = A key
+b = S key
+c = D key
+
+x = Z key
+y = X key
+z = C key
+
+D = down
+DF = down/foward
+F = foward
+DB = down/back
+B = back
+__________________________________________________________________________________
+
+Moves:
+Punch/kick combos
+-Kakashi does alternating punches and kicks.
+--- Tap A,B,X, OR Y.
+
+Kawarimi (replacement)
+-Kakashi goes into a special pose, if hit, he will dissappear
+-and re appear behind the opponent, only a log sitting where he was before
+SPECIAL FEATURE: IF kakashi is hit in the pose, and it immediately hit
+after he re appears, he will do replacement again, as the replacement move's
+protection last a few seconds, no matter what
+--- C
+
+Kunai Throw
+-Kakashi throws a knife at the enemy
+--- Z
+
+Wind Cutter
+-Kakashi unleashes a small, whirling, forceful torrent of wind.
+--- D,DF,F b
+
+Chidori
+-Kakashi's ultimate move, he charges a large orb of static-type electrical
+-energy in his palm, then dashes foward, thrusting it into the opponent,
+-then zips back to the center of the stage, to prepare for the next move.
+---D,DF,F x
+
+Katon: Karyuu Endan
+-Kakashi unleashes a large flame jet at the enemy, 21 hits total
+SPECIAL FEATURE: press X just before the flame jet ends, to continue
+it another 21 hits. (at the cost of 1/2 bar of chakra)
+---D,DB,B x
+
+Water Dragon Missile
+-Kakashi preforms some seals (no screen pause) and unleashes
+-A big water dragon that moves across the screen, crushing anything it hits.
+---D,DF,F y
+
+Windmill Shuriken
+-Kakashi throws a big shuriken, that slashes through the enemy, then returns
+-after going off the screen, possibly hitting him/her again.
+---D,DB,B a
+
+Sharingan
+MOVE NOT PROGRAMMED YET (Will be updated in the patch)
+-Kakashi's bloodline ability, he reveals an eye that increases his seeing/
+-reaction time greatly, as well as being able to copy the enemy's techniques.
+-The screen turns to a red tint, and the enemy is greatly slowed 
+-as kakashi's power is slowly drained. Also,Kakashi's techniques 
+-become stronger in this mode.
+---D,DB,B b
+
+Sharingan Hypnosis
+MOVE NOT PROGRAMMED YET (Will be updated in the patch)
+-A slightly less powerful technique utilizing the sharingan. He unleashes
+-it, and uses it to send the enemy into a long trance, giving him time
+-to charge up, and do a powerful combo.
+---D,DB,B y
+
+Chakra Charge
+-Kakashi goes into a special stance and gathers energy, as long as the
+-player holds the buttons down
+--- A + X

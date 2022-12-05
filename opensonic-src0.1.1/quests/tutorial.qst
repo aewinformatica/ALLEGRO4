@@ -1,0 +1,13 @@
+# -------------------
+# Tutorial quest
+# tutorial.qst
+# -------------------
+
+name            Tutorial quest
+author          Alexandre Martins
+version         0.1.0
+description     Learn how to play Open Sonic
+image           quests/tutorial.png
+
+level           levels/tutorial_1.lev
+level           levels/tutorial_2.lev

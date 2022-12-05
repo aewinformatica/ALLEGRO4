@@ -1,0 +1,2 @@
+talk(50,"University Student:Damn it,what a fucking mouse. I can't shoot anyone.");
+NPC_turn(3,2);

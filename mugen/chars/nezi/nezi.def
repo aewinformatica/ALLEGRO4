@@ -1,0 +1,30 @@
+; ここにキャラ情報を書いてください
+[Info]
+name = "Nezi"        ;キャラの名前
+displayname = "neji" ;表示されるキャラの名前
+versiondate = 2,20,2005    ;キャラの更新情報
+mugenversion = 11,20,2005   ;キャラが動くmugenのバージョン
+author = "hyuga"         ;キャラの製作者名
+pal.defaults = 6,3,4,2      ;敵としてでるキャラのパレット
+
+; Files for the player
+[Files]
+cmd     = nezi.cmd   ;キャラのコマンド
+cns     = nezi.cns   ;キャラのプログラム
+st      = nezi.cns   ;キャラのプログラム
+st1     = -3.cns
+st2     = jump.cns
+st3     = power.cns
+st4     = striker.cns
+st5     = away.cns
+st6     = airdash.cns
+stcommon = common.cns 
+sprite  = nezi.sff   ;キャラの絵
+anim    = nezi.air   ;キャラの動き
+sound   = nezi.snd   ;キャラの音
+pal1    = n.act  ;キャラの色（最大１２個）
+pal2    = n.act
+pal3    = n.act
+pal4    = n.act
+pal5    = n.act
+pal6    = n.act

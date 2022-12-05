@@ -1,0 +1,171 @@
+#显示结语
+#考试回忆
+go_inout(0,1);
+delay(32);
+set_game_status(1);
+clr_all_NPC();
+load_map("map/end/blank.map","map/end/test.bmp","map/end/blank_sky.bmp");
+show_screen_image(32,96,4,255);
+set(46,255);
+set_game_status(0);
+go_inout(0,0);
+delay(32);
+@TEST1
+ show_screen_image(32,96,4,$46);
+ set_game_status(1);
+ add(46,15,0);
+ if(46,0,"TEST_CONT1");
+ set_game_status(0);
+ goto("TEST1");
+@TEST_CONT1
+ set_game_status(0);
+ set(46,0);
+
+@TEST2
+ show_screen_image(384,112,8,$46);
+ set_game_status(1);
+ add(46,15,1);
+ if(46,255,"TEST_CONT2");
+ set_game_status(0);
+ goto("TEST2");
+@TEST_CONT2
+ set_game_status(0);
+ delay(104);
+
+@TEST3
+ show_screen_image(384,112,8,$46);
+ set_game_status(1);
+ add(46,15,0);
+ if(46,0,"TEST_CONT3");
+ set_game_status(0);
+ goto("TEST3");
+@TEST_CONT3
+ set_game_status(0);
+
+#飞行回忆
+go_inout(0,1);
+delay(32);
+set_game_status(1);
+clr_all_NPC();
+load_map("map/end/blank.map","map/end/sky.bmp","map/end/blank_sky.bmp");
+set(46,255);
+show_screen_image(32,96,5,255);
+set_game_status(0);
+go_inout(0,0);
+delay(32);
+@SKY1
+ show_screen_image(32,96,5,$46);
+ set_game_status(1);
+ add(46,15,0);
+ if(46,0,"SKY_CONT1");
+ set_game_status(0);
+ goto("SKY1");
+@SKY_CONT1
+ set_game_status(0);
+
+@SKY2
+ show_screen_image(384,112,9,$46);
+ set_game_status(1);
+ add(46,15,1);
+ if(46,255,"SKY_CONT2");
+ set_game_status(0);
+ goto("SKY2");
+@SKY_CONT2
+ set_game_status(0);
+ delay(104);
+
+@SKY3
+ show_screen_image(384,112,9,$46);
+ set_game_status(1);
+ add(46,15,0);
+ if(46,0,"SKY_CONT3");
+ set_game_status(0);
+ goto("SKY3");
+@SKY_CONT3
+ set_game_status(0);
+
+#战斗回忆
+go_inout(0,1);
+delay(32);
+set_game_status(1);
+clr_all_NPC();
+load_map("map/end/blank.map","map/end/base.bmp","map/end/blank_sky.bmp");
+set(46,255);
+show_screen_image(32,96,6,255);
+set_game_status(0);
+go_inout(0,0);
+delay(32);
+@BASE1
+ show_screen_image(32,96,6,$46);
+ set_game_status(1);
+ add(46,15,0);
+ if(46,0,"BASE_CONT1");
+ set_game_status(0);
+ goto("BASE1");
+@BASE_CONT1
+ set_game_status(0);
+
+@BASE2
+ show_screen_image(384,112,10,$46);
+ set_game_status(1);
+ add(46,15,1);
+ if(46,255,"BASE_CONT2");
+ set_game_status(0);
+ goto("BASE2");
+@BASE_CONT2
+ set_game_status(0);
+ delay(104);
+
+@BASE3
+ show_screen_image(384,112,10,$46);
+ set_game_status(1);
+ add(46,15,0);
+ if(46,0,"BASE_CONT3");
+ set_game_status(0);
+ goto("BASE3");
+@BASE_CONT3
+ set_game_status(0);
+
+#晚霞回忆
+go_inout(0,1);
+delay(32);
+set_game_status(1);
+clr_all_NPC();
+load_map("map/end/blank.map","map/end/sun.bmp","map/end/blank_sky.bmp");
+set(46,255);
+show_screen_image(32,96,7,255);
+set_game_status(0);
+go_inout(0,0);
+delay(32);
+@SUN1
+ show_screen_image(32,96,7,$46);
+ set_game_status(1);
+ add(46,15,0);
+ if(46,0,"SUN_CONT1");
+ set_game_status(0);
+ goto("SUN1");
+@SUN_CONT1
+ set_game_status(0);
+
+@SUN2
+ show_screen_image(384,112,11,$46);
+ set_game_status(1);
+ add(46,15,1);
+ if(46,255,"SUN_CONT2");
+ set_game_status(0);
+ goto("SUN2");
+@SUN_CONT2
+ set_game_status(0);
+ delay(104);
+
+@SUN3
+ show_screen_image(384,112,11,$46);
+ set_game_status(1);
+ add(46,15,0);
+ if(46,0,"SUN_CONT3");
+ set_game_status(0);
+ goto("SUN3");
+@SUN_CONT3
+ set_game_status(0);
+
+return();

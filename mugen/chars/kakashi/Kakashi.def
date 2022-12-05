@@ -1,0 +1,28 @@
+; Definition file for Kakashi
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Hatake Kakashi"        ;Name of character
+displayname = "Kakashi" ;Name of character to display
+versiondate = 04,14,2002    ;Version date of character (MM-DD-YYYY)
+mugenversion = 04,14,2002   ;Version of M.U.G.E.N character works on
+author = "MugenGuru"         ;Character author name
+pal.defaults = 1             ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = kakashi.cmd   ;Command set
+cns     = kakashitest.cns   ;Constants
+st      = kakashitest.cns   ;States
+stcommon = common1.cns ;Common states
+sprite  = kakashi.sff   ;Sprite
+anim    = kakashi.air   ;Animation
+sound   = kakashi.snd   ;Sound
+pal1    = kakashi.act  ;Palettes (can have up to 12)
+
+
+; Arcade mode
+[Arcade]
+intro.storyboard =
+ending.storyboard =

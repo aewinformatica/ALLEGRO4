@@ -1,0 +1,41 @@
+#百佳的售货员
+
+if(38,0,"CATCH");
+if(38,2,"CAUGHT");
+
+@END
+end();
+
+##############################
+@CATCH
+talk(0,"Alay:Miss,I want to buy a pair of shoes.");
+talk(50,"Saleslady:But the monkey is making the shop into chaos,I have to catch it first!");
+talk(3,"Emma:A monkey? It's easy,let's help you!");
+talk(50,"Saleslady:Oh,thanks a lot. Students of Nanjing University are so kind!");
+talk(50,"Alay:(But,but my shoes are broken...)");
+
+go_inout(0,1);
+
+clr_all_NPC();
+init_NPC(22,6,1,$36,0,0,"Script_En/super/catch.txt");
+init_NPC(22,7,1,8,0,1,"Script_En/super/catch.txt");
+init_NPC(22,8,1,4,0,14,"Script_En/super/catch.txt");
+init_NPC(7,8,2,8,2,16,"Script_En/super/caught.txt");
+set(38,1);
+
+play_midi("music/monkey.mid");
+
+go_inout(0,0);
+
+talk(50,"(Now,you are in the catching mode,you need to 'talk' to the monkey to catch it)");
+talk(50,"(That is,you have to approach the monkey and press X)")
+talk(50,"(The monkey is swift,it will run away if you approach it)");
+talk(50,"(So,the three people should pull togegher,you can switch actors by pressing the key S.)");
+talk(50,"(Now,work hard. Remember,the key to switch actors is S!)");
+
+goto("END");
+
+##################################
+@CAUGHT
+talk(50,"Saleslady:Thanks again,the students of Nanjing University are so larruping!!!");
+goto("END");

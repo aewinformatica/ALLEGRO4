@@ -1,0 +1,20 @@
+[Info]
+name="FSasuke"
+displayname="Future Sasuke"
+versiondate=02,20,2007
+mugenversion=06,14,2003
+author="blitz091"
+pal.defaults=1
+[Files]
+sprite=FSasuke.sff
+sound=FSasuke.snd
+anim=FSasuke.air
+cmd=FSasuke.cmd
+cns=FSasuke.cns
+st=FSasuke.cns
+stcommon=common1.cns
+pal1=FSasuke.act
+pal2=
+[Arcade]
+intro.storyboard=
+ending.storyboard=

@@ -1,0 +1,34 @@
+; ここにキャラ情報を書いてください
+[Info]
+name = "Lee"        ;キャラの名前
+displayname = "Rock Lee" ;表示されるキャラの名前
+versiondate = 2,20,2005    ;キャラの更新情報
+mugenversion = 11,20,2005   ;キャラが動くmugenのバージョン
+author = "hyuga"         ;キャラの製作者名
+pal.defaults = 6,3,4,2      ;敵としてでるキャラのパレット
+
+; Files for the player
+[Files]
+cmd     = lee.cmd   ;キャラのコマンド
+cns     = lee.cns   ;キャラのプログラム
+st      = lee.cns   ;キャラのプログラム
+st1     = -3.cns
+st2     = jump.cns
+st3     = power.cns
+st4     = striker.cns
+st5     = away.cns
+st6     = airdash.cns
+stcommon = common1.cns 
+sprite  = lee.sff   ;キャラの絵
+anim    = lee.air   ;キャラの動き
+sound   = lee.snd   ;キャラの音
+pal1    = lee.act  ;キャラの色（最大１２個）
+pal2    = lee.act
+pal3    = lee.act
+pal4    = lee.act
+pal5    = lee.act
+pal6    = lee.act
+
+; Arcade mode 
+[Arcade] 
+ending.storyboard = credits.def

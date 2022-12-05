@@ -1,0 +1,132 @@
+#goto("HERE");
+#与埃玛对话，结束游戏
+
+talk(5,"Emma:Alay,are you all right?");
+talk(1,"Alai:I'm OK.I'm just OK. You don't need to worry about me......");
+talk(4,"Emma:I was so anxious for you these days. You have been sleeping for half a month!");
+talk(2,"Alai:Half a month is not so long. I was sleeping all the time in the three years...");
+talk(3,"Emma:It's just fine if you are all right.");
+talk(0,"Alai:Sleeping for three years, and it would be the right time to wake up now.");
+talk(0,"Alai:You see that over the sea?");
+
+go_inout(65534,1);
+clr_all_NPC();
+load_map("map/sky/blank.map","map/sky/sunset.bmp","map/sky/blank_sky.bmp");
+go_inout(65534,0);
+
+talk(5,"Emma:Wow,it's afterglow! I haven't seen such beautiful afterglow all my life!");
+talk(0,"Alai:Red...flaming...sun... like the impassioned heart in the dream...");
+talk(3,"Emma:Alay,what are you planning for your future?");
+delay(18);
+talk(2,"Alai:......Future......may be just like the sun,it will always rise after the sunset......");
+talk(3,"Emma:Will you......be back to our Fairy Field?");
+talk(0,"Alai:......I don't know......");
+talk(4,"Emma:......");
+delay(18);
+talk(3,"Emma:Oh,I have a present for you!");
+talk(0,"Alai:What...is this?");
+talk(3,"Emma:It's Magic Crystal Ball. When you are back to Human Field,you can see Emma in it...");
+delay(18);
+talk(5,"Emma:If you can still remember me...");
+talk(0,"Alai:How can I forget......");
+
+go_inout(0,1);
+
+delay(36);
+talk(50,"Will:Are you ready? The Space-Time Transmission is beginning.");
+talk(50,"Alai:Yes,I'm ready!");
+talk(50,"Emma:Alay......Remember Emma is here......");
+midi_out();
+talk(50,"Alai:Emma.......");
+
+set_game_status(1);
+
+call("Script_En/room/load.txt");
+NPC_set(0,10,8);
+NPC_turn(0,2);
+
+set_game_status(0);
+
+play_sound("sound/emma_come.wav");
+go_inout(0,0);
+
+delay(36);
+#电话铃响
+play_sound("sound/phone_call.wav");
+talk(0,"Alay:Somebody is calling me.");
+NPC_walk(0,3,3);
+NPC_walk(0,2,4);
+delay(9);
+talk(0,"Alay:Hello?");
+talk(50,"Mum:Hello,is that Alay?What are you doing there?");
+delay(9);
+talk(0,"Alai:......I was readingmy book.");
+talk(50,"Mum:You are so industrious to read in vacation.How about your exam?");
+delay(9);
+talk(0,"Alai:It's......fine......I think......I can pass......");
+talk(50,"Mum:Take care of yourself in the school. Notice your diet. Don't just eat Mcdonald's and Kentucky.");
+talk(0,"Alai:I know.");
+talk(50,"Mum:And,it's cold these days. Remember to add clothes. How many quilts are you covering?");
+talk(0,"Alai:Two.");
+talk(50,"Mum:It's getting warm soon,SARS may be epidemic. Don't get cold!");
+talk(0,"Alai:I know.");
+talk(50,"Mum:Your dad is not working well these days. You can phone him if you have time.");
+talk(0,"Alai:But I don't have telephone card.");
+talk(50,"Mum:You can also use your cellphone to send short message. Your dad's cellphone is just waiting your short message.");
+talk(0,"Alai:I know.");
+talk(50,"Mum:That's just OK. Tell me if your money is not enough.");
+talk(0,"Alai:I still have much money.");
+talk(50,"Mum:Well,I will hang up");
+talk(0,"Alai:Oh.");
+
+#电话的嘟声
+play_sound("sound/phone_off.wav");
+
+NPC_turn(0,0);
+
+delay(72);
+
+talk(0,"Alai:What was I waiting all the time...... Was it......a dream......");
+delay(18);
+talk(0,"Alai:(touch the pocket)......Crystal Ball......Emma......");
+player_walk(1,1);
+player_walk(2,1);
+delay(18);
+talk(0,"Alai:Wow......Outside......It is snowing......");
+talk(0,"Alai:...A New Year...is coming......");
+delay(18);
+talk(0,"Alai:......The world...should also have a new beginning......");
+
+@HERE
+play_midi("music/end.mid");
+
+call("Script_En/magic/show_end.txt");
+
+#显示作者列表
+go_inout(0,1);
+set_game_status(1);
+clr_all_NPC();
+load_map("map/credits/credits.map","map/credits/credits.bmp","map/credits/credits_sky.bmp");
+shut_screen_image();
+set_game_status(0);
+go_inout(0,0);
+set_screen_status(1);
+screen_move(0,1248,1);
+talk(60,"aa");
+
+#显示最终画面
+go_inout(0,1);
+set_game_status(1);
+clr_all_NPC();
+load_map("map/sky/blank.map","map/sky/face.bmp","map/sky/blank_sky.bmp");
+set_weather(0);
+show_screen_image(240,400,3,255);
+set_screen_status(0);
+set_game_status(0);
+go_inout(0,0);
+talk(60,"aa");
+go_inout(0,1);
+midi_out();
+quit();
+@END
+end();

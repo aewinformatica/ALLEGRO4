@@ -1,0 +1,3 @@
+https://osdn.net/projects/sfnet_openmugen/releases/
+
+https://sourceforge.net/projects/mugen-net/

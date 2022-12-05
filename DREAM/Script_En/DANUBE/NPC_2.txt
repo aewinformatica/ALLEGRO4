@@ -1,0 +1,2 @@
+talk(50,"University Student:Let's play Diablo.");
+NPC_turn(2,2);

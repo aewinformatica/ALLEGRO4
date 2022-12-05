@@ -1,0 +1,270 @@
+Bug List
+========
+27Nov06
+Error:The colour setup for concrete & solid required a save and reload to lock in.
+[Fixed: update editor BMP's rather than the runtime's.]
+
+8 Nov 06
+Tank 6 does not have a barrel.
+[Fix: The barrel colour for tank 6 was (255,0,255) ie transparent]
+
+RabidChocobo Posted: Thu Aug 24, 2006 
+Secret character unlock bug...   
+If you shoot a sentry pod during the challenge against ShadowFang, 
+The round ends in a tie. 
+
+
+
+*****************************************
+This is my listing of the current status for my copy of the source code. 
+Will be released when site is ready. 
+
+as of 21 Aug 2006 
+
+Status Update as of 2006 08 20 
+======== 
+Colour bar on shot timer goes to top of screen in non-mulitplayer mode. 
+Editor can show/hide HUD. 
+Screenshot can be set to be bmp and /or jpeg (or nothing). 
+Added video option to outline barrel. 
+Modified AI to stop bots buying other bots specials. 
+Modified artwork to stop tank slides and added water & lava where required. (Does not affect game play really!) 
+Added a slot to the NIV screen so barrel can be seen. 
+
+Update on Bug list 2006 07 16 
+=============================
+
+Console message that tank was killed by "a player off the server with a kick message" 
+
+Liquid weapons still explode in mid air sometimes. Can any one find a repeatable method of causing this? 
+
+Problems with the special levels not running to completion. 
+
+Set random generator seed to help with dirt sync in multiplayer games. Other changes would require the network protocol to be changed and be non backward compatiable. 
+
+Added tests to loading data files so now gives error message rather than crashing. 
+
+In multiplayer, if client did not have same map as server, then it loaded a random one. Changed so it loads an internal one with error message. 
+
+"Want list" C. Added menu item to editor to make water particles flow. 
+
+Autodefense freeze in multiplayer. 
+{fixed I think -- no comments yet} 
+
+Modified code so it will compile correctly with Dev-C++ and CodeBlocks as well as MSC++ 6 & 7. 
+
+Added jpeg as addition to screenshot. JPEG=90k BMP=1.4M. (Request by Picky33). 
+
+*********************************
+
+
+Current Bugs
+============
+    Liquid weapons sometimes explode in mid-air, rather than upon ground impact.
+     {? -- }
+    
+    Fire Toad can do Friendly Fire even with friendly fire turned OFF.
+    It seems to only happen after my bot friend has enabled a shield.
+    It doesn't do friendly fire when they don't have a shield.
+    After I took down his shield I was able to take him out next turn....
+    Maybe you can only do damage to them after the shield is enabled but can continue to when it's gone? 
+     {? -- }
+    
+    Sentries only work once in a level.
+     {? -- }
+
+
+
+Random Bugs (fixed  --  hopefully)
+===========
+    When you click end game on the esc menu it still sometimes just quits the program
+     {fixed -- buttons offset so yes click is not transfered to quit button.}
+    
+    Button placement is a little bit off in the main menu.
+     Like when you hover just barely above an option the option above it is highlighted.
+     {fixed -- mouse cursor aligned to button text. Highlight added cause I like it.}
+    
+    The main menu music dosnt play after you've come back from a game.
+     {fixed -- added music call where missing. Still to check multiplayer. }
+    
+    Music no longer cuts off when you go into editor mode.
+     {No music in editor mode. Only plays when selected from menu. } 
+    
+    The "addbot" console command does not include the lobber or Gunner AI's. 
+     {fixed -- not tested. }
+    
+    Reclassing an AI to a human player gives the human Mini-mirvs and other AI weapons. 
+     {Reclassing is coded as a cheat. This is a method of getting upgraded weapons. Nothing done.}
+     
+    The heavy roller blows up as soon as it hits the wrap-around wall,
+     rather than actually appearing on the other side of the screen.
+     {roller & Fire Starter (crusers) are coded to explode at the wall regardless of type. }
+    
+    Esc key still kills the editor, taking the game to a non menu covered screen.
+     {fixed -- reverts to main menu as per menu quit. }
+    
+    The interface won't allow you to save in certian folders (especially if it's outside the game folder) 
+     {fixed -- extended to 256 chars for full path name -- not tested. } 
+    
+    Funky Bomb has some sync problems in multiplayer. Roller sometimes follows different paths.
+     {multiplayer dirt sync needs checking. }
+		
+    Game freezes when "NO TANK GRAVITY".
+     {fixed -- tank falling routine. }
+		 
+    Game freezes when tank has float.
+     {fixed -- tank falling routine. }
+		 
+    Added water options to Editor menu of placeWater, setWaterColor & removeWater.
+     {Code was not connected to menu. Added flowWater. }
+		 
+    Computer AI shows the wrong missile on the screen at various times.
+     {fixed -- leaves the missile display at zero.}
+
+     
+    
+Level Bugs
+==========
+    Tank sliding in Egyptian Pyramid level.
+     {? -- need to modify artwork or reposition tank.}
+    
+    Stalactite placement in Carlsbad. 
+     {? -- Okay, where do they go?}
+    
+    Tank Fall in Antarctica.
+     {? -- tank slide. need to modify artwork or reposition tank.}
+    
+    Fix refinery level so you can't fall down the right-hand side.
+     {? -- I think this was fixed by someone??}
+    
+    Siberian Cave needs water.
+     {? -- how high? }
+     
+    fix object placement boxes
+     {fixed -- assume this was refering to the sprite placement.}
+    
+    Lose health at bottom of "Mouth of Inferno".
+     {fixed -- added red liquid to show larva heat damage.}
+    
+    
+Additions
+=========
+    new Computer AI sprites.
+    Each AI computer gets their own respective tank.
+     {? -- smackbringer has artwork. To be added to data file. }
+    
+    Text listing of a level in the Editor.
+     {Added -- needs interface clean up. }
+    
+    Capability to use scripting to modify a level.
+     {? -- mod deleted. Has memory leak. }
+    
+    Ability to add non-falling dirt to a level.
+     {Added -- Need to document methods. Uses pixel(0,0) on foreground.
+      If not set then finds an unused colour from foreground.}
+    
+    Tunnel laser. Can bore hole and drive into it.
+     {Added -- Modified to leave concrete on top edge only.}
+    
+    Earthquake mole. Good for breaking up smooth surfaces to stop lava flow.
+     {? -- Deleted. Was just a weapon code try out. }
+    
+    
+    
+Annoying items (maybe looked at much later)
+==============
+    When you launch a Sentry Pod, lava has a chance of going off before the Sentry Pod does.
+    It will land, then lava comes up, THEN the Sentry Pod goes off.
+     {? --  }
+    
+    Bots can have super weapons when humans have to work for them.
+    They should only be allowed to use them when you unlock them.
+     {? --  }
+        
+    make the AI's smarter, they do stupid things.
+    Like fire beam weapons up when target is down.
+     {? --  }
+      
+    Bots do not recognize weapon-specific damage patterns; when using turrets, pods,
+     and (secret character's weapon) the bots fire at the center of the tank instead 
+     of off to the side, and when using direct-fire weapons sometimes bots try to 
+     shoot through obviously too big hills.
+     {? --  }
+    
+    If you are at the bottom of a level, or underwater, a missile will do 147 damage instead of 105. 
+     {? --  }
+    
+    Need to have a way to make the tank barrel visible behind/outside of the NIV shield.
+     {part fixed -- gap in NIV shield allows barrel to be seen. }
+      
+    Need to have a way to make the tank barrel visible against the background.
+     {part fixed -- Removed blend from barrel so it should be sharper/more contrast.} 
+    
+    
+    
+Balance Weapons
+===============
+    The flak is way too powereful.
+    [The flak Detonator will still kill someone with a direct hit, however, the shards are more spaced out
+     and make it harder to hit, and the shards themselves are weaker.]
+     {enough for now}
+    
+    The funky bomb is as over-powered, if not MORE over-powered, than the Flak Detonator. 
+     $6,500 for 3... That's just over $2,000 each. The problem is, each fragment does 50-200 damage each,
+     and then the center explodes with the force of a mini-nuke. That's close to 1000 points of damage for           $2000. I've seen 3 full-powered un-shielded tanks killed by a single Funky Bomb. 
+     {later}
+    
+    The sniper that uses the twin elec lances always hits the same guy dead on twice.
+     The sniper should spred the second shot out.
+     {The lances kill what is between them. Need to put an offset into the shot. Only used by sniper.}
+    
+    
+    
+Art Issues
+========== 
+    Redo Orbital Satellite Beam 
+    
+    
+    
+The "I Want" list
+=================
+    Slow down funky bomb animation?
+     {more details required }
+    
+    Add Tank Death sayings from Scorched Earth?
+     {later -- is there a copyright problem?? }
+    
+    Add menu item to editor to make water particles flow.
+     {later }
+    
+From dcsteve
+    1. More weapons- mud weapons, funky nukes. 
+    2. More secrets- to have special items to be unlockable based on finding them in the level.
+       Example, in the pyramid level, if you dig up the entire area where the tomb is, you get
+       some kind of pyramid mud weapon or something for the duration of the game.
+       {Level scripting may be of use here!! }
+
+
+
+
+
+#########################################################
+Bugs fixed by TwelveBaud in release 0.99cR2
+
+    The reason multiplayer doesn't work is because ShadowFang forgot to draw the
+     background of the player select screen in the multiplyaer player setup routine! 
+    
+    Updated versions of Allegro and the C Runtime.
+		
+    Fixed only having Ricky and Marie be able to have the Funky Bomb.
+    {Now avaible to all players.} Funky Bomb has some sync problems in multiplayer.
+		
+    Limits players to purchasing a maximum of one superweapon. It does not apply to computer players.
+		 
+    Fixed the spelling error of "Floatation Device". 
+		 
+    Fixed character unlocks.
+     {ShadowFang plumb forgot to call the code that checks if you should get a secret character.}
+		 
+#########################################################
+		 

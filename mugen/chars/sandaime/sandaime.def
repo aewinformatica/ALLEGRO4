@@ -1,0 +1,31 @@
+; Definition file for Blank
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="sandaime"
+displayname ="Sandaime"
+versiondate =05,23,2006
+mugenversion =06,14,2003
+author ="Teddy Nicol"
+pal.defaults =1
+
+; Files for the player
+[Files]
+cmd     =sandaime.cmd
+cns     =sandaime.cns
+st      =sandaime.cns
+stcommon =common1.cns
+sprite  =sandaime.sff
+anim    =sandaime.air
+sound   =sandaime.snd
+pal1=sandaime.act
+
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = 
+;ending.storyboard = 
+[Arcade]
+intro.storyboard=
+ending.storyboard=

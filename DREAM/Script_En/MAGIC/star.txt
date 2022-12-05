@@ -1,0 +1,42 @@
+#ÃÔ»óµÄÕ¼ÐÇÊ¦
+
+if(32,0,"NOTHING");
+if(32,1,"OK");
+if(32,2,"NO_MORE");
+
+@END
+end();
+
+#######################################
+@NOTHING
+
+talk(50,"stargazer:I always feel strange about the movement of the stars, but I can't figure out what had happened.");
+goto("END");
+
+@OK
+talk(50,"stargazer:I always feel strange about the movement of the stars, but I can't figure out what had happened.");
+talk(0,"Alai:Maybe an invisible nova had appeared.");
+talk(50,"stargazer:What? Just continue!");
+talk(0,"Alai:I'm a human. Our astronomer have found a neutron star. Just here(show the star map)");
+talk(50,"stargazer:Wow......it's exactly same with my observation! Everything can be explained! Can I keep this?");
+talk(0,"Alai:(Although it's not good to send the memento which the professor gave me. But for science it will be different)That's OK!");
+talk(50,"stargazer:This is extremely fine. I have a precious gift for you.");
+talk(0,"Alai:What is this?");
+talk(50,"stargazer:It's Crystal of Dream. It gathered the power of stars. It can enhance a person's imagination. I used a month to refine it.");
+talk(0,"Alai:Well...thank you.");
+talk(50,"stargazer:You are so welcome.");
+
+kill_obj(3);
+add_obj(6,1);
+set(32,2);
+add(35,1,1);
+talk(50,"(Obtain Crystal of Dream)");
+
+goto("END");
+
+############################################
+
+@NO_MORE
+
+talk(50,"stargazer:You are so welcome.");
+goto("END");

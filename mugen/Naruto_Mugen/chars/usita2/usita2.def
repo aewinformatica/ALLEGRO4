@@ -1,0 +1,39 @@
+; Definition file for Blank
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="usita"
+displayname ="Psycho Itachi"
+versiondate =05,23,2006
+mugenversion =04,14,2002
+author ="Anjel"
+pal.defaults =1
+
+; Files for the player
+[Files]
+cmd     =usita.cmd
+cns     =usita.cns
+st      =usita.cns
+stcommon =itacommon.cns
+sprite  =usita.sff
+anim    =usita.air
+;sound   = .snd   ;Sound
+sound=usita.snd
+pal1=usita.act
+pal2=usita2.act
+pal3=usita3.act
+pal4=usita4.act
+pal5=usita5.act
+pal6=
+st1=itabun.cns
+st2=sharingan.cns
+
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def
+[Arcade]
+intro.storyboard=
+ending.storyboard=

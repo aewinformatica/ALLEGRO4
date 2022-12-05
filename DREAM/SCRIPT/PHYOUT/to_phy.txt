@@ -1,0 +1,14 @@
+#µ½ÎïÀíÂ¥
+go_inout(0,1);
+
+set_game_status(1);
+
+call("script/phyin/load.txt");
+NPC_set(0,11,18);
+NPC_turn(0,2);
+
+set_game_status(0);
+
+go_inout(0,0);
+
+@END

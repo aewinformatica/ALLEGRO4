@@ -1,0 +1,438 @@
+
+(level 
+  (z 
+    (minimum 141) 
+    (maximum 224)) 
+  (background-parallax 6.0) 
+  (foreground-parallax 5.1) 
+  (background "./wolfburg/bgs/heckate/bgk.png") 
+  (panel 0 "./wolfburg/bgs/heckate/h1.png" junk junk) 
+  (panel 1 "./wolfburg/bgs/heckate/h2.png" junk junk) 
+  (order 0 0 0 0 0 0 0 0 0 0 0 0 1) 
+  (block 
+    (length 320)) 
+  (block 
+    (length 320) 
+    (object 
+      (type enemy) 
+      (name "RedDrone") 
+      (path "chars/joe/joe.txt") 
+      (map 0) 
+      (health 60) 
+      (coords 321 46)) 
+    (object 
+      (type enemy) 
+      (name "BlueDrone") 
+      (path "chars/joe/joe.txt") 
+      (map 1) 
+      (health 60) 
+      (coords -71 22)) 
+    (object 
+      (type enemy) 
+      (name "GreenDrone") 
+      (path "chars/joe/joe.txt") 
+      (map 2) 
+      (health 60) 
+      (coords 144 41)) 
+    (object 
+      (type enemy) 
+      (name "PurpleDrone") 
+      (path "chars/joe/joe.txt") 
+      (map 3) 
+      (health 60) 
+      (coords -16 46)) 
+    (object 
+      (type enemy) 
+      (name "Necktar") 
+      (path "chars/shermie/shermie.txt") 
+      (map 2) 
+      (health 90) 
+      (aggression 91) 
+      (coords 190 7)) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 95 0) 
+      (stimulation 
+        (health 500))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 249 0) 
+      (stimulation 
+        (health 500)))) 
+  (block 
+    (length 320) 
+    (object 
+      (type enemy) 
+      (name "Yellow") 
+      (path "chars/eiji/eiji.txt") 
+      (map 1) 
+      (health 70) 
+      (coords 174 0)) 
+    (object 
+      (type enemy) 
+      (name "Golden") 
+      (path "chars/eiji/eiji.txt") 
+      (map 1) 
+      (health 70) 
+      (coords 216 0)) 
+    (object 
+      (type enemy) 
+      (name "Mojo Picante") 
+      (path "chars/robert/robert.txt") 
+      (map 0) 
+      (health 120) 
+      (aggression 88) 
+      (coords 355 2)) 
+    (object 
+      (type enemy) 
+      (name "Mariachi") 
+      (path "chars/robert/robert.txt") 
+      (map 1) 
+      (health 60) 
+      (coords 151 52)) 
+    (object 
+      (type enemy) 
+      (name "Chavez") 
+      (path "chars/robert/robert.txt") 
+      (map 1) 
+      (health 70) 
+      (aggression 96) 
+      (coords 112 38)) 
+    (object 
+      (type enemy) 
+      (name "Honey") 
+      (path "chars/shermie/shermie.txt") 
+      (map 2) 
+      (health 80) 
+      (coords 204 68)) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 295 0) 
+      (stimulation 
+        (health 500)))) 
+  (block 
+    (length 320) 
+    (object 
+      (type enemy) 
+      (name "Bash") 
+      (path "chars/heavy/heavy.txt") 
+      (map 0) 
+      (health 100) 
+      (coords -27 83)) 
+    (object 
+      (type enemy) 
+      (name "Chunk") 
+      (path "chars/heavy/heavy.txt") 
+      (map 1) 
+      (health 100) 
+      (coords 264 1)) 
+    (object 
+      (type enemy) 
+      (name "Dash") 
+      (path "chars/ralf/ralf.txt") 
+      (map 1) 
+      (health 50) 
+      (aggression 80) 
+      (coords 356 83)) 
+    (object 
+      (type enemy) 
+      (name "Crash") 
+      (path "chars/ralf/ralf.txt") 
+      (map 0) 
+      (health 70) 
+      (coords 265 23)) 
+    (object 
+      (type enemy) 
+      (name "Smash") 
+      (path "chars/ralf/ralf.txt") 
+      (map 3) 
+      (health 70) 
+      (coords 411 41)) 
+    (object 
+      (type enemy) 
+      (name "Mash") 
+      (path "chars/ralf/ralf.txt") 
+      (map 2) 
+      (health 70) 
+      (coords 31 22)) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 144 0) 
+      (stimulation 
+        (health 500))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 216 0) 
+      (stimulation 
+        (health 500)))) 
+  (block 
+    (length 320) 
+    (object 
+      (type enemy) 
+      (name "Dawg") 
+      (path "chars/punk/punk.txt") 
+      (map 1) 
+      (health 60) 
+      (coords 205 37)) 
+    (object 
+      (type enemy) 
+      (name "Mutt") 
+      (path "chars/punk/punk.txt") 
+      (map 1) 
+      (health 60) 
+      (coords 118 33)) 
+    (object 
+      (type enemy) 
+      (name "Curr") 
+      (path "chars/punk/punk.txt") 
+      (map 1) 
+      (health 60) 
+      (coords 261 9)) 
+    (object 
+      (type enemy) 
+      (name "Dog") 
+      (path "chars/punk/punk.txt") 
+      (map 1) 
+      (health 60) 
+      (coords 54 2)) 
+    (object 
+      (type enemy) 
+      (name "Mongrel") 
+      (path "chars/punk/punk.txt") 
+      (map 1) 
+      (health 60) 
+      (aggression 92) 
+      (coords 300 52)) 
+    (object 
+      (type enemy) 
+      (name "Alpha") 
+      (path "chars/punk/punk.txt") 
+      (map 0) 
+      (health 120) 
+      (coords 303 83)) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 215 0) 
+      (stimulation 
+        (health 500)))) 
+  (block 
+    (length 320) 
+    (object 
+      (type enemy) 
+      (name "Dandy") 
+      (path "chars/yashiro/yashiro.txt") 
+      (map 1) 
+      (health 60) 
+      (coords 282 44)) 
+    (object 
+      (type enemy) 
+      (name "Malakai") 
+      (path "chars/yashiro/yashiro.txt") 
+      (map 2) 
+      (health 40) 
+      (coords 244 57)) 
+    (object 
+      (type enemy) 
+      (name "Chester") 
+      (path "chars/yashiro/yashiro.txt") 
+      (map 0) 
+      (health 60) 
+      (coords 303 79)) 
+    (object 
+      (type enemy) 
+      (name "Oscar") 
+      (path "chars/yashiro/yashiro.txt") 
+      (map 3) 
+      (health 60) 
+      (coords 300 0)) 
+    (object 
+      (type enemy) 
+      (name "Jimmy Jihad") 
+      (path "chars/jhun/jhun.txt") 
+      (map 0) 
+      (health 100) 
+      (coords 326 21)) 
+    (object 
+      (type enemy) 
+      (name "Gaston") 
+      (path "chars/jhun/jhun.txt") 
+      (map 2) 
+      (health 70) 
+      (coords 44 31)) 
+    (object 
+      (type enemy) 
+      (name "Charles") 
+      (path "chars/jhun/jhun.txt") 
+      (map 1) 
+      (health 60) 
+      (coords 44 31)) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 258 0) 
+      (stimulation 
+        (health 500))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 227 0) 
+      (stimulation 
+        (health 500)))) 
+  (block 
+    (length 320) 
+    (object 
+      (type enemy) 
+      (name "Poke") 
+      (path "chars/billy/billy.txt") 
+      (map 1) 
+      (health 40) 
+      (coords -132 11)) 
+    (object 
+      (type enemy) 
+      (name "Pole") 
+      (path "chars/billy/billy.txt") 
+      (map 2) 
+      (health 40) 
+      (coords 265 83)) 
+    (object 
+      (type enemy) 
+      (name "Stick") 
+      (path "chars/billy/billy.txt") 
+      (map 3) 
+      (health 40) 
+      (coords -141 0)) 
+    (object 
+      (type enemy) 
+      (name "Bo") 
+      (path "chars/billy/billy.txt") 
+      (map 4) 
+      (health 40) 
+      (coords 232 0)) 
+    (object 
+      (type enemy) 
+      (name "Staff") 
+      (path "chars/billy/billy.txt") 
+      (map 0) 
+      (health 40) 
+      (coords -168 41)) 
+    (object 
+      (type enemy) 
+      (name "Razor") 
+      (path "chars/yamazaki/yamazaki.txt") 
+      (map 0) 
+      (health 60) 
+      (coords 352 43)) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 303 0) 
+      (stimulation 
+        (health 500))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 214 0) 
+      (stimulation 
+        (health 500)))) 
+  (block 
+    (length 320) 
+    (object 
+      (name "poison cake") 
+      (type item) 
+      (path misc/cake/cake.txt) 
+      (coords 101 12) 
+      (stimulation 
+        (health -50))) 
+    (object 
+      (name "poison cake") 
+      (type item) 
+      (path misc/cake/cake.txt) 
+      (coords 87 48) 
+      (stimulation 
+        (health -50))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/chicken/chicken.txt) 
+      (coords 192 35) 
+      (stimulation 
+        (health 500)))) 
+  (block 
+    (length 320) 
+    (object 
+      (type enemy) 
+      (name "Madness") 
+      (path "./chars/venom/venom.txt") 
+      (map 0) 
+      (health 100) 
+      (coords 608 46)) 
+    (object 
+      (type enemy) 
+      (name "Edge") 
+      (path "./chars/akuma/akuma.txt") 
+      (map 2) 
+      (health 60) 
+      (coords 54 0)) 
+    (object 
+      (type enemy) 
+      (name "Edge") 
+      (path "./chars/akuma/akuma.txt") 
+      (map 2) 
+      (health 60) 
+      (coords 98 43)) 
+    (object 
+      (type enemy) 
+      (name "Edge") 
+      (path "./chars/akuma/akuma.txt") 
+      (map 2) 
+      (health 60) 
+      (coords 294 44)) 
+    (object 
+      (type enemy) 
+      (name "Edge") 
+      (path "./chars/akuma/akuma.txt") 
+      (map 2) 
+      (health 60) 
+      (coords 239 44)) 
+    (object 
+      (type enemy) 
+      (name "Edge") 
+      (path "./chars/akuma/akuma.txt") 
+      (map 2) 
+      (health 60) 
+      (coords 152 83)) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 178 6) 
+      (stimulation 
+        (health 500))) 
+    (object 
+      (name "") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 121 55) 
+      (stimulation 
+        (health 500)))) 
+  (block 
+    (length 320)) 
+  (block 
+    (length 25) 
+    (finish 1)))

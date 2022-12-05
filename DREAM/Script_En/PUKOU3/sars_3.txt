@@ -1,0 +1,47 @@
+#买不到车票的同学
+
+if(42,0,"STILL_NOT");
+if(42,1,"OK");
+
+@END
+end();
+
+########################################
+@STILL_NOT
+
+talk(50,"Schoolmate:The tickets for Sichuan was sold out, how can I get home?");
+
+goto("END");
+
+########################################
+@OK
+
+if(43,0,"GIVE");
+if(43,1,"NO_MORE");
+
+@CONT
+goto("END");
+
+##########################
+
+@GIVE
+
+talk(50,"Schoolmate:The tickets for Sichuan was sold out, how can I get home?");
+talk(0,"Alai:I have one, it's yours if you want it.");
+talk(50,"Schoolmate:Is this a real ticket?");
+talk(0,"Alai:Of course. My classmate gave this to me.");
+talk(50,"Schoolmate:Oh... I have nothing to thank you, here you are, Glory Herb ,my grandpa found this in the moutains.");
+talk(0,"Alai:(Sigh,maybe my father needs it.)");
+
+kill_obj(8);
+add_obj(9,1);
+set(43,1);
+
+talk(50,"(Recieved Glory Herb)");
+
+goto("CONT");
+
+############################
+@NO_MORE
+talk(50,"Schoolmate:Thanks a lot, or I can't go home for the Spring Festival.");
+goto("CONT");

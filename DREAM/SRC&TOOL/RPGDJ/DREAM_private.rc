@@ -1,0 +1,32 @@
+// THIS FILE WILL BE OVERWRITTEN BY DEV-C++!
+// DO NOT EDIT!
+
+#include <windows.h> // include for version info constants
+
+
+A ICON MOVEABLE PURE LOADONCALL DISCARDABLE "DREAM.ico"
+
+//
+// TO CHANGE VERSION INFORMATION, EDIT PROJECT OPTIONS...
+//
+1 VERSIONINFO
+FILEVERSION 0,1,1,38
+PRODUCTVERSION 0,1,1,38
+FILETYPE VFT_APP
+{
+  BLOCK "StringFileInfo"
+	 {
+		 BLOCK "080404E4"
+		 {
+			 VALUE "CompanyName", "Crazy Bugs Studio"
+			 VALUE "FileVersion", "1.0.0"
+			 VALUE "FileDescription", "Developed using the Dev-C++ IDE"
+			 VALUE "InternalName", "MyRPG.exe"
+			 VALUE "LegalCopyright", "CBS 2001-2003"
+			 VALUE "LegalTrademarks", "Crazy Bugs"
+			 VALUE "OriginalFilename", "Dream.exe"
+			 VALUE "ProductName", "水晶之约RPG引擎"
+			 VALUE "ProductVersion", "1.0.0"
+		 }
+	 }
+}

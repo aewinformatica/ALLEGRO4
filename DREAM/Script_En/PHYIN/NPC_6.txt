@@ -1,0 +1,1 @@
+talk(50,"Schoolmate:Cold,cold,cold...");

@@ -1,0 +1,1 @@
+talk(50,"Man:You need a Mazda? (In China Mazda refers to the motor tricycles)");

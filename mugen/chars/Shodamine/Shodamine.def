@@ -1,0 +1,33 @@
+; Definition file for Blank
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Shodamine"
+displayname ="Shodamine"
+versiondate =05,23,2006
+mugenversion =04,14,2002
+author ="itachi-kun"
+pal.defaults =1
+
+; Files for the player
+[Files]
+cmd     =nidaime.cmd
+cns     =nidaime.cns
+st      =nidaime.cns
+stcommon =common1.cns
+sprite  =nidaime.sff
+anim    =nidaime.air
+;sound   = nidaime.snd   ;Sound
+sound=
+pal1=nidaime.act
+
+;sprite credits go to naruto[NU]
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def
+[Arcade]
+intro.storyboard=
+ending.storyboard=

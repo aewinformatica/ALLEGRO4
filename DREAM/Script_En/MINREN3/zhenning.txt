@@ -1,0 +1,3 @@
+#ÑîÕñÄşµÄÊ÷
+
+talk(50,"(The board says: Chengning Yang, famous Chinese physician, got Nobel Price for his research in Parity Non-conservation.)");

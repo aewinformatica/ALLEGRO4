@@ -1,0 +1,3 @@
+CMD opcional:
+
+Se quiser deixar o Sasuke mais facil (sem AI),copie esse CMD na pasta sasuke-kun.S

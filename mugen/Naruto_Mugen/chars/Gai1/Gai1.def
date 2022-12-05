@@ -1,0 +1,30 @@
+; Definition file for Blank
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Maito Gai"        ;Name of character
+displayname = "Maito Gai" ;Name of character to display
+versiondate = 05,23,2006    ;Version date of character (MM-DD-YYYY)
+mugenversion = 04,14,2002   ;Version of M.U.G.E.N character works on
+author = "UchihaCody"         ;Character author name
+pal.defaults = 1      ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = Gai.cmd   ;Command set
+cns     = Gai.cns   ;Constants
+st      = Gai.cns   ;States
+st2	= lotus.cns ;States
+st3 	= AI.cns
+stcommon = common1.cns ;Common states
+sprite  = Gai.sff   ;Sprite
+anim    = Gai.air   ;Animation
+sound   = Gai.snd   ;Sound
+pal1    = Gai.act  ;Palettes (can have up to 12)
+
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def

@@ -1,0 +1,4 @@
+#黄头发男生的MM
+
+talk(50,"Girl:Wow,how cool his hair style is!");
+NPC_turn(2,2);

@@ -1,0 +1,31 @@
+; Player information
+[Info]
+name ="future sakura"
+displayname ="Haruno Sakura"
+versiondate =02.20.2007
+mugenversion =04,14,2002
+author ="Griever80"
+pal.defaults =1,2,3,4,5
+
+; Files for the player
+[Files]
+cmd     =fsakura.cmd
+cns     =fsakura.cns
+st      =fsakura.cns
+stcommon =common.cns
+sprite  =fsakura.sff
+anim    =fsakura.air
+sound   =fsakura.snd
+pal1=pal1.act
+st1=AI.cns
+st2=
+
+
+
+;*** delete lines with palettes you are not using ***
+
+; Arcade mode
+[Arcade]
+intro.storyboard =
+ending.storyboard =
+

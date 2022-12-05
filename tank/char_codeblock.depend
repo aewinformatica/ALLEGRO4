@@ -1,0 +1,1698 @@
+# depslib dependency file v1.0
+1153475790 f:\software\cdsrc\cheats.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"particles.h"
+	"secrets.h"
+
+1107034524 d:\dev-cpp\include\stdio.h
+	<_mingw.h>
+	<stddef.h>
+	<stdarg.h>
+	<sys/types.h>
+
+1107034524 d:\dev-cpp\include\_mingw.h
+
+1107034524 d:\dev-cpp\include\stddef.h
+
+1107034524 d:\dev-cpp\include\stdarg.h
+
+1107034524 d:\dev-cpp\include\sys\types.h
+	<_mingw.h>
+	<stddef.h>
+
+1107034524 d:\dev-cpp\include\stdlib.h
+	<_mingw.h>
+	<stddef.h>
+
+1107034524 d:\dev-cpp\include\time.h
+	<_mingw.h>
+	<stddef.h>
+
+1107034524 d:\dev-cpp\include\string.h
+	<_mingw.h>
+	<stddef.h>
+
+1152025169 d:\dev-cpp\include\allegro.h
+	"allegro/base.h"
+	"allegro/system.h"
+	"allegro/debug.h"
+	"allegro/unicode.h"
+	"allegro/mouse.h"
+	"allegro/timer.h"
+	"allegro/keyboard.h"
+	"allegro/joystick.h"
+	"allegro/palette.h"
+	"allegro/gfx.h"
+	"allegro/color.h"
+	"allegro/draw.h"
+	"allegro/rle.h"
+	"allegro/compiled.h"
+	"allegro/text.h"
+	"allegro/font.h"
+	"allegro/fli.h"
+	"allegro/config.h"
+	"allegro/gui.h"
+	"allegro/sound.h"
+	"allegro/file.h"
+	"allegro/lzss.h"
+	"allegro/datafile.h"
+	"allegro/fixed.h"
+	"allegro/fmaths.h"
+	"allegro/matrix.h"
+	"allegro/quat.h"
+	"allegro/3d.h"
+	"allegro/3dmaths.h"
+	"allegro/alcompat.h"
+	"allegro/fix.h"
+
+1152025169 d:\dev-cpp\include\allegro\base.h
+	<errno.h>
+	<limits.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<time.h>
+	<fortify/fortify.h>
+	<dmalloc.h>
+	"internal/alconfig.h"
+
+1107034524 d:\dev-cpp\include\errno.h
+	<_mingw.h>
+
+1107034524 d:\dev-cpp\include\limits.h
+	<_mingw.h>
+
+1152025169 d:\dev-cpp\include\allegro\internal\alconfig.h
+	"allegro/platform/alplatf.h"
+	"allegro/platform/aldjgpp.h"
+	"allegro/platform/alwatcom.h"
+	"allegro/platform/almngw32.h"
+	"allegro/platform/albcc32.h"
+	"allegro/platform/almsvc.h"
+	"allegro/platform/albecfg.h"
+	"allegro/platform/almaccfg.h"
+	"allegro/platform/alosxcfg.h"
+	"allegro/platform/alqnxcfg.h"
+	"allegro/platform/alucfg.h"
+	"allegro/platform/astdint.h"
+
+1152025169 d:\dev-cpp\include\allegro\platform\alplatf.h
+
+1152025169 d:\dev-cpp\include\allegro\platform\aldjgpp.h
+	<pc.h>
+	<dir.h>
+	<dpmi.h>
+	<go32.h>
+	<fcntl.h>
+	<unistd.h>
+	<sys/farptr.h>
+
+1107034524 d:\dev-cpp\include\dir.h
+	<io.h>
+
+1107034524 d:\dev-cpp\include\io.h
+	<_mingw.h>
+	<sys/types.h>
+	<stdint.h>
+
+1107034524 d:\dev-cpp\include\stdint.h
+	<stddef.h>
+
+1107034524 d:\dev-cpp\include\fcntl.h
+	<_mingw.h>
+	<io.h>
+
+1107034524 d:\dev-cpp\include\unistd.h
+	<io.h>
+	<process.h>
+	<getopt.h>
+
+1107034524 d:\dev-cpp\include\process.h
+	<_mingw.h>
+	<sys/types.h>
+
+1107034524 d:\dev-cpp\include\getopt.h
+
+1152025169 d:\dev-cpp\include\allegro\platform\alwatcom.h
+	<io.h>
+	<i86.h>
+	<conio.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1107034524 d:\dev-cpp\include\conio.h
+	<_mingw.h>
+
+1107034524 d:\dev-cpp\include\direct.h
+	<_mingw.h>
+	<stddef.h>
+	<io.h>
+
+1107034524 d:\dev-cpp\include\malloc.h
+	<_mingw.h>
+	<stdlib.h>
+
+1152025169 d:\dev-cpp\include\allegro\platform\almngw32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1152025169 d:\dev-cpp\include\allegro\platform\albcc32.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1152025169 d:\dev-cpp\include\allegro\platform\almsvc.h
+	<io.h>
+	<fcntl.h>
+	<direct.h>
+	<malloc.h>
+
+1152025169 d:\dev-cpp\include\allegro\platform\albecfg.h
+	<fcntl.h>
+	<unistd.h>
+
+1152025169 d:\dev-cpp\include\allegro\platform\almaccfg.h
+	<MacTypes.h>
+	<QuickDraw.h>
+	<FCntl.h>
+
+1152025169 d:\dev-cpp\include\allegro\platform\alosxcfg.h
+
+1152025169 d:\dev-cpp\include\allegro\platform\alqnxcfg.h
+	<stdio.h>
+	<stdlib.h>
+	<fcntl.h>
+	<unistd.h>
+
+1152025169 d:\dev-cpp\include\allegro\platform\alucfg.h
+	<fcntl.h>
+	<unistd.h>
+	"alunixac.h"
+
+1152025169 d:\dev-cpp\include\allegro\platform\astdint.h
+	<inttypes.h>
+	<stdint.h>
+
+1107034524 d:\dev-cpp\include\inttypes.h
+	<_mingw.h>
+	<stdint.h>
+	<stddef.h>
+
+1152025169 d:\dev-cpp\include\allegro\system.h
+	"base.h"
+	"unicode.h"
+	"config.h"
+	"inline/system.inl"
+
+1152025169 d:\dev-cpp\include\allegro\unicode.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\config.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\inline\system.inl
+	"allegro/debug.h"
+
+1152025169 d:\dev-cpp\include\allegro\debug.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\mouse.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\timer.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\keyboard.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\joystick.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\palette.h
+
+1152025169 d:\dev-cpp\include\allegro\gfx.h
+	"3d.h"
+	"base.h"
+	"fixed.h"
+	"inline/gfx.inl"
+
+1152025169 d:\dev-cpp\include\allegro\3d.h
+	"base.h"
+	"fixed.h"
+
+1152025169 d:\dev-cpp\include\allegro\fixed.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\inline\gfx.inl
+	"allegro/debug.h"
+	"asm.inl"
+
+1152025169 d:\dev-cpp\include\allegro\inline\asm.inl
+	"allegro/platform/al386gcc.h"
+	"allegro/platform/al386vc.h"
+	"allegro/platform/al386wat.h"
+
+1152025169 d:\dev-cpp\include\allegro\platform\al386gcc.h
+
+1152025169 d:\dev-cpp\include\allegro\platform\al386vc.h
+
+1152025169 d:\dev-cpp\include\allegro\platform\al386wat.h
+
+1152025169 d:\dev-cpp\include\allegro\color.h
+	"base.h"
+	"palette.h"
+	"inline/color.inl"
+
+1152025169 d:\dev-cpp\include\allegro\inline\color.inl
+
+1152025169 d:\dev-cpp\include\allegro\draw.h
+	"base.h"
+	"fixed.h"
+	"gfx.h"
+	"inline/draw.inl"
+
+1152025169 d:\dev-cpp\include\allegro\inline\draw.inl
+	"allegro/debug.h"
+	"allegro/3d.h"
+	"gfx.inl"
+
+1152025169 d:\dev-cpp\include\allegro\rle.h
+	"base.h"
+	"gfx.h"
+	"inline/rle.inl"
+
+1152025169 d:\dev-cpp\include\allegro\inline\rle.inl
+	"allegro/debug.h"
+
+1152025169 d:\dev-cpp\include\allegro\compiled.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\text.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\font.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\fli.h
+	"base.h"
+	"palette.h"
+
+1152025169 d:\dev-cpp\include\allegro\gui.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\sound.h
+	"base.h"
+	"digi.h"
+	"stream.h"
+	"midi.h"
+
+1152025169 d:\dev-cpp\include\allegro\digi.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\stream.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\midi.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\file.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\lzss.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\datafile.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\fmaths.h
+	"base.h"
+	"fixed.h"
+	"inline/fmaths.inl"
+
+1152025169 d:\dev-cpp\include\allegro\inline\fmaths.inl
+	"asm.inl"
+
+1152025169 d:\dev-cpp\include\allegro\matrix.h
+	"base.h"
+	"fixed.h"
+	"fmaths.h"
+	"inline/matrix.inl"
+
+1152025169 d:\dev-cpp\include\allegro\inline\matrix.inl
+
+1152025169 d:\dev-cpp\include\allegro\quat.h
+	"base.h"
+
+1152025169 d:\dev-cpp\include\allegro\3dmaths.h
+	"base.h"
+	"fixed.h"
+	"inline/3dmaths.inl"
+
+1152025169 d:\dev-cpp\include\allegro\inline\3dmaths.inl
+
+1152025169 d:\dev-cpp\include\allegro\alcompat.h
+
+1152025169 d:\dev-cpp\include\allegro\fix.h
+	"fixed.h"
+	"fmaths.h"
+	"inline/fix.inl"
+
+1152025169 d:\dev-cpp\include\allegro\inline\fix.inl
+
+1153740920 f:\software\cdsrc\scorch.h
+	"cvars.h"
+	"multiplayer.h"
+	"snddat.h"
+	"sprites.h"
+	"ground.h"
+	"shot.h"
+	"tank.h"
+	"sedit.h"
+	"ppcol_src/ppcol.h"
+	"drectangles.h"
+	"music.h"
+	"cmd_args.h"
+	"conalleg.h"
+	"consolecmd.h"
+	"config.h"
+	"tankdeaths.h"
+
+1153475790 f:\software\cdsrc\cvars.h
+
+1153475791 f:\software\cdsrc\multiplayer.h
+	"netcommon\include\netcommon.h"
+
+1153475482 f:\software\cdsrc\netcommon\include\netcommon.h
+	<allegro.h>
+	<winalleg.h>
+	<winsock.h>
+
+1152025169 d:\dev-cpp\include\winalleg.h
+	<afxwin.h>
+	<windows.h>
+
+1107034520 d:\dev-cpp\include\windows.h
+	<winresrc.h>
+	<stdarg.h>
+	<windef.h>
+	<wincon.h>
+	<winbase.h>
+	<wingdi.h>
+	<winuser.h>
+	<winnls.h>
+	<winver.h>
+	<winnetwk.h>
+	<winreg.h>
+	<winsvc.h>
+	<cderr.h>
+	<dde.h>
+	<ddeml.h>
+	<dlgs.h>
+	<imm.h>
+	<lzexpand.h>
+	<mmsystem.h>
+	<nb30.h>
+	<rpc.h>
+	<shellapi.h>
+	<winperf.h>
+	<commdlg.h>
+	<winspool.h>
+	<winsock2.h>
+	<winsock.h>
+	<ole2.h>
+
+1107034520 d:\dev-cpp\include\winresrc.h
+	<winuser.h>
+	<winnt.h>
+	<winver.h>
+	<dde.h>
+	<dlgs.h>
+	<commctrl.h>
+
+1107034520 d:\dev-cpp\include\winuser.h
+
+1107034520 d:\dev-cpp\include\winnt.h
+	<winerror.h>
+	<string.h>
+	<basetsd.h>
+	<pshpack4.h>
+	<poppack.h>
+
+1107034520 d:\dev-cpp\include\winerror.h
+
+1107034520 d:\dev-cpp\include\basetsd.h
+
+1107034520 d:\dev-cpp\include\pshpack4.h
+
+1107034520 d:\dev-cpp\include\poppack.h
+
+1107034520 d:\dev-cpp\include\winver.h
+
+1107034520 d:\dev-cpp\include\dde.h
+
+1107034520 d:\dev-cpp\include\dlgs.h
+
+1107034520 d:\dev-cpp\include\commctrl.h
+	<prsht.h>
+
+1107034520 d:\dev-cpp\include\prsht.h
+
+1107034520 d:\dev-cpp\include\windef.h
+	<winnt.h>
+
+1107034520 d:\dev-cpp\include\wincon.h
+
+1107034520 d:\dev-cpp\include\winbase.h
+
+1107034520 d:\dev-cpp\include\wingdi.h
+
+1107034520 d:\dev-cpp\include\winnls.h
+
+1107034520 d:\dev-cpp\include\winnetwk.h
+
+1107034520 d:\dev-cpp\include\winreg.h
+
+1107034520 d:\dev-cpp\include\winsvc.h
+
+1107034520 d:\dev-cpp\include\cderr.h
+
+1107034520 d:\dev-cpp\include\ddeml.h
+
+1107034520 d:\dev-cpp\include\imm.h
+
+1107034520 d:\dev-cpp\include\lzexpand.h
+
+1107034520 d:\dev-cpp\include\mmsystem.h
+
+1107034520 d:\dev-cpp\include\nb30.h
+
+1107034520 d:\dev-cpp\include\rpc.h
+	<windows.h>
+	<rpcdce.h>
+	<rpcnsi.h>
+	<rpcnterr.h>
+	<winerror.h>
+	<excpt.h>
+
+1107034520 d:\dev-cpp\include\rpcdce.h
+	<basetyps.h>
+	<rpcdcep.h>
+
+1107034520 d:\dev-cpp\include\basetyps.h
+
+1107034520 d:\dev-cpp\include\rpcdcep.h
+
+1107034520 d:\dev-cpp\include\rpcnsi.h
+
+1107034520 d:\dev-cpp\include\rpcnterr.h
+
+1107034524 d:\dev-cpp\include\excpt.h
+	<_mingw.h>
+	<windef.h>
+
+1107034520 d:\dev-cpp\include\shellapi.h
+	<pshpack2.h>
+	<poppack.h>
+
+1107034520 d:\dev-cpp\include\pshpack2.h
+
+1107034520 d:\dev-cpp\include\winperf.h
+
+1107034520 d:\dev-cpp\include\commdlg.h
+	<unknwn.h>
+	<prsht.h>
+
+1107034520 d:\dev-cpp\include\unknwn.h
+	<windows.h>
+	<objfwd.h>
+	<wtypes.h>
+
+1107034520 d:\dev-cpp\include\objfwd.h
+	<basetyps.h>
+
+1107034520 d:\dev-cpp\include\wtypes.h
+	<rpc.h>
+	<rpcndr.h>
+
+1107034520 d:\dev-cpp\include\rpcndr.h
+	<rpcnsip.h>
+	<objfwd.h>
+
+1107034520 d:\dev-cpp\include\rpcnsip.h
+
+1107034520 d:\dev-cpp\include\winspool.h
+
+1107034520 d:\dev-cpp\include\winsock2.h
+	<windows.h>
+
+1107034520 d:\dev-cpp\include\winsock.h
+	<windows.h>
+	<mswsock.h>
+
+1107034520 d:\dev-cpp\include\mswsock.h
+
+1107034520 d:\dev-cpp\include\ole2.h
+	<winerror.h>
+	<objbase.h>
+	<olectlid.h>
+	<oleauto.h>
+	<oleidl.h>
+
+1107034520 d:\dev-cpp\include\objbase.h
+	<rpc.h>
+	<rpcndr.h>
+	<stdlib.h>
+	<basetyps.h>
+	<wtypes.h>
+	<unknwn.h>
+	<objidl.h>
+	<cguid.h>
+
+1107034520 d:\dev-cpp\include\objidl.h
+	<objfwd.h>
+
+1107034520 d:\dev-cpp\include\cguid.h
+
+1107034520 d:\dev-cpp\include\olectlid.h
+
+1107034520 d:\dev-cpp\include\oleauto.h
+	<oaidl.h>
+
+1107034520 d:\dev-cpp\include\oaidl.h
+
+1107034520 d:\dev-cpp\include\oleidl.h
+	<objfwd.h>
+
+1153475790 f:\software\cdsrc\snddat.h
+
+1153803176 f:\software\cdsrc\sprites.h
+	"alphadat.h"
+	"sprdat.h"
+
+1153475790 f:\software\cdsrc\alphadat.h
+
+1153475790 f:\software\cdsrc\sprdat.h
+
+1153475789 f:\software\cdsrc\ground.h
+
+1153475791 f:\software\cdsrc\shot.h
+
+1153475791 f:\software\cdsrc\tank.h
+	"keycfg.h"
+	"defense.h"
+	"specials.h"
+
+1153475790 f:\software\cdsrc\keycfg.h
+
+1153475789 f:\software\cdsrc\defense.h
+
+1153475791 f:\software\cdsrc\specials.h
+
+1153475790 f:\software\cdsrc\sedit.h
+
+1153475482 f:\software\cdsrc\ppcol_src\ppcol.h
+	<allegro.h>
+
+1153475790 f:\software\cdsrc\drectangles.h
+
+1153475790 f:\software\cdsrc\music.h
+	"fmod.h"
+	"fmod_errors.h"
+
+1153475790 f:\software\cdsrc\cmd_args.h
+
+1153475789 f:\software\cdsrc\conalleg.h
+	"console.h"
+
+1153475789 f:\software\cdsrc\console.h
+
+1153475791 f:\software\cdsrc\consolecmd.h
+
+1153475791 f:\software\cdsrc\config.h
+
+1153475790 f:\software\cdsrc\tankdeaths.h
+
+1154445593 f:\software\cdsrc\dialogs.h
+	"agup.h"
+	"agtk.h"
+	"aphoton.h"
+	"awin95.h"
+	"aase.h"
+	"abeos.h"
+	"ans.h"
+
+1153475590 f:\software\cdsrc\agup\agup.h
+
+1153475590 f:\software\cdsrc\agup\agtk.h
+
+1153475590 f:\software\cdsrc\agup\aphoton.h
+
+1153475590 f:\software\cdsrc\agup\awin95.h
+
+1153475590 f:\software\cdsrc\agup\aase.h
+
+1153475589 f:\software\cdsrc\agup\abeos.h
+
+1153475590 f:\software\cdsrc\agup\ans.h
+
+1153475790 f:\software\cdsrc\particles.h
+
+1153475791 f:\software\cdsrc\secrets.h
+
+1153629636 f:\software\cdsrc\computerai.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+
+1107034524 d:\dev-cpp\include\math.h
+	<_mingw.h>
+
+1153475789 f:\software\cdsrc\config.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+	"secrets.h"
+
+1153475790 f:\software\cdsrc\consolecmd.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"scorch.h"
+
+1153475790 f:\software\cdsrc\cvars.cpp
+	<stdio.h>
+	"scorch.h"
+
+1153475789 f:\software\cdsrc\defense.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+
+1153739551 f:\software\cdsrc\dialogs.cpp
+	<stdio.h>
+	<stdlib.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+
+1153475790 f:\software\cdsrc\drawing.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"particles.h"
+
+1153475787 f:\software\cdsrc\fmodapi370\api\inc\fmod.h
+
+1153475787 f:\software\cdsrc\fmodapi370\api\inc\fmod_errors.h
+
+1153837143 f:\software\cdsrc\editor\editor.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"tdgui.h"
+	"../scorch.h"
+	"../dialogs.h"
+	"../particles.h"
+	"fblend.h"
+	"editor.h"
+
+1153479003 f:\software\cdsrc\editor\tdgui.h
+
+1153475531 f:\software\cdsrc\fblend\include\fblend.h
+	<allegro.h>
+
+1153479003 f:\software\cdsrc\editor\editor.h
+
+1153623185 f:\software\cdsrc\editor\fformat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"allegro/internal/aintern.h"
+	"../scorch.h"
+	"../dialogs.h"
+	"editor.h"
+
+1152025169 d:\dev-cpp\include\allegro\internal\aintern.h
+
+1153739784 f:\software\cdsrc\gui.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+	"particles.h"
+	"editor/editor.h"
+	"secrets.h"
+	"fblend.h"
+
+1153624633 f:\software\cdsrc\ground.cpp
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+	"fblend.h"
+
+1153475790 f:\software\cdsrc\intermission.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"editor/editor.h"
+	"secrets.h"
+
+1153475789 f:\software\cdsrc\keycfg.cpp
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"allegro/internal/aintern.h"
+	"scorch.h"
+	"keycfg.h"
+
+1153035307 f:\software\cdsrc\levels.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+	"editor/editor.h"
+	"peffect.h"
+	"secrets.h"
+
+1153475791 f:\software\cdsrc\peffect.h
+
+1153475790 f:\software\cdsrc\music.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+	"editor/editor.h"
+
+1153475482 f:\software\cdsrc\ppcol_src\ppamount.c
+	"ppcol.h"
+
+1153475482 f:\software\cdsrc\ppcol_src\ppcol.c
+	"ppcol.h"
+
+1153475482 f:\software\cdsrc\ppcol_src\ppmamoun.c
+	<stdlib.h>
+	<allegro.h>
+	"ppcol.h"
+
+1153475482 f:\software\cdsrc\ppcol_src\ppmaskc.c
+	<stdlib.h>
+	<allegro.h>
+	"ppcol.h"
+
+1153635503 f:\software\cdsrc\particles.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+	"fblend.h"
+	"editor/editor.h"
+
+1153475790 f:\software\cdsrc\playersetup.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"secrets.h"
+	"agup.h"
+	"fblend.h"
+
+1152956526 f:\software\cdsrc\resources\charreddirt.rc
+	"resource.h"
+
+1154445114 f:\software\cdsrc\resources\resource.h
+
+1153475790 f:\software\cdsrc\scorch.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"particles.h"
+	"secrets.h"
+
+1153719599 f:\software\cdsrc\shot.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+
+1153475788 f:\software\cdsrc\specials.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+
+1153838199 f:\software\cdsrc\sprites.cpp
+	<stdio.h>
+	<string.h>
+	<math.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+	"fblend.h"
+
+1153741572 f:\software\cdsrc\tank.cpp
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+	"dialogs.h"
+	"fblend.h"
+
+1153475788 f:\software\cdsrc\tonyjpegencoder.cpp
+	"TonyJpegEncoder.h"
+
+1153475791 f:\software\cdsrc\tonyjpegencoder.h
+	<string.h>
+
+1153475590 f:\software\cdsrc\agup\aase.cpp
+	<allegro.h>
+	"agup.h"
+	"aase.h"
+	"agupitrn.h"
+
+1153475589 f:\software\cdsrc\agup\agupitrn.h
+
+1153475590 f:\software\cdsrc\agup\abeos.cpp
+	<stdio.h>
+	<allegro.h>
+	"agup.h"
+	"abeos.h"
+	"agupitrn.h"
+	"../scorch.h"
+
+1153475590 f:\software\cdsrc\agup\agtk.cpp
+	<allegro.h>
+	"agup.h"
+	"agtk.h"
+	"agupitrn.h"
+
+1153475590 f:\software\cdsrc\agup\agup.cpp
+	<allegro.h>
+	"agup.h"
+	"agupitrn.h"
+
+1153475590 f:\software\cdsrc\agup\ans.cpp
+	<allegro.h>
+	"agup.h"
+	"ans.h"
+	"agupitrn.h"
+
+1153475590 f:\software\cdsrc\agup\aphoton.cpp
+	<allegro.h>
+	"agup.h"
+	"aphoton.h"
+	"agupitrn.h"
+
+1153475590 f:\software\cdsrc\agup\awin95.cpp
+	<allegro.h>
+	"agup.h"
+	"awin95.h"
+	"agupitrn.h"
+
+1153629647 f:\software\cdsrc\buystuff.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+
+1153475790 f:\software\cdsrc\client.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+	"particles.h"
+	"peffect.h"
+	"editor\editor.h"
+
+1153475790 f:\software\cdsrc\cmd_args.cpp
+	<string.h>
+	"cmd_args.h"
+
+1153475791 f:\software\cdsrc\conalleg.cpp
+	<allegro.h>
+	"scorch.h"
+
+1153475790 f:\software\cdsrc\concmds.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	"scorch.h"
+	"secrets.h"
+
+1153475791 f:\software\cdsrc\console.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	"scorch.h"
+
+1153475790 f:\software\cdsrc\drectangles.cpp
+	<stdio.h>
+	<stdlib.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+
+1153475789 f:\software\cdsrc\gametext.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+	"fblend.h"
+
+1153475789 f:\software\cdsrc\multiplayer.cpp
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+	"peffect.h"
+	"particles.h"
+	"editor\editor.h"
+
+1153475483 f:\software\cdsrc\netcommon\src\netcommon.cpp
+	"..\include\netcommon.h"
+	<stdio.h>
+
+1153475790 f:\software\cdsrc\ngui.cpp
+	<limits.h>
+	<allegro.h>
+	"allegro/internal/aintern.h"
+	"scorch.h"
+
+1153475790 f:\software\cdsrc\peffect.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<allegro.h>
+	"scorch.h"
+	"peffect.h"
+
+1153475788 f:\software\cdsrc\save_jpeg.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"TonyJpegEncoder.h"
+
+1153475790 f:\software\cdsrc\secrets.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"particles.h"
+	"secrets.h"
+
+1153475790 f:\software\cdsrc\server.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+
+1153475789 f:\software\cdsrc\serveradmin.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+
+1153475791 f:\software\cdsrc\tankdeaths.cpp
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"particles.h"
+
+1239883625 source:d:\software\cdsrc\cheats.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"particles.h"
+	"secrets.h"
+
+1243648038 d:\software\cdsrc\scorch.h
+	"cvars.h"
+	"multiplayer.h"
+	"snddat.h"
+	"sprites.h"
+	"ground.h"
+	"shot.h"
+	"tank.h"
+	"sedit.h"
+	"ppcol_src/ppcol.h"
+	"drectangles.h"
+	"music.h"
+	"cmd_args.h"
+	"conalleg.h"
+	"consolecmd.h"
+	"config.h"
+	"tankdeaths.h"
+
+1222849318 d:\software\cdsrc\cvars.h
+
+1223030994 d:\software\cdsrc\multiplayer.h
+	"netcommon\include\netcommon.h"
+
+1246777534 d:\software\cdsrc\netcommon\include\netcommon.h
+	<allegro.h>
+	<winalleg.h>
+	<winsock.h>
+
+1222849318 d:\software\cdsrc\snddat.h
+
+1222849318 d:\software\cdsrc\sprites.h
+	"alphadat.h"
+	"sprdat.h"
+
+1222849318 d:\software\cdsrc\alphadat.h
+
+1222849318 d:\software\cdsrc\sprdat.h
+
+1236236095 d:\software\cdsrc\ground.h
+
+1223979887 d:\software\cdsrc\shot.h
+
+1222849318 d:\software\cdsrc\tank.h
+	"keycfg.h"
+	"defense.h"
+	"specials.h"
+
+1222849318 d:\software\cdsrc\keycfg.h
+
+1222849318 d:\software\cdsrc\defense.h
+
+1222849318 d:\software\cdsrc\specials.h
+
+1222849318 d:\software\cdsrc\sedit.h
+
+1222849318 d:\software\cdsrc\ppcol_src\ppcol.h
+	<allegro.h>
+
+1222849318 d:\software\cdsrc\drectangles.h
+
+1222849318 d:\software\cdsrc\music.h
+	"fmod.h"
+	"fmod_errors.h"
+
+1222849325 d:\software\cdsrc\fmodapi370\api\inc\fmod.h
+
+1222849325 d:\software\cdsrc\fmodapi370\api\inc\fmod_errors.h
+
+1222849318 d:\software\cdsrc\cmd_args.h
+
+1222849318 d:\software\cdsrc\conalleg.h
+	"console.h"
+
+1222849318 d:\software\cdsrc\console.h
+
+1222849318 d:\software\cdsrc\consolecmd.h
+
+1223629585 d:\software\cdsrc\config.h
+
+1222849318 d:\software\cdsrc\tankdeaths.h
+
+1223629366 d:\software\cdsrc\dialogs.h
+	"agup.h"
+	"agtk.h"
+	"aphoton.h"
+	"awin95.h"
+	"aase.h"
+	"abeos.h"
+	"ans.h"
+
+1222849325 d:\software\cdsrc\agup\agup.h
+
+1222849325 d:\software\cdsrc\agup\agtk.h
+
+1222849325 d:\software\cdsrc\agup\aphoton.h
+
+1222849325 d:\software\cdsrc\agup\awin95.h
+
+1222849325 d:\software\cdsrc\agup\aase.h
+
+1222849325 d:\software\cdsrc\agup\abeos.h
+
+1222849325 d:\software\cdsrc\agup\ans.h
+
+1222849318 d:\software\cdsrc\particles.h
+
+1222849318 d:\software\cdsrc\secrets.h
+
+1223550226 source:d:\software\cdsrc\computerai.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+
+1223629286 source:d:\software\cdsrc\config.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+	"secrets.h"
+
+1222849318 source:d:\software\cdsrc\consolecmd.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	"scorch.h"
+
+1222849318 source:d:\software\cdsrc\cvars.cpp
+	<stdio.h>
+	"scorch.h"
+
+1224219768 source:d:\software\cdsrc\defense.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+
+1223628856 source:d:\software\cdsrc\dialogs.cpp
+	<stdio.h>
+	<stdlib.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+
+1236246661 source:d:\software\cdsrc\drawing.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"particles.h"
+
+1246767272 source:d:\software\cdsrc\editor\editor.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	<ctype.h>
+	"tdgui.h"
+	"../scorch.h"
+	"../dialogs.h"
+	"../particles.h"
+	"fblend.h"
+	"editor.h"
+
+1243650446 d:\software\cdsrc\editor\tdgui.h
+
+1222849319 d:\software\cdsrc\fblend\include\fblend.h
+	<allegro.h>
+
+1222950756 d:\software\cdsrc\editor\editor.h
+
+1243650446 source:d:\software\cdsrc\editor\fformat.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"allegro/internal/aintern.h"
+	"../scorch.h"
+	"../dialogs.h"
+	"editor.h"
+
+1236055648 source:d:\software\cdsrc\gui.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+	"particles.h"
+	"editor/editor.h"
+	"secrets.h"
+	"fblend.h"
+
+1244968045 source:d:\software\cdsrc\ground.cpp
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+	"fblend.h"
+	"editor/editor.h"
+
+1246766978 source:d:\software\cdsrc\intermission.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"editor/editor.h"
+	"secrets.h"
+
+1222849318 source:d:\software\cdsrc\keycfg.cpp
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"allegro/internal/aintern.h"
+	"scorch.h"
+	"keycfg.h"
+
+1236057474 source:d:\software\cdsrc\levels.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+	"editor/editor.h"
+	"peffect.h"
+	"secrets.h"
+	"scripts.h"
+
+1222849318 d:\software\cdsrc\peffect.h
+
+1233831184 d:\software\cdsrc\scripts.h
+
+1222849318 source:d:\software\cdsrc\music.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+	"editor/editor.h"
+
+1222849318 source:d:\software\cdsrc\ppcol_src\ppamount.c
+	"ppcol.h"
+
+1222849318 source:d:\software\cdsrc\ppcol_src\ppcol.c
+	"ppcol.h"
+
+1222849318 source:d:\software\cdsrc\ppcol_src\ppmamoun.c
+	<stdlib.h>
+	<allegro.h>
+	"ppcol.h"
+
+1222849318 source:d:\software\cdsrc\ppcol_src\ppmaskc.c
+	<stdlib.h>
+	<allegro.h>
+	"ppcol.h"
+
+1236243849 source:d:\software\cdsrc\particles.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+	"fblend.h"
+	"editor/editor.h"
+
+1222849318 source:d:\software\cdsrc\playersetup.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"secrets.h"
+	"agup.h"
+	"fblend.h"
+
+1246782269 source:d:\software\cdsrc\resources\charreddirt.rc
+	"resource.h"
+
+1244976185 d:\software\cdsrc\resources\resource.h
+
+1244978760 source:d:\software\cdsrc\scorch.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"particles.h"
+	"secrets.h"
+	"scripts.h"
+
+1244968844 source:d:\software\cdsrc\shot.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+
+1222849318 source:d:\software\cdsrc\specials.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+
+1239685854 source:d:\software\cdsrc\sprites.cpp
+	<stdio.h>
+	<string.h>
+	<math.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+	"fblend.h"
+
+1239712352 source:d:\software\cdsrc\tank.cpp
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+	"dialogs.h"
+	"fblend.h"
+
+1222849318 source:d:\software\cdsrc\tonyjpegencoder.cpp
+	"TonyJpegEncoder.h"
+
+1222849318 d:\software\cdsrc\tonyjpegencoder.h
+	<string.h>
+
+1222849325 source:d:\software\cdsrc\agup\aase.cpp
+	<allegro.h>
+	"agup.h"
+	"aase.h"
+	"agupitrn.h"
+
+1222849325 d:\software\cdsrc\agup\agupitrn.h
+
+1222849325 source:d:\software\cdsrc\agup\abeos.cpp
+	<stdio.h>
+	<allegro.h>
+	"agup.h"
+	"abeos.h"
+	"agupitrn.h"
+	"../scorch.h"
+
+1222849325 source:d:\software\cdsrc\agup\agtk.cpp
+	<allegro.h>
+	"agup.h"
+	"agtk.h"
+	"agupitrn.h"
+
+1222849325 source:d:\software\cdsrc\agup\agup.cpp
+	<allegro.h>
+	"agup.h"
+	"agupitrn.h"
+
+1222849325 source:d:\software\cdsrc\agup\ans.cpp
+	<allegro.h>
+	"agup.h"
+	"ans.h"
+	"agupitrn.h"
+
+1222849325 source:d:\software\cdsrc\agup\aphoton.cpp
+	<allegro.h>
+	"agup.h"
+	"aphoton.h"
+	"agupitrn.h"
+
+1222849325 source:d:\software\cdsrc\agup\awin95.cpp
+	<allegro.h>
+	"agup.h"
+	"awin95.h"
+	"agupitrn.h"
+
+1222849318 source:d:\software\cdsrc\buystuff.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+
+1244978759 source:d:\software\cdsrc\client.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+	"particles.h"
+	"peffect.h"
+	"editor\editor.h"
+
+1222849318 source:d:\software\cdsrc\cmd_args.cpp
+	<string.h>
+	"cmd_args.h"
+
+1222849318 source:d:\software\cdsrc\conalleg.cpp
+	<allegro.h>
+	"scorch.h"
+
+1239687911 source:d:\software\cdsrc\concmds.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	"scorch.h"
+	"secrets.h"
+
+1222849318 source:d:\software\cdsrc\console.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<stdarg.h>
+	"scorch.h"
+
+1222849318 source:d:\software\cdsrc\drectangles.cpp
+	<stdio.h>
+	<stdlib.h>
+	<allegro.h>
+	"scorch.h"
+	"particles.h"
+
+1239687911 source:d:\software\cdsrc\gametext.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+	"fblend.h"
+
+1239587374 source:d:\software\cdsrc\multiplayer.cpp
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+	"peffect.h"
+	"particles.h"
+	"editor\editor.h"
+
+1244979954 source:d:\software\cdsrc\netcommon\src\netcommon.cpp
+	"..\include\netcommon.h"
+	<stdio.h>
+
+1222849318 source:d:\software\cdsrc\ngui.cpp
+	<limits.h>
+	<allegro.h>
+	"allegro/internal/aintern.h"
+	"scorch.h"
+
+1236230034 source:d:\software\cdsrc\peffect.cpp
+	<stdlib.h>
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<time.h>
+	<allegro.h>
+	"scorch.h"
+	"peffect.h"
+
+1222849318 source:d:\software\cdsrc\save_jpeg.cpp
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"TonyJpegEncoder.h"
+
+1222849318 source:d:\software\cdsrc\secrets.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"particles.h"
+	"secrets.h"
+
+1239713575 source:d:\software\cdsrc\server.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+	"scripts.h"
+
+1222849318 source:d:\software\cdsrc\serveradmin.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"dialogs.h"
+	"scorch.h"
+
+1239708445 source:d:\software\cdsrc\tankdeaths.cpp
+	<stdio.h>
+	<math.h>
+	<conio.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	"scorch.h"
+	"dialogs.h"
+	"particles.h"
+
+1246772344 source:d:\software\cdsrc\script.cpp
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	<string.h>
+	<allegro.h>
+	<ctype.h>
+	"scorch.h"
+	"scripts.h"
+

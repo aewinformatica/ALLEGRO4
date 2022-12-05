@@ -1,0 +1,381 @@
+[Info]
+name = "Choujis Stage"
+
+[Camera]
+startx = 0
+starty = 0
+boundleft = -216
+boundright = 216
+boundhigh = -12
+boundlow = 0
+verticalfollow = .1
+tension = 50
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound =  1000
+topbound  =  0
+botbound  =  0
+
+[Scaling]
+topz     = 0
+botz     = 50
+topscale = 1
+botscale = 1.2
+
+[Bound]
+screenleft = 15
+screenright = 15
+
+[StageInfo]
+zoffset = 224
+autoturn = 1
+resetBG = 1
+
+[Shadow]
+color = 92,92,92
+yscale = .3
+
+[Music]
+bgmusic = sound/Its_the_training.mid
+bgvolume = 0
+
+[BGdef]
+spr = stages/kowloon.sff
+
+[BG 1]
+type = anim
+actionno = 0
+start = 0,240
+delta = .555,.53
+
+[BG 2]
+type = anim
+actionno = 1
+start = 0,240
+delta = .555,.53
+
+[BG 3]
+type = anim
+actionno = 2
+start = 0,240
+delta = .81,1
+
+[BG 4]
+type = anim
+actionno = 3
+start = 0,240
+delta = .81,1
+
+[BG 5]
+type = anim
+actionno = 4
+start = 0,240
+delta = .81,1
+
+[BG 6]
+type = anim
+actionno = 5
+start = 0,240
+delta = .81,1
+
+[BG 7]
+type = anim
+actionno = 6
+start = 0,240
+delta = .81,1
+
+[BG 8]
+type = normal
+spriteno = 7,0
+start = 0,240
+delta = 1,1
+mask = 1
+
+[BG 9]
+type = anim
+actionno = 81
+ID = 9
+start = 16,184
+delta = .81,1
+
+[Begin action 0]
+
+0,0, 0,0, 10
+0,1, 0,0, 10
+0,2, 0,0, 10
+0,3, 0,0, 10
+
+[Begin action 1]
+
+1, 0, 0,0, 2, ,A1
+0,-1, 0,0, 2
+
+[Begin action 2]
+
+2,0, 0,0, 10
+2,1, 0,0, 10
+2,2, 0,0, 10
+2,3, 0,0, 10
+2,0, 0,0, 10
+2,1, 0,0, 10
+2,2, 0,0, 10
+2,3, 0,0, 10
+
+[Begin action 3]
+
+3,0, 0,0, 10
+3,1, 0,0, 10
+3,2, 0,0, 10
+3,3, 0,0, 10
+3,4, 0,0, 10
+3,5, 0,0, 10
+3,6, 0,0, 10
+3,7, 0,0, 10
+
+[Begin action 4]
+
+4,0, 0,0, 10
+4,1, 0,0, 10
+4,2, 0,0, 10
+4,3, 0,0, 10
+4,4, 0,0, 10
+4,5, 0,0, 10
+4,6, 0,0, 10
+4,7, 0,0, 10
+
+[Begin action 5]
+
+5,0, 0,0, 10
+5,1, 0,0, 10
+5,2, 0,0, 10
+5,3, 0,0, 10
+5,4, 0,0, 10
+5,5, 0,0, 10
+5,6, 0,0, 10
+5,7, 0,0, 10
+
+[Begin action 6]
+
+6, 0, 0,0, 2, ,A1
+0,-1, 0,0, 2
+
+[Begin action 81]
+
+8,20, 0,0, 9
+8,21, 0,0, 8
+8,22, 0,0, 7
+8,23, 0,0, 7
+8,24, 0,0, 8
+8,25, 0,0, 8
+8,26, 0,0, 9
+8,27, 0,0, 9
+8,28, 0,0, 9
+8,29, 0,0, -1
+
+[Begin action 82]
+
+8,38, 0,0, -1, H
+
+[Begin action 83]
+
+8, 8, 0,0, 8, H
+8, 9, 0,0, 8, H
+8,10, 0,0, 8, H
+8,11, 0,0, 8, H
+8,12, 0,0, 8, H
+8,13, 0,0, 8, H
+8,14, 0,0, 8, H
+8,15, 0,0, 8, H
+
+[Begin action 84]
+
+8,16, 0,0, 4, H
+8,17, 0,0, 4, H
+8,18, 0,0, 4, H
+8,19, 0,0, 4, H
+
+[Begin action 85]
+
+8,0, 0,0, 7
+8,1, 0,0, 5
+8,2, 0,0, 7
+8,3, 0,0, 5
+8,4, 0,0, 7
+8,5, 0,0, 4
+8,6, 0,0, 4
+8,7, 0,0, 6
+8,0, 0,0, 7
+8,1, 0,0, 5
+8,2, 0,0, 7
+8,3, 0,0, 5
+8,4, 0,0, 7
+8,5, 0,0, 4
+8,6, 0,0, 4
+8,7, 0,0, -1
+
+[Begin action 86]
+
+8,38, 0,0, 10
+8,39, 0,0, 8
+8,40, 0,0, 6
+8,41, 0,0, 7
+8,42, 0,0, 10
+8,41, 0,0, 8
+8,40, 0,0, 6
+8,39, 0,0, 7
+
+[Begin action 87]
+
+8,38, 0,0, -1
+
+[Begin action 88]
+
+8, 8, 0,0, 8
+8, 9, 0,0, 8
+8,10, 0,0, 8
+8,11, 0,0, 8
+8,12, 0,0, 8
+8,13, 0,0, 8
+8,14, 0,0, 8
+8,15, 0,0, 8
+
+[Begin action 89]
+
+8,30, 0,0, 5
+8,31, 0,0, 5
+8,32, 0,0, 5
+8,33, 0,0, 5
+8,34, 0,0, 5
+8,35, 0,0, 5
+8,36, 0,0, 5
+8,37, 0,0, 5
+8,30, 0,0, 5, H
+8,31, 0,0, 5, H
+8,32, 0,0, 5, H
+8,33, 0,0, 5, H
+8,34, 0,0, 5, H
+8,35, 0,0, 5, H
+8,36, 0,0, 5, H
+8,37, 0,0, -1, H
+
+[Begin action 810]
+
+8,16, 0,0, 4
+8,17, 0,0, 4
+8,18, 0,0, 4
+8,19, 0,0, 4
+
+[BGCtrlDef 9]
+CtrlID = 9
+looptime = 700
+
+[BGCtrl 9.1]
+type = VelSet
+time = 0
+x = 0
+
+[BGCtrl 9.2]
+type = Anim
+time = 0
+value = 81
+
+[BGCtrl 9.3]
+type = Anim
+time = 140
+value = 82
+
+[BGCtrl 9.4]
+type = Anim
+time = 146
+value = 83
+
+[BGCtrl 9.5]
+type = VelSet
+time = 146
+x = 1
+
+[BGCtrl 9.6]
+type = Anim
+time = 236
+value = 84
+
+[BGCtrl 9.7]
+type = VelSet
+time = 236
+x = -2
+
+[BGCtrl 9.8]
+type = Anim
+time = 253
+value = 85
+
+[BGCtrl 9.9]
+type = VelSet
+time = 253
+x = 0
+
+[BGCtrl 9.10]
+type = Anim
+time = 345
+value = 81
+
+[BGCtrl 9.11]
+type = Anim
+time = 464
+value = 86
+
+[BGCtrl 9.12]
+type = Anim
+time = 527
+value = 87
+
+[BGCtrl 9.13]
+type = Anim
+time = 534
+value = 88
+
+[BGCtrl 9.14]
+type = VelSet
+time = 534
+x = -1
+
+[BGCtrl 9.15]
+type = Anim
+time = 594
+value = 89
+
+[BGCtrl 9.16]
+type = VelSet
+time = 594
+x = 0
+
+[BGCtrl 9.17]
+type = Anim
+time = 674
+value = 810
+
+[BGCtrl 9.18]
+type = VelSet
+time = 674
+x = 2
+
+[BGCtrl 9.19]
+type = Anim
+time = 684
+value = 88
+
+[BGCtrl 9.20]
+type = VelSet
+time = 684
+x = -1

@@ -1,0 +1,4 @@
+#หตร๗
+
+talk(50,"(A chirldren's song: Little bee, little bee, flying in the tree, UP DOWN LEFT RIGHT UP, flying in the tree!)");
+talk(0,"Alai:Do scientists like this stuff in the lab?");

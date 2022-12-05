@@ -1,0 +1,8 @@
+Welcome to OpenMugen Version Alpha 2
+CGame:Init SDL system
+Init Memory Manager
+CSDLManager:: Init()
+CSDLManager:: SDL_Init OK
+CVideoSystem::InitSystem()
+CVideoSystem:: DebugFonts not found
+font.txt not found

@@ -1,0 +1,40 @@
+#发现实验室
+
+talk(0,"Alai:Hush...I think I found it.");
+talk(4,"Emma:Let's go down...");
+
+#到时空机
+
+midi_out();
+
+go_inout(0,1);
+
+talk(0,"Alai:It is so dark here.");
+talk(3,"Emma:It should be here, I can feel the Time-Space bended.");
+
+set_game_status(1);
+
+call("Script_En/time/load.txt");
+
+set_game_status(0);
+
+go_inout(0,0);
+
+#出来的对话
+player_walk(3,18);
+delay(9);
+NPC_turn(0,2);
+delay(9);
+NPC_turn(0,3);
+delay(9);
+NPC_turn(0,0);
+delay(9);
+NPC_turn(0,3);
+
+talk(0,"Alai:Wow,there is a secret lab in the Physics Building!");
+talk(3,"Emma:Tee-hee,this is human's only Time-Space Machine. ");
+talk(0,"Alai:No wonder they charge so much makeup fee, it is all spended on this stuff.");
+talk(3,"Emma:Save your words, let's see how to activate it.");
+
+
+@END

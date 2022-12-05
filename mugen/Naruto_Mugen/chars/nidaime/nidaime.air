@@ -1,0 +1,674 @@
+; Blank's animation data
+; see docs/air.txt for more information
+;---------------------------------------------------------------------------
+; Standing Animation
+[Begin Action 0]
+Clsn2Default: 1
+  Clsn2[0] = -15, -66, 15, -6
+0,0, 0,0, 1
+
+
+; Turning
+[Begin Action 5]
+Clsn2Default: 1
+  Clsn2[0] = -15, -66, 15, -6
+0,0, 0,0, 1
+
+
+; Crouch Turning
+[Begin Action 6]
+Clsn2Default: 1
+  Clsn2[0] = -15, -66, 15, -6
+0,0, 0,0, 1
+
+
+; Stand to crouch
+[Begin Action 10]
+Clsn2Default: 1
+  Clsn2[0] = -15, -66, 15, -6
+0,0, 0,0, 1
+
+
+; Crouching animation
+[Begin Action 11]
+Clsn2Default: 1
+  Clsn2[0] = -15, -66, 15, -6
+0,0, 0,0, 1
+
+
+; Crouch to Stand
+[Begin Action 12]
+Clsn2Default: 1
+  Clsn2[0] = -15, -66, 15, -6
+0,0, 0,0, 1
+
+
+; Walking Forward
+[Begin Action 20]
+Clsn2Default: 2
+  Clsn2[0] = 0, -68, 15, -8
+  Clsn2[1] = -15, -53, 0, -8
+10,3, 0,0, 6
+Clsn2Default: 2
+  Clsn2[0] = 0, -67, 15, -7
+  Clsn2[1] = -15, -52, 0, -7
+10,1, 0,0, 6
+
+
+; Walking Back
+[Begin Action 21]
+Clsn2Default: 2
+  Clsn2[0] = 0, -68, 15, -8
+  Clsn2[1] = -15, -53, 0, -8
+10,3, 0,0, 6,H
+Clsn2Default: 2
+  Clsn2[0] = 0, -67, 15, -22
+  Clsn2[1] = -15, -52, 0, -7
+10,1, 0,0, 6,H
+
+
+; Jump start frame
+[Begin Action 40]
+Clsn2Default: 1
+  Clsn2[0] = -15, -66, 15, -6
+0,0, 0,0, 1
+
+
+; Starting Jumping up
+[Begin Action 41]
+Clsn2Default: 2
+  Clsn2[0] = 0, -68, 15, -8
+  Clsn2[1] = -15, -53, 0, -8
+10,3, 0,0, 6
+Clsn2Default: 2
+  Clsn2[0] = 0, -67, 15, -22
+  Clsn2[1] = -15, -52, 0, -7
+10,1, 0,0, 6
+
+
+; Starting Jumping forwards
+[Begin Action 42]
+Clsn2Default: 2
+  Clsn2[0] = 0, -68, 15, -8
+  Clsn2[1] = -15, -53, 0, -8
+10,3, 0,0, 6
+Clsn2Default: 2
+  Clsn2[0] = 0, -67, 15, -22
+  Clsn2[1] = -15, -52, 0, -7
+10,1, 0,0, 6
+
+
+; Starting Jumping backwards
+[Begin Action 43]
+Clsn2Default: 2
+  Clsn2[0] = 0, -68, 15, -8
+  Clsn2[1] = -15, -53, 0, -8
+10,3, 0,0, 6
+Clsn2Default: 2
+  Clsn2[0] = 0, -67, 15, -22
+  Clsn2[1] = -15, -52, 0, -7
+10,1, 0,0, 6
+
+; Peak and coming down from Jumping up
+;[Begin Action 44]
+; Peak and coming down from Jumping forwards
+;[Begin Action 45]
+; Peak and coming down from Jumping backwards
+;[Begin Action 46]
+; Jump land animation
+[Begin Action 47]
+Clsn2Default: 1
+  Clsn2[0] = -15, -66, 15, -6
+0,0, 0,0, 1
+
+
+; Run forwards
+[Begin Action 100]
+Clsn2Default: 2
+  Clsn2[0] = 0, -68, 15, -8
+  Clsn2[1] = -15, -53, 0, -8
+10,3, 0,0, 6
+Clsn2Default: 2
+  Clsn2[0] = 0, -67, 15, -22
+  Clsn2[1] = -15, -52, 0, -7
+10,1, 0,0, 6
+
+
+; Hop backwards
+[Begin Action 105]
+Clsn2Default: 3
+  Clsn2[0] = -15, -66, 15, -6
+  Clsn2[1] = 0, -68, 15, -8
+  Clsn2[2] = -15, -53, 0, -8
+10,0, 0,0, 6
+Clsn2Default: 2
+  Clsn2[0] = 0, -67, 15, -22
+  Clsn2[1] = -15, -52, 0, -7
+10,1, 0,0, 6
+
+;---------------------------
+; Lose
+[Begin Action 170]
+0,0, 0,0, 1
+
+;---------------------------
+; Win
+[Begin Action 181]
+40,11, 0,0, 6
+40,10, 0,0, 6
+40,9, 0,0, 6
+40,8, 0,0, 6
+40,7, 0,0, 6
+40,6, 0,0, 6
+40,5, 0,0, 6
+40,4, 0,0, 6
+40,3, 0,0, 6
+40,2, 0,0, 6
+40,1, 0,0, 6
+40,0, 0,0, 6
+-1,-1, 0,0, 12121212
+
+;-----------------------------------
+; INTRO
+[Begin Action 190]
+40,0, 0,0, 6
+40,1, 0,0, 6
+40,2, 0,0, 6
+40,3, 0,0, 6
+40,4, 0,0, 6
+40,5, 0,0, 6
+40,6, 0,0, 6
+40,7, 0,0, 6
+40,8, 0,0, 6
+40,9, 0,0, 6
+40,10, 0,0, 6
+40,11, 0,0, 6
+
+;---------------------------
+; Taunt
+[Begin Action 195]
+-1,0, 0,0, 0
+
+;--------------------
+; GUARDSTART (stand)
+[Begin Action 120]
+Clsn2Default: 4
+  Clsn2[0] = 14, 0, -13, -43
+  Clsn2[1] = -11, -43, 12, -86
+  Clsn2[2] = -1, -86, -11, -94
+  Clsn2[3] = -20, -78, 13, -58
+20,0, 0,0, 1
+
+
+; GUARDSTART (crouch)
+[Begin Action 121]
+Clsn2: 2
+  Clsn2[0] = -17, 0, 16, -56
+  Clsn2[1] = 3, -56, -9, -64
+20,0, 0,0, 1
+
+
+; GUARDSTART (air)
+[Begin Action 122]
+Clsn2: 2
+  Clsn2[0] = 22, -38, 0, -88
+  Clsn2[1] = 9, -31, -9, -76
+20,0, 0,0, 1
+
+
+; GUARD (stand)
+[Begin Action 130]
+Clsn2Default: 4
+  Clsn2[0] = 14, 0, -13, -43
+  Clsn2[1] = -11, -43, 12, -86
+  Clsn2[2] = -1, -86, -11, -94
+  Clsn2[3] = -20, -78, 13, -58
+20,0, 0,0, -1
+
+
+; GUARD (crouch)
+[Begin Action 131]
+Clsn2: 2
+  Clsn2[0] = -17, 0, 16, -56
+  Clsn2[1] = 3, -56, -9, -64
+20,0, 0,0, -1
+
+
+; GUARD (air)
+[Begin Action 132]
+Clsn2: 2
+  Clsn2[0] = 22, -38, 0, -88
+  Clsn2[1] = 9, -31, -9, -76
+20,0, 0,0, -1
+
+
+; GUARDEND (stand)
+[Begin Action 140]
+Clsn2Default: 4
+  Clsn2[0] = 14, 0, -13, -43
+  Clsn2[1] = -11, -43, 12, -86
+  Clsn2[2] = -1, -86, -11, -94
+  Clsn2[3] = -20, -78, 13, -58
+20,0, 0,0, 5
+
+
+; GUARDEND (crouch)
+[Begin Action 141]
+Clsn2: 2
+  Clsn2[0] = -17, 0, 16, -56
+  Clsn2[1] = 3, -56, -9, -64
+20,0, 0,0, 1
+
+
+; GUARDEND (air)
+[Begin Action 142]
+Clsn2: 2
+  Clsn2[0] = 22, -38, 0, -88
+  Clsn2[1] = 9, -31, -9, -76
+20,0, 0,0, 1
+
+
+; Hit back while guarding (stand)
+[Begin Action 150]
+Clsn2Default: 4
+  Clsn2[0] = 14, 0, -13, -43
+  Clsn2[1] = -11, -43, 12, -86
+  Clsn2[2] = -1, -86, -11, -94
+  Clsn2[3] = -20, -78, 13, -58
+20,0, 0,0, 4
+
+
+; Hit back while guarding (crouch)
+[Begin Action 151]
+Clsn2: 2
+  Clsn2[0] = -17, 0, 16, -56
+  Clsn2[1] = 3, -56, -9, -64
+20,0, 0,0, -1
+
+
+; Hit back while guarding (air)
+[Begin Action 152]
+Clsn2: 2
+  Clsn2[0] = 22, -38, 0, -88
+  Clsn2[1] = 9, -31, -9, -76
+20,0, 0,0, -1
+
+;---------------------------
+; Stand/Air Hit high (light)
+[Begin Action 5000]
+Clsn2: 2
+  Clsn2[0] = -18, -79, 16, 0
+  Clsn2[1] = -17, -94, -4, -79
+30,0, 0,0, 4
+
+
+;Stand/Air Hit high (medium)
+[Begin Action 5001]
+Clsn2: 2
+  Clsn2[0] = -18, -79, 16, 0
+  Clsn2[1] = -12, -77, -25, -94
+30,0, 0,0, 5
+
+
+;Stand/Air Hit high (hard)
+[Begin Action 5002]
+Clsn2: 2
+  Clsn2[0] = -18, -79, 16, 0
+  Clsn2[1] = -32, -89, -15, -60
+30,0, 0,0, 5
+
+;---------------------------
+;Stand Recover high (light)
+[Begin Action 5005]
+Clsn2: 2
+  Clsn2[0] = -18, -79, 16, 0
+  Clsn2[1] = -32, -89, -15, -60
+30,0, 0,0, 3
+
+
+;Stand Recover high (medium)
+[Begin Action 5006]
+Clsn2: 2
+  Clsn2[0] = -18, -79, 16, 0
+  Clsn2[1] = -14, -55, -37, -87
+30,0, 0,0, 3
+
+
+;Stand Recover high (hard)
+[Begin Action 5007]
+Clsn2: 2
+  Clsn2[0] = -18, -79, 16, 0
+  Clsn2[1] = -14, -55, -37, -87
+30,0, 0,0, 5
+
+;---------------------------
+;Stand/Air Hit low (light)
+[Begin Action 5010]
+Clsn2: 2
+  Clsn2[0] = 16, 0, -24, -76
+  Clsn2[1] = -12, -72, 1, -88
+30,0, 0,0, 5
+
+
+;Stand/Air Hit low (medium)
+[Begin Action 5011]
+Clsn2: 2
+  Clsn2[0] = -27, -76, 16, 0
+  Clsn2[1] = -12, -66, 1, -81
+30,0, 0,0, 5
+
+
+;Stand/Air Hit low (hard)
+[Begin Action 5012]
+Clsn2Default: 1
+  Clsn2[0] = -27, -76, 16, 0
+30,0, 0,0, 1
+
+;---------------------------
+;Stand Recover low (light)
+[Begin Action 5015]
+Clsn2: 2
+  Clsn2[0] = -27, -76, 16, 0
+  Clsn2[1] = -12, -81, 1, -66
+30,0, 0,0, 1
+
+
+;Stand Recover low (medium)
+[Begin Action 5016]
+Clsn2: 1
+  Clsn2[0] = -27, -76, 16, 0
+30,0, 0,0, 1
+
+
+;Stand Recover low (hard)
+[Begin Action 5017]
+Clsn2: 1
+  Clsn2[0] = -27, -76, 16, 0
+30,0, 0,0, 1
+
+;---------------------------
+;Crouch Hit (light)
+[Begin Action 5020]
+Clsn2Default: 3
+  Clsn2[0] = 18, 0, -15, -27
+  Clsn2[1] = 11, -27, -15, -50
+  Clsn2[2] = -2, -49, -14, -62
+30,0, 0,0, 5
+
+
+;Crouch Hit (medium)
+[Begin Action 5021]
+Clsn2Default: 3
+  Clsn2[0] = 18, 0, -15, -27
+  Clsn2[1] = 11, -27, -15, -50
+  Clsn2[2] = -2, -49, -14, -62
+30,0, 0,0, 5
+
+
+;Crouch Hit (hard)
+[Begin Action 5022]
+Clsn2Default: 3
+  Clsn2[0] = 18, 0, -15, -27
+  Clsn2[1] = 11, -27, -15, -50
+  Clsn2[2] = -2, -49, -14, -62
+30,0, 0,0, 5
+
+;---------------------------
+;Crouch Recover (light)
+[Begin Action 5025]
+Clsn2Default: 3
+  Clsn2[0] = 18, 0, -15, -27
+  Clsn2[1] = 11, -27, -15, -50
+  Clsn2[2] = -2, -49, -14, -62
+30,0, 0,0, 1
+
+
+;Crouch Recover (medium)
+[Begin Action 5026]
+Clsn2Default: 3
+  Clsn2[0] = 18, 0, -15, -27
+  Clsn2[1] = 11, -27, -15, -50
+  Clsn2[2] = -2, -49, -14, -62
+30,0, 0,0, 3
+
+
+;Crouch Recover (hard)
+[Begin Action 5027]
+Clsn2Default: 3
+  Clsn2[0] = 18, 0, -15, -27
+  Clsn2[1] = 11, -27, -15, -50
+  Clsn2[2] = -2, -49, -14, -62
+30,0, 0,0, 4
+
+;---------------------------
+;Stand/Air Hit back
+[Begin Action 5030]
+Clsn2: 2
+  Clsn2[0] = -21, -88, 5, -61
+  Clsn2[1] = -8, -66, 16, -38
+30,0, 0,0, 5
+
+
+;Stand/Air Hit transition
+[Begin Action 5035]
+Clsn2: 2
+  Clsn2[0] = -21, -88, 5, -61
+  Clsn2[1] = -8, -66, 16, -38
+30,0, 0,0, 4
+
+;---------------------------
+;Air Recover
+[Begin Action 5040]
+Clsn2: 1
+  Clsn2[0] = -18, -77, 18, -42
+30,0, 0,0, 3
+
+;---------------------------
+;Air Fall (going up)
+[Begin Action 5050]
+Clsn2Default: 2
+  Clsn2[0] = 24, -44, -2, -76
+  Clsn2[1] = -2, -44, -33, -67
+90,0, 0,0, 5
+
+;---------------------------
+;Air Fall (up-type, going up)
+[Begin Action 5051]
+Clsn2: 1
+  Clsn2[0] = -19, -105, 14, -25
+90,0, 0,0, 3
+
+;---------------------------
+;Air Fall (up-type, coming down)
+[Begin Action 5061]
+Clsn2: 2
+  Clsn2[0] = 5, -61, -24, -98
+  Clsn2[1] = -8, -65, 20, -30
+90,0, 0,0, 5
+
+;---------------------------
+;Tripped
+[Begin Action 5070]
+Clsn2: 2
+  Clsn2[0] = 16, 0, -11, -76
+  Clsn2[1] = 0, -91, 11, -76
+90,0, 8,0, 5
+
+;---------------------------
+;LieDown Hit (stay down)
+[Begin Action 5080]
+Clsn2Default: 1
+  Clsn2[0] = 22, 0, -26, -21
+100,0, 0,0, 4
+
+;---------------------------
+;LieDown Hit (hit up into air)
+[Begin Action 5090]
+Clsn2: 2
+  Clsn2[0] = 19, -39, -5, -66
+  Clsn2[1] = 2, -57, -26, -83
+90,0, 0,0, 7
+
+;---------------------------
+; Hit ground from fall
+[Begin Action 5100]
+Clsn2Default: 1
+  Clsn2[0] = 22, 0, -26, -21
+100,0, 0,0, 3
+
+
+; Bounce into air
+[Begin Action 5160]
+Clsn2: 1
+  Clsn2[0] = -30, -47, 23, -23
+90,0, 0,0, -1
+
+
+; Hit ground from bounce
+[Begin Action 5170]
+Clsn2: 1
+  Clsn2[0] = 22, 0, -26, -21
+100,0, 0,0, 3
+
+;---------------------------
+; Hit ground from fall (up-type)
+[Begin Action 5101]
+Clsn2Default: 1
+  Clsn2[0] = 22, 0, -26, -21
+90,0, 0,0, 4
+
+;---------------------------
+; LieDown
+[Begin Action 5110]
+Clsn2: 1
+  Clsn2[0] = 22, 0, -26, -21
+100,0, 0,0, 1
+
+
+; Get up from LieDown
+[Begin Action 5120]
+Clsn2Default: 1
+  Clsn2[0] = 17, 0, -13, -53
+0,0, 0,0, 5
+
+
+;LieDead animation
+[Begin Action 5150]
+Clsn2: 1
+  Clsn2[0] = 22, 0, -26, -21
+100,0, 0,0, 1
+
+;---------------------------
+; Fall-recovery near ground
+[Begin Action 5200]
+Clsn2: 1
+  Clsn2[0] = 16, -46, -14, -75
+100,0, 0,-120, 3,VH
+
+
+;Fall-recovery in mid-air
+[Begin Action 5210]
+Clsn2: 1
+  Clsn2[0] = -18, -75, 18, -44
+90,0, 0,0, 3
+
+;---------------------------
+; Dizzy
+[Begin Action 5300]
+Clsn2Default: 1
+  Clsn2[0] = 22, 0, -20, -87
+30,0, 0,0, 8
+
+
+;attack1
+[Begin Action 200]
+Clsn2Default: 4
+  Clsn2[0] = -5, -66, 10, -36
+  Clsn2[1] = -20, -51, -5, -36
+  Clsn2[2] = -5, -36, 25, -21
+  Clsn2[3] = -20, -21, 10, -6
+50,0, 0,0, 5
+Clsn2Default: 4
+  Clsn2[0] = -2, -66, 13, -36
+  Clsn2[1] = -17, -51, -2, -36
+  Clsn2[2] = -17, -36, 43, -21
+  Clsn2[3] = -17, -21, 13, -6
+Clsn1: 1
+  Clsn1[0] = 1, -44, 57, -7
+50,1, 0,0, 5
+Clsn2Default: 3
+  Clsn2[0] = -17, -21, 43, -6
+  Clsn2[1] = -17, -51, -2, -21
+  Clsn2[2] = -2, -66, 13, -21
+Clsn1: 1
+  Clsn1[0] = 9, -32, 61, 8
+50,2, 0,0, 7
+Clsn2Default: 3
+  Clsn2[0] = -2, -66, 13, -21
+  Clsn2[1] = -17, -51, -2, -21
+  Clsn2[2] = -17, -21, 43, -6
+Clsn1: 1
+  Clsn1[0] = 14, -29, 71, 15
+50,3, 0,0, 7
+Clsn2Default: 2
+  Clsn2[0] = -17, -51, -2, -6
+  Clsn2[1] = -2, -66, 13, -6
+Clsn1: 1
+  Clsn1[0] = 20, -24, 65, 16
+50,4, 0,0, 7
+
+
+;attack2
+[Begin Action 210]
+Clsn2Default: 2
+  Clsn2[0] = -17, -51, -2, -6
+  Clsn2[1] = -2, -66, 13, -6
+60,0, 0,0, 5
+Clsn2Default: 2
+  Clsn2[0] = -17, -51, -2, -21
+  Clsn2[1] = -2, -66, 13, -21
+Clsn1: 1
+  Clsn1[0] = 25, -38, 95, 16
+60,1, 0,0, 5
+Clsn2Default: 3
+  Clsn2[0] = -17, -21, 13, -6
+  Clsn2[1] = -17, -51, -2, -36
+  Clsn2[2] = -2, -66, 13, -36
+Clsn1: 1
+  Clsn1[0] = 32, -45, 112, 8
+60,2, 0,0, 7
+Clsn2Default: 2
+  Clsn2[0] = 0, -67, 15, -22
+  Clsn2[1] = -15, -52, 0, -22
+Clsn1: 1
+  Clsn1[0] = 35, -33, 123, 13
+60,3, 0,0, 7
+Clsn2Default: 2
+  Clsn2[0] = -15, -52, 0, -22
+  Clsn2[1] = 0, -67, 15, -22
+Clsn1: 1
+  Clsn1[0] = 65, -31, 132, 14
+60,4, 0,0, 7
+Clsn2Default: 2
+  Clsn2[0] = 0, -67, 15, -7
+  Clsn2[1] = -15, -52, 0, -7
+60,5, 0,0, 7
+Clsn2Default: 2
+  Clsn2[0] = 0, -67, 15, -7
+  Clsn2[1] = -15, -52, 0, -7
+60,6, 0,0, 7
+
+
+;special
+[Begin Action 220]
+70,0, 0,0, 15
+70,2, 0,0, 6
+
+
+;special projectile
+[Begin Action 230]
+Clsn1: 1
+  Clsn1[0] = -3, -44, 52, -10
+80,0, 0,0, 6
+
+

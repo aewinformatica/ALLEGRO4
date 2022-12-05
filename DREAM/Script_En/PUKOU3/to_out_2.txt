@@ -1,0 +1,48 @@
+#出学校的路口2
+
+#如果剧情状态是1的话不能通过
+if(31,1,"NO_WAY");
+
+#如果是剧情2的话鞋子坏
+if(31,2,"SHOE_BROKE");
+@CONT
+
+go_inout(0,1);
+
+set_game_status(1);
+
+call("Script_En/out/load.txt");
+NPC_set(0,20,1);
+NPC_turn(0,0);
+
+set_game_status(0);
+
+go_inout(0,0);
+
+@END
+end();
+
+##############################
+#不能通过的子程序
+@NO_WAY
+
+talk(0,"Alai:Now the most important is to take on a good seat that's easy to see other's paper. Don't go outside the campus.");
+NPC_walk(0,2,1);
+
+goto("END");
+
+##############################
+#鞋子坏掉的子程序
+@SHOE_BROKE
+
+if(36,4,"CONT");
+
+talk(0,"Alai:What the heck...");
+talk(3,"Emma:What is it?");
+talk(0,"Alai:My shoes are broken.");
+talk(3,"Emma:Oh, it's your bad luck day.");
+talk(0,"Alai:My luck is always bad. Let's go to the Baijia Super Market and buy another pair.");
+talk(3,"Emma:OK, let's go!");
+set(36,4);
+
+goto("CONT");

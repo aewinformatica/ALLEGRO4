@@ -1,0 +1,86 @@
+; Definition of KFM's stage
+; *** denotes values you should change/check for each stage.
+; The term "background" is used to mean both backgrounds and foregrounds.
+
+;--------------------------------------------------------
+[Info]
+name = "Chouji´s Stage 2"
+
+;--------------------------------------------------------
+[Camera]
+startx = 0
+starty = 0
+
+boundleft = -100
+boundright = 93
+boundhigh = -20
+boundlow = 0
+verticalfollow = .2
+floortension = 0
+tension = 40
+
+;--------------------------------------------------------
+[PlayerInfo]
+p1startx = -70
+p1starty = 0
+p1startz = 0
+p1facing = 1
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound = 420
+topbound  =  0
+botbound  =  0
+
+;--------------------------------------------------------
+[Scaling]
+topz  = 0
+botz  = 25
+topscale = 1
+botscale = 1.2
+
+;--------------------------------------------------------
+[Bound]
+screenleft = 15
+screenright = 15
+
+;--------------------------------------------------------
+[StageInfo]
+zoffset = 220
+autoturn = 1
+resetBG = 1
+
+;--------------------------------------------------------
+[Shadow]
+intensity = 0-256
+color = 0,0,0
+yscale = 0.4
+fade.range = -400,100
+
+;--------------------------------------------------------
+[Reflection]
+intensity= 0
+
+;--------------------------------------------------------
+[Music]
+bgmusic = sound/fooling_mode.mid
+bgvolume = 255
+
+;--------------------------------------------------------
+[BGDef]
+spr = Ramen.sff
+debugbg = 0
+
+;--------------------------------------------------------
+[BG Floor]
+type  = normal
+spriteno = 0,0
+start = 0, 220
+delta = .75,.78
+xscale = 1, 1.75
+yscalestart = 100
+yscaledelta = 1.2

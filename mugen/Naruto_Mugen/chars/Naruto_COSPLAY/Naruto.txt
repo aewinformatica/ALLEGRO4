@@ -1,0 +1,47 @@
+Naruto_COSPLAY for Mugen10414
+
+由於用gba的火影來錄音,出來的人聲超破,所以...請見諒:D
+
+
+火影人物下載頁http://mugenchina.net/naruto.html
+感謝Misamu提供人物下載空間^^
+
+制作人 : MRSS
+                
+
+[ 特殊技 ]
+
+
+特殊技1   :  →+X
+
+
+[ 必殺技 ]
+
+
+必殺技1   :  ↓ →+X or A
+
+必殺技2   :  ↓ ←+X or A
+
+必殺技3   :  近敵 → ↓ ↘+X or A
+
+必殺技4   :  ↓ →+Y or B , ↓ ←+Y or B
+
+必殺技5   :  ↓ ←+Y or B , ↓ →+Y or B
+
+必殺技6   :  空中 ↓ →+X or A
+
+
+
+[ 超必殺技 ]
+
+
+超必殺技1   : 中至近敵 ↓ → ↓ →+X <LEVER1>
+
+超必殺技2   : ↓ → ↓ →+A <LEVER2>
+
+
+
+
+
+
+

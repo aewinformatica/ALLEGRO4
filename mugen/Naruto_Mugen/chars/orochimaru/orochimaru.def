@@ -1,0 +1,22 @@
+; Definition file for Kung Fu Man
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Orochimaru"        ;Name of character
+displayname = "Orochimaru" ;Name of character to display
+versiondate = 03,7,2005    ;Version date of character
+mugenversion = 04,14,2001   ;Version of M.U.G.E.N character works on
+author = "Videogameguru AKA Mugenguru" ;Character author name
+pal.defaults = 1 ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = orochimaru.cmd   ;Command set
+cns     = orochimaru.cns   ;Constants
+st      = orochimaru.cns   ;States
+stcommon = orochimaru2.cns ;Common states
+sprite  = orochimaru.sff   ;Sprite
+anim    = orochimaru.air   ;Animation
+sound   = orochimaru.snd   ;Sound
+pal1    = orochimaru.act   ;palletes

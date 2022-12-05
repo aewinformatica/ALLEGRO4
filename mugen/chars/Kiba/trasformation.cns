@@ -1,0 +1,39 @@
+;---------------------------------------------------------------------------
+; Variable usage:
+; This is a record of the variables that KFM uses. Keeping a record of your
+; variable usage helps you avoid careless mistakes later.
+; var(1)  - Used in kfm.cmd for combo condition (updated every tick)
+; var(2)  - Used in Kung Fu Throw (state 800) to remember if fwd was being
+;           held (remembered from state 800 through state 810).
+;---------------------------------------------------------------------------
+[Statedef 275]
+type = S
+movetype= A
+physics = S
+anim = 275
+ctrl = 0
+
+[State 275, VarSet]
+type = VarSet
+trigger1 = AnimElem = 1
+v = 0
+value = 75
+
+[State 275, AttackMulSet]
+type = AttackMulSet
+trigger1 = (10)
+value = 3.5 ;50% increase to attack.
+
+[State -2: AttackMulSet]
+type = AttackMulSet
+trigger1 = (Var(0) <= 0)
+value = 1
+ignorehitpause = 1
+
+[State 275,  2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+

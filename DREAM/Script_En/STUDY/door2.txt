@@ -1,0 +1,16 @@
+#从门下面的格子走过去占位
+
+talk(50,"Alai:So lucky, there's a seat left, and there's a hard working people beside.");
+
+NPC_walk(0,1,2);
+NPC_walk(0,2,1);
+NPC_walk(0,1,2);
+NPC_walk(0,2,1);
+
+delay(18);
+
+talk(50,"Alai:Haha, this is a perfect seat.");
+
+call("Script_En/study/teacher.txt");
+
+call("Script_En/study/new_chapter.txt");

@@ -1,0 +1,84 @@
+#捉到猴子
+
+talk(50,"Ha ha! I got it,I got it!!!");
+
+go_inout(0,1);
+
+set(38,2);
+set(36,8);
+set(31,3);
+clr_all_NPC();
+init_NPC(20,13,2,$36,0,0,"Script_En/blank.txt");
+init_NPC(20,12,0,4,0,14,"Script_En/super/NPC_1.txt");
+choose_player(0);
+
+go_inout(0,0);
+
+play_midi("music/emma.mid");
+talk(50,"Saleslady:Well,Nanjing University's students really deserve the reputations one enjoys,and they are willing to help others,even professional in catching monkey!!!");
+talk(50,"Saleslady:Unlike my child,he is so naughty.He insist on bringing a monkey home,saying the little monkey lost his mother.");
+talk(1,"Alay:It's not like that.I'm one of the worst students of Nanjing University...");
+talk(50,"Saleslady:Wow,one of the worst students is still so talented.If there are more outstanding students like you,the four pests could be eliminated at one night!!!");
+talk(50,"(Writer's note:The 'four pests' stands for rat,fly,blackbeetle and mosquito,concluded by Chairman Mao.)");
+talk(1,"Alay:Eh?!......Well,it's more like right.Oh,I nearly forgot that I came to buy shoes.");
+talk(50,"Saleslady:Oh,that's fine.This pair of gym shoes is a reward for you!");
+talk(1,"Alay:Then thanks a lot!");
+talk(50,"Saleslady:You are so welcome.I should thank you too!");
+talk(50,"(Alay puts on the new shoes,and feels perfect.)");
+
+NPC_walk(0,1,1);
+NPC_walk(0,0,5);
+
+#切换到校外
+go_inout(0,1);
+
+set_game_status(1);
+
+call("Script_En/out/load.txt");
+NPC_set(0,33,40);
+NPC_turn(0,0);
+
+set_game_status(0);
+
+go_inout(0,0);
+
+#与埃玛对话
+NPC_walk(0,0,3);
+init_NPC(33,43,3,8,0,1,"Script_En/blank.txt");
+
+NPC_walk(5,3,2);
+NPC_turn(5,1);
+NPC_turn(0,3);
+delay(9);
+talk(3,"Emma:Oh,it's so difficult to find a person with great imagination.I even can not see one till now.");
+talk(0,"Alay:Alas,years is an immateriality killer of imagination.Now it is scarce even in Nanjing University,everybody is considering their own life.Either going abroad or go to the P&G Company.");
+talk(3,"Emma:But our schoolmaster said he detected it.The person should be found here!");
+talk(0,"Alay:All right,even if you found 'the one',how can you get him back?");
+talk(3,"Emma:This is simple.You have a Physics Department in your school,do you?");
+talk(0,"Alay:Yeah,I am just in the Physics Department.");
+talk(3,"Emma:That's OK.Below your Physics Building,there is a secret lab underground.I can get back to the Fairy Land through the 'Space-Time Transport' there.Even your experts haven't realized it.");
+talk(0,"Alay:Eh,it's like this.Tomorrow the Department is organizing a visit to the laboratory in the Gulou District.Well then I would attend this.");
+talk(50,"Emma:Oh,my god!!!");
+talk(0,"Alay:What's wrong?");
+talk(50,"Emma:I made a mistake~~~~~~~~~ wuwuwuwuwuwuwuwu(crying)");
+talk(0,"Alay:What happened.Just stop crying.Let's have a talk.Is it unpleasant for you to visit the lab?It's OK.We won't go there.");
+talk(50,"Emma:Everything about the lab~~~~~~~~~The schoolmaster asked me not to tell this to anybody else excpet 'the one' I was looking for.  Wuwuwuwuwuwuwu.  Or the Space-Time process would be disturbed......");
+talk(0,"Alay:Eh?......It's like this?Then...I will go back with you,and I will tell your schoolmaster that I was pretending to be fanciful. Did you said he was a kind man,he wouldn't hurt us!");
+talk(3,"Emma:Relly?");
+talk(0,"Alay:Of course,now I have nothing to do,and I have no idea of the story of my RPG.");
+talk(5,"Emma:Great,it's late now,let's go back,and we are going to the lab tomorrow!!!");
+talk(0,"Alay:Back? Back to where?");
+talk(3,"Emma:Your dorm,where else can it be?");
+talk(0,"Alay:No,no! The faculty are strict,and one shouldn't accommodate a girl at night!");
+talk(3,"Emma:So are you asking me to sleep on the street?");
+talk(1,"Alay:Of course not,we may go to the 'net-bar' as well.");
+talk(4,"Emma:Alas,games. Alright,alright,let's go.");
+
+NPC_walk(5,1,1);
+
+clr_all_NPC();
+init_NPC(33,43,3,$36,0,0,"Script_En/blank.txt");
+init_NPC(27,8,0,4,0,7,"Script_En/out/NPC_1.txt");
+init_NPC(12,27,3,4,0,10,"Script_En/out/NPC_2.txt");
+init_NPC(24,34,3,4,1,10,"Script_En/out/NPC_3.txt");
+init_NPC(42,26,2,4,1,10,"Script_En/out/NPC_4.txt");

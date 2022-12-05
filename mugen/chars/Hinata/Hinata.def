@@ -1,0 +1,28 @@
+; Definition file for Blank
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Hyuuga Hinata"        ;Name of character
+displayname = "Hyuuga Hinata" ;Name of character to display
+versiondate = 05,23,2006    ;Version date of character (MM-DD-YYYY)
+mugenversion = 04,14,2002   ;Version of M.U.G.E.N character works on
+author = "UchihaCody"         ;Character author name
+pal.defaults = 1      ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = Hinata.cmd   ;Command set
+cns     = Hinata.cns   ;Constants
+st      = Hinata.cns   ;States
+stcommon = common1.cns ;Common states
+sprite  = Hinata.sff   ;Sprite
+anim    = Hinata.air   ;Animation
+sound   = Hinata.snd   ;Sound
+pal1    = Hinata.act  ;Palettes (can have up to 12)
+
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def

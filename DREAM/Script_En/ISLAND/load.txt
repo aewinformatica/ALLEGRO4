@@ -1,0 +1,16 @@
+#加载精灵岛的地图
+
+set_game_status(1);
+
+#加载地图
+clr_all_NPC();
+load_map("map/island/island.map","map/island/island.bmp","map/island/island_sky.bmp");
+
+#加载陷阱
+
+
+#加载NPC
+init_NPC(16,19,3,$36,0,0,"Script_En/blank.txt");
+init_NPC(18,19,1,8,0,1,"Script_En/blank.txt");
+
+return();

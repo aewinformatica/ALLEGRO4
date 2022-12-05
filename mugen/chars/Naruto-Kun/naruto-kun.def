@@ -1,0 +1,36 @@
+; Definition file for SASUKE_KUN
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="naruto-kun"
+displayname ="NARUTO KUN"
+versiondate =23,12,2005
+mugenversion =11,01,2001
+author ="YOUKAI"
+pal.defaults =1,2,3,4,5,6
+
+; Files for the player
+[Files]
+cmd     =naruto-kun.cmd
+cns     =naruto-kun.cns
+st      =naruto-kun.cns
+stcommon =common1.cns
+sprite  =naruto-kun.sff
+anim    =naruto-kun.air
+sound   =naruto-kun.snd
+pal1=naruto1.act
+pal2=naruto2.act
+pal3=naruto3.act
+pal4=naruto1.act
+pal5=naruto2.act
+pal6=naruto3.act
+pal7=
+pal8=
+
+
+; Arcade mode
+[Arcade]
+;intro.storyboard = ending.def
+ending.storyboard =
+intro.storyboard=

@@ -1,0 +1,30 @@
+--==MOVESLIST FOR TEDDY'S SANDAIME==--
+--------------------------------------
+a        =lightpunch
+a,a      =lightpunch and stongpunch combo
+D,F,b = Shiki Fuujin (Dead Demon Consuming Seal), ***, Only can do it if you have 100 HP or less
+x        = Sandaime Dash Attack, *, Its pretty strong, more than 1/4 of the enemy's health if they have a regular defense stat.
+D,D,y    = Enma Summon, ***, Powerful, but not a one hit KO
+z        = Teleport, 1/10 *
+
+--==HINTS==--
+-------------
++If you do teleport repeatedly, you can do it infintely and can barely be hit(not a glitch)
++In case your wondering, Sandaime has a triple jump. I personally don't mind, but you can fix it if you like.
+
+--==NOTES==--
+-------------
++No AI, just beats the crap out of everything with anything he can do.
++He cannot be hit while doing: -Enma Summon
+                               -Sandaime Dash
+                               -Teleport
++The Only time Sandaime can be hit durin Shiki Fuujin is when the pole disappears.
+--==CREDITS==--
+---------------
++Made with Fighter Factory
++Coded, Sprited, and Paletted by Teddy (me)
++Sprites from NARUTO MUGEN (naruto.burke-works.com)
++Handsign sprites made by Teddy (me)
+
+
+THIS IS A BETA EDITION!!!!

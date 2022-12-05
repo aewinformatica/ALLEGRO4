@@ -1,0 +1,1 @@
+talk(50,"Let's catch the monkey!!!");

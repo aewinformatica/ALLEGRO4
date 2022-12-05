@@ -1,0 +1,1 @@
+talk(50,"Schoolmate:There is a game which named Crystal Faith, did you played it?");

@@ -1,0 +1,1 @@
+talk(50,"Man:Piratic CD, 4 Yuan for 3 pieces!");

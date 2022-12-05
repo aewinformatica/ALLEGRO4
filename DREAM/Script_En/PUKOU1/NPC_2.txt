@@ -1,0 +1,2 @@
+talk(50,"Muslem Schoolmate:Hey, man ... do you know where is the Muslem Canteen?");
+talk(50,"Author:Oh, I'm sorry, there isn't enough room for another canteen on this map.");

@@ -1,0 +1,4 @@
+#ÔúÍ·½íGGµÄMM
+
+talk(50,"Girl:He is playing Warcraft all day long, and spending no time with me...");
+NPC_turn(4,1);

@@ -1,0 +1,9 @@
+==Controls==
+
+UP: Look up (graphical apperance only)
+DOWN: Duck (graphical apperance only)
+LEFT: Move Left
+RIGHT: Move Right
+LSHIFT or RSHIFT: Hold to Run faster
+F: Shoot a ring if you have the powerup
+ESC: Exits the game

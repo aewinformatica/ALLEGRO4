@@ -1,0 +1,20 @@
+[Info]
+name="Future Sasuke"
+displayname="Future Sasuke"
+versiondate=05,23,2006
+mugenversion=06,14,2003
+author="Batofara"
+pal.defaults=1
+[Files]
+sprite=futuresasuke.sff
+sound=futuresasuke.snd
+anim=futuresasuke.air
+cmd=futuresasuke.cmd
+cns=futuresasuke.cns
+st=futuresasuke.cns
+stcommon=common1.cns
+pal1=futuresasuke.act
+pal2=cs2.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=

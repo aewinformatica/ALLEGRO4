@@ -1,0 +1,380 @@
+;※※※※※※※※※※※※※※※※※※※※ストライカー
+;理論説明
+;本体がストライカーを呼び出し、後は何もしません、重要なのはヘルパーの行動です。
+;今回は「飛んで登場」その蹴りが当たったら空中の相手を蹴る
+;ストライカーは人間なので攻撃を食らったら消えるようにもします。
+;やること多いけどがんばりませうー
+;できるだけ簡潔にするために音や演出は入れてません。
+
+[Statedef 2100]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 0
+ctrl = 0
+velset = 0,0
+anim = 2100
+sprpriority = 2
+
+[State 810, Hurt 11];←パワーを減らす
+type = powerAdd
+trigger1 = animelem = 1
+value = -500
+
+[State 4100,1]];←ヘルパーを呼び出す
+type = Helper
+trigger1 = time = 1
+id = 4000
+name = "karate"
+sprpriority = 4
+pos = 300,-150
+postype = p2
+facing = -1
+stateno = 2110;←呼び出されたヘルパーはこのステートから始まる
+helpertype = normal
+keyctrl = 0          
+ownpal = 0
+
+[State -1, Kung Fu Throw];←これで本体の動きは終了
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1
+
+;※※※※※※※※※※※※※※※※※※※※ストライカーステート
+;
+;ここは上で登場したヘルパーが使う専用ステートです。
+;基本的にすべてにチェンジステートを付けていろんな行動に対応させます
+;まず2110では蹴って地上に付くまでを作ります
+;途中で攻撃を食らったときのために「hitoverride」を使ってます、次もつかってるけど。
+
+[Statedef 2110]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 0
+ctrl = 0
+velset = 20,5
+anim = 2110
+sprpriority = 2
+
+[State 3250, 4]
+trigger1 = time = 1
+type = Explod
+anim = 4000
+pos = 0,-90
+supermove = 1
+sprpriority = 2
+bindtime = -1
+ownpal = 1
+facing = 1
+
+[State 821, 1];←とりあえず加速させてる
+type = VelAdd
+Trigger1 = 1
+y = .4
+x = 2
+
+[State 640, 3];←攻撃
+type = HitDef
+trigger1 = animelem = 2
+attr = A, NA
+damage    = 70
+guardflag = HA
+priority = 4
+pausetime = 12,12
+sparkno = 1
+sparkxy = -10,-40
+hitsound   = 5,3
+guardsound = 6,0
+animtype = Med
+ground.type = High
+ground.slidetime = 17
+ground.hittime  = 17
+ground.velocity = -2,-3
+air.velocity = -2,0
+fall = 1
+
+[State 10011, 4];←あらゆる攻撃をくらったら2130の消滅ステートに移動
+type = HitOverride
+trigger1 = Time = 0
+attr = SCA, NT, ST, HT, NA, SA, HA,NP,SP,HP
+stateno = 2130        
+time = -1
+
+[State 230, 3];←着地したら次の蹴るステートへ
+type = ChangeState
+trigger1 = Vel Y > 0 && Pos Y >= 0
+value = 2120
+ctrl = 0
+
+
+;※※※※※※※※※※※※※※※※※※※※ストライカーステート２
+;
+;上のステートで地上についた瞬間にこのステートにきます。
+;そこでpossetを「y = 0」にすることできれいに着地することができます
+;もちろんここにも「hitoverride」いれています。
+
+[Statedef 2120]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 0
+ctrl = 0
+velset = 0,0
+anim = 240
+sprpriority = 2
+
+[State 821, 1] 
+type = posset
+trigger1 = time = 0
+y = 0
+
+[State 240, 2]
+type = HitDef
+trigger1 = Time = 0
+attr = S, NA
+animtype  = Medium
+damage    = 63
+guardflag = MA
+pausetime = 12,30
+sparkno = 1
+sparkxy = -10,-60
+hitsound   = 5,2
+guardsound = 6,0
+ground.type = Low
+ground.slidetime = 12
+ground.hittime  = 15
+ground.velocity = -6
+air.velocity = -2.2,-3.2
+fall = 1
+
+[State 10011, 4]
+type = HitOverride
+trigger1 = Time = 0
+attr = SCA, NT, ST, HT, NA, SA, HA,NP,SP,HP
+stateno = 2130        
+time = -1
+
+[State 230, 3]
+type = ChangeState
+trigger1 = animtime = 0
+value = 2130
+ctrl = 0
+
+;※※※※※※※※※※※※※※※※※※※※ストライカーステート３
+;
+;ストライカーが消えるステートです。
+;ジャンプして20フレーム後に「destroyself」で消えます
+
+[Statedef 2130]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 0
+ctrl = 0
+velset = 10,-10
+anim = 41
+sprpriority = 2
+
+[State 821, 1] 
+type = VelAdd
+Trigger1 = 1
+y = -.4
+x = 1
+
+[State 230, 3]
+type = destroyself
+trigger1 = time = 20
+
+;----------------------------------------------------------------------------
+[Statedef 10020]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+anim = 10020
+sprpriority = 8
+
+[State 10020, 4]
+type = SprPriority
+trigger1 = 1
+value = 4
+
+[State 10020,***]
+type = Explod
+trigger1 = AnimElem = 1
+trigger2 = AnimElem = 3
+trigger3 = AnimElem = 5
+trigger4 = AnimElem = 7
+anim = 10010
+id = 10010
+pos = 30,0
+velocity = -15,-5
+postype = p1
+sprpriority = 5
+;bindtime = 30
+supermovetime =13
+removetime = 13
+ownpal = 1
+
+[State 10020,***]
+type = Explod
+trigger1 = AnimElem = 2
+trigger2 = AnimElem = 4
+trigger3 = AnimElem = 6
+anim = 10010
+id = 10010
+pos = 0,0
+velocity = -15,-5
+postype = p1
+sprpriority = 5
+;bindtime = 30
+supermovetime =13
+removetime = 13
+ownpal = 1 
+
+[State 10020,***]
+type = Explod
+trigger1 = AnimElem = 1
+trigger2 = AnimElem = 3
+trigger3 = AnimElem = 5
+trigger4 = AnimElem = 7
+anim = 10010
+id = 10010
+pos = -20,0
+velocity = -15,-5
+postype = p1
+sprpriority = 5
+;bindtime = 30
+supermovetime =13
+removetime = 13
+ownpal = 1
+
+[State 10020,***]
+type = Explod
+trigger1 = AnimElem = 1
+trigger2 = AnimElem = 3
+trigger3 = AnimElem = 5
+trigger4 = AnimElem = 7
+anim = 10011
+id = 10011
+pos = 30,-50
+velocity = -15,5
+postype = p1
+sprpriority = -2
+;bindtime = 30
+supermovetime =13
+removetime = 13
+ownpal = 1
+
+[State 10020,***]
+type = Explod
+trigger1 = AnimElem = 2
+trigger2 = AnimElem = 4
+trigger3 = AnimElem = 6
+anim = 10011
+id = 10011
+pos = 0,-50
+velocity = 15,5
+postype = p1
+sprpriority = -2
+supermovetime =13
+;bindtime = 30
+removetime = 13
+ownpal = 1 
+
+[State 10020,***]
+type = Explod
+trigger1 = AnimElem = 1
+trigger2 = AnimElem = 3
+trigger3 = AnimElem = 5
+trigger4 = AnimElem = 7
+anim = 10011
+id = 10011
+pos = -20,-50
+velocity = 15,5
+postype = p1
+sprpriority = -2
+;bindtime = 30
+supermovetime =13
+removetime = 13
+ownpal = 1
+
+[State 10020,***]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 10020, 3]
+type = destroyself
+trigger1 = time = 26
+
+;------------------------------------------------------------
+;風？
+[Statedef 10040]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+anim = 10040
+sprpriority = 8
+
+[State 10040, 4]
+type = SprPriority
+trigger1 = 1
+value = 4
+
+
+[State 10040,***]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 10040, 3]
+type = destroyself
+trigger1 = time = 33
+
+;-------------------------------------
+;石
+
+[Statedef 10210]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+poweradd= 0
+ctrl = 0
+velset = 0,0
+anim = 10210
+sprpriority = 8
+
+[State 10210, 4]
+type = SprPriority
+trigger1 = 1
+value = 4
+
+
+[State 10210, 3]
+type = VelSet
+trigger1 = AnimElem = 1
+y = -2
+
+[State 10210,***]
+type = AssertSpecial
+trigger1 = 1
+flag = noshadow
+
+[State 10210, 3]
+type = destroyself
+trigger1 = time = 39

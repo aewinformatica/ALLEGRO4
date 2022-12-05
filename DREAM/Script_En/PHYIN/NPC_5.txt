@@ -1,0 +1,1 @@
+talk(50,"Schoolmate:Physics is not my major, bur I'd like to visit here.");

@@ -1,0 +1,8 @@
+if(((key[KEY_RIGHT] && !key[KEY_LEFT])|| (key[KEY_LEFT] && !key[KEY_RIGHT])) && key[KEY_LSHIFT]){
+                         
+                              SPRITE[PLAYER].xspeed = 5;
+                              
+        }
+        else{
+            SPRITE[PLAYER].xspeed = 3;
+        }

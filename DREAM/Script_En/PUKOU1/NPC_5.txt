@@ -1,0 +1,1 @@
+talk(50,"Schoolmate:Nanjing University is the third of the best universities in China.");

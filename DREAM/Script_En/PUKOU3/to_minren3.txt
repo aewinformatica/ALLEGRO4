@@ -1,0 +1,20 @@
+#到名人南去的路口
+
+  go_inout(0,1);
+  set_game_status(1);
+
+  call("Script_En/minren3/load.txt");
+  NPC_set(0,1,27);
+  NPC_turn(0,3);
+
+  if(31,1,"NEXT");
+  
+  #如果不是晚上加载两对恋人
+  init_NPC(41,19,0,4,0,11,"Script_En/minren3/NPC_1.txt");
+  init_NPC(41,20,2,4,0,13,"Script_En/minren3/NPC_2.txt");
+  init_NPC(24,36,3,4,0,12,"Script_En/minren3/NPC_3.txt");
+  init_NPC(25,36,1,4,0,7,"Script_En/minren3/NPC_4.txt");
+  @NEXT
+
+  set_game_status(0);
+  go_inout(0,0);

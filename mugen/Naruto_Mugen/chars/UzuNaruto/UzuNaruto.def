@@ -1,0 +1,30 @@
+; Player information
+[Info]
+name ="UzuNaruto"
+displayname ="Uzumaki Naruto"
+versiondate =12,30,2006
+mugenversion =04,14,2002
+author ="StickofDoom"
+pal.defaults =1,2,3,4,5
+
+; Files for the player
+[Files]
+cmd     =UzuNaruto.cmd
+cns     =UzuNaruto.cns
+st      =UzuNaruto.cns
+stcommon =common.cns
+sprite  =UzuNaruto.sff
+anim    =UzuNaruto.air
+sound   =UzuNaruto.snd
+pal1=UzuNaruto.act
+st1=AI.cns
+st2=kyuubi.cns
+
+
+;*** delete lines with palettes you are not using ***
+
+; Arcade mode
+[Arcade]
+intro.storyboard =
+ending.storyboard =
+

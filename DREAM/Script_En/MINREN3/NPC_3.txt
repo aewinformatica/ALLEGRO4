@@ -1,0 +1,4 @@
+#ÔúÍ·½íµÄGG
+
+talk(50,"Boy:She is saying 'Good bye' to me, what shall I do?!");
+NPC_turn(3,3);

@@ -1,0 +1,158 @@
+#到邪教，发现校长在搞邪教活动
+
+stop_midi();
+
+go_inout(0,1);
+
+set_game_status(1);
+
+call("Script_En/last/load.txt");
+
+set_game_status(0);
+
+go_inout(0,0);
+
+play_midi("music/master.mid");
+
+set_screen_status(1);
+screen_move(160,256,4);
+
+talk(50,"Headmaster:A few days later, a Solar Eclipse is going to take place. Then the nine planets will be on the same line, and I will have the power to control the three spaces.");
+talk(50,"Headmaster:I will be the new God, when I reached the God's Space,I will be the ruler of the whole world.");
+talk(50,"Headmaster:And this world will be ours,just a few days later, and it will be the time to cheer for our victory!");
+talk(50,"Headmaster:Our army will be invincible, our magic sticks will crush the Human Space and the Devil Space!");
+talk(50,"Headmaster:And you, generals, my loyal followers, will be the servants of the New God Me!!!");
+talk(50,"Headmaster:Think about the honor of Paratin, you will get it also. Cheer, tomorrow's Holy Knights!");
+NPC_walk(2,2,3);
+delay(18);
+talk(50,"Generals:Hurrah, Hurrah! Long life the God! Hurrah, Hurrah! Long life the Honor!");
+
+NPC_walk(1,2,3);
+talk(4,"Emma:Mr Headmaster,your conspiracy won't be achieved!");
+screen_move(160,384,8);
+NPC_walk(0,2,3);
+talk(0,"Alai:What a nice man, I wonder why don't you charge for the makeup, so you have a much bigger plan!");
+
+NPC_walk(2,0,5);
+talk(50,"Headmaster:Grrrr, Emma, you freed the fellow, do you want to be dismissed?");
+talk(4,"Emma:You shameless old thing, do you still consider anybody wanna be your student?");
+talk(50,"Headmaster:HeheheheHahahaha, look aside, they are my good students! (to generals) You say, do you wanna be my students?");
+talk(50,"Generals:We want! The headmaster is our God! We want to be the Holy Knights!");
+talk(50,"Headmaster:Hehe, did you see, dude? Obedience means hornor, means a P&G position, disobedience means makeup, means unemployment~! Do you want to be my student?");
+talk(0,"Alai:You think you are competent to be my teacher? I think I should teach you how to be a human.");
+talk(50,"Headmaster:It not needed, I'm the God, I'm not a human! HaHaHaHa!!!");
+talk(4,"Emma:Look at this, LV20 Blue Lightning!!!");
+set_light(500,127);
+delay(4);
+set_light(500,0);
+delay(4);
+set_light(500,127);
+delay(4);
+set_light(500,0);
+delay(4);
+set_light(500,127);
+delay(4);
+set_light(500,0);
+delay(4);
+talk(50,"Headmaster:Grr, you still have much to learn. Now it's my turn, LV50 Bloody Curse!!!");
+set_light($47,127);
+delay(4);
+set_light($47,0);
+delay(4);
+set_light($47,127);
+delay(4);
+set_light($47,0);
+delay(4);
+set_light($47,127);
+delay(4);
+set_light($47,0);
+delay(4);
+set_light($47,127);
+delay(4);
+set_light($47,0);
+delay(4);
+set_light($47,127);
+delay(4);
+set_light($47,0);
+delay(4);
+
+
+talk(4,"Emma:Alai, I'm sorry, I won't make it, he's too strong, run, just run...");
+talk(0,"Alai:Emma,Emma... You monster, I'll seize you to hell...Makeups! Emma! Yaaaaaa~~~");
+
+set_weather(1);
+
+screen_move(160,300,16);
+delay(2);
+screen_move(240,300,16);
+delay(2);
+screen_move(240,380,16);
+delay(2);
+screen_move(160,380,16);
+delay(2);
+screen_move(160,300,16);
+delay(2);
+screen_move(240,300,16);
+delay(2);
+screen_move(240,380,16);
+delay(2);
+screen_move(160,380,16);
+delay(2);
+screen_move(160,300,16);
+delay(2);
+screen_move(240,300,16);
+delay(2);
+screen_move(240,380,16);
+delay(2);
+screen_move(160,380,16);
+delay(2);
+screen_move(160,300,16);
+delay(2);
+screen_move(240,300,16);
+delay(2);
+screen_move(240,380,16);
+delay(2);
+screen_move(160,380,16);
+delay(2);
+screen_move(160,300,16);
+delay(2);
+screen_move(240,300,16);
+delay(2);
+screen_move(240,380,16);
+delay(2);
+screen_move(160,380,16);
+delay(2);
+
+go_inout(0,1);
+set_weather(0);
+
+midi_out();
+
+delay(18);
+talk(50,"Headmaster:Err... Err...");
+talk(50,"Headmaster:This kid... created... LV99... Evil... Blizzard...");
+talk(50,"......");
+talk(50,"............");
+talk(50,"........................");
+talk(50,"(The sound of several people running by)");
+talk(50,"A Voice:Captain Will, all in the cave are comatose.");
+talk(50,"Another Voice:So all the targets of the investigation is all here...Emma...How are you...");
+talk(50,"......");
+talk(50,"............");
+talk(50,"........................");
+
+#魔法医务室
+
+
+set_game_status(1);
+
+call("Script_En/sars/load.txt");
+NPC_set(0,12,5);
+NPC_turn(0,0);
+init_NPC(9,7,0,8,0,2,"Script_En/sars/will.txt");
+set_screen_status(0);
+set(31,5);
+set_game_status(0);
+
+play_midi("music/last.mid");
+go_inout(0,0);

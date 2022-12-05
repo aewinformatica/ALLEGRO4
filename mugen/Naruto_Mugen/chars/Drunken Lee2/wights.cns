@@ -1,0 +1,90 @@
+;animation
+[Statedef 3000]
+type    = S
+movetype= A
+physics = S
+juggle  = 0
+poweradd= 0
+ctrl = 0
+anim = 3000
+sprpriority = 2
+
+[State 2000, Super A]
+type = SuperPause
+trigger1 = AnimElem = 1
+time = 150
+pos = 0, 500
+anim = S10140
+sound = S100, 9
+movetime = 150
+poweradd = -2000
+
+[state 2000]
+type = explod
+trigger1 = teamside = 1 && animtime = 0
+anim = 3020
+postype = left
+facing = 1
+pos = 120,210
+removetime = -2
+supermovetime = 9999999
+removeongethit = 0
+bindtime = -1
+ontop = 1
+ownpal = 1
+
+[state 2000]
+type = explod
+trigger1 = teamside = 1 && animtime = 0
+anim = 3010
+postype = left
+facing = 1
+pos = 105,210
+removetime = -2
+supermovetime = 9999999
+removeongethit = 0
+bindtime = -1
+ontop = 1
+ownpal = 1
+
+[state 2000]
+type = explod
+trigger1 = teamside = 2 && animtime = 0
+anim = 3020
+postype = left
+facing = 1
+pos = 200,210
+removetime = -2
+supermovetime = 9999999
+removeongethit = 0
+bindtime = -1
+ontop = 1
+ownpal = 1
+
+[state 2000]
+type = explod
+trigger1 = teamside = 2 && animtime = 0
+anim = 3010
+postype = left
+facing = 1
+pos = 185,210
+removetime = -2
+supermovetime = 9999999
+removeongethit = 0
+bindtime = -1
+ontop = 1
+ownpal = 1
+
+
+[state 2000, var]
+type = varset
+trigger1 = animtime = 0
+v = 10
+value = 850
+
+
+[state 2000, 0]
+type = changestate
+trigger1 = animtime = 0
+value = 0
+ctrl = 1

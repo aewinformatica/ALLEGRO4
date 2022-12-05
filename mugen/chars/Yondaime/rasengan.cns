@@ -1,0 +1,439 @@
+;---------------------------------------------------------
+;Rasengan 
+[Statedef 1040]
+type = S
+movetype = A
+physics = S
+velset = 0,0
+juggle = 1
+anim = 1040
+poweradd = -1000
+ctrl = 0
+sprpriority = 2
+poweradd = 0
+
+[State 1040, 0]
+type = AfterImage
+trigger1 = AnimElem = 1
+time = 50
+trans = add1
+timegap = 1
+framegap = 2
+length = 10
+palbright = 12,12,12
+palcontrast = 222,222,222
+palpostbright = 0,0,0
+paladd = 0,0,0
+palmul = 1,1,1
+
+[state 1040, 0]
+type = explod
+trigger1 = AnimElem = 1
+id = 1040
+anim = 2555
+postype = p1
+pos = 0, 0
+bindtime = -1
+removetime = -1
+supermovetime = -1
+ontop= 1
+
+[state 1040, 0]
+type = explod
+trigger1 = AnimElem = 1
+id = 1040
+anim = 898
+postype = p1
+pos = 0, 0
+bindtime = -1
+removetime = -1
+supermovetime = -1
+ontop= 1
+
+[state 1040, 0]
+type = explod
+id = 1040
+trigger1 = AnimElem = 1
+anim = 899
+postype = p1
+pos = 0, 0
+bindtime = -1
+removetime = -2
+supermovetime = -2
+ontop= 1
+
+[state 1040, 0]
+type = explod
+trigger1 = AnimElem = 1
+id = 1040
+anim = 5566
+postype = p1
+pos = 0, 0
+ontop = 1
+bindtime = -1
+removetime = -1
+ontop= 1
+
+;[state 1040, 0]
+;type = ChangeState
+;value = 0
+;triggerall = time >= 241 && time <= 360
+;trigger1 = command != "holdc"
+;ctrl = 0
+
+[State 1040, 1]
+type = PlaySnd
+trigger1 = time = 1
+value = 29,29
+voulume = 225
+
+[State 1040, 2]
+type = VelSet
+trigger1 = AnimElem = 1
+x = 0
+
+[State 1040, 4]
+type = HitDef
+trigger1 = animelem = 1
+getpower = 20
+attr = S, NA
+animtype  = Hard
+damage    = 50
+guardflag = 0
+pausetime = 0,0
+sparkno = S9999
+sparkxy = -12,-3
+hitsound   = S0,4
+guardsound = S0,4
+ground.type = Low
+ground.slidetime = 7
+ground.hittime  = 7
+guard.velocity = -5.5
+ground.velocity = -30,-4
+air.velocity = 30,-4
+fall = 1
+fall.recover = 0
+
+[State 1040, Override]
+type = HitOverride
+trigger1 = 1
+attr = S, NA
+slot = 0
+stateno = 1041
+time = animtime = 0
+
+[state 1040, 5]
+type = ChangeState
+value = 1042
+triggerall = time >= 0 && time <= 24
+trigger1 = command != "holdc"
+ctrl = 0
+
+[state 1040, 5]
+type = ChangeState
+value = 1043
+triggerall = time >= 25 && time <= 48
+trigger1 = command != "holdc"
+ctrl = 0
+
+[state 1040, 5]
+type = ChangeState
+value = 1044
+triggerall = time >= 49
+trigger1 = command != "holdc"
+ctrl = 0
+
+;-----------------------------------------------------------------------
+[statedef 1041]
+type = S
+movetype = I
+physics = S
+velset = 0,0
+juggle = 1
+anim = 5000
+ctrl = 0
+sprpriority = 2
+
+[state 1041, 0]
+type = removeexplod
+trigger1 = 1
+
+[state 1041, 0]
+type = changestate
+trigger1 = animtime = 0
+value = 1040
+
+;-----------------------------------------------------------------------
+;Rasengan Hit
+[statedef 1042]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+velset = 0,0
+anim = 1042
+poweradd = -1000
+ctrl = 0
+sprpriority = 2
+
+[state 1042, vel]
+type = velset
+trigger1 = animelem = 4
+trigger2 = animelem = 5
+trigger3 = animelem = 6
+x = 30
+
+[state 1042, 1]
+type = removeexplod
+trigger1 = 1
+
+[state 1042, 1]
+type = PosAdd
+trigger1 = time = 5
+X = (P2BodyDist X + 50)
+
+[State 1042, 1]
+type = Turn
+trigger1 = time = 10
+
+[State 1042, 7] 
+type = HitDef
+trigger1 = animelem = 4
+trigger2 = animelem = 5
+trigger3 = animelem = 6
+attr = S, SA
+animtype  = Hard
+damage    = 150, 1
+guardflag = 0
+pausetime = 5,5
+sparkno = S9999
+sparkxy = -10,-70
+hitsound = S0, 3
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 12
+ground.hittime  = 13
+ground.velocity = -30,-4
+air.velocity = 30,-4
+fall = 1
+
+
+[state 1042, 3]
+type = explod
+trigger1 = AnimElem = 4
+trigger2 = animelem = 5
+trigger3 = animelem = 6
+id = 1042
+anim = 1049
+postype = p2
+pos = 0, 0
+bindtime = -20
+removetime = -20
+supermovetime = 20
+ontop= 1
+
+[State 1042, 2]
+type = SuperPause
+trigger1 = movehit = 1
+pos = 1000000,1000000000
+sound = S4, 0
+movetime = 20
+
+[State 1042, 3]
+type = PlaySnd
+trigger1 = time = 1
+value = 28,28
+voulume = 225
+
+[State 1042, 3]
+type = PlaySnd
+trigger1 = time = 1
+value = 7000,0
+voulume = 225
+
+[State 1042, 4]
+type = envshake
+trigger1 = movehit = 1
+time = 50
+freq = 70
+ampl = 50
+
+[state 1042,5]
+type = Changestate
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;-----------------------------------------------------------------------
+;Rasengan Hit 2
+[statedef 1043]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+velset = 0,0
+anim = 1042
+poweradd = -1000
+ctrl = 0
+sprpriority = 2
+
+[state 1043, vel]
+type = velset
+trigger1 = animelem = 4
+trigger2 = animelem = 5
+trigger3 = animelem = 6
+x = 40
+
+[state 1043, 1]
+type = removeexplod
+trigger1 = 1
+
+[state 1043, 1]
+type = PosAdd
+trigger1 = time = 5
+X = (P2BodyDist X + 60)
+
+[State 1043, 1]
+type = Turn
+trigger1 = time = 10
+
+[State 1043,1]
+type = HitDef
+trigger1 = animelem = 4
+trigger2 = animelem = 5
+trigger3 = animelem = 6
+attr = S, SA
+animtype  = Hard
+damage    = 350, 1
+guardflag = NA
+pausetime = 5,5
+sparkno = S9999
+sparkxy = -10,-70
+hitsound = S0, 3
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 12
+ground.hittime  = 13
+ground.velocity = -30,-4
+air.velocity = 30,-4
+fall = 1
+
+
+[State 1043, 2]
+type = SuperPause
+trigger1 = movehit = 1
+pos = 1000000,1000000000
+sound = S4, 0
+movetime = 20
+
+[State 1043, 3]
+type = PlaySnd
+trigger1 = time = 1
+value = 28,28
+voulume = 225
+
+[State 1043, 3]
+type = PlaySnd
+trigger1 = time = 1
+value = 7000,0
+voulume = 225
+
+[State 1043, 4]
+type = envshake
+trigger1 = movehit = 1
+time = 50
+freq = 70
+ampl = 50
+
+[state 1043,5]
+type = Changestate
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;-----------------------------------------------------------------------
+;Rasengan Hit 3
+[statedef 1044]
+type    = S
+movetype= A
+physics = S
+juggle  = 4
+velset = 0,0
+anim = 1042
+poweradd = -1000
+ctrl = 0
+sprpriority = 2
+
+[state 1044, vel]
+type = velset
+trigger1 = animelem = 4
+trigger2 = animelem = 5
+trigger3 = animelem = 6
+x = 50
+
+[state 1044, 1]
+type = removeexplod
+trigger1 = 1
+
+[state 1044, 1]
+type = PosAdd
+trigger1 = time = 5
+X = (P2BodyDist X + 70)
+
+[State 1044, 1]
+type = Turn
+trigger1 = time = 10
+
+[State 1044,1]
+type = HitDef
+trigger1 = animelem = 4
+trigger2 = animelem = 5
+trigger3 = animelem = 6
+attr = S, SA
+animtype  = Hard
+damage    = 450, 1
+guardflag = 0
+pausetime = 5,5
+sparkno = S9999
+sparkxy = -10,-70
+hitsound = S0, 3
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 12
+ground.hittime  = 13
+ground.velocity = -30,-4
+air.velocity = 30,-4
+fall = 1
+
+[State 1044, 2]
+type = SuperPause
+trigger1 = movehit = 1
+pos = 1000000,1000000000
+sound = S4, 0
+movetime = 20
+
+[State 1044, 3]
+type = PlaySnd
+trigger1 = time = 1
+value = 28,28
+voulume = 225
+
+[State 1044, 3]
+type = PlaySnd
+trigger1 = time = 1
+value = 7000,0
+voulume = 225
+
+[State 1044, 4]
+type = envshake
+trigger1 = movehit = 1
+time = 50
+freq = 70
+ampl = 50
+
+[state 1044,5]
+type = Changestate
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+

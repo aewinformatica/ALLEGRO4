@@ -1,0 +1,35 @@
+; Definition file for Blank
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name="Kisame"
+displayname="Kisame"
+versiondate=05,23,2006
+mugenversion=04,14,2002
+author="itachi-kun and naruto040"
+pal.defaults=1
+
+; Files for the player
+[Files]
+cmd =kisame.cmd
+cns =kisame.cns
+st =kisame.cns
+stcommon =common1.cns
+sprite =kisame.sff
+anim=kisame.air
+;sound =kisame.snd   
+
+;sprite credits go to me and naruto040
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard=intro.def
+;ending.storyboard=ending.def
+sound=
+pal1=kisame.act
+st1=bunshin.cns
+
+[Arcade]
+intro.storyboard=
+ending.storyboard=

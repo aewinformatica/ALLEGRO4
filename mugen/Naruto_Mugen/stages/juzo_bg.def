@@ -1,0 +1,141 @@
+;～月華の剣士～　神崎十三ステージ ver.Final   By Nyankoro
+
+[Info]
+name =  "Temaris Stage"
+[Camera]
+startx = 0
+starty = 0
+boundleft = -232
+boundright = 232
+boundhigh = -76
+boundlow = 1
+verticalfollow = .33
+tension = 50
+
+[PlayerInfo]
+p1startx = -70
+p1starty = 0            
+p1startz = 0           
+p1facing = 1            
+
+p2startx = 70
+p2starty = 0
+p2startz = 0
+p2facing = -1
+
+leftbound  = -1000
+rightbound =  1000
+topbound  =  0    
+botbound  =  0
+   
+[Scaling]
+topz     = 0      
+botz     = 50    
+topscale = 1      
+botscale = 1.2    
+
+[Bound]
+screenleft = 15   
+screenright = 15  
+
+[StageInfo]
+zoffset   = 220
+autoturn  = 1    
+
+[Shadow]
+color = 110.110,110
+yscale = -.1
+
+[Music]
+
+bgmusic = sound/Daylight_of_Konoha.mid
+
+
+[BGdef]
+spr = stages/juzo_bg.sff
+debugbg = 0
+
+[BG 0 10zoBG]
+type  = normal
+spriteno = 0, 0
+layerno = 0                
+start = 0, -76
+delta = 1, 1
+trans = none
+mask  = 0
+tile  = 0, 0
+;window = 0,0, 319, 239
+
+[BG 1] ;hidari
+type  = anim
+spriteno = 1, 0
+start = -285, 79
+delta = 1, 1
+mask = 0
+velocity = 0, 0
+tile = 0, 0
+tilespacing = 0, 0
+actionno = 1
+
+[BG 2] ;mannaka
+type  = anim
+spriteno = 2, 0
+start = -51, 99
+delta = 1, 1
+mask = 0
+velocity = 0, 0
+tile = 0, 0
+tilespacing = 0, 0
+actionno = 2
+
+[BG 3]  ;hata1
+type  = anim
+spriteno = 3, 0
+start = 36, 17
+delta = 1, 1
+mask = 0
+velocity = 0, 0
+tile = 0, 0
+tilespacing = 0, 0
+actionno = 3
+
+[BG 4]  ;hata2
+type  = anim
+spriteno = 4, 0
+start = 222, 17
+delta = 1, 1
+mask = 0
+tile = 0, 0
+actionno = 4
+
+[Begin action 1]
+1,0,0,0, 8
+1,1,0,0, 8
+1,2,0,0, 8
+1,3,0,0, 8
+1,4,0,0, 8
+1,5,0,0, 8
+1,6,0,0, 8
+1,7,0,0, 8
+
+[Begin action 2]
+2,0,0,0, 8
+2,1,0,0, 8
+2,2,0,0, 8
+2,3,0,0, 8
+2,4,0,0, 8
+2,5,0,0, 8
+2,6,0,0, 8
+2,7,0,0, 8
+
+[Begin action 3]
+3,0,0,0, 8
+3,1,0,0, 8
+3,2,0,0, 8
+3,3,0,0, 8
+
+[Begin action 4]
+4,0,0,0, 8
+4,1,0,0, 8
+4,2,0,0, 8
+4,3,0,0, 8

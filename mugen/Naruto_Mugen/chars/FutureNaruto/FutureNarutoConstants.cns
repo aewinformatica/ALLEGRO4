@@ -1,0 +1,62 @@
+[Data]
+life = 1000
+attack = 100
+defence = 100
+fall.defence_up = 50
+liedown.time = 60
+airjuggle = 15
+sparkno = 2
+guard.sparkno = 40
+KO.echo = 0
+volume = 0
+IntPersistIndex = 0
+FloatPersistIndex = 0
+
+[Size]
+xscale = 1
+yscale = 1
+ground.back = 15
+ground.front = 16
+air.back = 12
+air.front = 12
+height = 60
+attack.dist = 160
+proj.attack.dist = 90
+proj.doscale = 0
+head.pos = -5, -90
+mid.pos = -5, -60
+shadowoffset = 0
+draw.offset = 0,0
+
+[Velocity]
+walk.fwd  = 3.5
+walk.back = -3.5
+run.fwd  = 6.5, 0
+run.back = -5.0,-4.3
+jump.neu = 0,-8.4
+jump.back = -3.0
+jump.fwd = 3.0
+runjump.back = -3.55,-8.1
+runjump.fwd = 4.5,-8.1
+airjump.neu = 0,-8.1
+airjump.back = -2.55
+airjump.fwd = 2.5
+
+[Movement]
+airjump.num = 1
+airjump.height = 35
+yaccel = .44
+stand.friction = .85
+crouch.friction = .82
+
+;===========================================================================
+;                          VARIABLE USAGE
+;===========================================================================
+
+;Variable 0 used for Kyuubi Transformation
+
+;Variable 1 not used
+
+;Variable 2 not used
+
+;Variable 3 used for AI activation

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Console application" />
+		<Option pch_mode="0" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="run\char_codeblock.exe" prefix_auto="0" extension_auto="0" />
+				<Option working_dir=".\run" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Linker>
+					<Add library="..\Dev-Cpp\lib\libwinmm.a" />
+					<Add library="..\Dev-Cpp\lib\libfmod.a" />
+					<Add library="..\Dev-Cpp\lib\liballeg.a" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="default;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add directory="D:\Dev-Cpp\include" />
+			<Add directory="agup" />
+			<Add directory="Editor" />
+			<Add directory="fblend\include" />
+			<Add directory="fmodapi370\api\inc" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="Resources" />
+		</ResourceCompiler>
+		<Linker>
+			<Add library="..\Dev-Cpp\lib\libwinmm.a" />
+			<Add library="..\Dev-Cpp\lib\libfmod.a" />
+			<Add library="..\Dev-Cpp\lib\libfblend.a" />
+			<Add library="..\Dev-Cpp\lib\libwsock32.a" />
+			<Add library="..\Dev-Cpp\lib\liballeg.a" />
+			<Add directory="fblend\lib\msvc" />
+			<Add directory="fmodapi370\api\lib" />
+		</Linker>
+		<Unit filename="Cheats.cpp" />
+		<Unit filename="ComputerAI.cpp" />
+		<Unit filename="Config.cpp" />
+		<Unit filename="Config.h" />
+		<Unit filename="ConsoleCmd.cpp" />
+		<Unit filename="ConsoleCmd.h" />
+		<Unit filename="Cvars.cpp" />
+		<Unit filename="Cvars.h" />
+		<Unit filename="Defense.cpp" />
+		<Unit filename="Dialogs.cpp" />
+		<Unit filename="Dialogs.h" />
+		<Unit filename="Drawing.cpp" />
+		<Unit filename="Editor\Editor.cpp" />
+		<Unit filename="Editor\Editor.h" />
+		<Unit filename="Editor\FFormat.cpp" />
+		<Unit filename="GUI.Cpp" />
+		<Unit filename="Ground.cpp" />
+		<Unit filename="Ground.h" />
+		<Unit filename="Intermission.cpp" />
+		<Unit filename="Keycfg.cpp" />
+		<Unit filename="Keycfg.h" />
+		<Unit filename="LEVELS.Cpp" />
+		<Unit filename="Music.cpp" />
+		<Unit filename="Music.h" />
+		<Unit filename="PPCol_Src\PPAMOUNT.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PPCol_Src\PPCOL.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PPCol_Src\PPCOL.H" />
+		<Unit filename="PPCol_Src\PPMAMOUN.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="PPCol_Src\PPMASKC.C">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Particles.cpp" />
+		<Unit filename="Particles.h" />
+		<Unit filename="PlayerSetup.cpp" />
+		<Unit filename="Resources\CharredDirt.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="Resources\icon1.ico" />
+		<Unit filename="Resources\resource.h" />
+		<Unit filename="Scorch.cpp" />
+		<Unit filename="Scorch.h" />
+		<Unit filename="Shot.cpp" />
+		<Unit filename="Shot.h" />
+		<Unit filename="Specials.cpp" />
+		<Unit filename="Specials.h" />
+		<Unit filename="Sprites.cpp" />
+		<Unit filename="Sprites.h" />
+		<Unit filename="Tank.cpp" />
+		<Unit filename="Tank.h" />
+		<Unit filename="TonyJpegEncoder.cpp" />
+		<Unit filename="TonyJpegEncoder.h" />
+		<Unit filename="agup\aase.cpp" />
+		<Unit filename="agup\aase.h" />
+		<Unit filename="agup\abeos.cpp" />
+		<Unit filename="agup\abeos.h" />
+		<Unit filename="agup\agtk.cpp" />
+		<Unit filename="agup\agtk.h" />
+		<Unit filename="agup\agup.cpp" />
+		<Unit filename="agup\agup.h" />
+		<Unit filename="agup\agupitrn.h" />
+		<Unit filename="agup\ans.cpp" />
+		<Unit filename="agup\ans.h" />
+		<Unit filename="agup\aphoton.cpp" />
+		<Unit filename="agup\aphoton.h" />
+		<Unit filename="agup\awin95.cpp" />
+		<Unit filename="agup\awin95.h" />
+		<Unit filename="allegro.h" />
+		<Unit filename="alphadat.h" />
+		<Unit filename="buystuff.cpp" />
+		<Unit filename="client.cpp" />
+		<Unit filename="cmd_args.cpp" />
+		<Unit filename="cmd_args.h" />
+		<Unit filename="conalleg.cpp" />
+		<Unit filename="conalleg.h" />
+		<Unit filename="concmds.cpp" />
+		<Unit filename="console.cpp" />
+		<Unit filename="console.h" />
+		<Unit filename="defense.h" />
+		<Unit filename="drectangles.cpp" />
+		<Unit filename="drectangles.h" />
+		<Unit filename="fmodapi370\api\inc\fmod.h" />
+		<Unit filename="fmodapi370\api\inc\fmod_errors.h" />
+		<Unit filename="fmodapi370\api\inc\fmoddyn.h" />
+		<Unit filename="fmodapi370\api\inc\wincompat.h" />
+		<Unit filename="gametext.cpp" />
+		<Unit filename="multiplayer.cpp" />
+		<Unit filename="multiplayer.h" />
+		<Unit filename="netcommon\include\netcommon.h" />
+		<Unit filename="netcommon\src\netcommon.cpp" />
+		<Unit filename="ngui.cpp" />
+		<Unit filename="peffect.cpp" />
+		<Unit filename="peffect.h" />
+		<Unit filename="save_jpeg.cpp" />
+		<Unit filename="script.cpp" />
+		<Unit filename="scripts.h" />
+		<Unit filename="secrets.cpp" />
+		<Unit filename="secrets.h" />
+		<Unit filename="sedit.h" />
+		<Unit filename="server.cpp" />
+		<Unit filename="serveradmin.cpp" />
+		<Unit filename="snddat.h" />
+		<Unit filename="sprdat.h" />
+		<Unit filename="tankdeaths.cpp" />
+		<Unit filename="tankdeaths.h" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

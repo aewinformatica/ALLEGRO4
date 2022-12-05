@@ -1,0 +1,26 @@
+; Definition file for Falco
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Dosu"        ;Name of character
+displayname = "Dosu" ;Name of character to display
+versiondate = 04,14,2002    ;Version date of character (MM-DD-YYYY)
+mugenversion = 04,14,2002   ;Version of M.U.G.E.N character works on
+author = "UchihaCody"         ;Character author name
+pal.defaults = 1      ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = Dosu.cmd   ;Command set
+cns     = Dosu.cns   ;Constants
+st      = Dosu.cns   ;States
+stcommon = common1.cns ;Common states
+sprite  = Dosu.sff   ;Sprite
+anim    = Dosu.air   ;Animation
+pal1    = Dosu.act
+
+; Arcade mode
+[Arcade]
+intro.storyboard = intro.def
+ending.storyboard = ending.def

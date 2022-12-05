@@ -1,0 +1,21 @@
+#食堂的门
+
+if(31,0,"WHY_HERE0");
+if(31,1,"WHY_HERE0");
+goto("WHY_HERE1");
+
+@WHY_HERE0
+ talk(0,"阿莱:时间紧迫,来不及吃饭了.");
+
+ NPC_walk(0,0,1);
+
+ goto("END");
+
+@WHY_HERE1
+ talk(0,"阿莱:放假期间，食堂是关门的，吃东西的话得到百佳超市买。");
+
+ NPC_walk(0,0,1);
+
+ goto("END");
+
+@END

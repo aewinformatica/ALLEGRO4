@@ -1,0 +1,293 @@
+Import('use');
+
+def isOSX():
+    import re
+    import sys
+    return "darwin" in sys.platform
+
+def isWindows():
+    import re
+    import sys
+    return "win32" in sys.platform
+
+obj_files = []
+
+def addFiles(files):
+    obj_files.append(map(lambda x: x.replace('src/', ''), files))
+
+import sys
+sys.path.append("../scons")
+import helpers
+
+obj_files = []
+
+filelist = helpers.read_cmake_list("../cmake/FileList.cmake")
+
+def sprigLibrary(env):
+    sprig = env.Clone()
+    source = Split("""
+util/sdl/sprig/SPG_extended.c
+util/sdl/sprig/SPG_misc.c
+util/sdl/sprig/SPG_polygon.c
+util/sdl/sprig/SPG_primitives.c
+util/sdl/sprig/SPG_rotation.c
+util/sdl/sprig/SPG_surface.c
+""")
+
+    return sprig.StaticLibrary('sprig', source)
+
+def alGifLibrary(env):
+    gif = env.Clone()
+    source = Split("""
+util/gif/algif.c
+util/gif/gif.c
+util/gif/lzw.c
+""")
+    return gif.StaticLibrary('algif', source)
+
+def sdlImageLibrary(env):
+    image = env.Clone()
+    image.Append(CPPDEFINES = ['LOAD_PNG', 'LOAD_PCX', 'LOAD_GIF'])
+    source = Split("""
+util/sdl/image/IMG.c
+util/sdl/image/IMG_jpg.c
+util/sdl/image/IMG_pnm.c
+util/sdl/image/IMG_xpm.c
+util/sdl/image/IMG_ImageIO.c
+util/sdl/image/IMG_lbm.c
+util/sdl/image/IMG_tga.c
+util/sdl/image/IMG_xv.c
+util/sdl/image/IMG_bmp.c
+util/sdl/image/IMG_pcx.c
+util/sdl/image/IMG_tif.c
+util/sdl/image/IMG_xxx.c
+util/sdl/image/IMG_gif.c
+util/sdl/image/IMG_png.c
+util/sdl/image/IMG_xcf.c
+""")
+
+    return image.StaticLibrary('image',source)
+
+def sdlMixerLibrary(env):
+    mixer = env.Clone()
+
+    try:
+        if mixer['HAVE_OGG']:
+            mixer.Append(CPPDEFINES = ['OGG_MUSIC'])
+    except KeyError:
+        pass
+
+    source = Split("""
+music.c
+mixer.c
+music_ogg.c
+music_flac.c
+music_mad.c
+dynamic_ogg.c
+effect_position.c
+effects_internal.c
+effect_stereoreverse.c
+load_voc.c
+load_ogg.c
+load_aiff.c
+wavestream.c
+""")
+
+    return mixer.StaticLibrary('sdl-mixer', map(lambda a: "util/sdl/mixer/%s" % a, source))
+
+def sflLibrary(env):
+    use = env
+    return SConscript('util/sfl/SConscript', exports = ['use'])
+
+def gmeLibrary(env):
+    gmeEnv = env.Clone()
+    # These things are defined by gme_types.h
+    if False:
+        gmeEnv.Append(CPPDEFINES = Split("""
+USE_GME_NSF
+USE_GME_NSFE
+USE_GME_KSS
+USE_GME_AY
+USE_GME_GBS
+USE_GME_GYM
+USE_GME_HES
+USE_GME_SAP
+USE_GME_SPC
+USE_GME_VGM
+"""))
+
+    source = Split("""
+util/gme/Ay_Apu.cpp
+util/gme/Ay_Cpu.cpp
+util/gme/Ay_Emu.cpp
+util/gme/Blip_Buffer.cpp
+util/gme/Classic_Emu.cpp
+util/gme/Data_Reader.cpp
+util/gme/Dual_Resampler.cpp
+util/gme/Effects_Buffer.cpp
+util/gme/Fir_Resampler.cpp
+util/gme/Gb_Apu.cpp
+util/gme/Gb_Cpu.cpp
+util/gme/Gb_Oscs.cpp
+util/gme/Gbs_Emu.cpp
+util/gme/gme.cpp
+util/gme/Gme_File.cpp
+util/gme/Gym_Emu.cpp
+util/gme/Hes_Apu.cpp
+util/gme/Hes_Cpu.cpp
+util/gme/Hes_Emu.cpp
+util/gme/Kss_Cpu.cpp
+util/gme/Kss_Emu.cpp
+util/gme/Kss_Scc_Apu.cpp
+util/gme/M3u_Playlist.cpp
+util/gme/Multi_Buffer.cpp
+util/gme/Music_Emu.cpp
+util/gme/Nes_Apu.cpp
+util/gme/Nes_Cpu.cpp
+util/gme/Nes_Fme7_Apu.cpp
+util/gme/Nes_Namco_Apu.cpp
+util/gme/Nes_Oscs.cpp
+util/gme/Nes_Vrc6_Apu.cpp
+util/gme/Nsfe_Emu.cpp
+util/gme/Nsf_Emu.cpp
+util/gme/Sap_Apu.cpp
+util/gme/Sap_Cpu.cpp
+util/gme/Sap_Emu.cpp
+util/gme/Sms_Apu.cpp
+util/gme/Snes_Spc.cpp
+util/gme/Spc_Cpu.cpp
+util/gme/Spc_Dsp.cpp
+util/gme/Spc_Emu.cpp
+util/gme/Vgm_Emu.cpp
+util/gme/Vgm_Emu_Impl.cpp
+util/gme/Ym2413_Emu.cpp
+util/gme/Ym2612_Emu.cpp
+""")
+    return gmeEnv.StaticLibrary('gme', source)
+
+def unique(lst):
+    m = []
+    for item in lst:
+        if not item in m:
+            m.append(item)
+    return m
+
+for i in filelist:
+    # print "%s = %s" % (i, filelist[i])
+    # meh, kind of a hack
+    if i == 'SCRIPT_SRC':
+        # call the python and ruby checks here
+        env = use.Clone()
+        # config = env.Configure()
+        # Ugly way to pass the custom tests in
+        config = env.Configure(custom_tests = env['PAINTOWN_TESTS'])
+        # config.CheckRuby()
+        config.CheckPython()
+        env = config.Finish()
+        use.Append(LIBS = env['LIBS'])
+        use.Replace(LIBS = unique(use['LIBS']))
+        files = filelist[i]
+        # abstract this so we don't duplicate code
+        obj_files.append(map(lambda x: env.StaticObject(x.replace('src/', '')), files))
+    else:
+        addFiles(filelist[i])
+
+# FIXME: somehow get this information from the scons env
+def useSDL():
+    import os
+    def byEnv():
+        try:
+            return os.environ['SDL'] == '1'
+        except KeyError:
+            return False
+
+    def byArgument():
+        try:
+            return int(ARGUMENTS['sdl']) == 1
+        except KeyError:
+            return False
+
+    return byEnv() or byArgument()
+
+def useMinpspw():
+    import os
+    try:
+        return int(os.environ['minpspw'])
+    except KeyError:
+        return False
+
+def useWii():
+    import os
+    try:
+        return int(os.environ['wii'])
+    except KeyError:
+        return False
+
+def icon():
+    if isWindows() and not useMinpspw() and not useWii():
+        return ['windows/game.res']
+    else:
+        return []
+
+def pcreLibrary(env):
+    pcreEnv = env.Clone()
+    env = pcreEnv
+    return use.SConscript('util/pcre/SConstruct', exports = ['env'])
+
+def dumbLibrary(env):
+    dumbEnv = env.Clone()
+    env = dumbEnv
+    return use.SConscript('util/dumb/SConscript', exports = ['env'])
+
+def hawknlLibrary(env):
+    hawkEnv = env.Clone()
+    env = hawkEnv
+    # if isOSX():
+    #    env.Append(CPPDEFINES = 'MACOSX')
+    return env.SConscript('network/hawknl/SConscript', exports = ['env'])
+
+def main():
+    return ['xmain.cpp']
+
+def psp_prx(env):
+    if env['PAINTOWN_USE_PRX']:
+        # FIXME: Use the pspsdk path from the top level SConstruct
+        return ['/opt/pspsdk/psp/sdk/lib/prxexports.o']
+    else:
+        return []
+
+use.Depends(use.Peg('openbor/data.peg'), 'mugen/parser/peg.py')
+
+use.Prepend(LIBS = [dumbLibrary(use)])
+if use['PAINTOWN_NETWORKING']:
+    use.Prepend(LIBS = [hawknlLibrary(use)])
+
+use.Prepend(LIBS = [gmeLibrary(use), sflLibrary(use), pcreLibrary(use)])
+if not useSDL():
+    use.Prepend(LIBS = [alGifLibrary(use)])
+if useSDL() and not useMinpspw():
+    use.Prepend(LIBS = [sdlImageLibrary(use), sprigLibrary(use), sdlMixerLibrary(use)])
+elif useMinpspw():
+    use.Prepend(LIBS = [sprigLibrary(use)])
+
+def addObjects(objects):
+    obj_files.extend(objects)
+
+SConscript('mugen/parser/SConstruct', exports = ['use', 'addObjects']);
+
+x = []
+# FIXME: adding psp_prx here is ugly, find a better way
+x.append(use.Program('paintown', psp_prx(use) + obj_files + main() + icon()))
+#x.append( use.Program( 'test', obj_files + ['test.cpp'] ) )
+#x.append( use.Program( 'menutest', obj_files + ['menu/menutest.cpp'] ) )
+
+# Uncomment these lines if you really want the test program, but it only
+# works with Allegro
+#if not useSDL():
+#    x.append(use.Program('mugentest', obj_files + ['mugen/test.cpp']))
+
+# x.append( use.Program( 'mugentest2', obj_files + ['mugen/test2.cpp'] ) )
+
+SConscript('test/SConstruct', exports = ['use'])
+
+Return('x')

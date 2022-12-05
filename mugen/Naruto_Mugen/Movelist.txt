@@ -1,0 +1,42 @@
+Uchiha Sasuke Movelist
+
+Command  |   Name of Move  |  Requirements   |  Damage
+-------------------------------------------------------
+    B    | Shishi Rendan   |    1000 Power   |   350         
+         |                 |                 |          
+-------------------------------------------------------
+    C    |     Chidori     |    1000 Power   |   150         
+         |                 |                 |          
+-------------------------------------------------------
+    Z    |    Taijutsu     |    2000 Power   |   400         
+         |                 |                 |          
+-------------------------------------------------------
+ V, >, B |Katon: Goukakyuu |    800 Power    |   160         
+         |    No Jutsu     |                 |          
+-------------------------------------------------------         
+ V, >, B | Katon: Housenka |    800 Power    | 50 each         
+  (A)    |    No Jutsu     |                 |          
+-------------------------------------------------------  
+ V, >,   |     Chidori     |    3000 Power   |   550           
+ V, >, C |    (Stronger)   |                 |          
+-------------------------------------------------------  
+ >, V, > |     Teleport    |     50 Power    |   N/A          
+         |                 |                 |          
+-------------------------------------------------------  
+
+
+There is a secret combo with these moves, it requires 3000 Power, and it does a total of 
+750 Damage!!!!! Too bad I'm not gonna tell you what it is, FIGURE IT OUT!!!
+
+ ____________
+|KEY         |
+|------------|
+|V = Down    |
+|> = Forward |
+|< = Back    |
+|(A) = In Air|
+ ____________
+
+UchihaSasuke by StickofDoom AKA Shadow02143
+NO STEALING ANYTHING FROM IT!!!!!!!
+Thank you an have a nice day.

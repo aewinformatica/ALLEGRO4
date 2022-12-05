@@ -1,0 +1,29 @@
+; Definition file for Blank
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "nidaime Hokage"        ;Name of character
+displayname = "Nidaime" ;Name of character to display
+versiondate = 05,23,2006    ;Version date of character (MM-DD-YYYY)
+mugenversion = 04,14,2002   ;Version of M.U.G.E.N character works on
+author = "Plidan"         ;Character author name
+pal.defaults = 1      ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = nidaime.cmd   ;Command set
+cns     = nidaime.cns   ;Constants
+st      = nidaime.cns   ;States
+stcommon = common1.cns ;Common states
+sprite  = nidaime.sff   ;Sprite
+anim    = nidaime.air   ;Animation
+;sound   = nidaime.snd   ;Sound
+pal1    = nidaime.act  ;Palettes (can have up to 12)
+
+;sprite credits go to naruto[NU]
+
+; Arcade mode
+;[Arcade]
+;intro.storyboard = intro.def
+;ending.storyboard = ending.def

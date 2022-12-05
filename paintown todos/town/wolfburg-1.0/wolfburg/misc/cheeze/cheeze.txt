@@ -1,0 +1,4 @@
+(item
+ (name cheeze)
+ (sound sounds/get.wav)
+ (frame wolfburg/misc/cheeze/cheeze.png))

@@ -1,0 +1,25 @@
+#到名人园的小路
+
+if(31,0,"WHY_HERE");
+  goto("GET_PASS");
+  
+@WHY_HERE
+  talk(0,"Alai:It is too early, it maybe dangerous to take this way.");
+  NPC_walk(0,1,1);
+  goto("END");
+
+@GET_PASS
+  go_inout(0,1);
+  set_game_status(1);
+
+  call("Script_En/minren1/load.txt");
+  NPC_set(0,1,9);
+  NPC_turn(0,3);
+
+  set_game_status(0);
+  go_inout(0,0);
+  
+  goto("END");
+
+
+@END

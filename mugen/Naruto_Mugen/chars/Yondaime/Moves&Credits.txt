@@ -1,0 +1,76 @@
+Yondaime Version 2 (I still may change/add some more stuff to him later).
+
+Progress - 100% .
+
+Made By: Marvin & NoNick
+
+Released New Version : September 2 2006
+
+Credits: To Cazzled and NoNick.
+-----------------------------------------------------------
+
+How to install the Char:
+
+Extract Him into Naruto Battle Arena "Chars" Folder, make sure he's not in the 
+same folder ( Yondaime ---> Inside that another Yondaime folder), make sure it has only 1 Yondaime folder in Chars.
+
+--------------------------------------------------------------------------------------------------------------------
+
+*Remember the Button's are Mugen based, so that means you must see the buttons in the Options section.*
+ 
+------------
+*Moves:
+------------
+
+- Flash Run : Double Tap Forward Button. (Improved)
+
+
+- Punch/Kick Combo : Tap A Button.
+
+
+- Punch/Kick 2 Combo : Tap X Button.
+
+
+- Kawarimi : When you get hit, time it right and press B or C Button. ( Takes 300 Chakra points )
+
+
+- Kunai Throw : Press Y button on ground and in Air. 
+
+
+- Double Kunai Throw : Tap Y Button.
+
+
+- Ground Slide Kick : Hold Down and Press X Button.
+
+
+- Air Down Punch : Press A Button in Air.
+
+
+- Launch Kick : Hold down and Press A Button.
+
+-----------------------------
+*Chakra required Moves:
+-----------------------------
+
+-  RASENGAN : Hold Down Button and C Button. ( LvL 1 Chakra ) (imporoved with teleport)
+
+-  DOTON JUTSU : Hold Down Button and Press B ( LvL 1-2 Chakra )
+
+-  SUMMON GAMABUNTA : Hold Down Button and Press Z ( LvL 3 Chakra ) (improved and fixed)
+
+-  SUPER SPIN CUTTER  : Press Z BUtton ( Need's Atleast 700 Chakra Points )
+
+-  BUNSHIN UPERCUT ATTACK : Hold Down and Press Y Button ( Requires 500 Chakra Points )
+
+-  DEATH GOD : Press Start button ( Requires 3 Chakra bar )
+
+-  KATON BLAST : Press Down + Forward + B ( Requires 800 Chakra )
+
+
+
+-----------------------------------------------------------------------------------------
+
+
+Enjoy ...
+
+

@@ -1,0 +1,4 @@
+(item
+ (name dead fish)
+ (sound sounds/get.wav)
+ (frame wolfburg/misc/fish/fish.png))

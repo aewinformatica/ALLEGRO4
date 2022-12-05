@@ -1,0 +1,1 @@
+talk(50,"Schoolmate:Buildings here have caught fire for 4 to 5 times scince I came here.");

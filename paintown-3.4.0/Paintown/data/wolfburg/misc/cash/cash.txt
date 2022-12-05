@@ -1,0 +1,4 @@
+(item
+ (name cash)
+ (sound sounds/get.wav)
+ (frame wolfburg/misc/cash/cash.png))

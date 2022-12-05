@@ -1,0 +1,23 @@
+#遇到天文系老头，送一活动星图
+
+if(32,0,"STAR");
+if(32,1,"THANK");
+
+@STAR
+talk(50,"Astronomy Professor:Ehh...");
+talk(0,"Alai:(What's wrong with this old man?)");
+talk(50,"Astronomy Professor:I'm so excited, I found another neutron star!");
+talk(0,"Alai:That's ... very good... congratulations.");
+talk(50,"Astronomy Professor:You are the first who get this news. I have to give you this star map marked my new star.");
+talk(0,"Alai:Wow, it's beautiful! Thank you!");
+talk(50,"Astronomy Professor:That's alright, kid, you are the future.");
+talk(50,"(Recieved Star Map)");
+add_obj(3,1);
+add(32,1,1);
+goto("END");
+
+@THANK
+talk(50,"Astronomy Professor:Work hard, kid , you are the future of China.");
+goto("END");
+
+@END

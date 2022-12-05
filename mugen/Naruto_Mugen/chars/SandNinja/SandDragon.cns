@@ -1,0 +1,85 @@
+;Sand Dragon(Originally from Koshirou's Suiton, Suiryuudan no Jutsu)
+[Statedef 2223]
+type = S
+movetype = A
+physics = S
+juggle = 1
+velset = 0,0
+ctrl = 0
+anim = 2223
+poweradd = -1500
+sprpriority = 5
+
+[State 2223, 0]
+type = PlaySnd
+trigger1 = time = 0
+value = 9999
+
+[State 2223, dragon]
+type = Helper
+trigger1 = time = 0
+helpertype = normal
+postype = p2
+pos = 0,0
+stateno = 2222
+ownpal = 1
+id = 2223
+keyctrl = 0
+persistent = 1
+
+[State 2223, 0]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1
+
+;-------------------------------------------------------------------
+;Dragon Part
+[Statedef 2222]
+type = S
+movetype = A
+physics = S
+juggle = 1
+ctrl = 0
+anim = 2222
+poweradd = 0
+sprpriority = 5
+velset = 0,0
+
+[State 2222, 1]
+type = HitDef
+trigger1 = animelem = 2
+trigger2 = animelem = 3
+trigger3 = animelem = 4
+trigger4 = animelem = 5
+trigger5 = animelem = 6
+trigger6 = animelem = 7
+attr = S, SA
+damage = 40, 40
+getpower = -120
+animtype = Hard
+hitflag = MAF
+priority = 3, Hit
+pausetime = 10, 10
+sparkno = 1
+sparkxy = -10, -49
+guardsound = 6,0
+ground.type = High
+ground.slidetime = 5
+ground.hittime  = 50
+ground.velocity = 0.4
+airguard.velocity = 4.0,4.0
+air.type = High
+air.velocity = 0.4, 0.4
+air.hittime = 12
+
+[State 2222, 2]
+type = EnvShake
+trigger1 = time = 5
+time = 100
+freq = 100
+ampl = -10
+
+[State 2222, 0]
+type = destroyself
+trigger1 = animtime = 0

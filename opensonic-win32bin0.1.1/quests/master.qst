@@ -1,0 +1,28 @@
+# -------------------
+# Master quest
+#
+# Learn how to make your
+# own custom quest!
+#
+# master.qst
+# -------------------
+
+# On this section you must specify the
+# properties of your quest: name,
+# description, etc.
+name            Master quest
+author          Alexandre Martins
+version         0.1.0
+description     Challenge me if you are a MASTER!
+image           quests/master.png
+
+# This is the level list. The following levels
+# will be loaded in order of appearance:
+level           levels/blue_ocean_1m.lev
+level           levels/blue_ocean_2m.lev
+level           levels/blue_ocean_3m.lev
+level           levels/exotic_1m.lev
+level           levels/exotic_2m.lev
+level           levels/exotic_3m.lev
+level           levels/testzone.lev
+level           levels/prototype.lev

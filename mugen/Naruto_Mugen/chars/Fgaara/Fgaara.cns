@@ -1,0 +1,654 @@
+; Hitsu's constants and state file.
+; There are comments scattered through this file, so you may like to
+; take a look if would like to learn more about the cns.
+
+[Data]
+;Amount of life to start with
+life = 1000
+;attack power (more is stronger)
+attack = 100
+;defensive power (more is stronger)
+defence = 100
+;Percentage to increase defense everytime player is knocked down
+fall.defence_up = 50
+;Time which player lies down for, before getting up
+liedown.time = 60
+;Number of points for juggling
+airjuggle = 15
+;Default hit spark number for HitDefs
+sparkno = 2
+;Default guard spark number
+guard.sparkno = 40
+;1 to enable echo on KO
+KO.echo = 0
+;Volume offset (negative for softer)
+volume = 0
+;Variables with this index and above will not have their values
+;reset to 0 between rounds or matches. There are 60 int variables,
+;indexed from 0 to 59, and 40 float variables, indexed from 0 to 39.
+;If omitted, then it defaults to 60 and 40 for integer and float
+;variables repectively, meaning that none are persistent, i.e. all
+;are reset. If you want your variables to persist between matches,
+;you need to override state 5900 from common1.cns.
+IntPersistIndex = 60
+FloatPersistIndex = 40
+
+[Size]
+xscale = 1           ;Horizontal scaling factor.
+yscale = 1           ;Vertical scaling factor.
+ground.back = 15     ;Player width (back, ground)
+ground.front = 16    ;Player width (front, ground)
+air.back = 12        ;Player width (back, air)
+air.front = 12       ;Player width (front, air)
+height = 60          ;Height of player (for opponent to jump over)
+attack.dist = 160    ;Default attack distance
+proj.attack.dist = 90 ;Default attack distance for projectiles
+proj.doscale = 0     ;Set to 1 to scale projectiles too
+head.pos = -5, -90   ;Approximate position of head
+mid.pos = -5, -60    ;Approximate position of midsection
+shadowoffset = 0     ;Number of pixels to vertically offset the shadow
+draw.offset = 0,0    ;Player drawing offset in pixels (x, y)
+
+[Velocity]
+walk.fwd  = 2.4      ;Walk forward
+walk.back = -2.2     ;Walk backward
+run.fwd  = 4.6, 0    ;Run forward (x, y)
+run.back = -4.5,-3.8 ;Hop backward (x, y)
+jump.neu = 0,-8.4    ;Neutral jumping velocity (x, y)
+jump.back = -2.55    ;Jump back Speed (x, y)
+jump.fwd = 2.5       ;Jump forward Speed (x, y)
+runjump.back = -2.55,-8.1 ;Running jump speeds (opt)
+runjump.fwd = 4,-8.1      ;.
+airjump.neu = 0,-8.1      ;.
+airjump.back = -2.55      ;Air jump speeds (opt)
+airjump.fwd = 2.5         ;.
+
+[Movement]
+airjump.num = 1      ;Number of air jumps allowed (opt)
+airjump.height = 35  ;Minimum distance from ground before you can air jump (opt)
+yaccel = .44         ;Vertical acceleration
+stand.friction = .85  ;Friction coefficient when standing
+crouch.friction = .82 ;Friction coefficient when crouching
+
+;---------------------------------------------------------------------------
+; Variable usage:
+; This is a record of the variables that KFM uses. Keeping a record of your
+; variable usage helps you avoid careless mistakes later.
+; var(1)  - Used in kfm.cmd for combo condition (updated every tick)
+; var(2)  - Used in Kung Fu Throw (state 800) to remember if fwd was being
+;           held (remembered from state 800 through state 810).
+
+;---------------------------------------------------------------------------
+; Win state decider
+; CNS difficulty: basic
+[Statedef 180]
+type = S
+
+[State 180, 1]
+type = ChangeState
+trigger1 = Time = 0
+value = 181
+
+;---------------------------------------------------------------------------
+; Introduction
+; CNS difficulty: basic
+[Statedef 191]
+type = S
+ctrl = 0
+anim = 191
+velset = 0,0
+
+[State 191, 1]
+type = ChangeAnim
+trigger1 = RoundState = 0
+value = 190
+
+[State 191, 2]
+type = AssertSpecial
+trigger1 = AnimElemTime(10) < 0
+flag = Intro
+
+[state 191,5]
+type = changestate
+trigger1 = animtime = 0
+value = 0
+
+;---------------------------------------------------------------------------
+; Taunt
+; CNS difficulty: easy
+[Statedef 195]
+type = S
+ctrl = 0
+anim = 195
+velset = 0,0
+poweradd = 100
+movetype = I
+physics = S
+sprpriority = 2
+
+[State 195, 1]
+type = CtrlSet
+trigger1 = Time = 40
+value = 1
+
+[State 195, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+
+;---------------------------------------------------------------------------
+;Shukaku Claw
+[StateDef 200]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 200
+poweradd = -2000
+sprpriority = 2
+juggle = 4
+
+[State 204, SuperPause]
+type = SuperPause
+trigger1 = animelem = 1
+time = 70
+anim = 102
+pos = 5,-30
+darken = 40
+p2defmul = 0
+poweradd = 0
+unhittable = 0
+
+[state 204, superpausesnd]
+type = playsnd
+trigger1 = time = 0
+value = 20, 0
+
+[State 201, Sand]
+type = projectile
+triggerall = time = 20
+trigger1 = AnimElem = 1
+trigger2 = AnimElem = 2
+Trigger3 = AnimElem = 3
+Trigger4 = AnimElem = 4
+trigger5 = AnimElem = 5
+trigger6 = AnimElem = 6
+Trigger7 = AnimElem = 7
+Trigger8 = AnimElem = 8
+projanim = 201
+projremovetime = 49
+projremove = 0
+projhits = 5
+projmisstime = 5
+projpriority = 3
+projsprpriority = 3
+offset = 17,-13
+postype = p1
+attr = S, HA
+animtype  = medium
+damage    = 40
+guardflag = MA
+pausetime = 0,4
+hitsound   = 5,0
+sparkno = s873
+guard.sparkno = s3200
+guardsound = 6,0
+ground.type = High               ;Type: High, Low, Trip (def: Normal)
+ground.slidetime = 5             ;Time that the opponent slides back
+ground.hittime  = 10             ;Time opponent is in hit state
+ground.velocity = -4             ;Velocity at which opponent is pushed
+airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;Type: High, Low, Trip (def: same as ground.type)
+air.velocity = -1.4,-3           ;X-velocity at which opponent is pushed,
+air.hittime = 12
+
+[State 200, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Sand Bullet
+[StateDef 202]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 202
+poweradd = -1000
+sprpriority = 2
+juggle = 4
+
+[State 204, SuperPause]
+type = SuperPause
+trigger1 = animelem = 1
+time = 70
+anim = 102
+pos = 5,-30
+darken = 40
+p2defmul = 0
+poweradd = 0
+unhittable = 0
+
+[state 204, superpausesnd]
+type = playsnd
+trigger1 = time = 0
+value = 20, 0
+
+[State 203, Sand]
+type = projectile
+triggerall = time = 20
+trigger1 = AnimElem = 3
+projanim = 203
+projremovetime = 55
+projremove = 0
+projhits = 5
+projmisstime = 5
+projpriority = 1
+projsprpriority = 3
+offset = 17,-13
+velocity = 6, 0
+postype = p1
+attr = S, HA
+animtype  = light
+damage    = 30
+guardflag = MA
+pausetime = 0,4
+hitsound   = 5,0
+sparkno = s873
+guard.sparkno = s3200
+guardsound = 6,0
+ground.type = High               ;Type: High, Low, Trip (def: Normal)
+ground.slidetime = 5             ;Time that the opponent slides back
+ground.hittime  = 10             ;Time opponent is in hit state
+ground.velocity = -4             ;Velocity at which opponent is pushed
+airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;Type: High, Low, Trip (def: same as ground.type)
+air.velocity = -1.4,-3           ;X-velocity at which opponent is pushed,
+air.hittime = 12
+
+[State 202, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+
+;---------------------------------------------------------------------------
+;Sand Coffin
+[Statedef 204]
+type = S
+movetype = A
+physics = S
+anim = 204
+poweradd = -3000
+ctrl = 0
+juggle = 4
+sprpriority = 1
+
+[State 204, SuperPause]
+type = SuperPause
+trigger1 = animelem = 1
+time = 70
+anim = 102
+pos = 5,-30
+darken = 40
+p2defmul = 0
+poweradd = 0
+unhittable = 0
+
+[state 204, superpausesnd]
+type = playsnd
+trigger1 = time = 0
+value = 20, 0
+
+[State 204, dark screen]
+type = BGPalFX
+trigger1 = time = 0
+time = 200
+add = -100,-100,-100
+mul = 255,255,255
+
+[State 204, 1]
+type = hitdef
+trigger1 = animelem = 3
+trigger2 = animelem = 4
+attr = S, NA                     ;Attribute: Standing, Normal Attack
+damage = 0, 0                   ;Damage that move inflicts, guard damage
+animtype = Light                 ;Animation type: Light, Medium, Heavy, Back (def: Light)
+guardflag = MA                   ;Flags on how move is to be guarded against
+hitflag = MAF                    ;Flags of conditions that move can hit
+priority = 7, Hit                ;Attack priority: 0 (least) to 7 (most), 4 default
+;Hit/Miss/Dodge type (Def: Hit)
+pausetime = 8, 999                 ;Time attacker pauses, time opponent shakes
+;Y-offset for the spark rel. to p1
+sparkno = 0                      ;Spark anim no (Def: set above)
+sparkxy = 0,0
+hitsound = 0,0                  ;Sound to play on hit
+guardsound = 0,0                ;Sound to play on guard
+ground.type = High               ;Type: High, Low, Trip (def: Normal)
+ground.slidetime = 5             ;Time that the opponent slides back
+ground.hittime  = 10             ;Time opponent is in hit state
+ground.velocity = -4             ;Velocity at which opponent is pushed
+airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;Type: High, Low, Trip (def: same as ground.type)
+air.velocity = -1.4,-3           ;X-velocity at which opponent is pushed,
+;Y-velocity at which opponent is pushed
+air.hittime = 12
+
+[State 205, Sand]
+type = projectile
+triggerall = movecontact
+triggerall = stateno = 204
+trigger1 = AnimElem = 4
+projanim = 205
+projremovetime = 122
+projremove = 0
+projhits = 9
+projmisstime = 5
+projpriority = 1
+projsprpriority = 3
+offset = -35,20
+postype = p2
+attr = S, HA
+animtype  = hard
+damage    = 50
+guardflag = MA
+pausetime = 0,4
+hitsound   = 5,0
+sparkno = s873
+guard.sparkno = s3200
+guardsound = 6,0
+ground.type = High               ;Type: High, Low, Trip (def: Normal)
+ground.slidetime = 5             ;Time that the opponent slides back
+ground.hittime  = 10             ;Time opponent is in hit state
+ground.velocity = 0             ;Velocity at which opponent is pushed
+airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
+air.type = low                  ;Type: High, Low, Trip (def: same as ground.type)
+air.velocity = 0,0           ;X-velocity at which opponent is pushed,
+air.hittime = 12
+
+[state 204, 4]
+type = ChangeState
+trigger1 = animtime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+;Light Attack
+[StateDef 206]
+type = C
+movetype= A
+physics = C
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 206
+poweradd = 30
+sprpriority = 2
+juggle = 4
+
+[State 207, Sand]
+type = projectile
+trigger1 = AnimElem = 2
+projanim = 207
+projremovetime = 30
+projremove = 0
+projhits = 2
+projmisstime = 5
+projpriority = 3
+projsprpriority = 3
+offset = 50,5
+postype = p1
+attr = S, HA
+animtype  = light
+damage    = 20
+guardflag = MA
+pausetime = 0,4
+hitsound   = 5,0
+sparkno = s873
+guard.sparkno = s3200
+guardsound = 6,0
+ground.type = High               ;Type: High, Low, Trip (def: Normal)
+ground.slidetime = 5             ;Time that the opponent slides back
+ground.hittime  = 10             ;Time opponent is in hit state
+ground.velocity = -4             ;Velocity at which opponent is pushed
+airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;Type: High, Low, Trip (def: same as ground.type)
+air.velocity = -1.4,-3           ;X-velocity at which opponent is pushed,
+air.hittime = 12
+
+[State 206, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+;Heavy Attack
+[StateDef 208]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 208
+poweradd = 50
+sprpriority = 2
+juggle = 4
+
+[State 208, 1]
+type = hitdef
+trigger1 = animelem = 3
+trigger2 = animelem = 4
+trigger3 = animelem = 5
+trigger4 = animelem = 6
+attr = S, NA                     ;Attribute: Standing, Normal Attack
+damage = 40, 0                   ;Damage that move inflicts, guard damage
+animtype = heavy                 ;Animation type: Light, Medium, Heavy, Back (def: Light)
+guardflag = MA                   ;Flags on how move is to be guarded against
+hitflag = MAF                    ;Flags of conditions that move can hit
+priority = 4, Hit                ;Attack priority: 0 (least) to 7 (most), 4 default
+;Hit/Miss/Dodge type (Def: Hit)
+pausetime = 8, 1                 ;Time attacker pauses, time opponent shakes
+;Y-offset for the spark rel. to p1
+sparkno = 0                      ;Spark anim no (Def: set above)
+sparkxy = -10, -76               ;X-offset for the "hit spark" rel. to p2,
+;Y-offset for the spark rel. to p1
+hitsound = 5, 0                  ;Sound to play on hit
+guardsound = 6, 0                ;Sound to play on guard
+ground.type = High               ;Type: High, Low, Trip (def: Normal)
+ground.slidetime = 5             ;Time that the opponent slides back
+ground.hittime  = 10             ;Time opponent is in hit state
+ground.velocity = -4             ;Velocity at which opponent is pushed
+airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;Type: High, Low, Trip (def: same as ground.type)
+air.velocity = -1.4,-3           ;X-velocity at which opponent is pushed,
+;Y-velocity at which opponent is pushed
+air.hittime = 12
+
+[State 208, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+;medium Attack
+[StateDef 209]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 209
+poweradd = 25
+sprpriority = 2
+juggle = 4
+
+[State 210, Sand]
+type = projectile
+trigger1 = AnimElem = 3
+projanim = 210
+projremovetime = 30
+projremove = 0
+projhits = 3
+projmisstime = 5
+projpriority = 3
+projsprpriority = 3
+offset = 17,-13
+postype = p1
+attr = S, HA
+animtype  = Medium
+damage    = 30
+guardflag = MA
+pausetime = 0,4
+hitsound   = 5,0
+sparkno = s873
+guard.sparkno = s3200
+guardsound = 6,0
+ground.type = High               ;Type: High, Low, Trip (def: Normal)
+ground.slidetime = 5             ;Time that the opponent slides back
+ground.hittime  = 10             ;Time opponent is in hit state
+ground.velocity = -4             ;Velocity at which opponent is pushed
+airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;Type: High, Low, Trip (def: same as ground.type)
+air.velocity = -1.4,-3           ;X-velocity at which opponent is pushed,
+air.hittime = 12
+
+[State 209, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+;Light Attack2
+[StateDef 211]
+type = C
+movetype= A
+physics = C
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 211
+poweradd = 25
+sprpriority = 2
+juggle = 4
+
+[State 212, Sand]
+type = projectile
+trigger1 = AnimElem = 2
+projanim = 212
+projremovetime = 30
+projremove = 0
+projhits = 3
+projmisstime = 5
+projpriority = 3
+projsprpriority = 3
+offset = 50,5
+postype = p1
+attr = S, HA
+animtype  = light
+damage    = 20
+guardflag = MA
+pausetime = 0,4
+hitsound   = 5,0
+sparkno = s873
+guard.sparkno = s3200
+guardsound = 6,0
+ground.type = High               ;Type: High, Low, Trip (def: Normal)
+ground.slidetime = 5             ;Time that the opponent slides back
+ground.hittime  = 10             ;Time opponent is in hit state
+ground.velocity = -4             ;Velocity at which opponent is pushed
+airguard.velocity = -1.9,-.8     ;Guard velocity in air (def: (air.xvel*1.5, air.yvel/2))
+air.type = High                  ;Type: High, Low, Trip (def: same as ground.type)
+air.velocity = -1.4,-3           ;X-velocity at which opponent is pushed,
+air.hittime = 12
+
+[State 211, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+;Sand Kunai
+[StateDef 213]
+type = S
+movetype= A
+physics = S
+juggle  = 1
+velset = 0,0
+ctrl = 0
+anim = 213
+poweradd = 25
+sprpriority = 2
+juggle = 4
+
+[state 213, 2]
+type = playsnd
+trigger1 = time = 0
+value = 0, 1
+
+[State 214, Sand Kunai]
+type = Projectile
+trigger1 = animelem = 2
+projanim = 214
+projscale = 1,1
+velocity = 15, 0
+velmul = 1
+projhits = 1
+projpriority = 1
+projsprpriority = 4
+offset = 0,-30
+attr = A,SP
+hitflag = MA
+guardflag = MAF
+animtype = light
+priority = 4,Hit
+damage = 20
+pausetime = 5,5
+sparkno = 0
+sparkxy = 0,0
+hitsound = 5,0
+guardsound = 6,0
+ground.type = High
+ground.slide = 5
+ground.hit = 5
+air.hittime = 20
+sprpriority = 2
+air.fall = 1
+fall.recover = 1
+
+[State 213, 2]
+type = ChangeState
+trigger1 = AnimTime = 0
+value = 0
+ctrl = 1
+;---------------------------------------------------------------------------
+;---------------------------------------------------------------------------
+; Override common states (use same number to override) :
+;---------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------
+; States that are always executed (use statedef -2)
+;---------------------------------------------------------------------------
+
+;---------------------------------------------------------------------------
+; States that are executed when in self's state file (use statedef -3)
+;---------------------------------------------------------------------------
+
+[Statedef -3]
+
+;This controller plays a sound everytime KFM lands from a jump, or
+;from his back-dash.
+[State -3, Landing Sound]
+type = PlaySnd
+triggerall = Time = 1
+trigger1 = stateno = 52 ;Jump land
+trigger2 = stateno = 106 ;Run-back land
+value = 40, 0

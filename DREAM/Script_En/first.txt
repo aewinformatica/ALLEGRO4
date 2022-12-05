@@ -1,0 +1,40 @@
+
+talk(50,"Welcome to Crystal Faith I --- Fatastic Vacation!");
+talk(50,"Using of the keys:X --- to Talk, Confirm, and Investigate.");
+talk(50,"D --- to open the Game Menu. ");
+talk(50,"Z --- to return the upper menu. ");
+talk(50,"S --- Special Usage, used in little games. ");
+talk(50,"Number Keys would be used in the multiple choices.");
+talk(50,"OK, those are introductions of the keys, if you are still confused, please look up the help file.");
+talk(50,"Now what are you waiting for, just start, and get into the dream we made for you...");
+
+#读入地图
+go_inout(0,1);
+midi_out();
+set_game_status(1);
+call("Script_En/room/load.txt");
+set_game_status(0);
+
+#开始醒来
+delay(32);
+talk(50,"......");
+talk(50,"............");
+play_sound("sound/clock.wav");
+talk(50,".......................");
+talk(50,"Alai:Yawn... , seems there would be a Quantum exam today.");
+talk(50,"Alai:What!!! The Quantum exam?! (get up)");
+
+go_inout(0,0);
+NPC_walk(0,0,3);
+delay(9);
+NPC_turn(0,1);
+delay(9);
+NPC_turn(0,0);
+delay(9);
+talk(0,"Alai:The roommates are all gone, they didn't wake me up!");
+talk(0,"Alai:Hurry, if it is too late the good seats would be all taken, if that happens, I would take the exam very under the teachers' supervision.");
+talk(0,"Alai:The exam is held in Room 101, the Teaching Building. Hurry up!");
+play_midi("music/gogo.mid");
+NPC_walk(0,0,4);
+
+return();

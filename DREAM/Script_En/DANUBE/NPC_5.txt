@@ -1,0 +1,2 @@
+talk(50,"University Student: Holy shit, I was shot.");
+NPC_turn(5,2);

@@ -1,0 +1,46 @@
+#进女生宿舍
+
+if(37,0,"WHY_HERE0");
+if(37,1,"WHY_HERE1");
+if(37,2,"WHY_HERE2");
+if(37,3,"WHY_HERE3");
+if(37,4,"WHY_HERE4");
+if(37,5,"WHY_HERE5");
+
+
+@WHY_HERE0
+ talk(0,"阿莱:快回头,这里是女生宿舍。");
+ NPC_walk(0,0,1);
+ add(37,1,1);
+ goto("END");
+
+@WHY_HERE1
+ talk(0,"阿莱:凡是红牌子的都是女生宿舍,回头吧。");
+ NPC_walk(0,0,1);
+ add(37,1,1);
+ goto("END");
+
+@WHY_HERE2
+ talk(0,"阿莱:不要老往女生宿舍跑了啦,南大管理很严格的,弄不好会吃处分的。");
+ NPC_walk(0,0,1);
+ add(37,1,1);
+ goto("END");
+
+@WHY_HERE3
+ talk(0,"阿莱:我靠,你有完没完啊,背个处分好玩啊?");
+ NPC_walk(0,0,1);
+ add(37,1,1);
+ goto("END");
+
+@WHY_HERE4
+ talk(50,"作者:你是怀着什么样的心态完偶的游戏的啊?信不信偶让你当机!");
+ NPC_walk(0,0,1);
+ add(37,1,1);
+ goto("END");
+
+@WHY_HERE5
+ talk(50,"作者:恐吓也不管用啊?算了偶直说吧,由于偶不知到女生宿舍里是什么样子的,所以没画这里的地图,别白忙活了。");
+ NPC_walk(0,0,1);
+ goto("END");
+
+@END

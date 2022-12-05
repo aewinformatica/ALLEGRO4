@@ -1,0 +1,3 @@
+#ĹѨ2
+
+talk(50,"(The day must come, God will live with man together. A new town, will wait for the God, like the bride waits for her husband...)");

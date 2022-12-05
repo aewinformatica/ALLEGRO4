@@ -1,0 +1,30 @@
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name = "Zabuza"        ;Name of character
+displayname = "Zabuza" ;Name of character to display
+versiondate = 18,6,2002    ;Version date of character
+mugenversion = 18,6,2002   ;Version of M.U.G.E.N character works on
+author = ""         ;Character author name
+pal.defaults = 6,3,4,2      ;Default palettes in order of preference
+
+; Files for the player
+[Files]
+cmd     = zabuza.cmd   ;Command set
+cns     = zabuza.cns   ;Constants
+st      = zabuza.cns   ;States
+stcommon = common1.cns ;Common states
+sprite  = zabuza.sff   ;Sprite
+anim    = zabuza.air   ;Animation
+sound   = zabuza.snd   ;Sound
+pal1    = 2.act  ;Palettes (can have up to 12)
+pal2    = 3.act
+pal3    = 4.act
+pal4    = 1.act
+pal5    = 5.act
+pal6    = 6.act
+
+; Arcade mode 
+[Arcade] 
+ending.storyboard = credits.def

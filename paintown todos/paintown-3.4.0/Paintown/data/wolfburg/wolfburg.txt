@@ -1,0 +1,20 @@
+(game
+  (name Wolfburg)
+  (menu menu/main.txt)
+  (level-set
+    (name "Wolfburg")
+    (levels
+      wolfburg/levels/MeanStreets.txt
+      wolfburg/levels/WhoreAlley.txt
+      wolfburg/levels/Warehouse.txt
+      wolfburg/levels/Pier.txt
+      wolfburg/levels/Boat1.txt
+      wolfburg/levels/Cargo.txt
+      wolfburg/levels/Boat2.txt
+      wolfburg/levels/Island.txt
+      wolfburg/levels/Dojo.txt
+      wolfburg/levels/HellsGate.txt
+      wolfburg/levels/Heckate.txt
+      wolfburg/levels/Hell.txt
+      ))
+  )

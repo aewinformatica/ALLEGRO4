@@ -1,0 +1,16 @@
+#从门下面的格子走过去占位
+
+talk(50,"阿莱:还好,还剩一个位子,旁边还有强人!");
+
+NPC_walk(0,1,2);
+NPC_walk(0,2,1);
+NPC_walk(0,1,2);
+NPC_walk(0,2,1);
+
+delay(18);
+
+talk(50,"阿莱:哈哈,功夫总算没白费,终于占到一个好位。");
+
+call("script/study/teacher.txt");
+
+call("script/study/new_chapter.txt");

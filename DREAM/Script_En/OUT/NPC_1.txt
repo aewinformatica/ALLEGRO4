@@ -1,0 +1,1 @@
+talk(50,"Woman:Do you need telephone cards? 9989 card, 201 card.");

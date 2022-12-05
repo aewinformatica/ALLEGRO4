@@ -1,0 +1,21 @@
+#9¶°µÄÃÅ
+
+go_inout(0,1);
+
+set_game_status(1);
+
+call("Script_En/room/load.txt");
+NPC_set(0,9,13);
+NPC_turn(0,2);
+
+set_game_status(0);
+
+go_inout(0,0);
+
+if(31,0,"WHY_BACK");
+if(31,1,"WHY_BACK");
+ goto("END");
+ @WHY_BACK
+ talk(0,"Alai:Seems I haven't fogot anything. Hurry to the teaching building.");
+
+@END

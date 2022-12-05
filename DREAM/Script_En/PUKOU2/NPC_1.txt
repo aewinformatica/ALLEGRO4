@@ -1,0 +1,1 @@
+talk(50,"Dustwoman:Huuu, they are always eating melon seeds and throwing rubbish.");

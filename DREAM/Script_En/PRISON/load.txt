@@ -1,0 +1,15 @@
+#加载监狱
+
+set_game_status(1);
+
+#加载地图
+clr_all_NPC();
+load_map("map/prison/prison.map","map/prison/prison.bmp","map/prison/prison_sky.bmp");
+
+#加载陷阱
+
+#加载NPC
+init_NPC(2,3,3,$36,0,0,"Script_En/blank.txt");
+init_NPC(10,3,0,4,0,3,"Script_En/prison/mary.txt");
+
+return();

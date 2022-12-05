@@ -1,0 +1,46 @@
+#½øÅ®ÉúËÞÉá
+
+if(37,0,"WHY_HERE0");
+if(37,1,"WHY_HERE1");
+if(37,2,"WHY_HERE2");
+if(37,3,"WHY_HERE3");
+if(37,4,"WHY_HERE4");
+if(37,5,"WHY_HERE5");
+
+
+@WHY_HERE0
+ talk(0,"Alai:I shouldn't get in. It is girl's dormitory.");
+ NPC_walk(0,0,1);
+ add(37,1,1);
+ goto("END");
+
+@WHY_HERE1
+ talk(0,"Alai:All the red signed are girl's dormitory. Go back.");
+ NPC_walk(0,0,1);
+ add(37,1,1);
+ goto("END");
+
+@WHY_HERE2
+ talk(0,"Alai:Don't always go to the girl's dormitory, the rule is stringent!");
+ NPC_walk(0,0,1);
+ add(37,1,1);
+ goto("END");
+
+@WHY_HERE3
+ talk(0,"Alai:Shit, what's wrong with you. You should be dismissed!");
+ NPC_walk(0,0,1);
+ add(37,1,1);
+ goto("END");
+
+@WHY_HERE4
+ talk(50,"Author:Do you think this is another Japanese sexy game? Wrong!");
+ NPC_walk(0,0,1);
+ add(37,1,1);
+ goto("END");
+
+@WHY_HERE5
+ talk(50,"Author:Still no use? Alright, I've never been in the girls' dormitory, so I didn't make the map.");
+ NPC_walk(0,0,1);
+ goto("END");
+
+@END

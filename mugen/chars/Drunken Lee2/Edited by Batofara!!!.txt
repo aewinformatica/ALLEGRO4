@@ -1,0 +1,10 @@
+Yeah!!!!!!
+
+Press enter for the new funny taunt.
+Added attacks for this are the handstand kicks.
+
+z = 2 handstand kicks
+down z = I have no idea how many kicks, I just know its 20 frames
+
+This lee has been made faster, stronger, but slightly weaker in defence so he isn't 
+too powerful.

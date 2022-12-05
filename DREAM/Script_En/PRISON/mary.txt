@@ -1,0 +1,66 @@
+#Ä§×åÅ®º¢ÂêÀö
+
+talk(8,"Mary:Finally you woke up.");
+talk(0,"Alai:Who are you?");
+talk(8,"Mary:I...I'm Mary, I was prisoned here.");
+talk(0,"Alai:What happened to you?");
+talk(8,"Mary:...I...don't know, we just live in a little village, and live on machining Black Magic Stone. But...");
+talk(0,"Alai:But what?");
+talk(8,"Mary:One day, many people came, and said all the Black Magic Stone were belong to them. And my family... Wuuuuu~~~");
+talk(0,"Alai:Many people? Was there a bald mage with a wooden stick?");
+talk(8,"Mary:Yes, there was. He let his soilders to rob and kill. I'd rather they also killed me...");
+
+NPC_turn(0,1);
+talk(0,"Alai:So what is behind all this?");
+
+talk(8,"Mary:...How did you get in here?");
+NPC_turn(0,3);
+delay(9);
+talk(0,"Alai:The mage said he wants my imagination.");
+talk(8,"Mary:He also said he wanted my Dark Power, but I don't know what is it.");
+talk(0,"Alai:Oh.(Is she comes from the Devil Space?)");
+
+delay(18);
+NPC_turn(0,0);
+talk(0,"Alai:What is that?");
+delay(9);
+NPC_turn(1,0);
+
+init_NPC(10,14,2,8,0,1,"Script_En/blank.txt");
+
+NPC_walk(2,2,5);
+
+talk(4,"Emma:Alai,come with me!");
+talk(1,"Alai:Emma...");
+talk(0,"Alai:Why did you bring us here?");
+talk(4,"Emma:Just come, time is up!");
+talk(0,"Alai:I can't trust you any more. How do I know where else you are taking us?");
+talk(4,"Emma:Us? What us? Who is this girl?");
+talk(0,"Alai:She's another people you persecuted. Your people, your good headmaster destroyed her village.");
+talk(4,"Emma:I don't know!!! I risked my life here to save you!!!");
+talk(0,"Alai:You robbers, you dissemblers.");
+talk(4,"Emma:The headmaster went to the Mount Paratin to collect herb. Dare you go there and ask him?");
+talk(0,"Alai:Just go, I'm not afraid him.");
+
+NPC_walk(0,0,6);
+NPC_turn(0,3);
+NPC_walk(1,0,1);
+talk(4,"Emma:Hey,the girl, stop! This is between me and Alai, you go to the City Parliament, and ask for a man called Will.");
+NPC_turn(2,1);
+talk(4,"Emma:Alai, Let's go.");
+
+
+go_inout(0,1);
+midi_out();
+set_game_status(1);
+call("Script_En/hill/load.txt");
+set_game_status(0);
+go_inout(0,0);
+
+play_midi("music/doom95.mid");
+
+talk(0,"Alai:How high it is, have you been here before?");
+talk(4,"Emma:Nope, this is a holy place, only high LV mages are allowed to enter. But I don't care if you can trust me.");
+
+@END
+end();

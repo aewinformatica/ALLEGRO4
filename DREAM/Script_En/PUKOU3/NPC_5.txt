@@ -1,0 +1,1 @@
+talk(50,"Schoolmate:No one jumped down buildings for a long time. Seems people all cherish lives these days.");

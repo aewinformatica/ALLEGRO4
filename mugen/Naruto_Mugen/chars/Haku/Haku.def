@@ -1,0 +1,25 @@
+; Definition file for Kung Fu Man
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Haku"
+displayname ="Haku"
+versiondate =10/31/06
+mugenversion =04,14,2002
+author ="Coding: Naruto500, Sprites: UnknownKid"
+pal.defaults =6,3,4,2
+
+; Files for the player
+[Files]
+cmd     =Haku.cmd
+cns     =Haku.cns
+st      =Haku.cns
+stcommon =common1.cns
+sprite  =Haku.sff
+anim    =Haku.air
+sound   =Haku.snd
+pal1=Haku.act
+[Arcade]
+intro.storyboard=
+ending.storyboard=

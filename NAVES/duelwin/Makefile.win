@@ -1,0 +1,27 @@
+# Project: Project 1
+# Makefile created by Dev-C++ 4.9.4.0
+
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = Duel_prj.res
+OBJ  = duel6.o $(RES)
+LIBS =  -L"C:\Dev-Cpp\lib" -lalleg
+INCS =  -I"C:\Dev-Cpp\include" 
+BIN  = Duel_prj.exe
+CFLAGS = $(INCS)  -s -O1 -mwindows
+
+.PHONY: clean
+
+all: Duel_prj.exe
+
+clean:
+	rm -f $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(OBJ) -o "Duel_prj.exe" $(RES) $(LIBS) $(CFLAGS)
+
+duel6.o: duel6.c 
+	$(CC) -c duel6.c -o duel6.o $(CFLAGS)
+
+Duel_prj.res: 
+	$(WINDRES) -i Duel_prj.rc -I rc -o Duel_prj.res -O coff 

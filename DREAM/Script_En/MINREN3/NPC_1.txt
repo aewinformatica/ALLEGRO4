@@ -1,0 +1,4 @@
+#黄头发的男生
+
+talk(50,"Boy:My hair style is so cool,girls must like it!");
+NPC_turn(1,0);

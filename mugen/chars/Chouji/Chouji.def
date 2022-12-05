@@ -1,0 +1,31 @@
+; Definition file for Kung Fu Man
+; Contains all the filenames needed for the character
+
+; Player information
+[Info]
+name ="Akimichi Chouji"
+displayname ="Akimichi Chouji"
+versiondate =04,14,2002
+mugenversion =14,04,2002
+author ="Coding: Jay (CommanderCool), Spriting: Marvin"
+pal.defaults =6,3,4,2
+
+; Files for the player
+[Files]
+cmd     =kfm.cmd
+cns     =kfm.cns
+st      =kfm.cns
+stcommon =common1.cns
+sprite  =kfm.sff
+anim    =kfm.air
+sound   =kfm.snd
+pal1=Chouji.act
+pal2=Chouji2.act
+pal3=Chouji3.act
+pal4=Chouji4.act
+pal5=Chouji5.act
+pal6=Chouji6.act
+; Arcade mode
+[Arcade]
+intro.storyboard =intro.def
+ending.storyboard =ending.def

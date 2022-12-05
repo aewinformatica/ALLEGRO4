@@ -1,0 +1,23 @@
+; Definition file for ANBU.
+; Contains all the filenames needed for the character.
+
+; Player information
+[Info]
+name = "ANBU Kakashi"       
+displayname = "ANBU Kakashi" 
+versiondate = 27,09,2005    
+mugenversion = 04,14,2002   
+author = "Marvin"         
+pal.defaults = 6,3,4,2      
+
+; Files for my ANBU
+[Files]
+cmd     = ANBU.cmd   
+cns      = ANBU.cns   
+st        = ANBU.cns
+st2       = raikiri.cns
+stcommon = ANBUcommon.cns 
+sprite  = ANBU.sff   
+anim   = ANBU.air   
+sound  = ANBU.snd  
+pal1    = ANBUpalette.act  

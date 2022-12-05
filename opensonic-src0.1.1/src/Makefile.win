@@ -1,0 +1,105 @@
+# Project: Open Sonic
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = 2xsai.o actor.o audio.o boss.o brick.o endofdemo.o enemy.o font.o iconlin.o input.o intro.o item.o launcher.o level.o lexgui.o main.o menu.o osspec.o player.o quest.o questover.o scene.o screenshot.o sprite.o util.o video.o $(RES)
+LINKOBJ  = 2xsai.o actor.o audio.o boss.o brick.o endofdemo.o enemy.o font.o iconlin.o input.o intro.o item.o launcher.o level.o lexgui.o main.o menu.o osspec.o player.o quest.o questover.o scene.o screenshot.o sprite.o util.o video.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -mwindows -lalleg_s -lkernel32 -luser32 -lgdi32 -lcomdlg32 -lole32 -ldinput -lddraw -ldxguid -lwinmm -ldsound 
+INCS =  -I"C:/Dev-Cpp/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include" 
+BIN  = "Open Sonic.exe"
+CXXFLAGS = $(CXXINCS) -DALLEGRO_STATICLINK 
+CFLAGS = $(INCS) -DALLEGRO_STATICLINK 
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before "Open Sonic.exe" all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CC) $(LINKOBJ) -o "Open Sonic.exe" $(LIBS)
+
+2xsai.o: 2xsai.c
+	$(CC) -c 2xsai.c -o 2xsai.o $(CFLAGS)
+
+actor.o: actor.c
+	$(CC) -c actor.c -o actor.o $(CFLAGS)
+
+audio.o: audio.c
+	$(CC) -c audio.c -o audio.o $(CFLAGS)
+
+boss.o: boss.c
+	$(CC) -c boss.c -o boss.o $(CFLAGS)
+
+brick.o: brick.c
+	$(CC) -c brick.c -o brick.o $(CFLAGS)
+
+endofdemo.o: endofdemo.c
+	$(CC) -c endofdemo.c -o endofdemo.o $(CFLAGS)
+
+enemy.o: enemy.c
+	$(CC) -c enemy.c -o enemy.o $(CFLAGS)
+
+font.o: font.c
+	$(CC) -c font.c -o font.o $(CFLAGS)
+
+iconlin.o: iconlin.c
+	$(CC) -c iconlin.c -o iconlin.o $(CFLAGS)
+
+input.o: input.c
+	$(CC) -c input.c -o input.o $(CFLAGS)
+
+intro.o: intro.c
+	$(CC) -c intro.c -o intro.o $(CFLAGS)
+
+item.o: item.c
+	$(CC) -c item.c -o item.o $(CFLAGS)
+
+launcher.o: launcher.c
+	$(CC) -c launcher.c -o launcher.o $(CFLAGS)
+
+level.o: level.c
+	$(CC) -c level.c -o level.o $(CFLAGS)
+
+lexgui.o: lexgui.c
+	$(CC) -c lexgui.c -o lexgui.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+menu.o: menu.c
+	$(CC) -c menu.c -o menu.o $(CFLAGS)
+
+osspec.o: osspec.c
+	$(CC) -c osspec.c -o osspec.o $(CFLAGS)
+
+player.o: player.c
+	$(CC) -c player.c -o player.o $(CFLAGS)
+
+quest.o: quest.c
+	$(CC) -c quest.c -o quest.o $(CFLAGS)
+
+questover.o: questover.c
+	$(CC) -c questover.c -o questover.o $(CFLAGS)
+
+scene.o: scene.c
+	$(CC) -c scene.c -o scene.o $(CFLAGS)
+
+screenshot.o: screenshot.c
+	$(CC) -c screenshot.c -o screenshot.o $(CFLAGS)
+
+sprite.o: sprite.c
+	$(CC) -c sprite.c -o sprite.o $(CFLAGS)
+
+util.o: util.c
+	$(CC) -c util.c -o util.o $(CFLAGS)
+
+video.o: video.c
+	$(CC) -c video.c -o video.o $(CFLAGS)

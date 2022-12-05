@@ -1,0 +1,33 @@
+#进实验室时和老师的对话
+
+if(31,3,"COME_IN");
+if(31,4,"WHY_BACK");
+
+@END
+end();
+
+
+############################
+@COME_IN
+
+NPC_turn(1,3);
+delay(9);
+talk(50,"Teacher:Young man, who are you seeking for?");
+delay(9);
+talk(0,"Alai:We... are seeking for Academician Feng Duan.");
+talk(50,"Teacher:Acdemician Feng Duan, do you have a precontract?");
+talk(0,"Alai:We are his relatives.");
+talk(50,"Teacher:Oh, it's like this, just go inside.");
+talk(1,"Alai:Thank you ,sir.");
+NPC_turn(1,0);
+NPC_walk(0,2,1);
+set(31,4);
+goto("END");
+
+#############################
+@WHY_BACK
+
+talk(0,"Alai:It's not easy to get in here, why go back?");
+NPC_walk(0,2,1);
+
+goto("END");

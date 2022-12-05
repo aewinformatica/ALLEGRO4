@@ -1,0 +1,24 @@
+#到名人中的路口
+
+  go_inout(0,1);
+  set_game_status(1);
+
+  call("script/minren2/load.txt");
+  NPC_set(0,9,1);
+  NPC_turn(0,0);
+
+  if(31,1,"ADD_STAR");
+  @CONTINUE
+
+  set_game_status(0);
+  go_inout(0,0);
+  
+  end();
+
+##########################
+#假如主剧情变量为1加入天文系老头
+@ADD_STAR
+
+init_NPC(9,10,0,4,0,4,"script/minren2/NPC_1.txt");
+
+goto("CONTINUE");

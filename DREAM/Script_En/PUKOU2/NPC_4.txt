@@ -1,0 +1,1 @@
+talk(50,"Girl:Soon I'm attending an invitation of the P&G Corp. I'm nervous...");

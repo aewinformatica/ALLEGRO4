@@ -1,0 +1,123 @@
+[Statedef -3]
+
+;This controller plays a sound from a jump, or
+;from back-dash.
+[State -3, Landing Sound]
+type = PlaySnd
+triggerall = Time = 1
+trigger1 = stateno = 52 ;Jump land
+trigger2 = stateno = 106 ;Run-back land
+value = 52, 0
+
+;---------------------------------------------------------
+;AI code
+;---------------------------------------------------------
+
+;light punch
+[state -3,1]
+type = changestate
+triggerall = var(59) = 1 && roundstate = 2
+trigger1 = p2dist X< 60 && random < 500
+trigger1 = ctrl && statetype = S
+value = 200
+
+;strong punch
+[state -3,2]
+type = ChangeState
+value = 210
+triggerall = var(59) = 1 && roundstate = 2
+trigger1 = statetype != A && random < 500
+trigger1 = stateno = 200 && movecontact
+trigger2 = stateno = 230 && movecontact && random < 50
+trigger3 = stateno = 200 && animelemtime(3) >= 0 && random < 70
+
+[state -3,3]
+type = changestate
+triggerall = var(59) = 1 && roundno = 2
+trigger1 = p2dist X< 60 && random < 500
+trigger1 = ctrl && statetype = S
+trigger2 = stateno = 200 && movecontact && random > 950
+value = 220
+
+;Standing Strong Kick
+[State -3,4]
+type = ChangeState
+value = 230
+triggerall = var(59) = 1 && roundstate = 2
+trigger1 = statetype != A && random < 500
+trigger1 = stateno = 220 && movecontact
+trigger2 = stateno = 220 && animelemtime(3) >= 0 && random < 60
+
+[state -3,5]
+type = changestate
+triggerall = var(59) = 1 && roundstate = 2
+trigger1 = ctrl && statetype = S
+trigger1 = enemynear, statetype = S && p2dist X< 60
+trigger1 = random = [500,550]
+value = 410
+
+;teleport
+[state -3,11]
+type = changestate
+triggerall = var(59) = 1 && roundstate = 2
+triggerall = statetype = S && ctrl
+trigger1 = p2dist X> 200
+trigger1 = random > 900
+trigger2 = inguarddist && random < 600
+trigger2 = p2dist X< 60
+value = 400
+
+;throw weapon
+[state -3,12]
+type = changestate
+triggerall = var(59) = 1 && roundstate = 2 && var(5) != 0
+trigger1 = statetype = S && ctrl && p2dist Y= [0,-50]
+trigger1 = random < 300
+value = 201
+
+;throw weapon
+[state -3,13]
+type = changestate
+triggerall = var(59) = 1 && roundstate = 2 && var(5) != 0
+trigger1 = statetype = A && ctrl && p2dist Y= [0,-50]
+trigger1 = random < 300
+value = 202
+
+;flame jutsu
+[state -3,18]
+type = changestate
+triggerall = var(59) = 1 && roundstate = 2 && power >= 1000
+trigger1 = ctrl && statetype = S
+trigger1 = p2dist X> 50
+trigger1 = random = [200,260]
+value = 1000
+
+;guarding
+[state -3,19]
+type = changestate
+triggerall = var(59) = 1 && roundstate = 2
+trigger1 = ctrl && statetype = S
+trigger1 = inguarddist && random < 30
+value = 130
+
+[State -3]
+type = ChangeState
+triggerall = power >= 1000
+triggerall = var(50) = 1
+triggerall = StateType != A
+triggerall = Movetype != H
+triggerall = P2Life > 0
+triggerall = P2bodydist X <= 100
+trigger1 = Stateno = 506
+trigger1 = movehit = 1
+value = 666
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,183 @@
+
+(level 
+  (z 
+    (minimum 154) 
+    (maximum 239)) 
+  (background "./bgs/boat/back.png") 
+  (panel 2 "./bgs/boat/p02.png" junk junk) 
+  (panel 1 "./bgs/boat/p01.png" junk junk) 
+  (panel 0 "./bgs/boat/p00.png" junk junk) 
+  (order 0 1 2 0 1 1 1 0 2 1 0 1 1 2 0 0 1 1 0 2) 
+  (block 
+    (length 320)) 
+  (block 
+    (length 500) 
+    (object 
+      (type enemy) 
+      (name "Lepper") 
+      (path "chars/punk/punk.txt") 
+      (map 1) 
+      (health 35) 
+      (coords 328 15)) 
+    (object 
+      (type enemy) 
+      (name "Mr. Butler") 
+      (path "chars/heavy/heavy.txt") 
+      (map 1) 
+      (health 60) 
+      (coords 415 64)) 
+    (object 
+      (type enemy) 
+      (name "Sampson") 
+      (path "chars/robert/robert.txt") 
+      (map 0) 
+      (health 75) 
+      (coords 570 25))) 
+  (block 
+    (length 450) 
+    (object 
+      (type enemy) 
+      (name "Gat") 
+      (path "chars/jhun/jhun.txt") 
+      (map 2) 
+      (health 55) 
+      (coords 413 9)) 
+    (object 
+      (type enemy) 
+      (name "Shu") 
+      (path "chars/eiji/eiji.txt") 
+      (map 3) 
+      (health 50) 
+      (coords 468 73)) 
+    (object 
+      (type enemy) 
+      (name "Subtu") 
+      (path "chars/eiji/eiji.txt") 
+      (map 1) 
+      (health 40) 
+      (coords -356 65))) 
+  (block 
+    (length 460) 
+    (object 
+      (type enemy) 
+      (name "Jon") 
+      (path "chars/joe/joe.txt") 
+      (map 0) 
+      (health 40) 
+      (coords 353 5)) 
+    (object 
+      (type enemy) 
+      (name "Freddy") 
+      (path "chars/billy/billy.txt") 
+      (map 4) 
+      (health 45) 
+      (coords 406 71)) 
+    (object 
+      (type enemy) 
+      (name "Sean") 
+      (path "chars/punk/punk.txt") 
+      (map 0) 
+      (health 30) 
+      (coords 570 28)) 
+    (object 
+      (type enemy) 
+      (name "Noah") 
+      (path "chars/yamazaki/yamazaki.txt") 
+      (map 0) 
+      (health 60) 
+      (coords 692 79))) 
+  (block 
+    (length 480) 
+    (object 
+      (type enemy) 
+      (name "Ichigo") 
+      (path "chars/eiji/eiji.txt") 
+      (map 5) 
+      (health 50) 
+      (coords 354 14)) 
+    (object 
+      (type enemy) 
+      (name "Akuma") 
+      (path "chars/eiji/eiji.txt") 
+      (map 3) 
+      (health 50) 
+      (coords 339 67)) 
+    (object 
+      (type enemy) 
+      (name "Frank") 
+      (path "chars/joe/joe.txt") 
+      (map 2) 
+      (health 55) 
+      (coords 598 10))) 
+  (block 
+    (length 450) 
+    (object 
+      (name "null") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 327 10) 
+      (stimulation 
+        (health 20))) 
+    (object 
+      (type enemy) 
+      (name "Dirk") 
+      (path "chars/yashiro/yashiro.txt") 
+      (map 2) 
+      (health 30) 
+      (coords 385 85)) 
+    (object 
+      (type enemy) 
+      (name "Henry") 
+      (path "chars/heavy/heavy.txt") 
+      (map 0) 
+      (health 57) 
+      (coords 490 18)) 
+    (object 
+      (type enemy) 
+      (name "Elgar") 
+      (path "chars/rugal/rugal.txt") 
+      (map 2) 
+      (health 65) 
+      (coords 675 71))) 
+  (block 
+    (length 450) 
+    (object 
+      (type enemy) 
+      (name "Shane") 
+      (path "chars/jhun/jhun.txt") 
+      (map 1) 
+      (health 40) 
+      (coords 426 22)) 
+    (object 
+      (type enemy) 
+      (name "Umak") 
+      (path "chars/joe/joe.txt") 
+      (map 0) 
+      (health 50) 
+      (coords 441 76))) 
+  (block 
+    (length 500) 
+    (object 
+      (type enemy) 
+      (name "Razor") 
+      (path "chars/robert/robert.txt") 
+      (map 0) 
+      (health 60) 
+      (coords 443 29)) 
+    (object 
+      (type enemy) 
+      (name "Scurvy") 
+      (path "chars/billy/billy.txt") 
+      (map 1) 
+      (health 50) 
+      (coords -464 66)) 
+    (object 
+      (name "null") 
+      (type item) 
+      (path misc/apple/apple.txt) 
+      (coords 351 79) 
+      (stimulation 
+        (health 20)))) 
+  (block 
+    (length 100) 
+    (finish 70)))

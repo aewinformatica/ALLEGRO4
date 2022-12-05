@@ -1,0 +1,89 @@
+Import( 'env' );
+
+obj_files = []
+
+def addFiles( dir, files ):
+	obj_files.append( map( lambda x: dir + x, files ) )
+
+addFiles( './', Split( """
+configuration.cpp
+globals.cpp
+loading.cpp
+music.cpp
+main.cpp
+init.cpp
+nameplacer.cpp
+select_player.cpp
+world.cpp
+"""))
+
+addFiles( "level/", Split( """
+block.cpp
+blockobject.cpp
+scene.cpp
+"""))
+
+addFiles( "loadpng/", Split( """
+loadpng.c
+"""));
+
+addFiles( "factory/", Split( """
+font_factory.cpp
+heart_factory.cpp
+object_factory.cpp
+font_render.cpp
+collector.cpp
+shadow.cpp
+"""))
+
+addFiles( "object/", Split("""
+animation.cpp
+animation_event.cpp
+animation_event_attack.cpp
+animation_event_bbox.cpp
+animation_event_coords.cpp
+animation_event_delay.cpp
+animation_event_face.cpp
+animation_event_frame.cpp
+animation_event_jump.cpp
+animation_event_move.cpp
+animation_event_nop.cpp
+animation_event_projectile.cpp
+animation_event_offset.cpp
+animation_event_shadow.cpp
+animation_event_sound.cpp
+animation_event_status.cpp
+animation_event_zdistance.cpp
+display_character.cpp
+effect.cpp
+enemy.cpp
+item.cpp
+object.cpp
+object_attack.cpp
+object_nonattack.cpp
+player.cpp
+projectile.cpp
+attack.cpp
+stimulation.cpp
+health_stimulation.cpp
+character.cpp
+heart.cpp
+"""))
+
+addFiles( "util/", Split("""
+token.cpp
+token_exception.cpp
+tokenreader.cpp
+timedifference.cpp
+sound.cpp
+keyboard.cpp
+bitmap.cpp
+font.cpp
+ftalleg.cpp
+funcs.cpp
+ebox.cpp
+load_exception.cpp
+"""))
+
+env.Program( 'paintown', obj_files + ['xmain.cpp'] );
+env.Program( 'test', obj_files + ['test.cpp'] );

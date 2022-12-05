@@ -1,0 +1,9 @@
+-This is the previous 804 character slot selection screen (728 shown 76 hidden)
+
+-Copy and paste these two files into the data folder, which will overwrite the new system.def and select.def
+
+-More info about how to use EVE Battle can be found here:
+http://www.mugen-infantry.net/forum/index.php?topic=45821.0
+
+
+DJ-VAN

@@ -1,0 +1,4 @@
+#搬动把手时什么也不做
+
+set(15,0);
+play_sound("sound/move.wav");

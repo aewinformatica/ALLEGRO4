@@ -1,0 +1,12 @@
+#到浦口南的路格右
+go_inout(0,1);
+
+set_game_status(1);
+
+call("script/pukou3/load.txt");
+NPC_set(0,25,1);
+NPC_turn(0,0);
+
+set_game_status(0);
+
+go_inout(0,0);
