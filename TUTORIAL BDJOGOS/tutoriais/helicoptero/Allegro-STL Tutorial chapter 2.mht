@@ -1,0 +1,163 @@
+From: <Salvo pelo Windows Internet Explorer 8>
+Subject: Allegro/STL Tutorial: chapter 2
+Date: Sun, 28 Aug 2011 23:34:55 -0300
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://alleg.sourceforge.net/docs/ovehk_stl_tutorial_en/tut2.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.6109
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD><TITLE>Allegro/STL Tutorial: chapter 2</TITLE>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type>
+<META name=3Dauthor content=3D"Ove K=E5ven">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.19120"></HEAD>
+<BODY aLink=3D#ff0000 link=3D#0000ef bgColor=3D#ffffff text=3D#000000 =
+vLink=3D#51188e>
+<H1>Chapter 2</H1>
+<H2>2. Preparing our game</H2>
+<H3>2.1 What do we need?</H3>A game consists of many components, like =
+graphics,=20
+sound, input device management, data file management, etc. Allegro can =
+deal with=20
+all of these. But it can't deal with the design; you must have a good =
+design=20
+before you can use Allegro to create games. In this tutorial, we are =
+going to=20
+make a helicopter game, where we control a helicopter on a mission to =
+bomb=20
+beyond known reality every tank that dares to show its ugly warhead on =
+the game=20
+screen.=20
+<P>Let's begin with the backdrop. For simplicity, we will have a static=20
+unmovable backdrop. However, to show how to use Allegro drawing =
+functions, we=20
+will generate it from within our main program, using some cool shades.=20
+<P>First, we need the cool shades. That is, we need to have a game =
+palette=20
+first. (In this tutorial, we will be working in 256-color modes.) We can =
+create=20
+a palette using any appropriate sprite editor or paint program. The =
+palette I=20
+will use is within the Allegro datafile below. Use the Allegro Grabber =
+utility=20
+to see it.=20
+<P><A =
+href=3D"http://alleg.sourceforge.net/docs/ovehk_stl_tutorial.zip">Downloa=
+d=20
+the tutorial datafile</A>=20
+<H3>2.2 The Grabber</H3><CODE>GRABBER.EXE</CODE> resides in the=20
+<CODE>TOOLS</CODE> subdirectory of your Allegro directory. To make it =
+easier to=20
+use, either put this directory into your <CODE>PATH</CODE> in=20
+<CODE>AUTOEXEC.BAT</CODE>, or copy <CODE>GRABBER.EXE</CODE> into =
+somewhere that=20
+is already in the PATH, like your DJGPP <CODE>BIN</CODE> directory. This =
+will=20
+make it easier for you to start the Grabber from your project directory. =
+
+<P>When you have downloaded the tutorial datafile and placed it into =
+your=20
+project directory, start Grabber. From the <CODE>File</CODE> menu, =
+select=20
+<CODE>Load</CODE>, and load <CODE>TUTORIAL.DAT</CODE>. (You could also =
+have=20
+specified the datafile on the command line.) The datafile elements of =
+our game=20
+is now listed. You may look through them now, and note the convenience =
+of having=20
+everything in one datafile, but for more details about how the Grabber =
+works,=20
+consult its help system. For now, though, we just need it to generate =
+the header=20
+file <CODE>tutorial.h</CODE>. From the <CODE>File</CODE> menu, choose=20
+<CODE>Save</CODE>. Once saved, close the Grabber by choosing =
+<CODE>Quit</CODE>.=20
+<H3>2.3 The Datafile</H3>As you have now seen, all the data objects we =
+need,=20
+like graphics and sounds, are contained in the datafile. The Grabber =
+also=20
+created a header file (<CODE>tutorial.h</CODE>) that our main program =
+can use to=20
+reference specific objects within the datafile whenever it needs to use =
+them.=20
+<P>But how is it actually used? To see how, we'll write some more code. =
+Start=20
+RHIDE again. Note that RHIDE will this time automatically load your =
+project,=20
+since it's the only project existing in the directory. (This may cause =
+troubles=20
+if you use the <CODE>Save Options</CODE> feature improperly, since =
+options are=20
+saved in a project file, but that's another matter.)=20
+<P>Now change your program to read: <PRE>#include &lt;allegro.h&gt;
+#include "tutorial.h"
+
+DATAFILE* data;
+
+int main()
+{
+ allegro_init();
+ install_keyboard();
+
+ data=3Dload_datafile("tutorial.dat");
+
+ set_gfx_mode(GFX_VGA,320,200,0,0);
+
+ set_palette((RGB*)data[TUT_GAMEPAL].dat);
+
+ textout_centre(screen,font,"Ready. Beep.",160,100,255);
+ readkey();
+ return 0;
+}
+</PRE>Let's go through this program and see what it actually does. =
+First,=20
+obviously, is the #include directives, that loads the definitions we =
+need.=20
+<CODE>tutorial.h</CODE>, the one Grabber created, contains the =
+TUT_GAMEPAL=20
+definition. Then we define a global variable, <CODE>data</CODE>, that is =
+a=20
+pointer to DATAFILE entries. In the main program, we initialize Allegro =
+with=20
+<CODE>allegro_init()</CODE>, install Allegro's keyboard subsystem with=20
+<CODE>install_keyboard()</CODE>, then load the datafile into memory, and =
+assigns=20
+it to our global variable <CODE>data</CODE>. =
+<CODE>load_datafile()</CODE> takes=20
+care of everything necessary to load it, including allocating memory,=20
+decompressing, and converting, and returns a pointer to the loaded and=20
+ready-to-use datafile.=20
+<P>If you are used to real-mode compilers, remember that DJGPP is a =
+32-bit=20
+protected-mode compiler, so we are working in a flat address space, with =
+virtual=20
+memory and all, so there is no need to worry about exhausting memory by =
+keeping=20
+the entire datafile loaded (unless your datafile is approaching =
+something like=20
+50 megabytes, of course).=20
+<P>After we have entered VGA 320x200 256-color graphics mode (mode 13h) =
+with=20
+<CODE>set_gfx_mode()</CODE>, we then sets the palette from the datafile. =
+As you=20
+can see, data points to an array of DATAFILE structures, of which the=20
+<CODE>dat</CODE> field points to the actual data. Since <CODE>dat</CODE> =
+is a=20
+<CODE>void *</CODE> pointer, we need to explicitly cast it to the =
+appropriate=20
+data type, otherwise the compiler will complain that ANSI C++ forbids =
+implicit=20
+casting. <CODE>set_palette()</CODE> expects an argument of type =
+<CODE>RGB=20
+*</CODE>.=20
+<P>Then we output the usual text at the center of the screen and waits =
+for a=20
+key, as before.=20
+<P>We can now proceed to the <A=20
+href=3D"http://alleg.sourceforge.net/docs/ovehk_stl_tutorial_en/tut3.html=
+">next=20
+chapter</A> </P></BODY></HTML>

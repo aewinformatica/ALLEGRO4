@@ -1,0 +1,728 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0052)http://www.bdjogos.com/biblioteca_conteudo.php?id=17 -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="TECLADO_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="TECLADO_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="TECLADO_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background=TECLADO_arquivos/bg.jpg topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT language=javascript src="TECLADO_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TECLADO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=TECLADO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="TECLADO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TECLADO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=TECLADO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background=TECLADO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TECLADO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TECLADO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="TECLADO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TECLADO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TECLADO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=TECLADO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="TECLADO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TECLADO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=TECLADO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background=TECLADO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TECLADO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TECLADO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="TECLADO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TECLADO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TECLADO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=TECLADO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="TECLADO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TECLADO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=TECLADO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background=TECLADO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TECLADO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TECLADO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="TECLADO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TECLADO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TECLADO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=TECLADO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="TECLADO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TECLADO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=TECLADO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background=TECLADO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TECLADO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TECLADO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="TECLADO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TECLADO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="TECLADO_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="TECLADO_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="TECLADO_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="TECLADO_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="TECLADO_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="TECLADO_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background=TECLADO_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="TECLADO_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background=TECLADO_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="TECLADO_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="TECLADO_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD class=conteudo vAlign=top><LINK 
+            href="TECLADO_arquivos/estilos.css" type=text/css rel=stylesheet>
+            <HR>
+            <LINK href="TECLADO_arquivos/estilos.css" type=text/css 
+            rel=stylesheet><SPAN class=titulos>Rotinas do Teclado</SPAN><BR>
+            <HR>
+
+            <P>O Allegro provê controles tanto para entrada de dados através do 
+            teclado quando para o status do teclado. Note que não é possível 
+            fazer todas as combinações de teclas possíveis devido o projeto do 
+            teclado. </P>
+            <P>Até duas ou três teclas pressionadas ao mesmo tempo trabalharão 
+            bem, mais que isso é provável que as próximas teclas serão 
+            ignoradas.<BR>No DOS o allegro requer que o usuário especifique o 
+            idioma do teclado porque é impossível obter essa informação do 
+            sistema operacional. </P>
+            <P>Se não for especificado o allegro irá adotar o idioma padrão 
+            US.</P>
+            <P>Primeiramente, assim como todo o dispositivo que o allegro 
+            disponibiliza é necessário fazer a instalação. A função responsável 
+            pela a instalação do dispositivo teclado é o <STRONG>int 
+            install_keyboard()</STRONG>.</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 
+                        align=center><STRONG>install_keyboard()</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Instala as interrupções allegro para o teclado. </P>
+                        <P>Você deve chamar essa função antes que utilizar ou 
+                        controlar qualquer entrar pelo teclado. Uma vez 
+                        instalado você já pode usar as funções de controle do 
+                        teclado.<BR><BR>Atenção: Em algumas plataformas o 
+                        teclado não irá responder a menos que vc ajuste a 
+                        modalidade de gráfico, mesmo se esta função retornar um 
+                        valor se sucesso antes de chamar o set_gfx_mode. Isso 
+                        pode ocorrer em ambientes gráficos 
+                        WINDOWED.<BR><BR><STRONG>Exemplo:</STRONG><BR><BR><SPAN 
+                        class=codigo>#include &lt;allegro.h&gt;<BR><BR>int 
+                        main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(32);<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+                        class=comentario>// Nessa parte ainda está 100% 
+                        garantida a leitura do 
+                        teclado.</SPAN><BR>&nbsp;&nbsp;&nbsp;if 
+                        (set_gfx_mode(GFX_AUTODETECT_WINDOWED, 640, 480, 0, 0) 
+                        != 
+                        0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;allegro_message("Problema 
+                        com a configuração de 
+                        video.");<BR>&nbsp;&nbsp;&nbsp;<SPAN class=comentario>// 
+                        Agora a leitura do teclado esta 100% garantida. 
+                        </SPAN><BR><BR>&nbsp;&nbsp;&nbsp;readkey();<BR><BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+                        0;<BR>}<BR>END_OF_MAIN();</SPAN></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG>void 
+                        remove_keyboard();</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Resumidamente o manual do Allegro diz que só devemos 
+                        usar essa função no caso de utilizarmos uma biblioteca 
+                        de interrupções do teclado feito por terceiros ou pelo 
+                        próprio fabricante do teclado. </P>
+                        <P>No caso de utilizarmos o teclado padrão do allegro 
+                        essa função já está inclusa no 
+                        <STRONG>allegro_exit()</STRONG>. Portanto, a declaração 
+                        dessa rotina para quem usa o teclado padrão do allegro 
+                        torna-se 
+              desnecessário.</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG>void 
+                        set_config_string(const char *section, const char *name, 
+                        const char *val);</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>A função acima tem várias funcionalidades para 
+                        configurações do sistema. Uma delas é a alteração do 
+                        idioma do teclado.</P>
+                        <P><STRONG>Exemplos:</STRONG></P>
+                        <P><STRONG>//(Teclado 
+                        Espanhol)</STRONG><BR><STRONG>set_config_string</STRONG>("system", 
+                        "keyboard", "es");</P>
+                        <P><STRONG>//(Teclado 
+                        Internacional)</STRONG></P><STRONG>set_config_string</STRONG>("system", 
+                        "keyboard", 
+            "us");</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG>extern volatile 
+                        char key[KEY_MAX];</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Array que armazena e identifica as teclas apenas para 
+                        leitura. Mais adiante segue uma tabela para 
+                        identificação das teclas disponíveis nesse array.</P>
+                        <P><STRONG>Exemplos:</STRONG> </P>
+                        <P>if 
+                        (<STRONG>key[KEY_SPACE]</STRONG>)&nbsp;&nbsp;&nbsp; 
+                        <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        allegro_message("Tecla ESPACE Pressionada.");<BR>if 
+                        (<STRONG>key[KEY_F1]</STRONG>)&nbsp;&nbsp;&nbsp; 
+                        <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        allegro_message("Tecla F1 Pressionada.");<BR>if 
+                        (<STRONG>key[KEY_A]</STRONG>)&nbsp;&nbsp;&nbsp; 
+                        </P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        allegro_message("Tecla A 
+                  Pressionada.");</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P>&nbsp;</P>
+            <P><BR></P>
+            <HR>
+            <SPAN class=titulos>Teclas disponíveis no Allegro</SPAN><BR>
+            <HR>
+            <BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=codigo>KEY_A ... KEY_Z,<BR>KEY_0 ... 
+                        KEY_9,<BR>KEY_0_PAD ... KEY_9_PAD,<BR>KEY_F1 ... 
+                        KEY_F12,</P>
+                        <P class=codigo>KEY_ESC, KEY_TILDE, KEY_MINUS, 
+                        KEY_EQUALS,<BR>KEY_BACKSPACE, KEY_TAB, KEY_OPENBRACE, 
+                        KEY_CLOSEBRACE,<BR>KEY_ENTER, KEY_COLON, KEY_QUOTE, 
+                        KEY_BACKSLASH,<BR>KEY_BACKSLASH2, KEY_COMMA, KEY_STOP, 
+                        KEY_SLASH,<BR>KEY_SPACE,</P>
+                        <P class=codigo>KEY_INSERT, KEY_DEL, KEY_HOME, KEY_END, 
+                        KEY_PGUP,<BR>KEY_PGDN, KEY_LEFT, KEY_RIGHT, KEY_UP, 
+                        KEY_DOWN,</P>
+                        <P class=codigo>KEY_SLASH_PAD, KEY_ASTERISK, 
+                        KEY_MINUS_PAD,<BR>KEY_PLUS_PAD, KEY_DEL_PAD, 
+                        KEY_ENTER_PAD,</P>
+                        <P class=codigo>KEY_PRTSCR, KEY_PAUSE,</P>
+                        <P class=codigo>KEY_ABNT_C1, KEY_YEN, KEY_KANA, 
+                        KEY_CONVERT, KEY_NOCONVERT,<BR>KEY_AT, KEY_CIRCUMFLEX, 
+                        KEY_COLON2, KEY_KANJI,</P>
+                        <P class=codigo>KEY_LSHIFT, KEY_RSHIFT,<BR>KEY_LCONTROL, 
+                        KEY_RCONTROL,<BR>KEY_ALT, KEY_ALTGR,<BR>KEY_LWIN, 
+                        KEY_RWIN, KEY_MENU,<BR>KEY_SCRLOCK, KEY_NUMLOCK, 
+                        KEY_CAPSLOCK</P><SPAN class=codigo>KEY_EQUALS_PAD, 
+                        KEY_BACKQUOTE, KEY_SEMICOLON, 
+                    KEY_COMMAND</SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P>&nbsp;</P>
+            <P><BR></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG>int 
+                        readkey();</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Essa função retorna o valor do caractere seguido de 
+                        um buffer de teclado no format ASCII. </P>
+                        <P>Se o buffer estiver vazio espera até que alguma tecla 
+                        seja pressionada. <BR>Você pode verificar se alguma 
+                        tecla foi pressionada com a função 
+                        <STRONG>keypressed().</STRONG></P>
+                        <P><STRONG>Exemplos:</STRONG></P>
+                        <P><STRONG>Declare a rotina abaixo e siga os 
+                        exemplos.</STRONG></P>
+                        <P>int val=0;</P>
+                        <P>val = readkey();</P>
+                        <P><STRONG>Identifica a tecla pressionada:</STRONG></P>
+                        <P>if ((val &amp; 0xff) == 
+                        'A')<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        allegro_message("Voce pressionou a tecla 'A'.\n");</P>
+                        <P>if ((val &amp; 0xff) == 
+                        'B')<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        allegro_message("Voce pressionou a tecla 
+                        'B'.\n");<BR>...</P>
+                        <P><STRONG>Verifica se você pressionou algum 
+                        scanmode.</STRONG></P>
+                        <P>if ((val &gt;&gt; 8) == 
+                        KEY_SPACE)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        allegro_message("Você pressionou a tecla 
+ESPACO.\n");</P>
+                        <P>if ((val &gt;&gt; 8) == KEY_ENTER) 
+                        <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; allegro_message("Você 
+                        pressionou a tecla ENTER.\n");<BR>...</P>
+                        <P><STRONG>Verifica se a sequencia Ctrl+C foi 
+                        pressionada.</STRONG></P>
+                        <P>if ((val &amp; 0xff) == 
+                        3)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        allegro_message("Você pressionou a sequencia 
+                        Control+C.\n");</P>
+                        <P><STRONG>Verifica se você pressionou 
+                        ALT+Tecla.</STRONG></P>
+                        <P>if (val == (KEY_A &lt;&lt; 
+                        8))<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        allegro_message("Voce pressionou ALT+A.\n");<BR>if (val 
+                        == (KEY_B &lt;&lt; 8))<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        allegro_message("Voce pressionou 
+                      ALT+B.\n");<BR>...</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG>int 
+                        keypressed();</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Retorna verdadeiro se alguma tecla for 
+                        pressionada.</P>
+                        <P><STRONG>Exemplo:</STRONG></P>
+                        <P>if (<STRONG>keypressed</STRONG>())&nbsp;&nbsp;&nbsp; 
+                        </P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        allegro_message("Tecla 
+                Pessionada.");</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG>extern volatile 
+                        int key_shifts;</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Bitmask que contem o estado atual do shift/ctrl/alt, 
+                        das chaves especiais de Windows e dos caracteres do 
+                        escape e com acentos. Podemos usar essa função para 
+                        identificar se a tecla pressionada é maiúscula ou 
+                        minúscula apenas combinando o shift com alguma outra 
+                        tecla.<BR>&nbsp;<BR><STRONG>Exemplo:</STRONG></P>
+                        <P>if (key[KEY_W]) // Tecla 
+                        Pressionada<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // 
+                        Verifica se o shift foi pressionado ao mesmo 
+                        tempo<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if 
+                        (<STRONG>key_shifts</STRONG> &amp; KB_SHIFT_FLAG) 
+                        <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        allegro_message("W - 
+                        Maiusculo");<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else 
+                        <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                        allegro_message("w - 
+                  Minusculo");</P>}</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P>&nbsp;</P>
+            <P><BR></P>
+            <HR>
+            <SPAN class=titulos>Tabela de FLAGs</SPAN><BR>
+            <HR>
+            Abaixo segue uma tabela para identificação dos flags que poderão ser 
+            utilizados com a Bitmask <STRONG>key_shifts.</STRONG> <BR>Conforme 
+            mostrados acima no exemplo com o flag KB_SHIFT_FLAG.<BR><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=codigo vAlign=top bgColor=#ffffff>
+                        <P>KB_SHIFT_FLAG<BR>KB_CTRL_FLAG<BR>KB_ALT_FLAG<BR>KB_LWIN_FLAG<BR>KB_RWIN_FLAG<BR>KB_MENU_FLAG<BR>KB_COMMAND_FLAG<BR>KB_SCROLOCK_FLAG</P></TD>
+                      <TD class=codigo vAlign=top bgColor=#ffffff>
+                        <P>KB_NUMLOCK_FLAG<BR>KB_CAPSLOCK_FLAG<BR>KB_INALTSEQ_FLAG<BR>KB_ACCENT1_FLAG<BR>KB_ACCENT2_FLAG<BR>KB_ACCENT3_FLAG</P>KB_ACCENT4_FLAG</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P><BR></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG>void 
+                        simulate_keypress(int key);</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>A função acima simula um tecla sendo pressionada. No 
+                        exemplo abaixo vamo simular a seqüência ALT+ESPAÇO, em 
+                        seguida vamos verificar se foi mesmo pressionada com a 
+                        função <STRONG>readkey()</STRONG>.</P>
+                        <P><STRONG>Exemplo:</STRONG></P>
+                        <P><STRONG>Como simular uma seqüência de 
+                        teclas?</STRONG></P>
+                        <P><STRONG>simulate_keypress</STRONG>(KEY_SPACE &lt;&lt; 
+                        8);</P>
+                        <P>if (readkey() == (KEY_SPACE &lt;&lt; 
+                        8))<BR>&nbsp;&nbsp;&nbsp; allegro_message("Voce simulou 
+                        Alt+Space\n");</P>
+                        <P><STRONG>Como simular apenas uma 
+                        tecla?</STRONG><STRONG> </STRONG></P>
+                        <P><STRONG>simulate_keypress</STRONG>(KEY_A);</P>
+                        <P>if (readkey() == (KEY_A))</P>&nbsp;&nbsp;&nbsp; 
+                        allegro_message("Voce simulou a tecla 
+                    A\n");</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P><BR></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG>void 
+                        clear_keybuf();</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Esvazia o buffer do teclado. Quando você quiser se 
+                        certificar que não exista nada armazenado na variável 
+                        readkey() antes de uma tecla ser pressionada use essa 
+                        função.</P>
+                        <P><STRONG>Exemplo:</STRONG></P>
+                        <P>int val=0;</P>
+                        <P><STRONG>clear_keybuf();</STRONG></P>val = 
+                      readkey();</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <P>O programa abaixo mostra os valores das variáveis x e y. <BR>O 
+            valor muda conforme os comandos abaixo. </P>
+            <P><STRONG>Seta para cima</STRONG>: Diminui -1 na variável 
+            y;<BR><STRONG>Seta para baixo</STRONG>: Aumenta +1 na variável 
+            y;<BR><STRONG>Seta para esquerda</STRONG>: Diminui -1 na variável 
+            x;<BR><STRONG>Seta para direita</STRONG>: Aumenta +1 na variável 
+            x;</P>
+            <HR>
+            <SPAN class=titulos>CÓDIGO...</SPAN> 
+            <HR>
+            <BR><SPAN class=codigo>#include &lt;allegro.h&gt;<BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(32);<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_WINDOWED, 
+            640, 480, 0, 0);<BR><BR>&nbsp;&nbsp;&nbsp;int 
+            x=0;<BR>&nbsp;&nbsp;&nbsp;int y=0;<BR><BR>&nbsp;&nbsp;&nbsp;BITMAP 
+            *Buffer=NULL;<BR>&nbsp;&nbsp;&nbsp;Buffer = 
+            create_bitmap(SCREEN_W,SCREEN_H);<BR><BR>&nbsp;&nbsp;&nbsp;while 
+            (!key[KEY_ESC])<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear_bitmap(Buffer);<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (key[KEY_UP]) y--;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (key[KEY_DOWN]) y++;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (key[KEY_RIGHT]) x++;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (key[KEY_LEFT]) 
+            x--;<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex(Buffer, 
+            font, 10, 10, makecol(255, 100, 200),-1, "x = %d", 
+            x);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex(Buffer, 
+            font, 10, 20, makecol(255, 100, 200),-1, "y = %d", 
+            y);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blit(Buffer,screen,0,0,0,0,SCREEN_W,SCREEN_H);<BR>&nbsp;&nbsp;&nbsp;}<BR><BR>&nbsp;&nbsp;&nbsp;destroy_bitmap(Buffer);<BR>&nbsp;&nbsp;&nbsp;delete 
+            Buffer;<BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+            0;<BR>}<BR>END_OF_MAIN();<BR></SPAN><BR>
+            <HR>
+            <SPAN class=titulos>FIM DE CÓDIGO</SPAN><BR>
+            <HR>
+            Note que ao teclar qualquer tecla os valores dos contadores x e y 
+            crescem ou diminuem em velocidade de processamento, muito rápido. 
+            Para contornar esse problema eu criei uma variável chamada 
+            <STRONG>buffer_teclado</STRONG> que vai me ajudar a controlar melhor 
+            os contadores. Existem outras formas de solucionar esse problema, 
+            essa é apenas uma das soluções.<BR><BR><BR>
+            <HR>
+            <SPAN class=titulos>CÓDIGO...</SPAN><BR>
+            <HR>
+            <SPAN class=codigo>#include &lt;allegro.h&gt;<BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(32);<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_WINDOWED, 
+            640, 480, 0, 0);<BR><BR>&nbsp;&nbsp;&nbsp;int 
+            x=0;<BR>&nbsp;&nbsp;&nbsp;int y=0;<BR><BR>&nbsp;&nbsp;&nbsp;const 
+            int iCiclo = 50;<BR>&nbsp;&nbsp;&nbsp;int 
+            buffer_teclado=0;<BR><BR>&nbsp;&nbsp;&nbsp;BITMAP 
+            *Buffer=NULL;<BR>&nbsp;&nbsp;&nbsp;Buffer = 
+            create_bitmap(SCREEN_W,SCREEN_H);<BR><BR>&nbsp;&nbsp;&nbsp;while 
+            (!key[KEY_ESC])<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear_bitmap(Buffer);<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(buffer_teclado 
+            == 
+            0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (key[KEY_UP]) 
+            y--;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (key[KEY_DOWN]) 
+            y++;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (key[KEY_RIGHT]) 
+            x++;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (key[KEY_LEFT]) 
+            x--;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buffer_teclado 
+            = iCiclo;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else 
+            buffer_teclado--;<BR><BR>&nbsp;&nbsp;&nbsp;textprintf_ex(Buffer, 
+            font, 10, 10, makecol(255, 100, 200),-1, "x = %d", 
+            x);<BR>&nbsp;&nbsp;&nbsp;textprintf_ex(Buffer, font, 10, 20, 
+            makecol(255, 100, 200),-1, "y = %d", 
+            y);<BR>&nbsp;&nbsp;&nbsp;blit(Buffer,screen,0,0,0,0,SCREEN_W,SCREEN_H);<BR>}<BR><BR>destroy_bitmap(Buffer);<BR>delete 
+            Buffer;<BR>allegro_exit();<BR>return 
+            0;<BR>}<BR>END_OF_MAIN();<BR></SPAN><BR>
+            <HR>
+            <SPAN class=titulos>FIM DE CÓDIGO</SPAN><BR>
+            <HR>
+            <BR>
+            <P>No exemplo acima controlamos a entrada pelo teclado pela variável 
+            buffer_teclado e Ciclo. <BR>Dessa forma o allegro só vai conseguir 
+            ler as informações do telcado a cada 50 ciclos de CPU. </P>
+            <P>Caso você queira aumentar a velocidade dos valores diminua o 
+            valor do ciclo.<BR><BR>Caro leitor chegamos ao fim do entendimento 
+            das rotinas do teclado. <BR>Se houver alguma dúvida ou dificuldade 
+            favor entrar em contato com os membros pelo 
+            Forum.<BR><BR>Abraço<BR>BDJogos <BR><BR></P><BR><SPAN 
+            class=conteudo><B>Contribuidor</B> <BR>Bruno A. Rovela<BR>15/08/2007 
+            </SPAN>
+            <P class=conteudo><A class=conteudo 
+            href="javascript:history.go(-1)">Voltar </A></P></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background=TECLADO_arquivos/111.jpg><IMG height=1 
+      src="TECLADO_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background=TECLADO_arquivos/111.jpg colSpan=2 height=1><IMG 
+      height=1 src="TECLADO_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

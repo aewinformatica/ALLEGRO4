@@ -1,0 +1,553 @@
+<HTML>
+
+<HEAD><TITLE>Programando com o Allegro</TITLE></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" BGCOLOR="#FFFFFF">
+
+<P>Data da &uacute;ltima atualiza&ccedil;&atilde;o: 19/06/2002<BR>
+&copy;2002 - <A HREF="mailto:tiagomt@nce.ufrj.br">Tiago da Concei&ccedil;&atilde;o Mota</A><BR><BR>
+<I>Powered by vi</I></P>
+
+<H1>Programando com o Allegro</H1>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<OL>
+	<LI><A HREF="#esq">Esquema de um Programa</A></LI>
+	<OL>
+		<LI><A HREF="#esq_config_inic">Configura&ccedil;&otilde;es Iniciais</A></LI>
+		<LI><A HREF="#esq_config_grafico">Configura&ccedil;&atilde;o do Modo Gr&aacute;fico</A></LI>
+		<LI><A HREF="#esq_config_som">Configura&ccedil;&atilde;o do Som</A></LI>
+		<LI><A HREF="#esq_esqueleto">Esqueleto de um Programa</A></LI>
+	</OL>
+	<LI><A HREF="#prog">Programando com Exemplos</A></LI>
+	<OL>
+		<LI><A HREF="#prog_graficos">Os Gr&aacute;ficos</A></LI>
+		<OL>
+			<LI><A HREF="#prog_graficos_bitmaps">Bitmaps</A></LI>
+			<LI><A HREF="#prog_graficos_paletas">Paletas</A></LI>
+			<LI><A HREF="#prog_graficos_textos">Textos</A></LI>
+		</OL>
+		<LI><A HREF="#prog_teclado">O Teclado</A></LI>
+		<LI><A HREF="#prog_mouse">O Mouse</A></LI>
+		<LI><A HREF="#prog_som">O Som</A></LI>
+		<OL>
+			<LI><A HREF="#prog_som_midis">MIDIs</A></LI>
+			<LI><A HREF="#prog_som_samples">Samples</A></LI>
+		</OL>
+	</OL>
+</OL>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="esq">
+<H2>1. Esquema de um Programa</H2>
+
+<P>A maioria dos programas feitos usando o Allegro segue um certo esquema de montagem. Veremos, a seguir, esse esquema.</P>
+
+<A NAME="esq_config_inic">
+<H3>1.1. Configura&ccedil;&otilde;es Iniciais</H3>
+
+<P>Todo programa que usa o Allegro deve ter, antes da chamada de qualquer outra fun&ccedil;&atilde;o do Allegro, uma chamada a fun&ccedil;&atilde;o <A HREF="funcoes.html#bas_allegro_init"><TT>allegro_init</TT></A>. Ela inicializa algumas vari&aacute;veis e reserva mem&oacute;ria para algumas opera&ccedil;&otilde;es do Allegro, deixando-o pronto para o uso. Esta fun&ccedil;&atilde;o n&atilde;o possui par&acirc;metros, devendo ser chamada da seguinte forma:
+<TT><OL>
+allegro_init();
+</OL></TT></P>
+
+<P>Ap&aacute;s chamada a fun&ccedil;&atilde;o <TT>allegro_init</TT>, s&atilde;o chamadas as fun&ccedil;&otilde;es <A HREF="funcoes.html#keyboard_install_keyboard"><TT>install_keyboard</TT></A>, <A HREF="funcoes.html#mouse_install_mouse"><TT>install_mouse</TT></A> e <A HREF="funcoes.html#outras_timer_install_timer"><TT>install_timer</TT></A>, que inicializam, respectivamente, o teclado, o mouse e os temporizadores. Elas tamb&eacute;m n&atilde;o possuem par&acirc;metros e s&atilde;o chamadas assim:
+<TT><OL>
+install_keyboard();<BR>
+install_mouse();<BR>
+install_timer();
+</OL></TT>
+Normalmente n&atilde;o &eacute; necess&aacute;rio checar o valor de retorno dessas fun&ccedil;&otilde;es, uma vez que s&atilde;o raros os casos em que a inicializa&ccedil;&atilde;o de um desses componentes falha. Por&eacute;m, para projetos maiores, &eacute; recomendado que sempre sejam checados os valores de retorno dessas e de outras fun&ccedil;&otilde;es.</P>
+
+<P>Ao final do programa, utilizamos a fun&ccedil;&atilde;o <A HREF="funcoes.html#bas_allegro_exit"><TT>allegro_exit</TT></A> para retirar os dom&iacute;nios do Allegro sobre o computador. A fun&ccedil;&atilde;o, que tamb&eacute;m n&atilde;o possui par&acirc;metros, &eacute; chamada da seguinte forma:
+<TT><OL>
+allegro_exit();
+</OL></TT></P>
+
+<A NAME="esq_config_grafico">
+<H3>1.2. Configura&ccedil;&atilde;o do Modo Gr&aacute;fico</H3>
+
+<P>Existem duas fun&ccedil;&otilde;es para a configura&ccedil;&atilde;o do modo gr&aacute;fico: <A HREF="funcoes.html#video_bas_set_color_depth"><TT>set_color_depth</TT></A> e <A HREF="funcoes.html#video_bas_set_gfx_mode"><TT>set_gfx_mode</TT></A>.</P>
+
+<P>A primeira, que deve ser chamada antes da segunda, determina o n&uacute;mero de bits de cores a ser usado pelos gr&aacute;ficos. O n&uacute;mero de bits pode ser 8 (256 cores), 15 (32768), 16 (65536), 24 (aproximadamente 32 milh&otilde;es) e 32 (aproximadamente 4 bilh&otilde;es de cores), sendo este o &uacute;nico par&acirc;metro da fun&ccedil;&atilde;o, a ser chamada, por exemplo, da seguinte forma:
+<TT><OL>
+set_color_depth(16);
+</OL></TT>
+Caso n&atilde;o seja chamada esta fun&ccedil;&atilde;o, o padr&atilde;o para o n&uacute;mero de bits &eacute; 8.</P>
+
+<P>J&aacute; a segunda fun&ccedil;&atilde;o, <TT>set_gfx_mode</TT>, &eacute; respons&aacute;vel pela inicializa&ccedil;&atilde;o do modo gr&aacute;fico. O primeiro par&acirc;metro representa o driver gr&aacute;fico a ser utilizado pelo Allegro, e que deve ser uma das constantes definidas pelo Allegro. Os segundo e terceiro par&acirc;metros indicam, respectivamente, o tamanho horizontal e vertical da tela, em pixels. Assim, para inicializar o modo gr&aacute;fico com uma resolu&ccedil;&atilde;o de 640x480, dever&iacute;amos chamar a fun&ccedil;&atilde;o da seguinte maneira:
+<TT><OL>
+set_gfx_mode(GFX_AUTODETECT, 640, 480, 0, 0);
+</OL></TT>
+Os quarto e quinto par&acirc;metros, ignorados no exemplo anterior ao atribuirmos o valor 0 (zero), indicam a resolu&ccedil;&atilde;o de uma poss&iacute;vel tela virtual. Isto &eacute; utilizado em alguns jogos em que apenas uma parte (tela f&iacute;sica) de um mapa (tela virtual), por exemplo, pode ser visualizada. Podemos, ent&atilde;o, chamar a fun&ccedil;&atilde;o da seguinte maneira:
+<TT><OL>
+set_gfx_mode(GFX_VESA1, 640, 480, 3200, 2400);
+</OL></TT>
+Com isso, a tela f&iacute;sica continuar&aacute; com uma resolu&ccedil;&atilde;o de 640x480; por&eacute;m, atrav&eacute;s de fun&ccedil;&otilde;es de <I>scroll</I> do Allegro, poderemos visualizar uma parte de uma tela virtual de 3200x2400 (armazenada na mem&oacute;ria) naquela tela f&iacute;sica.</P>
+
+<P>Ao contr&aacute;rio do que acontece com as fun&ccedil;&otilde;es vistas anteriormente, &eacute; interessante verificar o valor de retorno desta fun&ccedil;&atilde;o, pois &eacute; comum os casos em que n&atilde;o &eacute; poss&iacute;vel inicializar o modo gr&aacute;fico, pelo n&atilde;o suporte do driver de v&iacute;deo ou da resolu&ccedil;&atilde;o pelo hardware. Cabe ao programador tentar "driblar" esses problemas.</P>
+
+<A NAME="esq_config_som">
+<H3>1.3. Configura&ccedil;&atilde;o do Som</H3>
+
+<P>Existe apenas uma fun&ccedil;&atilde;o de configura&ccedil;&atilde;o do som no Allegro, que inicializa tanto os dispositivos digitais quanto os dispositivos MIDI. Esta fun&ccedil;&atilde;o, <A HREF="funcoes.html#sound_install_sound"><TT>install_sound</TT></A>, possui tr&ecirc;s par&acirc;metros: o primeiro indica o controlador de som digital a ser usado pelo Allegro; o segundo, o controlador de som MIDI; e o terceiro existe apenas por motivos de compatibilidade com vers&otilde;es antigas do Allegro, e deve ser ignorado passando-se o valor <TT><B>NULL</B></TT>. Assim, para inicializarmos o som para ser usado com o Allegro, chamamos a fun&ccedil;&atilde;o da seguinte forma:
+<TT><OL>
+install_sound(DIGI_SB, MIDI_SB_OUT, NULL);
+</OL></TT>
+O exemplo acima inicializa dispositivos de som digital e MIDI do tipo Sound Blaster. Se quisermos que o Allegro escolha automaticamente qual o controlador de som mais apropriado, podemos chamar a fun&ccedil;&atilde;o da seguinte maneira:
+<TT><OL>
+install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, NULL);
+</OL></TT>
+Assim como acontece com a inicializa&ccedil;&atilde;o do modo gr&aacute;fico, a inicializa&ccedil;&atilde;o do som tamb&eacute;m est&aacute; sujeita a falhas, pois o controlador de som escolhido pode n&atilde;o ser compat&iacute;vel com o hardware ou o Allegro pode n&atilde;o ser capaz de escolher automaticamente o controlador correto. Com isso, &eacute; interessante checar o valor de retorno desta fun&ccedil;&atilde;o, com o intuito de tentar escolher o controlador mais adequado para o hardware existente.</P>
+
+<A NAME="esq_esqueleto">
+<H3>1.4. Esqueleto de um Programa</H3>
+
+<P>Com as fun&ccedil;&otilde;es vistas anteriormente, podemos criar uma base para montar programas que usem o Allegro. Chamaremos esta base de "esqueleto" de um programa. Abaixo, vemos o <A HREF="esqueleto.c">código do esqueleto</A>.</P>
+
+<P>
+<TT><OL>
+#include &lt;stdio.h&gt;<BR>
+#include &lt;stdlib.h&gt;<BR>
+#include &lt;allegro.h&gt;<BR>
+<BR>
+#define MAX_X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;800<BR>
+#define MAX_Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;600<BR>
+#define V_MAX_X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR>
+#define V_MAX_Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR>
+#define COLOR_BITS&nbsp;&nbsp;&nbsp;&nbsp;8<BR>
+#define VIDEO_CARD&nbsp;&nbsp;&nbsp;&nbsp;GFX_VESA1<BR>
+<BR>
+#define DIGI_CARD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DIGI_SB16<BR>
+#define MIDI_CARD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MIDI_SB_OUT<BR>
+<BR>
+int inicia(void);<BR>
+void principal(void);<BR>
+void finaliza(void);<BR>
+<BR>
+int main (void)<BR>
+{<OL>
+	if (!inicia())<BR>
+	{<OL>
+		finaliza();<BR>
+		exit(-1);<BR>
+	</OL>}<BR>
+	<BR>
+	principal();<BR>
+	<BR>
+	finaliza();<BR>
+	exit(0);<BR>
+</OL>}<BR>
+<BR>
+int inicia (void)<BR>
+{<OL>
+	allegro_init();<BR>
+	<BR>
+	install_keyboard();<BR>
+	install_mouse();<BR>
+	install_timer();<BR>
+	<BR>
+	set_color_depth(COLOR_BITS);<BR>
+	if (set_gfx_mode(VIDEO_CARD, MAX_X, MAX_Y, V_MAX_X, V_MAX_Y) < 0)<BR>
+	{<OL>
+		if (set_gfx_mode(GFX_AUTODETECT, MAX_X, MAX_Y, V_MAX_X, V_MAX_Y) < 0)<BR>
+		{<OL>
+			printf(&quot;Erro ao inicializar o modo grafico&quot;);<BR>
+			return (FALSE);<BR>
+		</OL>}<BR>
+	</OL>}<BR>
+	<BR>
+	if (install_sound(DIGI_CARD, MIDI_CARD, NULL) < 0)<BR>
+	{<OL>
+		if (install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, NULL) < 0)<BR>
+		{<OL>
+			printf(&quot;Erro ao inicializar o som&quot;);<BR>
+			return (FALSE);<BR>
+		</OL>}<BR>
+	</OL>}<BR>
+	<BR>
+	return (TRUE);<BR>
+</OL>}<BR>
+<BR>
+void principal (void)<BR>
+{<OL>
+<BR>
+</OL>}<BR>
+<BR>
+void finaliza (void)<BR>
+{<OL>
+	allegro_exit();<BR>
+</OL>}<BR>
+</OL></TT></P>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="prog">
+<H2>2. Programando com Exemplos</H2>
+
+<P>Veremos, agora, as principais fun&ccedil;&otilde;es da biblioteca Allegro, utilizando alguns exemplos para melhor explic&aacute;-las. Em alguns casos, apenas a descri&ccedil;&atilde;o da fun&ccedil;&atilde;o e um breve exemplo n&atilde;o ser&atilde;o suficientes; nestes casos, daremos programas completos para exemplificar o uso da fun&ccedil;&atilde;o ou de alguma t&eacute;cnica de programa&ccedil;&atilde;o, partindo sempre da fun&ccedil;&atilde;o <TT>principal</TT> do <A HREF="#esq_esqueleto">esqueleto de programa</A>.</P>
+
+<A NAME="prog_graficos">
+<H3>2.1. Os Gr&aacute;ficos</H3>
+
+<P>Tendo em vista que a principal caracter&iacute;stica do Allegro &eacute; o uso da parte gr&aacute;fica, o Allegro disp&otilde;e de diversas fun&ccedil;&otilde;es de desenho. Por&eacute;m, antes de explic&aacute;-las, &eacute; necess&aacute;rio entender o modo como o Allegro trata a parte gr&aacute;fica.</P>
+
+<A NAME="prog_graficos_bitmaps">
+<H4>2.1.1. Bitmaps</H4>
+
+<P>O Allegro trata todo gr&aacute;fico que pode ser guardado na mem&oacute;ria ou desenhado na tela como um bitmap, que nada mais &eacute; do que um modo de representar gr&aacute;ficos em formato bin&aacute;rio. Para tal, o Allegro define um tipo <TT>BITMAP</TT>, com o qual o usu&aacute;rio pode manipular facilmente esses bitmaps. N&atilde;o &eacute; necess&aacute;rio, para o programador, conhecer os elementos desta estrutura; basta saber utilizar as <A HREF="funcoes.html#video_bmp">fun&ccedil;&otilde;es de bitmaps</A>.</P>
+
+<P>Se quis&eacute;ssemos, por exemplo, usar um bitmap chamado <TT>quadro</TT>, poder&iacute;amos declar&aacute;-lo da seguinte forma:
+<TT><OL>
+BITMAP *quadro;
+</OL></TT>
+Antes de usar um bitmap &eacute; necess&aacute;rio cri&aacute;-lo, pois apenas a declara&ccedil;&atilde;o do bitmap n&atilde;o &eacute; suficiente para o uso do mesmo. Para isso, usamos a fun&ccedil;&atilde;o <A HREF="funcoes.html#video_bmp_create_bitmap"><TT>create_bitmap</TT></A>, da seguinte forma:
+<TT><OL>
+quadro = create_bitmap(50, 25);
+</OL></TT>
+Isto criar&aacute; um bitmap de largura 50 e altura 25, e que ser&aacute; referenciado pela vari&aacute;vel <TT>quadro</TT>.</P>
+
+<P>Ap&oacute;s a cria&ccedil;&atilde;o do bitmap, podemos utilizar as v&aacute;rias <A HREF="funcoes.html#video_bmp">fun&ccedil;&otilde;es de bitmaps</A> que o Allegro oferece. Se quis&eacute;ssemos, por exemplo, desenhar um ret&acirc;ngulo no bitmap <TT>quadro</TT>, poder&iacute;amos usar a fun&ccedil;&atilde;o <A HREF="funcoes.html#video_bmp_rect"><TT>rect</TT></A>, como abaixo:
+<TT><OL>
+rect(quadro, 10, 5, 40, 20, 0);
+</OL></TT>
+Este exemplo desenhar&aacute; um ret&acirc;ngulo desde a coordenada (10, 5) at&eacute; a coordenada (40, 20), dentro do bitmap <TT>quadro</TT>, utilizando a cor de c&oacute;digo 0.</P>
+
+<P>Por&eacute;m, tudo o que foi feito at&eacute; aqui com o bitmap <TT>quadro</TT> ocorreu na mem&oacute;ria. Em nenhum momento o bitmap foi mostrado na tela. Se quis&eacute;ssemos, agora, colocar o bitmap na tela, poder&iacute;amos utilizar a fun&ccedil;&atilde;o <A HREF="funcoes.html#video_bmp_blit"><TT>blit</TT></A>. Ela copia uma parte de um bitmap para dentro de outro bitmap. Al&eacute;m da fun&ccedil;&atilde;o <TT>blit</TT>, utilizamos a vari&aacute;vel <TT>screen</TT>, que tamb&eacute;m &eacute; do tipo <TT>BITMAP</TT> e &eacute; pr&eacute;-definida pelo Allegro. Assim, a c&oacute;pia do bitmap <TT>quadro</TT> para a tela ficaria da seguinte forma:
+<TT><OL>
+blit(quadro, screen, 0, 0, 200, 100, 50, 25);
+</OL></TT>
+Isto copiar&aacute; uma parte do bitmap <TT>quadro</TT> come&ccedil;ando na coordenada (0, 0) e de tamanho 50 x 25 (ou seja, todo o bitmap), para o bitmap <TT>screen</TT>, que nada mais &eacute; do que a forma do Allegro representar a tela, atrav&eacute;s de uma vari&aacute;vel do tipo <TT>BITMAP</TT>.</P>
+
+<P>Poder&iacute;amos, neste caso, ter usado a fun&ccedil;&atilde;o <A HREF="funcoes.html#video_bmp_draw_sprite"><TT>draw_sprite</TT></A>, que copia um bitmap inteiro para dentro de outro. Assim, a sua chamada ficaria da seguinte forma:
+<TT><OL>
+draw_sprite(screen, quadro, 200, 100);
+</OL></TT>
+Isto &eacute; equivalente &agrave; chamada da fun&ccedil;&atilde;o <TT>blit</TT> feita anteriormente, com a diferen&ccedil;a de que os pontos do bitmap <TT>quadro</TT> que possuem c&oacute;digo 0 n&atilde;o desenhados, funcionando como pontos transparentes.</P>
+
+<P>Podemos, ainda, utilizar as fun&ccedil;&otilde;es de desenho do Allegro diretamente no bitmap <TT>screen</TT>. Assim, se quis&eacute;ssemos, por exemplo, desenhar um c&iacute;rculo preenchido na tela, poder&iacute;amos simplesmente escrever
+<TT><OL>
+circlefill(screen, 300, 200, 40, 15);
+</OL></TT>
+o que desenharia, na tela, um c&iacute;rculo de raio 40, com centro na coordenada (300, 200) e totalmente preenchido com a cor de c&oacute;digo 15.</P>
+
+<P>&Agrave;s vezes, por&eacute;m, torna-se invi&aacute;vel desenhar, durante a execu&ccedil;&atilde;o do programa, todos os gr&aacute;ficos necess&aacute;rios. Para esses casos, podemos utilizar a fun&ccedil;&atilde;o <A HREF="funcoes.html#video_bmp_load_bitmap"><TT>load_bitmap</TT></A>, que carrega um bitmap diretamente de um arquivo, fazendo com que seja poss&iacute;vel a confec&ccedil;&atilde;o de grande parte dos gr&aacute;ficos do jogo antes de sua execu&ccedil;&atilde;o. Assim, se quis&eacute;ssemos, por exemplo, carregar um bitmap de um arquivo com nome <TT>figura.bmp</TT>, guard&aacute;-lo na mem&oacute;ria e referenci&aacute;-lo atrav&eacute;s da variav&eacute;l <TT>quadro</TT>, dever&iacute;amos utilizar a fun&ccedil;&atilde;o da seguinte maneira:
+<TT><OL>
+quadro = load_bitmap("figura.bmp", NULL);
+</OL></TT>Com isso, o bitmap <TT>quadro</TT> fica dispon&iacute;vel para que sejam realizadas todas as opera&ccedil;&otilde;es dispon&iacute;veis para bitmaps, inclusive o uso das fun&ccedil;&otilde;es <TT>blit</TT> e <TT>draw_sprite</TT>, para mostr&aacute;-lo na tela.</P>
+
+<A NAME="prog_graficos_paletas">
+<H4>2.1.2. Paletas</H4>
+
+<P>Quando trabalhamos com bitmaps de 256 cores, temos alguns problemas com a apresenta&ccedil;&atilde;o dos mesmos na tela. Isso se deve ao fato de que, com 8 bits de cores, h&aacute; uma certa dificuldade em representar um grande n&uacute;mero delas. Para contornar tal dificuldade, foram criadas paletas, que nada mais s&atilde;o do que tabelas de cores, com um &iacute;ndice que varia de 0 a 255. Assim, ao inv&eacute;s de cada c&oacute;digo de cor representar <B>sempre</B> a mesma cor (o que acontece nos modos de 15, 16, 24 e 32 bits), temos cores que variam de acordo com a paleta em uso. Podemos ter, por exemplo, uma paleta com 256 tons de vermelho diferentes, ou outra com 128 tons de amarelo e 128 tons de azul, dependendo dos n&uacute;meros guardados dentro de cada c&oacute;digo de cor (tr&ecirc;s n&uacute;meros s&atilde;o guardados dentro de cada c&oacute;digo de cor, representando as quantidades de vermelho, verde e azul existentes naquela cor).</P>
+
+<P>Podemos, ent&atilde;o, definir uma paleta como sendo um vetor de 256 posi&ccedil;&otilde;es, no qual cada posi&ccedil;&atilde;o corresponde a um c&oacute;digo de cor, e em cada uma delas temos tr&ecirc;s n&uacute;meros para representar as quantidades de vermelho, verde e azul existentes na cor correspondente.</P>
+
+<P>Assim como para os bitmaps, existe tamb&eacute;m, no Allegro, um tipo para paletas. Podemos, ent&atilde;o, criar uma paleta usando a seguinte declara&ccedil;&atilde;o:
+<TT><OL>
+PALETTE paleta;
+</OL></TT></P>
+
+<P>Existem duas maneiras de se modificar uma paleta: a primeira &eacute; fazer isso manualmente, utilizando os c&oacute;digos de cor e as quantidades de vermelho, verde e azul desejadas; a segunda, e, naturalmente, menos trabalhosa, &eacute; carregar uma paleta correspondente a determinado bitmap durante a leitura deste.</P>
+
+<P>Na primeira maneira, modificamos os valores da estrutura <TT>PALETTE</TT> diretamente. Por exemplo:
+<TT><OL>
+paleta[15].r = 0;<BR>
+paleta[15].g = 63;<BR>
+paleta[15].b = 0;
+</OL></TT>modificaria o c&oacute;digo 15 de <TT>paleta</TT> para o verde mais claro poss&iacute;vel, uma vez que as quantidades de vermelho, verde e azul de cada c&oacute;digo variam de 0 a 63 (6 bits). Note que as letras <TT>r</TT>, <TT>g</TT> e <TT>b</TT> correspondem &agrave;s cores vermelha, verde e azul, respectivamente.</P>
+
+<P>Na segunda maneira, usamos a fun&ccedil;&atilde;o <TT>load_bitmap</TT> para carregar a paleta junto com o bitmap. Assim,
+<TT><OL>
+quadro = load_bitmap("figura.bmp", paleta);
+</OL></TT>carregaria o bitmap do arquivo <TT>figura.bmp</TT> para <TT>quadro</TT> e, tamb&eacute;m, a paleta correspondente a esse bitmap em <TT>paleta</TT>.</P>
+
+<P>Ap&oacute;s definirmos as cores desejadas de uma paleta (seja pelo primeiro ou pelo segundo m&eacute;todo), podemos torn&aacute;-la ativa usando a fun&ccedil;&atilde;o <A HREF="funcoes.html#video_pal_set_palette"><TT>set_palette</TT></A>, da seguinte maneira:
+<TT><OL>
+set_palette(paleta);
+</OL></TT>Isto faz com que <B>todas</B> as cores da tela mudem para as cores correspondentes ao c&oacute;digo de cor de cada ponto.</P>
+
+<P>Podemos usar isto para fazer algumas anima&ccedil;&otilde;es sem que precisemos redesenhar os gr&aacute;ficos. O <A HREF="../exemplos/expaleta.c">exemplo</A> abaixo mostra como fazer isso.
+<TT><OL>
+void principal (void)<BR>
+{<OL>
+	int i;<BR>
+	int cor;<BR>
+	PALETTE pal;<BR>
+	<BR>
+	/* Limpa a tela (para o codigo de cor 0). */<BR>
+	clear(screen);<BR>
+	<BR>
+	/*<OL>
+		Torna ativa a black_palette, paleta pre-definida pelo<BR>
+		Allegro que contem apenas a cor preta, para todos os codigos.<BR>
+		Fazemos isso para que os retangulos feitos a seguir nao sejam<BR>
+		vistos ao serem desenhados.<BR>
+	</OL>*/<BR>
+	set_palette(black_palette);<BR>
+	<BR>
+	/*<OL>
+		Desenha retangulos preenchidos, cada um com codigos<BR>
+		de cor variando de 0 a 63, em sequencia.<BR>
+	</OL>*/<BR>
+	for (i = 0; i < 64; i++)<BR>
+	{<OL>
+		rectfill(screen, i * 12.5, 0, (i + 1) * 12.5, 599, i);<BR>
+	</OL>}<BR>
+	<BR>
+	/* Gera tons de azuis */<BR>
+	for (i = 0; i < 64; i++)<BR>
+	{<OL>
+		pal[i].r = 0;<BR>
+		pal[i].g = 0;<BR>
+		pal[i].b = i;<BR>
+	</OL>}<BR>
+	<BR>
+	while (!keypressed())<BR>
+	{<OL>
+		/* Torna ativa a paleta pal */<BR>
+		set_palette(pal);<BR>
+		<BR>
+		/*<OL>
+			Troca os valores de cada codigo de cor,<BR>
+			causando um efeito de animacao.<BR>
+		</OL>*/<BR>
+		cor = pal[63].b;<BR>
+		for (i = 63; i > 0; i--)<BR>
+		{<OL>
+			pal[i].b = pal[i - 1].b;<BR>
+		</OL>}<BR>
+		pal[0].b = cor;
+	</OL>}<BR>
+</OL>}
+</OL></TT></P>
+
+<P>Existem outras duas fun&ccedil;&otilde;es que s&atilde;o muito utilizadas pelos programadores Allegro: <A HREF="funcoes.html#video_pal_fade_in"><TT>fade_in</TT></A> e <A HREF="funcoes.html#video_pal_fade_out"><TT>fade_out</TT></A>.</P>
+
+<P>A primeira faz com que, partindo da <A HREF="funcoes.html#video_pal_black_palette"><TT>black_palette</TT></A>, as cores sejam alteradas aos poucos para uma determinada paleta. Isto causa um &oacute;timo efeito visual, pois as cores v&atilde;o aparecendo gradativamente. Da mesma maneira, a segunda faz o efeito inverso, ou seja, as cores v&atilde;o desaparecendo gradativamente. Por exemplo:
+<TT><OL>
+tela = load_bitmap("figura.bmp", paleta);<BR>
+<BR>
+set_palette(black_palette);<BR>
+draw_sprite(screen, tela, 20, 30);<BR>
+<BR>
+fade_in(paleta, 4);<BR>
+while (!keypressed());<BR>
+fade_out(32);<BR>
+</OL></TT>
+O exemplo acima desenha o bitmap <TT>tela</TT> com cores pretas para que a fun&ccedil;&atilde;o <TT>fade_in</TT> fa&ccedil;a-o aparecer gradativamente, at&eacute; alcan&ccedil;ar as cores da paleta <TT>paleta</TT>. Quando o usu&aacute;rio pressionar alguma tecla, a fun&ccedil;&atilde;o <TT>fade_out</TT> far&aacute; o bitmap desaparecer gradativamente. Os valores 4 e 32 utilizados nas fun&ccedil;&otilde;es <TT>fade_in</TT> e <TT>fade_out</TT> controlam a velocidade com que as cores s&atilde;o alteradas, podendo ir de 1 (devagar) at&eacute; 64 (muito r&aacute;pido).</P>
+
+<A NAME="prog_graficos_textos">
+<H4>2.1.3. Textos</H4>
+
+<P>Al&eacute;m das fun&ccedil;&otilde;es de desenho vistas anteriormente, o Allegro disp&otilde;e de algumas fun&ccedil;&otilde;es para o desenho de textos na tela.</P>
+
+<P>Antes de utilizarmos as fun&ccedil;&otilde;es que desenham os textos, devemos definir o modo como os caracteres ser&atilde;o desenhados. Para tal, usamos a fun&ccedil;&atilde;o <A HREF="funcoes.html#video_font_text_mode"><TT>text_mode</TT></A>. O seu &uacute;nico par&acirc;metro define o c&oacute;digo de cor que ter&aacute; o fundo dos caracteres. Caso o c&oacute;digo de cor seja menor do que zero, a fundo ser&aacute; transparente. Assim
+<TT><OL>
+text_mode(15);
+</OL></TT>
+faria com que o fundo do texto que fosse desenhado <B>posteriormente</B> tivesse o c&oacute;digo de cor 15. Por&eacute;m, se tiv&eacute;ssemos
+<TT><OL>
+text_mode(-1);
+</OL></TT>
+o fundo seria transparente.</P>
+
+<P>Para desenhar os textos, podemos utilizar quatro fun&ccedil;&otilde;es diferentes: <A HREF="funcoes.html#video_font_textout"><TT>textout</TT></A>, <A HREF="funcoes.html#video_font_textout_centre"><TT>textout_centre</TT></A>, <A HREF="funcoes.html#video_font_textprintf"><TT>textprinft</TT></A> e <A HREF="funcoes.html#video_font_textprintf_centre"><TT>textprintf_centre</TT></A>. A primeira, <TT>textout</TT>, desenha um texto qualquer num determinado bitmap, como a seguir:
+<TT><OL>
+textout(screen, font, "O Jogo Acabou", 50, 100, 20);
+</OL></TT>
+O exemplo anterior escreve a string "O Jogo Acabou" na coordenada (50, 100) da tela (<TT>screen</TT>), utilizando o c&oacute;digo de cor 20. A fun&ccedil;&atilde;o <TT>textout_centre</TT> teria o mesmo efeito, a n&atilde;o ser pelo fato de que na coordenada (50, 100) seria posicionado o centro da frase "O Jogo Acabou", o que faria o texto ficar centralizado.</P>
+
+<P>J&aacute; a fun&ccedil;&atilde;o <TT>textprintf</TT> escreve o texto utilizando um formato (da mesma forma que a fun&ccedil;&atilde;o <TT>printf</TT> da biblioteca <TT>stdio</TT>). Assim, poder&iacute;amos escrever
+<TT><OL>
+textprintf(tela, font, 400, 100, 15, "Pontos: %d", pontos);
+</OL></TT>
+o que desenharia, na coordenada (400, 100) do bitmap <TT>tela</TT>, utilizando o c&oacute;digo de cor 15, a string "Pontos: %d", utilizando o mesmo formato da fun&ccedil;&atilde;o <TT>printf</TT>. Assim, se a vari&aacute;vel <TT>pontos</TT> do tipo <TT>int</TT> tivesse o valor 2000, seria desenhada a frase "Pontos: 2000" no bitmap <TT>tela</TT>. Assim como nas fun&ccedil;&otilde;es <TT>textout</TT> e <TT>textout_centre</TT>, a fun&ccedil;&atilde;o <TT>textprintf_centre</TT> faz o mesmo que a fun&ccedil;&atilde;o <TT>textprintf</TT>, apenas centralizando o texto na coordenada pedida.</P>
+
+<P>Apesar de n&atilde;o serem o "forte" do Allegro, as fun&ccedil;&otilde;es desempenham o seu papel de forma satisfat&oacute;ria.</P>
+
+<P>O modo como o Allegro desenha cada caractere, por&eacute;m, pode ser diferente em alguns jogos. Para tratar esta diferen&ccedil;a de desenho, o Allegro possui o tipo <TT>FONT</TT>. Assim, para definir uma vari&aacute;vel com o tipo <TT>FONT</TT>, escrevemos
+<TT><OL>
+FONT *fonte;
+</OL></TT></P>
+
+<P>&Eacute; muito dif&iacute;cil, por&eacute;m, construir fontes manualmente. Para isso, existem alguns programas que podem ser utilizados, por exemplo, para transformar fontes do Windows em fontes utiliz&aacute;veis pelo Allegro.</P>
+
+<P>Com a fonte j&aacute; produzida e carregada na mem&oacute;ria, podemos utilizar as fun&ccedil;&otilde;es vistas anteriormente normalmente, apenas alterando o par&acirc;metro <TT>font</TT> (que nada mais &eacute; do que uma fonte pr&eacute;-definida pelo Allegro) para a fonte que queremos. Assim, poder&iacute;amos utilizar a fonte <TT>fonte</TT> da seguinte forma:
+<TT><OL>
+textout(screen, fonte, "Exemplo de texto com outra fonte", 200, 200, 50);
+</OL></TT></P>
+
+<HR>
+
+<A NAME="prog_teclado">
+<H3>2.2. O Teclado</H3>
+
+<P>H&aacute; duas maneiras de ler a entrada usando o Allegro (uma vez que, ap&oacute;s o uso da fun&ccedil;&atilde;o <A HREF="funcoes.html#keyboard_install_keyboard"><TT>install_keyboard</TT></A> n&atilde;o &eacute; mais poss&iacute;vel utilizar as fun&ccedil;&otilde;es de entrada padr&otilde;es), as duas muito simples, e que devem ser escolhidas de acordo com o que se deseja ler.</P>
+
+<P>A primeira maneira utiliza a fun&ccedil;&atilde;o <A HREF="funcoes.html#keyboard_readkey"><TT>readkey</TT></A>, que &eacute; semelhante &agrave; fun&ccedil;&atilde;o <TT>getch</TT> da biblioteca <TT>conio</TT>. O valor retornado pela fun&ccedil;&atilde;o possui 16 bits, sendo os menos significativos relativos ao c&oacute;digo ASCII e os mais significativos chamados de scancode. Assim, podemos testar diversas teclas (ou combina&ccedil;&otilde;es delas) das seguintes formas:
+<TT><OL>/* Pelo codigo ASCII */<BR>
+if ((readkey() &amp; 0xFF) == 'd')<BR>
+	<OL>printf("Voce pressionou a tecla 'd'\n");</OL><BR>
+<BR>
+/* Pelo scancode */<BR>
+if ((readkey() &gt;&gt; 8) == KEY_SPACE)<BR>
+	<OL>printf("Voce pressionou a tecla Espa&ccedil;o\n");</OL><BR>
+<BR>
+/* Pressionando CTRL+[letra] */<BR>
+if ((readkey() &amp; 0xFF) == 3)<BR>
+	<OL>printf("Voce pressionou CTRL+C\n");</OL><BR>
+<BR>
+/* Pressionando ALT+[letra] */<BR>
+if (readkey() == (KEY_X &lt;&lt; 8))<BR>
+	<OL>printf("Voce pressionou ALT+X\n");</OL><BR>
+</OL></TT></P>
+
+<P>A segunda maneira utiliza o vetor <TT>key</TT>, definido pelo Allegro. Assim, podemos testar o pressionamento de teclas de modo mais din&acirc;mico. Por exemplo:
+<TT><OL>if (key[KEY_D])<BR>
+	<OL>printf("Voce pressionou a tecla 'D'\n");</OL><BR>
+<BR>
+if (key[KEY_SPACE])<BR>
+	<OL>printf("Voce pressionou a tecla Espa&ccedil;o\n");</OL><BR>
+<BR>
+if ((key[KEY_CTRL]) && (key[KEY_C]))<BR>
+	<OL>printf("Voce pressionou CTRL+C\n");</OL><BR>
+<BR>
+if ((key[KEY_ALT] && (key[KEY_X]))<BR>
+	<OL>printf("Voce pressionou ALT+X\n");</OL><BR>
+</OL></TT></P>
+
+<P>Naturalmente, devemos escolher a op&ccedil;&atilde;o que seja mais simples para o que se quer fazer. Se quisermos, por exemplo, ler o nome do jogador, &eacute; prefer&iacute;vel utilizar a fun&ccedil;&atilde;o <TT>readkey</TT>, que d&aacute; a possibilidade de ler v&aacute;rios caracteres diferentes. Por&eacute;m, se quisermos apenas verificar, por exemplo, se a tecla Enter est&aacute; pressionada, utilizamos <TT>key[KEY_ENTER]</TT>.</P>
+
+<P>Al&eacute;m desses elementos para o uso do teclado, existem outras duas fun&ccedil;&otilde;es muito &uacute;teis para o uso do mesmo: <A HREF="funcoes.html#keyboard_clear_keybuf"><TT>clear_keybuf</TT></A> e <A HREF="funcoes.html#keyboard_keypressed"><TT>keypressed</TT></A>.</P>
+
+<P>A primeira limpa o <I>buffer</I> do teclado, isto &eacute;, apaga das poss&iacute;veis teclas lidas aquelas que foram pressionadas at&eacute; o momento. Isto &eacute; particularmente &uacute;til quando, por exemplo, queremos ler teclas apenas a partir de um determinado momento, ignorando as que j&aacute; foram pressionadas anteriormente e que est&atilde;o esperando serem lidas. Como a fun&ccedil;&atilde;o n&atilde;o possui par&acirc;metros, ela deve ser chamada da seguinte forma:
+<TT><OL>
+clear_keybuf();
+</OL></TT></P>
+
+<P>A segunda verifica se h&aacute; alguma tecla pressionada no momento, da mesma maneira que a fun&ccedil;&atilde;o <TT>kbhit</TT> da biblioteca <TT>conio</TT>. Assim, podemos fazer um esquema para o <I>loop</I> principal de um jogo, de maneira que o programa n&atilde;o p&aacute;re &agrave; espera de uma tecla:
+<TT><OL>
+while (!key[KEY_ESC])<BR>
+{<OL>
+	/* alguns comandos */<BR>
+	(...)<BR>
+	<BR>
+	if (keypressed())<BR>
+	{<OL>
+		tecla = readkey();<BR>
+		/* reage a tecla */<BR>
+		(...)<BR>
+	</OL>}<BR>
+	<BR>
+	/* outros comandos */<BR>
+	(...)<BR>
+</OL>}<BR>
+</OL></TT></P>
+
+<HR>
+
+<A NAME="prog_mouse">
+<H3>2.3. O Mouse</H3>
+
+<P>Al&eacute;m do teclado, talvez o mouse seja um dos m&oacute;dulos do Allegro mais f&aacute;ceis de utilizar. O Allegro disp&otilde;e de algumas fun&ccedil;&otilde;es e vari&aacute;veis pr&eacute;-definidas que auxiliam nessa utiliza&ccedil;&atilde;o.</P>
+
+<P>As vari&aacute;veis <A HREF="funcoes.html#mouse_mouse_x_y"><TT>mouse_x</TT></A> e <A HREF="funcoes.html#mouse_mouse_x_y"><TT>mouse_y</TT></A> guardam, respectivamente, as atuais posi&ccedil;&otilde;es <B><TT>x</TT></B> e <B><TT>y</TT></B> do ponteiro do mouse.</P>
+
+<P>A vari&aacute;vel <A HREF="funcoes.html#mouse_mouse_b"><TT>mouse_b</TT></A> indica qual(is) o(s) bot&atilde;o(&otilde;es) do mouse est&aacute;(&atilde;o) sendo pressionado(s). Por exemplo:
+<TT><OL>if (mouse_b &amp; 1)<BR>
+	<OL>printf("Bot&atilde;o esquerdo do mouse pressionado\n");</OL><BR>
+<BR>
+if (!(mouse_b &amp; 2))<BR>
+	<OL>printf("Bot&atilde;o direito do mouse n&atilde;o pressionado\n");</OL><BR>
+<BR>
+if (mouse_b &amp; 4)<BR>
+	<OL>printf("Bot&atilde;o do meio do mouse pressionado\n");</OL><BR>
+</OL></TT></P>
+
+<P>Al&eacute;m dessas vari&aacute;veis, a principal fun&ccedil;&atilde;o para uso do mouse &eacute; a <A HREF="funcoes.html#mouse_show_mouse"><TT>show_mouse</TT></A>. Ela faz com que o ponteiro do mouse seja mostrado num determinado bitmap (que pode, inclusive, ser o <TT>screen</TT>). Assim, se escrevermos
+<TT><OL>
+show_mouse(screen);
+</OL></TT>
+o ponteiro do mouse ser&aacute; mostrado na tela. Se fizermos
+<TT><OL>
+show_mouse(NULL);
+</OL></TT>
+o ponteiro do mouse &eacute; escondido.</P>
+
+<P>H&aacute;, por&eacute;m, diversos problemas relacionados &agrave; fun&ccedil;&atilde;o <TT>show_mouse</TT>. Desenhar o mouse diretamente na tela pode causar manchas devido ao retra&ccedil;o. Se fiz&eacute;ssemos o mouse desaparecer, desenh&aacute;ssemos o que fosse preciso, e reaparec&ecirc;ssemos com o mouse, isto faria o mouse ficar piscando, causando um efeito visual nada interessante. A solu&ccedil;&atilde;o &eacute; utilizar a t&eacute;cnica chamada <A HREF="tecnicas.html#double_buffering">double buffering</A>.</P>
+
+<HR>
+
+<A NAME="prog_som">
+<H3>2.4. O Som</H3>
+
+<P>O Allegro aceita uma boa variedade de arquivos de som, cobrindo o necess&aacute;rio para a confec&ccedil;&atilde;o de qualquer jogo. H&aacute;, por&eacute;m, dois tipos distintos de som: os MIDIs e os Samples.</P>
+
+<A NAME="prog_som_midis">
+<H4>2.4.1. MIDIs</H4>
+
+<P>Os MIDIs s&atilde;o respons&aacute;veis pela m&uacute;sica de fundo dos jogos. Seguindo o padr&atilde;o do Allegro, existe um tipo <TT>MIDI</TT> para guardar arquivos de m&uacute;sica. Podemos, ent&atilde;o, declarar um <TT>MIDI</TT> da seguinte forma:
+<TT><OL>
+MIDI *musica;
+</OL></TT></P>
+
+<P>Como n&atilde;o podemos criar MIDIs durante a execu&ccedil;&atilde;o do jogo, temos que carreg&aacute;-los a partir de arquivos. Para isso, usamos a fun&ccedil;&atilde;o <A HREF="funcoes.html#sound_load_midi"><TT>load_midi</TT></A>, da seguinte forma:
+<TT><OL>
+musica = load_midi("musica.midi");
+</OL></TT>
+Isto carregar&aacute; o arquivo <TT>musica.midi</TT> para a mem&oacute;ria, que ser&aacute; apontada pela vari&aacute;vel <TT>musica</TT>, do tipo <TT>MIDI</TT>.</P>
+
+<P>Ap&oacute;s carregar o arquivo na mem&oacute;ria, podemos toc&aacute;-lo utilizando a fun&ccedil;&atilde;o <A HREF="funcoes.html#sound_play_midi"><TT>play_midi</TT></A>. Por exemplo:
+<TT><OL>
+play_midi(musica, TRUE);
+</OL></TT>
+tocar&aacute; o MIDI que est&aacute; guardado na posi&ccedil;&atilde;o de mem&oacute;ria apontada por <TT>musica</TT>. O segundo argumento diz se o MIDI ser&aacute; tocado com <I>loop</I>, ou seja, ao chegar ao final do arquivo, volta a toc&aacute;-lo do come&ccedil;o. Neste caso, o argumento &eacute; <TT>TRUE</TT> e, portanto, ser&aacute; tocado em <I>loop</I>. Caso quis&eacute;ssemos que o arquivo fosse tocado apenas uma vez, o argumento deveria ser <TT>FALSE</TT>.</P>
+
+<P>Temos duas op&ccedil;&atilde;o para parar de tocar um MIDI. Uma delas utiliza a fun&ccedil;&atilde;o <TT>play_midi</TT> da seguinte forma:
+<TT><OL>
+play_midi(NULL, FALSE);
+</OL></TT>
+A outra, utiliza a fun&ccedil;&atilde;o <A HREF="funcoes.html#sound_stop_midi"><TT>stop_midi</TT></A>, que n&atilde;o possui argumentos. Assim, se quisermos fazer um MIDI parar de tocar, escrevemos:
+<TT><OL>
+stop_midi();
+</OL></TT></P>
+
+<A NAME="prog_som_samples">
+<H4>2.4.2. Samples</H4>
+
+<P>Da mesma forma que os MIDIs, os samples possuem seu pr&oacute;prio tipo. Assim, se quisermos definir um arquivo sample, podemos faz&ecirc;-lo da seguinte forma:
+<TT><OL>
+SAMPLE *som;
+</OL></TT></P>
+
+<P>Ainda seguindo o que foi visto anteriormente para os MIDIs, precisamos carregar para a mem&oacute;ria um arquivo de sample antes de poder toc&aacute;-lo. Para isso, utilizamos a fun&ccedil;&atilde;o <A HREF="funcoes.html#sound_load_sample"><TT>load_sample</TT></A>, da seguinte forma:
+<TT><OL>
+som = load_sample("certo.wav");
+</OL></TT>
+A chamada de fun&ccedil;&atilde;o acima carregar&aacute; o arquivo <TT>certo.wav</TT> na mem&oacute;ria e apontar&aacute; este endere&ccedil;o de mem&oacute;ria com a vari&aacute;vel <TT>som</TT>, do tipo <TT>SAMPLE</TT>.</P>
+
+<P>Para tocar o arquivo carregado na mem&oacute;ria pela fun&ccedil;&atilde;o <TT>load_sample</TT>, utilizamos a fun&ccedil;&atilde;o <A HREF="funcoes.html#sound_play_sample"><TT>play_sample</TT></A>. Ela possui v&aacute;rios argumentos, e pode ser chamada, por exemplo, da seguinte forma:
+<TT><OL>
+play_sample(som, 255, 128, 1000, FALSE);
+</OL></TT>
+o que far&aacute; com que o sample guardado em <TT>som</TT> seja tocado. O segundo argumento indica o volume com o qual o sample deve ser tocado, e pode variar de 0 a 255. O terceiro argumento indica o balan&ccedil;o das caixas de som, podendo variar, tabm&eacute;m, de 0 a 255, sendo o 0 para o balan&ccedil;o todo para um lado, e 255 para o outro; neste caso, ao utilizarmos 128, definimos um balan&ccedil;o igualmente distribu&iacute;do. O quarto argumento indica a frequ&ecirc;ncia com a qual o sample ir&aacute; ser tocado: 1000 para a frequ&ecirc;ncia normal, 500 para a metade, 2000 para o dobro, e assim por diante. J&aacute; o &uacute;ltimo argumento indica, assim como na fun&ccedil;&atilde;o <TT>play_midi</TT>, se o sample ser&aacute; tocado em <I>loop</I>.</P>
+
+<P>Seguindo o padr&atilde;o load-play-stop, temos a fun&ccedil;&atilde;o <A HREF="funcoes.html#sound_stop_sample"><TT>stop_sample</TT></A>, que &eacute; usada, naturalmente, para fazer um sample parar de tocar. Assim
+<TT><OL>
+stop_sample();
+</OL></TT>
+faria o sample que est&aacute; sendo tocado atualmente parar de tocar.</P>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<P><CENTER>
+<A HREF="indice.htm"><IMG SRC="return.gif" HSPACE=5 HEIGHT=30 WIDTH=30 ALIGN=CENTER></A>
+<A HREF="indice.htm">&Iacute;ndice</A>
+</CENTER></P>
+
+</BODY>
+
+</HTML>

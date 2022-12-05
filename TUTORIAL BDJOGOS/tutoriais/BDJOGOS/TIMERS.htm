@@ -1,0 +1,766 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0052)http://www.bdjogos.com/biblioteca_conteudo.php?id=16 -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="TIMERS_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="TIMERS_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="TIMERS_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background=TIMERS_arquivos/bg.jpg topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT language=javascript src="TIMERS_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TIMERS_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=TIMERS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="TIMERS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TIMERS_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=TIMERS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background=TIMERS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TIMERS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TIMERS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="TIMERS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TIMERS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TIMERS_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=TIMERS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="TIMERS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TIMERS_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=TIMERS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background=TIMERS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TIMERS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TIMERS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="TIMERS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TIMERS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TIMERS_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=TIMERS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="TIMERS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TIMERS_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=TIMERS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background=TIMERS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TIMERS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TIMERS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="TIMERS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TIMERS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TIMERS_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=TIMERS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="TIMERS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TIMERS_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=TIMERS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background=TIMERS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TIMERS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TIMERS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="TIMERS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TIMERS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="TIMERS_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="TIMERS_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="TIMERS_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="TIMERS_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="TIMERS_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="TIMERS_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background=TIMERS_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="TIMERS_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background=TIMERS_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="TIMERS_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="TIMERS_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD class=conteudo vAlign=top><LINK 
+            href="TIMERS_arquivos/estilos.css" type=text/css 
+            rel=stylesheet><SPAN class=titulos>Controle de Tempo </SPAN><BR>
+            <HR>
+
+            <P class=conteudo><BR>Todas as linguagens de programação tem acesso 
+            a algum componente ou controle de tempo.<BR>No windows, desde que a 
+            janela é aberta, o sistema operacional começa a contar o tempo que 
+            ela esta aberta em clocks de máquina.</P>
+            <P class=conteudo>Poder usar esses componentes de tempo é muito 
+            importante em qualquer jogo. Eles servem para fazer animações, 
+            controlar o tempo de jogabilidade ou mesmo o tempo de alguma fase. 
+            </P>
+            <P class=conteudo>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#000099 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=5 width="100%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=#f7f7f7>
+                        <P class=titulos_texto><IMG height=17 
+                        src="TIMERS_arquivos/pic_pisca.gif" width=17>VOCÊ 
+                        PRECISA SABER... </P>
+                        <P class=conteudo><STRONG>&nbsp;</STRONG>Para usar o 
+                        controle de tempo do allegro, precisamos conhecer como 
+                        funciona um ponteiro para função. </P>
+                        <P class=conteudo><A class=conteudo 
+                        href="http://www.bdjogos.com/adrw/c/ponteirofuncoes.htm" 
+                        target=_blank>http://www.bdjogos.com/adrw/c/ponteirofuncoes.htm</A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#000099 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=5 width="100%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=#f7f7f7>
+                        <P class=titulos_texto><IMG height=17 
+                        src="TIMERS_arquivos/pic_pisca.gif" width=17>DICA... 
+</P>
+                        <P class=conteudo>As rotinas de tempo são utilizadas 
+                        para substituir as paradas de código "comando rest()" ou 
+                        os gotos do basic.<BR>Por isso não é muito aconselhável 
+                        utilizar o comando rest() em seu jogos. 
+                    </P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG><A 
+                        id=install_timer 
+                        name=install_timer></A>install_timer</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Esta função precisa ser chamada no ínicio do programa 
+                        para que seja habilitado a utilização de timers do 
+                        allegro.<BR>Funciona assim como o install_keyboard(). 
+                        <BR><BR></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+
+            <P>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG><A 
+                        id=remove_timer 
+                        name=remove_timer></A>remove_timer</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Remove todo e qualquer controle de tempo. Esta função 
+                        é chamada automaticamente no final do programa pelo 
+                        comando allegro_exit(); 
+                <BR><BR></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+
+            <P>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG><A 
+                        id=install_int 
+                        name=install_int></A>install_int</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Esta é a nossa função chave, esta função serve para 
+                        instalar um timer handler.<BR>Ela possuí dois 
+                        parâmetros:</P>
+                        <P class=codigo>int install_int(void (*proc)(), int 
+                        speed); </P>
+                        <P class=conteudo>O primeiro é um ponteiro para uma 
+                        função. <BR>No primeiro parametros você precisa informar 
+                        o nome de uma função que é uma função que retorna um 
+                        void sem parametros que será executada várias vezes no 
+                        tempo determinado pelo segundo parametro.</P>
+                        <P class=conteudo>E o segundo é a velocidade do contador 
+                        de tempo em milisegundos, onde 1 segundo é igual a 1000 
+                        milisegundos.</P>
+                        <TABLE cellSpacing=0 cellPadding=0 width="80%" 
+                        align=center bgColor=#000099 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                              align=center border=0>
+                                <TBODY>
+                                <TR>
+                                <TD bgColor=#f7f7f7>
+                                <P class=titulos_texto><IMG height=17 
+                                src="TIMERS_arquivos/pic_pisca.gif" 
+                                width=17>VOCÊ PRECISA SABER... </P>
+                                <P class=conteudo>O que é um handler ?</P>
+                                <P class=conteudo>Imagine um Handler como um 
+                                ponteiro, só que ele não aponta para um endereço 
+                                de memória e sim para um serviço ( que pode ser 
+                                um serviço de seu programa, de outro programa ou 
+                                do sistema operacional 
+                              ).</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+                        <P>&nbsp;</P>
+                        <TABLE cellSpacing=0 cellPadding=0 width="80%" 
+                        align=center bgColor=#000099 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                              align=center border=0>
+                                <TBODY>
+                                <TR>
+                                <TD bgColor=#f7f7f7>
+                                <P class=titulos_texto><IMG height=17 
+                                src="TIMERS_arquivos/pic_pisca.gif" 
+                                width=17>VOCÊ PRECISA SABER... </P>
+                                <P class=conteudo>Chamar novamente a função com 
+                                o primeiro parametro igual faz com que o handler 
+                                timer seje recriado ( havendo modificação do 
+                                segundo parametro ), substituindo assim o 
+                                controlador de tempo anterior.</P>
+                                <P class=conteudo>Desta forma, não podemos ter 
+                                dois handlers de tempo para uma mesma função. 
+                                </P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+                        <P>Exemplo:</P><SPAN class=conteudo>No exemplo abaixo.. 
+                        fazemos com que uma variável seja incrementada apos 5 
+                        segundos.<BR><BR>Como esta função é controlada pelo 
+                        hardware, ela pode funcionar contando o tempo mais 
+                        rapido em alguns computadores ou o tempo mais lento em 
+                        outros. Veremos como usar macros para controlar isto. 
+                        <BR></SPAN><SPAN class=codigo><BR></SPAN>
+                        <HR>
+                        <SPAN class=titulos>CÓDIGO...</SPAN> 
+                        <HR>
+                        <SPAN class=codigo>#include &lt;allegro.h&gt;<BR><BR>int 
+                        vcontador;<BR><BR><SPAN class=comentario>// 
+                        prototipo</SPAN><BR>void contador();<BR><BR>int 
+                        main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(16);<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_FULLSCREEN, 
+                        640, 480, 0, 
+                        0);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;install_timer();<BR>&nbsp;&nbsp;&nbsp;install_int( 
+                        contador, 5000 
+                        );<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;int 
+                        vcontador = 
+                        0;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+                        class=comentario>// Laço 
+                        principal</SPAN><BR>&nbsp;&nbsp;&nbsp;while( 
+                        !key[KEY_ESC] 
+                        )<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vcontador 
+                        = 
+                        ::vcontador;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear( 
+                        screen 
+                        );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex( 
+                        screen, font, 10, 10, makecol(255,0,0), -1, "Variavel 
+                        Contador: %d", vcontador 
+                        );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync();<BR>&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;<BR><BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+                        0;<BR>}<BR>END_OF_MAIN();<BR><BR>void 
+                        contador()<BR>{<BR>&nbsp;&nbsp;&nbsp;::vcontador++;<BR>} 
+
+                        <HR>
+                        <SPAN class=titulos>FIM DO CÓDIGO</SPAN> 
+                        <HR>
+                        </SPAN>
+                        <P class=conteudo></P><SPAN 
+                      class=codigo><BR></SPAN><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+
+            <P>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG><A 
+                        id=install_int_ex 
+                        name=install_int_ex></A>install_int_ex</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Esta é uma função modificadora da função original. 
+                        <BR>Ela aceita parametros personalizados e também tem 
+                        sua velocidade controlada pelo hardware( clock ticks 
+                        ).</P>
+                        <TABLE cellSpacing=0 cellPadding=0 width="80%" 
+                        align=center bgColor=#000099 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                              align=center border=0>
+                                <TBODY>
+                                <TR>
+                                <TD bgColor=#f7f7f7>
+                                <P class=titulos_texto><IMG height=17 
+                                src="TIMERS_arquivos/pic_pisca.gif" 
+                                width=17>VOCÊ PRECISA SABER... </P>
+                                <P class=conteudo>Clock Tick é a menor unidade 
+                                reconhecida por um dispositivo 
+                                computacional.<BR><BR>Geralmente um clock tick 
+                                se refere ao sistema de clock principal, que 
+                                pode rodar a 66MHz ou, <BR>66 Milhões de clock 
+                                ticks ( ciclos do processador ) por 
+                                segundo.<BR><BR>Computadores modernos rodam 
+                                muito mais rápido que 66MHz mais todo PC pode 
+                                executar apenas 1 instrução em 1 clock tick ( 
+                                ciclo 
+                          ).</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+                        <P><BR>O Allegro nos deixa converter o formato de 
+                        hardware com a ajuda dos seguintes macros, que podem ser 
+                        utilizadas como o segundo parametro:</P>
+                        <P><STRONG>SECS_TO_TIMER(secs) </STRONG>- Pega o número 
+                        em segundos entre cada clock tick 
+                        <BR><BR><STRONG>MSEC_TO_TIMER(msec)</STRONG> - Pega o 
+                        número em milisegundos entre cada clock tick. <BR>Usar 
+                        este parametro deixa a função install_int_ex igual a 
+                        função 
+                        install_int.<BR><BR><STRONG>BPS_TO_TIMER(bps)</STRONG> - 
+                        Pega o número de clock tick a cada 
+                        segundo<BR><BR><STRONG>BPM_TO_TIMER(bpm)</STRONG> - Pega 
+                        o número de clock tick a cada minuto<BR></P>
+                        <P>Exemplo:</P>
+                        <P class=codigo><SPAN class=comentario>// a cada 10 
+                        segundos </SPAN><BR>install_int_ex( funcao1, 
+                        SECS_TO_TIMER(10) ); &nbsp;&nbsp;&nbsp;<SPAN 
+                        class=comentario><BR></SPAN><BR><SPAN 
+                        class=comentario>// a cada 10 segundos</SPAN> <SPAN 
+                        class=comentario>( 10000 milisegundos ) 
+                        </SPAN><BR>install_int_ex( funcao1, MSEC_TO_TIMER(10000) 
+                        );<BR><BR><SPAN class=comentario>// a cada 1000 clock 
+                        tick por segundo </SPAN><BR>install_int_ex( funcao1, 
+                        BPS_TO_TIMER(1000) ); &nbsp;&nbsp;<BR><BR><SPAN 
+                        class=comentario>// a cada 100000 clock tick por minuto 
+                        </SPAN><BR>install_int_ex( funcao1, BPM_TO_TIMER(100000) 
+                        ); </P>
+                        <TABLE cellSpacing=0 cellPadding=0 width="80%" 
+                        align=center bgColor=#000099 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                              align=center border=0>
+                                <TBODY>
+                                <TR>
+                                <TD bgColor=#f7f7f7>
+                                <P class=titulos_texto><IMG height=17 
+                                src="TIMERS_arquivos/pic_pisca.gif" 
+                                width=17>VOCÊ PRECISA SABER... </P>
+                                <P class=conteudo>Se você usa um compilador que 
+                                roda em DOS modo protegido como o DJGPP, as 
+                                variáveis e funções utilizados pelos install_int 
+                                devem ser bloqueadas com as macros 
+                                LOCK_VARIABLE.</P>
+                                <P class=conteudo>Caso seu programa não esteje 
+                                contando corretamente, leia sobre isto em:</P>
+                                <P class=conteudo><A class=conteudo 
+                                href="http://www.allegro.cc/manual/api/timer-routines/install_int_ex" 
+                                target=_blank>http://www.allegro.cc/manual/api/timer-routines/install_int_ex</A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+                        <P class=codigo><SPAN class=comentario><BR></SPAN><SPAN 
+                        class=codigo><BR></SPAN><BR></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+
+            <P>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG><A id=remove_int 
+                        name=remove_int></A>remove_int</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Esta função remove um handler regitrado para a função 
+                        enviada por parametro.<BR><BR>Exemplo :</P>
+                        <P><SPAN class=codigo>install_int_ex( funcao1, 
+                        SECS_TO_TIMER(10) ); &nbsp;&nbsp;&nbsp;<SPAN 
+                        class=comentario>// cria contador<BR></SPAN>remove_int( 
+                        funcao1 ); </SPAN><SPAN class=comentario>// remove o 
+                        contador que executava a funcao1</SPAN><SPAN 
+                        class=comentario><BR></SPAN><BR><BR></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+
+            <P>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG><A 
+                        id=install_param_int 
+                        name=install_param_int></A>install_param_int e 
+                        install_param_int_ex</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>O prototipo da função assusta:</P>
+                        <P>int install_param_int(void (*proc)(void *), void 
+                        *param, int speed); </P>
+                        <P>É a mesma coisa que o install_int porém, com uma 
+                        grande diferença de que você pode passar um parametro 
+                        para essa função. ( E usar os modificadores no 
+                        install_param_int_ex ). </P>
+                        <P>Como esse parametro é um void, você poderá passar 
+                        qualquer tipo, fazendo a conversão antes e depois para 
+                        poder usar os tipos. Essa função é um pouco complexa, 
+                        por isso vou dar um exemplo completo da utilização. 
+                        <BR><BR>Exemplo :</P>
+                        <P>No exemplo abaixo, instalamos um timer que incrementa 
+                        um contador a cada 5 segundos.<BR>Quando este contador 
+                        chegar a 5, fizemos com que o timer seja desligado. 
+                        <SPAN class=codigo><BR></SPAN></P>
+                        <HR>
+                        <SPAN class=titulos>CÓDIGO...</SPAN> 
+                        <HR>
+                        <SPAN class=codigo>#include 
+                        &lt;allegro.h&gt;<BR>#include 
+                        &lt;iostream&gt;<BR><BR>int vcontador;<BR><BR><SPAN 
+                        class=comentario>// prototipo</SPAN><BR>void contador( 
+                        void * );<BR><BR>int 
+                        main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(16);<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_FULLSCREEN, 
+                        640, 480, 0, 
+                        0);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;install_timer();<BR>&nbsp;&nbsp;&nbsp;int 
+                        total = 5;<BR>&nbsp;&nbsp;&nbsp;install_param_int( 
+                        contador, (void *)&amp;total, 5000 
+                        );<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;int 
+                        vcontador = 
+                        0;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+                        class=comentario>// Laço 
+                        principal</SPAN><BR>&nbsp;&nbsp;&nbsp;while( 
+                        !key[KEY_ESC] 
+                        )<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vcontador 
+                        = 
+                        ::vcontador;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear( 
+                        screen 
+                        );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex( 
+                        screen, font, 10, 10, makecol(255,0,0), -1, "Variavel 
+                        Contador: %d", vcontador 
+                        );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync();<BR>&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+                        0;<BR>}<BR>END_OF_MAIN();<BR><BR>void contador( void 
+                        *b)<BR>{<BR>&nbsp;&nbsp;&nbsp;::vcontador++;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;int 
+                        *c = (int *)b;<BR>&nbsp;&nbsp;&nbsp;int a = 
+                        (*c);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;if ( 
+                        ::vcontador == a 
+                        )<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;remove_param_int( 
+                        contador, (void *)b );<BR>&nbsp;&nbsp;&nbsp;}<BR>} 
+                        <HR>
+                        <SPAN class=titulos>FIM DO CÓDIGO</SPAN> 
+                        <HR>
+                        </SPAN>
+                        <P></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+            <BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG><A 
+                        id=remove_param_int 
+                        name=remove_param_int></A>remove_param_int</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Esta função remove um handler regitrado para a função 
+                        enviada por parametro.<BR><BR>Exemplo :</P>
+                        <P><SPAN class=codigo>install_param_int( <SPAN 
+                        class=codigo>contador</SPAN>, (void *)&amp;total, 5000 
+                        );&nbsp;&nbsp;&nbsp;<SPAN class=comentario>// cria 
+                        contador<BR></SPAN>remove_param_int( contador, (void *)b 
+                        );</SPAN><SPAN class=comentario> // remove o contador 
+                        que executava a contador </SPAN><SPAN 
+                        class=comentario><BR></SPAN><BR><BR></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+            <BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG><A id=rest 
+                        name=rest></A>rest</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Esta função faz com que o programa espere pelo tempo 
+                        especificado no parametro. <BR><BR>void rest(unsigned 
+                        int time); <SPAN class=comentario></SPAN><BR><BR>Exemplo 
+                        :<BR><BR><SPAN class=codigo>rest( 5000 );</SPAN><SPAN 
+                        class=comentario> // espera 5 segundos 
+                        <BR></SPAN><BR><BR></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+
+            <P>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=center><STRONG><A 
+                        id=rest_callback 
+                        name=rest_callback></A>rest_callback</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Esta função faz com que o programa espere pelo tempo 
+                        especificado no parametro, durante a espera, ela executa 
+                        a função enviada no segundo parametro. <BR><BR>void 
+                        rest_callback(long time, void (*callback)()) </P>
+                        <P>A função enviada tem que ser void e nao pode ter 
+                        parametros. <BR><BR>Exemplo :<BR><BR><SPAN 
+                        class=codigo>rest_callback( 10000, pause );</SPAN><SPAN 
+                        class=comentario> // espera 10 segundos e enquanto isso 
+                        executa a função pause 
+                    <BR></SPAN><BR><BR></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+
+            <P></P><BR><SPAN class=conteudo><B>Contribuidor</B> <BR>Adriano 
+            Waltrick<BR>14/08/2007 </SPAN>
+            <P class=conteudo><A class=conteudo 
+            href="javascript:history.go(-1)">Voltar </A></P></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background=TIMERS_arquivos/111.jpg><IMG height=1 
+      src="TIMERS_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background=TIMERS_arquivos/111.jpg colSpan=2 height=1><IMG 
+      height=1 src="TIMERS_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

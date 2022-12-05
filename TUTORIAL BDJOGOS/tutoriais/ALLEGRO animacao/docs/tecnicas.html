@@ -1,0 +1,401 @@
+<HTML>
+
+<HEAD><TITLE>T&eacute;cnicas de Programa&ccedil;&atilde;o de Jogos</TITLE></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" BGCOLOR="#FFFFFF">
+
+<P>Data da &uacute;ltima atualiza&ccedil;&atilde;o: 19/06/2002<BR>
+&copy;2002 - <A HREF="mailto:tiagomt@nce.ufrj.br">Tiago da Concei&ccedil;&atilde;o Mota</A><BR><BR>
+<I>Powered by vi</I></P>
+
+<H1>T&eacute;cnicas de Programa&ccedil;&atilde;o de Jogos</H1>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<OL>
+	<LI><A HREF="#double_buffering">Double Buffering</A></LI>
+	<OL>
+		<LI><A HREF="#double_buffering_mouse">Mouse</A></LI>
+	</OL>
+	<LI><A HREF="#scrolling">Scrolling</A></LI>
+	<OL>
+		<LI><A HREF="#scrolling_parallax">Parallax Scrolling</A></LI>
+	</OL>
+	<LI><A HREF="#sprites">Sprites</A></LI>
+	<LI><A HREF="#detec_colisao">Detec&ccedil;&atilde;o de Colis&atilde;o</A></LI>
+</OL>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="double_buffering">
+<H2>1. Double Buffering</H2>
+
+<P>Quando vamos fazer anima&ccedil;&otilde;es usando o Allegro, surgem alguns problemas relacionados aos v&aacute;rios m&eacute;todos que podem ser utilizados. O m&eacute;todo mais simples que podemos imaginar &eacute; aquele em que limpamos a tela, desenhamos os objetos, limpamos a tela novamente, desenhamos os objetos nas novas posi&ccedil;&otilde;es, e assim por diante. Este m&eacute;todo, por&eacute;m, tem um grave problema: a tela pisca a cada limpeza.</P>
+
+<P>Para contornar este tipo de problema, existem v&aacute;rias t&eacute;cnicas de anima&ccedil;&atilde;o. Veremos a mais popular delas, o double buffering.</P>
+
+<P>Podemos concluir, a partir do nome, como funciona esta t&eacute;cnica. Dispomos de um bitmap auxilixar (chamado de <I>buffer</I>) que, normalmente, possui o tamanho da tela (ou o tamanho da regi&atilde;o onde ocorre a anima&ccedil;&atilde;o). Desenhamos, neste <I>buffer</I>, os objetos que devem ser apresentados na tela. Ap&oacute;s isso, desenhamos o conte&uacute;do do <I>buffer</I> na tela, fazendo com que os objetos apare&ccedil;am. Limpamos, ent&atilde;o, o <I>buffer</I>, desenhamos os objetos novamente em suas novas posi&ccedil;&otilde;es, passamos o conte&uacute;do do <I>buffer</I> para a tela, e assim por diante.</P>
+
+<P>Esta t&eacute;cnica, al&eacute;m de contornar o problema da tela piscando, &eacute; popular pela sua velocidade (pois as outras t&eacute;cnicas que existem s&atilde;o, normalmente, mais lentas) e pela facilidade de implementa&ccedil;&atilde;o. O <A HREF="../exemplos/exdobbuf.c">exemplo</A> abaixo mostra a diferen&ccedil;a entre o m&eacute;todo prim&aacute;rio e o double buffering.</P>
+
+<TT><OL>
+void principal (void)<BR>
+{<OL>
+	BITMAP *buf;<BR>
+	int x, y;<BR>
+	int dx, dy;<BR>
+	<BR>
+	buf = create_bitmap(MAX_X, MAX_Y);<BR>
+	<BR>
+	x = 100;<BR>
+	y = 100;<BR>
+	dx = 2;<BR>
+	dy = 2;<BR>
+	<BR>
+	set_palette(desktop_palette);<BR>
+	<BR>
+	while (!keypressed())<BR>
+	{<OL>
+		clear(screen);<BR>
+		textout(screen, font, "Sem Double Buffering (pressione uma tecla para continuar)", 0, 0, -1);<BR>
+		rectfill(screen, x, y, x + 40, y + 40, 4);<BR>
+		x += dx;<BR>
+		y += dy;<BR>
+		if ((x &lt; 2) || (x &gt; (MAX_X - 42)))<BR>
+		{<OL>
+			dx = -dx;<BR>
+		</OL>}<BR>
+		if ((y &lt; 2) || (y &gt; (MAX_Y - 42)))<BR>
+		{<OL>
+			dy = -dy;<BR>
+		</OL>}<BR>
+		rest(10);<BR>
+	</OL>}<BR>
+	readkey();<BR>
+	<BR>
+	while (!keypressed())<BR>
+	{<OL>
+		clear(buf);<BR>
+		textout(buf, font, "Com Double Buffering (pressione uma tecla para continuar)", 0, 0, -1);<BR>
+		rectfill(buf, x, y, x + 40, y + 40, 4);<BR>
+		blit(buf, screen, 0, 0, 0, 0, MAX_X, MAX_Y);<BR>
+		x += dx;<BR>
+		y += dy;<BR>
+		if ((x &lt; 2) || (x &gt; (MAX_X - 42)))<BR>
+		{<OL>
+			dx = -dx;<BR>
+		</OL>}<BR>
+		if ((y &lt; 2) || (y &gt; (MAX_Y - 42)))<BR>
+		{<OL>
+			dy = -dy;<BR>
+		</OL>}<BR>
+		rest(10);<BR>
+	</OL>}<BR>
+	readkey();<BR>
+</OL>}<BR>
+</OL></TT>
+
+<HR>
+
+<A NAME="double_buffering_mouse">
+<H3>1.1. Mouse</H3>
+
+<P>Um dos grandes problemas do Allegro reside no uso do mouse. Se, ao utilizarmos a fun&ccedil;&atilde;o <A HREF="funcoes.html#mouse_show_mouse"><TT>show_mouse</TT></A>, desenhássemos o mouse diretamente na tela, poderiam aparecer manchas devido ao retra&ccedil;o. Utilizar a t&eacute;cnica do desenha-apaga-desenha tamb&eacute;m n&atilde;o &eacute; uma boa id&eacute;ia, pois o mouse ficaria piscando. Assim, a melhor solu&ccedil;&atilde;o para este problema &eacute; utilizar o double buffering.</P>
+
+<P>Para isso, utilizamos como <I>buffer</I> o mesmo bitmap que j&aacute; &eacute; utilizado como tal pelo programa. Assim, DEPOIS de termos desenhado tudo que &eacute; necess&aacute;rio, utilizamos a fun&ccedil;&atilde;o <TT>show_mouse</TT>, com destino para o bitmap de <I>buffer</I>. Quando formos redesenhar o que for necess&aacute;rio, utilizamos a fun&ccedil;&atilde;o <TT>show_mouse</TT> com par&acirc;metro <TT>NULL</TT>, para fazer o mouse desaparecer.</P>
+
+<P>O <A HREF="../exemplos/exmousedb.c">programa</A> abaixo exemplifica estes procedimentos, fazendo o mouse aparecer e se deslocar normalmente enquanto ret&acirc;ngulos de cores e posi&ccedil;&otilde;es aleat&oacute;rias s&atilde;o desenhados na tela.</P>
+
+<TT><OL>
+void principal (void)<BR>
+{<OL>
+	BITMAP *tela;<BR>
+	BITMAP *retang;<BR>
+	int x, y, w, h, c;<BR>
+	<BR>
+	tela = create_bitmap(MAX_X, MAX_Y);<BR>
+	retang = create_bitmap(MAX_X, MAX_Y);<BR>
+	<BR>
+	clear(retang);<BR>
+	<BR>
+	set_palette(desktop_palette);<BR>
+	<BR>
+	srand(time(0));<BR>
+	<BR>
+	while (!keypressed())<BR>
+	{<OL>
+		x = rand() % MAX_X;<BR>
+		y = rand() % MAX_Y;<BR>
+		w = rand() % (MAX_X - x);<BR>
+		h = rand() % (MAX_Y - y);<BR>
+		c = rand() % (1 &lt;&lt; COLOR_BITS);<BR>
+		rectfill(retang, x, y, x + w, y + h, c);<BR>
+		show_mouse(NULL);<BR>
+		clear(tela);<BR>
+		blit(retang, tela, 0, 0, 0, 0, MAX_X, MAX_Y);<BR>
+		show_mouse(tela);<BR>
+		blit(tela, screen, 0, 0, 0, 0, MAX_X, MAX_Y);<BR>
+	</OL>}<BR>
+	readkey();<BR>
+</OL>}<BR>
+</OL></TT>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="scrolling">
+<H2>2. Scrolling</H2>
+
+<P>Uma das principais t&eacute;cnicas utilizadas em jogos (principalmente nos que possuem movimento de cen&aacute;rio) &eacute; o scrolling. O scrolling consiste em movimentar o fundo do cen&aacute;rio e, normalmente, deixar o personagem controlado parado, o que causa uma sensa&ccedil;&atilde;o de movimento.</P>
+
+<P>O scrolling pode ser horizontal, vertical ou em ambas as dire&ccedil;&otilde;es. O <A HREF="../exemplos/exscrol.c">exemplo</A> abaixo demonstra como utilizar o scrolling, desenhado um boneco (parado) no meio da tela, enquanto o fundo se move de baixo para cima, fazendo com que tenhamos a sensa&ccedil;&atilde;o de que o boneco est&aacute; caindo.</P>
+
+<TT><OL>
+void principal (void)<BR>
+{<OL>
+	BITMAP *tela;<BR>
+	BITMAP *fundo;<BR>
+	BITMAP *boneco;<BR>
+	PALETTE pal;<BR>
+	int fx, fy;<BR>
+	int x, y;<BR>
+	int i;<BR>
+	<BR>
+	tela = create_bitmap(MAX_X, MAX_Y);<BR>
+	fundo = create_bitmap(MAX_X, MAX_Y);<BR>
+	<BR>
+	boneco = load_bitmap("boneco.bmp", pal);<BR>
+	<BR>
+	clear(fundo);<BR>
+	for (i = 0; i &lt; 100; i++)<BR>
+	{<OL>
+		x = rand() % MAX_X;<BR>
+		y = rand() % MAX_Y;<BR>
+		putpixel(fundo, x, y, 255);<BR>
+	</OL>}<BR>
+	fx = fy = 0;<BR>
+	<BR>
+	while (!keypressed())<BR>
+	{<OL>
+		clear(tela);<BR>
+		blit(fundo, tela, 0, 0, fx, fy, MAX_X, MAX_Y);<BR>
+		blit(fundo, tela, 0, 0, fx, fy - MAX_X, MAX_X, MAX_Y);<BR>
+		draw_sprite(tela, boneco, ((MAX_X) - boneco->w) / 2, ((MAX_Y) - boneco->h) / 2);<BR>
+		blit(tela, screen, 0, 0, 0, 0, MAX_X, MAX_Y);<BR>
+		fy -= 3;<BR>
+		if (fy &lt; 0)<BR>
+		{<OL>
+			fy += MAX_Y;<BR>
+		</OL>}<BR>
+	</OL>}<BR>
+	readkey();<BR>
+</OL>}<BR>
+</OL></TT>
+
+<HR>
+
+<A NAME="scrolling_parallax">
+<H3>2.1. Parallax Scrolling</H3>
+
+<P>Um tipo especial de scrolling que &eacute; muito utilizado &eacute; o parallax scrolling. Ele consite num scrolling em que v&aacute;rios fundos se movimentam em velocidades diferentes, causando uma sensa&ccedil;&atilde;o de profundidade. O <A HREF="../exemplos/exparallax.c">exemplo</A> abaixo demonstra um parallax scrolling horizontal.</P>
+
+<TT><OL>
+#define FUNDOS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4<BR>
+<BR>
+(...)<BR>
+<BR>
+void principal (void)<BR>
+{<OL>
+	BITMAP *fundo[FUNDOS];<BR>
+	BITMAP *tela;<BR>
+	PALETTE pal;<BR>
+	int fx[FUNDOS];<BR>
+	int x, y;<BR>
+	int i, j;<BR>
+	<BR>
+	srand(time(0));<BR>
+	<BR>
+	for (i = 0; i &lt; FUNDOS; i++)<BR>
+	{<OL>
+		fundo[i] = create_bitmap(MAX_X, MAX_Y);<BR>
+		fx[i] = 0;<BR>
+		clear(fundo[i]);<BR>
+		for (j = 0; j &lt; (FUNDOS - i) * 30; j++)<BR>
+		{<OL>
+			x = rand() % MAX_X;<BR>
+			y = rand() % MAX_Y;<BR>
+			rectfill(fundo[i], x, y, x + i, y + i, 1);<BR>
+		</OL>}<BR>
+	</OL>}<BR>
+	<BR>
+	tela = create_bitmap(MAX_X, MAX_Y);<BR>
+	<BR>
+	pal[0].r = 0;<BR>
+	pal[0].g = 0;<BR>
+	pal[0].b = 0;<BR>
+	pal[1].r = 63;<BR>
+	pal[1].g = 63;<BR>
+	pal[1].b = 63;<BR>
+	set_palette(pal);<BR>
+	<BR>
+	while (!keypressed())<BR>
+	{<OL>
+		clear(tela);<BR>
+		for (i = 0; i &lt; FUNDOS; i++)<BR>
+		{<OL>
+			draw_sprite(tela, fundo[i], fx[i], 0);<BR>
+			draw_sprite(tela, fundo[i], fx[i] - MAX_X, 0);<BR>
+			fx[i] += (i + 1) * 2;<BR>
+			if (fx[i] &gt; MAX_X)<BR>
+			{<OL>
+				fx[i] -= MAX_X;<BR>
+			</OL>}<BR>
+		</OL>}<BR>
+		blit(tela, screen, 0, 0, 0, 0, MAX_X, MAX_Y);<BR>
+	</OL>}<BR>
+	readkey();
+</OL>}<BR>
+</OL></TT>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="sprites">
+<H2>3. Sprites</H2>
+
+<P>Chamamos de sprite o conjunto de dados que definem determinado objeto ou personagem num jogo. Para uma pessoa, por exemplo, podemos ter um sprite que contenha as posi&ccedil;&otilde;es vertical e horizontal dela no mundo, a dire&ccedil;&atilde;o para onde ela est&aacute; virada e os bitmaps que podem represent&aacute;-la durante o jogo.</P>
+
+<P>O <A HREF="../exemplos/exsprite.c">exemplo</A> abaixo apresenta um carro que percorre a tela em diversas dire&ccedil;&otilde;es, demonstrando claramente o que foi mencionado no par&aacute;grafo anterior.</P>
+
+<TT><OL>
+#define DX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3<BR>
+#define DY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3<BR>
+#define MAX_FRAMES&nbsp;&nbsp;&nbsp;8<BR>
+<BR>
+typedef struct _SPRITE<BR>
+{<OL>
+	BITMAP **frame;<BR>
+	int x, y;<BR>
+	int dx, dy;<BR>
+	int dir;<BR>
+</OL>} SPRITE;<BR>
+<BR>
+enum { DIR_N, DIR_NE, DIR_E, DIR_SE, DIR_S, DIR_SO, DIR_O, DIR_NO };<BR>
+<BR>
+(...)<BR>
+<BR>
+void principal (void)<BR>
+{<OL>
+	BITMAP *tela;<BR>
+	PALETTE pal;<BR>
+	SPRITE sp;<BR>
+	<BR>
+	sp.frame = (BITMAP **)malloc(MAX_FRAMES * sizeof(BITMAP *));<BR>
+	sp.frame[DIR_N] = load_bitmap("CarroN.bmp", pal);<BR>
+	sp.frame[DIR_NE] = load_bitmap("CarroNE.bmp", pal);<BR>
+	sp.frame[DIR_E] = load_bitmap("CarroE.bmp", pal);<BR>
+	sp.frame[DIR_SE] = load_bitmap("CarroSE.bmp", pal);<BR>
+	sp.frame[DIR_S] = load_bitmap("CarroS.bmp", pal);<BR>
+	sp.frame[DIR_SO] = load_bitmap("CarroSO.bmp", pal);<BR>
+	sp.frame[DIR_O] = load_bitmap("CarroO.bmp", pal);<BR>
+	sp.frame[DIR_NO] = load_bitmap("CarroNO.bmp", pal);<BR>
+	<BR>
+	sp.x = 370;<BR>
+	sp.y = 50;<BR>
+	sp.dx = -2 * DX;<BR>
+	sp.dy = 0;<BR>
+	sp.dir = DIR_O;<BR>
+	<BR>
+	tela = create_bitmap(MAX_X, MAX_Y);<BR>
+	<BR>
+	set_palette(pal);<BR>
+	while (!keypressed())<BR>
+	{<OL>
+		sp.x += sp.dx;<BR>
+		sp.y += sp.dy;<BR>
+		switch (sp.dir)<BR>
+		{<OL>
+			case DIR_N:<OL>
+				if (sp.y < 100)<BR>
+				{<OL>
+					sp.dx = -DX;<BR>
+					sp.dy = -DY;<BR>
+					sp.dir = DIR_NO;<BR>
+				</OL>}<BR>
+				break;<BR></OL>
+			case DIR_NE:<OL>
+				if (sp.x > (MAX_X - 100))<BR>
+				{<OL>
+					sp.dx = 0;<BR>
+					sp.dy = -2 * DY;<BR>
+					sp.dir = DIR_N;<BR>
+				</OL>}<BR>
+				break;<BR></OL>
+			case DIR_E:<OL>
+				if (sp.x > (MAX_X - 150))<BR>
+				{<OL>
+					sp.dx = DX;<BR>
+					sp.dy = -DY;<BR>
+					sp.dir = DIR_NE;<BR>
+				</OL>}<BR>
+				break;<BR></OL>
+			case DIR_SE:<OL>
+				if (sp.y > (MAX_Y - 100))<BR>
+				{<OL>
+					sp.dx = 2 * DX;<BR>
+					sp.dy = 0;<BR>
+					sp.dir = DIR_E;<BR>
+				</OL>}<BR>
+				break;<BR></OL>
+			case DIR_S:<OL>
+				if (sp.y > (MAX_Y - 150))<BR>
+				{<OL>
+					sp.dx = DX;<BR>
+					sp.dy = DY;<BR>
+					sp.dir = DIR_SE;<BR>
+				</OL>}<BR>
+				break;<BR></OL>
+			case DIR_SO:<OL>
+				if (sp.x < 50)<BR>
+				{<OL>
+					sp.dx = 0;<BR>
+					sp.dy = 2 * DY;<BR>
+					sp.dir = DIR_S;<BR>
+				</OL>}<BR>
+				break;<BR></OL>
+			case DIR_O:<OL>
+				if (sp.x < 100)<BR>
+				{<OL>
+					sp.dx = -DX;<BR>
+					sp.dy = DY;<BR>
+					sp.dir = DIR_SO;<BR>
+				</OL>}<BR>
+				break;<BR></OL>
+			case DIR_NO:<OL>
+				if (sp.y < 50)<BR>
+				{<OL>
+					sp.dx = -2 * DX;<BR>
+					sp.dy = 0;<BR>
+					sp.dir = DIR_O;<BR>
+				</OL>}<BR>
+				break;<BR></OL>
+		</OL>}<BR>
+		clear(tela);<BR>
+		draw_sprite(tela, sp.frame[sp.dir], sp.x, sp.y);<BR>
+		blit(tela, screen, 0, 0, 0, 0, MAX_X, MAX_Y);<BR>
+		rest(20);<BR>
+	</OL>}<BR>
+	readkey();<BR>
+</OL>}<BR>
+</TT></OL>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="detec_colisao">
+<H2>4. Detec&ccedil;&atilde;o de Colis&atilde;o</H2>
+
+<P>Frequentemente, &eacute; necess&aacute;rio verificar se dois sprites est&atilde;o sobrepostos; para isso, existem diferentes m&eacute;todos de detectar a poss&iacute;vel colis&atilde;o.</P>
+
+<P>Como o m&eacute;todo que chamamos de for&ccedil;a bruta (checar cada ponto de um sprite com cada ponto de outro sprite) &eacute; ineficiente, a maior parte dos outros m&eacute;todos s&atilde;o aproximativos. Veremos o principal deles, que consiste em dividir os sprites em ret&acirc;ngulos, de forma que possamos verificar se cada ret&acirc;ngulo est&aacute; ou n&atilde;o sobreposto a outro.</P>
+
+</BODY>
+
+</HTML>

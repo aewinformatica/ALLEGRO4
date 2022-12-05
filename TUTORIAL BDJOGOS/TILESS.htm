@@ -1,0 +1,607 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://www.bdjogos.com/conteudo.php?link=capitulo_26.php -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="TILESS_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="TILESS_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="TILESS_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background=TILESS_arquivos/bg.jpg topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT language=javascript src="TILESS_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TILESS_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=TILESS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="TILESS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TILESS_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=TILESS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background=TILESS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TILESS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TILESS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="TILESS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TILESS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TILESS_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=TILESS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="TILESS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TILESS_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=TILESS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background=TILESS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TILESS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TILESS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="TILESS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TILESS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TILESS_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=TILESS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="TILESS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TILESS_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=TILESS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background=TILESS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TILESS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TILESS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="TILESS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TILESS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TILESS_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=TILESS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="TILESS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TILESS_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=TILESS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background=TILESS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TILESS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TILESS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="TILESS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TILESS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="TILESS_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="TILESS_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="TILESS_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="TILESS_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="TILESS_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="TILESS_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background=TILESS_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="TILESS_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background=TILESS_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="TILESS_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="TILESS_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD vAlign=top><SPAN class=titulos>26 - Utilizando TILES</SPAN> 
+            <HR>
+
+            <P class=conteudo>Tiles é uma representação gráfica de algo na tela, 
+            é um conjunto de tiles( pedaços de imagens ) que formará uma imagem 
+            maior. </P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#000099 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=5 width="100%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=#f7f7f7>
+                        <P class=titulos_texto><IMG height=17 
+                        src="TILESS_arquivos/pic_pisca.gif" width=17>VOCÊ 
+                        PRECISA SABER... </P>
+                        <P class=conteudo>É importante que você tenha lido nosso 
+                        artigo sobre imagens antes de continuar. <BR>Caso 
+                        contrário você pode se ter dificuldades no entendimento 
+                        de algumas funções de manipulação de imagens que iremos 
+                        utilizar ao longo do código.</P>
+                        <P class=conteudo><A class=conteudo 
+                        href="http://www.bdjogos.com/biblioteca_conteudo.php?id=7">- 
+                        Desenhando imagens BMP na tela 
+                    </A><BR><BR></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo>&nbsp;</P>
+            <P class=conteudo>Com tiles podemos fazer um cenário, o que 
+            geralmente representará uma redução de uso de memória e 
+            armazenamento em disco do que utilizar um único bitmap para a tela 
+            inteira. </P>
+            <P class=conteudo>Geralmente, o correto é trabalhar com tiles para 
+            as partes fixas do cenário ou com pouca mobilidade, por exemplo: 
+            <BR>paredes e chão de um cenário, objetos como baús, e outras coisas 
+            que não se "mexem" muito e inclusive a água, havendo então uma troca 
+            seqüencial das tiles que fazem parte da água de forma a dar a 
+            impressão de movimentação desta. </P>
+            <P class=conteudo><BR>Nesse artigo iremos mostrar como montar um 
+            cenário usando apenas tiles estáticos, ou seja, sem 
+movimentação.</P>
+            <TABLE class=conteudo cellSpacing=1 cellPadding=5 align=center 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top width=576 colSpan=2>
+                  <H3 class=titulos align=center>ARTE FINAL </H3></TD></TR>
+              <TR>
+                <TD vAlign=top width=576 colSpan=2>
+                  <P align=center><IMG height=328 src="TILESS_arquivos/mapa.jpg" 
+                  width=450 border=1></P></TD></TR>
+              <TR>
+                <TD vAlign=top width=576 colSpan=2>
+                  <P>&nbsp;</P></TD></TR>
+              <TR>
+                <TD vAlign=top width=576 colSpan=2>
+                  <H3 class=titulos align=center>TILES USADOS </H3></TD></TR>
+              <TR>
+                <TD vAlign=top>
+                  <P align=center>Apenas amostra
+                  <H6></H6></TD>
+                <TD vAlign=top>
+                  <P align=center>Pronto para ser utilizado</P></TD></TR>
+              <TR>
+                <TD vAlign=top>
+                  <P align=center><IMG height=67 
+                  src="TILESS_arquivos/mostrar.jpg" width=242 border=1></P></TD>
+                <TD vAlign=top>
+                  <P align=center><IMG height=64 src="TILESS_arquivos/tiles.jpg" 
+                  width=224 border=1><BR><BR><A class=conteudo 
+                  href="http://www.bdjogos.com/imagens_conteudo/alleg_tiles/tiles.zip">Baixar 
+                  tiles</A> </P></TD></TR>
+              <TR>
+                <TD class=conteudo2 vAlign=top colSpan=2>Converta as imagens 
+                  de .jpg para .bmp atravez de algum programa de editoração 
+              </TD></TR></TBODY></TABLE>
+            <P class=conteudo>Com base na ilustração acima devemos esclarecer os 
+            seguintes itens:</P>
+            <UL>
+              <LI class=conteudo>O tamanho do cenário é 640x480. Totalizando 
+              307.200 pixels.<BR>
+              <LI class=conteudo>Todas as imagens foram salvas com 24bits de 
+              profundidade de cores. No entanto configuramos o compilador para 
+              enxergar até 32bits.<BR>
+              <LI class=conteudo>O tamanho de cada Tile é 32x32 pixels. </LI></UL>
+            <P class=conteudo>Com base nas informações acima você deve entender 
+            que a largura da tela é de 640 pixels e a largura do nosso tile é 32 
+            pixels. Logo, já que nosso tile tem 32 pixels de largura podemos 
+            colocar apenas 20 tiles na horizontal. Já na altura, como nós temos 
+            480 pixels podemos colocar apenas 15 tiles.<BR><BR>O tamanho dos 
+            tiles você define conforme a necessidade do se projeto. A idéia do 
+            artigo é dar uma visão geral de como montar um cenário simples e 
+            estático através de tiles.</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#000099 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=5 width="100%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=#f7f7f7>
+                        <P class=titulos_texto>DICA... </P>
+                        <P class=conteudo>Para criar os tiles usamos o editor de 
+                        imagens GLIMP. <BR><BR>É uma ferramenta muito boa e tem 
+                        uma opção que torna a vida do design iniciante muito 
+                        mais prática. Essa opção se chama “Tornar encaixavel”. 
+                        <BR><BR>Se você estiver fazendo a textura de uma grama 
+                        ou um chão,por exemplo, quando você terminar poderá 
+                        tornar essa textura encaixavel em todos os sentidos. 
+                        Dessa forma você não terá problema na hora de visualizar 
+                        os tiles um do lado do outro. </P>
+                        <P class=conteudo>Assim o processo fica mais prático mas 
+                        não muito profissional porque a imagem sofre uma pequena 
+                        distorção. Para quem está começando vale a pena 
+                        verificar. </P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P><BR><SPAN class=conteudo><BR>Para facilitar o aprendizado você 
+            poderá baixar os tiles utilizados no exemplo 
+            acima.<BR><BR></SPAN></P>
+            <HR>
+            <SPAN class=titulos>CÓDIGO...</SPAN> 
+            <HR>
+
+            <P class=codigo>#include &lt;allegro.h&gt;<BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(32);<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_WINDOWED, 
+            640, 480, 0, 0);<BR></P>
+            <P class=codigo>&nbsp;&nbsp;<SPAN class=comentario>&nbsp;// 
+            COMENTADO NO FINAL - 1 </SPAN><SPAN 
+            class=codigo><BR>&nbsp;&nbsp;&nbsp;int i=0;<BR>&nbsp;&nbsp;&nbsp;int 
+            x=0;<BR>&nbsp;&nbsp;&nbsp;int y=0;<BR><BR>&nbsp;&nbsp;&nbsp;const 
+            int xTile = 32; <SPAN class=comentario>// Largura do 
+            Tile</SPAN><BR>&nbsp;&nbsp;&nbsp;const int yTile = 32; <SPAN 
+            class=comentario>// Altura do Tile</SPAN><BR></SPAN></P>
+            <P class=codigo><SPAN 
+            class=comentario>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// COMENTADO NO FINAL 
+            - 2 </SPAN><BR><BR>&nbsp;&nbsp;&nbsp;<SPAN class=comentario>// 
+            Posições dos tiles no mapa 
+            bidimencional.</SPAN><BR>&nbsp;&nbsp;&nbsp;int Mapa[15][20] = 
+            {<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,4,5,5,5,5,6,2,2,1,10,10,8,9,9,9,9,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,4,5,5,5,5,6,2,2,1,7,7,7,9,9,9,9,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,4,5,5,5,5,6,2,2,1,7,7,7,9,9,9,9,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,4,5,5,5,5,6,2,2,1,7,7,8,9,9,9,9,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,4,5,5,5,5,6,2,2,1,7,7,8,8,8,8,8,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,4,5,5,5,5,6,2,2,1,7,7,7,7,7,7,7,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,4,5,5,5,5,6,2,2,1,7,7,7,7,7,7,7,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,4,5,5,5,5,6,2,2,1,7,0,10,7,7,10,0,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,4,5,5,5,5,6,2,2,1,7,10,0,7,7,10,0,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,3,4,5,5,5,6,2,2,1,7,0,10,7,7,10,0,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,3,3,4,5,5,6,2,2,1,7,10,0,7,7,10,0,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,3,3,4,5,5,6,2,2,1,7,0,10,7,7,10,0,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,3,3,4,5,5,6,2,2,1,7,10,0,7,7,10,0,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,3,3,4,5,5,6,2,2,1,7,0,10,7,7,10,0,<BR>&nbsp;&nbsp;&nbsp;3,3,3,3,3,3,4,5,5,6,2,2,1,7,10,0,7,7,10,0};</P>
+            <P class=codigo><SPAN 
+            class=comentario>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// COMENTADO NO FINAL 
+            - 3 </SPAN><BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Carregando o ponteiro com a imagem que possui 
+            todos os tiles</SPAN><BR>&nbsp;&nbsp;&nbsp;BITMAP *bmpTiles = 
+            NULL;<BR>&nbsp;&nbsp;&nbsp;bmpTiles = 
+            create_bitmap(224,64);<BR>&nbsp;&nbsp;&nbsp;bmpTiles = 
+            load_bitmap("tiles.bmp",NULL);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Array que guarda as texturas 
+            separadas</SPAN><BR>&nbsp;&nbsp;&nbsp;BITMAP 
+            *bmpTexturas[11];<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Definindo o tamanho 32x32 para cada 
+            tile</SPAN><BR>&nbsp;&nbsp;&nbsp;for 
+            (i=0;i&lt;11;i++)<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bmpTexturas[i] 
+            = 
+            create_bitmap(xTile,yTile);<BR>&nbsp;&nbsp;&nbsp;}<BR><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// A rotina abaixo separa cada tile e armazena no 
+            array.</SPAN><BR>&nbsp;&nbsp;&nbsp;blit(bmpTiles, bmpTexturas[0], 
+            &nbsp;64, 0, 0, 0, xTile, yTile ); <SPAN 
+            class=comentario>&nbsp;&nbsp;// Grama 
+            normal</SPAN><BR>&nbsp;&nbsp;&nbsp;blit(bmpTiles, bmpTexturas[1], 
+            &nbsp;32, 0, 0, 0, xTile, yTile ); <SPAN 
+            class=comentario>&nbsp;&nbsp;</SPAN><SPAN class=comentario>// Grama 
+            com areia</SPAN><BR>&nbsp;&nbsp;&nbsp;blit(bmpTiles, bmpTexturas[2], 
+            &nbsp;0, 0, 0, 0, xTile, yTile ); <SPAN 
+            class=comentario>&nbsp;&nbsp; &nbsp;// 
+            Areia</SPAN><BR>&nbsp;&nbsp;&nbsp;blit(bmpTiles, bmpTexturas[3], 
+            &nbsp;96, 0, 0, 0, xTile, yTile ); <SPAN 
+            class=comentario>&nbsp;&nbsp;// Agua 
+            funda&nbsp;&nbsp;&nbsp;</SPAN><BR>&nbsp;&nbsp;&nbsp;blit(bmpTiles, 
+            bmpTexturas[4], &nbsp;128, 0, 0, 0, xTile, yTile ); <SPAN 
+            class=comentario>// Agua funda com agua 
+            clara</SPAN><BR>&nbsp;&nbsp;&nbsp;blit(bmpTiles, bmpTexturas[5], 
+            &nbsp;160, 0, 0, 0, xTile, yTile ); <SPAN class=comentario>// Agua 
+            clara</SPAN><BR>&nbsp;&nbsp;&nbsp;blit(bmpTiles, bmpTexturas[6], 
+            &nbsp;192, 0, 0, 0, xTile, yTile ); <SPAN class=comentario>// Agua 
+            clara com areia</SPAN><BR>&nbsp;&nbsp;&nbsp;blit(bmpTiles, 
+            bmpTexturas[7], &nbsp;0, 32, 0, 0, xTile, yTile );&nbsp; <SPAN 
+            class=comentario>// 
+            Pedras</SPAN><BR>&nbsp;&nbsp;&nbsp;blit(bmpTiles, bmpTexturas[8], 
+            &nbsp;32, 32, 0, 0, xTile, yTile ); <SPAN class=comentario>// 
+            Parede</SPAN><BR>&nbsp;&nbsp;&nbsp;blit(bmpTiles, bmpTexturas[9], 
+            &nbsp;64, 32, 0, 0, xTile, yTile ); <SPAN class=comentario>// 
+            Piso</SPAN><BR>&nbsp;&nbsp;&nbsp;blit(bmpTiles, bmpTexturas[10], 96, 
+            32, 0, 0, xTile, yTile );<SPAN class=comentario>&nbsp;&nbsp;// 
+            Flores</SPAN></P>
+            <P class=codigo><SPAN 
+            class=comentario>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// COMENTADO NO FINAL 
+            - 4 </SPAN><BR><BR>&nbsp;&nbsp;&nbsp;<SPAN class=comentario>//Monta 
+            o Cenário</SPAN><BR><B>&nbsp;&nbsp;&nbsp;</B>for 
+            (x=0;x&lt;15;x++)<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for 
+            (y=0;y&lt;20;y++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite(screen,bmpTexturas[ 
+            Mapa[x][y] ], y*32, x*32 
+            );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;}</P>
+            <P class=codigo><SPAN class=codigo><SPAN 
+            class=comentario>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// COMENTADO NO FINAL 
+            - 5 </SPAN><B><BR><BR></B>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>//Escreve mercado na 
+            parede.</SPAN><BR>&nbsp;&nbsp;&nbsp;textout_ex(screen, font, 
+            "MERCADO", 540, 135, makecol(255,255,0), 
+            -1);<BR><BR>&nbsp;&nbsp;&nbsp;readkey();<BR><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>//Desaloca as 
+            Texturas</SPAN><BR>&nbsp;&nbsp;&nbsp;for 
+            (i=0;i&lt;11;i++)<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;destroy_bitmap(bmpTexturas[i]);<BR>&nbsp;&nbsp;&nbsp;}<BR><BR>&nbsp;&nbsp;&nbsp;destroy_bitmap(bmpTiles);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR><BR>&nbsp;&nbsp;&nbsp;return 
+            0;<BR>}<BR><BR>END_OF_MAIN();<BR></SPAN><BR></P>
+            <HR>
+            <SPAN class=titulos>FIM DO CÓDIGO</SPAN> 
+            <HR>
+            <BR><SPAN class=conteudo>Passos para a preparação dos tiles com base 
+            nesse exemplo:<BR><BR></SPAN>
+            <UL>
+              <LI class=conteudo>Definição do tamanho da tela de 640x480 pixels. 
+
+              <LI class=conteudo>Profundidade de cores de 32 bits. 
+              <LI class=conteudo>Criação dos tiles no tamanho de 32x32 pixels – 
+              24bits. Dessa forma temos espaço para 20 tiles na horizontal e 15 
+              tiles na vertical. 
+              <LI class=conteudo>Organizar todos os tiles em apenas um arquivo 
+              de imagem com fundo lilás conforme ilustrado acima. Dessa forma 
+              podemos extrair todas as texturas através da função blit. </LI></UL>
+            <P class=conteudo><BR>Após a preparação do tiles é necessário 
+            organizar o código de maneira que fique clara a montagem do cenário 
+            usando os tiles criados.</P>
+            <P class=conteudo><SPAN class=comentario>// COMENTADO NO FINAL - 
+            1</SPAN><BR><BR>Bom, vamos pular as configurações da tela e ver as 3 
+            variáveis criadas. <BR><BR>A variávei “i” é apenas um contador 
+            auxiliar.</P>
+            <P class=conteudo>A variável ‘x” e “y” vão ser utilizadas para 
+            percorrer o array bidimensional do mapa. <BR><BR>Logo abaixo das 
+            variáveis temos mais duas variáveis constantes que armazenam a 
+            largura e a altura do tile. <BR>Nesse exemplo possuímos tiles de 
+            32x32 pixels. Declarando o tamanho como sendo global, posteriormente 
+            podemos efetuar mudanças sem ter que percorrer o código atrás de 
+            referência ao tamanho do tile.<BR></P>
+            <P class=conteudo><SPAN class=comentario>// COMENTADO NO FINAL - 
+            2</SPAN><BR><BR>A matriz que representará o layout do mapa deve ser 
+            bidimensional e deve ter como tamanho a quantidade de tiles que 
+            podemos colocar na tela, nesse caso [15]x[20]. </P>
+            <P class=conteudo>Você vai notar que ao informar o tamanho do mapa 
+            eu inverti o x pelo y. <BR><BR>Dessa forma, fica fácil de visualizar 
+            o layout do cenário através dos números. Normalmente o código de 
+            montagem do cenário monta o cenário da esquerda para direita e de 
+            cima para baixo. Se você fizer da mesma forma que eu fiz o cenário 
+            será montado de cima para baixo e da esquerda para a direita. </P>
+            <P class=conteudo>Você terá que iniciar cada posição do mapa com o 
+            número do tile que queremos colocar naquela posição. Para isso você 
+            já deve ter em mente a organização dos tiles e a numeração que vai 
+            identificar cada uma na posição do mapa.<BR></P>
+            <P class=conteudo><SPAN class=comentario>// COMENTADO NO FINAL - 
+            3</SPAN><BR><BR>Ao invés de carregarmos cada textura do mapa 
+            separadamente vamos carregar uma imagem organizada e contendo todas 
+            as texturas. </P>
+            <P class=conteudo>Logo abaixo teremos um array de imagens que vai 
+            conter cada textura separada. Como cada textura tem tamanho 32x32 
+            fizemos uma rotina genérica para definir o tamanho de todos 
+            seqüencialmente. Em seguida carregamos cada posição do array de 
+            texturas com cada imagem correspondente. Para esse efeito usamos a 
+            função blit.<BR></P>
+            <P><SPAN class=comentario>// COMENTADO NO FINAL - 4 </SPAN><SPAN 
+            class=conteudo><BR><BR>Até agora temos o mapa com cada posição 
+            iniciada com um número. Esse número é correspondente ao array de 
+            texturas. Por exemplo, na posição Mapa[0][0] temos o número 3. Se 
+            você pegar a textura[3] você verá a imagem de água escura conforme 
+            nossa organização, e assim sucessivamente com as outras 
+            posições.<I><BR></I><BR><B>A rotina para montar o cenário é simples. 
+            Devemos percorrer todas as posições do array bidimensional “Mapa” 
+            identificando o número e representando através de uma textura na 
+            tela. </B></SPAN></P>
+            <P><SPAN class=conteudo><B>Como nosso tile tem 32 pixels então cada 
+            vez que você desenhar uma imagem você deve pular 32 pixels para 
+            poder desenhar a próxima (x*xTile, y*yTile). </B></SPAN></P>
+            <P><SPAN class=conteudo><B>Caso contrário uma imagem ficará em cima 
+            da outra. Imagine a posição x=0 e y=0. Se desenharmos um tile nessa 
+            posição o tile vai ocupar 32 pixels na largura e 32 pixels na 
+            altura, portanto o próximo tile deve ser desenhado a partir da 
+            posição x=32 e y=32. Por esse motivo a rotina de montagem do mapa 
+            está multiplicando a posição x,y pelo tamanho de cada 
+            tile.<BR></B><BR></SPAN><SPAN class=comentario>// COMENTADO NO FINAL 
+            - 5 </SPAN><SPAN class=conteudo><BR><BR>Para finalizar, escrevemos 
+            na tela o texto “MERCADO” para caracterizar o local no canto 
+            superior direito da tela. <BR>Em seguida é fizemos a destruição das 
+            imagens e a finalização da biblioteca Allegro.<BR><BR><BR>Caro 
+            leitor, chegamos ao fim do entendimento da montagem de tiles. Espero 
+            que o exemplo acima tanha ajudado. <BR>Qualquer dúvida entre em 
+            contato com o pessoal da BDJogos através do 
+            fórum.<BR><BR>Abraço<BR>BDJogos</SPAN><BR></P><BR><SPAN 
+            class=conteudo><B>Contribuidor</B> <BR>Bruno A. Rovela<BR>01/08/2007 
+            </SPAN>
+            <P>
+            <HR>
+            &nbsp;
+            <P></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="40%" align=center 
+            bgColor=#ffffff border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center 
+                  bgColor=#000099 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD bgColor=#f7f7f7>
+                              <P class=conteudo align=center><A class=conteudo 
+                              href="http://www.bdjogos.com/conteudo.php?link=capitulo_25.php">«&nbsp;Anterior 
+                              </A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+                <TD>&nbsp;</TD>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center 
+                  bgColor=#000099 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD bgColor=#f7f7f7>
+                              <P class=conteudo align=center><A class=conteudo 
+                              href="http://www.bdjogos.com/conteudo.php?link=capitulo_27.php">Próximo 
+                              » 
+                </A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background=TILESS_arquivos/111.jpg><IMG height=1 
+      src="TILESS_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background=TILESS_arquivos/111.jpg colSpan=2 height=1><IMG 
+      height=1 src="TILESS_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

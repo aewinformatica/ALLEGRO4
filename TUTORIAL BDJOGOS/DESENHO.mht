@@ -1,0 +1,141 @@
+From: <Salvo pelo Windows Internet Explorer 8>
+Subject: Abdalla
+Date: Fri, 23 Jul 2010 16:40:40 -0300
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.dcc.ufrj.br/~abdalla/Enciclopedia/desenho.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Abdalla</TITLE>
+<META content=3Dpt-br http-equiv=3DContent-Language>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<STYLE fprolloverstyle>A:hover {
+	FONT-FAMILY: Microsoft Sans Serif; COLOR: #ff9966
+}
+</STYLE>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702"></HEAD>
+<BODY aLink=3D#ff0000 link=3D#ff0000 bgColor=3D#000000 text=3D#ffffff =
+vLink=3D#ff0000>
+<P align=3Dcenter><B><FONT size=3D6 face=3D"MS Sans =
+Serif">ENCICLOP=C9DIA=20
+ALLEGRO</FONT><FONT color=3D#ffff00 size=3D2=20
+face=3D"Microsoft Sans Serif"><BR></FONT><FONT color=3D#ffff00=20
+face=3D"Microsoft Sans Serif">Fun=E7=F5es de Desenho</FONT></B></P>
+<HR>
+
+<P align=3Dleft><FONT color=3Dwhite size=3D2 face=3D"Microsoft Sans =
+Serif"><STRONG><FONT=20
+color=3Dyellow>stretch_sprite(BITMAP *bmp, BITMAP *sprite, int x, int y, =
+int w,=20
+int h);</FONT></STRONG><BR>Desenha o "sprite" no "bmp" no ponto (x,y) =
+esticando=20
+o sprite com uma nova largura igual w e uma nova altura igual a =
+h</FONT></P>
+<P align=3Dleft><FONT color=3Dwhite size=3D2=20
+face=3D"Microsoft Sans Serif"><BR><STRONG><FONT=20
+color=3Dyellow>draw_sprite_v_flip(BITMAP *bmp, BITMAP *sprite, int x, =
+int=20
+y);</FONT></STRONG><BR>Desenha o "sprite" no "bmp" no ponto (x,y) =
+invertendo a=20
+imagem em rela=E7=E3o ao eixo vertical</FONT></P>
+<P align=3Dleft><FONT color=3Dwhite size=3D2=20
+face=3D"Microsoft Sans Serif"><BR><STRONG><FONT=20
+color=3Dyellow>draw_sprite_h_flip(BITMAP *bmp, BITMAP *sprite, int x, =
+int=20
+y);</FONT></STRONG><BR>O mesmo que o acima, por=E9m inverte em =
+rela=E7=E3o ao eixo=20
+horizontal</FONT></P>
+<P align=3Dleft><FONT color=3Dwhite size=3D2=20
+face=3D"Microsoft Sans Serif"><BR><STRONG><FONT=20
+color=3Dyellow>draw_sprite_vh_flip(BITMAP *bmp, BITMAP *sprite, int x, =
+int=20
+y);</FONT></STRONG><BR>O mesmo que o acima, por=E9m inverte em =
+rela=E7=E3o tanto ao=20
+eixo horizontal quanto ao vertical</FONT></P>
+<P align=3Dleft><FONT color=3Dwhite size=3D2=20
+face=3D"Microsoft Sans Serif"><BR><STRONG><FONT =
+color=3Dyellow>rotate_sprite(BITMAP=20
+*bmp, BITMAP *sprite, int x, int y, fixed =
+angle);</FONT></STRONG><BR>Desenha o=20
+"sprite" no "bmp" no ponto (x,y) girando a imagem no angulo dado<BR>o =
+angulo=20
+deve ser dado pela fun=E7=E3o itofix(int) que transforma um inteiro em =
+um ponto=20
+fixo<BR>itofix(64) - equivalente a um angulo de 90=BA<BR>itofix(256) - =
+equivalente=20
+a um angulo de 360=BA</FONT></P>
+<P align=3Dleft><FONT color=3Dwhite size=3D2=20
+face=3D"Microsoft Sans Serif"><BR><STRONG><FONT=20
+color=3Dyellow>rotate_sprite_v_flip(BITMAP *bmp, BITMAP *sprite, int x, =
+int y,=20
+fixed angle);</FONT></STRONG><BR>O mesmo que o acima, por=E9m al=E9m de =
+rotacionar=20
+inverte a imagem em rela=E7=E3o ao eixo vertical</FONT></P>
+<P align=3Dleft><FONT color=3Dwhite size=3D2=20
+face=3D"Microsoft Sans Serif"><BR><STRONG><FONT=20
+color=3Dyellow>rotate_scaled_sprite(BITMAP *bmp, BITMAP *sprite, int x, =
+int y,=20
+fixed angle, fixed scale);</FONT></STRONG><BR>O mesmo que o =
+rotate_sprite por=E9m=20
+reescala a imagem em rela=E7=E3o a escala<BR>a escala de ser dada pela =
+fun=E7=E3o=20
+ftofix(float) que transforma um float em um ponto fixo<BR>ftofix(2) - =
+imagem com=20
+o dobro do tamanho<BR>ftofix(0.5) - imagem com metade do =
+tamanho</FONT></P>
+<P align=3Dleft><FONT color=3Dwhite size=3D2=20
+face=3D"Microsoft Sans Serif"><BR><STRONG><FONT=20
+color=3Dyellow>rotate_scaled_sprite_v_flip(BITMAP *bmp, BITMAP *sprite, =
+int x, int=20
+y, fixed angle, fixed scale);</FONT></STRONG><BR>O mesmo que o acima, =
+por=E9m al=E9m=20
+de tudo inverte a imagem em rela=E7=E3o ao eixo vertical</FONT></P>
+<P align=3Dleft><FONT color=3Dwhite size=3D2=20
+face=3D"Microsoft Sans Serif"><BR><STRONG><FONT =
+color=3Dyellow>pivot_sprite(BITMAP=20
+*bmp, BITMAP *sprite, int x, int y, int cx, int cy, fixed=20
+angle);</FONT></STRONG><BR>Desenha o "sprite" no "bmp" no ponto (x,y)=20
+rotacionando a imagem no angulo dado por angle em<BR>rela=E7=E3o ao =
+ponto=20
+(cx,cy)</FONT></P>
+<P align=3Dleft><FONT color=3Dwhite size=3D2=20
+face=3D"Microsoft Sans Serif"><BR><STRONG><FONT=20
+color=3Dyellow>pivot_sprite_v_flip(BITMAP *bmp, BITMAP *sprite, int x, =
+int y, int=20
+cx, int cy, fixed angle);</FONT></STRONG><BR>O mesmo que o acima, =
+por=E9m tambem=20
+inverte a imagem em rela=E7=E3o ao eixo vertical</FONT></P>
+<P align=3Dleft><FONT color=3Dwhite size=3D2=20
+face=3D"Microsoft Sans Serif"><BR><STRONG><FONT=20
+color=3Dyellow>pivot_scaled_sprite(BITMAP *bmp, BITMAP *sprite, int x, =
+int y, int=20
+cx, int cy, fixed angle, fixed scale);</FONT></STRONG><BR>O mesmo que o=20
+pivot_sprite, por=E9m al=E9m de rotacionar tambem reescala o =
+sprite</FONT></P>
+<P align=3Dleft><FONT color=3Dwhite size=3D2=20
+face=3D"Microsoft Sans Serif"><BR><STRONG><FONT=20
+color=3Dyellow>pivot_scaled_sprite_v_flip(BITMAP *bmp, BITMAP *sprite, =
+int x, int=20
+y, int cx, int cy, fixed angle, fixed scale);</FONT></STRONG><BR>O mesmo =
+que o=20
+acima, por=E9m al=E9m de tudo ainda inverte a imagem em rela=E7=E3o ao =
+eixo=20
+vertical</FONT></P>
+<P align=3Dcenter>&nbsp;</P>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<DIV align=3Dcenter>
+<P><B><FONT face=3D"Microsoft Sans Serif"><A style=3D"TEXT-DECORATION: =
+none"=20
+href=3D"http://www.dcc.ufrj.br/~abdalla/Enciclopedia/ae.html">VOLTAR</A><=
+/FONT></B></P></DIV>
+<P align=3Dleft>&nbsp;
+<DIV></DIV>
+<P align=3Dcenter>&nbsp;</P>
+<HR>
+</BODY></HTML>

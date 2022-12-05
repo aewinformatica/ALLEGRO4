@@ -1,0 +1,770 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0065)http://pjmoo.codigolivre.org.br/gdj/pag_artigo_leitura.php?id=107 -->
+<HTML 
+XMLNS:O><HEAD><TITLE>GDJ :: Artigos :: Programação :: C/C++ :: Gravidade</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META 
+content="Site voltado para o Desenvolvimento de Jogos com material para criação e desenvolvimento de games para Computador" 
+name=description>
+<META content="Artigos :: Programação :: C/C++ Gravidade" name=keywords><LINK 
+href="GDJ  Artigos  Programação  C-C++  Gravidade_arquivos/artigo_estilo.css" 
+rel=stylesheet><LINK href="favicon.ico" rel="shortcut icon">
+<SCRIPT language=JavaScript 
+src="GDJ  Artigos  Programação  C-C++  Gravidade_arquivos/site.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY>
+<TABLE height="100%" cellSpacing=1 cellPadding=8 width=760 align=center 
+bgColor=#a0a0b0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=site_area vAlign=top height="100%">
+      <TABLE height="100%" cellSpacing=0 cellPadding=1 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=middle width="100%" HEIGTH="260">
+            <TABLE width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=252><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/index.php"><IMG 
+                  src="GDJ  Artigos  Programação  C-C++  Gravidade_arquivos/logo.gif" 
+                  width=252 border=0></A></TD>
+                <TD align=middle width="100%"><B>[</B><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_categoria.php?id=2">Artigos</A><B>] 
+                  [</B><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/sobre.php">Sobre</A><B>]</B></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD align=middle width="100%" height=20><A 
+            href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_lista.php?id=21"><B>
+            <DIV class=categoria_artigo>Artigos :: Programação :: 
+            C/C++</DIV></B></A></TD></TR>
+        <TR>
+          <TD vAlign=top width="100%" height="100%"><!-- AREA DE TEXTO - INICIO -->
+            <TABLE width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top align=middle>
+                  <H1>Gravidade</H1><SUP>Autor : <A 
+                  href="mailto:f-z@uol.com.br">GDJ - Bot</A>&nbsp;&nbsp;</SUP> 
+                </TD></TR>
+              <TR>
+                <TD vAlign=top align=JUSTIFY width="100%">
+                  <DIV align=left>
+                  <P>A informação contida no documento permitirá simular 
+                  realisticamente manobras interestelares e saltos.</P>
+                  <P>O propósito deste documento é entender a física do mundo em 
+                  que vivemos e aplicar física no seu jogo. Não daremos a você 
+                  rotinas otimizadas para seu programa, que é o seu trabalho! 
+                  Mas se você entender como as coisas funcionam, será muito mais 
+                  fácil. </P>
+                  <H4>Básico </H4>
+                  <P>Há alguns termos chaves que definirei para ter certeza que 
+                  estamos falando sobre as mesmas coisas:</P>
+                  <P align=center>
+                  <TABLE style="WIDTH: 100%" cellSpacing=3 cellPadding=1 
+                  width="100%" 
+                  background="GDJ  Artigos  Programação  C-C++  Gravidade_arquivos/gdj.htm" 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>Distância</TD>
+                      <TD>Caminho total da viagem.</TD></TR>
+                    <TR>
+                      <TD>Deslocamento</TD>
+                      <TD>Diferença entre a posição original e a posição 
+                      final.</TD></TR>
+                    <TR>
+                      <TD style="WIDTH: 120px" width=120>Velocidade(speed)</TD>
+                      <TD>Mudança no deslocamento dividido pela mudança no 
+                        tempo</TD></TR>
+                    <TR>
+                      <TD>Velocidade(velocity)</TD>
+                      <TD>Direção da viagem e velocidade da viagem.</TD></TR>
+                    <TR>
+                      <TD>Aceleração</TD>
+                      <TD>Mudança na velocidade dividida pela mudança de 
+                      tempo</TD></TR></TBODY></TABLE>
+                  <P></P>
+                  <P align=left>Nota: aquele deslocamento, velocidade e 
+                  aceleração são na verdade vetores de quantidade. (Isto é, tem 
+                  uma direção e magnitude.).</P>
+                  <H4 align=left>Abreviaturas:</H4>
+                  <P>&nbsp; 
+                  <TABLE>
+                    <TBODY>
+                    <TR>
+                      <TD width=100>
+                        <P>a </P></TD>
+                      <TD>
+                        <P>Aceleração </P></TD></TR>
+                    <TR>
+                      <TD>
+                        <P>M </P></TD>
+                      <TD>
+                        <P>Massa </P></TD></TR>
+                    <TR>
+                      <TD>
+                        <P>s </P></TD>
+                      <TD>
+                        <P>Deslocamento </P></TD></TR>
+                    <TR>
+                      <TD>
+                        <P>s0 </P></TD>
+                      <TD>
+                        <P>Deslocamento inicial </P></TD></TR>
+                    <TR>
+                      <TD>
+                        <P>t </P></TD>
+                      <TD>
+                        <P>Tempo </P></TD></TR>
+                    <TR>
+                      <TD>
+                        <P>v </P></TD>
+                      <TD>
+                        <P>Velocidade </P></TD></TR>
+                    <TR>
+                      <TD>
+                        <P>v0 </P></TD>
+                      <TD>
+                        <P>Velocidade inicial </P></TD></TR></TBODY></TABLE>
+                  <P></P>
+                  <H4>Unidades:</H4>
+                  <P>
+                  <TABLE>
+                    <TBODY>
+                    <TR>
+                      <TD width=100>
+                        <P>m </P></TD>
+                      <TD>
+                        <P>Metro (unidade de comprimento) </P></TD></TR>
+                    <TR>
+                      <TD>
+                        <P>m/s </P></TD>
+                      <TD>
+                        <P>Metro por segundo (unidade de velocidade) </P></TD></TR>
+                    <TR>
+                      <TD>
+                        <P>m/s^2 </P></TD>
+                      <TD>
+                        <P>Metro por segundo quadrado (unidade de aceleração) 
+                        </P></TD></TR>
+                    <TR>
+                      <TD>
+                        <P>N </P></TD>
+                      <TD>
+                        <P>Newtons (unidade de força) </P></TD></TR>
+                    <TR>
+                      <TD>
+                        <P>s </P></TD>
+                      <TD>
+                        <P>Segundo (unidade de tempo) </P></TD></TR></TBODY></TABLE>
+                  <P></P>
+                  <H2>Os Conceitos</H2>
+                  <P></P>
+                  <P>Imagine uma espaçonave viajando pelo espaço a 1000 m/s. Ela 
+                  está bem no espaço interestelar sem nada ao redor dela. Quais 
+                  forças estão agindo sobre ela? A resposta: nenhuma!</P>
+                  <P>Ela continuará a voar pelo espaço a 1000 m/s para sempre se 
+                  nenhuma força agir sobre ela.</P>
+                  <P>A ÚNICA razão porque os objetos mudam a velocidade (direção 
+                  e/ou velocidade) é se uma força for aplicada a ela.</P>
+                  <P>O que é uma força, você pergunta? Uma força é um empurrão 
+                  ou um empuxe externo. Uma força é também um vetor. Ele tem uma 
+                  magnitude e uma direção associadas com ele. Neste momento a 
+                  gravidade está exercendo uma força sobre você: ela está 
+                  puxando você em direção ao centro da terra.</P>
+                  <P>Também, a única razão que um objeto modificará o 
+                  deslocamento é se tiver alguma velocidade.</P>
+                  <P>Suponha agora, que a mão de Deus começa a empurrar a 
+                  espaçonave para frente. Há agora uma força aplicada a nave. 
+                  Com qualquer força aplicada, uma aceleração é induzida. Com 
+                  nossa nova aceleração, a velocidade começa a aumentar. Se Deus 
+                  não parar de empurrar a nave, então logo a nave irá muito 
+                  rápida!</P>
+                  <H4>Olhe, só quero fazer meu cara pular.</H4>
+                  <P></P>
+                  <P>Ok, estou chegando nisto. Temos o nosso cara de salto, o 
+                  Joe. A posição inicial de Joe é sobre o solo ou plataforma que 
+                  não está se movendo. O usuário pressiona a tecla e Joe deve 
+                  saltar no ar. Você precisa ter em mente três coisas sobre o 
+                  Joe: sua posição, velocidade e aceleração.</P>
+                  <P>Inicialmente, a posição dele será no solo. Uma vez que a 
+                  tecla foi tocada, simplesmente damos ao Joe uma velocidade 
+                  muito rápida em direção ascendente. Depois, a cada 
+                  quadro/segundo/atualização/ou qualquer coisa que seja, diminui 
+                  a velocidade ascendente por uma quantidade constante. É 
+                  isto!</P>
+                  <P>A diminuição constante é na verdade uma aceleração na 
+                  direção decrescente. O movimento horizontal do Joe é sem 
+                  efeito. Assim, enquanto o Joe está voando pelo ar, você pode 
+                  modificar o movimento dele para frente e para trás como 
+                  normal.</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto"><I>Nota: 
+                  na vida real, é impossível mover-se para frente e para trás 
+                  quando pulamos reto para cima. Mas descobri jogos que permitem 
+                  o movimento para frente e para trás enquanto pula, mais 
+                  jogável e divertido do que pular só para cima. E quem disse 
+                  que os jogos são realistas de qualquer maneira? 
+                  </I><O:P></O:P></P>
+                  <P>Qual deveria ser a aceleração que estamos aplicando? Na 
+                  terra, a aceleração de Joe será de 9.81 m/s^2 na direção 
+                  decrescente. Infelizmente, metros por segundo quadrado não 
+                  significam nada para o computador. A aceleração deve ser 
+                  determinada baseada na taxa de atualização do jogo. 
+                  Geralmente, adivinhar é a melhor maneira para alcançar 
+                  isto.</P>
+                  <P>Assim nosso pseudo-código é:</P><CODE><FONT color=#008000><PRE>	Joe.pos.y = 0; (Ou onde quer que o solo esteja)
+
+	Joe.vel.y = 0;
+
+	Joe.accel = 10;
+
+	Joe.jumping = NO;
+
+	&nbsp;
+
+	Loop
+
+	&nbsp; If (a tecla de salto é pressionada)
+
+	&nbsp; {
+
+	&nbsp;&nbsp;&nbsp;&nbsp; Joe.vel.y = 100;
+
+	&nbsp;&nbsp;&nbsp;&nbsp; Joe.jumping = YES;
+
+	&nbsp; }
+
+	&nbsp;
+
+	&nbsp; if (Joe.jumping == YES) /* Mova o Joe se estamos saltando */
+
+	&nbsp; {
+
+	&nbsp;&nbsp;&nbsp;&nbsp; Joe.vel.y = Joe.vel.y - Joe.accel
+
+	 &nbsp;&nbsp;&nbsp;&nbsp;Joe.pos.y = Joe.pos.y + Joe.vel.y
+
+	&nbsp; }
+
+	&nbsp;
+
+	&nbsp; if (Joe.pos.y &lt;= 0)&nbsp;&nbsp;&nbsp;&nbsp; /* Veja se Joe atingiu o solo */
+
+	&nbsp; {
+
+	&nbsp;&nbsp;&nbsp;&nbsp; Joe.vel.y = 0;
+
+	&nbsp;&nbsp;&nbsp;&nbsp; Joe.jumping = NO;
+
+	&nbsp; }
+
+	End Loop
+
+            </PRE></FONT></CODE>
+                  <P></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Para 
+                  a primeira vez a tecla de salto é pressionada, a posição do 
+                  Joe repentinamente saltará do solo.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Conforme 
+                  ele sobe mais alto, Joe começa a baixar porque a velocidade é 
+                  constantemente diminuída. Joe finalmente vai parar de 
+                  movimentar-se e começar a mover-se para baixo. Ele vai se 
+                  mover mais rápido até alcançar o solo novamente.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">A 
+                  velocidade e posição do Joe na direção y no final de cada 
+                  rodada vai aparecer assim:</P>
+                  <P><CODE><FONT color=#008000><PRE>	Loop0 : Joe.vel.y =&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y =&nbsp;&nbsp; 0
+
+	Loop1 : Joe.vel.y = 100&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 100
+
+	Loop2 : Joe.vel.y =&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 190
+
+	Loop3 : Joe.vel.y =&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 270
+
+	Loop4 : Joe.vel.y =&nbsp; 70&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 340
+
+	Loop5 : Joe.vel.y =&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 400
+
+	Loop6 : Joe.vel.y =&nbsp; 50&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 450
+
+	Loop7 : Joe.vel.y =&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 490
+
+	Loop8 : Joe.vel.y =&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 520
+
+	Loop9 : Joe.vel.y =&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 540
+
+	&nbsp;
+
+	Loop10: Joe.vel.y =&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 550
+
+	Loop11: Joe.vel.y =&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 550
+
+	Loop12: Joe.vel.y = -10&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 540
+
+	Loop13: Joe.vel.y = -20&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 520
+
+	Loop14: Joe.vel.y = -30&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 490
+
+	Loop15: Joe.vel.y = -40&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 450
+
+	Loop16: Joe.vel.y = -50&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 400
+
+	Loop17: Joe.vel.y = -60&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 340
+
+	Loop18: Joe.vel.y = -70&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 270
+
+	Loop19: Joe.vel.y = -80&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 190
+
+	Loop20: Joe.vel.y = -90&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = 100
+
+	Loop21: Joe.vel.y =-100&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y =&nbsp;&nbsp; 0
+
+</CODE></FONT></PRE>
+                  <P></P>
+                  <P></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Observe 
+                  que Joe está indo rápido demais quando ele atinge o solo. Se 
+                  Joe não atingir o solo, ou o solo desaparecer (isto é, ele 
+                  pulou fora da plataforma), então finalmente Joe estará indo 
+                  rápido demais.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Precisamos 
+                  dar a ele uma velocidade limitante. Esta é a velocidade mais 
+                  rápida que Joe pode atingir ao cair. Na vida real isto é 
+                  causado pela resistência do ar. Isto é muito fácil de se 
+                  fazer.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">O 
+                  pseudo-código modificado é:</P>
+                  <P><CODE><FONT color=#008000><PRE>Joe.pos.y = 0; (Ou onde quer que o solo esteja).
+
+Joe.vel.y = 0;
+
+Joe.accel = 10;
+
+Joe.jumping = NO;
+
+&nbsp;
+
+Loop
+
+&nbsp; if (a tecla de salto é pressionada)
+
+&nbsp; {
+
+&nbsp;&nbsp;&nbsp;&nbsp; Joe.vel.y = 100;
+
+&nbsp;&nbsp;&nbsp;&nbsp; Joe.jumping = YES;
+
+&nbsp; }
+
+&nbsp;
+
+&nbsp; if (Joe.jumping == YES)&nbsp;&nbsp; /* Mova o Joe se estamos saltando
+
+*/ &nbsp;
+
+{ &nbsp;&nbsp;&nbsp;&nbsp; if (Joe.vel.y &gt;-100)&nbsp; /* O limite da velocidade de Joe é&nbsp; -100 */
+
+&nbsp;&nbsp;&nbsp;&nbsp; {
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joe.vel.y = Joe.vel.y - Joe.accel
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Joe.pos.y = Joe.pos.y + Joe.vel.y
+
+&nbsp;&nbsp;&nbsp;&nbsp; }
+
+&nbsp; }
+
+&nbsp;
+
+&nbsp; if (Joe.pos.y &lt;= 0)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /* Veja se Joe atingiu o solo */
+
+&nbsp; {
+
+&nbsp;&nbsp;&nbsp;&nbsp; Joe.vel.y = 0;
+
+&nbsp;&nbsp;&nbsp;&nbsp; Joe.jumping = NO;
+
+&nbsp; }
+
+End Loop
+
+
+
+</CODE></FONT></PRE>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">A 
+                  rodada adicionada não diminuirá a velocidade de Joe se ele já 
+                  estiver se movendo para baixo na velocidade de – 100. Então 
+                  nós adicionamos a velocidade limite dele.</P>
+                  <H2>Outras Dimenções</H2>
+                  <P>Ok, o exemplo acima está todo bom e bem, mas algumas 
+                  sprites de game não vão apenas para cima e para baixo. Algumas 
+                  vão para os lados enquanto estão saltando.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Fácil! 
+                  Só acontece que os valores x e y de velocidade e aceleração 
+                  são independentes! Assim, enquanto você resolve a posição e 
+                  velocidade y de Joe, você pode movê-lo na direção x 
+                  normalmente.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Vai 
+                  parecer que o Joe segue um caminho parabólico, que é o que ele 
+                  seguiria no mundo real.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">O 
+                  jogo vai para 3 dimensões. As velocidades e acelerações x, y e 
+                  z são todas independentes umas das outras.</P>
+                  <H4>O homem do espaço atraente. (Spaceman Spiff) </H4>
+                  <P>Um outro exemplo onde a cinemática se aplica é um jogo tipo 
+                  asteróide. Você voa em um meio ambiente com&nbsp; gravidade 
+                  zero, mas pode impulsionar-se para qualquer direção a 
+                  frente.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Neste 
+                  caso a gravidade não é um fator. O que usamos então? Usamos a 
+                  impulsão da espaçonave como nossa aceleração. Simplesmente 
+                  dissolvemos nosso vetor de aceleração em direções x e y, e 
+                  aplicamos as mesmas técnicas anteriores.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Para 
+                  implementar isto conseguimos o pseudo-código:</P>
+                  <P><CODE><FONT color=#008000><PRE>pos.x = 0;&nbsp; pos.y = 0;
+
+vel.x = 0;&nbsp; vel.y = 0;
+
+acc.x = 0;&nbsp; acc.y = 0;
+
+&nbsp;
+
+Loop
+
+&nbsp; if (tecla de impulsão pressionada)
+
+&nbsp; {
+
+&nbsp;&nbsp;&nbsp;&nbsp; resolve_direction_vector;
+
+&nbsp;&nbsp;&nbsp;&nbsp; acc.x = scale_x * 10;
+
+&nbsp;&nbsp;&nbsp;&nbsp; acc.y = scale_y * 10;
+
+&nbsp; }
+
+&nbsp;
+
+&nbsp; vel.x = vel.x + acc.x;
+
+&nbsp; vel.y = vel.y + acc.y;
+
+&nbsp;
+
+&nbsp; pos.x = pos.x + vel.x;
+
+&nbsp; pos.y = pos.y + vel.y;
+
+End Loop
+
+
+
+</CODE></FONT></PRE>
+                  <P></P>
+                  <P></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Agora 
+                  temos um passo que não tínhamos visto antes:&nbsp; 
+                  resolve_direction_vector. Precisamos disto porque a nave pode 
+                  mover-se em qualquer direção. O que este passo consegue fazer 
+                  é alcançar os vetores de direções apropriados e dissolvê-los 
+                  em um vetor x e um vetor y. Uma vez dissolvidos, o passo 
+                  resolve_direction_vector vai se posicionar scale_x and 
+                  scale_y.</P>
+                  <DIV>&nbsp; 
+                  <TABLE cellPadding=0 align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><PRE>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /^
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vetor de&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; aceleração&nbsp;&nbsp; /&nbsp; |
+
+&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;original&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp; |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp; |
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp; vetor Y
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |
+
+&nbsp; Posição&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; / *&nbsp;&nbsp;&nbsp;&nbsp; |
+
+&nbsp; Inicial&nbsp; -&gt;&nbsp;&nbsp;&nbsp; X-------&gt;|<O:P></O:P></PRE><PRE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vetor&nbsp; X <O:P></O:P></PRE><PRE>* = ângulo da nave medida do eixo x<O:P></O:P></PRE></TD></TR></TBODY></TABLE></DIV>
+                  <P></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Dado 
+                  um ângulo para nossa direção de 0 até 365, podemos determinar 
+                  as variáveis da escala x e da escala y. Há várias maneiras de 
+                  fazer isto, mas uma maneira fácil (não otimizada) é usar o 
+                  gatilho:</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">scale_x 
+                  = cos(angulo);<BR>scale_y = sin(angulo);<O:P></O:P></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">As 
+                  funções gatilho cuidarão dos valores negativos. Isto é, se a 
+                  espaçonave estiver direcionada para Oeste (ângulo = 180 
+                  graus), os valores para a escala _x e para a escala_y: a 
+                  escala_x = -1; a escala _y = 0; e nossa espaçonave vai 
+                  acelerar na direção x negativa.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Que 
+                  tal se a espaçonave estiver apontada para uma direção nordeste 
+                  (ângulo = 45)? Nós conseguimos:</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">scale_x 
+                  = .707<BR>scale_y = .707<O:P></O:P></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">O 
+                  que significa que a nave está acelerando em 7.07 na direção y 
+                  e, em 7.07 na direção x. A ilusão que você vê a nave acelerar 
+                  em 10 em uma direção de 45 graus.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Você 
+                  vai querer limitar a velocidade máxima da nave, ou mais 
+                  adiante ela estará logo indo mais rápido do que o usuário 
+                  possa ver.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Se 
+                  você quiser, algumas pessoas gostam de um campo alagado. Isto 
+                  significa finalmente que a nave diminui por si mesma. Para 
+                  fazer isto, simplesmente diminua a velocidade para zero a cada 
+                  rodada. (exemplo, se a velocidade for positiva, subtraia; se a 
+                  velocidade for negativa, adicione).</P>
+                  <H4>As equações REAIS </H4>
+                  <P></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Esta 
+                  parte explica as equações reais. Se você desejar fazer algumas 
+                  cinéticas mais complexas, esta parte vai dar a você tudo que 
+                  você precisa para resolver as equações. Senão, então o texto 
+                  anterior está repleto de aplicações. Para maiores explicações, 
+                  consulte um livro de física básico.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Definimos 
+                  três teclas variáveis com respeito a um objeto: deslocamento, 
+                  velocidade e aceleração.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">A 
+                  força está relacionada a aceleração na seguinte maneira: 
+                  (eventualmente, a segunda lei de movimento de Newton)</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">F 
+                  = M * a<O:P> </O:P></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Em 
+                  português: Forças igual a massa vezes aceleração.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Assim, 
+                  no nosso exemplo da espaçonave, a mão de Deus pode causar uma 
+                  pequena interdição com pouca massa para acelerar mais rápida 
+                  que um enorme zero aterrorizante com muita massa.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">A 
+                  relação entre deslocamento, velocidade e aceleração é:</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">s 
+                  = s0 + v0*t + 0.5*a*t^2<O:P> </O:P></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">O 
+                  deslocamento real é igual ao deslocamento inicial, mais a 
+                  velocidade vezes o tempo, mais metade vezes a aceleração vezes 
+                  o tempo ao quadrado.</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">v 
+                  = v0 + a*t<O:P> </O:P></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">A 
+                  velocidade real é igual a velocidade inicial mais a aceleração 
+                  vezes o tempo.</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">v^2 
+                  - v0^2 = 2*a*s<O:P> </O:P></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">A 
+                  velocidade real ao quadrado menos a velocidade inicial é igual 
+                  a duas vezes a aceleração vezes o deslocamento.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Com 
+                  estas 4 equações mágicas, quase todos os problemas de 
+                  movimento na física podem ser resolvidos.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Estas 
+                  equações são todas baseadas na aceleração constante (que se 
+                  encaixa bem com a maioria das aplicações do computador)</P>
+                  <H2>Como estas equações funcionam?</H2>
+                  <P></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Vamos 
+                  atirar uma bola em direção ao alto. Isto é uma situação de uma 
+                  dimensão, porque a bola está somente subindo ou descendo. 
+                  Vamos tomar a posição s0 para ver onde jogamos a bola para 
+                  cima no ar. Já que temos uma posição inicial, vou estar 
+                  referindo ao deslocamento real da bola conforme a posição. O 
+                  termo posição será uma referência de s0.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Ok, 
+                  então atiramos a bola para cima no ar. O instante que 
+                  liberamos a bola (t = 0) nós sabemos:</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">s0 
+                  = 0;<BR>v0 = 10 m/s na direção para cima (cerca de 22 milhas 
+                  por hora)<BR>a = ?<o:p> </o:p></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Hmm. 
+                  Qual é a aceleração? Para qualquer objeto próximo da 
+                  superfície da terra, a força devido a gravidade pode ser 
+                  encontrada com :</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Fg 
+                  = M*g<o:p> </o:p></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Onde 
+                  M é a massa e g é a constante gravitacional. Para a terra, g = 
+                  9.81 m/s^2.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Um 
+                  pouco de matemática agora. Combine Eqns 1 &amp; 5</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Fg 
+                  = M*a -&gt; M*g = M*a -&gt; g = a<o:p> </o:p></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Oba! 
+                  As massas parecem ter cancelado! Isto é interessante. Para 
+                  qualquer objeto que esteja caindo, a aceleração não é afetada 
+                  pela massa. Isto significa que um hipopótamo cairá tão rápido 
+                  quanto uma bola de ping-pong? Sim, eles irão. No vácuo. Mas eu 
+                  discordo...</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Assim, 
+                  a aceleração da bola é igual a g, ou 9.81 m/s^2. Mas a 
+                  aceleração está na direção decrescente. Assim dizemos que a = 
+                  -g</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Usando 
+                  Eqn 3, obtemos:</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">v 
+                  = v0 + a*t = 10 m/s + (-9.81 m/s^2) * 0 s = 10 m/s.<o:p> 
+                  </o:p></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Se 
+                  usarmos Eqn 2, também obtemos s = 0. Ótimo não?</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Vamos 
+                  dar uma olhada em 0.5 segundos mais tarde:</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">v 
+                  = 10 + (-9.81) * 0.5 s = 5.1 m/s<o:p> </o:p></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">A 
+                  bola diminuiu, o que é o que esperávamos. Finalmente ela 
+                  parará. Para descobrir isto, simplesmente posicionamos v = 0 e 
+                  resolvemos para t.</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">v 
+                  = 0 = 10 + (-9.81) * t<o:p> </o:p></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Resolvendo 
+                  para t, encontramos t = 1.019 segundos. Depois de 1.019 
+                  segundos atiramos a bola para cima, ela pára no meio do 
+ar.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Ok, 
+                  sabemos que ela pára, mas onde ela está? Para descobrir isto, 
+                  usamos Eqn 2:</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">s 
+                  = 0 + 10 * 1.019 + 0.5 * (-9.81) * 1.019^2 = 5.1 metros<o:p> 
+                  </o:p></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Isto 
+                  é 5.1 metros acima do ponto onde a liberamos.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">O 
+                  que sobe deve descer, mas em que velocidade? Qual a velocidade 
+                  que nossa bola vem quando a pegamos? Quando pegamos a bola, 
+                  sabemos que s = 0. Assim, usamos Eqn 4. Depois de alguns 
+                  cálculos, descobrimos v = sqrt( v0^2 ). Isto é fácil não? v = 
+                  v0. Bem…de uma certa forma sim.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Na 
+                  realidade, há duas soluções para esta equação: +v0 e -v0. O 
+                  que isto significa? Significa que sempre que a bola estiver na 
+                  posição s = 0, ou ela vai subir a v0 ou descer a v0. Já que 
+                  sabemos que vai subir quando a atiramos, deve estar descendo 
+                  na mesma velocidade.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">A 
+                  última coisa que descobrimos é qual a hora que ela vem:</P>
+                  <P class=MsoNormal 
+                  style="MARGIN-LEFT: 36pt; MARGIN-RIGHT: 36pt; mso-margin-top-alt: auto; mso-margin-bottom-alt: auto; tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">v 
+                  = -v0 = v0 + (-9.81) * t<o:p> </o:p></P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Resultado: 
+                  t = 2.038 segundos. Se atirarmos uma bola para cima a 10 m/s, 
+                  então 2.038 segundos mais tarde, descobrimos a mesma bola na 
+                  nossa mão.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Esta 
+                  parte foi apenas para mostrar como as equações funcionam. No 
+                  programa atual, você simplesmente não&nbsp; abandona estas 
+                  equações porque você teria que manter o valor de t para cada 
+                  objeto. A cada vez que alguém saltava, você resetaria aquele 
+                  objeto que é pessoal t.</P>
+                  <H4 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Hasta 
+                  La Vista, babies</H4>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Bem, 
+                  é isto. Espero que isto dê a você informação suficiente para 
+                  iniciar.</P>
+                  <P 
+                  style="tab-stops: 45.8pt 91.6pt 137.4pt 183.2pt 229.0pt 274.8pt 320.6pt 366.4pt 412.2pt 458.0pt 503.8pt 549.6pt 595.4pt 641.2pt 687.0pt 732.8pt">Se 
+                  você tem perguntas, sugestões, esclarecimentos e qualquer 
+                  outra modificação, por favor, me escreva. </P>Tradução: 
+                  Geovana Golin<BR>Original: Edgar Roman <BR>E-Mail : <A 
+                  href="mailto:eroman@nmsu.edu">eroman@nmsu.edu</A><BR></DIV></TD></TR>
+              <TR>
+                <TD align=middle><BR>
+                  <HR>
+
+                  <TABLE cellSpacing=2 cellPadding=2 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=middle><A target=_blank 
+                        noHREF="javascript:Janela('../mailfriendart.asp?artigo={SCRIPT_NAME}&amp;ID=107',350,490);"><IMG 
+                        alt="Enviar para um Amigo" 
+                        src="GDJ  Artigos  Programação  C-C++  Gravidade_arquivos/botao_enviar.gif" 
+                        border=0 ALGIN="CENTER" VALIGN="TOP"><BR>Enviar para um 
+                        Amigo</A></TD>
+                      <TD align=middle><FONT class=info><A 
+                        href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_leitura_impressao.php?ID=107" 
+                        target=_blank><IMG alt="Versão para Impressão" 
+                        src="GDJ  Artigos  Programação  C-C++  Gravidade_arquivos/botao_impressora.gif" 
+                        border=0 ALGIN="CENTER" VALIGN="TOP"><BR>Versão para 
+                        Impressão</A></FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- AREA DE TEXTO - FIM --></TD></TR>
+        <TR>
+          <TD align=middle width="100%" HEIGTH="20"><B>
+            <DIV class=categoria_artigo>GDJ 2005 - Colaboração das Comunidades 
+            ArsLudica/PDJ 
+(2001/2003)</DIV></B></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>

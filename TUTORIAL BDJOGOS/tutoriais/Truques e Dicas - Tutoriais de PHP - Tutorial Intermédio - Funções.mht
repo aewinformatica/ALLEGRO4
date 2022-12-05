@@ -1,0 +1,1748 @@
+From: <Salvo pelo Windows Internet Explorer 8>
+Subject: =?Windows-1252?Q?Truques_e_Dicas_-_Tutoriais_de_PHP_-_Tutorial_Interm=E9d?=
+	=?Windows-1252?Q?io_-_Fun=E7=F5es?=
+Date: Sun, 4 Apr 2010 16:34:37 -0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_00A3_01CAD414.B7210770"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.truquesedicas.com/tutoriais/php/intermedio/00010a.htm
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Truques e Dicas - Tutoriais de PHP - Tutorial =
+Interm=E9dio - Fun=E7=F5es</TITLE><!-- #BeginTemplate =
+"/Templates/php.dwt" --><!-- DW6 --><!-- #BeginEditable "doctitle" =
+--><!-- #EndEditable -->
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type>
+<STYLE type=3Dtext/css></STYLE>
+<LINK rel=3Dstylesheet href=3D"../../../links.css"><LINK rel=3D"SHORTCUT =
+ICON"=20
+href=3D"http://www.truquesedicas.com/truques.ico">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702"></HEAD>
+<BODY leftMargin=3D2 link=3D#000080 topMargin=3D2 bgColor=3D#ffffff =
+vLink=3D#000080=20
+marginheight=3D"2" marginwidth=3D"2">
+<TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"100%" =
+bgColor=3D#ffd6af=20
+height=3D76>
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dbottom width=3D"19%">
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D129>
+        <TBODY>
+        <TR>
+          <TD width=3D7>&nbsp;</TD>
+          <TD vAlign=3Dbottom width=3D122><IMG=20
+            src=3D"http://www.truquesedicas.com/imagens/fag_azul04.gif" =
+width=3D84=20
+            height=3D48></TD></TR></TBODY></TABLE></TD>
+    <TD width=3D"63%" align=3Dmiddle><!-- ADTECH JavaScript TAG 2.0 for =
+network: Hi-Media Portugal (NW 258) ++ Website: Truques e Dicas ++ =
+ContentUnit: Truques_e_Dicas_others_468x60 (CU ID 65877) ++ Date: Fri =
+Aug 09 16:34:35 CEST 2002 -->
+      <SCRIPT language=3DJavaScript><!--
+var myDate =3D new Date();
+AT_MISC =3D myDate.getTime();
+document.write('<script =
+src=3D"http://adserver.adtech.de/?addyn|2.0|258|65877|1|1|target=3D_blank=
+;loc=3D100;misc=3D' + AT_MISC + ';">');
+if (navigator.userAgent.indexOf("Mozilla/2.") >=3D 0 || =
+navigator.userAgent.indexOf("MSIE") >=3D 0) {
+   document.write('<a =
+href=3D"http://adserver.adtech.de/?adlink|2.0|258|65877|1|1|ADTECH;loc=3D=
+200;" target=3D"_blank"><img =
+src=3D"http://adserver.adtech.de/?adserv|2.0|258|65877|1|1|ADTECH;loc=3D2=
+00;" border=3D"0" width=3D"468" height=3D"60"></a>');
+}
+document.write('</scr' + 'ipt>');// -->
+</SCRIPT>
+      <NOSCRIPT><A=20
+      =
+href=3D"http://adserver.adtech.de/?adlink|2.0|258|65877|1|1|ADTECH;loc=3D=
+300;"=20
+      target=3D_blank><IMG border=3D0=20
+      =
+src=3D"http://adserver.adtech.de/?adserv|2.0|258|65877|1|1|ADTECH;"=20
+      width=3D468 height=3D60></A></NOSCRIPT></TD>
+    <TD width=3D"18%" align=3Dmiddle><!-- ADTECH JavaScript TAG 2.0 for =
+network: Hi-Media Portugal (NW 258) ++ Website: Truques e Dicas ++ =
+ContentUnit: Truques_e_Dicas_botao_120x60 (CU ID 73131) ++ Date: Tue Jan =
+28 13:21:50 CET 2003 -->
+      <SCRIPT language=3DJavaScript><!--
+var myDate =3D new Date();
+AT_MISC =3D myDate.getTime();
+document.write('<scr' + 'ipt =
+src=3D"http://adserver.adtech.de/?addyn|2.0|258|73131|1|12|target=3D_blan=
+k;loc=3D100;misc=3D' + AT_MISC + ';">');
+if (navigator.userAgent.indexOf("Mozilla/2.") >=3D 0 || =
+navigator.userAgent.indexOf("MSIE") >=3D 0) {
+   document.write('<a =
+href=3D"http://adserver.adtech.de/?adlink|2.0|258|73131|1|12|ADTECH;loc=3D=
+200;" target=3D"_blank"><img =
+src=3D"http://adserver.adtech.de/?adserv|2.0|258|73131|1|12|ADTECH;loc=3D=
+200;" border=3D"0" width=3D"120" height=3D"60"></a>');
+}
+document.write('</scr' + 'ipt>');// -->
+</SCRIPT>
+      <NOSCRIPT><A=20
+      =
+href=3D"http://adserver.adtech.de/?adlink|2.0|258|73131|1|12|ADTECH;loc=3D=
+300;"=20
+      target=3D_blank><IMG border=3D0=20
+      =
+src=3D"http://adserver.adtech.de/?adserv|2.0|258|73131|1|12|ADTECH;"=20
+      width=3D120 height=3D60></A></NOSCRIPT> </TD></TR></TBODY></TABLE>
+<TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD width=3D"10%">
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D129>
+        <TBODY>
+        <TR>
+          <TD bgColor=3D#ff7b00 vAlign=3Dtop width=3D7><IMG=20
+            src=3D"http://www.truquesedicas.com/imagens/t_01.gif" =
+width=3D7=20
+          height=3D7></TD>
+          <TD background=3Dhttp://www.truquesedicas.com/imagens/t_12.gif =
+
+            width=3D122><IMG=20
+            src=3D"http://www.truquesedicas.com/imagens/fag_azul01.gif" =
+width=3D92=20
+            height=3D13></TD></TR></TBODY></TABLE></TD>
+    <TD background=3Dhttp://www.truquesedicas.com/imagens/t_17.gif =
+width=3D"90%"=20
+    align=3Dmiddle>
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D640>
+        <TBODY>
+        <TR>
+          <TD height=3D13>
+            <DIV align=3Dcenter><A class=3Dtitulostopo=20
+            =
+href=3D"http://www.truquesedicas.com/tutoriais/index.htm">TUTORIAIS</A></=
+DIV></TD>
+          <TD>
+            <DIV align=3Dcenter><A class=3Dtitulostopo=20
+            =
+href=3D"http://www.truquesedicas.com/jogos/index.php">JOGOS</A></DIV></TD=
+>
+          <TD class=3Dtitulos>
+            <DIV align=3Dcenter><A class=3Dtitulostopo=20
+            =
+href=3D"http://www.truquesedicas.com/galeria/index.htm">GALERIA</A></DIV>=
+</TD>
+          <TD class=3Dtitulos>
+            <DIV align=3Dcenter><A class=3Dtitulostopo=20
+            =
+href=3D"http://www.truquesedicas.com/artigos/index.htm">ARTIGOS</A></DIV>=
+</TD>
+          <TD class=3Dtitulos>
+            <DIV align=3Dcenter><A class=3Dtitulostopo=20
+            =
+href=3D"http://www.truquesedicas.com/livraria/index.htm">LIVRARIA</A></DI=
+V></TD>
+          <TD class=3Dtitulos>
+            <DIV align=3Dcenter><A class=3Dtitulostopo=20
+            =
+href=3D"http://www.truquesedicas.com/cool_sites/index.htm">COOL=20
+            SITES</A></DIV></TD>
+          <TD class=3Dtitulos>
+            <DIV align=3Dcenter><A class=3Dtitulostopo=20
+            =
+href=3D"http://www.truquesedicas.com/downloads/index.htm">DOWNLOADS</A></=
+DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+<TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD width=3D"8%">
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D134>
+        <TBODY>
+        <TR>
+          <TD bgColor=3D#ff7b00 width=3D7><IMG=20
+            src=3D"http://www.truquesedicas.com/imagens/linha_tranp.gif" =
+width=3D1=20
+            height=3D1></TD>
+          <TD bgColor=3D#ff7b00 width=3D122><IMG=20
+            src=3D"http://www.truquesedicas.com/imagens/fag_azul02.gif" =
+width=3D92=20
+            height=3D5></TD>
+          <TD width=3D5><IMG=20
+            src=3D"http://www.truquesedicas.com/imagens/sombra3.gif" =
+width=3D5=20
+            height=3D5></TD></TR></TBODY></TABLE></TD>
+    <TD background=3Dhttp://www.truquesedicas.com/imagens/sombra2.gif=20
+      width=3D"85%"><P><IMG=20
+      src=3D"http://www.truquesedicas.com/imagens/linha_tranp.gif" =
+width=3D1=20
+      height=3D1></P></TD>
+    <TD background=3Dhttp://www.truquesedicas.com/imagens/sombra2.gif =
+width=3D"7%"=20
+    align=3Dright><IMG =
+src=3D"http://www.truquesedicas.com/imagens/sombra4.gif"=20
+      width=3D7 height=3D5></TD></TR></TBODY></TABLE>
+<TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"100%">
+  <TBODY>
+  <TR>
+    <TD vAlign=3Dtop =
+background=3Dhttp://www.truquesedicas.com/imagens/t_04.gif=20
+    rowSpan=3D2 width=3D129 align=3Dmiddle>
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D129>
+        <TBODY>
+        <TR>
+          <TD width=3D7></TD>
+          <TD width=3D122><IMG=20
+            src=3D"http://www.truquesedicas.com/imagens/fag_azul03.gif" =
+width=3D92=20
+            height=3D32></TD></TR>
+        <TR>
+          <TD width=3D7></TD>
+          <TD height=3D8 width=3D122></TD></TR></TBODY></TABLE>
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D129 =
+align=3Dcenter>
+        <TBODY>
+        <TR>
+          <TD align=3Dmiddle><A=20
+            href=3D"http://www.truquesedicas.com/index.htm"><IMG =
+border=3D0=20
+            alt=3D"P=E1gina Principal"=20
+            src=3D"http://www.truquesedicas.com/imagens/logo01.gif" =
+width=3D86=20
+            height=3D49></A></TD></TR>
+        <TR>
+          <TD height=3D20 align=3Dmiddle><BR>
+            <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D115>
+              <TBODY>
+              <TR bgColor=3D#ffffff>
+                <TD bgColor=3D#ffffff height=3D17>
+                  <DIV align=3Dcenter><FONT color=3D#22598f size=3D1=20
+                  face=3D"Verdana, Arial, Helvetica, sans-serif"><B>SITE =
+MAP=20
+                  </B></FONT></DIV></TD></TR>
+              <TR align=3Dmiddle>
+                <TD =
+background=3Dhttp://www.truquesedicas.com/imagens/t_05.gif>
+                  <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D"80%">
+                    <TBODY>
+                    <TR>
+                      <TD height=3D8></TD></TR>
+                    <TR>
+                      <TD class=3Dtitulos height=3D18><A class=3Dtitulos =
+
+                        =
+href=3D"http://www.truquesedicas.com/index.htm">Homepage</A></TD></TR>
+                    <TR>
+                      <TD height=3D18><A class=3Dtitulos=20
+                        href=3D"javascript:history.go(-1)">=AB =
+Recuar</A></TD></TR>
+                    <TR>
+                      <TD =
+height=3D8></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <FORM method=3Dpost name=3D"" action=3D/cgi-bin/search.pl>
+            <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D120>
+              <TBODY>
+              <TR>
+                <TD height=3D10></TD></TR>
+              <TR bgColor=3D#ff7b00>
+                <TD bgColor=3D#ff7b00 height=3D17>
+                  <DIV align=3Dcenter><FONT color=3D#ffffff size=3D1=20
+                  face=3D"Verdana, Arial, Helvetica, =
+sans-serif"><B>PESQUISAR</B></FONT></DIV></TD></TR></TBODY></TABLE>
+            <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D120>
+              <TBODY>
+              <TR>
+                <TD bgColor=3D#ff7b00 width=3D1><IMG=20
+                  =
+src=3D"http://www.truquesedicas.com/imagens/linha_laranja.gif"=20
+                  width=3D1 height=3D1></TD>
+                <TD vAlign=3Dtop align=3Dmiddle>
+                  <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D110>
+                    <TBODY>
+                    <TR>
+                      <TD height=3D8></TD></TR>
+                    <TR>
+                      <TD><FONT size=3D1=20
+                        face=3D"Verdana, Arial, Helvetica, =
+sans-serif"><B>Em=20
+                        PHP:</B></FONT></TD></TR>
+                    <TR>
+                      <TD height=3D10>
+                        <DIV align=3Dcenter><INPUT value=3Dphp =
+type=3Dhidden=20
+                        name=3DRealm> </DIV></TD></TR>
+                    <TR>
+                      <TD>
+                        <DIV align=3Dcenter><INPUT size=3D12 =
+name=3DTerms>=20
+</DIV></TD></TR>
+                    <TR>
+                      <TD height=3D10></TD></TR>
+                    <TR>
+                      <TD>
+                        <DIV align=3Dcenter><B><INPUT border=3D0=20
+                        =
+src=3D"http://www.truquesedicas.com/imagens/ok2.gif"=20
+                        width=3D23 height=3D14 type=3Dimage =
+name=3DimageField>=20
+                      </B></DIV></TD></TR>
+                    <TR>
+                      <TD height=3D10></TD></TR></TBODY></TABLE></TD>
+                <TD bgColor=3D#ff7b00 width=3D1><IMG=20
+                  =
+src=3D"http://www.truquesedicas.com/imagens/linha_laranja.gif"=20
+                  width=3D1 height=3D1></TD></TR></TBODY></TABLE>
+            <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D120>
+              <TBODY>
+              <TR bgColor=3D#ff7b00>
+                <TD><IMG=20
+                  =
+src=3D"http://www.truquesedicas.com/imagens/linha_laranja.gif"=20
+                  width=3D1 height=3D1></TD></TR></TBODY></TABLE></FORM>
+            <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D115>
+              <TBODY>
+              <TR>
+                <TD height=3D10></TD></TR>
+              <TR bgColor=3D#ffffff>
+                <TD bgColor=3D#ffffff height=3D17>
+                  <DIV align=3Dcenter><FONT color=3D#22598f size=3D1=20
+                  face=3D"Verdana, Arial, Helvetica, =
+sans-serif"><B>PHP</B></FONT></DIV></TD></TR>
+              <TR align=3Dmiddle>
+                <TD =
+background=3Dhttp://www.truquesedicas.com/imagens/t_08.gif>
+                  <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D"80%">
+                    <TBODY>
+                    <TR>
+                      <TD height=3D8></TD></TR>
+                    <TR>
+                      <TD height=3D18><A class=3Dtitulos=20
+                        =
+href=3D"http://www.truquesedicas.com/tutoriais/php/index.htm">Tutoriais</=
+A></TD></TR>
+                    <TR>
+                      <TD height=3D18><A class=3Dtitulos=20
+                        =
+href=3D"http://www.truquesedicas.com/tutoriais/php/exercicios/index.htm">=
+Exerc=EDcios</A></TD></TR>
+                    <TR>
+                      <TD height=3D18><A class=3Dtitulos=20
+                        =
+href=3D"http://www.truquesedicas.com/cool_sites/php.htm">Links</A></TD></=
+TR>
+                    <TR>
+                      <TD height=3D18><A class=3Dtitulos=20
+                        =
+href=3D"http://www.truquesedicas.com/tutoriais/php/downloads/index.htm">D=
+ownloads</A></TD></TR>
+                    <TR>
+                      <TD =
+height=3D15></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D122>
+              <TBODY>
+              <TR>
+                <TD height=3D20></TD></TR>
+              <TR bgColor=3D#ff7b00>
+                <TD bgColor=3D#ff7b00 height=3D17>
+                  <DIV align=3Dcenter><FONT color=3D#ffffff size=3D1=20
+                  face=3D"Verdana, Arial, Helvetica, =
+sans-serif"><B>PUB</B></FONT></DIV></TD></TR></TBODY></TABLE>
+            <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D122>
+              <TBODY>
+              <TR>
+                <TD bgColor=3D#ff7b00 width=3D1><IMG=20
+                  =
+src=3D"http://www.truquesedicas.com/imagens/linha_laranja.gif"=20
+                  width=3D1 height=3D1></TD>
+                <TD><!-- ADTECH JavaScript TAG 2.0 for network: Hi-Media =
+Portugal (NW 258) ++ Website: Truques e Dicas ++ ContentUnit: =
+Truques_e_Dicas_botao_120x120 (CU ID 69310) ++ Date: Tue Oct 15 17:12:50 =
+CEST 2002 -->
+                  <SCRIPT language=3DJavaScript><!--
+var myDate =3D new Date();
+AT_MISC =3D myDate.getTime();
+document.write('<script =
+src=3D"http://adserver.adtech.de/?addyn|2.0|258|69310|1|36|target=3D_blan=
+k;loc=3D100;misc=3D' + AT_MISC + ';">');
+if (navigator.userAgent.indexOf("Mozilla/2.") >=3D 0 || =
+navigator.userAgent.indexOf("MSIE") >=3D 0) {
+   document.write('<a =
+href=3D"http://adserver.adtech.de/?adlink|2.0|258|69310|1|36|ADTECH;loc=3D=
+200;" target=3D"_blank"><img =
+src=3D"http://adserver.adtech.de/?adserv|2.0|258|69310|1|36|ADTECH;loc=3D=
+200;" border=3D"0" width=3D"120" height=3D"120"></a>');
+}
+document.write('</scr' + 'ipt>');// -->
+</SCRIPT>
+                  <NOSCRIPT><A=20
+                  =
+href=3D"http://adserver.adtech.de/?adlink|2.0|258|69310|1|36|ADTECH;loc=3D=
+300;"=20
+                  target=3D_blank><IMG border=3D0=20
+                  =
+src=3D"http://adserver.adtech.de/?adserv|2.0|258|69310|1|36|ADTECH;"=20
+                  width=3D120 height=3D120></A></NOSCRIPT></TD>
+                <TD bgColor=3D#ff7b00 width=3D1><IMG=20
+                  =
+src=3D"http://www.truquesedicas.com/imagens/linha_laranja.gif"=20
+                  width=3D1 height=3D1></TD></TR></TBODY></TABLE>
+            <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D122>
+              <TBODY>
+              <TR bgColor=3D#ff7b00>
+                <TD><IMG=20
+                  =
+src=3D"http://www.truquesedicas.com/imagens/linha_laranja.gif"=20
+                  width=3D1=20
+    =
+height=3D1></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR></TD>
+    <TD vAlign=3Dbottom=20
+    background=3Dhttp://www.truquesedicas.com/imagens/sombra12.gif=20
+    width=3D5>&nbsp;</TD>
+    <TD vAlign=3Dtop width=3D"99%" align=3Dmiddle>
+      <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 width=3D"95%">
+        <TBODY>
+        <TR>
+          <TD align=3Dmiddle><!-- #BeginEditable "body" -->
+            <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D"100%">
+              <TBODY>
+              <TR>
+                <TD height=3D30></TD></TR>
+              <TR>
+                <TD></TD></TR>
+              <TR>
+                <TD height=3D16 vAlign=3Dtop><FONT color=3D#ff7b00 =
+size=3D4=20
+                  face=3D"Verdana, Arial, Helvetica, =
+sans-serif"><B>TUTORIAIS DE=20
+                  PHP</B></FONT></TD></TR>
+              <TR>
+                <TD height=3D20 align=3Dright>&nbsp; </TD></TR>
+              <TR>
+                <TD height=3D20 vAlign=3Dtop>
+                  <TABLE border=3D0 cellSpacing=3D0 cellPadding=3D0 =
+width=3D"100%">
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=3Dtop align=3Dmiddle>
+                        <TABLE border=3D0 cellSpacing=3D0 =
+cellPadding=3D0=20
+                          width=3D"95%"><TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE border=3D0 cellSpacing=3D0 =
+cellPadding=3D0=20
+                              width=3D"100%">
+                                <TBODY>
+                                <TR>
+                                <TD width=3D"54%"><FONT size=3D3=20
+                                face=3D"Verdana, Arial, Helvetica, =
+sans-serif"><B>Classes=20
+                                e Objectos</B></FONT></TD>
+                                <TD width=3D"46%" align=3Dright>
+                                <TABLE border=3D0 cellSpacing=3D0 =
+cellPadding=3D0=20
+                                width=3D144>
+                                <TBODY>
+                                <TR>
+                                <TD align=3Dright>
+                                <DIV align=3Dright><A =
+class=3Dtitulosvermelhos=20
+                                =
+href=3D"http://www.truquesedicas.com/tutoriais/php/index.htm">Tutoriais=20
+                                PHP </A></DIV></TD>
+                                <TD width=3D15 align=3Dright><A=20
+                                =
+href=3D"http://www.truquesedicas.com/tutoriais/php/index.htm"><IMG=20
+                                border=3D0=20
+                                =
+src=3D"http://www.truquesedicas.com/imagens/setaforward.gif"=20
+                                width=3D8=20
+                                =
+height=3D13></A></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>=
+</TR>
+                          <TR>
+                            <TD height=3D2></TD></TR>
+                          <TR>
+                            <TD bgColor=3D#000000 height=3D1><IMG=20
+                              =
+src=3D"http://www.truquesedicas.com/imagens/linha_tranp.gif"></TD></TR>
+                          <TR>
+                            <TD height=3D50 vAlign=3Dtop>
+                              <TABLE border=3D0 cellSpacing=3D0 =
+cellPadding=3D0=20
+                              width=3D"100%">
+                                <TBODY>
+                                <TR>
+                                <TD></TD>
+                                <TD></TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD>&nbsp;</TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD>&nbsp;</TD></TR>
+                                <TR>
+                                <TD class=3Dtexto>&nbsp;</TD>
+                                <TD class=3Dtexto>
+                                <P>Uma classe =E9 um conjunto de =
+vari=E1veis e=20
+                                fun=E7=F5es relacionadas com essas =
+vari=E1veis. A=20
+                                vantagem da sua utiliza=E7=E3o =E9 poder =
+usufruir do=20
+                                recurso de encapsulamento de =
+informa=E7=E3o. Com o=20
+                                encapsulamento o utilizador de uma =
+classe n=E3o=20
+                                precisa saber como =E9 que ela =E9 =
+implementada,=20
+                                bastando para a utiliza=E7=E3o conhecer =
+a interface,=20
+                                ou seja, as fun=E7=F5es dispon=EDveis. =
+Uma classe =E9 um=20
+                                tipo, e portanto n=E3o pode ser =
+atribu=EDda a uma=20
+                                vari=E1vel. Para definir uma classe, =
+deve-se=20
+                                utilizar a seguinte =
+sintaxe:<BR><BR><SPAN=20
+                                class=3Dcodigo_flash>class =
+Nome_da_classe {<BR>var=20
+                                $variavel1; <BR>var =
+$variavel2;<BR>function=20
+                                funcao1 ($parametro) {<BR>/* =3D=3D=3D =
+corpo da fun=E7=E3o=20
+                                =3D=3D=3D =
+*/<BR>}<BR>}</SPAN><BR></P></TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD>&nbsp;</TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD><FONT size=3D2=20
+                                face=3D"Verdana, Arial, Helvetica, =
+sans-serif"><B>Objecto</B></FONT></TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD>&nbsp;</TD></TR>
+                                <TR>
+                                <TD class=3Dtexto>&nbsp;</TD>
+                                <TD class=3Dtexto>
+                                <P>Como foi dito anteriormente, classes =
+s=E3o=20
+                                tipos, e n=E3o podem ser atribu=EDdas a =
+vari=E1veis.=20
+                                Vari=E1veis do tipo classe s=E3o =
+chamadas objectos,=20
+                                e devem ser criadas utilizando o =
+operador new,=20
+                                seguindo o exemplo abaixo:</P>
+                                <P class=3Dcodigo_flash>$variavel =3D =
+new=20
+                                $nome_da_classe;</P>
+                                <P>Para utilizar as fun=E7=F5es =
+definidas na classe,=20
+                                deve ser utilizado o operador "-&gt;", =
+como no=20
+                                exemplo:<BR></P>
+                                <P=20
+                                =
+class=3Dcodigo_flash>$variavel-&gt;funcao1()</P></TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD>&nbsp;</TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD><FONT size=3D2><B><FONT=20
+                                face=3D"Verdana, Arial, Helvetica, =
+sans-serif">A=20
+                                vari=E1vel =
+$this</FONT></B></FONT></TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD>&nbsp;</TD></TR>
+                                <TR>
+                                <TD class=3Dtexto>&nbsp;</TD>
+                                <TD class=3Dtexto>
+                                <P>Na defini=E7=E3o de uma classe, =
+pode-se utilizar=20
+                                a vari=E1vel $this, que =E9 o pr=F3prio =
+objecto.=20
+                                Assim, quando uma classe =E9 instanciada =
+num=20
+                                objecto, e uma fun=E7=E3o desse objecto =
+na defini=E7=E3o=20
+                                da classe utiliza a vari=E1vel $this, =
+essa=20
+                                vari=E1vel significa o objecto que =
+estamos a=20
+                                utilizar.</P>
+                                <P>Como exemplo da utiliza=E7=E3o de =
+classes e=20
+                                objectos, podemos utilizar a classe =
+conta, que=20
+                                define uma conta banc=E1ria bastante =
+simples, com=20
+                                fun=E7=F5es para ver saldo e fazer um =
+cr=E9dito.</P>
+                                <P class=3Dcodigo_flash>class conta =
+{<BR>var=20
+                                $saldo;<BR>function saldo() {<BR>return=20
+                                $this-&gt;saldo;<BR>}<BR>function=20
+                                credito($valor) {<BR>$this-&gt;saldo =
++=3D=20
+                                $valor;<BR>}<BR>}</P>
+                                <P><SPAN =
+class=3Dcodigo_flash>$minhaconta =3D new=20
+                                conta; <BR>$minhaconta-&gt;saldo(); =
+</SPAN>//a=20
+                                variavel interna n=E3o foi inicializada, =
+e n=E3o=20
+                                cont=E9m nenhum valor<SPAN=20
+                                class=3Dcodigo_flash><BR></SPAN><SPAN=20
+                                =
+class=3Dcodigo_flash>$minhaconta-&gt;credito(50);<BR>$minhaconta-&gt;sald=
+o();=20
+                                </SPAN>// retorna 50</P></TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD>&nbsp;</TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD><B><FONT size=3D2=20
+                                face=3D"Verdana, Arial, Helvetica, =
+sans-serif">SubClasses</FONT></B></TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD>&nbsp;</TD></TR>
+                                <TR>
+                                <TD class=3Dtexto>&nbsp;</TD>
+                                <TD class=3Dtexto>Uma classe pode ser =
+uma extens=E3o=20
+                                de outra. Isso significa que ela =
+herdar=E1 todas=20
+                                as vari=E1veis e fun=E7=F5es da outra =
+classe, e ainda=20
+                                ter=E1 as que forem adicionadas pelo =
+programador.=20
+                                Em PHP n=E3o =E9 permitido utilizar =
+heran=E7a=20
+                                m=FAltipla, ou seja, uma classe pode ser =
+extens=E3o=20
+                                de apenas uma outra.Para criar uma =
+classe=20
+                                extendida, ou derivada de outra, deve =
+ser=20
+                                utilizada a palavra reservada extends, =
+como pode=20
+                                ser visto no exemplo seguinte:=20
+                                <P class=3Dcodigo_flash>class novaconta =
+extends=20
+                                conta {<BR>var $numero;<BR>function =
+numero()=20
+                                {<BR>return =
+$this-&gt;numero;<BR>}<BR>}</P>
+                                <P>A classe acima =E9 derivada da classe =
+conta,=20
+                                tendo as mesmas fun=E7=F5es e =
+vari=E1veis, com a=20
+                                adi=E7=E3o da vari=E1vel $numero e a =
+fun=E7=E3o=20
+                                numero().<BR></P></TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD>&nbsp;</TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD><B><FONT size=3D2=20
+                                face=3D"Verdana, Arial, Helvetica, =
+sans-serif">Construrores</FONT></B></TD></TR>
+                                <TR>
+                                <TD>&nbsp;</TD>
+                                <TD>&nbsp;</TD></TR>
+                                <TR>
+                                <TD class=3Dtexto>&nbsp;</TD>
+                                <TD class=3Dtexto>
+                                <P>Um construtor =E9 uma fun=E7=E3o =
+definida na classe=20
+                                que =E9 automaticamente chamada no =
+momento em que=20
+                                a classe =E9 instanciada (atrav=E9s do =
+operador=20
+                                new). O construtor deve ter o mesmo nome =
+que a=20
+                                classe a que pertence. Veja o =
+exemplo:</P>
+                                <P class=3Dcodigo_flash>class conta =
+{<BR>var=20
+                                $saldo;</P>
+                                <P class=3Dcodigo_flash>function conta =
+()=20
+                                {<BR>$this.saldo =3D 0;<BR>}</P>
+                                <P class=3Dcodigo_flash>function saldo() =
+
+                                {<BR>return =
+$this-&gt;saldo;<BR>}<BR>function=20
+                                credito($valor) {<BR>$this-&gt;saldo =
++=3D=20
+                                $valor;<BR>}<BR>}</P>
+                                <P>Podemos perceber que a classe conta, =
+possui=20
+                                um construtor, que inicializa a =
+vari=E1vel $saldo=20
+                                com o valor 0.<BR>Um construtor pode =
+conter=20
+                                argumentos, que s=E3o opcionais, o que =
+torna esta=20
+                                ferramenta mais poderosa. No exemplo =
+acima, o=20
+                                construtor da classe conta pode receber =
+como=20
+                                argumento um valor, que seria o valor =
+inicial da=20
+                                conta.<BR>Vale observar que para classes =
+
+                                derivadas, o construtor da classe pai =
+n=E3o =E9=20
+                                automaticamente herdado quando o =
+construtor da=20
+                                classe derivada =E9 =
+chamado.</P></TD></TR>
+                                <TR>
+                                <TD class=3Dtexto>&nbsp;</TD>
+                                <TD class=3Dtexto>&nbsp;</TD></TR>
+                                <TR>
+                                <TD class=3Dtexto =
+height=3D20>&nbsp;</TD>
+                                <TD class=3Dtexto =
+height=3D20>&nbsp;</TD></TR>
+                                <TR>
+                                <TD class=3Dtexto =
+height=3D30>&nbsp;</TD>
+                                <TD class=3Dtexto =
+height=3D30>&nbsp;</TD></TR>
+                                <TR>
+                                <TD height=3D30>&nbsp;</TD>
+                                <TD height=3D30>
+                                <TABLE border=3D0 cellSpacing=3D0 =
+cellPadding=3D0=20
+                                width=3D"100%">
+                                <TBODY>
+                                <TR>
+                                <TD width=3D"50%">
+                                <TABLE border=3D0 cellSpacing=3D0 =
+cellPadding=3D0=20
+                                width=3D"95%">
+                                <TBODY>
+                                <TR>
+                                <TD width=3D"5%">
+                                <DIV align=3Dleft><A=20
+                                href=3D"javascript:history.go(-1)"><IMG =
+border=3D0=20
+                                =
+src=3D"http://www.truquesedicas.com/imagens/setaback.gif"=20
+                                width=3D8 height=3D13></A></DIV></TD>
+                                <TD width=3D"95%">
+                                <DIV=20
+                                =
+align=3Dleft>&lt;a</DIV></TR></TBODY></TABLE></TR></TBODY></TABLE></TR></=
+TBODY></TABLE></TR></TBODY></TABLE></TR></TBODY></TABLE></TR></TBODY></TA=
+BLE></TR></TBODY></TABLE></TR></TBODY></TABLE></BODY></HTML>
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/fag_azul04.gif
+
+R0lGODlhVAAwAMQfAI1oXmQ1B/qypnBZUfjSrlpGOKp9cKybh5lmM0I1L/jOyAkIBsqRh/D408Wu
+luqlmIpbLqJrNEQtF/27rycZDeKtpd7EpvGsoPz/4Nybj3hLIYeBcCcnJd3kwxkaGf/WryH5BAEA
+AB8ALAAAAABUADAAAAX/4CeOZGmeaEpahOqSx/bOdG15VmodhtOqB8qvRiyKCIOF40Q4ADIVBiCX
+ckiWxiztILmaHIbLZKIoG4amg0ambVclkQB25MhMBHhy+YAmGSADfW5tTRQQcRtDBw93eI5jFVQl
+FhoICYKDWQQJGhEIEBIFGzyMjqZ5fCMEOwUIERKSmW5cnp4aA2FjExcPpwITFQAGwwAFh65esoQW
+GxQICBoBGrkPAAC4jWMXYgbP3t5xB8paBAAUEpXQGhDsjAUAvwIXGcQQDAyuzxDgEuLjWQMCRBgI
+IYCrCPusCaAH4BO7Z9MgaIhm0NuCAbH+zUDSiV20ifvUOTwIMRqCANJM/3qTsMBDIo00rHgqGGCY
+OpATS37UAECDBGsGAhzTp2EBJpgmLEjQhzLMAwbDKKZEKQ2CAQYDrr1LCQ4BhYxImXDoFA0CAAb0
+GF2AOhOBMLRrr6Glmc5V0aNhVQ2AM5HXVVMXgA4zkKHXBAMSGDGgINSTqwAezuR1wXHavQu+Mlwb
+wLnUBKyBPTB+iIDlnMkurDHA/KiRgAewYZt6kEECY6qdvBpFTbmOmEcXsOGBXbjXI3NUUT6LUMAD
+XtQE6owx9flaAl/YE0hILtQuh+dhLThgQMb1LwNPMgzAzBr7hQK4QXGgQN857xUHyJc5NcFar23n
+FRDPKe+tc8grDuwwCv944+ygnwLm/WJNe44El8Bv1CE2UQAsgYWaBcPoEaGE62H3ywAJlELdAAUM
+s8FL931AQIhljIhHViYex4EdpiggABsx0gFABTWaOAGOOT6CGHmPKMCAPzGWY0AZEGJ3B2c2tqbL
+AB4wiUcZAJw2WTkMUGnkewDoouZ0vEClFQcoelkjRryVk4GZVj6QQAKCEaNVAhx4wME7BzhwnQHX
+5VFGBQUwOMh4VNr4WQFZ8TkAB4NycNEoCXjQQQMYYLDBAGO02AiVPaBGGJ78obcBAwl0EKooonIA
+qqgLfNpABxyQd1gB2czpaBsgFkndAwMUqtkAGOyKQ60NgOqAEqGyeMf/Z4l+WcaTY77qmjYGYDTj
+BAkcEOoBHMi6ga3RduCBuTfwiC11VAIwLDmcFSdFmC0cwEusoFIa6gaeRttAAhtgwGc2WPa4qAHQ
+xfBioT9YQJ4BBRjMQcKiFhwtpRtk+9mO/KHqYZ0GSMixBUqAekCu0WKQxIXXMsCBARHqASHEQYpg
+gTBjILoBMx7c+rKsGDjgQQG/fSYBzthRqYABJ4dl6NJ5YNypSwcws8Aol6Y5m5e+6BzMvY9iiqlx
+2khRwJ6Y8plLzklKnSpSBKzigBOYFqBBr9moKQ9rUnDGQJK+SC2AveNEFwOLgMbdEZyFZZDBar/c
+8RSXggoKD+JNoiqmtRbMFBCoB6ijE9JMgaqNKTxSRO4BJ+wMCrrD+wUyiAVq7xlKJY59U8DbCQzf
+d9/EH4iA7bdrW+/oRRDQXAIHDvTNN8ET1HonwXuzJ4WIS61ABbq7QcC6g16v/voaGJP9QJ5837wA
+4iswAPRG/Dxo9+tfb703EBiegYo3P51RiQGNkgVH+Nc/9dVCA6hDXaDEdjudTYoCC6gaEdClj338
+r4HQKN4hTJcVawwgAxUE16UowL0BhAAAOw==
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://adserver.adtech.de/?adserv|2.0|258|65877|1|1|ADTECH;
+
+R0lGODlh1AE8APcAAANHelyKuq2wsmaSvuju9UmCtkt8srTK3tFTWZm11N7j7IurYo6PjWyWwu3z
+92GOvMzU2ktLSwJOiNbd5Pv+/7jN47LJnJKnuGWSKuXp1Xyiy0F1rsXJynBxcs3dr6K82CKGvMfO
+1azE3B8gJS9qjgJ1tN3j5pi1x/LR07ZFTKfIYMyusvb7/LvFzcXW59/kzdzn8neaSKe4xnyix8mR
+ltvf5leIF/P3+6w4QdXb3uTr8EV5ruLn7actNQU0Zs7d697e3ai4lXGjJ4ecroaqz0Z1lO3u79Pf
+7be8wvf393mex+Tl5E+ZxFtgLGiixHWJjFeWu3mbtNTX3YW0Lom2x9TW1tndx76HjHCoFdF5f71r
+cVFtdJmuwjGOwczWy/bt6niit+aush1agmWaGF6NI4u01Nbk7/X25+qFi4tJTVmFpESHrW93SW9Q
+UnaVrtTJyq3Czta+wZy2f1mClmOLpjhtqvz7+Wx8g8qdonGmxM7X4RdglIOtxYOkw+3m5Huyx5zC
+0c7b49Tb1UqQvl2gxu3043qrxXOsy93s8MU/SIB+edzf0nKrxf318kl5rsCnZO3t5LRZYMvX6+3f
+4FqLtZLF4tfj5ExYX3uty/Hu+nmOoL7S3trf62uTq9PX5Obs5I2twne02dDP0MXW7FdiWs7f8eac
+oQFdnmmp0jZ/tTl8pdzW1Sp3oPf79VWKupnCPzQzM0t8oM/j9DN8ouL2+TB0n8DP41B8t0FIMMDc
+7E6NsYqlwEJ6oHSu08e6k9be8zt/rcvj68fb5jtymnKbzBp4smm54Ofn8ShundDX7VJ9n56fnr00
+Ozw/QmRiYi97sDhxqoqqz4Kmy1GCtjxxqlWGto6uz46u0zx1roamy3Gaw1mGtnWex1mGujxxrnWa
+x1WCtnWaw3Gax4amz0+CsnGWw4quz4Kiyzx1qoqqy3WewpKx0o6vyo6qyo6qz1CGtW6mzChPnEJz
+nd7X2//3+L7ZgwA+eTphdzR1pzh1qPT09C5cjThvqQAAAP///////yH/C05FVFNDQVBFMi4wAwEA
+AAAh+QQFLAH/ACwAAAAA1AE8AAAI/wD9CRxIsKDBgwgTKlzIsKFDg/wiSpxIsaLFixgzatzIsaPH
+jyBDiqS2w0CABn0SHIBQY4lLEwpiyuQEE8iLJUAgHEiQrlwAcjuoCR3ZcUNJA+Smgau2VKkBR0E3
+DCVKtSrGh1izat3KFaLVr2DDih1LFumAlCthvpzJtoZbmjkWvRC0s0+DagbQTRVrFOm2BwMalAtH
+mHBgStumPcW2l6zjjF0jS57c9bHly5gzhzR6kh2cQGrbin47oTQnT3LpslP3YDFfv4CV9GG37sSH
+2ydyp+ujpMGDxFGhCdc8VarxxiEpK1/OvCDx59Cjj91A7gHa0KNrkt7uqTRqKyE+9P9pHbzq0djt
+TsAJIUju3NRWvHCAcyIb69/lL/d1lNRpU6j5edTcgARWJt2BCCaoUUlnfaDHWmzxkB133nUnxVxw
+9ASUefw9UM5sH7Bn01s4xQSECXJZYQUHH6zm24bIfdWXUgEAJpg2hh2WGFDHcVTgj0AyNNyQChJp
+ZJFHIpnkgtVl8xmEMr10Yg5UVqmHFFhmWeGVeixihQjt3NXjkhfxtw1K63y2CHYTnualFxnOMABw
+MRJ1Xmx9ZEObDAnwqRtv4cyJV4AXBWnooQPVqeiiZDLqaKOQPipppJRWOmmdDKbzpIRRQrndaVuG
+IKqoWkqi4gGgzCkVSOcp4VlcnHb/CpeJoG5nhQcZhvMToZcKdV4D6qQHx0rtqejlm/PJwI5dc7qm
+KKLQAtnrtJZSa2212F6r7ZKZbmqiIFUokMQNdoyrjxEEnOvAujq0K5MnV4bQwqjwnhqms5GWdGZK
+LMUaJU0Af2qalSvW1+yq1pr1YZoiZsBmwMd60UJ9rNGpF3LRZjxgcRx3vK3HH4Mscsgjk/yxSTM4
++IkCQKwiCktGlMvCuTwYkUPM5K57A7vsSjiBHrZw0MK8yagownh5Xbyovtq86qm/AlNooSC4ZnNX
+0iU31tdJM5yQ1sO0Cqwii7tog9+YQ2mstnK+Zu3223AzFvfcdNdt992+ninDgy1D/yCFDuYGPvPM
+PRPgLtQz/Tx0C7aoKN5PWTO9TghgQzgwEFZmbiG8yXjQQk8Wv62vh05XHrB2tf7QHgcGhz7V2rBH
+hjfatHvT9lC1K5377rfrLvfvuPPeu/DA+x788cgTXzyD62zCwyKiiIuuzAONS8HMtCBiOCIwdH8E
+iTVxyaW8jUNwQjngBEe75JTLuvL2x0D9A7wQjEqv+J1/ro3ru4/Ob0sRSlzYUleh+ORqV2OKnQK1
+chyjGK+BDoRgBIcnwQdacIIVzOAFN4hBDmrwgyD0IAdNoikFOCxnSbieQHamLsPJohQw/MEoZugC
+8W0pXn6LFwdegCryaBBl7GiflP9M4AAWqJCF6dIZz7pHv8VxIAScs4L+0qe+H3bGW6ZDndR+Bi8P
+sE4JZzvOAsfokA6a8YwhTKMa18jGNrrxjWhUIyW0kQDQQKIVFHBAu1LIxxWywHCjyVL95OVE++Vw
+FPF5XBWNw7R2HEBKWKoB4MqlR3TdzIgszCT8TgOBFiABCU/M3y4OFsdGiuBEbaoS5jTHynp9MYxS
+IaMsFVLKWtrylrjMpS53ycte3rJJj1xCIc7QCkvwwA4JQWILD+ezn9VvcYWEYpc2ca9F+u+UJqhS
+zWQWOH2oy5tJZCYzYaKHEHyScVWDpRmn0Zlgui9+8Yva5spJqhzSzwMJACMVjTL/S8kQ4Hsx/B4B
+lhPBkhT0oFFJKCMRylCDNvShEFWoRCNK0YlW9KIYtahFqxEOlQEBEiAll0M0+YVKwhOS9IRmKCfw
+AXVYLKHVSdkql7BHZNqUetejhU63xz0z/MtKOSRkC/Cpq8VM1C9NOwAqnyeF6GUChSZd5uHc0sT7
+VYGoYWyINgrAVQOswyBH6KpY+8PVbqyDXCIYq1q56g8NrBUpXR3IB1xBVriW9awC6aoGDqLXgzhU
+o38NbEYFC9jBEtaBCCzsYRerWIYm1rCNZVAf3ElMFRaEFrLIRQVE0KJl8QYMoAVtni4AitzAYT1+
+C80z52WCHho1KkkJRxBPyM0j/4KTXS+UoQxHYYve1u+GL3viy0JgizhwgB1XI6xJUKJUCVXhiZIM
+3EmXQDglosukVF0tFEXhhfMhkCEVUCsMChJWu5pXrNrwxwfeOta2sjeu6n0vXK2RV6Rwg6/29WtG
+w3EQAiTAH4y16ANcMFAC2CIAAWZsAzZBLhhYw6D+SECCHzoAWxT4AAg+7H8XG+GSdHjCID5KOU7g
+AgndcYXB0GwlQoGKLhRjD3uQgIxnDIAa2/jGYrAHAPZBgiIooxNDUI8UyNmCHJjvG4M6ilmcZIJP
+5GybmLzpzrgnvyqNanHnnJf9bOGBxylmPzNq0JRedgxvmtl63TTcJhH3LkKGQP8+oPDJUxgyALUq
+gbzyFesR1lvXtbqXq7LhhgaUQGhCC4SueXZFfQuwV4P01SAGfS2AJg2gaRTaHz8gdAM2rORIezrS
+6riBAqzhKhjc4BufTrWqG3CDH9jnAB/+sHJVbVBWu5obCTDcl1P9AQB3OtIfdjWth01sfclUQvoQ
+CCBSUQIQdAEEJSjBKd7xgBjTeMY0trGOlVEEANjj2zoWwz6GQYcLUI5KR3tsdcJRR2ESMxiTRIgm
+p2yEWFFpkJ78pL6HZr91yDmw664j9IBQyRQSBM3Z6573fOode1vicuXkQDoTsxA+F8AadebqEQhS
+3gL0uiAE2KrGC6IE+BKk5Gz/VYhYYX3wjBtg0Xd29C0Yrd+nUPrmqfbHAQza61xjmjwN+IE/zKAE
+T0+j1Z3+wQ2mkWtrDPQHPhTBzsJLaRH4Y58Ejrk/CFCScChg6EXfwX9zfQMX7PopVk9yA9rKHxE8
+Pewb5rTY2zoQrn9YCWYAO1Sa/nTy2Pzvnwamz/Doj0EUoxK5yCwTJACMZKMDABLwdo1lLHlv69ge
++xDFPEhwY3DreMd0gMMSPlfnSoPjLM0F6fRGqkxAxoR+TxQalrOcAzjIiUd/b6dLiojm6922XYjQ
+rSRc0Fvf5lBggUi+d0KAVXIoZOldNXBXB8DxrlrdIBbf+MlNPhC3cvU2nAX//wdssWjqGwQGAF10
+n+uqdYIA/v3wn7TObd5rAmQjG//cwQNucAAlwNrvcxd2Nndn61B/95d/BlABN7Ab/Ad4VpcNNvcA
+JXdnB1AOO0CB/sd2Boh/MFB1bDeAraF066AELqCBANZr9Hd1FGiB6nWBOpeBRbeBCPhr8EcOmxYC
+OtBk9CAQ+AAPRiQQpYAMe4AYewB5EcELRSgBYkACYiABJMB59iAGITAJ8uB5l3eFUTg0+QQUEchu
+D5IB3pRMhZABL+ABZmgBaJiGaogEFgBKoGRIsZdv82IN/2Zz1SBmTjYuNZNsBmdb/4I6ggSH9lQh
+cIY+CpFWSPFV/iByBVABA//RcR9XENlHctwnECh3Xv1xX1cHaA2RZ5wIafEXin83f0/Raw2AdgBW
+YkcBAztnc44Ifzr3XxZoAFZnEv6QDk9BBP4AgNswUCvkAuTRggYwPzanAD/gVYv4FHd2iUhRRL94
+ineGi0+Bfo4Qd75mACj4cuvlCC1IjNN4jKaIiqIIeHrzAytDXf5wA3tQBhTgBFAwM9OwBy5wADAG
+B+jyBVIQC/YQBccgA1wwD/MQBQAgBkVWBPYwB/6oCWIgbp03DCziUnYoZkR0cGNohvWgAq8wBVgg
+BBzZkWPwkWQwBhgwkiSJATFwkguwAEEgAG8oKp5kPrdnh50BM8MEE31oEK3/p2ZU1lPZpV315B2P
+kxAEgGgF4IsdNwAiBYkHMYnblxQG4X2Y+ImPthCeaACNVhA1+HdciImkiI3XiIIGNgNiSWB2BWtc
+WQHZ6JXIWGgEOHN/1zw1lI6tIYw3gIi0uHRpqY1aaQDpUAE1tDMPkJdSp5ZpmY3C2IIsYJeDWZjX
+GJV2FQDngE06uHV7AAg3gA8SsHEDIA/+wAN70Ad20ALyoB5uAABR8AU5UWRUCAAFSQItgwRS4AbK
+0AIk4AbdNpAcIAMzsCvs1ABBFBNnIBAXqQLEiZGvkJFTMAUcOQZC8JExIAcLIAQlSQbUSQY2YJ3U
+eZ0muQBy0JIZ0iywwWRL/5ABIWVZOMkCOrVTPAV8PcWT6MdJ5OM3R0BN6YUQ65Bn16eU2NdV2td9
+lfhnBUCVfnEQRMCfm1gAQQdQADWV7rd+jmleXcmYLydzifiBbjkDESahkShXT5EUFcCM6ZVW8WUA
+dQlXiwlg/SGMQKEBVKcY1MdZB3qXhImiaul82xhfJZoUJwpXedmhe7lk7nRiZrAHUscPYlCCD8AL
+dmAJYrALjTABXAAGyhB5Q4CPwwAASPAFQyABSDAJygAA3EYCQzMMSNAJJ/ClAxkHuulyHtJu6NgK
+x3mRx+kBZ1APU/AJ/qACzNmcY6ACeSQHNiCS1TmohGqdNnCdzzmH+6MYvf/ZPE32BT9YEPTQCH4w
+CSgQB3EQBmGAB6aAB55KAzTgqXiwAqRqXG8gnz7VU01FKvmEEATgid1ALh2nAeJ3GwVqoE0ZoJT4
+feHXqx8wUGJFq72aAEQ5Xgw6EMeqfg/qlow6cxF6oCjIiozaNY/ZanV1BHgJrVeXDjH6AS5HDtTI
+qNvgDyLKZ95IDsQYjuSwjM3KrTMgruSKodIIruB4dWlZgk7JZ/FVGvxZr/3Row6aFKjnMycmDKdw
+APqwB/GQd2qADpgmBnsgel/wBUtwAab5BS0gBj5wAV/ABWIgA0CgBgBABzLAAbUnBlEgAzIAhWLw
+BsqCH38hU5zgZP5QCFP/4AF2YKevQEwqcLNWEJ0fKZ1y0AoEAKiFSqjaWag2EAOv1BQSiacCQako
+MLVhYApokAUIgACJsLXMkAjM8LXM0ANiG7Y4ULZlmwKRoAVacAWjarJmEHx+kyEIAZVEUKsicIlf
+1XEBG327qqu56pgbB5XyBXP4RXMU+h+Im7hkpXNNIaH/dTRnZZdLoQSiNoInYGrnMA0SOg2GEw3n
+4AI38BNOgaE/kE8JYGp15g8uEA7rqnPS4IjSQA4yCAN9dkziEQ1KV2ci+LnuhYIY+qEs55SrOw3x
+tVfA27vaGrDgwKyn95s4ETOqS6RJYADUxwMkoKQ5QAJOKA+xcAJ+UAVi/9AJ31sEH6ulXAoE3PYF
+SEACXCAKYlAEz5VjacoFYbK8d9gHH6AWAvECWFAPOYsFfmqzQkCczSkEFuABFjC0OmC0MRAEFhAE
+CzCoMbAAMZC0g2oDC7CmTLEv2AS9KIAGIBzCWXC1WbC1W5sCiZACKowDoXoFKWC2PYADkRAJYosD
+MSzDa4sH7UNNB9FxriBSBPGqcPVPVclyufqUebZxMECUjvlfB9p+yJpfjrYjddUUVby44bUUvda4
+m3i6W8dnVDwNFVZEBnaK1bDFWryJAQC6rca6/rGuBLZ1FdAsUveq4CAN4wUD7yq76pUuwNgf9tsN
+bpeOf7wUB/B2aawUv/+KaWhcx8TLZ+eQx5mruVe3vGgMyG9sxeVgDc4TE9C7CRJQgoR3AvagBqq7
+D6BgBHAgDxybseLrMqpJB6zpB2qgDF8gA/ALvmJQBTIgv2IQBwJQv+/AwTABvR4AwP5wzP7rAWOw
+ANcjB2OAs5hkOAuAwUQ0ATERBNQZBPFUzUcbAzIwSohxEgnQyXyIBomABlOLBggQBhOLAifstTiQ
+wsyQAnHgAPOQAjXcA5HAAbSgBZGABHhgw2Ibw2mLBApwAks5aBm40IRmC3rMlhItrOOFfYIGxRHG
+0BNdaBVNAHer0WzZPN0naE5McoRW0gRhxSq90huMySydyS390jE90zD/XdM2LdMwfck3vdM0zdM+
+jdNAvcmdPAEFu47KBwp7YA/kYAkZKw/tAwSiuY+T8JJAcAE51r6x8LFVgARcIAP74AOf83kSoKZx
+tsFJVcwCccxTULN32goqYAN+2gpTsABF5AVyYAnUTAZekAlIgAELEBMT/E9BkAMKUMFHG877UyMp
+gc3o+AXojAICwc47SAHw7LUpgACRwAxlywxxwAOigAMvLLYpwLZoa2ShXdA1rKb9tNop3dNh7Nqw
+HdtALdu0Pds0rdO1bds0ohS6nduyLdQlArUuMGNN6G0yRgIxFoXDUATDoLEXCwckMG6St5DGDYU1
+pgaioAw+UGP7AMxl/10NulcDhSCcWDAFYOinnzAFcG1EMaACO1PNQ2sCFBwTCXzXmSAH3GwBGJwJ
+QWDB1YkEZfMbKJG/NukPX5C1kO0PV5sEMRMHW5sFcdAycaAFmr0CJiAKeICpVxDDbBsJKcBd+oy2
+ZmvDAc3aJu7bKN4NKZ4YLL7iLr7BaKziLz7jNI0Yvd3iSwHcLHNMQ1cHYhAPkUdjVugDRO4D36YJ
+GKuxRA5uRg4AS+7kyjAJVVAE4xYLdEDWd/EXm6xU4p3WWIAFOJsByfyRQ0sBMWABtOAA1UzXCjDf
+x1A/XmABHLAAFnAM/R0D/O3fIxkEFwBGpCN6k3ngCIACkGoK7gzZYf/ADFkwUHsIBFrQAxE+ZMHw
+cFqAAytAC1eAAyaLtkW2AiOeAnhg4qwt4wFA6qY+zuB96jhe6qve6qru6q8O67I+66le67R+67GO
+66iu663um8GEzcjkAJgwAE4gG1HQCWqQ7OQQC8wuD84+DMt9AX7AAcpwD85eBD7G7MqQ7HTQCXTA
+boZA7ITABITAAcGc5aTzSDWQbP5QD18e1yygp2NQ5kJA1wRgARjgBcdQAxE8AZmA7xNMwXJwDC2A
+AdxstIUaBO1wH7Kl7seATJOA4IQeBygwD2HAAiuQAqvAAm+QAloABLTg6StAJVfQz5Yg8oiQ6acK
+6jlwBXGw4WYb6qL/3k+sXvM2/xe2fvM63+I73/M+z/M/H/S7LvS5TvRAf/RDX/RIr+rMVRNvugmE
+QAhgIAC5wAVPAAZ8gAmHkAdcz/Xq8PVdP2jw4PVOUPZmP+7jvgZdMAhsPwh5wDoBruXrwOXQWw8c
+udY1GwNkLhALMAaCsC7FfAyAGgSZwAlBYLJeYJJ7fTN6YNgJv/CBwW6dDLXwjABfQPGQGgYrkARh
+kALoggc9YM+0EAcpMPKioM94gAgZLwApjwNxEAiRsAIQcAVIEAc3zMIzT/NGv/s1wvu+//vAr+K/
+Efy9T/zFv/tnIZnrPjN6AA+6cA9bMPZrAAVQwARtf/1s3wVrkArX/7/23Y/9gwAFa6ALZS8ConAB
+Q4DurlIBNDHe7b6RQlAPCMynC/ACP4vBXnDhcvBm3gwQQQSZqOFlARkbMTh4aRHDBhmENiQ+RHIh
+yoABSk5sAmLimD9/KBIh+BLGFAsKWcLcwIOAhwM8PVLEoRUHx4ocolL0WIFoRQo8tK7giBMoEs4V
+K/DgYIqDBkioUaVOpVrV6lWsWbVupRrggVewYcV+JTvW7Fm0adWWXdvWLdu3ceNqa4A244dAOiYA
+ccDixiY+c0htocMI1SFzmAhBGcS48WPHUJhAofxYV+U1utYgq1ULCiYoBzgM6VP3QcZ1B2oAgQTS
+A5YxsWXbGEO7tv9EMjEQQpz4EMPv3sF9Y4ixIIiHFrvCYZyRQA/B1iFHNgpD4wsLLSfxzKT1JtIV
+ILRo8MyRA48WCJaWrhBK1FIkPFIiadHSFMcVrvn17+fffypcAD8g4Aa5ADSwwK/c8eeIA0XwZyyQ
+wglLHZAQtPBADNXyRwSvbHmwLNQ2+WQ1I25gQRgwtlBEkScYwaSMFuA4wQkaCbGRkAZsHOAyzVRZ
+Y4099uisM2R40QyKAZzITBAkhriILI1Um6BEf/QpJAMPPKjHAhXkkGMBMBeIYUziyBzzTDTDXMBL
+CyzgwIOBpAgBlF2Su6iB5lwgkQLpSApDCz+MSGEFFlZgBlAddFj/ApE4IiGviucsqUILntrj4L1I
+IM3hih6aws8/UEMVtT8QS/3KH0nMMXVVVlt11VRJTFRiVQdLBemAsiqo8LRXe/X111c37PBDslBT
+jYccljBRGEOGuOCOJy744wQ4ZIADFEOyBWMGF/MwBAp8auEMmXd0qcXHI2nMY0ddVAktBAHcWA5K
+dkSADiUHBEDCCyl0MLGVVgpR9JMlCu5okYP36qhgP3hQ4BiIOZkAggOuHYKOWEgQww0ZhqALz40I
+4oFPFBBIhIYsEKDBlESyWCELprRYIY44aNjpvhWukHkFSnGu74ordtKChvrsw0MfpJNWemmmm3b6
+aaijlnpqqpnm//Xqq62ByoHTKjBiQWtO8wcvf2Y9zQEGu+a6nAMyAVtsDjESduwfysa6nA1ZqODq
+BPo6om6sH6iSBYzORum0BmJlgRNpHhDBAQEXNDsBGKrE9TTKF9T1tHOO8EeHsAW393N3DvDLBV6l
+8Rx0xwmI/AgltAaJaw8D1yYdEfJKti8FNqHCEDCcpYJaGU7g43jk+XDDWyc6QVJd5tVtQDPqnfij
+BUGS02Re5tqx1xMTkvAnhxFGiMCZZsTYgAljXEhUmAoAEWH++Q/Y5P4DACmjFyfKiAJjZRRhGCTY
+hxgMeEAAFM9jzEkAR2qgLH9MwmTMSEQimEHBC+IgETvpFA560P/BD36QKSAUoQg9KMI0pLANy6ha
+C134QhjG0GqFC9wAyqE1WzROASz4gDXqFrYq6aACDSicg8oBtwFw4gY9/KHoCrehAQRxiDQcgBFr
+h5EE+KMC1tCVP6goOBf4wx2nUVAYT8MJAiTAGjDgmoMckIC+MSgbWjSHgz4wABxysUIz+Ms1PDQr
+kIjAGrzTYwIyord1/NGNcCSAGW5IxweY8Yt9aOCIqkAATDoMDr/LVvKSR4UOjGALZfCWLnjUiR+V
+y1yaWQMUwPAHKsAhPaJokryuFrsPrKYG4juG+YyniRH4QALF6EV64PAHQgyiC0xgJiG6RYgulKAE
+p9iDLg54zWv/kmAOYtgEF2xZjuZICYJAaEMzUnjONKQgnelMQQpwkAYcqDOe8JQnPO2JzjS0QZ8R
+4GcELsGAFshQoAMlqAy/SEQqQlFrhsSIXqLINSpqYGx4LNtCC+dQKMpNBA896AAI8AOKMtQMnCic
+GbyY0O9h5AdHqNUAbBG6zTmICBjZXCIxog0ojrSkXvyBDi6KOlTR1G5R3GhPfypToWoUI487qDq4
++EApLCGTn9DLJpOXhxo5AQykgMUd+EeINcxCFbOAQipd2S0qAAIQHAgEQarAgQtowpY3vR1e9tIX
+OzTjDreIRznoEEwJMAEQ+UNmMU7RBcR2YRDM7AIIpnkKCVBC/2MGJME9SKDNKGSWBEWwUzmIGDtx
+6uNzHYhABy4BC1hEoBmrbQZq+/lafrYBtbBobWtne9vVXsIZHVDEMpDQu4IGV7jDXdpNC4dQ5EKx
+pUTcnBaRi1Cduq+KJ2Uu4TLaACg617hYpOM6buDIKE6xAcu96YaySJexGdGGowPJdIt40kTqIJDh
+fa9Hf7AO/Bo1o8uFItqskV8CLLelGRXQdj+bjQ+4b2F6GRiy4ACIE0SYk1R4wh24IK1suegPG6ZC
+hyMMCDi0gF+WcGsIQlBLzx4XnA3ckz+ccYk6nKMOdICFMLuQ1t8xwbDFcCwIfOxjaUIWAEUoghjm
+UIQ50MFJdP+Yw2Rj5KQU4/JgbnMADyCABAEsYxkMUMQdOvDiS4QZtv1sBmwvQQpn7PYODGDAMvQl
+it1VlbhzprNBn2tg7OLKdCluQAVukGcbbteIDtjonm/qZ0ATMbsbvXPdpDKDBvzlpupNLq70xtQ9
+a6PKImigFw3NNk+jqofZFa8RqZJoSmd3KpRWL4GPcOfPpsYjA/loC2zxHIcBQRCb4AAcfF2tB8sA
+EMK21q9bYGt+DYTEUA3EieEq148h9xz1qkFUTaSIEXijEgXYRzOEWQxnItOx0ixBj8k9TQkAwB5E
+JgEdkNzkAgLAyC2YgDf5jMtI+QuvfrkBLTJZ7bdyAAkDJ3j/wZFw7IWIAgLlUYDIEpXrI9QgRjKo
+c8UtLjVY89mzG9LGOiZKRB048rrPPVHZGuDxO3o25ImOBsc5TsQov7wB33CuTj1rUpjDnOPu04EL
+xhtqmIfx5zAf9CY+y3GbNwDnPYf5Ou748lQfoAFMJ6LTP23ol8+A0RrXhlMTjCwgKKoTdNiFLNPj
+MAikXe1rZ7uJkyUyXe4lBMfOgcCHsL2cwxzf5REtEkZwD3g4YR/ls0e5l8mEcyc+yOn2gQ+ajEAx
+yJsEHOPAMTobZUo6UFlVdvhUYfDwhzlM9A0f/egldvqR7qWtI+WCJtjBhX7EXvazp33tbX973Ode
+97vnfe9r/+9Z4Ac/+C83QxI4/UOcSj3awK8beLVR/OOL8fmQi5zUZQ5802Uj+MU/OaoSGaGZh5/j
+LZf+nh10gO+LMdNDrzIjUcWND2ix0148fwIeZwu8KX/9HK///defabDpM+cTvq5bh9yBhI7QgRMo
+ggCag05wFtEwuBYouAkUAH1BghCotonZC06AgGXwsn1pgWWANgL0rGxIANUQBH0TAGi5g2YYgX7w
+gVM4hRLgMcUrhsUDgMZrvC24JgbsBBlAGE3YghzoGHkJPmlAQQ5EGgLAMiTggIUAH4ZTPSkoDymk
+QixUPYBjOx1ogS2YAzi4AN8bQzIsQzM8w98rweVzrq6zBf/eSQD0Uj4CRLmP0QCvWRA4vB2TIjRC
+Sz4CXLloi787eh3PWT4/1IZE8axMC6Mb+IEPuAEX+L+Kki8hcoEbsAZteJ0/0gYRkK8+PMT9U75O
+tBxQ+5hMc0MHKAecCwdD7LoTtAUSWwQrAwM3IIdhkIcimDwsbDtNqUIqTLsJaLhl6IA7WIa5EwBN
+wLtWDIcZYAe74osb4IE3oKW46oAtoIZnKAYcpEEclCYJkIAZZDxvuwMm6wRQsBYVbIQJuAMf0IQW
+sDdW9Cx1aMbc4TsHMAIk4DI220ctc7PfIojVYDsrBEaRGbgJxLJlqDw3uIchaJIzFAB/gMHYi4Co
+WIbbu4T/6wCCCJA9qRCAfqDIrWmG2DMCBpA9BjCCfvCHjUxJi4w9WPAH2XOGr/GHlizDrpPHOrzJ
+ZdTJePyGVnQQSFMHntzJoSzKnjRKpCTKpDzKjxHKpuTEPAwHSww/n2TKp7TKq1xKrZxHZxSRJeiI
+ItwFAKqFWFANt5NCtQPIiYEADlg4tQyBJ9AEJAACLLu7I8TK2FFCFXQADugtX4AzT5CTTcgfOCoD
+/fkDbtEAaegDOuECGUACTwiBKhQFDtAXI9CDToCFEQgBI3TKeGxGFtsdvuQy0nKGCEgtUjgfAfAI
+S9CBEPAtKIxNKDw4tNMyNvsyBkiPOdgCJPAmMxwBkCjJ/9i7BJVcLbqsPeBUhGY4SY4krTKDQeJU
+rQhgzn6gzn4AgpL0h0uIPZDYzo+Eyeo0AtNsBloyw6o8T89ET/VcT8+MBsqRhPRkT/nES/rcSiWI
+T/y0z/Nkow9AQTa8T/0M0Pk0yhk4QVlSS4SrFnaIghaAuJxwy8DUpU24gDbzNQEAg4Fbhgalpbvr
+BACVT8ZMMFozAU2YA2jRMn2Jg2lcBRatghbVtRZlUcpEyC27gzu4lBRpBn3Zhbs8SgOdGKlygCpg
+M0XogC/rp0togyAIxtbMx37csiddTQLgAAZ4MTG4h39SgBC4gyGQAYswww4wgjCVPeKUPYqUSDON
+yNjzSP/u9E4yBc9+KNN+eEmRfElYSEnv9Ack8Ic7bQaYBE5nkD1YEAXzzM8PPVRElU+Pg4EZSFRD
+ZUVHjVRIlVRKnVRLrVT1VB0TcYADwFRPfdRPrcoCtb/nyIAlkIEo4AJ6+4KvZNKC8AVfcFVOaDgu
+uLsh6IQ7+EIO4LVF4NBkvFRgVUxSpbUhyIcCcARlUIO41IQ268css0A3e9J9fIIKUwYDyAc6mIcT
+mANnUIQKqFV5SVRpsAYR3R0TWIbe4rI04ydciIBleKCHEQAG+LIve7HzYQApRYInuAfLugfe5IEL
+6AAFcgMzBIJlAE7vlNM2rT0g8AcoVASOjIpAJc4yg4X/J5Q9g61ODljYlGyGuRwBP+0HP4VBkC2z
+Qm1UlJ3HUF1ZlWXZlHVZmI1ZmZ3ZSm1UcxjWgkHVPoiCsnsOXJuAIIjVhjs9L70wdMWFLeAIUVgF
+L0CCEdyemlWCbHDGFLS8AOIFVUCHHYgFRzhWNfhaNTBRJkuyOVAGs7XWHUiFVNjaIjDGOTifFujM
+SHXPevQIHdiyJ8SyLDvS3Aw5AhCAJ1AEeb2E1hoBWPCth0GCO7CsLSCBG60BRRg4HlWCMnxJ0zzO
+OIXTlFzJ2RuBDvAtfORO54wA6JQK4eyHMQUCiMVT7txIIxCAkKXI2FMEqOBc33tZRD0H3N3d+9Td
+3uVd/+D9XeEdXuJVzOI93uBNXuRdXuZVXudt3pQlgnSwv02IqiV4Rx6lhE7gtRY4MS6DzCqYSwgY
+AmrlMhYRhl71AlEQgLuTK+N93+Od3g+o3o54giZgg1zdAlIghUvw18rCBrUF4B0QYLUFhjVQBhNl
+AwVGAjDwAVx4TB51A9/d3amdX4ZzACTorQu7AH3hgGVYzspr0n1kANXSTHdFgpAD3Fm4B1wggSGw
+BA6Qg3d0Eg0ow2WQitJ909rjUx1m3dlT2A6AU0BVUx9WyTn1B4jkzkCNPeAUSTKkYPiN4ueVYiqe
+Yiu+YiyuYujNYpTVYi/u4i5mB/s7AMl8Kxk44wMVuP9liIQ0YAAZoLsmVK0XXE0OeAMrqMz2ZcYt
+Vkz5lcwlQIImaIIYkFc5YAA2iAE2COT+JbJb3M0vVOBDHpP7VYQW4NcTAwUaBmNNplsHIgDVZQCn
+XYa7s8BmUARR8Nt85C0k6IDCvQQBCGEBaNx7mIV/lYNqmdxzIEPg7AAm9oeSpFh+AgI2nb0nlM6L
+TUnlVK0c7mU0FQU95cg8dWJnAInYO8nxdGbb7T3fzYbF/OJu1t1vLlBx9uZNHudw1mRwNmd0Pud0
+bmd1dmd4Xuf3ZWd5jud5rmd8vud2FuMPEA0TG7gQu7XuvQJ4ioRXDgEe4ADTuoTP3Yu3qggG+NU+
+IOf/eebnEEAYBrhfNliGILCAR1iGJjBkRYgBRYBkMoBkRI6BZfCFRG4CDByCuAVXPbZn3SXXuiUA
+dB049t0Cf22GDgjhLhzGDsAyZ9DMNhCAS/KEZbiHOViAIViGRbAAAfBSN+DZGh7DaUbTZfADka1I
+2xsBBoCKYe7Irp49I469aV7izeXOO11TOJXJKmGAeWjrMaRnbrZrfcbru6Zpve7rvPZrvv5rwQZs
+wn7niS5sv369DxCBY6tAZxUFt4LRgezFKqAl9k1GCUbsdI6G/2LsQJCClr7fZYgBQ94yNshHOXDa
+BbDNLWOAIDDkkCaxS87kvTZsbra6KpzSDgBlnR5c/2dA4RpwzdZms9PyXMic0tW2wCf0gl4D17tG
+Q+iObulGw8WU3uq+buzea+vW7uzmbu/+7u4Ob/EG7/Eub/KubfNOb/Ve7/O+6872NYKT195KOIFr
+7NikTIHjgqd13/Yu7/+yP7PrgEC+X0Rmg9xYEVLYaC5DV0Uw5ENOZDbggOzxUiex6v5OB3c4gX7G
+tQVX7qUlrUt5GD3AWyI1UlBGlkdI8YGz4ytz7ueebhiPcRmfvQuvcRu/8XHIcRzfcR7vcfb28fb+
+7w84YwtU7icUuAs8uApk36d1A9KIBiC3bvwa8u4dxiaIAFwI5NDGhSwf8C5XYC1nK+ylYRyfcjI2
+gv8Q4C0UfUIGwIXVhAEg8IUUdzPldrNLkfNHUPKBkBEyv+uL+3NAT5rthvJBx/AfJ3RDR3T3XvRE
+b/TxNgdHV/RCj/QgZ/RJp/RLf3RL33RJ53RM//T/hiPHfEyE24TGjhEkKJ4Lc5In93RXv/Qpp3J4
+qdIBr/UmwAVYyHIuJ3B8rYKYvoA+/3TvFvIzF4AIaAM1z7JmeFcC8IIUT/EgiG8MBII38IVFaDZB
+yAE+H4IhUPRR+XZwD3ep6HRIJ3d3MHd0h/VMT3drEHZ2V/d3j3cph/dyl3d7X3d8D/UNvoAL4wJ/
+33dud5JdePV7b3QhP+PupaUtK2k2cIYE31822O3/IFiBafz1Cj/3dih4zna6xaY3AUCtMkuzUg7u
+GoDVR/AFvT1yKyCxlbICplUgj2l3RBd3mq95/6h3nOdsnZf5ne95jM95nwd6oR/6oCd6o+d5REf6
+oy96pv/5eXd6qE/6ppf6pT96/MKvjL+AgScN0hj4qY36qa/6noej/kRjEats5ha4IzextJu4VRd4
+sBf7dp9yX5u7DkAtw4WFDjjlhltaQVA79a1stqf2mOZ2xvR5m098xc8KpZ/7xn98x498uYf8yZd8
+yrd8zK/8y4/7zO98zf/8qw/917uGzQf9sCf7CDvjYpPNuZs4VQd2j9kF0i/90id7Y1tl24oAAQg5
+sF+sXhPjtfthUs6k8Cef/Z1ffORPfqj4L+ZvfuPHetF/fuef/uiHfuq//urHfu3ffuvn/u73fvAP
+f+n/fvIvf/E/f/NHf9EX9X//d1X/d60PeMZMf/UP9Q8AthbwYNJShOAGCEEhQhwYCCEQJxNLAoWQ
+IePCkCF93K2zVtEixn0aN3Ls6PEjyJAiR5IsafIkypQqV7Js6fIlzJgyZ9KsafMmzpw6d/Ls6fMn
+0KBCcwYEACH5BAWQAf8ALHoAAABaAToAAAj/AP8JHEiwoMGDCBMqXMiwocOHECNKPMivosWLGDNq
+3MhxokGOGf9tC5cgxxIFPDIAQYIkRA0HdvzJNKLPQU0jOGvqvGGTgE8dP3XwEIrSxFBLRYsCXUp0
+gp4QUFu0kCGAgxRPELwkULLNo9evYMOKHfsQpNmzHceivbgDXAN2IU5mWNUCghSaFJLoPIY3pl+Z
+eVnw3IkzaFAeRhNzQuq08YQaixErcBqi7tSWUqp4YVeOrOfPoEODXku6NNjSFTeQe5DtwIslVqQq
+oMeCwBKhfQHr3g2YJ62evw0j0hG5uGQTkDPbtRsIcg2slmXUjZ1OtPXr2LMTRM3ddNnuBgIo//mw
+aImgEJ5oDz2ZhHdvvQ745v2NiBaM4bJg5N8vq3+pxnrokRRyBAIIFVQBIgcBVDJgBod2EEYo4UTd
+VZhWRBW29RYEcsEk0xIe8jZYYUQRINhv/PmnYiksjvLDEfpNplRRAF4V4IIHJggdEhx4MeGPQAY5
+kIXQEBmSQ0Su1gccKkEyWGDv2WETfDLd8Jd9+kmiZYAu2IKjLV62cICYUllWF4I6WmKgcjgi+FwI
+cLwh5Jx0YkdNkXfmqSeee/Lp5599BioRoITu6chICZTHwxk8BYbTY7lRIOKItuG23mEDJofVglLB
+wZIMDf4jFZpsLuemHi3UqeqqYgXq6quFwv8q6HeyurpaOi4ZZWWVcGxigj5/uSfpbpTGZ+xQJR53
+nBnObQoBB1NRJe2Zpj6FJqvYZktrrdx2621C3vYZHklAnMToC2f4Y8QmtAjrbpXAkYgpUcsWmMO9
+N+bL6VQCgEqtsxBoK/DABYVr8MGzFozwnY7cukkGKGVwhsQEwDDlsO++19Ox8VlK70D2PoavjdUu
+Zy0SoLKEZggEt6ytoQtvgE3MCX8k88LjyvCYApCcAYkRfAGbsXvFGjavss3WWHKbON5YGcpI1KWH
+y1Svis7NWGd9tdZcd+311mB/PeTXZLfF2sMRB83C0GxbuTG9SCt70tyaltr00lI8HWrVfAv/Wfbf
+gIctuNgDBe41JdqcIIhSwbZdGyK5VADIOoZoMwAlupCjCjrD1OI5MqCH7vkww/ASixpq0OFGFLuA
+4u8B6FUxstN3L4dERNvY4vYP4QxEUoQH+COQPwf0DRbxB4VjojTEG+6888EbJPMO01dv/fUyT8Ma
+k5E1TixPMEReSS9MdFFMCaecIsH67APQ/voAuB///PTPb0/97otBwjDK0DGE61KzUQ5KBpFu8OQA
+CRCBlbghkOhByIEE+AD1Jmi8iCCvYLVJwACaN0HsefCDIOygBx1YuBCasBoDgMvc/CAiWeSiEuPr
+BSGYwAQQgKAEOFQf+3bIwx76EH74s4cQ/4dIxPjpLxaduIB0dLQgiARvABO8xQ1+0EDhPdCKFDRh
+FrWjRQsWryA74CAHtUjGMopwByT8hxk9uBpyMU43ZTBfCWxIRzriEH2hQ4YEdPjDPsrvjxKY3z7E
+IIZABhEARJTAPpThBi60wCQHOeMEqViQkvxDN8XzRwKsQYAD7CAAtvjHDURQPQX6Y5QNJAA3YHBK
+EYCylTILHvWQdwBVKuCUCXCEQF45SuzdRyDUu88nfyCTHwSgisAMY/FqGQBiJvMHN5igiaYhkF+K
+hJj+MGYqmym8CyrhBjBgHmCUwEFuZvMBO4CmNP0RgAnewBZnTICJzolGW+Iyii44oAuwqP9GSfrT
+n0oSwWtQYgTdOKAYp7gjCLrABEJ04Y7oG0QuggEDOLCPj340pEaDKAYZVEYGJLgf/uo3RAAssg+R
+jGIHP/CPH2QDnQRJwC23cklWwiAB0/CJCILnSUfwNAHEtMY/gkc8mZ7yB0D1hzV86o9ZLlOUCLyl
+EkQClJ1y0AAN+8cH/KEE6j1Akw/giQg+wBN0OtCpQx0MJam31a5OQyZTfSspwzpKBd7gmAdQ6yWL
+FwCekKMBCfDHTb/qyb7WtayBdatMcvlJropQBP5wQQKCpwA0njKqjk0n8USgA5mUEKv/DO0OwpPC
+uBSlPYA5AjJOMYhKHCAX9aEFLSqBUPX/MQIwB+ijbgPJW0AiUgwtmAQQgFAEkY50pEIEAEJAO9p+
+MlV4U1zqaGWpS5lkY7SQPaZW2emIdzpitLT0x3XbIthdNq8CVjzvP8YLDn+QMrtq3Co6mfvWnsr3
+iVhtwHmxaID9/mC0AD6Ue3eQDXWRkpxTxe8O9LvMbAKYeGHVATXB28/9NmC0DP4qKQtcsdFy8rvM
+ZcEmQGyLpgaPvQMmJ2OrYSX6BhjEL44xjMeVqKQEqwLpy4WwKpE+CRiiNkY4QUbfd9zj6mwVVYiF
+cYs80oW4ODzrOAAr1VUNA1C3pgA2w1rbK8H8DjW8Ia4AiIln5fR6Er1V/i4w9QPgamjS/8X5/C6b
+CfBf0P6AAGUOc5kv7GJhisAMB/ivArFKZ+b+A88KvuSduVvhnpK50AC+swFgUNk/o/fCkn3yJ9OR
+gBYHL83KdER2AbzPz85Y06gewJIUVYMlBAsQ6TODu1Sxvj0gYw97wKgEcH1rZIghfjssZCGNuIdC
+LvnIVZjDkovIZCcz9wFu/e42ICuCL4MWeVh1jydFeVQwA3OoAyFz8bItZvTqWdv/MDQ506Hf65I5
+3XmmLrnz/ORqV6Oi6xBe+KorZmCaO41VuuC8++tJMoPW3NlVgAjyLQIDEGC+z56yxUzc1GufueJY
+NTcwyYHqjoN2G6o+QLm6B0cJFKOzkf8FxCYwxof14QMKAwADL9iHDFztbIDq+HUgldECOLSAC2JQ
+Q5wgIINhGJcLQJAdHYy7DxI4/dciTS79nM1xcKe56g4298ANAM4PeN3rSsj3B9IMZqySA9zDK3fF
+h0rvaZADeV1nKdg3PhAC2GLQt4A0Vo+AaH+cPTziFp7Z4f2PqaZDvF+dgXgJvWVJa3x4BKgGMWcA
+b4O/u857x7PhEa+uBmDe7AaApltlqfV5jxqrpYY36Dm++ta3XjwqfCNg8iABZHhoDXsMnpVyK4Gt
+yoQdgURHDezQCOI34h9faAQcoN6JL/gBElJAunnmkfTixg/pSheiGC4QAtlxAA5REIP/Pfa3D0MK
+keoCicY/Gs56yqvdABw3ODlcgOdb/OMBBIiGLM+ugbJXXcxnJ3haF3jwl25kRn9mh3/VwXp/t1Wd
+dHaXxnHaEHhdYQD59n4FSHiixErbQA7gxF3kEIH/0BkYGIBiNgB+BX+Wp3baAH8TCIAf2IFW4gIz
+wIDw118uYHasFIJ+d4Nkpnhd1lc9eIM2WIRGSITioTiKESIy0QASgA9rwwLAsD5QcEqRtT6QRRN9
+YA970AJ2AAmfIANRAAc50QhRgEh0MH33sgTCJQreJ34AcAFJBwSdIES7MH2T4AfCxQX2UASaoQbj
+FwVFgH7ptk8V9WU3MABfJgKUJ3/a/wBOIsBZkRdYR/ABFWAl4fR4e0VNm6hxBCgQb1cBIwiJkthO
+bncLBbhBIygQKHhYiVh4gmWJuzcNpQeKf4de9bdPP1B1rRiJZUWLVpR2AsFwqLiCqyFWdqWIPJiL
+6kKEqMhxFhOJUxZlQxiKHHcEmzVPf3eE3OiM5AAO0EYeBAIiu+EKT1gl+LA+BWCFE6A+cKAu9AAG
+9sAPIAJ9e+ADEtAHXBAFdDAMEmAPaXgv1CeGSDBA2ReHc+gGPiAGVdCGQ+AGj0RcANACX8AFPhAL
+X3ABVEdNHGdUBhYA36gNJhJKxAMO8PYN2PQDA+B2ppSJ/zBZ1ShwJTmAFQAOoniKEP8ogSm5kjhJ
+EJSGkwOwk6dIVoI1A3Znf9XYk9FQkuQgdkAplNYWbjfZUlxljfXldkFZTDxJDktZk03pD2PnjauB
+je90eD9Qelf5jboTWfv0jN/YjTjplqwHcqt2HEIDGLi3jurCD+roD4wSCLv2jjTRAPP4Cc7HA2IY
+C7UAdfITkKsABDIgAT5AAlYhO3xoD7uQkPYgAYx0AUvnA0MwXAoZBUDQAgCgBl/gBgtRZaz5lrZo
+iz1ZEHE5m7AJm60pm2/Zk7qZm7bpmgOxQWF5m/AmnLMZm7Q5nMcpEr6pEHAJDsWZm9D5nNI5ndHJ
+kdTpnNV5igHwFgJlY7sBDPbgCjL/AQN6JAG6cEr0IAzrEzw0UYdicAD08Am3cZhEZ3RoiIdLh0hy
+KDtI8I+hKTtDcD/JpT+dEJG70IfzUAX7QAdfoAariZ2taZIGAaEHEaHV8A7K2ZsQKqHMeaEm6aHL
+BaIE0QB/dlfKyaEbipsemqInOhAi6qIesaEyuqLXSaM26nY3mqM4uqMzyqM9yqPb2Q4VMI6/YlDY
+IAEBMJ7luUHAklvv+YWN8ADxwwsT0AhfcJjlAgkmoAz3KTtAoGTxQ5pv6AN9MIcBGj904EhA8AVz
+eAGbaRVqEAV+MAwQ8qJAoqOweAPWgKJegaJ2ShY6+qMdOKiBWqiGKqiH6qMXCm2x/ycjxdcb0GAP
+G5RNe+A+gVVQJwAAXQillCA/JKANHmUCYDhcftAC4kcHSSc7gIhIYjoPpmoP/wkEZ3oBwjUJVXAB
+F2CZ+gkEF4B0+xAhXUEnidoNfTOsxkqox5qsx8qoHKIYrWBQtQAA+kWpEkAONAEsnboH8GmYnfqP
+QqRItUAHcECqUkACPoCqXuqm+FiQ/CmZYNCmPjAMmQGZRqcM1McFiDQHrloZYlBBYkEJ2uWiACsS
+xrMNBnuw3ZCwCLuwAcCwHtqwDhuxCiuxFFuxEjsAYdesJAcYOsAPknpK62IL10oPlrAHXLitRtCp
+BgAKXAAHJyAGPnCRNTBc5QqQCf/qhqsABkWQq0gGBPgKq3PYBzL7mJ0Qs6Hps79lF0jrr0xrHRP7
+tFALsVErtVRrsVNrtVV7tVSLsScAAc7Ras/KsXqkX3phfFPihADwpM8HiFHQCmDoBx8QC7FwZP+w
+fD6gBqmqtLKzt/MAiEArOxdwkT0rA0XgBvP6swCgM5PgBsrVtI77GVkbuZI7uZSrtZV7uVXbABk7
+cmCrG4hQB/YwgSICCuyzByHAqVxIkcfAhqzLhlJQXDarGXy7t5OQqazqB+XipsA1h2z4SH7Qn6y6
+CF8ang/wuMbbEBBbvAbRsA/QvMzrvM8bvdILvdNbvdZ7vdiLvaqWAF77tWErKZ//CwDvsAnkCwHC
+ACfdyltwwAMmsaokoITP57pwYH2xmxlRwAVeWgVANz9RIApQEQVCNAxSIwq78L5IAAri14e2GlK7
+RL0ODCQPXBARnL1MO8HK68AYHAAZrMEc3MEb/MEeHMIgPMIPoLldO1yLAQSoJSkEUAvroz64hmvA
+tkN74HQkUKn/KAH8QwedQAdq4I9Rh7deWgQAUAR00I/1oz/7MEjxYw9iUARFEFL3Y0i3u3ySKsKq
+4ryKeBBaTBBd3MAX7K9a/MX3N8ZmfMZonMZqTMIXvMZubMKiWCDfe0rpuEMz3EP2Y8clVVL2g66q
+SkRLhkjMJshS18QAcL+iwKv3/+PGrEjGXezGbVy8kPzFZlxiXkzJzrtPk1zGmNzJm9zIkxzKojzK
+X3UEpBzJp9y8cIzCM7vCdOw+uzVkTGYPQiw7XMpkuIw/SIC7ojAMPiCtqhzMlzMAxMzJxQzKiijM
+qXzJxLzFxtzMFfBwv9nMyDwA0dzMyvzI2LzN2czNz9zN3BzOqSzO5BzK51TO6AzO6rzNYSdyBcKE
+LDAAMbwHeNxbuXxctHyzwyvIhszPAurP/WxERyYD/aOaZdwA1FzNBkHN3qzQjYzQxyzByXzMEV3R
+Cp3OB/3QFF3MFT3R05zRCc3RzuzNG63REp3O5AzRKV3KKN3QLZ3SmssO3OMcHv+yK3pwAGMyVicA
+Cn3gBpejBu8gt/gAOiSwxMVGSEj9a0qdtgDgx1+q1EmN1Etsw6RTBMqQOp2wOrjKBdLRApNDBXzg
+BCMI02Ot0h/dzGZ9f52B0PS3Dp31TjOATV9UTeOpBANAbYqYbypZam391hUQ11DF1v5w1+klPOsw
+EJg4A2itiEDxm0CB0NGsLqKI0JFVzJpMfxoga4uN2Zq9fmtjBhpAzJngAL4jYpor1xDtXvkkWOVA
+zJVNzJoM2e2hAKHt2maw2Cqd2yGt1rjd275NzGEnjjP7EoJR3AdQQ7qACqFQCc2KuxzAI5twIBUw
+Jj0HB3AAKqDC1dotAFzQEv7/WwVIwNXYjd3WXd7mbd0JcAIJANaH4AQzNAhdkAqpAAKp0AWKqNtr
+LdLJ89usqNL7FFmHtoF/BpbrJVg4DU4ILWvRIJJc1QB8LRMuwFmnBGiyxlL7xJ04jYuWg15dYiLf
+YNaQddiwKAKe11IiQEUqqV8uYNmDnU82cdv+DR+3zeGRveHiNYxK9Q028VqvDbIVoIuUveKCDdmR
+VeNBjt9IntZlneS/DdFKkA3kkQMpzANQwgITUAFggAxd0AWD8ARDYN0yoAmkcA+6MACd4N6EkObu
+DQ9r7gRsbgh5AA+H0N5rDgVxfudqTghQ8N6D0OddsAbxHd/0Td+BDuh9fuj9/93aip7oTK7oCL3o
+jO7gmvToh6aI5LTioTRVVInQ3+QAxHQAQ75PGlQO6iA8nA7gqTfWolcO52DqqkY8jg6LQl4853CB
+a41e66Dij37hhkjpu15emuterd3qFVAOXSkQ0PRltX1iZMsNCR7P5VDZrX3hxA7csN4Adufoj77t
+2r6K06zt4M7t4q4OUO4r3lvcVr4EIjAIez4HEUAKf9ALMlQEZM4ErnDo8D0I9b3v/B7f8v3v/C7f
+/t7vgF7fa5DvB4/vCo/vMKcN4e7wD18QDy/u0z7YEP8PQn5JQq4N7bw2ih5YnefwDw7xut4ZqL7k
+wZPr2hA8dj2CZqAD4A5Nrf9dMQ0gitKg6MxT7NKO8S2e4+K+T+Ywgiyv6C8/8zCv68RRDkpPTiSe
+TUpfDhce7Rt/4UPv8EXfAID29A2g9Vy/9V4v8V0f9mJP6tIwWVaQHOTYKCawCWWAClAABVuAC1uA
+CoTA5oSgC2nOBHuu9/a+8H7/94Af+Av/9oQPBQcvEBdP8ok/9ouv+Iof9Q6P8eFg8pKwXpckWDDx
+4dpgDov19CMf+ZEF+i7A8xAfWKAu8p6lG44fWB9gDQQO+Q4f+qGP+toA+1qferXvHg5/Yvl22O4h
+CRPoAhAf9bMP9f5g/Lzh8GfJ+MyP+Mzv+F2fDVF29jSN7iYwPowwB51QBHL/PwdzwAh0fggJgAlr
+3gB6z+6Cn/4KX/jsX/iE0AB3jwzAAAW6oAp7sAZhwfGR7zsMBBD/BAp04W/gP38uBib8Z4ZFAoIG
+Berw58/WwIL/Mi5UKJDhxhkOfoQbaMvfAZQpD/7Tpk2kyXL/TBIZmM0iwo7/fhjcuFKjRJknU6IU
+aPOALQcedQw9kEBbwpbaCraE2nKnNpNMD7RsGtXrV7ArwY4lG/UcOxFSgExg64DFDbg8RAB6MofU
+nS14OzGC1/cQJj4n1uVxAsXwYcSJFS8eQCjxIF1roBAi1JgSsshOVNXasweZZ10+RY9m+a0sN5IH
+JQHFyRHhkagUBR7wd8Tk/4eIPw8y9ChJd0MdGg5+8AdR4A/YB1HTduDCdAKLUU1CZKGgpQYWPFmr
+BkrcuM7kwAlc1OnA9Ld0Dj58q/ptKntOqLH7++b9/BHY4U7rP88/tXL/AuxPQP9mcOeDTRapoS24
+4oJgEzDsioENBp54Agy+AEsAjhZaYIcwyhoIkbIRHSssxDV0qYzEBqCoZQ14ahFjEDGQmWWzF4H5
+rDMocHwRxjxIE3IgJQYcUp3V1HGtN24osgWpikSIxh8HhIPhhnV0S/I83lpLkrYjhopGnSslOQAG
+f3ADcMriojqitgreTO5NSaCkb0t1BhSGtTLPTHMg2tr8Zx0WdHjSgSqVaP9vy52EsdO0PtFcT52K
+irSUQPnCIjJPTi/1dEBL00mgghcWnGCJBuESgYq6tlDkiTsqBIMPwMrgsEMZZOCDMF6d8PVXYLX5
+dQ9VGNEFmTVmeVECYAxBRoLOkOEMGTE6q0VZVZzITB1DunXiSHBnCBfP1piMxiEWXCAOBjSz/GfK
+KpMkt8uPDMquInwhkmY1f3RQUzQdglOSILeaqwldM7Ubjdx9syPg33epPGgdNPslosiEZihyS2kq
+doG2Ihvud1JF6fv05EzP8Qlllj8VNa21Tk1VnwMYAWMXNwQYgg0Lh6DiD3OokAEOGU5AogVd87BZ
+aQy5daLpXp1t9lkSZFT/ZQ9dMPFMglqkxWwNsDuZDAwnuvWWkmTDVXttIcVlWyC33xZrSGtOklvt
+uOW2VGO+9/b7774BFzzwIwc3vG9p0HLBCk48AQJRyDcp42cqTrjgCTaGeGLQn09oAY4TTsgVFENI
+N91s1KOmtmtidewxa12goOTEqBlB3TCwu06xbeGG9P134IMXfvh3XbgyHeIL7z35lQJ3/nkNoJd+
+et7/mf76GRIftVTHdUi1BmEAwaQMMMBgFRSBKq+c6KJpdf9996koYxdvoRaR7Nqftp3pss0uTHZV
+8IISN1KR7Zh3QAQmUIHWgw4LRJA3BZ5DghBEYPQmaMELZjB7G9QgBhHH/0EKDsmDIBwhCduxoRws
+wnEmuAEBXMgDVEmuD4YoA9AsFzociu4Ep4Of+4ZwiQhEgS+8Wpr+nOarXQ3REAOEQoqgQAKvzUJF
+/ZOfrpa3QCxmUYtb5OJopEHCPnwxjCUUIxnLeEbmndGMI4zGOhCkQsdBzgE8qIERjPAJyf0hQ6jj
+4Q57CIoTPCECI+gHLNyntCWCDRhQUIcqsraGWjSRF5uBwrGg2ESsUcZ2f5Cf0DgQiC6GUpSjJCXw
+1JiNU6ZSlahkJRqFt8pWxhKV1vjAAQQBR++9EAgBC9gSNiE+PXoLWL3CH4YCs4wI9KMfl2BHMHeF
+jB5BcQ0k2AMYruYZZP9B0zAFnAwnOxk6OIRAEJYwQSnNeU50hjIdsiQCO9vpTngi8J3rhCc7N+SC
+mLHQhQQ41SdgCENL/PIEneQDFUgnTCZAgQkLZQIjNNGMDjTDGYYYZo6UlaxZOMYwmtykN79ZuaFx
+YJymqkE6TXpSlL7yXfWMBj3n+dJ4HtClLHWpNdxoS0F0b58mMEEvFbAEoAqiBYDIIQ7l9wekIpUR
+VFAERLmgiWUEE5FE7GhSKdfJb4ZuaC0IgRfIyRZT6SGlYyVrWWvSUrTCNK0zXetZsbhWuMLUjSJI
+kBQ8wYM5EkABp/opQHlqAkGEgH1FCx1WOymDCnGBD6AQAOWsaljDAjLyh7naqhcgkIOvcoKkdvWQ
+WT372VKawx1xtWk7RUvatp72ragl7U1TqJYX6kAPgeBECDZxV5KSUxCb8EKH2FfUCwhAsQO9wECN
+atzK4bBoQxsahzjA28xGF6x2hQAHkABa7GY3tKXl7u9Uq0Xuhne04f0AXYFwWV4a6h9wqECH/pnb
+6FqWAxzo0OfgcF/84re5cEACh+BA301wwLLCGKl0/zpdtkCgqyFAAgS0+2AIc9FdZRVvhddh0wTU
+Ug9W0ENfdWACOpCADn24Zw2ASscD5yAHPEgvIhBxYMCyZaQFPrGLeQlj+CLYrjIOhB5aAIQWBAQA
+IfkEBZAB/wAsigAAAEoBOgAACP8A/wkcSLCgwYMIEypcyLChw4cQI0qcSLEiRUEDP9Vo0UIKj38U
+BCbRYaTkP30OULJIsvKky4wFeZgQKPOfiZkKMhLYqUOmlH8cOMoQwEWgHilWPsywyLSp06dQo0qd
+GtFLBgVLctjKsSQlBZQlS9rxR5ZgWZc3XopMeZJnjZs0b+aQcpTuhLc2awZtgYSLAA4QBCYIR7Ww
+4cOIEytGaEBgi0UKFoUI0fXfMSCWQZ49GNJsSlo3aIn+N9otDIMfjQqcPPmozdV8uSAJsSoEu8W4
+c+vezbtgghf/tALpbPnTWM5g85J1IJDWQEQ0ZRGUVSoQpyMTXtccWGMuhMkcAQf/Dh6Cw1AOVuD0
+Xs++vXuJXmi2tEOyIIWxKW8cC2uZefPT/0hXXSmjFGjgKLZIosB12uVllHfflbeXeOT9I0Nw72Wo
+4Ya5QUONQOfA8cJHDhAg0lovsQUSS/cRZ8YER9ky3j+s0cgRR+o5hsSO4bVGVxURsgZejxjKwAGH
+SCappFRWkOiVPw4skdNAm1F5Ylsl7pTlliT11BNWd/1YHl8WCiDAUDyKp+aYgM2FxJJwxilnQo0B
+Jd9A+shX5UIt3uDnn1ya6GVcNmUHY4UDmemXX0i0sOZeM84p6aRKhvObQF8QpEMuzLXo0H2AfhZo
+ZoQWGhyEQrLGwZv/EHVmo6o6/0rprLRmGAJkqX1SEoATtYRloINuRxCqosQaFAfISoiEma+qWeuz
+0Cq2wz+WNokpQSxCBGqo3PLEU2ZTdidmkMiWa26yY7b6agjRtusuVBv880A2R2KrGUUhreQnT59o
+ZMkL/+awiCCWEDyXuDB6QpeqEp7rcLpnvivxxBJN+88JGL3GgrZ2nFHICx54UI8FKsihwgKvLDDF
+FDFMIUQMQrwsM8wx1LxADAvkvIAccgQRhABpptrw0Mi+ucHRSMcrEFlMMx1AYUgPpnRDUv9zgD8b
+Vp1Q0iAdIFDSSfvj9VRSo7MQ1081NkOODNnRiscZgFxPPSqo8MrKWOSd9xhYjP8xRsx/C/H34Bj4
+XbjhZCSeuA1kMK64zQssEwSPqZ4L9g5gQ5nA5pyTA/W0YqOtUOg7XL0h6Vtb3PXXl68+FeoKie7U
+AO3cWhNxIBXyschz1133K3bfrXfeMRdv/OBjkDGGDclj4LzzzSsu/fQ2VO84znIAjW55l2f+w9SI
+Ye76p2ObriHsB2U+dus7oP+U++mrDlW1NBmH5++vAO87/nhPobfxxwMcBnCmsxgkTwiFe970FsjA
+xllvgAuYHGDERxDxTet708LcDhLgjwRgTgn+sIVAAuACrImAgg34AVl+MIDS+UODXZNGWfyhBMwl
+IC0/eBrrZMg0JVxNCWbQ3ED/NngDrAUAhv8oHQG4AQMoiYCETrQYFP2RwySSwxZF/Ic1/sFDgXzD
+Yhq8IRV12L4D2NBEY1yaLUR4gwOQQ3wBUGGAtiGQAxAgjlj7xg+KeIMT8pAsNYRiHzVISKqwbSYE
+ecHK8pc/3+Vvbr3Dwis88IJKviJwxQvcGFSwEtBYgHkKDGUDRym9B8ZADoR0REHah8EkalCFDZgG
+AfxxRFnqQARdw9wD/CQCEejgBgG4GiHzyEEYJOABOxCBCQlwg2m4cgcNKOYxr9ZGm9Awico8gC+b
+CUMXii0BCoDSDxKgwi0GgCW99NMR9ygCcNIwmv4wJjIzmEyxbXMamAsdLkXo/7XTtM+JV8PgLvv4
+AXWWTj83YGE8P/ABSfjDGvCUJzl20kvSFVIq1rCdxgbigUVCkpH5y8AZxuKBTWomCQvgm+BihgHB
+jSEI+rrBJ0VJSpratJQ2cIQBUjlMAjCUc0uZhn5K6EEDKHOeH6ClAa42zwb4o6I73SnWQGdGRzzg
+Yo25KuvqRLoK+CMbVnyqvLC6gwc8NZVXA+s/wBFPnU4jdF5tAObKEboQWtGn+fTaDqJa1g6O8KwG
+qKst9vqPEibxJPg0AAdreDW5OsKpZgyoQJRZDYuRjnRH3SsHr6pTwk7FWgephyRHaocXMHIK9WgF
+Wc5wydSudgqYRF7hYJqlT/9G76Y1zS0ZBMLX3mKtaWLz4nI6CwMMGoCtH3AEAX5QJ3lVw6u8LWNj
+xLbTpHZDlQHKiW8r0JirVTaJweVgZRvzA382ZqlTBW9VA8vd5Ub3BwQwgArHecTOBveZilUqYWGw
+V+rudV5iBK8LpHjW5fIVvuh17AjVsY4SVtW/xe1sNciKX/lZZG2aKohop1AIgWTgbiurB9Os0DcV
+WGBkKogBFlZqOL/ZwAJbmqkCrffAmjqupr21YlSpOMTm0pVaOwYuddM7RJBEN73+XRpwdSzVqkKX
+t1ZD72+ZxmTzqXfHXrvvTr16XF+SBQbz1PJ5vUplkDRZXk2M5yyvDGUzRjn/qly28j+UKU7/3neG
+ZeFudKkCHAcRRAVYmIIHBFII4XFYMypQ6UoB59IYlEwOKZUDC7QUBFA2jgwEzFkMLk09xnk6t731
+nI55vGc9nfCNI9ncT2dggIQ29wNgnSo5toFkPePypz994y2w3F1Z51KZuGZolWXNXl6714oIjuoD
+ChpfcogZmx0M9pn3GFTTBXbAfz2hgaOK4CdrsYP1lfV99aNqhtYwuqJuyjbKwQ7K4MQggMaCiEHy
+iry9YixQ8t8YLFDJQnR0cAvIAAtAZQEYa0nGNoiBBbzAiQV1xwILuHHjThkECwRhAZxuIDk2vmve
+cpyKoub4P5LqAmVGY9cu/2i2vAhw8hI+wHPa8Kt+ObjWrnkuGkD2nAsGLHJnc/eKWBM1daNBQ47v
+/Lhj9gfHi+056sYV5kPm+S1KuHHq9pzoQTXA0X0OEqk3sebATGJSNXCLxkKdu08GOtI1YHWr20Ll
+D2C555AeFcI0CZFGwFa9scBJssRbxPcpqeA8wLRPGHAMC1CtqCbdJR1UeuJeOMaCeCB5MGF8cQsQ
+BVYqbwHc7nbXS1+65hhK+pjfUb430AY5tKGfXu7kiOFovQjUOYOFViCL05XoEdrYUC2uFenOlqe3
+bX6L3VegoV8NPZc//nObD4CXs79BC5Xpgg/cnucLbeHcybHH45ez5tyFQf8SepmThzoboKR+fh+j
+PwCrBT2/48RiPFmdfdbDwPWnD71TnCmQu2+U0Ht3b2QhWkLwAkyTaH1DeAOXASslcFnSSbtCEo+H
+AZF3FwrAAQs3eTWwaQnnERrYcC2QcdPjcdOgf3imGUGkerfwfKenDXLEQiW4ekdAFi4wACVYUPNn
+IjcIEn0wDdtwe/F0cqE3DUlFQ8MXQp4TTEUEA+mgf8tXdc1ndQOgQlRkg5M1S330NEQIIiE3a0DI
+hFTCXVMIJRVAdMwVQrd3Ay6gQ9MwhlVYgsM3e0EIEglADkW4FC64Qjaof1AhDR/gf1MyEIXgP4Fm
+HP7gAYGmWhTwCZmkgBT/8AKCk3gxJgeR5yUE8Ek2IAcOxwOdl3AcIBMKMFNBUHlVEASfeBMRp3GU
+km4OEYOMMWEUcxisuH9cJCJAAIp5MhAZ4D/+o4CFwHeaIXgJ+BWPKDgwFhos0IlCIAgEQHmOVz0W
+4HAbaD0LcBkKIAXO4xF3kYqnyAGjFIsEEYPgII7hOI7mCI5zwm62+BEmkC3/sIt6A3itIGiIpkmO
+uAhCYAMeEBopkVKJEwRRQnmPx3ByEQQ8IwfR+BYbGAMNZwIQ4DyZ2HBeEAMSpzjoKBDmCIsXGS0B
+0ADtcAB9Zk2JxIt8xyIqsAggwYiAMwZeoC+QOAb7qCUYtzxy0IwCyThV/yAXJuAtlYcVN+NwXuBA
+C6CQFMlAG3mU71INHckOInCLN9GOI6k3HEYWL1AIgRdb+zhwVoAB+qglBJCKZACQTzmQ0ugFxXKW
+XgAkP3kTogCRQ3mNRblASDmX0EJH4cAOB+CUNqGIHkY8K+aIA0cBicZiVjBpLGAF+WhwOyEHjTMG
+p3gTj/eJXDEBl7dpoRQDBjMBFBmRPCAIcTmCdBmas/IAd5mXcGFkuuiXWGABwPUJsLWSWckCXpCP
+ieclS3AzmgiKClBpEamQckCNkHYzjPOYnYcB3ciVRimayjknpLkOpokX7qhIKwZbArgSh7hoyROT
+FDCbZLCMJeKMO+kTkP9ZPZh5jQtycUHAFb9wDN5oA2/ZHaJgMMfwmw20nPa5JE/DYCDZkDVgJS+g
+mkJgiPdhAYMDOC3pAIeZQDVpkzdxDIIwmTzweO4JJk+5iVLAgWHZk5vXnjZ1nx7KIR1ZmgCjkEr2
+jv5TPKv5Nm+TUizGkm5DAYKQj8mjmJlAABzwlvsxge7pCZVnk+z5mWHJFZyHnPX5oUb6HgOgBM45
+olfiYUKwYlAqBFOQMy5ToIWzMzxzec+zABaAgYyJAQcZBJa5OBRnAUhgcVpaSthzM7klEXZlECHU
+fk3xAFrVEHQaFW+6G3E6Z+ZkWFRxp3zCCX86A3hpBU5ZA/7hYbAVpS7/5Td/01KQ6qjKc1sVeWnV
+s0CXilMNRGMMxKkS4QAVwBk1WKcVMQCkuhCmGhWgeqqLsapdJxC2gDV/KqejcwSGYQ0iwKQl+g+F
+cDJ3AzMr6aiS2jyWpqkPdKmflqw0dmPKmqnTUzME1DMWABV5eqRO8aZ+OhWpGqi3qh79KRBr1iLL
+cQMf8wJWEDIFZwEHqTOaBq00s2nwqkCWGa/w6q7uejM6E6YVhwTIkpbqWaM1mhAl0gDCJUJvSgQ6
+gDUcNKoNIIdmoAECkaRBNH+mSrDy0gDaAIQOIAIVaw0JS7EDEFwr4QIaQIUHULFURIW2oA0DIYcg
+e7AT+wPQlXLr8LG4/5SkDmUZHzAQFcsJG7Ny1NJ+JBGyLsBBTNNgWmSzFbu0czZwD3uxHvtlStCz
+aaEDOwsiJkslZlAY6hANf6gpVCauQgZcihcakIAIXjKi/mqWbPsd8dG2cPugdlGhm1e33hIWpBgC
+cFAUCOFVOHcxD/WqREcAFVBCcdoAXuUCaRgODVB7aZGG59AAAyC5khtEPyACQXSygysCt6cDkvtl
+BxCzATJnBIs1zBGrW+t+l1tCntt+Nch2bQSEWGO4tuBl6zCG2pSwt0u5A6BMtwtCD4WxeRRC0dBP
+B6ABtGu7vCu5ibu4HhlPB9C5GGsGsdtEv7sThfumLMBCVPEND4JIJf/qD0jQAQywDH+heb8UmEzz
+NndriV8Cnhoav/CrK37Qo3i7H0Cpt3s7BJ2gBkVAAvsgBglBdKEaIEmgRoX1VZJLfY37VOXQwBXQ
+ACWEc89bgw8suRx0sg/8S+UQVw8MS06VesLbuiBkwScxtR0cvNsbtHJEsDVYQpFLLQOXwIMhwytb
+WA+sDhsbsQ98DnGaVKAKT7drV05lwUQluSAUwRcMwZNbexHsVSgMwjyGsTsMxQ+cVidhwnXHsgnw
+jobSjvniDx3QD2Q8AiMAC80QAZewBQHgBL0QCpVQAWZgm5agkwcTJgqZx3p8xxCwRtokBS0gA1wA
+CrsQBW5AB3SgDEX/MAwkQAJi8MiQDMkK0RPa0ABquDQuABJHgLHCm8k/FLEw4LkOYAZLTL2cfMUK
+nMPS4EVKSk2VTEUXHEKVTFeZTFc/ELFJPBB+iEvD6wLlMMo8O4MJjMK03ABBZAYiEMNexMmUXAGb
+wgmIuzHFPM0wzMmyzLM/xMlzzMmtPMPlcMzJ/BwKMMu5jMwsu8Xn/A+GKqhgnC8M0A9mHAEd0AH3
+4ANmbA8ScAolUAJMQAWbUMeWIAxwAAhUcAjwwAgIjQoG/QeY8AdlQAUJAAgSTdAFTQhdAAIgUAwa
+XQB9EMke/dEgrRBptQ4d9MD+4MsnHbTfkNKGi2cx58uzbFjkLNNL/8xFE0sSvTzLJ63TtYzDPM1F
+H4vTr4zSPT3M2cqyvjwDsqsDq6zS/xCrSqADtUstOnDLSD3UlVzLsQzTXtTSTVMO0nDTzJHDb/dl
+sSZkmSyzUnHKA4GSNKEPYbwM8BwBF2ALB9ACDCAGI+ADPiAB+9wF/wAIEBDQOQAHBQ0PTOAEFk0I
+TNDYiU0IhIDQDP0H8MDYXbDPJXAKmn0KYDAHIP3ZH60Q2SA2b0clmcwCW1vJbJfJsRq9rn0A9rfM
+4kctMf1O6nAx/XQDg6ENMr3ThOHbr8qyP0DOdkW9XTzMLx3bXpSCR+3T1JINV2MitC0Y/pBUsNZB
+1S3DkoDVvG3byf89EBlrTxXg2tpg3Fnt3VwU3W3x2gfQxe3NtRDbUG6dHWGMBPDMACd7C8QgAsvQ
+DHztA/ZwCsXQz3AgDH1M0JRNCIPw1wrOBIPQ2JDtBJWt2A4OApi92afwDBcA2iDdyI1cBAsBA9R7
+w686g0TwDUrAwEm12y64yROsDnfp2yiuDRmsBCzLwVMc1Tn92zCtDin92zbuQzJnq+BK2ztt4iBi
+ZH6K4ji8wtTSwoyLJ7MEsYYZuSXMDeHg2yVE3FxNLSs+4z+wyQHCuDr+1F9123nIDbs3y9HgAFeL
+GH8bkh87cFVgxgJADPGQ57cgAnfA13sd4CDwB4Bw1xJd0f9g4Zr/fdFdsOhd4NiOPQiLbuGZvdn5
+DApF8Mj3IAaODMmbDskXMARDcAEXsBBkdtyCO2k7t0IwLn6SELrVrQTpMLLylw1BHg42/nXOnN2/
+tEaz5MDALeO+vRwJYhNYzky8bkJXvg5JAKotjdy2XlhKgLoH4FBWXesJ7AA2fsu8EuxSnQ0OVevA
+Tdus7upKsespRxbtRIbZewQMNlRvh+3AqxiQgS0DpwOwAAtDcAvxEAB5Xg5I4N9mDODP4AQTDQgn
+UNFMUAyaXQIXbeEgoOgPD+kXjdmTLgEW/w+H/NEkQAf3MAdzUARu4AZzwAVcMAR0MAcLIUOJGtwJ
+YLM/Lg0OtVAz/2Dj7jCxZhAN1k7zhuVTNJ9m1Td/Jz3zXTfzV67JDpVQTR0NPp9Up/HjNZvFOfvt
+QQ7t0Y6gLGALTT31I5dHKX5fQ+9+HST1Nk5FU6/z9a4U3KD04rSzpPwBXweqTV2zZr0Ue1J3vicI
+VsDORjZwETACW5DnLbAL8VAHCeAMfw4ApwACUODQFJ3gCY/ZxfDwDo/REO/wF27xFg8AatAJACAG
+RVAEc0ACRbDhYHABJ4AEQzAHUbDIj0wRePj6BRHkRA/7CEH7Sc4UL68EtS/7Xl7A4KoDDLEUsS/8
+unxhul/8CkH8z43lS6H8BOH88K1WmzCi9O0nYtwPlxAPe9BQ3v8QD/JwB3+u2Q+fBw5NBYfNBJK+
+8Ps8+ZNfApK+z5qd+QBgD6r/yHTABRfw8TLQCVEAEHTozCEhpqAYhP8ULmTY0OFDiBElLpxRceJF
+f5IqWmy4kaNCEf5gHBABw5+Iiyk/qpSoxKVKDSxlwnxJMeY/cwn+Lcqh8BOLG//8MejXrEiqSr1A
+xKvTAdYIH/YklADBxAmjQ4ycEOpSwmuJU1+piiXr9ZQEtAAA2PMhEICYOUWKiCnSSdlBhHkRkqB5
+buXMvtL+Ahb6o6VgDX4ZlvTnj8AHwpEDD5ZcOaLHiXpeeFIIVGiLfiMuMTFWyRiIDVtGQPUxtUSX
+QVZlgyBLu+z/7VNnJaj1AcCHpjl6hQ/fG6UnzGyWkStn3tz5ZcXPpadMZ+2frc0TJvy74aB7s9D3
+ogAqQ+hOMx+rW4elCqILk0FdbN/2CmK+Wd28fewXcwGvQeL2moOLRYzggLpskrtIQQQ7ioZBiSBs
+0CYJl6vQwn8uRC45DTH08MOFktNJEIU8MaI77yDooBlYmrmngw4iWE09ANirrwsc75vvFPtAKOar
+3NDabb/90NvCjbz+06sIOrgIwYQkqlCkmQmrjBCxdBQiAkHBtuTSSjDDnDDLLyFKp8syG0wwwn8+
+wO4fPbjzjjuRWhjijkuaGSG00EawJ7faaAOUrGIEDevQIPVD/2+/IZRE6J5h6BgCDi+W+OTSFjog
+YZgFOxQzQ2serFLUT0s19dRSSUV1VIZ42s4B7nSoogYUf7GFC022uCS93iQYlKyw7GtPUF9zMxYt
+IokcYQs1kmRyiOsEsXQJBUyoQQEk7qjlHjFW9fZUIrz8dlxyy/U2GusWkkKKWAlwQABFlhHgyWPc
+rVcKDgQARZsH1kilGGRO2cPGZ7oy9Kxj05LAB/SaaUaMLWQY4gI4OJB22hoE4QCCf641gQM6SICl
+nwioM8dklFN+6GSVI0y35ZVhdllmmmtWORA4abWXAy0YuIIBBuRtIQRRrtXBCKR5WGICPWyBA44E
+yBvij15QgdGik04GGGArdaIAo48L/pEBiRZc8ESBetNeGt8WBFhmGQZasPZjOrZgcQRobdZ7b777
+9vtvwPeugCeO/znaEk3uAHqBGN5e5gIBBCB743WtheSYyyFBevMvONe8c31AT1pppkXhoAUk3F5m
+iKAZYJ3jJVbphJVLIoClZJPXyb2ha3Y3U3ffGboG+OB5L/545JNXHvkXOCbgaB4uKCKWOZ54ImjH
+s488ciS6b+F0osNfF4IqyDd/4++7Tz1yx4Fm/W2gn7hjmY6BAGMWRZyxneyAAAAh+QQFkAH/ACx2
+AAAAXgE6AAAI/wD/CRxIsKDBgwgTKlzIsKHDhxAjSpxIsaJFhtD+bSA3IFuLFwpCfloipQWSEKJy
+6PPH0g4Lff+MLCEpyoSRKimNvHzpoKfPnwSA9vzHI6SUCXqQ5viHRIaAfyk96RH174S2bY4uat3K
+tavXr2DDVuSn0cCDPnCsEB0ZAkkLDkCStNRnpC7dunZ1wozZUwcBv0V1BDYxeK1IwTNFclIqtYVT
+qDmmemHXAJzYy5gza97MeSI0ao4ChEugduY/DjlZZsqr02XBuTyFBhX4F3HIGoQX30aae7BUKRDa
+yoDspUW2AZ2TK1/OvDnEHeAasPNCVNTJYzduJIa00rXAluDB//+7QStobUToYagv+g93e/YDTbRn
+PKG+0akhHKO28kGd8/8ABiggWGahlYEJXoRwjD+tWGIEEK39Ex6DO+kj30tECaSeLBx2eEQpP4QY
+IgRTHcHebiboVl8gwLG421RwQDXZgDTWaOONBEGnxAdWJJadHRayMCEFfNHFg23j0QKDhyBK4uQo
+T7owii0uRLbYBLYNhtuKXOrhpX2NtVAcjmSWaSZn0U03UyE+UUghTEno1aZLLaH3yw8k2hKCnnyi
+dAAHf7bwZ36EQlVlUpaYkWKiXdJnX37UnSnppJRWdFZaR5onYV0pLtGakAa5lF1fgx1zZGJFJXZl
+Db+h1MKrSMT/GutpISC6Kot4usiJHhxU6uuvwA6EzT/VSNejTTe0ZAIguMn1kKiynSdYhlmiuKKX
+p5kkQ6wt1AqmJY4GK+64ZhZ4AEhLJPHPCywJEgwFRMbb0Kh4SVttfNZa26irTbnlbaPkBiywgMWe
+kMNMGWRQSAatCBYhRH3VJrGpFKdq8Zb6NvrbtSb5+yVSA4cscmfmDvQFdxSrG1Fss9E2cXnpCbae
+eltqbOXNG+/alsecjOzzz2GVs06knpqqckNDCkkLeaRmCQTGi4YUc8yKmnGEzY3q/GoIYW3g9ddg
+YxZ2Q2CPHaDZC6Gdo9oXsd1cdwcl3dIXk6AQRxgr0EADGln0/63F338joEUkWggO+OFXJE4DHnis
+gEQc/1Zt9bU515df1zuUnfnmYml+UADkCLu55wCSrpDbGqFOkeqbbeedhBPSQzcKKIRhiil8I6B7
+Irz37jsziTCDA/DDFy+88Dj0kDwOzDOfQgqREJ5442/YOjmuOdRn0QC2JGtGAqOzfpE/4Iu+EPkC
+cZ56Zwn4k7b6BLVvkOnmf1f+QOhLlDk5P/hjjXL+QZcCHja32oXBdmhIYAKzoLvdJQIBvUsB7yRI
+wUQ8z4IpQJ7zNti85vVAeSBsHvQicQUarCAlVwOX9igiDX/8QBrfEMENfpA++KUufDiEXw4598Id
+1lB96NuhD/+HWBYhcm502fiB5owYKh0yMXz5K0sPh2jE9inhhjb8yjQMYoKj/QMFC1SgGBOIADQ0
+0IEIkOADK8jG52mhb32LBA5S0ME62jF5H8Sj80iIBw4cxQwUmcYNNkGQbPhDGsQSAQFc+A37/eAG
+BAAfAWyxAwPsIESV/EB2DjCNHZDvkZG0X+bKQcN/KGEHCSCANRb5A9HUyRGVrGTostNKA0zjAN47
+ZSpTeYMDKMEM/jCDOirpjyr5gwDSkGX3/vGDBqDSH8pkQSizkcpVujAAOWofL22xRejgsped9OYm
+w1kVW9IwAOTzZAJACT7obAKSEsrG6PrHkmxskZX+kZA1bOH/D2x2xRoQkA9RWkEQU+jOjGMkoykO
+SDsw9i6NFozoBZ8nQRzgQUnouYLw6FjHHlxhBSvAgxaYF71IcLSDH1QeCVdAEWv4w5lZEYgSHsDM
+G1hDCS7wxylZIgJ1HMCUIvBHJ6fhvx3gMhvZ6CXseipTCYHvAb28Yj8/EBNpZIMAP5iGEvxRgXIU
+cQcwUOVaDPADZP6SAFUJ5o4YdNO/ENMfPT2ATi9p1rCmFZZHQOZV/feBY1oVqwOBZV/1SgAz4JWw
+NKQrUgHrVAN07wHqzApclSDXK5b1r0WFpSMaUNlqPPKmOZXqDWAggm5axBGhu+J7LkQQM5ZxobT7
+gmvR0AjY/7mEBhOUKEQpikE64kEHT1vCFe7IvB7QIBiWQMQKkocHFiEhEsq7Yx4pIleEXFGellyS
+I4oZS/KV45AGMGQ1aIrddPSTu5YsZzpdAIN/ZPen/4BpUCV7P0tu9ZQGaEArK3BFA8y3r5CVEHzn
+KyElWhKT/IXlf6F5X1hudR3tk6/7athXmN63wabU6RXx22DyVeAG+EUfetXZYAM8OKaW7KuJwVtJ
+q3mSALHcyjQ6oiH5PIwes/2CbWf7nR9l4YG82+1EKUpHZvw2uMMlrkcRkdzlelSF0CVu86g7YYNQ
+Nb3/kGFjLYk+GLjAsVn9nxLG/OD8GeAfVPXHBwwwyRmM2f8FobSkAa68ZffOGZpnDmw6Hpm+K59Z
+zVmhM6DPLENbfuCRLEEzNFVsyW3wFc+KDuyd5WwANctPzmi+NJfTnKys0nfLlf5A++RcjczaedSj
+lrOW4YrirUhntQOs8hcaSFvbGhQBYRjPTijwYzYGLxHDAzaRLboEJIcwus0j4eKG+2RBSEELyCZu
+S19KEEeLwM8CWfWabQnoK99AnrZtSV+3feY0r3lIfv7zn+mcYqHmmaaaPMA6KiDUVG9Z0OQO6jYK
++4F00FvRk3bvAx5ty0hTGM+bZnTCJQ1oBulz3aC2NMIHvo48G3rRCPfvDeq8FdGcwAum0fVAJkHr
+77AkDA//RIGu9ZGdH+v2CnjAm0grylEaMHkVlhiuFvBAAy2c1Hlp8OAVqnCUkXa0jhMhh6O/HLq0
+uvkf0YhPKSJO1YHrG+r9tPMHBk5uNDcWBhWw8wwSwG5GD5ocaC/xDF56g9L6130KH7SfXYh2Zv5A
+4f++8tpn4N5okE/hCkd7hdOuYZ0S/ul8XzHfAX2EGzyAHA2fe38Mj/WKH5wcW426LbV79oug/Sw8
+UlVtB4KC3aHB5P5AeRa+QAG68UQLEcSDH1huHiO8YaQVtfk8noaHOKgwGByQY/K0IIo3vGEFKeiB
+Fqx0BWSnwaRIn/YLzxFUpn/2HKGFPLkHfYRioj10MEjH/wxc4PjOn3vN7etpAtoOeDsXUxvpmwY5
+wmqOdBQ2JsLUJLXdLaErC3qyQRUN66BmMxBUL8Vo9LcOybIOgFdl7jVY0WB/7cU/iIV2l+UOWFV3
+azYAg0RU5+d+a5aAC1h3dedujbcO42d4atYV29ARmKIhoycQpfdAaOA+k9AI/oACzFCDFEA7rzdB
+YSBNn+AXMlE0WRBdNGAC2YNzkeFsKSEK0KV8LsIBybd8RNd8zEMDxocEScY8FqEBjTdaFbdFAaBI
+zHQOaKdm8td/guc/t/B55DdD2hA6a2YZaqiG5LAOMHBMa6Zi1TANfihDaEUsb9gNcegCoKMBe/hC
+LFABfv/Ihl73HS4AStFQd9nhAtHQS364DeQXSX/nbuAQeOQwbkGBiAL3Yb0EOrcQAKhYAaq4gmkV
+dR+YhlXXidpEgqPoPtPQDYrkQmjIhm/oeaLhb7BGUAMRBhCUCKbgPnEwCf5AckHIAniAAj9oZEIo
+E28AIZ0iCMKXhDmwCkQHBEfhhJbgZFY4AW8AXZHwjTmXPFdQNUyGB1OGGU2nRaFTjwICiw7xDVdW
+DRpAeQXxhwyBjwpBkAPZH5bxjxrQEAYpYx7nBYtgMcYoEMgIQcv4D2FAjV+gBdTIAlnQkX4AQZEw
+e6eSBdDzBiNRAzogj8alhOGIByT0hJEBXcR3FFTYA+v/GFA0gJMpUQWNExnQhgNA0xz62BAtVAFW
+pR5kkldJOYjNMV5KQBrBFRKvg3K8c5EL1Xqm4Ix+wJF9EQnMkAXXSAPHkwUYEwfJ541E52Q90Fzz
+QHTQlpNAAIU8WQWWgAdSaAlxkDy+h5dCOZTLUZQNYQ17eAOmiCMBQH6M1JBo0hGhNxALQhAoB0HR
+iAbLeAMo4AAUEAcIEBf6EJIWpR1Hgns4EAlM+Al0qZYTsJPD14QT0HymSXR0GZt32WwrIEd4EAzL
+9ZeA2Zu+iRAB4JhWcCAwWFBAFo00IJajQgGmkAKT0BNLAJYr4AAjsQRawAx0lAJMiCDQdQWMgYXK
+R3RX/1iX6KiO3oKX3imeVnKTv9me7kks5cAHcPACUxmZA2EKvVOZWsB6LOeRndkTJGeNiXGddGSa
+xWYCb5B86WmXrCmFzpYDsBmOs4lC6IkUxXehcQBd77mhgPkA8SkC9FkUKumA+EmZLIFbs0d7JvWc
+DgAEYEkDfzETDWqW4vgPTraggrCXH+SWzhaX6mmeOIeXy1eOJgU9HMWhSOozHtoO83kguKEDJAo8
+iVCZifAGrccCKJAC//kgCFCakwBcPDAPJkl8LvkPWIijgbACWjB0wDGX6iihQHqXpWmXdJk4Rpek
+eDowSyoCVvA0PQOlxmmiFECWQaiZK2BBX9qiYJkCF/91oDWQEk/zNGipPGg6jsBhl3hJnnSpnZjK
+PCuAFHFwQojgl3laquMyAOHApCH6pPFCJKYgpdH4qsrJAmS5pS66UXHgNJFKl8zzjk4YB0sIp8mz
+jkv4pjmgXMOKQuDCq6barL+Cqu4AootwJTxAJxKCn1c5CZPwY1qgrUaQBcxgoFw6R3OEBziXG5ZQ
+BbeJbL76jZHAo+hodHWJE+qIGm9AA82jBScUqsLHm5nxADRlEACrpwG7HAP7DwebsMyhsFwBrWkx
+rcX5HSVqQbpDQYKzW4czbKWZBYxDA1cgR9FGOGtqdFqgN1eQfCJEONGTbBTlQXNER8jGGQwrEANQ
+sOT/UrPNgbMIG7A6m7M22xXakA484qQD1aphADzJKFHB87LBwwzCI2zkqkcpJV1Ti0dV60FXe7VY
+G30SAVcGEVRZ5oAK0bPfIQLNAbY5NRcuAH9gWyY4C1fIMRBp2xJHwLZiyxBeSxBzyyDCFLdfEbQf
+AJE90x5yISQsYJUP5TtqRGTPQ64c9XNSFrmSO7nME3RpkAYUAbcNED9mMABgW7ObC7rxBbqo6rc4
+KwKmS7qpS7OqOxCqG7evS7oJAEg5BWHXUH1hG7ujy7qtq7uj27uum7qwixyxq7mgW7vWYA2aBEgS
+Irq867yii7qui7wMKIdg0QBBmwAQMK0CVbjJwgFt/xC+lzu+jEtkwmZBOABslLu+Uma543u54esM
+8ju/pABXwKQD8/YSLiBTHxZM6/AdIcKHyCFXnPVS2IuKptS6AewACYC9LsQJ0nQAqAp/mvk9yGG/
+cSLBDcA9lzhT0gDBclgOGzzCI1xd+0u6fBZUuKRWm6uHx7QOG4zBDoC6IoyKa2tKwBTCBZFKx9RV
+AyDDNKwNoCRXNFy6OaW3LxVUG/wBUMoCLlC6nEbDcMsNEKwBOUXC/YMc0XC//9t//YNLq+QAzPsP
+cIbDL9FMXjV2FcC9AgEnQtICsDACzXAHT8AAHdAMzRABpCC/4dvHfpwGbfC+gjzIgxzIhuzH8dsG
+e//cBpdACowcAZcAyZIcARGAx7AACzylgP5Lb1sHA223Dv3zvyxhC+tQu7lbXQ1AfqLmxNgbuu5D
+yvsrylxVyv7TAMAkaqEMOxVAy/+ryuu3ttQJYWJMwsSMtqPrVY9UDnIVSUwMA9JRTLzcAKMczb7M
+ysGcSp3rVQLhd7tMxD88y7XbAH4hapqpwTR7xNvsAM0EtlH3D/lLVQOIiWGXZhL8SOeQyu6zwX2g
+zg1wDk5MywvJIDpQATLkxEGlWo0YE/i7vPF1DvPWp1vSn8kiChEwAiMAC3ncDBY9ApQcyZB8CY3c
+DJccAc6wBc7QASZ9CSXtDCq9BY3cASjt0ZQ80zP/ndGWfMmXfNE6rdOXjMckrQgM8H4FjNDyFkU6
+AEjBFLpKScDV1UIfgL1WpM0Sks3aoCgFJsICNoANjL1HfdUO7Etqtrl95c/C5M7mfMzxZcLunAD5
+W7cBqA0FXA6K0spdzUhf7c9PrWjSMFrfIDTwNRClLMJbJcF2ndXe9cxnTcYTAsPVFdgZJsHqIdgu
+0FVwJQksAMPlsLcsAcNlpdSSIM0OkG1e69TaMICIxAJ9O2/YOwPsgCn2IScxkQMtIADLoAj/wNKV
+LNJxHMc7PQL9cNE4HdwiDdzAjccbbdG/jdzHvdzAjdF5LL9AzQACgASocRRc5VWorA1cld3/sEzX
+/w1/Hxa22kDAQWW76SfV3z3eLMC2cJ1t2a3M6z1Zm8tV5c3W6Qe2ZtBTfS1TUq3WajtmBAzXBNyI
+7e3dGqzdB1DfEAZXfRVM+r25gA1nPBUOWdbecPXe8i235GPfwGQNPwXXlLVI1z1IWC3YutZecB3L
+HO4/WMXhaPXdlVVjZKwDog3NXqUNSuAOH7C9PYMlKycbYVoFHIAEAkDbDMAAiqAIHTC/Mo3HTo7R
+PQ3lUS7SlJzHeqzH89sBSX7kDLAMRf441U0iuwcm8v1vZcvdBj4Q/PQPTK1TcpVoE44/vlTDL5XP
+FL7dE4bjBg7iFz4hPzUDh8Yg4zAQIC7aig1//P+t3n0dDgNuCyAe3umN5+Hx54EOdQQhVy4gAu0D
+1nMuYNyd3gKBzjJVTBKC4xG86RLi6DI1A9/ViPJt2Ytu6pY9IQJm6KKtATNM4ab0AcCk6jmeALZA
+nzBILxPjMIAhMyL6jaIQAhww5ERe5NBO20Xu5V4u7dH+5dMdK82+7ctuqdnDJTVzJXoA41U2y7Co
+DXWN4kQBSNVVWWON4+MdDeGw6Cz8SwrADZFe1P2B43U95+rAVe/ODYxOBC6w71H31+ow7ziu1grf
+8GEn8GyuU3M9ZnOd7wE/8AW/zaCe0N+wkJwO7+aeAALvUv4e6g74j7bQ7hq2dj911I0UDi5/3Qr/
+wALZEA7CYOfcsHa2QABrK/AJYLbkPhAof0jwl/GHvs0/T5/2IdHUWTHIXiromjHerp7iKeZW/42u
+KY7fHu7f0vWtkj3XPQPV9R0tz365PM38RFVmbkrhQJ24TPPwrlqwTIBh/+/8ZQZJoOln7+/uowRu
+v040/0iaPs9V7ehkxujuc/OHT2aV1dcP3z6SoL3kM9hkNuI68PYz0HiDP/m67vZMXEwoD/L8Nc76
+1+kmT3Zk1+H0pgRmK2+LqAFqD+zuTPnpIIeWLWqp787V9/MJHfZjb0r9M8ZhRc5jLA3rwKc1Q3u0
+Zy9SI6LOryIqBO7SP/3UfyusQv2uSSJinihU//nwa89VpiThMEBVBebJuR7xEX9dpfASMPC/h+9C
+5r/vbM53AqYE0rDzwUT+4D9mXAUQSqSVYsHi3zqBkgoSEKHknz8YSiT++1fB3z+FEjVyq+hP4wGP
+ShIQgPhhYgWN/lAOTMICBkJpCv8xdEjx3wcdECs8XKeypk+WDkCitInR39GjOkxalCiMhVCFCGeW
+PClRhL8PgSgiJZDAoYicQrfu7Fg0AVabQY9IS8vugwsrE+RmuuHArt0cQHjs1cHXxF+5gQUPJlzY
+8GE9UhJDUNx4sALAPGYUpfxvcmXKEzGnrTzZ52bQoUVXzrp5hubRnFFbrpnatGvYsVVflh37Kv/b
+zLQtu/tQ4UXgYzPvAlkmQAASDqIY5+X0FwZgwYylT29MfXF169mZQ5erXJQACJB1hKhdHvRn8+kp
+ErAG+nT50/Hlq6dfn7V90dZwSkp9Lt0JEbYDoq7hBFjmQASNOw4J5DhILgTpuHNswrwCqfDCGh6z
+pDnnxgvBwRY4CPEN5cCrATI38DNPJWl0U5E+DVyELUYaZXzxRhxlOwuGdPojYh0RNvnNkwEJMMJI
+HQxkYEkmmUQwweIO1GOvDansMEMOLTQsPOdO/AsJBhhskAMGjVuGAwXGGyZHNtt0800441QvG/0O
+WCQHImEQzkgkllHkT0D/7MCZCNro4NBDFVn/chnIuIOsheJaEJNMEB201EDgTiSAgTORMJNJRZZh
+IIQ0ZVhTTlRTVXVVVmOjM4EA4/pnCbt0OJIDURUZNAJY/nGmA1xggQUXUiJophlYSJHSykY5UZRS
+S6P1TjlcSY1MAU5FZUBRQS/hVIo0+9iiVXLLNffcHKNJoLchgUDSSC+0XVJXUpwhFNlmIiCljUsi
+iGBZL7t8ggEyj1PwYAUZZKCFgHVooQM/dXXmknuOveQJASbgYQI3xkX3Y5BDFpkydROw8849bSVu
+3m23lbhff+slNIJvr20OglDlbXLnJQVQJGPACBCgAwb6bQYAMfYgQYwtwkwzBEXuGHlqqqtO/9Wa
+dYVUzN2++vrH5W0RHdReZ9rwNwJcaF5GlI2b5QEJZ3INVFBdD3WGAZ+BNiPNJZ8Q4557SFhjC8Ah
+ZluBoZWxenHGG68P6970uFPjd8HM+cCw7T377GZw4fTwKi15O25F/O33EpiNFXaEDobWG7IlOwB8
+9iIAxxhcE4a4xBnHe/f9d9DWgVVrT2hNk4cqloHYwTc4iMNTbQct9lhFkWg7dCQg7uAOBRmY2F9Y
+RhDfGZ+R0NjLJ/7ZgoR7Ztlii9pJcJoHDvrlAHj883dc+MjjyqHrjUVMFJJaEPMctK1l8EpRArge
+hx6mvFFlLwLOQJawwjeCnymCYV6CAEWKQBICEN7jEiRgxRbW9hefBQECAQEAOw==
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://adserver.adtech.de/?adserv|2.0|258|73131|1|12|ADTECH;
+
+R0lGODlheAA8APcAANDh8NPW3N3q9EmMxlKSyNPZ4o2eqZChq2Wezu7w8lRRRqjI5FWUypK73djd
+4kyOx+Tk4/D2+tXa3efq7X2PmkWKxMbO0+vu8OHs9unx+HqLloaEfe30+oSx2JW104uJgZSkr1ST
+yXKm0oqcpnd0bNTU0ZypsZ7C4Ym12qTG497j5bLO5rbS6JyalN3c216ZzE+QxzQwI/r8/YGSnbzE
+yleJs/b3+HKEkGt+ieTu99Xl8quqpPf6/bWzrs7g8PT4/ISVoJi+38ze73iq1FiWy8zT3n2t1rW0
+stjm86HE4r7W6r3GzM7V2V+azff4+YeZo6yvturt8b68uHWo1Gmg0Mnd7q+5wJWTjLnBxigjFYmY
+oYmZpNvo9MnJxaSjnY2dp7W+xfb6/GKczfHy8erp6cbFwlqWyuPm6VCQx/Hy9bTQ567M5pvA37nT
+6MLZ7PX2925rYUuPyqzL5c7g76inobC6we7v7cXb7Wyj0aayufz9/uvt72qgzmtoXkhEOM7NyrrD
+yOjn5svR2m+k0sbc7s7T3BIMAL/IzkeLxbK8wrK1u0V0mbq5tbGvqleVyqfI5JWjq3FuZa24v424
+2/b39vT19Obv94Cu16eloMDY61uYzFqXy9DPzZCOhl9cUf3+/pKirV5xfWByfmJ1gWh6hmV4g1GR
+yP7///3+/3aIk2+BjM3S21CQyE6Px1CRyMzR2pOjr/7+/lKRyGV3g/T198fP2snO2PP4/IyapKOv
+t7bAxbrU6Y+gqfX5/MrR1YKw1+/w783T2P/+/6i0vJCdppKgqOfw+MLL0IKSnHWHkfLz9tfX1FGS
+yFCSy/n6+zpTYoF/dk+LvrPH3D0+NmWWv8C/u6+tqODg3sjN18PCvvP08/T081GNwPz+/mmezc3f
+7/L3+5SjrWGZypemr2aczJq/3+v0/fj3+Ozz+ezt62uj1Gyk1dno88jb60GHwx4aDCw/Rp/D4anD
+26bH4+nw98/W4LC5xbO+xMTM0VOTyd/f3lyXzJOkrzhup/7+/////yH5BAAAAAAALAAAAAB4ADwA
+AAj/APsJHEiwoMGDCBMqXMiwocOH/f5JnEixosWLGDNq3Mixo8eOAj+KHEmypEmQEU+qXMmypcSQ
+LmPKnHkRJs2bOFfazMmzJ0qfQGl+ujOomaYUvTDuDMr0JBIUph7UiBbnEpeaKZtqHckhiKYBrFC0
+gMctThMW/iou3coW4w8WYlrBgDHEHJ13z2S5cgVAbda2gCtWGdJKVggCrgZ1oLZoUbR8rar4DUxZ
+ogAUDAYQyOfKjDdy4hCsU8eHHAPJFNdWZsrhxFcYBAiYIiJPUK3bt4vYq3FnskYucwAA4FAxgw/h
+yAFg0DMR3PHk0AHkQPI8ug8dzCdyUbJrVyYMFHN8/wPgA91EPQKCA4gw0Zk0D/Dje2h3oZD9+wUU
+TcPiGyM6PCEQEcIJFa3BABEIEuHIJlQYoYYM/8xxYIIUIujICVM4UmGCDAwCjmUoiDFABRU8gEAD
+lkh0wgNEmNLGRDygwAoD+8wxkTKFBKDjjgGcc8ErqwQZZH4x9NDfRUowA0NUePxAkRytmGIKK3KZ
+0soAD1wSAQAPtCKXK1KaAoOXD5QjQpRRPaCmmgMg8OEdTQywpFwEXIkHeOVUYMoALMD4ywCthCDE
+RLQUImSQrxSizI+HrkKkkan9VZEekyASwmEhuPGkK5ceGAIigRIwAApVOKKhIwxcGsKpDJwggikh
+MP+AABW00oqAETLQQ8UDIQRKBQJLhvCACDKwYekDL0rEQwcPmOLIN4QaemiiiwJ5KJFHHFmRAE24
+ElsIAzTQzURyuJKPKSj4UIUaU3Daqxo+fDOHG3jAIIsm8H7zDReDmOKKGHfkILDAGFjyCRsD9IpH
+wAKs0KKUVaRwbLL/yMCss9BKVGij1DJ6rSJFakuRGpq9gMCUCORArrmspNBcB4HCgMJEMhBmygsq
+SyRDvzCIIcBFHGgimxmoSSQHA5u4ksQjxz7Igwzg/NLss9FyrKjHQmIrss5TsPKAEWvENgDF5ebD
+SjwU6bAJYmJ8IlEEQzT7ws8S/dAvAZp00MDeewf/kQE7MAg7hNswCmA4OCdYSgACUzQuwguyUa2x
+tEJSGwU2tmSeeT1QhBwpRkhsBkM8P1DRCiu4Gs0y2ueJIWUTGbwd9810/2M3rPmM6WUrvCLhhrmt
+NKCRsZcitpcpBISAMaGrvOK884KskoYNE1RvfRQS+NHI1v+UwwoBjujwzySBhkB32WdXdPLNOcMt
+d+23XzolK/Q/wAASK7CcxPCWKk8//clbnkSc4IACGrCAtMhIF5axtR8g4HsIsIQxkiA6Av0DfayT
+SAaaIAtTNMFJ/3Af7SZyOwJsAgVsKIcKg3CCDAAgcA/4RUV6gQR2IMEYiVOeEVRYjiCsT3IUiYVK
+/1SjBExtAgEIaMKlYMCHpGCQIivYjCtEMBERzo2EPEMAeCyCAQZAhgqxm8gaKjAAd7BhAcdSAkUu
+RrV0tKAFUoDAP8pAhxZ04gqdwEQnpNCIPB4BApgYg0UEcopCFvIfp0BBwggAAzW1glMEYICmnviP
+XrCgCawQ1gIQGcLZveAqp/jHLXgmhqtYRAZGCFQrJhEGyyBAFrLJhMSE1adQLmtq0OqCJzwRgy78
+YxqegAYJFNAHP3QCDu+AQxaysIEY6AORhjwFIaP5D27BhghIRKIYkjeASfxjDe7ahBjE0IRz9UoM
+xAmlFUEpyn7FqgnjjKcYXuAcGHzPFHg4QQOagP+GEMCgCbfI4QNq+Y9bLu8PCiCBJ3bAiBgoYANl
+IAEcFFCCSBgiEu/IgkNdAE1DTtOQ/1hBwhDRgAygIwMc0MELZAEDBBhDDe6SjSlgKaxMSUSdnmTn
+KGF1mDCF6QGxm0ezlGfPAMJgBf8g3kA5aVCqLWMH/9hBJCLhBTyWYAdk6EIfPgANCMDhAySwhhyj
+Kc1+ULMXUwAUDHpDMxQgAg0VYMEKHvC/urbCCH0BaQTS+gAz6BQPdK1rXR9gjH/oYQ1EsOf/HvAC
+NaQlCO5gBSLUwNRLYElQ/4iFHShxDQi84R8usEMg0kGGMVRiDGPQRiC2QQYGdrSQHw0lOB6xgBT/
+rCCdh9RBEmpLCB3MYwHABe48VoAEHtz0kGHYRQrmIYd0VowFvw2udGt7i4nkIAlD+JUR5lFYiXxj
+tylgpwxk+dsUAQMOZfgAHWIBDAVIYQPVaAF6O/GHbERiB16ABkfJKhB/+Pe/Ffmvf0UiYABPRBgC
+5giC05KRAVMkwRUJBCaWAcd/jOEKyziCPkrQgxIwggycsAYnuoAJMvyjwP0tsIpXzOIWu/jFMI4x
+iwNMYBT3Q8Y4zrGOd8xjHqe4x0AOspCHrOIfE/nISE5yi/uLCgE32R+oiEWTo4yKT0BZxVaG8pP/
+++Qtx6LAU+6yi1FB5iuD2cxndrJ/pwzlT2zZ/8VWRoVAxCxmLjc5y2/msn/j3GU2r/m/eBZzLNzM
+5U9Iuc9W/vKdr/xkPKs4z2X2R6L5bGcoC+QTmM60pjfN6U57+tOgDrWoR03qUQuEH6hOtar5AYJV
+u/rVrX61qmPNalm/GhawsLWuU53rXcu6168+ta2B7eti84PYxj52spfNbFsLu9bNhnWqW03rZCP7
+1rNGda5hUW1ux7raqwbBtcXt7H6A4tzoTre6183udrv73fCOt7znLW+BHODe+M63vvfN7377+98A
+D7jABy5wgRjg4AhPuMIXzvCGO/zhEI+4xCcucYGM4OIYz7jGN87xjnv84yAPuchHLnKBPOHkKP9P
++RMS8I9DpJwiKqiDyk/OCwc44R8TcPnJLWKBJ1hEBeN4wgT+kYuTH+IfTPD5P07Ocp37PAEor3kC
+EuCAoM8c5UfHiNOvLhAgeP3rYM+DRCYAdolYQAISyQPYva4CpFtg6EvwutktQHdJAGHub/+HCoDA
+hH/EHQhoB8Pd/+F1ljshHHJPgNe/cHMJMMEJTvjC2tcOBoz8ffJeF8gMNs/5zqOd5SbgvEQ2TwO9
+d37zON/8FhIQDNT/4/QzGL3oX58L088A8q7fPMv/IQHUJ2DzwfgHPkj/DxrA/vT3uIjxj795gVDg
++dCPvhMSAIh/HAP6Enn+F/7hhOg/v+0TOMb/MKKffe+XnwLD4P3zWU6BRKifAuVnedsTAf8ErP8f
+X/C+/r3/hc9WBBD7B30CoQEEWIAFaAX/4Au48A8JUIAS4YD/YIAEiAwBMBEJAAkEaBEZSBE2gAUF
+WIFW4Av/YAUbSIAshws2YAML2IAa8IAaYAJ5kAcmIIESiAu7VxEeSIMFKBCp0IM+6IMO8A+6kAtn
+8A8m0IMS4YMM+INMmAsVmABI2HKHMIVRmAu5oAv/4AA+KAn/EAAsp4T/0INfyIVBCIWpwHJacIYS
+YYZM2INacIMVoQtt+IMCcQN2eId2OHgUYQF2KBF2mHxMgId2aANncIcXYAN9+A+CeAN+aIcX/6CI
+d5iCWXiHjfiIdliE/3ABdth3S2CH45CJi3iHmHgR9xCKdygQqpCKqpiK7pcIqpiCqSgRNIAPNvAP
+kLCKqYgP/3AGNNB3+BCLxUcDwmgCqiARqviIqxiE/+CKwJiKyKgKyFCLF5CKGlCLTECLmYiLq4gM
+jzgRkAAJEsGM2piKAoED5niO5liEWnCOfZcHOEARF2AC6IiOgPCIFwAIyWCOFgEI7/gP51h962iO
+dZB95ygR5viI5ziQF3COycAEF/AG+FCP8ziPFNCNxWCOxfAPdTCR6CgQpPCRIBmSIjmSJFmSJnmS
+KJmSKlmSGrAHxBCSxCAJJykQpVAKs1CTOHCZkzq5kzzZkz55kz7Jk0A5lEGpk0BZlEhZk0ApEKPQ
+lE75lFAZlVI5lVRZlVZ5lViZlVgpEKLQlV75lWAZlmI5lmRZlmZ5lmiZlmgpEKHQlm75lnAZl3I5
+l3RZl3Z5l3iZl3gJEXzZl375l4CpEAEBADs=
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/t_01.gif
+
+R0lGODlhBwAHAIAAAP97AP/WryH5BAAAAAAALAAAAAAHAAcAAAIMjA8XwMi5XpKNWlYAADs=
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/fag_azul01.gif
+
+R0lGODlhXAANAMQfAJxjK/q1qJeYmGlhX3tPJf+ZMzMvLNh1H1Y8If7+/srLywsKCYhuaODg4OaB
+JLtyKPaSLvyCECkaDf+fNSMlJ8CKgRkbHvGKKe+UMu7v8E9IR+2PLjomFtyYWteDNf+BDCH5BAEA
+AB8ALAAAAABcAA0AAAX/4CeOZGmOnYUgFIUABEIAdG0TlEUZMVUFwKBwGKwwNCvCAzJpHgCnqNR0
+QegshhdLRYsRZjXWwKAzGH7EtBEpe2wKzYIcDnhM71HH7vXoZSlfOS08NCxAYztpQBVGYxxtb3Fz
+k3IEG3iYIxEPAE0EBjl1gHs7Oi+gDIwMFBqqDAMaBhILtLQPGHATlLtyEw5QmZkPDhMYVggSGx4t
+BBgOAw0CZGYUtRYLFtk7GhoDDALgDBJwvOW9AB7BeBEEEHCcAAjFL00PAgkJDQNlCg3+DRkC4hs4
+MIMCA8TmMClwwZ05CAQiqJvigICuAg4qdpo0AYACggJ2NCA4UMHHBAJR3OrbWACDEgcHHJab8MDO
+xCgeNkI4cADBG0oEMpA0SdAfPgED8hk4mU+AvF4PEMCUaY7AhZsnHhzQdeHJ00kOGJAsKDRBSKEC
+xGoQW1JAsjnxYF4w1+tXBIlYRwBwICfjjItQ740NSWGA0AFJFYQbqmDBg4szYPKlS8cD3rwfAMzF
+2PMxR49jG1AwGevjAMH3DJ40aYHlDJ4xKReAeBkrO4cwEeCiBKDsQH2jj1q4Z/KeAG6pTfK4CAMm
+T6q8OqbDfLtv1F1hB2NLiu/g2gUaMoz8TfprT9gHJtP9FQIAOw==
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/linha_tranp.gif
+
+R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/fag_azul02.gif
+
+R0lGODlhXAAFAMQfAP+ZM5ubm8bHxwIBAXd3dykpKU1OT////3dFFtt1H5ZUGcZzJO2HKN7f304r
+Bq9sK+h+I/iTLykUAIBTJf2CD5ZjMd+EJ/Ly86laF+B4H/+eNGhoZ11dXoBlSemOMP+BDCH5BAEA
+AB8ALAAAAABcAAUAAAXL4CeOZGl+1BQBAKQgGstqS3Dct1AMQ0Fct0uAE2g0iLiLoGFwxFovSCLB
+kFmvkclpu1WxIIjJc/YQ4A4BHq9gMDRwAeFyY7AdjByJTIpYTFdXgRoIXIUkFQwaEWAPYwAaFW85
+amoEHBw3TGgGNwF2Fw0bel8ZGAoMCYCBV4QlFBSGJA8WimC0VhEdQDcGlDxEBmYbBHcFkmehEoCo
+CxOoqqssDBUmFBUZsSIPC4oZCh5WGhYbZzu+RBs2BWYHArvIGwPLpacJ0eELCyEAOw==
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/sombra3.gif
+
+R0lGODlhBQAFALMAAJGRkW5ubrGxsXZ2doKCgtbW1oCAgLm5uXNzc3l5eaOjo4mJiefn55mZmcfH
+x729vSH5BAAAAAAALAAAAAAFAAUAAAQRMCRCgwGtoaXEG4DgFOBRMBEAOw==
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/sombra4.gif
+
+R0lGODlhBwAFALMAAOrq6v39/fn5+fPz8////9ra2q2trc3Nzff39/T09OTk5IeHh6Ojo8fHx8HB
+wZeXlyH5BAAAAAAALAAAAAAHAAUAAAQYcD1zVArMuAJQaAc3CIGiAGMQDAlCBkQEADs=
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/fag_azul03.gif
+
+R0lGODlhXAAgAMQfAN95IJ5cHmEAADMAmgYDBSwAbWFXTe2JKv79/XFFGaysq9KYkJoAACoMBQ4C
+JtXV1XZzcT41NfmAEAtdbZ6Ae0suE75vJwCUs7ONABgASgJ0jCAhIf+aM92zAPu6rv+BDCH5BAEA
+AB8ALAAAAABcACAAAAX/4CeOn5UElkSuomVxBxAcXF1bEKIjG+H/EEUQodgZjQ8IgQYDJCwAgG1K
+5QQArI/E0sE8syNZc0YNUIyRn2+jED6OcF1yWYs9o9V8QiUBWAIBKgcJGBUNWGBOY0w2CUU7CmoE
+QRQ5cUcPc0x2UFJ5UweBARWEHQkJWDIJFRsGKSxbLzKejY87BmtBEAZvl0iadQAVVwCMn6gSfX8Y
+hcNQyRYTGq6wgDIBVBW9RhAbEQbg274ImcBNwlHFnyYWWiNbq6zSE64WBhfTACphESeo6cLEGWkj
+0Fc5czECNPhXzJiTCoj2kUi2xYCGCxcmJIgwoUeDQB8OGPCwwECFTn4a/xQcB+dgOSU0QlWoQMHA
+KUAo/pw6+Q6MCGUGOkKolIbAxwQeknqgwNACgVZBVv5ySVXTAXYBEkBYsKAmuA139vT0SULYUwMQ
+dqVpYIArBQ8RiFlw4ECNt2/g0Kal0Kav30q7DGw4FAVl1rdKUYVqN7bFCUCn9PXxk2BNhMs9vI2k
+QDhAhgGgBxQYXSCDadM+6KquKym1A8ImAFqosCApU8oS3Y0YVCpBgwYbJkjT0PEy5g2tBNeOUCHU
+59DQo2dwEL069AyEAaYz0TXsgRW5Rahy9ievTb24np5NuoDAqefWr1OPX90Bw8IMFf5DAQtMsv5a
+JGMGBchtAIFtP8BH3/8Api0YnX3a4UTMPy5kER5ZWRyAGIFnROJeZQ6CVlqIoTlATDoooAAQIP5h
+iKEEAXTV1jd/kLLFBgU4OCKJAziAknZ+jLIBIha6iOEgbRkQVxgqOJFjfU/ORyIBEkK2SgMOZEAA
+Yy0aSdYWWb0CiwUKgqZllgScptqT1alB12lPZiCWTxd6aWdZG1RXgGpqZMCmnn9K19yLdxaaYQTR
+kUaaljxal8GghBoq6QgW/KkoaQQEGmJpJtYJ4KSSAmDppQVkymNpGwxDpIueguoimdCRWqqmjiLT
+apeuFpqAgrKaGqID30l6a65ZAJBmopceq2MFw9JJrJ0ANEBAlqdNt9qbDyKSWuKqhTb7bEg9CMDA
+uAwIYO5v0s6kBrroqhGssN9iGG0D5NZrL5UH+CCuveOaSwBEk3qbKwCD8WtwA+1EQK/B9QoAsKEC
+g5rvvvxS3C8WlTFsrwAIQxyvf76Zay65AhBAMcffObUxwyVH/NPH/gXQQ2vrdqzFBiJzbHK5OZe8
+gcu6wWyhHy4UjdJ/YcxEypXopnqCmHdKEAIAOw==
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/logo01.gif
+
+R0lGODlhVgAxAMQfAMVnEdNmAP////p5APLUudq6qNfR5sJ3Oe+KLdCHRfOydc6Wa/GXRO9zAM/H
+3vfm1u3r88Kjo+FtANijdunY0L9cAMe/3OF4F+bj7/f09sCLafOkW97a6/R+EL611/97ACH5BAEA
+AB8ALAAAAABWADEAAAX/4KAQZGmWSDN8bOu+cCzPdM2KQq7vOZRIg5VtSCzaRBmOAZPpKTnQnypI
+rb6ot6rW6sJmt62t9zNAJA7ogiBj0KATk0TislEoUh0GAxFk5fdBCHV2Gw0IeoZ6HX0fhwyLAwx2
+kxsdU4KThJZ9QQ0SAQETawYHFQEJOQ8POwoMOQQSKh+uArAbPAKqORIEOQyyA70CDBeruBm/Crg9
+F7JkAw3RygKkARK0EAYFFBkZD6gCBQFTtOI9DhERajkYAb0YUkG9PtMUCxMTwgQBTRkF9xMoYDCw
+AIiQKtOqNXCVwUKFhw4McECVIYK1IAwLgHP48NSoCr0UyhMAr1eGBXLk/wiAwKFCj5QpTcUSEibh
+gXGuIEQwFeDCmzU7DWakuNPap4+9ONyc8u7APAwQdCRxADIDhKg7Ts68YhPnyqLRJEgAV6CCwVv+
+yJqK1iCHAZArlwZZhcHpVw0AJyzQUAHAhAKAARvjMI7mja4LgZqlYihHhgTjEKyCUODAy3ENEsIN
+ByDWNKUmE3QEQKJsCQAP+66kCoTr6qWuMARd0elBNx5JdnZrgpvqgjW4IDg4IKpbiSYcJgQwluE4
+tdlcMVjwABuCBYutbyAoYKC7AQcaHHjYmSCiRIm/M1AN5b37hAjTS014cpUDOgABEFCQCJXl/YtX
+eBKATGGBUlgYngCARv8pqYHyyYIHoLbGeg+igVqDBkLIoFESKAhhR1t1AY1YM41YYhgmGkhiLAUa
+GMAaDmH2iYMrsjWjimx5ciONU8AgBhhXQJOjGDm2xYEHZk0x5BZFRqNFk1MYZoQMXPhYhV4aAPiM
+lCKOgWKVU4ZJw4jWOCPmmWhO2YmTXKbp5ptBegnnnGj+SOeddeaRSSs94uknEQjwxsMDzbT556E3
+CPMPPqtkMEGIiEZ6g2MHpCSKbAdKKukAPTAhlQEWmanpoW0JwAFeee2V6aikNgFBgwkQ8M+qrPoZ
+jFXNkeBWlqLWeucAF3C3BAQYcGBBlpD6+muCGnbUp7J4pujiiWd2sGf/r76uuaShRNhRggKxQGul
+nGd6O8EDyjWQ5o9ibMkIonZoJMAEFah7JgIn5FtAIfKQ8OyfDBSAz1/1nhnJMrgUEEsOhGH7647j
+GEzLQO1JxBsGF/BSAHbs0sTul1pkUSS3NRwswHAaErcGBwsEwIAc1nQwyCSPTKFnJpVQgUkmv7wL
+p8lU8eTiKiy/uEZ+gmaVwgZJ60BoA8LgQkGybgJNoI1JLeASSXCxkU4BEGSAgTiNLjqBqxMg0INe
++GAwUAIOS5wDa1FCk/XWLbnFYAUJGGCBOC/HIYfKGKCUAwWVplSKlj/T8la4YRDNF8NbB20NKB3d
+sgZvyGkAQDdhD3oAy9V1YrNWjpq3gffqmP1BTA8RLHCP5BVcoEBgBRDQjzhxh2kywj1YUIpbFfSj
+nATWvgIOBQ0qw7JTsqZWwW+Y9q4mQ6HjZmxRq1VQwG08GDCBZVZRQEKjbQDgdAkT8kqyEZEIZ8H8
+9M8/Hl/WqIckAMJCocR1+CnAE4olMPFkaQHd4QBUigVAWq1LQNKLIIgE5KAAeGhBIJKATxZkIJ5U
+6EMEeh/8dLSiErJISGIJC8RS2CIOsZCC03LSrxgDpY5pa1tCwiENRybCFoQAADs=
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/linha_laranja.gif
+
+R0lGODlhAQABAIAAAP97AAAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://adserver.adtech.de/?adserv|2.0|258|69310|1|36|ADTECH;
+
+R0lGODlheAB4ANUAAPn6/Ozx+ebm6ebs9oOGvNba6/3+/ra42MPE3WhsrJmdydnY2OTr9KWpz8zJ
+x8fI4Kus0OHl8e3t9PT2+5SSvvj4/L3A3fX2/E5TnnV5tGJenp6hyq6y1EJGl3+EulpfpfLz94+S
+wnt4rlxgptDR5UhEjt/g7ejp8L+7tomNwFVRlu7y+vf5/O/z+vP1+vf4/fH0+PP1+/X3+y8qfvj5
+/fb3/G1xr/n6/fL1+/H0+/r6/fT2/Pr7/TU6kPv7/v///yH5BAAAAAAALAAAAAB4AHgAAAb/QJtw
+SCwaj8ikcslsOp+2nHRFrVqv1Z12y+1uaeCweBz2mc/o9HnCbrvf7Z98Tq/b6UJpDsu/ev9dZIJj
+aoVpcIhvd4uMP3lTfZGAkzuDljSGmT6JnBONn3hRkJF8lICXg5qGnYmgro97pKWmXqiCqoWsiK6g
+sLKztFy2ZLhqunC8n76/fsHCw2LFh8duyY3LzFnOX9Bl0mvUcdaLQi3m21s36uvs7evfZ+7y7fBm
+Mvf4+fr4d+Xn6DvmCbxRz8fAeQX3KdTXz4a5FgADHnRXcCLFegszymj4MKJFevU+skuoUSHHf+hE
+vgupkiDGkvtOQqQFwkG6lhVxvoSZT2Yw/wcOBGhp6RIeUZI8+dnxN5OSBKBBJarMOXVn0o1LHaIE
+JGHBAhM3qxrVCe+q0jpMTTlAwRbqUZZiv5m953OSAK9eBQg4IcMihBmAZ0BIoyGw4cAaDtwofPjw
+jcaGNZih0APyjAQkZCAArEHfZsBZOwI6wbat3r0gJpYwXIKwZcMmGL9+/Fry39eXNXP2HDj01i4L
+oAoHuuDgbcMb0DAuoaF5cxWBKRBwvnpGD+caaM8QQaG798EJAqvAXn2G7hmd832e4bsp8OELwgqU
+UF2ECMA9JJxhTEEN9BkUsEMBZ+0EtsEDCCaoH2OSnSEDCc6dV4J33d0HGlpaubeFAKV16P8hCibM
+MyBgJpgQ3X6A9ecagAISyA5uD/jAHxr7rPdae16AYAJePJ52wgkCSCCPBJVtpw4B+OknY4pq8Nci
+egW+FuOMDvKGG3sYisbFWh86wCOP7oxomQhmUIlGdQGuM2J2LwIWYyGMJUCjiYCdpwICeOKpQG9Z
+/tbVl4B+mdo6dOJmwpIzMEdedE+yuU5g3FHYnQ/hATYedYGdlx4+62WFjw6g6iDBh6U5EKomFvaQ
+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
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/setaforward.gif
+
+R0lGODlhCAANAJEAAP///+oAAPXExPvq6iH5BAAAAAAALAAAAAAIAA0AAAIUhI+pqxKTXBBIhmks
+BpIeBzGiWAAAOw==
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/setaback.gif
+
+R0lGODlhCAANAJEAAP///+oAAPXExPvq6iH5BAAAAAAALAAAAAAIAA0AAAIUhI+puxOCRHhGTgrs
+hMfy43zMqBQAOw==
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/ok2.gif
+
+R0lGODlhFwAOAOb/AK4PEExHP1hQRV5WS4V6bWtaSUU6L8DAwM+ujpiAaHNhT2xbStfCrFVHOvLL
+pubBnuXAnd+7mcOkhrWYfIhyXXZjUaeMc5qBaop0XzEpIp+Rhdi5ohEODEA3MfC/plJGQPrEq/q3
+nteolkw8N/ejj8aRhP/Etv/Ftv/KvJRqYf2XifR0ZeBvY+6CdP+MgP+dkv93av+DeDUfHTsjIfs+
+M/1HPP9KP+5JP/pMQ/dQRvlXTPpZT/pnXO8ZEvQoH+snINwpI+40LuMyLOM0LOU3MPQ9NdA2L7kw
+LOxAOdY8NdI7NL41MTMPDr47NuJHQsBBO89OSGkyMNgDALwAAK0AAJMAAI0AAIoAAIMAAHwBAHYA
+AGsAALgDAYABAV8CAa8KCawMC8kRD7wQDr0VFMYaFrkbGLwhH4wYGMIlIjkMC4QkJGAdHVMnJgAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5
+BAEAAAcALAAAAAAXAA4AQAfXgAeCg4SDBm1thYIMalRhY2JfXWkDCREHh20NHG0cCIItOSgmMDRD
+ZFYpEIKZgpxtn4IQEhYJCRYSq4q7JEU8Oz5SACKErYpQPTo3SU9NZVdsFg+YiBXVgw4SBB8zMh0C
+BRQSDtSJBxmIGIMhK0hCLB6FxoUgQSonLjY/XGcbhoiCEBgw0OCAkxovYuAgogRNlSjjypW7IKjE
+FCBGlhwxA2bLCEvlELVRJ+iBhjVasGTxwiSAAmkSMSDKMAjCBAoKFixQQGGCLmMIRMY64OBBhAgP
+yO1SFAgAOw==
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/t_12.gif
+
+R0lGODlhegABAKIAAP98Av+CDv+ACv9+Bv97Af99BP9/CP9+BSH5BAAAAAAALAAAAAB6AAEAAAMe
+SLpM8DDK+Yq9ON/D+/ggaIxkWQpoqq5o4L5wLL8JADs=
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/t_17.gif
+
+R0lGODlhSgQBAMQAAP/Ejf+qXP+ZOv+eQ/+iSv+VM/+lUf+SLP+yav+oVv+2cf+uYv/Ahv+MIP+7
+fP+5d/++gf+EEf+FE/+HF/+PJ/+JG/+OJf+KHv+NI/+IGf+GFf+QKP+KHP+DEP+GFP+IGCH5BAAA
+AAAALAAAAABKBAEAAAX3YCdGZGlKaJp6nua+2iTP8/dleJ5VfM9zwItwKGwYj8gjZslcWp7QJ2VK
+nW6u2IN2y+16tYWweEwulwXotHrNbqcH8Lh8Tq/DCfi8fs/v4w2AgYKDhIEJh4iJiokBjY6PkJGS
+jguVlpeYCJqbnJ2dCqChoqOhD6anqKYOq6ytqxCwsbKwDLW2t7gAuru8vb6/wMHCw8TFxsfIycrL
+zM2+uNC3s9MQrtYOqdkPpNyjnt/fmOKXk+Xmj4vpi4Xs7X7v8Hl28/Rxbvf4amb7/GJf/wCxYKlS
+JUqUJk2SKDRChAgQDj586Mhhg4ZFGC9YqNhoomMEER1CAAA7
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/sombra2.gif
+
+R0lGODlhAQAFAKIAAN7e3nx8fMLCwpqamvPz8wAAAAAAAAAAACH5BAAAAAAALAAAAAABAAUAAAME
+GCNACQA7
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/t_04.gif
+
+R0lGODlhAQC8AuYAAP97AP/m0f+rXf/DjP/Kmf/fw/+zbv/lzv98Av+TLf+ACv/cvf+8fv/Ytf+f
+Rv+MIv+/hP+EEv/gxv+dQv+uZP/dv/+FFf/Urf/gxP+mVP+lUv/Mnv+9gf/l0P+3dP/Il/+5eP9+
+B/+gSP/UsP+LH/+hS/9+Bf+nV/+za//PpP+DEf/ewf/Hlf97Av9/CP+7fP+iTf+WNf+RK//Fkf+4
+dv+bPv+VM/+JG/+IGf/Oov/auv+YOf+cQf/Sq/+qW/+pWf+vZv/Ws//LnP/RqP/BiP/Civ/kzf+O
+J/+NJP+JHf+BDP99BP+xaP+jT/+6e/+HGP+xav+QKf/Qp//XtP+UMf/Ahv+HFv/Gk/+XN/+tYf+C
+Dv+1cP+aPP/ZuP/iyv/jy/+LIP/Wsf+uY//TrP/ky/+YNv/Oof+DDv+DD//Nof+UL/+1cv+kT/+P
+KP/m0P+OJf+kUf+KHf+sX/+ACP/avP+ZO//Rqv+2c//iyP/hyf/Fj/+aO//auf+tYv/jyv98ASH5
+BAAAAAAALAAAAAABALwCAAf/gACCg4SFhoeIiYqLjI2Ofy0tCAhLlEsmJiEhLi5zLgoKSqJKWlpn
+aCoqEasWrVZWT084ODe1SXEkJGAPvEhIb0dHbVFRMjIJyAlqVFQ2NjExWGVYOzt1e1w12jw8E94O
+4CLiJSUwME1NbHBwGhoZ7ycnPz8+PgL3cnJZWX1iFBRAAjJhAgUKioMGEm7ZsubOHQ8eaNAAQdGJ
+kxcvGGjkwBGCxypEQhYpMqDkAD0zZly5woLFh5cEYgoRsqHmhjRmcqTYKUXKkCF2evQYc6HoiDBh
+ggSZ0oBpgy5d+OjQQWeB1QUVKqzYWqArBglgweLJ48WLny9kvhgxcoDtgQ5wyN0EmEu3rt0AbuB2
+ONC2rRG0X/yUzYMnLFgMXQtsXZH16gI6U/lAbdC0qVKkI4peGCPUzs+eO1PkMJPG5oaZMQm8/NBy
+ZUo9JgeMDEmkikcIHDloZIDRIkUQEiE6XLMwoYGDKAoODAjkn5g++/LdE1BvXrx3GdqtY4POHDlx
+IsA58DaBm7YaXPbUqSYNCzRnzNQkS2CMWJtgb3zxegAmV5wktdwwSyyvtGLBKhGkgsYZpYyiBCid
+cKIJJktUUgkCkfzhyIYcKhIIADs=
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/t_05.gif
+
+R0lGODlhAQCKAOYAAP/37//17P/79v/06v/s2v/o0//t3P/dvv/Xs//48f/jyP/q1//z6P/u3v/5
+9P/w4f/fwP/w4v/x4//cu//69P/buP/Vr//fwv/Vrf/v4P/27f/p1P/hxf/ky//x5P/lzf/79//X
+sf/gw//y5f/ix//jyf/27//r2P/z6f/06f/TrP/auP/r1//iyf/p1v/y5v/dvf/q2P/27v/Wsf/Y
+tP/y5//Urf/gwv/n0P/Ytf/mzv/x5f/48v/7+P/48//n0f/buf/Xsv/buv/du//Ztv/69f/38P/5
+8//Ztf/Wr//ev//n0v/t2//mz//06//u3//v3//p1f/dvP/z5v/hxv/lzP/ixv/kyv/WsP/o0f/g
+xP/r2f/48P/nz//mzf/t3f/58v/69v/dv//atgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5
+BAAAAAAALAAAAAABAIoAAAeIgCo2GBgWFklYMyFBCAg0OUhEYysVFUBCExNDUjAHB2JKEBAXFzci
+WhwcVFYkCi0KJVcdHVUfXh86TV04P1lLBQUbG1EuCwssMSdbBMxMBgZfDQ1PUBkZDw8REtoeHjsj
+L1M1DAwoKQPoTgHrGhoyACYAAFxGCQk8YEc+DhQUDkVhBAgEAaJHIAA7
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/t_08.gif
+
+R0lGODlhAQAWAeYAAP/69v/v4P/48f/58//YtP/kyv/at//ev//y5v/q1v/t3P/ix//37//Vrv/z
+6P/27v/o0v/WsP/p1f/17P/16//x5P/jyf/cvP/mzv/lzP/48v/69P/s2v/06f/n0P/o0//buf/y
+5f/x4//48P/t3f/hxP/fwP/bu//59P/79//8+P/dvf/Wsf/fwf/nz//hxv/UrP/Urf/o1P/t2//Z
+tv/w4//u3//dvv/u3v/gwv/r2f/iyP/hxf/Xs//gw//q1//w4f/Wr//y5//06//w4v/buv/17f/l
+zf/Xsv/r1//s2f/auP/06v/n0f/69f/u3f/p1P/69//cu//o0f/p0//cvf/27f/27P/v4f/s2//j
+yP/VrP/ixv/x5f/Tq//16v/Ztf/ewP/fwv/Vr//Uq//fw//lzv/p1v/7+P/y6P/kzf/v3//37v/2
+7//Ys//TrP/Xsf/u4P/jx//z6f/26//z5//38f/38P/r2v/Ytf/mz//gxP/lz//atv/t3v/lyyH5
+BAAAAAAALAAAAAABABYBAAf/gF5vWzENDUFBESxwSG4Ej2B9BpNLIEUnJxcXKzcHnmEmLTllPiUl
+PC8LC3JaFhYFBRkZRxgYZnouHk1TEBAfVFASCWcJP0k6SngcMzMKJCR+ODZrAdVYRCIiNRVdIQjf
+QmkOcx0dTEMUFBNGRg9WDwwMdyN2AgIaGgMDKBv9TgAAU6BRQTBFiigAATpBsU+fBnsCRoyI1+YB
+mwdXJtCZQGHIFyYdHIgUUgdBiBAVKmgjAgRItTgBbOB4QkKBzSwcOCjRkeRHggQSJMiQ8eFDryYe
+PLjgg+GImgx/YBWwsGOHKi4veJTY4yOHmBYmTHi6saLKhRNSioAAsWQSDRp5EB716IGERYQIYwzF
+gAGDTCAAOw==
+
+------=_NextPart_000_00A3_01CAD414.B7210770
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.truquesedicas.com/imagens/sombra12.gif
+
+R0lGODlhDwABAKIAAP///7+/v5aWlvLy8t3d3Xh4eAAAAAAAACH5BAAAAAAALAAAAAAPAAEAAAMG
+WBI08DAmADs=
+
+------=_NextPart_000_00A3_01CAD414.B7210770--

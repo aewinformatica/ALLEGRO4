@@ -1,0 +1,117 @@
+From: <Salvo pelo Windows Internet Explorer 8>
+Subject: Abdalla
+Date: Fri, 23 Jul 2010 16:40:29 -0300
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.dcc.ufrj.br/~abdalla/Enciclopedia/basicas.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Abdalla</TITLE>
+<META content=3Dpt-br http-equiv=3DContent-Language>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<STYLE fprolloverstyle>A:hover {
+	FONT-FAMILY: Microsoft Sans Serif; COLOR: #ff9966
+}
+</STYLE>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702"></HEAD>
+<BODY aLink=3D#ff0000 link=3D#ff0000 bgColor=3D#000000 text=3D#ffffff =
+vLink=3D#ff0000>
+<P align=3Dcenter><B><FONT size=3D6 face=3D"MS Sans =
+Serif">ENCICLOP=C9DIA=20
+ALLEGRO</FONT><FONT color=3D#ffff00 size=3D2=20
+face=3D"Microsoft Sans Serif"><BR></FONT><FONT color=3D#ffff00=20
+face=3D"Microsoft Sans Serif">Fun=E7=F5es B=E1sicas</FONT></B></P>
+<HR>
+
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT color=3D#ffff00=20
+face=3DFixedsys>allegro_init(void);</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Meu deus, =
+se voc=EA n=E3o=20
+sabe isso desiste de programar...</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT color=3D#ffff00=20
+face=3DFixedsys>allegro_exit(void);</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Encerra o =
+Allegro.=20
+Agora,&nbsp; As novidades s=E3o as seguintes:<BR>Esta fun=E7=E3o j=E1 =
+faz o trabalho de=20
+remover o teclado, mouse, som, v=EDdeo, bla...<BR>O legal =E9 que ela =
+n=E3o faz-se=20
+necess=E1ria, pois a fun=E7=E3o allegro_init() instala uma rotina =
+atexit() que chama=20
+essa fun=E7=E3o no encerramento do programa ! Legal n=E3o ?<BR>Ap=F3s a =
+chamada dela n=E3o=20
+ser=E1 poss=EDvel chamar a maioria das fun=E7=F5es do Allegro. <BR>Isso =
+=E9 um problema=20
+para a programa=E7=E3o em C++ (se voc=EA programa apenas C =
+esque=E7a&nbsp; as pr=F3ximas=20
+linhas dessa descri=E7=E3o).<BR>M=E9todos Destrutores geralmente contem =
+fun=E7=F5es como=20
+destroy_bitmap(), portanto tome cuidado quando for destruir objetos =
+ap=F3s a=20
+chamada dessa fun=E7=E3o.</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT color=3D#ffff00 face=3DFixedsys><A=20
+name=3Dallegro_message>allegro_message</A>(const char *text_format,=20
+...);</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Exibe uma =
+mensagem=20
+(string) num "dialog box" do Sistema Operacional.<BR>Os par=E2metros =
+s=E3o id=EAnticos=20
+ao printf().<BR>Dica: Use-a caso haja falha no carregamento de algo do =
+seu=20
+programa</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT color=3D#ffff00 face=3DFixedsys><A=20
+name=3Dget_desktop_resolution>get_desktop_resolution</A>(int *width, int =
+
+*height);</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Descobre =
+qual a resolu=E7=E3o=20
+da Area de Trabalho do computador.<BR>=DAtil para evitar resolu=E7=F5es =
+superiores a=20
+do pr=F3prio computador.<BR>Voc=EA para como par=E2metro da fun=E7=E3o =
+dois endere=E7os de=20
+vari=E1veis que queira armazenar o valor da resolu=E7=E3o X e Y,=20
+respectivamente.</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT color=3D#ffff00 face=3DFixedsys><A=20
+name=3Dset_window_title>set_window_title</A>(const char =
+*name);</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Detesto =
+fazer jogos em=20
+janelas, mas se for o seu caso, esta fun=E7=E3o vai lhe ajudar a colocar =
+titulo na=20
+janela.<BR>Passe como par=E2metro a string que ser=E1 o =
+titulo.</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<DIV align=3Dcenter>
+<P><B><FONT face=3D"Microsoft Sans Serif"><A style=3D"TEXT-DECORATION: =
+none"=20
+href=3D"http://www.dcc.ufrj.br/~abdalla/Enciclopedia/ae.html">VOLTAR</A><=
+/FONT></B></P></DIV>
+<P align=3Dleft>&nbsp;
+<DIV></DIV>
+<P align=3Dcenter>&nbsp;</P>
+<HR>
+</BODY></HTML>

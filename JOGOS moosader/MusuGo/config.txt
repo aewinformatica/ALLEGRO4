@@ -1,0 +1,6 @@
+
+Load_from: rawr-level.map
+Save_to: rawr-level.map
+Tileset: blocos.bmp
+W: 32
+H: 32

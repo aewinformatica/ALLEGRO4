@@ -1,0 +1,23 @@
+//|******************************************************************************|
+//| Nome: bmpGrabFrame                                                          *| 
+//| Desc: Funcao para pegar um tile especifico, do bitmap source, e retornalo.  *|
+//| Pams: BITMAP *source , o bitmap onde estao os tiles.                        *| 
+//|       int width , a largura de cada tile.                                   *|
+//|       int heigth, o comprimento de cada tile.                               *|
+//|       int startx, posicao x do source que começa a ser exibido.             *|
+//|       int starty, posicao y do source que começa a ser exibido.             *|
+//|       int columns,  o numero de colunas que o bitmap com os tiles possui.   *|
+//|       int frame ,  qual do frame do bitmap com os tiles eh para retornar.   *|
+//|******************************************************************************| 
+BITMAP *bmpGrabFrame(BITMAP *source,
+                  int width, int height,
+                  int startx, int starty,
+                  int columns, int frame)
+{
+    BITMAP *temp = create_bitmap(width,height);
+    int x = startx + (frame % columns) * width;
+    int y = starty + (frame / columns) * height;
+    blit(source,temp,x,y,0,0,width,height);
+    return temp;
+}
+//|******************************************************************************|

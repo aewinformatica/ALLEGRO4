@@ -1,0 +1,215 @@
+From: <Salvo pelo Windows Internet Explorer 8>
+Subject: Abdalla
+Date: Fri, 23 Jul 2010 16:40:19 -0300
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.dcc.ufrj.br/~abdalla/Enciclopedia/mouse.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Abdalla</TITLE>
+<META content=3Dpt-br http-equiv=3DContent-Language>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<STYLE fprolloverstyle>A:hover {
+	FONT-FAMILY: Microsoft Sans Serif; COLOR: #ff9966
+}
+</STYLE>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702"></HEAD>
+<BODY aLink=3D#ff0000 link=3D#ff0000 bgColor=3D#000000 text=3D#ffffff =
+vLink=3D#ff0000>
+<P align=3Dcenter><B><FONT size=3D6 face=3D"MS Sans =
+Serif">ENCICLOP=C9DIA=20
+ALLEGRO</FONT><FONT color=3D#ffff00 size=3D2=20
+face=3D"Microsoft Sans Serif"><BR></FONT><FONT color=3D#ffff00=20
+face=3D"Microsoft Sans Serif">Rotinas de Mouse</FONT></B></P>
+<HR>
+
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT color=3D#ffff00 face=3DFixedsys><A=20
+name=3Denable_hardware_cursor>enable_hardware_cursor</A>(void);</FONT></P=
+></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Essa =
+fun=E7=E3o passa o=20
+controle de desenho do mouse para o Sistema Operacional, como resultado =
+o mouse=20
+aparecer=E1 na tela conforme as propriedades do Sistema.<BR>Nem todos os =
+
+computadores isso vai rodar, portanto antes de usar tal fun=E7=E3o =
+verifique os=20
+flags de gfx_capabilities.<BR>Para o mouse ser desenhado na tela apos a =
+chamada=20
+dessa fun=E7=E3o =E9 necess=E1rio escolher a imagem (do =
+S.O.)</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><A name=3Denable_hardware_cursor><FONT color=3D#ffff00=20
+face=3DFixedsys>disa</FONT></A><FONT color=3D#ffff00 face=3DFixedsys><A=20
+name=3Denable_hardware_cursor>ble_hardware_cursor</A>(void);</FONT></P></=
+DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Faz com que =
+toda a=20
+responsabilidade do controle de desenho do mouse volte para o =
+allegro.<BR>Agora=20
+n=E3o mais,pode-se desenhar o mouse de acordo com os =EDcones do Sistema =
+
+Operacional.</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT color=3D#ffff00 =
+face=3DFixedsys>select_mouse_cursor(int=20
+cursor);</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Essa rotina =
+s=F3 ir=E1=20
+funcionar apos a chamada da fun=E7=E3o acima.<BR>Seleciona, atrav=E9s de =
+defines do=20
+allegro, qual o =EDcone (do S.O. referente) ser=E1 desenhado.<BR>Eis os=20
+defines:<BR><BR><FONT color=3D#ffffcc>MOUSE_CURSOR_NONE</FONT><BR>O =
+mouse nem=20
+aparecer=E1 na tela. Mesmo que chamar:&nbsp; =
+show_mouse(NULL);<BR><BR><FONT=20
+color=3D#ffffcc>MOUSE_CURSOR_ALLEGRO</FONT><BR>Seleciona a imagem feia =
+do mouse do=20
+Allegro.<BR><BR><FONT color=3D#ffffcc>MOUSE_CURSOR_ARROW</FONT><BR>A =
+setinha=20
+padr=E3o do Sistema Operacional<BR><BR><FONT=20
+color=3D#ffffcc>MOUSE_CURSOR_BUSY</FONT><BR>Aquela ampulheta de espera =
+(do S.O.=20
+referente).<BR><BR><FONT =
+color=3D#ffffcc>MOUSE_CURSOR_QUESTION</FONT><BR>A setinha=20
+com o sinal de interroga=E7=E3o (do S.O. referente).<BR><BR><FONT=20
+color=3D#ffffcc>MOUSE_CURSOR_EDIT</FONT><BR>Aquela barra de edi=E7=E3o =
+de texto (do=20
+S.O. referente).</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT color=3D#ffff00 =
+face=3DFixedsys>set_mouse_cursor_bitmap(int=20
+cursor, BITMAP *bmp);</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Troca um =
+dos =EDcones do=20
+mouse do Sistema Operacional por qualquer imagem que =
+queira.<BR>Obviamente s=F3=20
+funcionar=E1 na execu=E7=E3o de sua programa e dentro de sua =
+janela.<BR>Voc=EA pode=20
+trocar qualquer uma das imagens referentes aos respectivos definas =
+acima, com=20
+exce=E7=E3o do primeiro (<FONT color=3D#ffffcc>MOUSE_CURSOR_NONE</FONT>) =
+que n=E3o pode=20
+ser substitu=EDdo.<BR>Para desfazer a substitui=E7=E3o e retornar a =
+imagem padr=E3o=20
+pasta chamar essa fun=E7=E3o com o segundo argumento como =
+NULL.</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT color=3D#ffff00 face=3DFixedsys>extern volatile =
+int=20
+mouse_x;<BR><BR>extern volatile int mouse_y;<BR><BR>extern volatile int=20
+mouse_z;<BR><BR>extern volatile int mouse_w;<BR><BR>extern volatile int=20
+mouse_b;</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">S=E3o =
+vari=E1veis que guardam=20
+informa=E7=F5es sobre o mouse.<BR>as vari=E1veis mouse_x, mouse_y e =
+mouse_b est=E3o bem=20
+explicadas no Tutorial Allegro (<A style=3D"TEXT-DECORATION: none"=20
+href=3D"http://www.dcc.ufrj.br/~abdalla/tut_arq/entrada.htm">Comandos de =
+
+Entrada</A>).<BR>A vari=E1vel mouse_z indica a posi=E7=E3o vertical =
+daquela "rodinha"=20
+(entre os dois bot=F5es do mouse) se encontra.<BR>E a vari=E1vel mouse_w =
+indica a=20
+posi=E7=E3o horizontal do mesmo.<BR>Agora para os mais =
+interessados:<BR>Tais=20
+vari=E1veis podem ser manipuladas, isto =E9, voce pode atribuir um valor =
+a ela e=20
+alterar o comportamento do mouse.<BR>Como, por exemplo: mouse_x =3D 3; =
+mouse_y =3D=20
+0; (De fato, mouse vai para a posi=E7=E3o (3,0) da tela).<BR>No entanto, =
+essa=20
+opera=E7=E3o n=E3o =E9 sincronizada com o tratamento feito pelo allegro =
+portanto precisa=20
+testar se o mouse <BR>est=E1 fora de sincronismo com a seguinte =
+fun=E7=E3o:=20
+<B>mouse_needs_poll()</B> (retorna 0 se estiver tudo bem, e 1 se estiver =
+fora de=20
+sincronismo)<BR>Caso esteja chame a fun=E7=E3o <B>poll_mouse()</B> para =
+ajustar o=20
+sincronismo, ou seja, atualizar o estado com o valor ultimamente=20
+alterado.</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT color=3D#ffff00 face=3DFixedsys>extern BITMAP=20
+*mouse_sprite;</FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">A =
+vari=E1vel mouse_sprite=20
+contem a imagem atual do mouse.<BR><B>Ela =E9 somente para leitura =
+!<BR></B>Caso=20
+queira altera-la use a fun=E7=E3o: =
+<B>set_mouse_sprite()</B></FONT></P></DIV>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<P align=3Dleft><B><FONT color=3D#ffff00 size=3D2=20
+face=3D"Microsoft Sans Serif">position_mouse(int x, int =
+y)</FONT></B></P>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Translata o =
+mouse para a=20
+posi=E7=E3o x, y que vc definir na tela.</FONT></P>
+<P align=3Dleft>&nbsp;</P>
+<P align=3Dleft><B><FONT color=3D#ffff00 size=3D2=20
+face=3D"Microsoft Sans Serif">set_mouse_range(int x1, int y1, int x2, =
+int=20
+y2);</FONT></B></P>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Restringe o =
+mouse a n=E3o=20
+passar dessa =E1rea definida por um ret=E2ngulo imagin=E1rio com =
+primeiro v=E9rtice em=20
+x1, y1 e o ultimo v=E9rtice em x2, y2.</FONT></P>
+<P align=3Dleft>&nbsp;</P>
+<P align=3Dleft><B><FONT color=3D#ffff00 size=3D2=20
+face=3D"Microsoft Sans Serif">set_mouse_speed(int xspeed, int=20
+yspeed);</FONT></B></P>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Essa rotina =
+=E9 bem=20
+divertida, eu adoro ela.<BR>Modifica a "velocidade do mouse" (nos dois=20
+eixos).<BR>Se for valores bem altos, voc=EA far=E1 m=EDnimos esfor=E7os =
+para se mover=20
+milhares de pixels, e se for valores baixos voc=EA quase n=E3o consegue =
+mexer o=20
+mouse. <BR>O padr=E3o =E9 2 para ambos.</FONT></P>
+<P align=3Dleft>&nbsp;</P>
+<P align=3Dleft><B><FONT color=3D#ffff00 size=3D2=20
+face=3D"Microsoft Sans Serif">set_mouse_sprite(BITMAP =
+*sprite);</FONT></B></P>
+<P align=3Dleft><FONT size=3D2 face=3D"Microsoft Sans Serif">Altera a =
+imagem do=20
+mouse.<BR>Caso voc=EA n=E3o tenha gostado da altera=E7=E3o e queira =
+voltar a imagem=20
+padr=E3o basta chamar essa fun=E7=E3o passando NULL como =
+parametro.</FONT></P>
+<P align=3Dleft>&nbsp;</P>
+<DIV align=3Dcenter>
+<P align=3Dleft>&nbsp;</P></DIV>
+<DIV align=3Dcenter>
+<P><B><FONT face=3D"Microsoft Sans Serif"><A style=3D"TEXT-DECORATION: =
+none"=20
+href=3D"http://www.dcc.ufrj.br/~abdalla/Enciclopedia/ae.html">VOLTAR</A><=
+/FONT></B></P></DIV>
+<P align=3Dleft>&nbsp;
+<DIV></DIV>
+<P align=3Dcenter>&nbsp;</P>
+<HR>
+</BODY></HTML>

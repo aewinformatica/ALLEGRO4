@@ -1,0 +1,5054 @@
+From: <Salvo pelo Microsoft Internet Explorer 7>
+Subject: Menu simples com Allegro - Allegro Brasil
+Date: Mon, 23 Mar 2009 16:15:24 -0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_004A_01C9ABD2.92656450"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_004A_01C9ABD2.92656450
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.programadoresdejogos.com/allegrobr/index.php?title=Menu_simples_com_Allegro
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML lang=3Dpt-br dir=3Dltr xml:lang=3D"pt-br"=20
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>Menu simples com =
+Allegro - Allegro Brasil</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; charset=3DUTF-8">
+<META content=3D"Menu simples com Allegro" name=3Dkeywords><LINK =
+href=3D"/favicon.ico"=20
+rel=3D"shortcut icon"><LINK title=3D"Allegro Brasil (Portugu=C3=AAs do =
+Brasil)"=20
+href=3D"/allegrobr/opensearch_desc.php" =
+type=3Dapplication/opensearchdescription+xml=20
+rel=3Dsearch>
+<STYLE type=3Dtext/css media=3Dscreen,projection>@import url( =
+/allegrobr/skins/monobook/main.css?63 );
+</STYLE>
+<LINK media=3Dprint=20
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/skins/common/commo=
+nPrint.css?63"=20
+type=3Dtext/css rel=3Dstylesheet><LINK media=3Dhandheld=20
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/skins/monobook/han=
+dheld.css?63"=20
+type=3Dtext/css rel=3Dstylesheet><!--[if lt IE 5.5000]><style =
+type=3D"text/css">@import =
+"/allegrobr/skins/monobook/IE50Fixes.css?63";</style><![endif]--><!--[if =
+IE 5.5000]><style type=3D"text/css">@import =
+"/allegrobr/skins/monobook/IE55Fixes.css?63";</style><![endif]--><!--[if =
+IE 6]><style type=3D"text/css">@import =
+"/allegrobr/skins/monobook/IE60Fixes.css?63";</style><![endif]--><!--[if =
+IE 7]>
+<STYLE type=3Dtext/css>@import url( =
+/allegrobr/skins/monobook/IE70Fixes.css?63 );
+</STYLE>
+<![endif]--><!--[if lt IE 7]><script type=3D"text/javascript" =
+src=3D"/allegrobr/skins/common/IEFixes.js?63"></script>=0A=
+		<meta http-equiv=3D"imagetoolbar" content=3D"no" /><![endif]-->
+<SCRIPT type=3Dtext/javascript>/*<![CDATA[*/=0A=
+var skin =3D "monobook";=0A=
+var stylepath =3D "/allegrobr/skins";=0A=
+var wgArticlePath =3D "/allegrobr/index.php?title=3D$1";=0A=
+var wgScriptPath =3D "/allegrobr";=0A=
+var wgServer =3D "http://wiki.programadoresdejogos.com";=0A=
+var wgCanonicalNamespace =3D "";=0A=
+var wgCanonicalSpecialPageName =3D false;=0A=
+var wgNamespaceNumber =3D 0;=0A=
+var wgPageName =3D "Menu_simples_com_Allegro";=0A=
+var wgTitle =3D "Menu simples com Allegro";=0A=
+var wgAction =3D "view";=0A=
+var wgArticleId =3D "135";=0A=
+var wgIsArticle =3D true;=0A=
+var wgUserName =3D null;=0A=
+var wgUserGroups =3D null;=0A=
+var wgUserLanguage =3D "pt-br";=0A=
+var wgContentLanguage =3D "pt-br";=0A=
+var wgBreakFrames =3D false;=0A=
+var wgCurRevisionId =3D "224";=0A=
+/*]]>*/</SCRIPT>
+
+<SCRIPT=20
+src=3D"http://wiki.programadoresdejogos.com/allegrobr/skins/common/wikibi=
+ts.js?63"=20
+type=3Dtext/javascript><!-- wikibits js --></SCRIPT>
+
+<SCRIPT=20
+src=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D-=
+&amp;action=3Draw&amp;gen=3Djs"=20
+type=3Dtext/javascript><!-- site js --></SCRIPT>
+
+<STYLE type=3Dtext/css>@import url( =
+/allegrobr/index.php?title=3DMediaWiki:Common.css&usemsgcache=3Dyes&actio=
+n=3Draw&ctype=3Dtext/css&smaxage=3D18000 );
+@import url( =
+/allegrobr/index.php?title=3DMediaWiki:Monobook.css&usemsgcache=3Dyes&act=
+ion=3Draw&ctype=3Dtext/css&smaxage=3D18000 );
+@import url( =
+/allegrobr/index.php?title=3D-&action=3Draw&gen=3Dcss&maxage=3D18000 );
+</STYLE>
+<!-- Head Scripts -->
+<META content=3D"MSHTML 6.00.5730.13" name=3DGENERATOR></HEAD>
+<BODY class=3D"mediawiki ns-0 ltr page-Menu_simples_com_Allegro">
+<DIV id=3DglobalWrapper>
+<DIV id=3Dcolumn-content>
+<DIV id=3Dcontent><A id=3Dtop name=3Dtop></A>
+<H1 class=3DfirstHeading>Menu simples com Allegro</H1>
+<DIV id=3DbodyContent>
+<H3 id=3DsiteSub>De Allegro Brasil</H3>
+<DIV id=3DcontentSub></DIV>
+<DIV id=3Djump-to-nav>Ir para: <A=20
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Menu_simples_com_Allegro#column-one">navega=C3=A7=C3=A3o</A>,=20
+<A=20
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Menu_simples_com_Allegro#searchInput">pesquisa</A></DIV><!-- start =
+content -->
+<P>Primeiramente, =C3=A9 bom voc=C3=AA ter todos os elementos =
+gr=C3=A1ficos utilizados nesse=20
+tutorial. Vai ter que ser um fundo (de prefer=C3=AAncia j=C3=A1 =
+bunitinho com o logo do=20
+jogo e talz, tamanho 640x480), uma imagem para o texto "Jogar", outra =
+para=20
+"Configura=C3=A7=C3=B5es" e "Sair". Pronto, agora crie um projeto e =
+vamos mandar bala!=20
+</P>
+<P>Crie um arquivo main.c assim: </P><PRE>/* main.c */
+#include &lt;allegro.h&gt;
+
+void init();
+
+int main()
+{
+   init();
+   return 0;
+}
+END_OF_MAIN()
+
+void init()
+{
+   int depth, res;
+   allegro_init();
+   set_color_depth(32);
+   res =3D set_gfx_mode(GFX_AUTODETECT_WINDOWED, 640, 480, 0, 0);
+   if (res&nbsp;!=3D 0) {
+      allegro_message(allegro_error);
+      exit(-1);
+   }
+
+   install_timer();
+   install_keyboard();
+   install_mouse();
+}
+</PRE>
+<P>Pronto, agora n=C3=B3s vamos come=C3=A7ar a programar a =
+fun=C3=A7=C3=A3o Menu. </P>
+<P>Ah, vamos supor que as imagens descritas no in=C3=ADcio sejam, fundo: =
+
+<B>fundo.bmp</B>, botao jogar: <B>jogar.bmp</B>, configuracoes: =
+<B>conf.bmp</B>=20
+e sair: <B>sair.bmp</B>, e a imagem da seta: <B>seta.bmp</B>. Pronto, =
+vamos=20
+come=C3=A7ar a fun=C3=A7=C3=A3o Menu. Crie a declara=C3=A7=C3=A3o da =
+fun=C3=A7=C3=A3o no come=C3=A7o depois da=20
+declara=C3=A7=C3=A3o da fun=C3=A7=C3=A3o init, aki, veja: </P><PRE>void =
+init();
+void Menu();
+</PRE>
+<P>Agora l=C3=A1 no fim, depois da fun=C3=A7=C3=A3o init, crie a =
+fun=C3=A7=C3=A3o: </P><PRE>void Menu()
+{
+   // Carrega todos os BITMAPs
+   BITMAP *fundo =3D load_bitmap("fundo.bmp", NULL);
+   BITMAP *jogar =3D load_bitmap("jogar.bmp", NULL);
+   BITMAP *conf =3D load_bitmap("conf.bmp", NULL);
+   BITMAP *sair =3D load_bitmap("sair.bmp", NULL);
+   BITMAP *seta =3D load_bitmap("seta.bmp", NULL);
+
+   // Cria o BITMAP usado no DoubleBuffering
+   BITMAP *buffer =3D create_bitmap(640, 480);
+
+   // Vari=C3=A1vel que conter=C3=A1 a opcao ativa
+   int op;
+
+   while(!key[KEY_ESC])
+   {
+      clear(buffer);
+    =20
+      blit(fundo, buffer, 0, 0, 0, 0, 640, 480);
+      draw_sprite(buffer, jogar, 250, 300);
+      draw_sprite(buffer, conf, 250, 350);
+      draw_sprite(buffer, sair, 250, 400);
+
+      if(op =3D=3D 0)
+      {
+         draw_sprite(buffer, seta, 200, 400);
+      }
+      else if(op =3D=3D 1)
+      {
+         draw_sprite(buffer, seta, 200, 400);
+      }
+      else if(op =3D=3D 2)
+      {
+         draw_sprite(buffer, seta, 200, 400);
+      }
+
+      if(key[KEY_UP])
+      {
+         if(op &gt; 0 &amp;&amp; op &lt; 3) op--;
+      }
+
+      if(key[KEY_DOWN])
+      {
+         if(op &gt; 0 &amp;&amp; op &lt; 3) op++;
+      }
+
+      if(key[KEY_ENTER])
+      {
+         if(op =3D=3D 1)
+         {
+            // Executa o codigo de jogar
+         }
+         else if(op =3D=3D 2)
+         {
+            // Executa o codigo de congifuracoes
+         }
+         else if(op =3D=3D 3)
+         {
+            // Executa o codigo de sair
+         }
+      }
+
+      blit(buffer, screen, 0, 0, 0, 0, 640, 480);
+      //se n=C3=A3o for adicionada esta chamada o programa fica em um =
+while true
+      //um estado de espera ocupada que consome muita cpu
+      readkey();
+
+   }
+   destroy_bitmap(fundo);
+   destroy_bitmap(jogar);
+   destroy_bitmap(conf);
+   destroy_bitmap(sair);
+   destroy_bitmap(seta);
+
+}</PRE>
+<P>N=C3=A3o esque=C3=A7a de chamar essa fun=C3=A7=C3=A3o dentro da =
+fun=C3=A7=C3=A3o main!, ela deve ficar=20
+assim: </P><PRE>int main()
+{
+   init();
+   Menu();
+   return 0;
+}
+END_OF_MAIN()</PRE>
+<P>Este =C3=A9 um "esqueleto" do menu. Apartir desta l=C3=B3gica =
+voc=C3=AA =C3=A9 capaz de=20
+desenvolver o seu pr=C3=B3prio menu! </P><!-- Saved in parser cache with =
+key allegrobr:pcache:idhash:135-0!1!0!!pt-br!2 and timestamp =
+20090323141611 -->
+<DIV class=3Dprintfooter>Retirado de "<A=20
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Menu_simples_com_Allegro">http://wiki.programadoresdejogos.com/allegrobr/=
+index.php?title=3DMenu_simples_com_Allegro</A>"</DIV><!-- end content =
+-->
+<DIV class=3DvisualClear></DIV></DIV></DIV></DIV>
+<DIV id=3Dcolumn-one>
+<DIV class=3Dportlet id=3Dp-cactions>
+<H5>Vistas</H5>
+<DIV class=3DpBody>
+<UL>
+  <LI class=3Dselected id=3Dca-nstab-main><A title=3D"Ver o =
+conte=C3=BAdo da p=C3=A1gina [c]"=20
+  accessKey=3Dc=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Menu_simples_com_Allegro">Artigo</A>=20
+
+  <LI class=3Dnew id=3Dca-talk><A title=3D"Discuss=C3=A3o sobre o =
+conte=C3=BAdo da p=C3=A1gina [t]"=20
+  accessKey=3Dt=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Discuss%C3%A3o:Menu_simples_com_Allegro&amp;action=3Dedit">Discuss=C3=A3o=
+</A>=20
+
+  <LI id=3Dca-edit><A=20
+  title=3D"Voc=C3=AA pode editar esta p=C3=A1gina. Por favor, utilize o =
+bot=C3=A3o Mostrar Previs=C3=A3o antes de salvar. [e]"=20
+  accessKey=3De=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Menu_simples_com_Allegro&amp;action=3Dedit">Editar</A>=20
+
+  <LI id=3Dca-history><A title=3D"Edi=C3=A7=C3=B5es anteriores desta =
+p=C3=A1gina. [h]" accessKey=3Dh=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Menu_simples_com_Allegro&amp;action=3Dhistory">Hist=C3=B3ria</A>=20
+  </LI></UL></DIV></DIV>
+<DIV class=3Dportlet id=3Dp-personal>
+<H5>Ferramentas pessoais</H5>
+<DIV class=3DpBody>
+<UL>
+  <LI id=3Dpt-login><A=20
+  title=3D"You are encouraged to log in, it is not mandatory however. =
+[o]"=20
+  accessKey=3Do=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Especial:Userlogin&amp;returnto=3DMenu_simples_com_Allegro">Entrar</A>=20
+  </LI></UL></DIV></DIV>
+<DIV class=3Dportlet id=3Dp-logo><A title=3D"Visitar a p=C3=A1gina =
+principal [z]"=20
+style=3D"BACKGROUND-IMAGE: url(/allegrobr/skins/common/images/wiki.png)" =
+
+accessKey=3Dz=20
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+P%C3%A1gina_principal"></A></DIV>
+<SCRIPT type=3Dtext/javascript> if (window.isMSIE55) fixalpha(); =
+</SCRIPT>
+
+<DIV class=3Dportlet id=3Dp-navigation>
+<H5>Navega=C3=A7=C3=A3o</H5>
+<DIV class=3DpBody>
+<UL>
+  <LI id=3Dn-mainpage><A title=3D"Visitar a p=C3=A1gina principal [z]" =
+accessKey=3Dz=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+P%C3%A1gina_principal">P=C3=A1gina=20
+  principal</A>=20
+  <LI id=3Dn-portal><A title=3D"Sobre o projecto"=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Allegro_Brasil:Portal_comunit%C3%A1rio">Portal=20
+  comunit=C3=A1rio</A>=20
+  <LI id=3Dn-currentevents><A title=3D"Informa=C3=A7=C3=A3o =
+tem=C3=A1tica sobre eventos actuais"=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Eventos_actuais">Eventos=20
+  atuais</A>=20
+  <LI id=3Dn-recentchanges><A title=3D"A lista de mudan=C3=A7as recentes =
+nesta wiki. [r]"=20
+  accessKey=3Dr=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Especial:Recentchanges">Mudan=C3=A7as=20
+  Recentes</A>=20
+  <LI id=3Dn-randompage><A title=3D"Carregar p=C3=A1gina aleat=C3=B3ria =
+[x]" accessKey=3Dx=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Especial:Random">P=C3=A1gina=20
+  aleat=C3=B3ria</A>=20
+  <LI id=3Dn-help><A title=3D"Um local reservado para aux=C3=ADlio."=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Allegro_Brasil:Ajuda">Ajuda</A>=20
+
+  <LI id=3Dn-sitesupport><A title=3DAjude-nos=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Allegro_Brasil:Apoio">Doa=C3=A7=C3=B5es</A>=20
+  </LI></UL></DIV></DIV>
+<DIV class=3Dportlet id=3Dp-search>
+<H5><LABEL for=3DsearchInput>Busca</LABEL></H5>
+<DIV class=3DpBody id=3DsearchBody>
+<FORM id=3Dsearchform =
+action=3D/allegrobr/index.php?title=3DEspecial:Search>
+<DIV><INPUT id=3DsearchInput title=3D"Pesquisar nesta wiki [f]" =
+accessKey=3Df=20
+name=3Dsearch> <INPUT class=3DsearchButton id=3DsearchGoButton =
+type=3Dsubmit value=3DVai name=3Dgo>&nbsp;=20
+<INPUT class=3DsearchButton id=3Dmw-searchButton type=3Dsubmit =
+value=3DBusca name=3Dfulltext>=20
+</DIV></FORM></DIV></DIV>
+<DIV class=3Dportlet id=3Dp-tb>
+<H5>Ferramentas</H5>
+<DIV class=3DpBody>
+<UL>
+  <LI id=3Dt-whatlinkshere><A=20
+  title=3D"Lista de todas as p=C3=A1ginas que ligam-se a esta [j]" =
+accessKey=3Dj=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Especial:Whatlinkshere/Menu_simples_com_Allegro">Artigos=20
+  Relacionado</A>=20
+  <LI id=3Dt-recentchangeslinked><A=20
+  title=3D"Mudan=C3=A7as recentes em p=C3=A1ginas relacionadas a esta =
+[k]" accessKey=3Dk=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Especial:Recentchangeslinked/Menu_simples_com_Allegro">P=C3=A1ginas=20
+  relacionadas</A>=20
+  <LI id=3Dt-specialpages><A title=3D"Lista de p=C3=A1ginas especiais =
+[q]" accessKey=3Dq=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Especial:Specialpages">P=C3=A1ginas=20
+  especiais</A>=20
+  <LI id=3Dt-print><A=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Menu_simples_com_Allegro&amp;printable=3Dyes">Vers=C3=A3o=20
+  para impress=C3=A3o</A>=20
+  <LI id=3Dt-permalink><A=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Menu_simples_com_Allegro&amp;oldid=3D224">Liga=C3=A7=C3=A3o=20
+  permanente</A> </LI></UL></DIV></DIV></DIV><!-- end of the left (by =
+default at least) column -->
+<DIV class=3DvisualClear></DIV>
+<DIV id=3Dfooter>
+<DIV id=3Df-poweredbyico><A href=3D"http://www.mediawiki.org/"><IMG=20
+alt=3D"Powered by MediaWiki"=20
+src=3D"http://wiki.programadoresdejogos.com/allegrobr/skins/common/images=
+/poweredby_mediawiki_88x31.png"></A></DIV>
+<UL id=3Df-list>
+  <LI id=3Dlastmod>Est=C3=A1 p=C3=A1gina foi modificada pela =C3=BAltima =
+vez em 23:18, 27 Julho=20
+  2008.=20
+  <LI id=3Dviewcount>Esta p=C3=A1gina foi acessada 864 vezes.=20
+  <LI id=3Dprivacy><A title=3D"Allegro Brasil:Pol=C3=ADtica de =
+privacidade"=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Allegro_Brasil:Pol%C3%ADtica_de_privacidade">Pol=C3=ADtica=20
+  de privacidade</A>=20
+  <LI id=3Dabout><A title=3D"Allegro Brasil:Sobre"=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Allegro_Brasil:Sobre">Sobre=20
+  a Allegro Brasil</A>=20
+  <LI id=3Ddisclaimer><A title=3D"Allegro Brasil:General disclaimer"=20
+  =
+href=3D"http://wiki.programadoresdejogos.com/allegrobr/index.php?title=3D=
+Allegro_Brasil:General_disclaimer">Disclaimers</A>=20
+  </LI></UL></DIV>
+<SCRIPT type=3Dtext/javascript>if (window.runOnloadHook) =
+runOnloadHook();</SCRIPT>
+</DIV><!-- Served by hudson in 16.544 secs. --></BODY></HTML>
+
+------=_NextPart_000_004A_01C9ABD2.92656450
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Location: http://wiki.programadoresdejogos.com/allegrobr/skins/common/images/poweredby_mediawiki_88x31.png
+
+iVBORw0KGgoAAAANSUhEUgAAAFgAAAAfCAMAAABUFvrSAAAAA3NCSVQICAjb4U/gAAAClFBMVEUC
+KWuqqtbmxQbRvxS1xc+BdgdzlKmEq76qqqpBeZ3HxHrt7OZbZ1LWxE0lX3hxeUWzq2nY3N5WhKPQ
+dQoAUIThyiSwrTY9RpT29vbGwqSjtsTHzdDAaQoAZplPepgATICdo6vp1Asyao7o59vO1NfQx2Ph
+2XiOkTeKjY3yzQnW1smGla7s2yNemLXflg06hK0wO3h2pLvm2D/1sgfn4akHV4uYscEbLHZEdphO
+hKauspWsrr4ObZ3q2RqqbRTWyS8haJa5xJuFhbgrS4Ipe6WrusXX0rXW1tY4cpfBztff2Zrlqg7w
+yhTIuEyFo7dSkbFskKjShg3Yyhj91geVrb7EvnPy3TXd0WchZZKHp7xmi6Ln1lLdxUWMm7ayv8fT
+zZbe3sm7w8/AcA7w8PDNtzQaW4YmJpoybZTOzcXe3taes8D0ywDh5OZAXIvo5Lzg14rk1zTPzr40
+gafr1RBJZJFCU1rbugvlziGWehNqnbd0nLWlvsv13hsIVIaRkqXF0NfwvANEiq0wToIYX4zgnRHm
+0A7UiRL36Efc4OJMf6PoxxqgpJXYzlX/yQYbdKGNkrv4xhHq4RLO1tzo0TKUbg5biqgGHXn31xDu
+3hnj12rHuUSclS1ijqzWzozm3IXsvxLZ2ebBag2ambbMfRU4dJvlpxG1chKdtcb05D3q6M2LpLXz
+3ynExc5ika/VnBnMzMze3t6mu8h8nbMiY42sv8ufq8AQWozGdBXgz0zWvQ6Oq77gsQlNepnDwMLo
+vQJSg6NGYY4XXIvc1644Q2fu2EdNVV31vAf3zwZ7p73m5uYpapTUfQ8AU4mboKarqK2UtMS6sEDR
+ymyVmYq5taFUWZrt0R/Hdg/L0dTBvnnOy4Hi2pLr2FEpPiAVAAAACXBIWXMAAArwAAAK8AFCrDSY
+AAAEkElEQVRIx+3Q+1tTdRwH8NNYzHkiPTQqmfMCA+MST0NDSiBM8uyEjYVcBoa4jsTtO8SNBDbm
+nGN2RgQBrQ1bGt6mY9SBM7nMS2DJ+k5yXUXwn+kckMT19Dz1ID/0PL1/OJ/P+Xy+39cPX2TNKgVZ
+882q5H94OTz7WGo21NTUzK48YXDl0funj1ZWPhkYX5aon6NiKt+o3PtlcnLyo6lPqzX78L+JdmGv
+dYeNw+HCwo7mwtL0yr3jpY/kWAneqsVDMrHYjbvFPrFbJlb7BDhbcIFbsrCXsbJaHQ57vd7ZWe+N
+uVt4lE7H4/F0jYmpzs4bOK72erlDw5JWs1lmFuThWT5JqEtmlmlb8wQCtrCthNtr2WGoQBAOa5pS
+xLteeHN9zJFOa1I9j7fV6XRePv7bLnFKk+YhLJg1D+MSvMBcYM5r7dJqW1txrphD+AKMD2eFCrr+
+8hTISSn+y+0N+DsRHbz66RMn6h09Pf392z7G8ZMId8jAXsZDeS+zzyEhsn4wsB0Lc4UdSri9Nk+L
+ZxWEwRiGTGJ48WFn+nvXbl5rb2/Pnw7odNb9X9zFsEkEYyM1cF8+9zVgfClGGDCCwLiC8bmp1GDg
+YwIJH1sWFqZpREPX/nj7cFLSJ9OnxsbGzn89HeANFu/spmkNQv/T+A2P/S7Bt04/39im23/xzsac
+nI3ntwesJWuf2fKv4LAswpP0obWFzj5nx6l7OS0tOc/lB/oS5z6sWCFMUYiGop76LmrQcfbepZan
+Wy7duRjoa6A+6KYoDUKxMVbVURQeVyWm/oznWXWcnV5o/YyaUmZS0mql3OOJ42bRRopiYQAQDQB3
+15W0JSWlDeR8xj5FfmBrScLtLQBoEMBmZsYFQOzoqBcAguAGJpPHok7xcA0N+BY/LVQBn6Vu5KC+
+mqalwLMJABaGEJmEDacjrNZ9DkfavYGB99tvHrMOJqx7HUINAtm8KmII6BJNSTE7w4wAMDIVZIKm
+SA8YsQRtNq8wGlNNSRWMSfnWiBBGy2nPdQgX4SZ4Zf22hO87fm8LbE97t/1Tx8REydwr5yBsWoQz
+GRkmzwxKXaO+MlHG8Kh+OJg7Kx/KMOpjgyJ+2QUfw2REuzCVQiFUGP1QKFqC96jhuZ33S2JSU/c5
++vqmz7ZlWz/69fNuqN6zCCtHbGV29r5FNWS32G02CA1BQq7nGt+Uz6SSK/1xU8NQ5feLRGUQfrsE
+V1Rcxb56qfhIX3Zzs+PB5aRj2Y3pPT8dx7CrFRUcPKPsZTYXuYPq3KAhZI91qTCoUJnkevsFCENG
+HxQa3YSI6QUsbGEuUEswiqLc7fj4+f4D8+m6+fGJiebUHWfGG1AUAJTLjB19TdTrtvRmWPRD1aZe
+VbV9NLdXPmQKCl0WIx/VjxLYlA2lVH6FTcoIUZcIRVmYfBgU3TGPHrBeKY2IOvPgAestLcjrHrKo
+HOVHY2TG5iofSRJMlUKBRXpQflVVUSRB8ssBiCwiQfnBWCVZxxAZm0hyGUyS8Sja2Yk2dO54+0pi
+A7myPAaTJNxdS5K3Dm2oJdEnCz+5sPCLq5L/JLxK+QOx6XbtY06PNgAAAABJRU5ErkJggg==
+
+------=_NextPart_000_004A_01C9ABD2.92656450
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.programadoresdejogos.com/allegrobr/skins/monobook/main.css?63
+
+#column-content {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 0.6em -12.2em; WIDTH: 100%; PADDING-TOP: 0px
+}
+#content {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; Z-INDEX: 2; PADDING-BOTTOM: =
+1.5em; MARGIN: 2.8em 0px 0px 12.2em; PADDING-TOP: 0px; POSITION: =
+relative
+}
+#column-one {
+	PADDING-TOP: 160px
+}
+#content {
+	BORDER-RIGHT: #aaa 1px; BORDER-TOP: #aaa 1px solid; BACKGROUND: white; =
+BORDER-LEFT: #aaa 1px solid; COLOR: black; LINE-HEIGHT: 1.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(headbg.jpg) =
+#f9f9f9 no-repeat 0px 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; FONT: =
+x-small sans-serif; COLOR: black; PADDING-TOP: 0px
+}
+#globalWrapper {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 127%; PADDING-BOTTOM: =
+0px; MARGIN: 0px; WIDTH: 100%; PADDING-TOP: 0px
+}
+.visualClear {
+	CLEAR: both
+}
+TABLE {
+	FONT-SIZE: 100%; COLOR: black; BACKGROUND-COLOR: white
+}
+A {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #002bb8; =
+TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #5a3696
+}
+A:active {
+	COLOR: #faa700
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+A.stub {
+	COLOR: #772233
+}
+A.new {
+	COLOR: #ba0000
+}
+#p-personal A.new {
+	COLOR: #ba0000
+}
+A.new:visited {
+	COLOR: #a55858
+}
+#p-personal A.new:visited {
+	COLOR: #a55858
+}
+IMG {
+	VERTICAL-ALIGN: middle; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: =
+none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+P {
+	MARGIN: 0.4em 0px 0.5em; LINE-HEIGHT: 1.5em
+}
+P IMG {
+	MARGIN: 0px
+}
+HR {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: =
+0px; MARGIN: 0.2em 0px; COLOR: #aaa; HEIGHT: 1px; BACKGROUND-COLOR: =
+#aaa; BORDER-RIGHT-WIDTH: 0px
+}
+H1 {
+	FONT-WEIGHT: normal; BACKGROUND: none transparent scroll repeat 0% 0%; =
+PADDING-BOTTOM: 0.17em; MARGIN: 0px; COLOR: black; PADDING-TOP: 0.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+H2 {
+	FONT-WEIGHT: normal; BACKGROUND: none transparent scroll repeat 0% 0%; =
+PADDING-BOTTOM: 0.17em; MARGIN: 0px; COLOR: black; PADDING-TOP: 0.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+H3 {
+	FONT-WEIGHT: normal; BACKGROUND: none transparent scroll repeat 0% 0%; =
+PADDING-BOTTOM: 0.17em; MARGIN: 0px; COLOR: black; PADDING-TOP: 0.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+H4 {
+	FONT-WEIGHT: normal; BACKGROUND: none transparent scroll repeat 0% 0%; =
+PADDING-BOTTOM: 0.17em; MARGIN: 0px; COLOR: black; PADDING-TOP: 0.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+H5 {
+	FONT-WEIGHT: normal; BACKGROUND: none transparent scroll repeat 0% 0%; =
+PADDING-BOTTOM: 0.17em; MARGIN: 0px; COLOR: black; PADDING-TOP: 0.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+H6 {
+	FONT-WEIGHT: normal; BACKGROUND: none transparent scroll repeat 0% 0%; =
+PADDING-BOTTOM: 0.17em; MARGIN: 0px; COLOR: black; PADDING-TOP: 0.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+H1 {
+	FONT-SIZE: 188%
+}
+H1 .editsection {
+	FONT-SIZE: 53%
+}
+H2 {
+	FONT-SIZE: 150%
+}
+H2 .editsection {
+	FONT-SIZE: 67%
+}
+H3 {
+	FONT-WEIGHT: bold; BORDER-BOTTOM-STYLE: none
+}
+H4 {
+	FONT-WEIGHT: bold; BORDER-BOTTOM-STYLE: none
+}
+H5 {
+	FONT-WEIGHT: bold; BORDER-BOTTOM-STYLE: none
+}
+H6 {
+	FONT-WEIGHT: bold; BORDER-BOTTOM-STYLE: none
+}
+H3 {
+	FONT-SIZE: 132%
+}
+H3 .editsection {
+	FONT-WEIGHT: normal; FONT-SIZE: 76%
+}
+H4 {
+	FONT-SIZE: 116%
+}
+H4 .editsection {
+	FONT-WEIGHT: normal; FONT-SIZE: 86%
+}
+H5 {
+	FONT-SIZE: 100%
+}
+H5 .editsection {
+	FONT-WEIGHT: normal
+}
+H6 {
+	FONT-SIZE: 80%
+}
+H6 .editsection {
+	FONT-WEIGHT: normal; FONT-SIZE: 125%
+}
+.editsection {
+	FLOAT: right; MARGIN-LEFT: 5px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-IMAGE: =
+url(bullet.gif); PADDING-BOTTOM: 0px; MARGIN: 0.3em 0px 0px 1.5em; =
+LINE-HEIGHT: 1.5em; PADDING-TOP: 0px; LIST-STYLE-TYPE: square
+}
+OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-IMAGE: none; =
+PADDING-BOTTOM: 0px; MARGIN: 0.3em 0px 0px 3.2em; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0px
+}
+LI {
+	MARGIN-BOTTOM: 0.1em
+}
+DT {
+	FONT-WEIGHT: bold; MARGIN-BOTTOM: 0.1em
+}
+DL {
+	MARGIN-TOP: 0.2em; MARGIN-BOTTOM: 0.5em
+}
+DD {
+	MARGIN-BOTTOM: 0.1em; MARGIN-LEFT: 2em; LINE-HEIGHT: 1.5em
+}
+FIELDSET {
+	BORDER-RIGHT: #2f6fab 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: =
+#2f6fab 1px solid; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; MARGIN: 1em =
+0px; BORDER-LEFT: #2f6fab 1px solid; LINE-HEIGHT: 1.5em; PADDING-TOP: =
+0px; BORDER-BOTTOM: #2f6fab 1px solid
+}
+LEGEND {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; FONT-SIZE: 95%; =
+PADDING-BOTTOM: 0.5em; PADDING-TOP: 0.5em
+}
+FORM {
+	MARGIN: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+TEXTAREA {
+	PADDING-RIGHT: 0.1em; PADDING-LEFT: 0.1em; PADDING-BOTTOM: 0.1em; =
+WIDTH: 100%; PADDING-TOP: 0.1em
+}
+INPUT.historysubmit {
+	PADDING-RIGHT: 0.3em! important; PADDING-LEFT: 0.3em! important; =
+FONT-SIZE: 94%; PADDING-BOTTOM: 0.3em! important; MARGIN-LEFT: 1.6em; =
+CURSOR: pointer; PADDING-TOP: 0px! important; HEIGHT: 1.7em! important
+}
+SELECT {
+	VERTICAL-ALIGN: top
+}
+ABBR {
+	BACKGROUND: none transparent scroll repeat 0% 0%; CURSOR: help; COLOR: =
+black; BORDER-BOTTOM: black 1px dotted
+}
+ACRONYM {
+	BACKGROUND: none transparent scroll repeat 0% 0%; CURSOR: help; COLOR: =
+black; BORDER-BOTTOM: black 1px dotted
+}
+.explain {
+	BACKGROUND: none transparent scroll repeat 0% 0%; CURSOR: help; COLOR: =
+black; BORDER-BOTTOM: black 1px dotted
+}
+Q {
+	FONT-STYLE: italic; FONT-FAMILY: Times, "Times New Roman", serif
+}
+CODE {
+	BACKGROUND-COLOR: #f9f9f9
+}
+PRE {
+	BORDER-RIGHT: #2f6fab 1px dashed; PADDING-RIGHT: 1em; BORDER-TOP: =
+#2f6fab 1px dashed; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; BORDER-LEFT: =
+#2f6fab 1px dashed; COLOR: black; LINE-HEIGHT: 1.1em; PADDING-TOP: 1em; =
+BORDER-BOTTOM: #2f6fab 1px dashed; BACKGROUND-COLOR: #f9f9f9
+}
+#siteSub {
+	DISPLAY: none
+}
+#jump-to-nav {
+	DISPLAY: none
+}
+#contentSub {
+	FONT-SIZE: 84%; MARGIN: 0px 0px 1.4em 1em; WIDTH: auto; COLOR: #7d7d7d; =
+LINE-HEIGHT: 1.2em
+}
+#contentSub2 {
+	FONT-SIZE: 84%; MARGIN: 0px 0px 1.4em 1em; WIDTH: auto; COLOR: #7d7d7d; =
+LINE-HEIGHT: 1.2em
+}
+SPAN.subpages {
+	DISPLAY: block
+}
+#bodyContent H1 {
+	MARGIN-BOTTOM: 0.6em
+}
+#bodyContent H2 {
+	MARGIN-BOTTOM: 0.6em
+}
+#bodyContent H3 {
+	MARGIN-BOTTOM: 0.3em
+}
+#bodyContent H4 {
+	MARGIN-BOTTOM: 0.3em
+}
+#bodyContent H5 {
+	MARGIN-BOTTOM: 0.3em
+}
+.firstHeading {
+	MARGIN-BOTTOM: 0.1em
+}
+.usermessage {
+	BORDER-RIGHT: #ffa500 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: =
+#ffa500 1px solid; PADDING-LEFT: 1em; FONT-WEIGHT: bold; PADDING-BOTTOM: =
+0.5em; MARGIN: 2em 0px 1em; VERTICAL-ALIGN: middle; BORDER-LEFT: #ffa500 =
+1px solid; COLOR: black; PADDING-TOP: 0.5em; BORDER-BOTTOM: #ffa500 1px =
+solid; BACKGROUND-COLOR: #ffce7b
+}
+#siteNotice {
+	PADDING-RIGHT: 0.9em; PADDING-LEFT: 0.9em; FONT-SIZE: 95%; =
+PADDING-BOTTOM: 0px; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+#siteNotice P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.error {
+	FONT-SIZE: larger; COLOR: red
+}
+.errorbox {
+	BORDER-RIGHT: 2px solid; PADDING-RIGHT: 1em; BORDER-TOP: 2px solid; =
+PADDING-LEFT: 1em; FONT-SIZE: larger; FLOAT: left; MARGIN-BOTTOM: 2em; =
+PADDING-BOTTOM: 0.5em; BORDER-LEFT: 2px solid; COLOR: #000; PADDING-TOP: =
+0.5em; BORDER-BOTTOM: 2px solid
+}
+.successbox {
+	BORDER-RIGHT: 2px solid; PADDING-RIGHT: 1em; BORDER-TOP: 2px solid; =
+PADDING-LEFT: 1em; FONT-SIZE: larger; FLOAT: left; MARGIN-BOTTOM: 2em; =
+PADDING-BOTTOM: 0.5em; BORDER-LEFT: 2px solid; COLOR: #000; PADDING-TOP: =
+0.5em; BORDER-BOTTOM: 2px solid
+}
+.errorbox {
+	BORDER-LEFT-COLOR: red; BORDER-BOTTOM-COLOR: red; BORDER-TOP-COLOR: =
+red; BACKGROUND-COLOR: #fff2f2; BORDER-RIGHT-COLOR: red
+}
+.successbox {
+	BORDER-LEFT-COLOR: green; BORDER-BOTTOM-COLOR: green; BORDER-TOP-COLOR: =
+green; BACKGROUND-COLOR: #dfd; BORDER-RIGHT-COLOR: green
+}
+.errorbox H2 {
+	DISPLAY: inline; FONT-WEIGHT: bold; FONT-SIZE: 1em; MARGIN: 0px 0.5em =
+0px 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.successbox H2 {
+	DISPLAY: inline; FONT-WEIGHT: bold; FONT-SIZE: 1em; MARGIN: 0px 0.5em =
+0px 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#catlinks {
+	CLEAR: both; BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 5px; =
+BORDER-TOP: #aaa 1px solid; MARGIN-TOP: 1em; PADDING-LEFT: 5px; =
+PADDING-BOTTOM: 5px; BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 5px; =
+BORDER-BOTTOM: #aaa 1px solid; BACKGROUND-COLOR: #f9f9f9
+}
+.documentDescription {
+	DISPLAY: block; FONT-WEIGHT: bold; MARGIN: 1em 0px; LINE-HEIGHT: 1.5em
+}
+.documentByLine {
+	CLEAR: both; FONT-WEIGHT: normal; FONT-SIZE: 90%; COLOR: #76797c; =
+TEXT-ALIGN: right
+}
+.center {
+	WIDTH: 100%; TEXT-ALIGN: center
+}
+*.center * {
+	MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+.small {
+	FONT-SIZE: 94%
+}
+.small * {
+	FONT-SIZE: 94%
+}
+TABLE.small {
+	FONT-SIZE: 100%
+}
+#toc {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aaa 1px =
+solid; PADDING-LEFT: 5px; FONT-SIZE: 95%; PADDING-BOTTOM: 5px; =
+BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #aaa 1px =
+solid; BACKGROUND-COLOR: #f9f9f9
+}
+.toc {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aaa 1px =
+solid; PADDING-LEFT: 5px; FONT-SIZE: 95%; PADDING-BOTTOM: 5px; =
+BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #aaa 1px =
+solid; BACKGROUND-COLOR: #f9f9f9
+}
+.mw-warning {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aaa 1px =
+solid; PADDING-LEFT: 5px; FONT-SIZE: 95%; PADDING-BOTTOM: 5px; =
+BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #aaa 1px =
+solid; BACKGROUND-COLOR: #f9f9f9
+}
+#toc H2 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; FONT-WEIGHT: =
+bold; FONT-SIZE: 100%; PADDING-BOTTOM: 0px; BORDER-TOP-STYLE: none; =
+PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; =
+BORDER-BOTTOM-STYLE: none
+}
+.toc H2 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; FONT-WEIGHT: =
+bold; FONT-SIZE: 100%; PADDING-BOTTOM: 0px; BORDER-TOP-STYLE: none; =
+PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; =
+BORDER-BOTTOM-STYLE: none
+}
+#toc #toctitle {
+	TEXT-ALIGN: center
+}
+.toc #toctitle {
+	TEXT-ALIGN: center
+}
+#toc .toctitle {
+	TEXT-ALIGN: center
+}
+.toc .toctitle {
+	TEXT-ALIGN: center
+}
+#toc UL {
+	PADDING-LEFT: 0px; LIST-STYLE-IMAGE: none; MARGIN-LEFT: 0px; =
+LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+.toc UL {
+	PADDING-LEFT: 0px; LIST-STYLE-IMAGE: none; MARGIN-LEFT: 0px; =
+LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+#toc UL UL {
+	MARGIN: 0px 0px 0px 2em
+}
+.toc UL UL {
+	MARGIN: 0px 0px 0px 2em
+}
+#toc .toctoggle {
+	FONT-SIZE: 94%
+}
+.toc .toctoggle {
+	FONT-SIZE: 94%
+}
+.mw-warning {
+	MARGIN-LEFT: 50px; MARGIN-RIGHT: 50px; TEXT-ALIGN: center
+}
+DIV.floatright {
+	BORDER-TOP-WIDTH: 0px; CLEAR: right; BORDER-LEFT-WIDTH: 0px; FLOAT: =
+right; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0px 0.5em 0.5em; POSITION: =
+relative; BORDER-RIGHT-WIDTH: 0px
+}
+TABLE.floatright {
+	BORDER-TOP-WIDTH: 0px; CLEAR: right; BORDER-LEFT-WIDTH: 0px; FLOAT: =
+right; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0px 0.5em 0.5em; POSITION: =
+relative; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.floatright P {
+	FONT-STYLE: italic
+}
+DIV.floatleft {
+	BORDER-TOP-WIDTH: 0px; CLEAR: left; BORDER-LEFT-WIDTH: 0px; FLOAT: =
+left; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0.5em 0.5em 0px; POSITION: =
+relative; BORDER-RIGHT-WIDTH: 0px
+}
+TABLE.floatleft {
+	BORDER-TOP-WIDTH: 0px; CLEAR: left; BORDER-LEFT-WIDTH: 0px; FLOAT: =
+left; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0.5em 0.5em 0px; POSITION: =
+relative; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.floatleft P {
+	FONT-STYLE: italic
+}
+DIV.thumb {
+	BORDER-LEFT-COLOR: white; MARGIN-BOTTOM: 0.5em; BORDER-BOTTOM-COLOR: =
+white; WIDTH: auto; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: white; =
+BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BORDER-RIGHT-COLOR: =
+white; BORDER-BOTTOM-STYLE: solid
+}
+DIV.thumbinner {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 3px! important; =
+BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 3px! important; FONT-SIZE: =
+94%; PADDING-BOTTOM: 3px! important; OVERFLOW: hidden; BORDER-LEFT: #ccc =
+1px solid; PADDING-TOP: 3px! important; BORDER-BOTTOM: #ccc 1px solid; =
+BACKGROUND-COLOR: #f9f9f9; TEXT-ALIGN: center
+}
+HTML .thumbimage {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: =
+#ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid
+}
+HTML .thumbcaption {
+	PADDING-RIGHT: 3px! important; PADDING-LEFT: 3px! important; FONT-SIZE: =
+94%; PADDING-BOTTOM: 3px! important; BORDER-TOP-STYLE: none; =
+LINE-HEIGHT: 1.4em; PADDING-TOP: 3px! important; BORDER-RIGHT-STYLE: =
+none; BORDER-LEFT-STYLE: none; TEXT-ALIGN: left; BORDER-BOTTOM-STYLE: =
+none
+}
+DIV.magnify {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: right; =
+BORDER-TOP-STYLE: none! important; BORDER-RIGHT-STYLE: none! important; =
+BORDER-LEFT-STYLE: none! important; BORDER-BOTTOM-STYLE: none! important
+}
+DIV.magnify A {
+	DISPLAY: block; BACKGROUND: none transparent scroll repeat 0% 0%; =
+BORDER-TOP-STYLE: none! important; BORDER-RIGHT-STYLE: none! important; =
+BORDER-LEFT-STYLE: none! important; BORDER-BOTTOM-STYLE: none! important
+}
+DIV.magnify IMG {
+	DISPLAY: block; BACKGROUND: none transparent scroll repeat 0% 0%; =
+BORDER-TOP-STYLE: none! important; BORDER-RIGHT-STYLE: none! important; =
+BORDER-LEFT-STYLE: none! important; BORDER-BOTTOM-STYLE: none! important
+}
+DIV.tright {
+	BORDER-TOP-WIDTH: 0.5em; CLEAR: right; BORDER-LEFT-WIDTH: 1.4em; FLOAT: =
+right; BORDER-BOTTOM-WIDTH: 0.8em; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.tleft {
+	BORDER-TOP-WIDTH: 0.5em; CLEAR: left; BORDER-LEFT-WIDTH: 0px; FLOAT: =
+left; BORDER-BOTTOM-WIDTH: 0.8em; MARGIN-RIGHT: 0.5em; =
+BORDER-RIGHT-WIDTH: 1.4em
+}
+.hiddenStructure {
+	DISPLAY: none; speak: none
+}
+IMG.tex {
+	VERTICAL-ALIGN: middle
+}
+SPAN.texhtml {
+	FONT-FAMILY: serif
+}
+TABLE.rimage {
+	FLOAT: right; MARGIN-BOTTOM: 1em; MARGIN-LEFT: 1em; POSITION: relative; =
+TEXT-ALIGN: center
+}
+.toccolours {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aaa 1px =
+solid; PADDING-LEFT: 5px; FONT-SIZE: 95%; PADDING-BOTTOM: 5px; =
+BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #aaa 1px =
+solid; BACKGROUND-COLOR: #f9f9f9
+}
+DIV.townBox {
+	CLEAR: right; BORDER-RIGHT: gray 1px solid; PADDING-RIGHT: 0.3em; =
+BORDER-TOP: gray 1px solid; PADDING-LEFT: 0.3em; BACKGROUND: white; =
+FLOAT: right; PADDING-BOTTOM: 0.3em; MARGIN-LEFT: 1em; OVERFLOW: hidden; =
+BORDER-LEFT: gray 1px solid; WIDTH: 200px; PADDING-TOP: 0.3em; =
+BORDER-BOTTOM: gray 1px solid; POSITION: relative
+}
+DIV.townBox DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 96%; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 0.3em; PADDING-TOP: 0px
+}
+DIV.townBox DL DT {
+	BACKGROUND: none transparent scroll repeat 0% 0%; MARGIN: 0.4em 0px 0px
+}
+DIV.townBox DL DD {
+	MARGIN: 0.1em 0px 0px 1.1em; BACKGROUND-COLOR: #f3f3f3
+}
+.special LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; LINE-HEIGHT: 1.4em; PADDING-TOP: 0px
+}
+.autocomment {
+	COLOR: gray
+}
+#pagehistory SPAN.user {
+	MARGIN-LEFT: 1.4em; MARGIN-RIGHT: 0.4em
+}
+#pagehistory SPAN.minor {
+	FONT-WEIGHT: bold
+}
+#pagehistory LI {
+	BORDER-RIGHT: white 1px solid; BORDER-TOP: white 1px solid; =
+BORDER-LEFT: white 1px solid; BORDER-BOTTOM: white 1px solid
+}
+#pagehistory LI.selected {
+	BORDER-RIGHT: #aaa 1px dashed; BORDER-TOP: #aaa 1px dashed; =
+BORDER-LEFT: #aaa 1px dashed; BORDER-BOTTOM: #aaa 1px dashed; =
+BACKGROUND-COLOR: #f9f9f9
+}
+TABLE.diff {
+	BACKGROUND-COLOR: white
+}
+TD.diff-otitle {
+	BACKGROUND-COLOR: white
+}
+TD.diff-ntitle {
+	BACKGROUND-COLOR: white
+}
+TD.diff-addedline {
+	FONT-SIZE: smaller; BACKGROUND: #cfc
+}
+TD.diff-deletedline {
+	FONT-SIZE: smaller; BACKGROUND: #ffa
+}
+TD.diff-context {
+	FONT-SIZE: smaller; BACKGROUND: #eee
+}
+.diffchange {
+	FONT-WEIGHT: bold; COLOR: red; TEXT-DECORATION: none
+}
+#bodyContent A.external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(external.png) no-repeat right =
+center
+}
+#bodyContent A[href^=3D'gopher://'] {
+	PADDING-RIGHT: 13px; BACKGROUND: url(external.png) no-repeat right =
+center
+}
+#bodyContent A[href^=3D'https://'] {
+	PADDING-RIGHT: 16px; BACKGROUND: url(lock_icon.gif) no-repeat right =
+center
+}
+.link-https {
+	PADDING-RIGHT: 16px; BACKGROUND: url(lock_icon.gif) no-repeat right =
+center
+}
+#bodyContent A[href^=3D'mailto:'] {
+	PADDING-RIGHT: 18px; BACKGROUND: url(mail_icon.gif) no-repeat right =
+center
+}
+.link-mailto {
+	PADDING-RIGHT: 18px; BACKGROUND: url(mail_icon.gif) no-repeat right =
+center
+}
+#bodyContent A[href^=3D'news://'] {
+	PADDING-RIGHT: 18px; BACKGROUND: url(news_icon.png) no-repeat right =
+center
+}
+#bodyContent A[href^=3D'ftp://'] {
+	PADDING-RIGHT: 18px; BACKGROUND: url(file_icon.gif) no-repeat right =
+center
+}
+.link-ftp {
+	PADDING-RIGHT: 18px; BACKGROUND: url(file_icon.gif) no-repeat right =
+center
+}
+#bodyContent A[href^=3D'irc://'] {
+	PADDING-RIGHT: 18px; BACKGROUND: url(discussionitem_icon.gif) no-repeat =
+right center
+}
+.link-irc {
+	PADDING-RIGHT: 18px; BACKGROUND: url(discussionitem_icon.gif) no-repeat =
+right center
+}
+#bodyContent A[href$=3D'.ogg'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.OGG'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.mid'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.MID'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.midi'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.MIDI'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.mp3'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.MP3'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.wav'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.WAV'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.wma'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.WMA'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+.link-audio {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.ogm'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.OGM'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.avi'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.AVI'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.mpeg'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.MPEG'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.mpg'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.MPG'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+.link-video {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.pdf'].external {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+#bodyContent A[href$=3D'.PDF'].external {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+#bodyContent A[href*=3D'.pdf#'].external {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+#bodyContent A[href*=3D'.PDF#'].external {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+#bodyContent A[href*=3D'.pdf?'].external {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+#bodyContent A[href*=3D'.PDF?'].external {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+.link-document {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+#bodyContent A.extiw {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent =
+scroll repeat 0% 0%; PADDING-BOTTOM: 0px; COLOR: #36b; PADDING-TOP: 0px
+}
+#bodyContent A.extiw:active {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent =
+scroll repeat 0% 0%; PADDING-BOTTOM: 0px; COLOR: #36b; PADDING-TOP: 0px
+}
+#bodyContent A.external {
+	COLOR: #36b
+}
+#bodyContent .plainlinks A {
+	PADDING-RIGHT: 0px! important; PADDING-LEFT: 0px! important; =
+BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px! =
+important; PADDING-TOP: 0px! important
+}
+.portlet {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: none; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 0.5em; OVERFLOW: hidden; WIDTH: 11.6em; =
+BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.portlet H4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 95%; WHITE-SPACE: nowrap
+}
+.portlet H5 {
+	PADDING-RIGHT: 1em; DISPLAY: inline; PADDING-LEFT: 0.5em; FONT-WEIGHT: =
+normal; FONT-SIZE: 91%; BACKGROUND: none transparent scroll repeat 0% =
+0%; PADDING-BOTTOM: 0px; TEXT-TRANSFORM: lowercase; PADDING-TOP: 0px; =
+WHITE-SPACE: nowrap; HEIGHT: 1em
+}
+.portlet H6 {
+	BORDER-RIGHT: #2f6fab 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: =
+#2f6fab 1px solid; DISPLAY: block; PADDING-LEFT: 1em; FONT-WEIGHT: =
+normal; FONT-SIZE: 1em; BACKGROUND: #ffae2e; PADDING-BOTTOM: 0px; =
+TEXT-TRANSFORM: lowercase; BORDER-LEFT: #2f6fab 1px solid; PADDING-TOP: =
+0px; BORDER-BOTTOM: #2f6fab 1px; WHITE-SPACE: nowrap; HEIGHT: 1.2em
+}
+.pBody {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 0.8em; BORDER-TOP: #aaa =
+1px solid; PADDING-LEFT: 0.5em; FONT-SIZE: 95%; PADDING-BOTTOM: 0.3em; =
+BORDER-LEFT: #aaa 1px solid; COLOR: black; PADDING-TOP: 0px; =
+BORDER-BOTTOM: #aaa 1px solid; BORDER-COLLAPSE: collapse; =
+BACKGROUND-COLOR: white
+}
+.portlet H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.portlet H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.portlet H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.portlet H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.portlet UL {
+	FONT-SIZE: 95%; LIST-STYLE-IMAGE: url(bullet.gif); LINE-HEIGHT: 1.5em; =
+LIST-STYLE-TYPE: square
+}
+.portlet LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+#p-logo {
+	Z-INDEX: 3; LEFT: 0px; OVERFLOW: visible; WIDTH: 12em; POSITION: =
+absolute; TOP: 0px; HEIGHT: 155px
+}
+#p-logo H5 {
+	DISPLAY: none
+}
+#p-logo A {
+	BACKGROUND-POSITION: 35% 50%; DISPLAY: block; WIDTH: 12.2em; =
+BACKGROUND-REPEAT: no-repeat; HEIGHT: 155px; TEXT-DECORATION: none
+}
+#p-logo A:hover {
+	BACKGROUND-POSITION: 35% 50%; DISPLAY: block; WIDTH: 12.2em; =
+BACKGROUND-REPEAT: no-repeat; HEIGHT: 155px; TEXT-DECORATION: none
+}
+#p-navigation {
+	Z-INDEX: 3; POSITION: relative
+}
+#p-navigation A {
+	DISPLAY: block
+}
+#p-navigation LI.active A {
+	DISPLAY: inline
+}
+#p-navigation LI.active A:hover {
+	DISPLAY: inline
+}
+#p-navigation .pBody {
+	PADDING-RIGHT: 0px
+}
+#p-navigation LI.active A {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#p-navigation LI.active A:hover {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#p-search {
+	Z-INDEX: 3; POSITION: relative
+}
+INPUT.searchButton {
+	MARGIN-TOP: 1px; FONT-SIZE: 95%
+}
+#searchGoButton {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; FONT-WEIGHT: bold
+}
+#searchInput {
+	FONT-SIZE: 95%; MARGIN: 0px; WIDTH: 10.9em
+}
+#p-search .pBody {
+	PADDING-RIGHT: 0.4em; PADDING-LEFT: 0.4em; PADDING-BOTTOM: 0.4em; =
+PADDING-TOP: 0.5em; TEXT-ALIGN: center
+}
+#p-personal {
+	LEFT: 0px; POSITION: absolute; TOP: 0px
+}
+#p-personal {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent =
+scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: =
+visible; WIDTH: 100%; BORDER-TOP-STYLE: none; LINE-HEIGHT: 1.2em; =
+PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; WHITE-SPACE: nowrap; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#p-personal H5 {
+	DISPLAY: none
+}
+#p-personal .portlet {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent =
+scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: =
+visible; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: =
+none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#p-personal .pBody {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent =
+scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; OVERFLOW: =
+visible; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: =
+none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#p-personal UL {
+	PADDING-RIGHT: 2em; PADDING-LEFT: 3em; BACKGROUND: none transparent =
+scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN: 0px; CURSOR: default; =
+COLOR: #2f6fab; BORDER-TOP-STYLE: none; LINE-HEIGHT: 1.4em; PADDING-TOP: =
+0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; LIST-STYLE-TYPE: =
+none; TEXT-ALIGN: right; BORDER-BOTTOM-STYLE: none
+}
+#p-personal LI {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; BACKGROUND: =
+none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px; MARGIN-LEFT: =
+1em; COLOR: #2f6fab; BORDER-TOP-STYLE: none; LINE-HEIGHT: 1.2em; =
+PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; =
+BORDER-BOTTOM-STYLE: none
+}
+#p-personal LI A {
+	BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: =
+0.2em; COLOR: #005896; TEXT-DECORATION: none
+}
+#p-personal LI A:hover {
+	PADDING-BOTTOM: 0.2em; BACKGROUND-COLOR: white; TEXT-DECORATION: none
+}
+#p-personal LI.active A:hover {
+	BACKGROUND-COLOR: transparent
+}
+LI#pt-userpage {
+	PADDING-LEFT: 20px; BACKGROUND: url(user.gif) no-repeat left top; =
+TEXT-TRANSFORM: none
+}
+LI#pt-anonuserpage {
+	PADDING-LEFT: 20px; BACKGROUND: url(user.gif) no-repeat left top; =
+TEXT-TRANSFORM: none
+}
+LI#pt-login {
+	PADDING-LEFT: 20px; BACKGROUND: url(user.gif) no-repeat left top; =
+TEXT-TRANSFORM: none
+}
+#p-personal UL {
+	TEXT-TRANSFORM: lowercase
+}
+#p-personal LI.active {
+	FONT-WEIGHT: bold
+}
+#p-cactions {
+	PADDING-LEFT: 1em; FONT-SIZE: 95%; BACKGROUND: none transparent scroll =
+repeat 0% 0%; LEFT: 11.5em; MARGIN: 0px; OVERFLOW: visible; WIDTH: 76%; =
+LINE-HEIGHT: 1.1em; WHITE-SPACE: nowrap; LIST-STYLE-TYPE: none; =
+POSITION: absolute; TOP: 1.3em; BORDER-COLLAPSE: collapse
+}
+#p-cactions UL {
+	LIST-STYLE-TYPE: none
+}
+#p-cactions LI {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #aaa 1px =
+solid; DISPLAY: inline; PADDING-LEFT: 0px; BACKGROUND: white; =
+PADDING-BOTTOM: 0.1em; MARGIN: 0px 0.3em 0px 0px; OVERFLOW: visible; =
+BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #aaa 1px
+}
+#p-cactions LI.selected {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-WEIGHT: bold; =
+BORDER-LEFT-COLOR: #fabd23; BORDER-BOTTOM-COLOR: #fabd23; =
+PADDING-BOTTOM: 0.2em; BORDER-TOP-COLOR: #fabd23; PADDING-TOP: 0px; =
+BORDER-RIGHT-COLOR: #fabd23
+}
+#p-cactions LI A {
+	PADDING-RIGHT: 0.8em; PADDING-LEFT: 0.8em; PADDING-BOTTOM: 0.3em; =
+MARGIN: 0px; COLOR: #002bb8; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; =
+BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; POSITION: relative; =
+BACKGROUND-COLOR: #fbfbfb; TEXT-DECORATION: none; BORDER-BOTTOM-STYLE: =
+none
+}
+#p-cactions LI.selected A {
+	PADDING-RIGHT: 1em! important; PADDING-LEFT: 1em! important; Z-INDEX: =
+3; PADDING-BOTTOM: 0.2em! important; PADDING-TOP: 0px! important; =
+BACKGROUND-COLOR: white
+}
+#p-cactions .new A {
+	COLOR: #ba0000
+}
+#p-cactions LI A:hover {
+	Z-INDEX: 3; BACKGROUND-COLOR: white; TEXT-DECORATION: none
+}
+#p-cactions H5 {
+	DISPLAY: none
+}
+#p-cactions LI.istalk {
+	MARGIN-RIGHT: 0px
+}
+#p-cactions LI.istalk A {
+	PADDING-RIGHT: 0.5em
+}
+#p-cactions #ca-addsection A {
+	PADDING-RIGHT: 0.4em; PADDING-LEFT: 0.4em
+}
+LI#ca-talk {
+	MARGIN-RIGHT: 1.6em
+}
+LI#ca-watch {
+	MARGIN-LEFT: 1.6em
+}
+LI#ca-unwatch {
+	MARGIN-LEFT: 1.6em
+}
+LI#ca-varlang-0 {
+	MARGIN-LEFT: 1.6em
+}
+LI#ca-print {
+	MARGIN-LEFT: 1.6em
+}
+#p-cactions .pBody {
+	BORDER-TOP-WIDTH: 0px; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; =
+BORDER-LEFT-WIDTH: 0px; FONT-SIZE: 1em; BORDER-BOTTOM-WIDTH: 0px; =
+PADDING-BOTTOM: 0px; PADDING-TOP: 0px; BACKGROUND-COLOR: transparent; =
+BORDER-RIGHT-WIDTH: 0px
+}
+#p-cactions .hiddenStructure {
+	DISPLAY: none
+}
+#p-cactions LI A {
+	TEXT-TRANSFORM: lowercase
+}
+#p-tbx {
+	Z-INDEX: 3; POSITION: relative
+}
+#p-lang {
+	Z-INDEX: 3; POSITION: relative
+}
+#t-ispermalink {
+	COLOR: #999
+}
+#t-iscite {
+	COLOR: #999
+}
+#footer {
+	PADDING-RIGHT: 0px; BORDER-TOP: #fabd23 1px solid; PADDING-LEFT: 0px; =
+FONT-SIZE: 90%; PADDING-BOTTOM: 1.2em; MARGIN: 0.6em 0px 1em; =
+PADDING-TOP: 0.4em; BORDER-BOTTOM: #fabd23 1px solid; BACKGROUND-COLOR: =
+white; TEXT-ALIGN: center
+}
+#footer LI {
+	DISPLAY: inline; MARGIN: 0px 1.3em
+}
+#f-poweredbyico {
+	MARGIN: 0px 8px; POSITION: relative; TOP: -2px
+}
+#f-copyrightico {
+	MARGIN: 0px 8px; POSITION: relative; TOP: -2px
+}
+#f-poweredbyico {
+	FLOAT: right; HEIGHT: 1%
+}
+#f-copyrightico {
+	FLOAT: left; HEIGHT: 1%
+}
+#preftoc {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; WIDTH: 100%; PADDING-TOP: 0px
+}
+#preftoc LI {
+	COLOR: #000; BACKGROUND-COLOR: #f0f0f0
+}
+#preftoc LI {
+	BORDER-RIGHT: #716f64 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #fff =
+1px solid; PADDING-LEFT: 0px; Z-INDEX: 3; FLOAT: left; LIST-STYLE-IMAGE: =
+none; PADDING-BOTTOM: 3px; MARGIN: 1px -2px 1px 2px; BORDER-LEFT: #fff =
+1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #fff 0px solid; WHITE-SPACE: =
+nowrap; LIST-STYLE-TYPE: none; POSITION: relative
+}
+#preftoc LI.selected {
+	BORDER-RIGHT: #aaa 1px solid; BORDER-TOP: #aaa 1px solid; FONT-WEIGHT: =
+bold; BORDER-LEFT: #aaa 1px solid; CURSOR: default; MARGIN-RIGHT: -3px; =
+PADDING-TOP: 2px; BORDER-BOTTOM: #aaa 1px; TOP: 1px; BACKGROUND-COLOR: =
+#f9f9f9
+}
+#preftoc > LI.selected {
+	TOP: 2px
+}
+#preftoc A {
+	PADDING-RIGHT: 0.7em; DISPLAY: block; PADDING-LEFT: 0.7em; =
+PADDING-BOTTOM: 0px; COLOR: #000; PADDING-TOP: 0px; POSITION: relative; =
+TEXT-DECORATION: none
+}
+#preftoc A:active {
+	PADDING-RIGHT: 0.7em; DISPLAY: block; PADDING-LEFT: 0.7em; =
+PADDING-BOTTOM: 0px; COLOR: #000; PADDING-TOP: 0px; POSITION: relative; =
+TEXT-DECORATION: none
+}
+#preftoc LI.selected A {
+	CURSOR: default; TEXT-DECORATION: none
+}
+#prefcontrol {
+	CLEAR: both; PADDING-TOP: 2em
+}
+#preferences {
+	CLEAR: both; BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 1.5em; =
+BORDER-TOP: #aaa 1px solid; PADDING-LEFT: 1.5em; PADDING-BOTTOM: 1.5em; =
+MARGIN: 0px; BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 1.5em; =
+BORDER-BOTTOM: #aaa 1px solid; BACKGROUND-COLOR: #f9f9f9
+}
+.prefsection {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.prefsection FIELDSET {
+	BORDER-RIGHT: #aaa 1px solid; BORDER-TOP: #aaa 1px solid; FLOAT: left; =
+BORDER-LEFT: #aaa 1px solid; MARGIN-RIGHT: 2em; BORDER-BOTTOM: #aaa 1px =
+solid
+}
+.prefsection LEGEND {
+	FONT-WEIGHT: bold
+}
+.prefsection TABLE {
+	BACKGROUND-COLOR: #f9f9f9
+}
+.prefsection LEGEND {
+	BACKGROUND-COLOR: #f9f9f9
+}
+.mainLegend {
+	DISPLAY: none
+}
+DIV.prefsectiontip {
+	CLEAR: both; PADDING-RIGHT: 0.7em; MARGIN-TOP: 0px; PADDING-LEFT: =
+0.7em; FONT-SIZE: 95%; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em; =
+BACKGROUND-COLOR: #ffc1c1
+}
+.btnSavePrefs {
+	PADDING-RIGHT: 0.3em; PADDING-LEFT: 0.3em; FONT-WEIGHT: bold
+}
+.preferences-login {
+	CLEAR: both; MARGIN-BOTTOM: 1.5em
+}
+.prefcache {
+	MARGIN-TOP: 2em; FONT-SIZE: 90%
+}
+DIV#userloginForm FORM {
+	CLEAR: both; BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 2em; =
+BORDER-TOP: #aaa 1px solid; PADDING-LEFT: 2em; FLOAT: left; =
+PADDING-BOTTOM: 1.5em; MARGIN: 0px 3em 1em 0px; BORDER-LEFT: #aaa 1px =
+solid; PADDING-TOP: 1.5em; BORDER-BOTTOM: #aaa 1px solid; =
+BACKGROUND-COLOR: #f9f9f9
+}
+DIV#userlogin FORM#userlogin2 {
+	CLEAR: both; BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 2em; =
+BORDER-TOP: #aaa 1px solid; PADDING-LEFT: 2em; FLOAT: left; =
+PADDING-BOTTOM: 1.5em; MARGIN: 0px 3em 1em 0px; BORDER-LEFT: #aaa 1px =
+solid; PADDING-TOP: 1.5em; BORDER-BOTTOM: #aaa 1px solid; =
+BACKGROUND-COLOR: #f9f9f9
+}
+DIV#userloginForm TABLE {
+	BACKGROUND-COLOR: #f9f9f9
+}
+DIV#userlogin FORM#userlogin2 TABLE {
+	BACKGROUND-COLOR: #f9f9f9
+}
+DIV#userloginForm H2 {
+	PADDING-TOP: 0px
+}
+DIV#userlogin FORM#userlogin2 H2 {
+	PADDING-TOP: 0px
+}
+DIV#userlogin .captcha {
+	BORDER-RIGHT: #bbb 1px solid; PADDING-RIGHT: 2em; BORDER-TOP: #bbb 1px =
+solid; PADDING-LEFT: 2em; PADDING-BOTTOM: 1.5em; BORDER-LEFT: #bbb 1px =
+solid; WIDTH: 400px; PADDING-TOP: 1.5em; BORDER-BOTTOM: #bbb 1px solid; =
+BACKGROUND-COLOR: white
+}
+#userloginprompt {
+	FONT-SIZE: 85%
+}
+#languagelinks {
+	FONT-SIZE: 85%
+}
+#login-sectiontip {
+	FONT-SIZE: 85%; LINE-HEIGHT: 1.2; PADDING-TOP: 2em
+}
+#userlogin .loginText {
+	WIDTH: 12em
+}
+#userlogin .loginPassword {
+	WIDTH: 12em
+}
+#userloginlink A {
+	FONT-WEIGHT: bold
+}
+#wpLoginattempt {
+	FONT-WEIGHT: bold
+}
+#wpCreateaccount {
+	FONT-WEIGHT: bold
+}
+* > HTML #p-cactions LI {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-BOTTOM-STYLE: none
+}
+* > HTML #p-cactions LI A {
+	BORDER-RIGHT: #aaa 1px solid; BORDER-TOP: #aaa 1px solid; BORDER-LEFT: =
+#aaa 1px solid; BORDER-BOTTOM: #aaa 1px
+}
+* > HTML #p-cactions LI.selected A {
+	BORDER-LEFT-COLOR: #fabd23; BORDER-BOTTOM-COLOR: #fabd23; =
+BORDER-TOP-COLOR: #fabd23; BORDER-RIGHT-COLOR: #fabd23
+}
+* > HTML #f-poweredbyico {
+	WIDTH: 88px
+}
+* > HTML #f-copyrightico {
+	WIDTH: 88px
+}
+* > HTML #bodyContent {
+	OVERFLOW-X: auto; PADDING-BOTTOM: 25px; WIDTH: 100%
+}
+* > HTML #bodyContent PRE {
+	OVERFLOW-X: auto; PADDING-BOTTOM: 25px; WIDTH: 100%
+}
+* HTML #footer {
+	MARGIN-TOP: 0px
+}
+* HTML #column-content {
+	DISPLAY: inline; MARGIN-BOTTOM: 0px
+}
+* HTML DIV.editsection {
+	FONT-SIZE: smaller
+}
+#pagehistory LI.selected {
+	POSITION: relative
+}
+* > HTML #column-content {
+	FLOAT: none
+}
+* > HTML #column-one {
+	LEFT: 0px; POSITION: absolute; TOP: 0px
+}
+* > HTML #footer {
+	MARGIN-LEFT: 13.2em
+}
+.redirectText {
+	FONT-SIZE: 150%; MARGIN: 5px
+}
+.printfooter {
+	DISPLAY: none
+}
+.not-patrolled {
+	BACKGROUND-COLOR: #ffa
+}
+DIV.patrollink {
+	FONT-SIZE: 75%; TEXT-ALIGN: right
+}
+SPAN.newpage {
+	FONT-WEIGHT: bold
+}
+SPAN.minor {
+	FONT-WEIGHT: bold
+}
+SPAN.searchmatch {
+	FONT-WEIGHT: bold
+}
+SPAN.bot {
+	FONT-WEIGHT: bold
+}
+SPAN.unpatrolled {
+	FONT-WEIGHT: bold; COLOR: red
+}
+SPAN.searchmatch {
+	COLOR: red
+}
+.sharedUploadNotice {
+	FONT-STYLE: italic
+}
+SPAN.updatedmarker {
+	COLOR: black; BACKGROUND-COLOR: #0f0
+}
+TABLE.gallery {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #ccc 1px =
+solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: 2px; BORDER-LEFT: =
+#ccc 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #ccc 1px solid; =
+BACKGROUND-COLOR: white
+}
+TABLE.gallery TR {
+	VERTICAL-ALIGN: top
+}
+TABLE.gallery TD {
+	BORDER-RIGHT: white 2px solid; BORDER-TOP: white 2px solid; =
+VERTICAL-ALIGN: top; BORDER-LEFT: white 2px solid; BORDER-BOTTOM: white =
+2px solid; BACKGROUND-COLOR: #f9f9f9
+}
+TABLE.gallery TD.galleryheader {
+	FONT-WEIGHT: bold; TEXT-ALIGN: center
+}
+TABLE.gallery CAPTION {
+	FONT-WEIGHT: bold
+}
+DIV.gallerybox {
+	MARGIN: 2px
+}
+DIV.gallerybox DIV.thumb {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; MARGIN: 2px; =
+BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid; TEXT-ALIGN: =
+center
+}
+DIV.gallerytext {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 94%; PADDING-BOTTOM: =
+2px; PADDING-TOP: 2px
+}
+SPAN.comment {
+	FONT-STYLE: italic
+}
+SPAN.changedby {
+	FONT-SIZE: 95%
+}
+.previewnote {
+	MARGIN-BOTTOM: 1em; PADDING-BOTTOM: 1em; COLOR: #c00; TEXT-INDENT: 3em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+.previewnote P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.editExternally {
+	BORDER-RIGHT: gray 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: gray 1px =
+solid; MARGIN-TOP: 0.5em; PADDING-LEFT: 3px; FONT-SIZE: small; FLOAT: =
+left; PADDING-BOTTOM: 3px; BORDER-LEFT: gray 1px solid; PADDING-TOP: =
+3px; BORDER-BOTTOM: gray 1px solid; BACKGROUND-COLOR: #ffffff; =
+TEXT-ALIGN: center
+}
+.editExternallyHelp {
+	COLOR: gray; FONT-STYLE: italic
+}
+LI SPAN.deleted {
+	COLOR: #888; FONT-STYLE: italic; TEXT-DECORATION: line-through
+}
+SPAN.history-deleted {
+	COLOR: #888; FONT-STYLE: italic; TEXT-DECORATION: line-through
+}
+.toggle {
+	MARGIN-LEFT: 2em; TEXT-INDENT: -2em
+}
+TABLE.mw_metadata {
+	FONT-SIZE: 0.8em; MARGIN-BOTTOM: 0.5em; MARGIN-LEFT: 0.5em; WIDTH: =
+300px
+}
+TABLE.mw_metadata CAPTION {
+	FONT-WEIGHT: bold
+}
+TABLE.mw_metadata TH {
+	FONT-WEIGHT: normal
+}
+TABLE.mw_metadata TD {
+	PADDING-RIGHT: 0.1em; PADDING-LEFT: 0.1em; PADDING-BOTTOM: 0.1em; =
+PADDING-TOP: 0.1em
+}
+TABLE.mw_metadata {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM-STYLE: none
+}
+TABLE.mw_metadata TD {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 0.1em; BORDER-TOP: =
+#aaaaaa 1px solid; PADDING-LEFT: 0.1em; BORDER-LEFT: #aaaaaa 1px solid; =
+BORDER-BOTTOM: #aaaaaa 1px solid; TEXT-ALIGN: center
+}
+TABLE.mw_metadata TH {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 0.1em; BORDER-TOP: =
+#aaaaaa 1px solid; PADDING-LEFT: 0.1em; BORDER-LEFT: #aaaaaa 1px solid; =
+BORDER-BOTTOM: #aaaaaa 1px solid; TEXT-ALIGN: center
+}
+TABLE.mw_metadata TH {
+	BACKGROUND-COLOR: #f9f9f9
+}
+TABLE.mw_metadata TD {
+	BACKGROUND-COLOR: #fcfcfc
+}
+TABLE.collapsed TR.collapsable {
+	DISPLAY: none
+}
+UL#filetoc {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: =
+#aaaaaa 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 95%; MARGIN-BOTTOM: =
+0.5em; PADDING-BOTTOM: 5px; MARGIN-LEFT: 0px; BORDER-LEFT: #aaaaaa 1px =
+solid; MARGIN-RIGHT: 0px; PADDING-TOP: 5px; BORDER-BOTTOM: #aaaaaa 1px =
+solid; BACKGROUND-COLOR: #f9f9f9; TEXT-ALIGN: center
+}
+#filetoc LI {
+	PADDING-RIGHT: 2em; DISPLAY: inline; LIST-STYLE-TYPE: none
+}
+INPUT#wpSummary {
+	WIDTH: 80%
+}
+INPUT#wpSave {
+	MARGIN-RIGHT: 0.33em
+}
+INPUT#wpDiff {
+	MARGIN-RIGHT: 0.33em
+}
+#editform .editOptions {
+	DISPLAY: inline
+}
+#wpSave {
+	FONT-WEIGHT: bold
+}
+TABLE.revisionform_default {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; =
+BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+TABLE.revisionform_focus {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; =
+BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; =
+BACKGROUND-COLOR: #00bbff
+}
+TR.revision_tr_default {
+	BACKGROUND-COLOR: #eeeeee
+}
+TR.revision_tr_first {
+	BACKGROUND-COLOR: #dddddd
+}
+P.revision_saved {
+	FONT-WEIGHT: bold; COLOR: green
+}
+#mw_trackbacks {
+	BORDER-RIGHT: #bbbbff 1px solid; PADDING-RIGHT: 0.2em; BORDER-TOP: =
+#bbbbff 1px solid; PADDING-LEFT: 0.2em; PADDING-BOTTOM: 0.2em; =
+BORDER-LEFT: #bbbbff 1px solid; PADDING-TOP: 0.2em; BORDER-BOTTOM: =
+#bbbbff 1px solid; BACKGROUND-COLOR: #eeeeff
+}
+#allmessagestable TH {
+	BACKGROUND-COLOR: #b2b2ff
+}
+#allmessagestable TR.orig {
+	BACKGROUND-COLOR: #ffe2e2
+}
+#allmessagestable TR.new {
+	BACKGROUND-COLOR: #e2ffe2
+}
+#allmessagestable TR.def {
+	BACKGROUND-COLOR: #f0f0ff
+}
+DIV.noarticletext {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: #ccc 1px =
+solid; PADDING-LEFT: 1em; BACKGROUND: #fff; PADDING-BOTTOM: 0.2em; =
+BORDER-LEFT: #ccc 1px solid; COLOR: #000; PADDING-TOP: 0.2em; =
+BORDER-BOTTOM: #ccc 1px solid
+}
+DIV#searchTargetContainer {
+	BACKGROUND: white; LEFT: 10px; WIDTH: 90%; TOP: 10px
+}
+DIV#searchTarget {
+	BORDER-RIGHT: blue 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: blue 1px =
+solid; PADDING-LEFT: 3px; BACKGROUND: #f0f0f0; PADDING-BOTTOM: 3px; =
+MARGIN: 5px; BORDER-LEFT: blue 1px solid; PADDING-TOP: 3px; =
+BORDER-BOTTOM: blue 1px solid
+}
+DIV#searchTarget UL LI {
+	LIST-STYLE-TYPE: none
+}
+DIV#searchTarget UL LI:unknown {
+	COLOR: orange; content: "=BB "
+}
+DIV.multipageimagenavbox {
+	BORDER-RIGHT: silver 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: silver =
+1px solid; PADDING-LEFT: 4px; BACKGROUND: #f0f0f0; PADDING-BOTTOM: 4px; =
+MARGIN: 1em; BORDER-LEFT: silver 1px solid; PADDING-TOP: 4px; =
+BORDER-BOTTOM: silver 1px solid; -moz-border-radius: 6px
+}
+DIV.multipageimagenavbox DIV.thumb {
+	MARGIN-LEFT: 2em; BORDER-TOP-STYLE: none; MARGIN-RIGHT: 2em; =
+BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: =
+none
+}
+DIV.multipageimagenavbox HR {
+	MARGIN: 6px
+}
+TABLE.multipageimage TD {
+	TEXT-ALIGN: center
+}
+TABLE#sv-ext {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; PADDING-BOTTOM: 0em; MARGIN: =
+1em; PADDING-TOP: 0em
+}
+TABLE#sv-hooks {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; PADDING-BOTTOM: 0em; MARGIN: =
+1em; PADDING-TOP: 0em
+}
+#sv-ext TD {
+	BORDER-RIGHT: #a0a0a0 1px solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#a0a0a0 1px solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #a0a0a0 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #a0a0a0 =
+1px solid
+}
+#sv-hooks TD {
+	BORDER-RIGHT: #a0a0a0 1px solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#a0a0a0 1px solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #a0a0a0 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #a0a0a0 =
+1px solid
+}
+#sv-ext TH {
+	BORDER-RIGHT: #a0a0a0 1px solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#a0a0a0 1px solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #a0a0a0 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #a0a0a0 =
+1px solid
+}
+#sv-hooks TH {
+	BORDER-RIGHT: #a0a0a0 1px solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#a0a0a0 1px solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #a0a0a0 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #a0a0a0 =
+1px solid
+}
+#sv-ext TH {
+	PADDING-RIGHT: 0.15em; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+COLOR: black; PADDING-TOP: 0px; BACKGROUND-COLOR: #f0f0f0
+}
+#sv-hooks TH {
+	PADDING-RIGHT: 0.15em; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+COLOR: black; PADDING-TOP: 0px; BACKGROUND-COLOR: #f0f0f0
+}
+TR.sv-space {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; HEIGHT: 0.8em; BORDER-BOTTOM-STYLE: none
+}
+TR.sv-space TD {
+	DISPLAY: none
+}
+.TablePager_nav A {
+	TEXT-DECORATION: none
+}
+.TablePager {
+	BORDER-COLLAPSE: collapse
+}
+.TablePager {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#aaaaaa 1px solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #aaaaaa 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #aaaaaa =
+1px solid
+}
+.TablePager TD {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#aaaaaa 1px solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #aaaaaa 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #aaaaaa =
+1px solid
+}
+.TablePager TH {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#aaaaaa 1px solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #aaaaaa 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #aaaaaa =
+1px solid
+}
+.TablePager TH {
+	BACKGROUND-COLOR: #eeeeff
+}
+.TablePager TD {
+	BACKGROUND-COLOR: #ffffff
+}
+.TablePager TR:hover TD {
+	BACKGROUND-COLOR: #eeeeff
+}
+.imagelist TD {
+	WHITE-SPACE: nowrap
+}
+.imagelist TH {
+	WHITE-SPACE: nowrap
+}
+.imagelist .TablePager_col_links {
+	BACKGROUND-COLOR: #eeeeff
+}
+.imagelist .TablePager_col_img_description {
+	WHITE-SPACE: normal
+}
+.imagelist TH.TablePager_sort {
+	BACKGROUND-COLOR: #ccccff
+}
+.templatesUsed {
+	MARGIN-TOP: 1.5em
+}
+.mw-summary-preview {
+	MARGIN: 0.1em 0px
+}
+P.mw-ipb-conveniencelinks {
+	FONT-SIZE: 90%; FLOAT: right
+}
+.mw-plusminus-null {
+	COLOR: #aaa
+}
+.texvc {
+	DIRECTION: ltr; unicode-bidi: embed
+}
+#toolbar {
+	CLEAR: both
+}
+#wpTextbox1 {
+	CLEAR: both
+}
+.MediaTransformError {
+	PADDING-RIGHT: 0.1em; PADDING-LEFT: 0.1em; PADDING-BOTTOM: 0.1em; =
+PADDING-TOP: 0.1em; BACKGROUND-COLOR: #ccc
+}
+.MediaTransformError TD {
+	FONT-SIZE: 90%; VERTICAL-ALIGN: middle; TEXT-ALIGN: center
+}
+
+------=_NextPart_000_004A_01C9ABD2.92656450
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.programadoresdejogos.com/allegrobr/skins/common/commonPrint.css?63
+
+A.stub {
+	COLOR: #ba0000; TEXT-DECORATION: none
+}
+A.new {
+	COLOR: #ba0000; TEXT-DECORATION: none
+}
+#toc {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: =
+#aaaaaa 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: =
+#aaaaaa 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #aaaaaa 1px solid; =
+BACKGROUND-COLOR: #f9f9f9
+}
+.tocindent {
+	MARGIN-LEFT: 2em
+}
+.tocline {
+	MARGIN-BOTTOM: 0px
+}
+DIV.floatright {
+	CLEAR: right; BORDER-RIGHT: white 0px solid; BORDER-TOP: white 0.5em =
+solid; FLOAT: right; MARGIN: 0px; BORDER-LEFT: white 1.4em solid; =
+BORDER-BOTTOM: white 0.8em solid; POSITION: relative
+}
+DIV.floatright P {
+	FONT-STYLE: italic
+}
+DIV.floatleft {
+	BORDER-RIGHT: white 1.4em solid; BORDER-TOP: white 0.5em solid; FLOAT: =
+left; MARGIN: 0.3em 0.5em 0.5em 0px; BORDER-LEFT: white 0px solid; =
+BORDER-BOTTOM: white 0.8em solid; POSITION: relative
+}
+DIV.floatleft P {
+	FONT-STYLE: italic
+}
+DIV.thumb {
+	BORDER-LEFT-COLOR: white; MARGIN-BOTTOM: 0.5em; BORDER-BOTTOM-COLOR: =
+white; OVERFLOW: hidden; WIDTH: auto; BORDER-TOP-STYLE: solid; =
+BORDER-TOP-COLOR: white; BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: =
+solid; BORDER-RIGHT-COLOR: white; BORDER-BOTTOM-STYLE: solid
+}
+DIV.thumb DIV {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 3px! important; =
+BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 3px! important; FONT-SIZE: =
+94%; PADDING-BOTTOM: 3px! important; BORDER-LEFT: #cccccc 1px solid; =
+PADDING-TOP: 3px! important; BORDER-BOTTOM: #cccccc 1px solid; =
+BACKGROUND-COLOR: #f9f9f9; TEXT-ALIGN: center
+}
+DIV.thumb DIV A IMG {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; =
+BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid
+}
+DIV.thumb DIV DIV.thumbcaption {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0.1em; =
+BORDER-TOP-STYLE: none; PADDING-TOP: 0.3em; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+DIV.magnify {
+	DISPLAY: none
+}
+DIV.tright {
+	BORDER-TOP-WIDTH: 0.5em; CLEAR: right; BORDER-LEFT-WIDTH: 1.4em; FLOAT: =
+right; BORDER-BOTTOM-WIDTH: 0.8em; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.tleft {
+	BORDER-TOP-WIDTH: 0.5em; BORDER-LEFT-WIDTH: 0px; FLOAT: left; =
+BORDER-BOTTOM-WIDTH: 0.8em; MARGIN-RIGHT: 0.5em; BORDER-RIGHT-WIDTH: =
+1.4em
+}
+TABLE.rimage {
+	FLOAT: right; MARGIN-BOTTOM: 1em; MARGIN-LEFT: 1em; WIDTH: 1pt; =
+POSITION: relative; TEXT-ALIGN: center
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: white; =
+PADDING-BOTTOM: 0px; MARGIN: 0px; COLOR: black; PADDING-TOP: 0px
+}
+.noprint {
+	DISPLAY: none
+}
+DIV#jump-to-nav {
+	DISPLAY: none
+}
+DIV.top {
+	DISPLAY: none
+}
+DIV#column-one {
+	DISPLAY: none
+}
+#colophon {
+	DISPLAY: none
+}
+.editsection {
+	DISPLAY: none
+}
+.toctoggle {
+	DISPLAY: none
+}
+.tochidden {
+	DISPLAY: none
+}
+DIV#f-poweredbyico {
+	DISPLAY: none
+}
+DIV#f-copyrightico {
+	DISPLAY: none
+}
+LI#viewcount {
+	DISPLAY: none
+}
+LI#about {
+	DISPLAY: none
+}
+LI#disclaimer {
+	DISPLAY: none
+}
+LI#privacy {
+	DISPLAY: none
+}
+UL {
+	LIST-STYLE-TYPE: square
+}
+#content {
+	PADDING-RIGHT: 0px! important; PADDING-LEFT: 0px! important; =
+BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px! =
+important; MARGIN: 0px; BORDER-TOP-STYLE: none! important; PADDING-TOP: =
+0px! important; BORDER-RIGHT-STYLE: none! important; BORDER-LEFT-STYLE: =
+none! important; BORDER-BOTTOM-STYLE: none! important
+}
+#footer {
+	BORDER-TOP: black 1px solid; BACKGROUND: white; COLOR: black
+}
+H1 {
+	FONT-WEIGHT: bold
+}
+H2 {
+	FONT-WEIGHT: bold
+}
+H3 {
+	FONT-WEIGHT: bold
+}
+H4 {
+	FONT-WEIGHT: bold
+}
+H5 {
+	FONT-WEIGHT: bold
+}
+H6 {
+	FONT-WEIGHT: bold
+}
+P {
+	MARGIN: 1em 0px; LINE-HEIGHT: 1.2em
+}
+.documentDescription {
+	MARGIN: 1em 0px; LINE-HEIGHT: 1.2em
+}
+.tocindent P {
+	MARGIN: 0px
+}
+PRE {
+	BORDER-RIGHT: black 1pt dashed; PADDING-RIGHT: 0px; BORDER-TOP: black =
+1pt dashed; PADDING-LEFT: 0px; FONT-SIZE: 8pt; BACKGROUND: white; =
+PADDING-BOTTOM: 1em; OVERFLOW: auto; BORDER-LEFT: black 1pt dashed; =
+COLOR: black; PADDING-TOP: 1em; BORDER-BOTTOM: black 1pt dashed; =
+WHITE-SPACE: pre
+}
+TABLE.listing {
+	BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; =
+BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; =
+BORDER-COLLAPSE: collapse
+}
+TABLE.listing TD {
+	BORDER-RIGHT: black 1pt solid; BORDER-TOP: black 1pt solid; =
+BORDER-LEFT: black 1pt solid; BORDER-BOTTOM: black 1pt solid; =
+BORDER-COLLAPSE: collapse
+}
+A {
+	PADDING-RIGHT: 0px! important; PADDING-LEFT: 0px! important; =
+BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px! =
+important; COLOR: black! important; PADDING-TOP: 0px! important
+}
+A:link {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #520; =
+TEXT-DECORATION: underline
+}
+A:visited {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #520; =
+TEXT-DECORATION: underline
+}
+#content A.text.external:unknown {
+	content: " (" attr(href) ") "
+}
+#content A.autonumber.external:unknown {
+	content: " (" attr(href) ") "
+}
+#globalWrapper {
+	MIN-WIDTH: 0px! important; WIDTH: 100%! important
+}
+#content {
+	BACKGROUND: white; COLOR: black
+}
+#column-content {
+	MARGIN: 0px
+}
+#column-content #content {
+	PADDING-RIGHT: 1em; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; MARGIN: =
+0px; PADDING-TOP: 1em
+}
+A {
+	COLOR: black! important; TEXT-DECORATION: none! important
+}
+A.external {
+	COLOR: black! important; TEXT-DECORATION: none! important
+}
+A.new {
+	COLOR: black! important; TEXT-DECORATION: none! important
+}
+A.stub {
+	COLOR: black! important; TEXT-DECORATION: none! important
+}
+A {
+=09
+}
+A.external {
+=09
+}
+A.new {
+=09
+}
+A.stub {
+=09
+}
+IMG {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-BOTTOM-STYLE: none
+}
+IMG.tex {
+	VERTICAL-ALIGN: middle
+}
+SPAN.texhtml {
+	FONT-FAMILY: serif
+}
+DIV.townBox {
+	CLEAR: right; BORDER-RIGHT: gray 1px solid; PADDING-RIGHT: 0.3em; =
+BORDER-TOP: gray 1px solid; PADDING-LEFT: 0.3em; BACKGROUND: white; =
+FLOAT: right; PADDING-BOTTOM: 0.3em; MARGIN-LEFT: 1em; OVERFLOW: hidden; =
+BORDER-LEFT: gray 1px solid; WIDTH: 200px; PADDING-TOP: 0.3em; =
+BORDER-BOTTOM: gray 1px solid; POSITION: relative
+}
+DIV.townBox DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 96%; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 0.3em; PADDING-TOP: 0px
+}
+DIV.townBox DL DT {
+	BACKGROUND: none transparent scroll repeat 0% 0%; MARGIN: 0.4em 0px 0px
+}
+DIV.townBox DL DD {
+	MARGIN: 0.1em 0px 0px 1.1em; BACKGROUND-COLOR: #f3f3f3
+}
+#siteNotice {
+	DISPLAY: none
+}
+TABLE.gallery {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: =
+#cccccc 1px solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: 2px; =
+BORDER-LEFT: #cccccc 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #cccccc =
+1px solid; BACKGROUND-COLOR: #ffffff
+}
+TABLE.gallery TR {
+	VERTICAL-ALIGN: top
+}
+DIV.gallerybox {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; MARGIN: =
+2px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 150px; BORDER-BOTTOM: =
+#cccccc 1px solid; BACKGROUND-COLOR: #f9f9f9
+}
+DIV.gallerybox DIV.thumb {
+	BORDER-RIGHT: #cccccc 1px solid; BORDER-TOP: #cccccc 1px solid; MARGIN: =
+2px; BORDER-LEFT: #cccccc 1px solid; BORDER-BOTTOM: #cccccc 1px solid; =
+TEXT-ALIGN: center
+}
+DIV.gallerytext {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 94%; PADDING-BOTTOM: =
+2px; PADDING-TOP: 2px
+}
+TABLE.diff {
+	BACKGROUND: white
+}
+TD.diff-otitle {
+	BACKGROUND: #ffffff
+}
+TD.diff-ntitle {
+	BACKGROUND: #ffffff
+}
+TD.diff-addedline {
+	BORDER-RIGHT: black 2px solid; BORDER-TOP: black 2px solid; FONT-SIZE: =
+smaller; BACKGROUND: #ccffcc; BORDER-LEFT: black 2px solid; =
+BORDER-BOTTOM: black 2px solid
+}
+TD.diff-deletedline {
+	BORDER-RIGHT: black 2px dotted; BORDER-TOP: black 2px dotted; =
+FONT-SIZE: smaller; BACKGROUND: #ffffaa; BORDER-LEFT: black 2px dotted; =
+BORDER-BOTTOM: black 2px dotted
+}
+TD.diff-context {
+	FONT-SIZE: smaller; BACKGROUND: #eeeeee
+}
+.diffchange {
+	FONT-WEIGHT: bold; COLOR: silver; TEXT-DECORATION: underline
+}
+
+------=_NextPart_000_004A_01C9ABD2.92656450
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.programadoresdejogos.com/allegrobr/skins/monobook/handheld.css?63
+
+#content {
+	BORDER-RIGHT: #aaa 1px; BORDER-TOP: #aaa 1px solid; BACKGROUND: white; =
+BORDER-LEFT: #aaa 1px solid; COLOR: black; LINE-HEIGHT: 1.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: url(headbg.jpg) =
+#f9f9f9 no-repeat 0px 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; FONT: =
+x-small sans-serif; COLOR: black; PADDING-TOP: 0px
+}
+#globalWrapper {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 127%; PADDING-BOTTOM: =
+0px; MARGIN: 0px; WIDTH: 100%; PADDING-TOP: 0px
+}
+.visualClear {
+	CLEAR: both
+}
+TABLE {
+	FONT-SIZE: 100%; COLOR: black; BACKGROUND-COLOR: white
+}
+A {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #002bb8; =
+TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #5a3696
+}
+A:active {
+	COLOR: #faa700
+}
+A:hover {
+	TEXT-DECORATION: underline
+}
+A.stub {
+	COLOR: #772233
+}
+A.new {
+	COLOR: #ba0000
+}
+#p-personal A.new {
+	COLOR: #ba0000
+}
+A.new:visited {
+	COLOR: #a55858
+}
+#p-personal A.new:visited {
+	COLOR: #a55858
+}
+IMG {
+	VERTICAL-ALIGN: middle; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: =
+none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+P IMG {
+	MARGIN: 0px
+}
+HR {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: =
+0px; MARGIN: 0.2em 0px; COLOR: #aaa; HEIGHT: 1px; BACKGROUND-COLOR: =
+#aaa; BORDER-RIGHT-WIDTH: 0px
+}
+H1 {
+	FONT-WEIGHT: normal; BACKGROUND: none transparent scroll repeat 0% 0%; =
+PADDING-BOTTOM: 0.17em; MARGIN: 0px; COLOR: black; PADDING-TOP: 0.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+H2 {
+	FONT-WEIGHT: normal; BACKGROUND: none transparent scroll repeat 0% 0%; =
+PADDING-BOTTOM: 0.17em; MARGIN: 0px; COLOR: black; PADDING-TOP: 0.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+H3 {
+	FONT-WEIGHT: normal; BACKGROUND: none transparent scroll repeat 0% 0%; =
+PADDING-BOTTOM: 0.17em; MARGIN: 0px; COLOR: black; PADDING-TOP: 0.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+H4 {
+	FONT-WEIGHT: normal; BACKGROUND: none transparent scroll repeat 0% 0%; =
+PADDING-BOTTOM: 0.17em; MARGIN: 0px; COLOR: black; PADDING-TOP: 0.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+H5 {
+	FONT-WEIGHT: normal; BACKGROUND: none transparent scroll repeat 0% 0%; =
+PADDING-BOTTOM: 0.17em; MARGIN: 0px; COLOR: black; PADDING-TOP: 0.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+H6 {
+	FONT-WEIGHT: normal; BACKGROUND: none transparent scroll repeat 0% 0%; =
+PADDING-BOTTOM: 0.17em; MARGIN: 0px; COLOR: black; PADDING-TOP: 0.5em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+H1 {
+	FONT-SIZE: 188%
+}
+H1 .editsection {
+	FONT-SIZE: 53%
+}
+H2 {
+	FONT-SIZE: 150%
+}
+H2 .editsection {
+	FONT-SIZE: 67%
+}
+H3 {
+	FONT-WEIGHT: bold; BORDER-BOTTOM-STYLE: none
+}
+H4 {
+	FONT-WEIGHT: bold; BORDER-BOTTOM-STYLE: none
+}
+H5 {
+	FONT-WEIGHT: bold; BORDER-BOTTOM-STYLE: none
+}
+H6 {
+	FONT-WEIGHT: bold; BORDER-BOTTOM-STYLE: none
+}
+H3 {
+	FONT-SIZE: 132%
+}
+H3 .editsection {
+	FONT-WEIGHT: normal; FONT-SIZE: 76%
+}
+H4 {
+	FONT-SIZE: 116%
+}
+H4 .editsection {
+	FONT-WEIGHT: normal; FONT-SIZE: 86%
+}
+H5 {
+	FONT-SIZE: 100%
+}
+H5 .editsection {
+	FONT-WEIGHT: normal
+}
+H6 {
+	FONT-SIZE: 80%
+}
+H6 .editsection {
+	FONT-WEIGHT: normal; FONT-SIZE: 125%
+}
+.editsection {
+	FLOAT: right; MARGIN-LEFT: 5px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-IMAGE: =
+url(bullet.gif); PADDING-BOTTOM: 0px; MARGIN: 0.3em 0px 0px 1.5em; =
+LINE-HEIGHT: 1.5em; PADDING-TOP: 0px; LIST-STYLE-TYPE: square
+}
+OL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; LIST-STYLE-IMAGE: none; =
+PADDING-BOTTOM: 0px; MARGIN: 0.3em 0px 0px 3.2em; LINE-HEIGHT: 1.5em; =
+PADDING-TOP: 0px
+}
+LI {
+	MARGIN-BOTTOM: 0.1em
+}
+DT {
+	FONT-WEIGHT: bold; MARGIN-BOTTOM: 0.1em
+}
+DL {
+	MARGIN-TOP: 0.2em; MARGIN-BOTTOM: 0.5em
+}
+DD {
+	MARGIN-BOTTOM: 0.1em; MARGIN-LEFT: 2em; LINE-HEIGHT: 1.5em
+}
+FIELDSET {
+	BORDER-RIGHT: #2f6fab 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: =
+#2f6fab 1px solid; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; MARGIN: 1em =
+0px; BORDER-LEFT: #2f6fab 1px solid; LINE-HEIGHT: 1.5em; PADDING-TOP: =
+0px; BORDER-BOTTOM: #2f6fab 1px solid
+}
+LEGEND {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; FONT-SIZE: 95%; =
+PADDING-BOTTOM: 0.5em; PADDING-TOP: 0.5em
+}
+FORM {
+	MARGIN: 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+TEXTAREA {
+	PADDING-RIGHT: 0.1em; PADDING-LEFT: 0.1em; PADDING-BOTTOM: 0.1em; =
+WIDTH: 100%; PADDING-TOP: 0.1em
+}
+INPUT.historysubmit {
+	PADDING-RIGHT: 0.3em! important; PADDING-LEFT: 0.3em! important; =
+FONT-SIZE: 94%; PADDING-BOTTOM: 0.3em! important; MARGIN-LEFT: 1.6em; =
+CURSOR: pointer; PADDING-TOP: 0px! important; HEIGHT: 1.7em! important
+}
+SELECT {
+	VERTICAL-ALIGN: top
+}
+ABBR {
+	BACKGROUND: none transparent scroll repeat 0% 0%; CURSOR: help; COLOR: =
+black; BORDER-BOTTOM: black 1px dotted
+}
+ACRONYM {
+	BACKGROUND: none transparent scroll repeat 0% 0%; CURSOR: help; COLOR: =
+black; BORDER-BOTTOM: black 1px dotted
+}
+.explain {
+	BACKGROUND: none transparent scroll repeat 0% 0%; CURSOR: help; COLOR: =
+black; BORDER-BOTTOM: black 1px dotted
+}
+Q {
+	FONT-STYLE: italic; FONT-FAMILY: Times, "Times New Roman", serif
+}
+CODE {
+	BACKGROUND-COLOR: #f9f9f9
+}
+PRE {
+	BORDER-RIGHT: #2f6fab 1px dashed; PADDING-RIGHT: 1em; BORDER-TOP: =
+#2f6fab 1px dashed; PADDING-LEFT: 1em; PADDING-BOTTOM: 1em; BORDER-LEFT: =
+#2f6fab 1px dashed; COLOR: black; LINE-HEIGHT: 1.1em; PADDING-TOP: 1em; =
+BORDER-BOTTOM: #2f6fab 1px dashed; BACKGROUND-COLOR: #f9f9f9
+}
+#contentSub {
+	FONT-SIZE: 84%; MARGIN: 0px 0px 1.4em 1em; WIDTH: auto; COLOR: #7d7d7d; =
+LINE-HEIGHT: 1.2em
+}
+#contentSub2 {
+	FONT-SIZE: 84%; MARGIN: 0px 0px 1.4em 1em; WIDTH: auto; COLOR: #7d7d7d; =
+LINE-HEIGHT: 1.2em
+}
+SPAN.subpages {
+	DISPLAY: block
+}
+#bodyContent H1 {
+	MARGIN-BOTTOM: 0.6em
+}
+#bodyContent H2 {
+	MARGIN-BOTTOM: 0.6em
+}
+#bodyContent H3 {
+	MARGIN-BOTTOM: 0.3em
+}
+#bodyContent H4 {
+	MARGIN-BOTTOM: 0.3em
+}
+#bodyContent H5 {
+	MARGIN-BOTTOM: 0.3em
+}
+.firstHeading {
+	MARGIN-BOTTOM: 0.1em
+}
+.usermessage {
+	BORDER-RIGHT: #ffa500 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: =
+#ffa500 1px solid; PADDING-LEFT: 1em; FONT-WEIGHT: bold; PADDING-BOTTOM: =
+0.5em; MARGIN: 2em 0px 1em; VERTICAL-ALIGN: middle; BORDER-LEFT: #ffa500 =
+1px solid; COLOR: black; PADDING-TOP: 0.5em; BORDER-BOTTOM: #ffa500 1px =
+solid; BACKGROUND-COLOR: #ffce7b
+}
+#siteNotice {
+	PADDING-RIGHT: 0.9em; PADDING-LEFT: 0.9em; FONT-SIZE: 95%; =
+PADDING-BOTTOM: 0px; PADDING-TOP: 0px; TEXT-ALIGN: center
+}
+#siteNotice P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.error {
+	FONT-SIZE: larger; COLOR: red
+}
+.errorbox {
+	BORDER-RIGHT: 2px solid; PADDING-RIGHT: 1em; BORDER-TOP: 2px solid; =
+PADDING-LEFT: 1em; FONT-SIZE: larger; FLOAT: left; MARGIN-BOTTOM: 2em; =
+PADDING-BOTTOM: 0.5em; BORDER-LEFT: 2px solid; COLOR: #000; PADDING-TOP: =
+0.5em; BORDER-BOTTOM: 2px solid
+}
+.successbox {
+	BORDER-RIGHT: 2px solid; PADDING-RIGHT: 1em; BORDER-TOP: 2px solid; =
+PADDING-LEFT: 1em; FONT-SIZE: larger; FLOAT: left; MARGIN-BOTTOM: 2em; =
+PADDING-BOTTOM: 0.5em; BORDER-LEFT: 2px solid; COLOR: #000; PADDING-TOP: =
+0.5em; BORDER-BOTTOM: 2px solid
+}
+.errorbox {
+	BORDER-LEFT-COLOR: red; BORDER-BOTTOM-COLOR: red; BORDER-TOP-COLOR: =
+red; BACKGROUND-COLOR: #fff2f2; BORDER-RIGHT-COLOR: red
+}
+.successbox {
+	BORDER-LEFT-COLOR: green; BORDER-BOTTOM-COLOR: green; BORDER-TOP-COLOR: =
+green; BACKGROUND-COLOR: #dfd; BORDER-RIGHT-COLOR: green
+}
+.errorbox H2 {
+	DISPLAY: inline; FONT-WEIGHT: bold; FONT-SIZE: 1em; MARGIN: 0px 0.5em =
+0px 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.successbox H2 {
+	DISPLAY: inline; FONT-WEIGHT: bold; FONT-SIZE: 1em; MARGIN: 0px 0.5em =
+0px 0px; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+#catlinks {
+	CLEAR: both; BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 5px; =
+BORDER-TOP: #aaa 1px solid; MARGIN-TOP: 1em; PADDING-LEFT: 5px; =
+PADDING-BOTTOM: 5px; BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 5px; =
+BORDER-BOTTOM: #aaa 1px solid; BACKGROUND-COLOR: #f9f9f9
+}
+.documentDescription {
+	DISPLAY: block; FONT-WEIGHT: bold; MARGIN: 1em 0px; LINE-HEIGHT: 1.5em
+}
+.documentByLine {
+	CLEAR: both; FONT-WEIGHT: normal; FONT-SIZE: 90%; COLOR: #76797c; =
+TEXT-ALIGN: right
+}
+.center {
+	WIDTH: 100%; TEXT-ALIGN: center
+}
+*.center * {
+	MARGIN-LEFT: auto; MARGIN-RIGHT: auto
+}
+.small {
+	FONT-SIZE: 94%
+}
+.small * {
+	FONT-SIZE: 94%
+}
+TABLE.small {
+	FONT-SIZE: 100%
+}
+#toc {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aaa 1px =
+solid; PADDING-LEFT: 5px; FONT-SIZE: 95%; PADDING-BOTTOM: 5px; =
+BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #aaa 1px =
+solid; BACKGROUND-COLOR: #f9f9f9
+}
+.toc {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aaa 1px =
+solid; PADDING-LEFT: 5px; FONT-SIZE: 95%; PADDING-BOTTOM: 5px; =
+BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #aaa 1px =
+solid; BACKGROUND-COLOR: #f9f9f9
+}
+.mw-warning {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aaa 1px =
+solid; PADDING-LEFT: 5px; FONT-SIZE: 95%; PADDING-BOTTOM: 5px; =
+BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #aaa 1px =
+solid; BACKGROUND-COLOR: #f9f9f9
+}
+#toc H2 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; FONT-WEIGHT: =
+bold; FONT-SIZE: 100%; PADDING-BOTTOM: 0px; BORDER-TOP-STYLE: none; =
+PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; =
+BORDER-BOTTOM-STYLE: none
+}
+.toc H2 {
+	PADDING-RIGHT: 0px; DISPLAY: inline; PADDING-LEFT: 0px; FONT-WEIGHT: =
+bold; FONT-SIZE: 100%; PADDING-BOTTOM: 0px; BORDER-TOP-STYLE: none; =
+PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; =
+BORDER-BOTTOM-STYLE: none
+}
+#toc #toctitle {
+	TEXT-ALIGN: center
+}
+.toc #toctitle {
+	TEXT-ALIGN: center
+}
+#toc .toctitle {
+	TEXT-ALIGN: center
+}
+.toc .toctitle {
+	TEXT-ALIGN: center
+}
+#toc UL {
+	PADDING-LEFT: 0px; LIST-STYLE-IMAGE: none; MARGIN-LEFT: 0px; =
+LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+.toc UL {
+	PADDING-LEFT: 0px; LIST-STYLE-IMAGE: none; MARGIN-LEFT: 0px; =
+LIST-STYLE-TYPE: none; TEXT-ALIGN: left
+}
+#toc UL UL {
+	MARGIN: 0px 0px 0px 2em
+}
+.toc UL UL {
+	MARGIN: 0px 0px 0px 2em
+}
+#toc .toctoggle {
+	FONT-SIZE: 94%
+}
+.toc .toctoggle {
+	FONT-SIZE: 94%
+}
+.mw-warning {
+	MARGIN-LEFT: 50px; MARGIN-RIGHT: 50px; TEXT-ALIGN: center
+}
+DIV.floatright {
+	BORDER-TOP-WIDTH: 0px; CLEAR: right; BORDER-LEFT-WIDTH: 0px; FLOAT: =
+right; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0px 0.5em 0.5em; POSITION: =
+relative; BORDER-RIGHT-WIDTH: 0px
+}
+TABLE.floatright {
+	BORDER-TOP-WIDTH: 0px; CLEAR: right; BORDER-LEFT-WIDTH: 0px; FLOAT: =
+right; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0px 0.5em 0.5em; POSITION: =
+relative; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.floatright P {
+	FONT-STYLE: italic
+}
+DIV.floatleft {
+	BORDER-TOP-WIDTH: 0px; CLEAR: left; BORDER-LEFT-WIDTH: 0px; FLOAT: =
+left; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0.5em 0.5em 0px; POSITION: =
+relative; BORDER-RIGHT-WIDTH: 0px
+}
+TABLE.floatleft {
+	BORDER-TOP-WIDTH: 0px; CLEAR: left; BORDER-LEFT-WIDTH: 0px; FLOAT: =
+left; BORDER-BOTTOM-WIDTH: 0px; MARGIN: 0px 0.5em 0.5em 0px; POSITION: =
+relative; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.floatleft P {
+	FONT-STYLE: italic
+}
+DIV.thumb {
+	BORDER-LEFT-COLOR: white; MARGIN-BOTTOM: 0.5em; BORDER-BOTTOM-COLOR: =
+white; WIDTH: auto; BORDER-TOP-STYLE: solid; BORDER-TOP-COLOR: white; =
+BORDER-RIGHT-STYLE: solid; BORDER-LEFT-STYLE: solid; BORDER-RIGHT-COLOR: =
+white; BORDER-BOTTOM-STYLE: solid
+}
+DIV.thumbinner {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 3px! important; =
+BORDER-TOP: #ccc 1px solid; PADDING-LEFT: 3px! important; FONT-SIZE: =
+94%; PADDING-BOTTOM: 3px! important; OVERFLOW: hidden; BORDER-LEFT: #ccc =
+1px solid; PADDING-TOP: 3px! important; BORDER-BOTTOM: #ccc 1px solid; =
+BACKGROUND-COLOR: #f9f9f9; TEXT-ALIGN: center
+}
+HTML .thumbimage {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; BORDER-LEFT: =
+#ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid
+}
+HTML .thumbcaption {
+	PADDING-RIGHT: 3px! important; PADDING-LEFT: 3px! important; FONT-SIZE: =
+94%; PADDING-BOTTOM: 3px! important; BORDER-TOP-STYLE: none; =
+LINE-HEIGHT: 1.4em; PADDING-TOP: 3px! important; BORDER-RIGHT-STYLE: =
+none; BORDER-LEFT-STYLE: none; TEXT-ALIGN: left; BORDER-BOTTOM-STYLE: =
+none
+}
+DIV.magnify {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: right; =
+BORDER-TOP-STYLE: none! important; BORDER-RIGHT-STYLE: none! important; =
+BORDER-LEFT-STYLE: none! important; BORDER-BOTTOM-STYLE: none! important
+}
+DIV.magnify A {
+	DISPLAY: block; BACKGROUND: none transparent scroll repeat 0% 0%; =
+BORDER-TOP-STYLE: none! important; BORDER-RIGHT-STYLE: none! important; =
+BORDER-LEFT-STYLE: none! important; BORDER-BOTTOM-STYLE: none! important
+}
+DIV.magnify IMG {
+	DISPLAY: block; BACKGROUND: none transparent scroll repeat 0% 0%; =
+BORDER-TOP-STYLE: none! important; BORDER-RIGHT-STYLE: none! important; =
+BORDER-LEFT-STYLE: none! important; BORDER-BOTTOM-STYLE: none! important
+}
+DIV.tright {
+	BORDER-TOP-WIDTH: 0.5em; CLEAR: right; BORDER-LEFT-WIDTH: 1.4em; FLOAT: =
+right; BORDER-BOTTOM-WIDTH: 0.8em; BORDER-RIGHT-WIDTH: 0px
+}
+DIV.tleft {
+	BORDER-TOP-WIDTH: 0.5em; CLEAR: left; BORDER-LEFT-WIDTH: 0px; FLOAT: =
+left; BORDER-BOTTOM-WIDTH: 0.8em; MARGIN-RIGHT: 0.5em; =
+BORDER-RIGHT-WIDTH: 1.4em
+}
+.hiddenStructure {
+	DISPLAY: none; speak: none
+}
+IMG.tex {
+	VERTICAL-ALIGN: middle
+}
+SPAN.texhtml {
+	FONT-FAMILY: serif
+}
+TABLE.rimage {
+	FLOAT: right; MARGIN-BOTTOM: 1em; MARGIN-LEFT: 1em; POSITION: relative; =
+TEXT-ALIGN: center
+}
+.toccolours {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #aaa 1px =
+solid; PADDING-LEFT: 5px; FONT-SIZE: 95%; PADDING-BOTTOM: 5px; =
+BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #aaa 1px =
+solid; BACKGROUND-COLOR: #f9f9f9
+}
+DIV.townBox {
+	CLEAR: right; BORDER-RIGHT: gray 1px solid; PADDING-RIGHT: 0.3em; =
+BORDER-TOP: gray 1px solid; PADDING-LEFT: 0.3em; BACKGROUND: white; =
+FLOAT: right; PADDING-BOTTOM: 0.3em; MARGIN-LEFT: 1em; OVERFLOW: hidden; =
+BORDER-LEFT: gray 1px solid; WIDTH: 200px; PADDING-TOP: 0.3em; =
+BORDER-BOTTOM: gray 1px solid; POSITION: relative
+}
+DIV.townBox DL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 96%; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 0.3em; PADDING-TOP: 0px
+}
+DIV.townBox DL DT {
+	BACKGROUND: none transparent scroll repeat 0% 0%; MARGIN: 0.4em 0px 0px
+}
+DIV.townBox DL DD {
+	MARGIN: 0.1em 0px 0px 1.1em; BACKGROUND-COLOR: #f3f3f3
+}
+.special LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; LINE-HEIGHT: 1.4em; PADDING-TOP: 0px
+}
+.autocomment {
+	COLOR: gray
+}
+#pagehistory SPAN.user {
+	MARGIN-LEFT: 1.4em; MARGIN-RIGHT: 0.4em
+}
+#pagehistory SPAN.minor {
+	FONT-WEIGHT: bold
+}
+#pagehistory LI {
+	BORDER-RIGHT: white 1px solid; BORDER-TOP: white 1px solid; =
+BORDER-LEFT: white 1px solid; BORDER-BOTTOM: white 1px solid
+}
+#pagehistory LI.selected {
+	BORDER-RIGHT: #aaa 1px dashed; BORDER-TOP: #aaa 1px dashed; =
+BORDER-LEFT: #aaa 1px dashed; BORDER-BOTTOM: #aaa 1px dashed; =
+BACKGROUND-COLOR: #f9f9f9
+}
+TABLE.diff {
+	BACKGROUND-COLOR: white
+}
+TD.diff-otitle {
+	BACKGROUND-COLOR: white
+}
+TD.diff-ntitle {
+	BACKGROUND-COLOR: white
+}
+TD.diff-addedline {
+	FONT-SIZE: smaller; BACKGROUND: #cfc
+}
+TD.diff-deletedline {
+	FONT-SIZE: smaller; BACKGROUND: #ffa
+}
+TD.diff-context {
+	FONT-SIZE: smaller; BACKGROUND: #eee
+}
+.diffchange {
+	FONT-WEIGHT: bold; COLOR: red
+}
+#bodyContent A.external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(external.png) no-repeat right =
+center
+}
+#bodyContent A[href^=3D'gopher://'] {
+	PADDING-RIGHT: 13px; BACKGROUND: url(external.png) no-repeat right =
+center
+}
+#bodyContent A[href^=3D'https://'] {
+	PADDING-RIGHT: 16px; BACKGROUND: url(lock_icon.gif) no-repeat right =
+center
+}
+.link-https {
+	PADDING-RIGHT: 16px; BACKGROUND: url(lock_icon.gif) no-repeat right =
+center
+}
+#bodyContent A[href^=3D'mailto:'] {
+	PADDING-RIGHT: 18px; BACKGROUND: url(mail_icon.gif) no-repeat right =
+center
+}
+.link-mailto {
+	PADDING-RIGHT: 18px; BACKGROUND: url(mail_icon.gif) no-repeat right =
+center
+}
+#bodyContent A[href^=3D'news://'] {
+	PADDING-RIGHT: 18px; BACKGROUND: url(news_icon.png) no-repeat right =
+center
+}
+#bodyContent A[href^=3D'ftp://'] {
+	PADDING-RIGHT: 18px; BACKGROUND: url(file_icon.gif) no-repeat right =
+center
+}
+.link-ftp {
+	PADDING-RIGHT: 18px; BACKGROUND: url(file_icon.gif) no-repeat right =
+center
+}
+#bodyContent A[href^=3D'irc://'] {
+	PADDING-RIGHT: 18px; BACKGROUND: url(discussionitem_icon.gif) no-repeat =
+right center
+}
+.link-irc {
+	PADDING-RIGHT: 18px; BACKGROUND: url(discussionitem_icon.gif) no-repeat =
+right center
+}
+#bodyContent A[href$=3D'.ogg'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.OGG'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.mid'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.MID'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.midi'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.MIDI'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.mp3'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.MP3'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.wav'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.WAV'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.wma'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.WMA'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+.link-audio {
+	PADDING-RIGHT: 13px; BACKGROUND: url(audio.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.ogm'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.OGM'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.avi'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.AVI'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.mpeg'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.MPEG'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.mpg'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.MPG'].external {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+.link-video {
+	PADDING-RIGHT: 13px; BACKGROUND: url(video.png) no-repeat right center
+}
+#bodyContent A[href$=3D'.pdf'].external {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+#bodyContent A[href$=3D'.PDF'].external {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+#bodyContent A[href*=3D'.pdf#'].external {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+#bodyContent A[href*=3D'.PDF#'].external {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+#bodyContent A[href*=3D'.pdf?'].external {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+#bodyContent A[href*=3D'.PDF?'].external {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+.link-document {
+	PADDING-RIGHT: 12px; BACKGROUND: url(document.png) no-repeat right =
+center
+}
+#bodyContent A.extiw {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent =
+scroll repeat 0% 0%; PADDING-BOTTOM: 0px; COLOR: #36b; PADDING-TOP: 0px
+}
+#bodyContent A.extiw:active {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: none transparent =
+scroll repeat 0% 0%; PADDING-BOTTOM: 0px; COLOR: #36b; PADDING-TOP: 0px
+}
+#bodyContent A.external {
+	COLOR: #36b
+}
+#bodyContent .plainlinks A {
+	PADDING-RIGHT: 0px! important; PADDING-LEFT: 0px! important; =
+BACKGROUND: none transparent scroll repeat 0% 0%; PADDING-BOTTOM: 0px! =
+important; PADDING-TOP: 0px! important
+}
+.portlet {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: none; PADDING-BOTTOM: =
+0px; MARGIN: 0px 0px 0.5em; OVERFLOW: hidden; WIDTH: 11.6em; =
+BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.portlet H4 {
+	FONT-WEIGHT: normal; FONT-SIZE: 95%; WHITE-SPACE: nowrap
+}
+.portlet H5 {
+	PADDING-RIGHT: 1em; DISPLAY: inline; PADDING-LEFT: 0.5em; FONT-WEIGHT: =
+normal; FONT-SIZE: 91%; BACKGROUND: none transparent scroll repeat 0% =
+0%; PADDING-BOTTOM: 0px; TEXT-TRANSFORM: lowercase; PADDING-TOP: 0px; =
+WHITE-SPACE: nowrap; HEIGHT: 1em
+}
+.portlet H6 {
+	BORDER-RIGHT: #2f6fab 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: =
+#2f6fab 1px solid; DISPLAY: block; PADDING-LEFT: 1em; FONT-WEIGHT: =
+normal; FONT-SIZE: 1em; BACKGROUND: #ffae2e; PADDING-BOTTOM: 0px; =
+TEXT-TRANSFORM: lowercase; BORDER-LEFT: #2f6fab 1px solid; PADDING-TOP: =
+0px; BORDER-BOTTOM: #2f6fab 1px; WHITE-SPACE: nowrap; HEIGHT: 1.2em
+}
+.pBody {
+	BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 0.8em; BORDER-TOP: #aaa =
+1px solid; PADDING-LEFT: 0.5em; FONT-SIZE: 95%; PADDING-BOTTOM: 0.3em; =
+BORDER-LEFT: #aaa 1px solid; COLOR: black; PADDING-TOP: 0px; =
+BORDER-BOTTOM: #aaa 1px solid; BORDER-COLLAPSE: collapse; =
+BACKGROUND-COLOR: white
+}
+.portlet H1 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.portlet H2 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.portlet H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.portlet H4 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.portlet UL {
+	FONT-SIZE: 95%; LIST-STYLE-IMAGE: url(bullet.gif); LINE-HEIGHT: 1.5em; =
+LIST-STYLE-TYPE: square
+}
+.portlet LI {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+
+@media Handheld   =20
+{
+#p-logo {
+	DISPLAY: none
+}
+    }
+#p-navigation .pBody {
+	PADDING-RIGHT: 0px
+}
+#p-navigation LI.active A {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+#p-navigation LI.active A:hover {
+	FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+INPUT.searchButton {
+	MARGIN-TOP: 1px; FONT-SIZE: 95%
+}
+#searchGoButton {
+	PADDING-RIGHT: 0.5em; PADDING-LEFT: 0.5em; FONT-WEIGHT: bold
+}
+#searchInput {
+	FONT-SIZE: 95%; MARGIN: 0px; WIDTH: 10.9em
+}
+#p-search .pBody {
+	PADDING-RIGHT: 0.4em; PADDING-LEFT: 0.4em; PADDING-BOTTOM: 0.4em; =
+PADDING-TOP: 0.5em; TEXT-ALIGN: center
+}
+#p-personal UL {
+	TEXT-TRANSFORM: lowercase
+}
+#p-personal LI.active {
+	FONT-WEIGHT: bold
+}
+#p-cactions .hiddenStructure {
+	DISPLAY: none
+}
+#p-cactions LI A {
+	TEXT-TRANSFORM: lowercase
+}
+#t-ispermalink {
+	COLOR: #999
+}
+#t-iscite {
+	COLOR: #999
+}
+#footer {
+	PADDING-RIGHT: 0px; BORDER-TOP: #fabd23 1px solid; PADDING-LEFT: 0px; =
+FONT-SIZE: 90%; PADDING-BOTTOM: 1.2em; MARGIN: 0.6em 0px 1em; =
+PADDING-TOP: 0.4em; BORDER-BOTTOM: #fabd23 1px solid; BACKGROUND-COLOR: =
+white; TEXT-ALIGN: center
+}
+#footer LI {
+	DISPLAY: inline; MARGIN: 0px 1.3em
+}
+HEAD:first-child + BODY #footer LI {
+	WHITE-SPACE: nowrap
+}
+#f-poweredbyico {
+	MARGIN: 0px 8px; POSITION: relative; TOP: -2px
+}
+#f-copyrightico {
+	MARGIN: 0px 8px; POSITION: relative; TOP: -2px
+}
+#f-poweredbyico {
+	FLOAT: right; HEIGHT: 1%
+}
+#f-copyrightico {
+	FLOAT: left; HEIGHT: 1%
+}
+#preftoc {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: =
+0px; MARGIN: 0px; WIDTH: 100%; PADDING-TOP: 0px
+}
+#preftoc LI {
+	COLOR: #000; BACKGROUND-COLOR: #f0f0f0
+}
+#preftoc LI.selected {
+	BORDER-RIGHT: #aaa 1px solid; BORDER-TOP: #aaa 1px solid; FONT-WEIGHT: =
+bold; BORDER-LEFT: #aaa 1px solid; CURSOR: default; MARGIN-RIGHT: -3px; =
+PADDING-TOP: 2px; BORDER-BOTTOM: #aaa 1px; TOP: 1px; BACKGROUND-COLOR: =
+#f9f9f9
+}
+#preftoc > LI.selected {
+	TOP: 2px
+}
+#preftoc A {
+	PADDING-RIGHT: 0.7em; DISPLAY: block; PADDING-LEFT: 0.7em; =
+PADDING-BOTTOM: 0px; COLOR: #000; PADDING-TOP: 0px; POSITION: relative; =
+TEXT-DECORATION: none
+}
+#preftoc A:active {
+	PADDING-RIGHT: 0.7em; DISPLAY: block; PADDING-LEFT: 0.7em; =
+PADDING-BOTTOM: 0px; COLOR: #000; PADDING-TOP: 0px; POSITION: relative; =
+TEXT-DECORATION: none
+}
+#preftoc LI.selected A {
+	CURSOR: default; TEXT-DECORATION: none
+}
+#prefcontrol {
+	CLEAR: both; PADDING-TOP: 2em
+}
+#preferences {
+	CLEAR: both; BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 1.5em; =
+BORDER-TOP: #aaa 1px solid; PADDING-LEFT: 1.5em; PADDING-BOTTOM: 1.5em; =
+MARGIN: 0px; BORDER-LEFT: #aaa 1px solid; PADDING-TOP: 1.5em; =
+BORDER-BOTTOM: #aaa 1px solid; BACKGROUND-COLOR: #f9f9f9
+}
+.prefsection {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; BORDER-TOP-STYLE: none; PADDING-TOP: 0px; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: none
+}
+.prefsection FIELDSET {
+	BORDER-RIGHT: #aaa 1px solid; BORDER-TOP: #aaa 1px solid; FLOAT: left; =
+BORDER-LEFT: #aaa 1px solid; MARGIN-RIGHT: 2em; BORDER-BOTTOM: #aaa 1px =
+solid
+}
+.prefsection LEGEND {
+	FONT-WEIGHT: bold
+}
+.prefsection TABLE {
+	BACKGROUND-COLOR: #f9f9f9
+}
+.prefsection LEGEND {
+	BACKGROUND-COLOR: #f9f9f9
+}
+DIV.prefsectiontip {
+	CLEAR: both; PADDING-RIGHT: 0.7em; MARGIN-TOP: 0px; PADDING-LEFT: =
+0.7em; FONT-SIZE: 95%; PADDING-BOTTOM: 0.2em; PADDING-TOP: 0.2em; =
+BACKGROUND-COLOR: #ffc1c1
+}
+.btnSavePrefs {
+	PADDING-RIGHT: 0.3em; PADDING-LEFT: 0.3em; FONT-WEIGHT: bold
+}
+.preferences-login {
+	CLEAR: both; MARGIN-BOTTOM: 1.5em
+}
+.prefcache {
+	MARGIN-TOP: 2em; FONT-SIZE: 90%
+}
+DIV#userloginForm FORM {
+	CLEAR: both; BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 2em; =
+BORDER-TOP: #aaa 1px solid; PADDING-LEFT: 2em; FLOAT: left; =
+PADDING-BOTTOM: 1.5em; MARGIN: 0px 3em 1em 0px; BORDER-LEFT: #aaa 1px =
+solid; PADDING-TOP: 1.5em; BORDER-BOTTOM: #aaa 1px solid; =
+BACKGROUND-COLOR: #f9f9f9
+}
+DIV#userlogin FORM#userlogin2 {
+	CLEAR: both; BORDER-RIGHT: #aaa 1px solid; PADDING-RIGHT: 2em; =
+BORDER-TOP: #aaa 1px solid; PADDING-LEFT: 2em; FLOAT: left; =
+PADDING-BOTTOM: 1.5em; MARGIN: 0px 3em 1em 0px; BORDER-LEFT: #aaa 1px =
+solid; PADDING-TOP: 1.5em; BORDER-BOTTOM: #aaa 1px solid; =
+BACKGROUND-COLOR: #f9f9f9
+}
+DIV#userloginForm TABLE {
+	BACKGROUND-COLOR: #f9f9f9
+}
+DIV#userlogin FORM#userlogin2 TABLE {
+	BACKGROUND-COLOR: #f9f9f9
+}
+DIV#userloginForm H2 {
+	PADDING-TOP: 0px
+}
+DIV#userlogin FORM#userlogin2 H2 {
+	PADDING-TOP: 0px
+}
+DIV#userlogin .captcha {
+	BORDER-RIGHT: #bbb 1px solid; PADDING-RIGHT: 2em; BORDER-TOP: #bbb 1px =
+solid; PADDING-LEFT: 2em; PADDING-BOTTOM: 1.5em; BORDER-LEFT: #bbb 1px =
+solid; WIDTH: 400px; PADDING-TOP: 1.5em; BORDER-BOTTOM: #bbb 1px solid; =
+BACKGROUND-COLOR: white
+}
+#userloginprompt {
+	FONT-SIZE: 85%
+}
+#languagelinks {
+	FONT-SIZE: 85%
+}
+#login-sectiontip {
+	FONT-SIZE: 85%; LINE-HEIGHT: 1.2; PADDING-TOP: 2em
+}
+#userlogin .loginText {
+	WIDTH: 12em
+}
+#userlogin .loginPassword {
+	WIDTH: 12em
+}
+#userloginlink A {
+	FONT-WEIGHT: bold
+}
+#wpLoginattempt {
+	FONT-WEIGHT: bold
+}
+#wpCreateaccount {
+	FONT-WEIGHT: bold
+}
+* HTML #footer {
+	MARGIN-TOP: 0px
+}
+* HTML #column-content {
+	DISPLAY: inline; MARGIN-BOTTOM: 0px
+}
+* HTML DIV.editsection {
+	FONT-SIZE: smaller
+}
+#pagehistory LI.selected {
+	POSITION: relative
+}
+* > HTML #column-content {
+	FLOAT: none
+}
+* > HTML #column-one {
+	LEFT: 0px; POSITION: absolute; TOP: 0px
+}
+* > HTML #footer {
+	MARGIN-LEFT: 13.2em
+}
+.redirectText {
+	FONT-SIZE: 150%; MARGIN: 5px
+}
+.printfooter {
+	DISPLAY: none
+}
+.not-patrolled {
+	BACKGROUND-COLOR: #ffa
+}
+DIV.patrollink {
+	FONT-SIZE: 75%; TEXT-ALIGN: right
+}
+SPAN.newpage {
+	FONT-WEIGHT: bold
+}
+SPAN.minor {
+	FONT-WEIGHT: bold
+}
+SPAN.searchmatch {
+	FONT-WEIGHT: bold
+}
+SPAN.bot {
+	FONT-WEIGHT: bold
+}
+SPAN.unpatrolled {
+	FONT-WEIGHT: bold; COLOR: red
+}
+SPAN.searchmatch {
+	COLOR: red
+}
+.sharedUploadNotice {
+	FONT-STYLE: italic
+}
+SPAN.updatedmarker {
+	COLOR: black; BACKGROUND-COLOR: #0f0
+}
+TABLE.gallery {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #ccc 1px =
+solid; PADDING-LEFT: 2px; PADDING-BOTTOM: 2px; MARGIN: 2px; BORDER-LEFT: =
+#ccc 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #ccc 1px solid; =
+BACKGROUND-COLOR: white
+}
+TABLE.gallery TR {
+	VERTICAL-ALIGN: top
+}
+TABLE.gallery TD {
+	BORDER-RIGHT: white 2px solid; BORDER-TOP: white 2px solid; =
+VERTICAL-ALIGN: top; BORDER-LEFT: white 2px solid; BORDER-BOTTOM: white =
+2px solid; BACKGROUND-COLOR: #f9f9f9
+}
+TABLE.gallery TD.galleryheader {
+	FONT-WEIGHT: bold; TEXT-ALIGN: center
+}
+TABLE.gallery CAPTION {
+	FONT-WEIGHT: bold
+}
+DIV.gallerybox {
+	MARGIN: 2px; WIDTH: 150px
+}
+DIV.gallerybox DIV.thumb {
+	BORDER-RIGHT: #ccc 1px solid; BORDER-TOP: #ccc 1px solid; MARGIN: 2px; =
+BORDER-LEFT: #ccc 1px solid; BORDER-BOTTOM: #ccc 1px solid; TEXT-ALIGN: =
+center
+}
+DIV.gallerytext {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 94%; PADDING-BOTTOM: =
+2px; PADDING-TOP: 2px
+}
+SPAN.comment {
+	FONT-STYLE: italic
+}
+SPAN.changedby {
+	FONT-SIZE: 95%
+}
+.previewnote {
+	MARGIN-BOTTOM: 1em; PADDING-BOTTOM: 1em; COLOR: #c00; TEXT-INDENT: 3em; =
+BORDER-BOTTOM: #aaa 1px solid
+}
+.previewnote P {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: =
+0px; PADDING-TOP: 0px
+}
+.editExternally {
+	BORDER-RIGHT: gray 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: gray 1px =
+solid; MARGIN-TOP: 0.5em; PADDING-LEFT: 3px; FONT-SIZE: small; FLOAT: =
+left; PADDING-BOTTOM: 3px; BORDER-LEFT: gray 1px solid; PADDING-TOP: =
+3px; BORDER-BOTTOM: gray 1px solid; BACKGROUND-COLOR: #ffffff; =
+TEXT-ALIGN: center
+}
+.editExternallyHelp {
+	COLOR: gray; FONT-STYLE: italic
+}
+LI SPAN.deleted {
+	COLOR: #888; FONT-STYLE: italic; TEXT-DECORATION: line-through
+}
+SPAN.history-deleted {
+	COLOR: #888; FONT-STYLE: italic; TEXT-DECORATION: line-through
+}
+.toggle {
+	MARGIN-LEFT: 2em; TEXT-INDENT: -2em
+}
+TABLE.mw_metadata {
+	FONT-SIZE: 0.8em; MARGIN-BOTTOM: 0.5em; MARGIN-LEFT: 0.5em; WIDTH: =
+300px
+}
+TABLE.mw_metadata CAPTION {
+	FONT-WEIGHT: bold
+}
+TABLE.mw_metadata TH {
+	FONT-WEIGHT: normal
+}
+TABLE.mw_metadata TD {
+	PADDING-RIGHT: 0.1em; PADDING-LEFT: 0.1em; PADDING-BOTTOM: 0.1em; =
+PADDING-TOP: 0.1em
+}
+TABLE.mw_metadata {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-COLLAPSE: collapse; BORDER-BOTTOM-STYLE: none
+}
+TABLE.mw_metadata TD {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 0.1em; BORDER-TOP: =
+#aaaaaa 1px solid; PADDING-LEFT: 0.1em; BORDER-LEFT: #aaaaaa 1px solid; =
+BORDER-BOTTOM: #aaaaaa 1px solid; TEXT-ALIGN: center
+}
+TABLE.mw_metadata TH {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 0.1em; BORDER-TOP: =
+#aaaaaa 1px solid; PADDING-LEFT: 0.1em; BORDER-LEFT: #aaaaaa 1px solid; =
+BORDER-BOTTOM: #aaaaaa 1px solid; TEXT-ALIGN: center
+}
+TABLE.mw_metadata TH {
+	BACKGROUND-COLOR: #f9f9f9
+}
+TABLE.mw_metadata TD {
+	BACKGROUND-COLOR: #fcfcfc
+}
+TABLE.collapsed TR.collapsable {
+	DISPLAY: none
+}
+UL#filetoc {
+	BORDER-RIGHT: #aaaaaa 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: =
+#aaaaaa 1px solid; PADDING-LEFT: 5px; FONT-SIZE: 95%; MARGIN-BOTTOM: =
+0.5em; PADDING-BOTTOM: 5px; MARGIN-LEFT: 0px; BORDER-LEFT: #aaaaaa 1px =
+solid; MARGIN-RIGHT: 0px; PADDING-TOP: 5px; BORDER-BOTTOM: #aaaaaa 1px =
+solid; BACKGROUND-COLOR: #f9f9f9; TEXT-ALIGN: center
+}
+#filetoc LI {
+	PADDING-RIGHT: 2em; DISPLAY: inline; LIST-STYLE-TYPE: none
+}
+INPUT#wpSummary {
+	WIDTH: 80%
+}
+INPUT#wpSave {
+	MARGIN-RIGHT: 0.33em
+}
+INPUT#wpDiff {
+	MARGIN-RIGHT: 0.33em
+}
+#editform .editOptions {
+	DISPLAY: inline
+}
+#wpSave {
+	FONT-WEIGHT: bold
+}
+TABLE.revisionform_default {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; =
+BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+TABLE.revisionform_focus {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; =
+BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid; =
+BACKGROUND-COLOR: #00bbff
+}
+TR.revision_tr_default {
+	BACKGROUND-COLOR: #eeeeee
+}
+TR.revision_tr_first {
+	BACKGROUND-COLOR: #dddddd
+}
+P.revision_saved {
+	FONT-WEIGHT: bold; COLOR: green
+}
+#mw_trackbacks {
+	BORDER-RIGHT: #bbbbff 1px solid; PADDING-RIGHT: 0.2em; BORDER-TOP: =
+#bbbbff 1px solid; PADDING-LEFT: 0.2em; PADDING-BOTTOM: 0.2em; =
+BORDER-LEFT: #bbbbff 1px solid; PADDING-TOP: 0.2em; BORDER-BOTTOM: =
+#bbbbff 1px solid; BACKGROUND-COLOR: #eeeeff
+}
+#allmessagestable TH {
+	BACKGROUND-COLOR: #b2b2ff
+}
+#allmessagestable TR.orig {
+	BACKGROUND-COLOR: #ffe2e2
+}
+#allmessagestable TR.new {
+	BACKGROUND-COLOR: #e2ffe2
+}
+#allmessagestable TR.def {
+	BACKGROUND-COLOR: #f0f0ff
+}
+DIV.noarticletext {
+	BORDER-RIGHT: #ccc 1px solid; PADDING-RIGHT: 1em; BORDER-TOP: #ccc 1px =
+solid; PADDING-LEFT: 1em; BACKGROUND: #fff; PADDING-BOTTOM: 0.2em; =
+BORDER-LEFT: #ccc 1px solid; COLOR: #000; PADDING-TOP: 0.2em; =
+BORDER-BOTTOM: #ccc 1px solid
+}
+DIV#searchTargetContainer {
+	BACKGROUND: white; LEFT: 10px; WIDTH: 90%; TOP: 10px
+}
+DIV#searchTarget {
+	BORDER-RIGHT: blue 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: blue 1px =
+solid; PADDING-LEFT: 3px; BACKGROUND: #f0f0f0; PADDING-BOTTOM: 3px; =
+MARGIN: 5px; BORDER-LEFT: blue 1px solid; PADDING-TOP: 3px; =
+BORDER-BOTTOM: blue 1px solid
+}
+DIV#searchTarget UL LI {
+	LIST-STYLE-TYPE: none
+}
+DIV#searchTarget UL LI:unknown {
+	COLOR: orange; content: "=BB "
+}
+DIV.multipageimagenavbox {
+	BORDER-RIGHT: silver 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: silver =
+1px solid; PADDING-LEFT: 4px; BACKGROUND: #f0f0f0; PADDING-BOTTOM: 4px; =
+MARGIN: 1em; BORDER-LEFT: silver 1px solid; PADDING-TOP: 4px; =
+BORDER-BOTTOM: silver 1px solid; -moz-border-radius: 6px
+}
+DIV.multipageimagenavbox DIV.thumb {
+	MARGIN-LEFT: 2em; BORDER-TOP-STYLE: none; MARGIN-RIGHT: 2em; =
+BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; BORDER-BOTTOM-STYLE: =
+none
+}
+DIV.multipageimagenavbox HR {
+	MARGIN: 6px
+}
+TABLE.multipageimage TD {
+	TEXT-ALIGN: center
+}
+TABLE#sv-ext {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; PADDING-BOTTOM: 0em; MARGIN: =
+1em; PADDING-TOP: 0em
+}
+TABLE#sv-hooks {
+	PADDING-RIGHT: 0em; PADDING-LEFT: 0em; PADDING-BOTTOM: 0em; MARGIN: =
+1em; PADDING-TOP: 0em
+}
+#sv-ext TD {
+	BORDER-RIGHT: #a0a0a0 1px solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#a0a0a0 1px solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #a0a0a0 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #a0a0a0 =
+1px solid
+}
+#sv-hooks TD {
+	BORDER-RIGHT: #a0a0a0 1px solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#a0a0a0 1px solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #a0a0a0 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #a0a0a0 =
+1px solid
+}
+#sv-ext TH {
+	BORDER-RIGHT: #a0a0a0 1px solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#a0a0a0 1px solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #a0a0a0 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #a0a0a0 =
+1px solid
+}
+#sv-hooks TH {
+	BORDER-RIGHT: #a0a0a0 1px solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#a0a0a0 1px solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #a0a0a0 1px solid; PADDING-TOP: 0px; BORDER-BOTTOM: #a0a0a0 =
+1px solid
+}
+#sv-ext TH {
+	PADDING-RIGHT: 0.15em; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+COLOR: black; PADDING-TOP: 0px; BACKGROUND-COLOR: #f0f0f0
+}
+#sv-hooks TH {
+	PADDING-RIGHT: 0.15em; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+COLOR: black; PADDING-TOP: 0px; BACKGROUND-COLOR: #f0f0f0
+}
+TR.sv-space {
+	BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; HEIGHT: 0.8em; BORDER-BOTTOM-STYLE: none
+}
+TR.sv-space TD {
+	DISPLAY: none
+}
+.TablePager_nav A {
+	TEXT-DECORATION: none
+}
+.TablePager {
+	BORDER-COLLAPSE: collapse
+}
+.TablePager {
+	BORDER-RIGHT: #777777 0.15em solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#777777 0.15em solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #777777 0.15em solid; PADDING-TOP: 0px; BORDER-BOTTOM: =
+#777777 0.15em solid
+}
+.TablePager TD {
+	BORDER-RIGHT: #777777 0.15em solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#777777 0.15em solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #777777 0.15em solid; PADDING-TOP: 0px; BORDER-BOTTOM: =
+#777777 0.15em solid
+}
+.TablePager TH {
+	BORDER-RIGHT: #777777 0.15em solid; PADDING-RIGHT: 0.15em; BORDER-TOP: =
+#777777 0.15em solid; PADDING-LEFT: 0.15em; PADDING-BOTTOM: 0px; =
+BORDER-LEFT: #777777 0.15em solid; PADDING-TOP: 0px; BORDER-BOTTOM: =
+#777777 0.15em solid
+}
+.TablePager TH {
+	BACKGROUND-COLOR: #eeeeff
+}
+.TablePager TD {
+	BACKGROUND-COLOR: #ffffff
+}
+.TablePager TR:hover TD {
+	BACKGROUND-COLOR: #eeeeff
+}
+.imagelist TD {
+	WHITE-SPACE: nowrap
+}
+.imagelist TH {
+	WHITE-SPACE: nowrap
+}
+.imagelist .TablePager_col_links {
+	BACKGROUND-COLOR: #eeeeff
+}
+.imagelist .TablePager_col_img_description {
+	WHITE-SPACE: normal
+}
+.imagelist TH.TablePager_sort {
+	BACKGROUND-COLOR: #ccccff
+}
+.templatesUsed {
+	MARGIN-TOP: 1.5em
+}
+.mw-summary-preview {
+	MARGIN: 0.1em 0px
+}
+
+@media Handheld   =20
+{
+.nonessential {
+	DISPLAY: none
+}
+    }
+.mw-plusminus-null {
+	COLOR: #aaa
+}
+.texvc {
+	DIRECTION: ltr; unicode-bidi: embed
+}
+#toolbar {
+	CLEAR: both
+}
+#wpTextbox1 {
+	CLEAR: both
+}
+
+------=_NextPart_000_004A_01C9ABD2.92656450
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.programadoresdejogos.com/allegrobr/skins/monobook/IE70Fixes.css?63
+
+#column-content #content {
+	MARGIN-TOP: 3em; MARGIN-LEFT: 12.2em; HEIGHT: 1%
+}
+.rtl #column-one {
+	MARGIN-TOP: 160px; PADDING-TOP: 0px
+}
+#p-cactions {
+	Z-INDEX: 3
+}
+#p-cactions LI {
+	FLOAT: none! important; PADDING-BOTTOM: 0px! important; CURSOR: =
+default; BORDER-TOP-STYLE: none; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; BACKGROUND-COLOR: transparent; =
+BORDER-BOTTOM-STYLE: none
+}
+#p-cactions LI A {
+	BORDER-RIGHT: #aaa 1px solid; BORDER-TOP: #aaa 1px solid; DISPLAY: =
+inline-block! important; PADDING-BOTTOM: 0px; VERTICAL-ALIGN: top; =
+BORDER-LEFT: #aaa 1px solid; BORDER-BOTTOM: #aaa 0px solid
+}
+#p-cactions LI.selected A {
+	BORDER-LEFT-COLOR: #fabd23; BORDER-BOTTOM-COLOR: #fabd23; =
+PADDING-BOTTOM: 0.17em; BORDER-TOP-COLOR: #fabd23; BORDER-RIGHT-COLOR: =
+#fabd23
+}
+#p-cactions LI A:hover {
+	PADDING-BOTTOM: 0.17em
+}
+#p-navigation A {
+	DISPLAY: inline-block; WIDTH: 100%
+}
+#portal-personaltools {
+	PADDING-BOTTOM: 0.1em
+}
+TEXTAREA {
+	WIDTH: 96%
+}
+#footer LI {
+	MARGIN-RIGHT: 0px
+}
+
+------=_NextPart_000_004A_01C9ABD2.92656450
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: 7bit
+Content-Location: http://wiki.programadoresdejogos.com/allegrobr/index.php?title=-&action=raw&gen=css&maxage=18000
+
+A.new {
+	COLOR: #cc2200
+}
+#quickbar A.new {
+	COLOR: #cc2200
+}
+
+------=_NextPart_000_004A_01C9ABD2.92656450
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.programadoresdejogos.com/allegrobr/skins/common/wikibits.js?63
+
+// MediaWiki JavaScript support functions=0A=
+=0A=
+var clientPC =3D navigator.userAgent.toLowerCase(); // Get client info=0A=
+var is_gecko =3D ((clientPC.indexOf('gecko')!=3D-1) && =
+(clientPC.indexOf('spoofer')=3D=3D-1)=0A=
+                && (clientPC.indexOf('khtml') =3D=3D -1) && =
+(clientPC.indexOf('netscape/7.0')=3D=3D-1));=0A=
+var is_safari =3D ((clientPC.indexOf('applewebkit')!=3D-1) && =
+(clientPC.indexOf('spoofer')=3D=3D-1));=0A=
+var is_khtml =3D (navigator.vendor =3D=3D 'KDE' || ( document.childNodes =
+&& !document.all && !navigator.taintEnabled ));=0A=
+// For accesskeys=0A=
+var is_ff2_win =3D (clientPC.indexOf('firefox/2')!=3D-1 || =
+clientPC.indexOf('minefield/3')!=3D-1) && =
+clientPC.indexOf('windows')!=3D-1;=0A=
+var is_ff2_x11 =3D (clientPC.indexOf('firefox/2')!=3D-1 || =
+clientPC.indexOf('minefield/3')!=3D-1) && clientPC.indexOf('x11')!=3D-1;=0A=
+if (clientPC.indexOf('opera') !=3D -1) {=0A=
+	var is_opera =3D true;=0A=
+	var is_opera_preseven =3D (window.opera && !document.childNodes);=0A=
+	var is_opera_seven =3D (window.opera && document.childNodes);=0A=
+}=0A=
+=0A=
+// Global external objects used by this script.=0A=
+/*extern ta, stylepath, skin */=0A=
+=0A=
+// add any onload functions in this hook (please don't hard-code any =
+events in the xhtml source)=0A=
+var doneOnloadHook;=0A=
+=0A=
+if (!window.onloadFuncts) {=0A=
+	var onloadFuncts =3D [];=0A=
+}=0A=
+=0A=
+function addOnloadHook(hookFunct) {=0A=
+	// Allows add-on scripts to add onload functions=0A=
+	onloadFuncts[onloadFuncts.length] =3D hookFunct;=0A=
+}=0A=
+=0A=
+function hookEvent(hookName, hookFunct) {=0A=
+	if (window.addEventListener) {=0A=
+		window.addEventListener(hookName, hookFunct, false);=0A=
+	} else if (window.attachEvent) {=0A=
+		window.attachEvent("on" + hookName, hookFunct);=0A=
+	}=0A=
+}=0A=
+=0A=
+// document.write special stylesheet links=0A=
+if (typeof stylepath !=3D 'undefined' && typeof skin !=3D 'undefined') {=0A=
+	if (is_opera_preseven) {=0A=
+		document.write('<link rel=3D"stylesheet" type=3D"text/css" =
+href=3D"'+stylepath+'/'+skin+'/Opera6Fixes.css">');=0A=
+	} else if (is_opera_seven) {=0A=
+		document.write('<link rel=3D"stylesheet" type=3D"text/css" =
+href=3D"'+stylepath+'/'+skin+'/Opera7Fixes.css">');=0A=
+	} else if (is_khtml) {=0A=
+		document.write('<link rel=3D"stylesheet" type=3D"text/css" =
+href=3D"'+stylepath+'/'+skin+'/KHTMLFixes.css">');=0A=
+	}=0A=
+}=0A=
+=0A=
+if (wgBreakFrames) {=0A=
+	// Un-trap us from framesets=0A=
+	if (window.top !=3D window) {=0A=
+		window.top.location =3D window.location;=0A=
+	}=0A=
+}=0A=
+=0A=
+// for enhanced RecentChanges=0A=
+function toggleVisibility(_levelId, _otherId, _linkId) {=0A=
+	var thisLevel =3D document.getElementById(_levelId);=0A=
+	var otherLevel =3D document.getElementById(_otherId);=0A=
+	var linkLevel =3D document.getElementById(_linkId);=0A=
+	if (thisLevel.style.display =3D=3D 'none') {=0A=
+		thisLevel.style.display =3D 'block';=0A=
+		otherLevel.style.display =3D 'none';=0A=
+		linkLevel.style.display =3D 'inline';=0A=
+	} else {=0A=
+		thisLevel.style.display =3D 'none';=0A=
+		otherLevel.style.display =3D 'inline';=0A=
+		linkLevel.style.display =3D 'none';=0A=
+	}=0A=
+}=0A=
+=0A=
+function historyRadios(parent) {=0A=
+	var inputs =3D parent.getElementsByTagName('input');=0A=
+	var radios =3D [];=0A=
+	for (var i =3D 0; i < inputs.length; i++) {=0A=
+		if (inputs[i].name =3D=3D "diff" || inputs[i].name =3D=3D "oldid") {=0A=
+			radios[radios.length] =3D inputs[i];=0A=
+		}=0A=
+	}=0A=
+	return radios;=0A=
+}=0A=
+=0A=
+// check selection and tweak visibility/class onclick=0A=
+function diffcheck() {=0A=
+	var dli =3D false; // the li where the diff radio is checked=0A=
+	var oli =3D false; // the li where the oldid radio is checked=0A=
+	var hf =3D document.getElementById('pagehistory');=0A=
+	if (!hf) {=0A=
+		return true;=0A=
+	}=0A=
+	var lis =3D hf.getElementsByTagName('li');=0A=
+	for (var i=3D0;i<lis.length;i++) {=0A=
+		var inputs =3D historyRadios(lis[i]);=0A=
+		if (inputs[1] && inputs[0]) {=0A=
+			if (inputs[1].checked || inputs[0].checked) { // this row has a =
+checked radio button=0A=
+				if (inputs[1].checked && inputs[0].checked && inputs[0].value =3D=3D =
+inputs[1].value) {=0A=
+					return false;=0A=
+				}=0A=
+				if (oli) { // it's the second checked radio=0A=
+					if (inputs[1].checked) {=0A=
+						oli.className =3D "selected";=0A=
+						return false;=0A=
+					}=0A=
+				} else if (inputs[0].checked) {=0A=
+					return false;=0A=
+				}=0A=
+				if (inputs[0].checked) {=0A=
+					dli =3D lis[i];=0A=
+				}=0A=
+				if (!oli) {=0A=
+					inputs[0].style.visibility =3D 'hidden';=0A=
+				}=0A=
+				if (dli) {=0A=
+					inputs[1].style.visibility =3D 'hidden';=0A=
+				}=0A=
+				lis[i].className =3D "selected";=0A=
+				oli =3D lis[i];=0A=
+			}  else { // no radio is checked in this row=0A=
+				if (!oli) {=0A=
+					inputs[0].style.visibility =3D 'hidden';=0A=
+				} else {=0A=
+					inputs[0].style.visibility =3D 'visible';=0A=
+				}=0A=
+				if (dli) {=0A=
+					inputs[1].style.visibility =3D 'hidden';=0A=
+				} else {=0A=
+					inputs[1].style.visibility =3D 'visible';=0A=
+				}=0A=
+				lis[i].className =3D "";=0A=
+			}=0A=
+		}=0A=
+	}=0A=
+	return true;=0A=
+}=0A=
+=0A=
+// page history stuff=0A=
+// attach event handlers to the input elements on history page=0A=
+function histrowinit() {=0A=
+	var hf =3D document.getElementById('pagehistory');=0A=
+	if (!hf) {=0A=
+		return;=0A=
+	}=0A=
+	var lis =3D hf.getElementsByTagName('li');=0A=
+	for (var i =3D 0; i < lis.length; i++) {=0A=
+		var inputs =3D historyRadios(lis[i]);=0A=
+		if (inputs[0] && inputs[1]) {=0A=
+			inputs[0].onclick =3D diffcheck;=0A=
+			inputs[1].onclick =3D diffcheck;=0A=
+		}=0A=
+	}=0A=
+	diffcheck();=0A=
+}=0A=
+=0A=
+// generate toc from prefs form, fold sections=0A=
+// XXX: needs testing on IE/Mac and safari=0A=
+// more comments to follow=0A=
+function tabbedprefs() {=0A=
+	var prefform =3D document.getElementById('preferences');=0A=
+	if (!prefform || !document.createElement) {=0A=
+		return;=0A=
+	}=0A=
+	if (prefform.nodeName.toLowerCase() =3D=3D 'a') {=0A=
+		return; // Occasional IE problem=0A=
+	}=0A=
+	prefform.className =3D prefform.className + 'jsprefs';=0A=
+	var sections =3D [];=0A=
+	var children =3D prefform.childNodes;=0A=
+	var seci =3D 0;=0A=
+	for (var i =3D 0; i < children.length; i++) {=0A=
+		if (children[i].nodeName.toLowerCase() =3D=3D 'fieldset') {=0A=
+			children[i].id =3D 'prefsection-' + seci;=0A=
+			children[i].className =3D 'prefsection';=0A=
+			if (is_opera || is_khtml) {=0A=
+				children[i].className =3D 'prefsection operaprefsection';=0A=
+			}=0A=
+			var legends =3D children[i].getElementsByTagName('legend');=0A=
+			sections[seci] =3D {};=0A=
+			legends[0].className =3D 'mainLegend';=0A=
+			if (legends[0] && legends[0].firstChild.nodeValue) {=0A=
+				sections[seci].text =3D legends[0].firstChild.nodeValue;=0A=
+			} else {=0A=
+				sections[seci].text =3D '# ' + seci;=0A=
+			}=0A=
+			sections[seci].secid =3D children[i].id;=0A=
+			seci++;=0A=
+			if (sections.length !=3D 1) {=0A=
+				children[i].style.display =3D 'none';=0A=
+			} else {=0A=
+				var selectedid =3D children[i].id;=0A=
+			}=0A=
+		}=0A=
+	}=0A=
+	var toc =3D document.createElement('ul');=0A=
+	toc.id =3D 'preftoc';=0A=
+	toc.selectedid =3D selectedid;=0A=
+	for (i =3D 0; i < sections.length; i++) {=0A=
+		var li =3D document.createElement('li');=0A=
+		if (i =3D=3D=3D 0) {=0A=
+			li.className =3D 'selected';=0A=
+		}=0A=
+		var a =3D document.createElement('a');=0A=
+		a.href =3D '#' + sections[i].secid;=0A=
+		a.onmousedown =3D a.onclick =3D uncoversection;=0A=
+		a.appendChild(document.createTextNode(sections[i].text));=0A=
+		a.secid =3D sections[i].secid;=0A=
+		li.appendChild(a);=0A=
+		toc.appendChild(li);=0A=
+	}=0A=
+	prefform.parentNode.insertBefore(toc, =
+prefform.parentNode.childNodes[0]);=0A=
+	document.getElementById('prefsubmit').id =3D 'prefcontrol';=0A=
+}=0A=
+=0A=
+function uncoversection() {=0A=
+	var oldsecid =3D this.parentNode.parentNode.selectedid;=0A=
+	var newsec =3D document.getElementById(this.secid);=0A=
+	if (oldsecid !=3D this.secid) {=0A=
+		var ul =3D document.getElementById('preftoc');=0A=
+		document.getElementById(oldsecid).style.display =3D 'none';=0A=
+		newsec.style.display =3D 'block';=0A=
+		ul.selectedid =3D this.secid;=0A=
+		var lis =3D ul.getElementsByTagName('li');=0A=
+		for (var i =3D 0; i< lis.length; i++) {=0A=
+			lis[i].className =3D '';=0A=
+		}=0A=
+		this.parentNode.className =3D 'selected';=0A=
+	}=0A=
+	return false;=0A=
+}=0A=
+=0A=
+// Timezone stuff=0A=
+// tz in format [+-]HHMM=0A=
+function checkTimezone(tz, msg) {=0A=
+	var localclock =3D new Date();=0A=
+	// returns negative offset from GMT in minutes=0A=
+	var tzRaw =3D localclock.getTimezoneOffset();=0A=
+	var tzHour =3D Math.floor( Math.abs(tzRaw) / 60);=0A=
+	var tzMin =3D Math.abs(tzRaw) % 60;=0A=
+	var tzString =3D ((tzRaw >=3D 0) ? "-" : "+") + ((tzHour < 10) ? "0" : =
+"") + tzHour + ((tzMin < 10) ? "0" : "") + tzMin;=0A=
+	if (tz !=3D tzString) {=0A=
+		var junk =3D msg.split('$1');=0A=
+		document.write(junk[0] + "UTC" + tzString + junk[1]);=0A=
+	}=0A=
+}=0A=
+=0A=
+function unhidetzbutton() {=0A=
+	var tzb =3D document.getElementById('guesstimezonebutton');=0A=
+	if (tzb) {=0A=
+		tzb.style.display =3D 'inline';=0A=
+	}=0A=
+}=0A=
+=0A=
+// in [-]HH:MM format...=0A=
+// won't yet work with non-even tzs=0A=
+function fetchTimezone() {=0A=
+	// FIXME: work around Safari bug=0A=
+	var localclock =3D new Date();=0A=
+	// returns negative offset from GMT in minutes=0A=
+	var tzRaw =3D localclock.getTimezoneOffset();=0A=
+	var tzHour =3D Math.floor( Math.abs(tzRaw) / 60);=0A=
+	var tzMin =3D Math.abs(tzRaw) % 60;=0A=
+	var tzString =3D ((tzRaw >=3D 0) ? "-" : "") + ((tzHour < 10) ? "0" : =
+"") + tzHour +=0A=
+		":" + ((tzMin < 10) ? "0" : "") + tzMin;=0A=
+	return tzString;=0A=
+}=0A=
+=0A=
+function guessTimezone(box) {=0A=
+	document.getElementsByName("wpHourDiff")[0].value =3D fetchTimezone();=0A=
+}=0A=
+=0A=
+function showTocToggle() {=0A=
+	if (document.createTextNode) {=0A=
+		// Uses DOM calls to avoid document.write + XHTML issues=0A=
+=0A=
+		var linkHolder =3D document.getElementById('toctitle');=0A=
+		if (!linkHolder) {=0A=
+			return;=0A=
+		}=0A=
+=0A=
+		var outerSpan =3D document.createElement('span');=0A=
+		outerSpan.className =3D 'toctoggle';=0A=
+=0A=
+		var toggleLink =3D document.createElement('a');=0A=
+		toggleLink.id =3D 'togglelink';=0A=
+		toggleLink.className =3D 'internal';=0A=
+		toggleLink.href =3D 'javascript:toggleToc()';=0A=
+		toggleLink.appendChild(document.createTextNode(tocHideText));=0A=
+=0A=
+		outerSpan.appendChild(document.createTextNode('['));=0A=
+		outerSpan.appendChild(toggleLink);=0A=
+		outerSpan.appendChild(document.createTextNode(']'));=0A=
+=0A=
+		linkHolder.appendChild(document.createTextNode(' '));=0A=
+		linkHolder.appendChild(outerSpan);=0A=
+=0A=
+		var cookiePos =3D document.cookie.indexOf("hidetoc=3D");=0A=
+		if (cookiePos > -1 && document.cookie.charAt(cookiePos + 8) =3D=3D 1) {=0A=
+			toggleToc();=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+function changeText(el, newText) {=0A=
+	// Safari work around=0A=
+	if (el.innerText) {=0A=
+		el.innerText =3D newText;=0A=
+	} else if (el.firstChild && el.firstChild.nodeValue) {=0A=
+		el.firstChild.nodeValue =3D newText;=0A=
+	}=0A=
+}=0A=
+=0A=
+function toggleToc() {=0A=
+	var toc =3D =
+document.getElementById('toc').getElementsByTagName('ul')[0];=0A=
+	var toggleLink =3D document.getElementById('togglelink');=0A=
+=0A=
+	if (toc && toggleLink && toc.style.display =3D=3D 'none') {=0A=
+		changeText(toggleLink, tocHideText);=0A=
+		toc.style.display =3D 'block';=0A=
+		document.cookie =3D "hidetoc=3D0";=0A=
+	} else {=0A=
+		changeText(toggleLink, tocShowText);=0A=
+		toc.style.display =3D 'none';=0A=
+		document.cookie =3D "hidetoc=3D1";=0A=
+	}=0A=
+}=0A=
+=0A=
+var mwEditButtons =3D [];=0A=
+var mwCustomEditButtons =3D []; // eg to add in MediaWiki:Common.js=0A=
+=0A=
+// this function generates the actual toolbar buttons with localized text=0A=
+// we use it to avoid creating the toolbar where javascript is not =
+enabled=0A=
+function addButton(imageFile, speedTip, tagOpen, tagClose, sampleText, =
+imageId) {=0A=
+	// Don't generate buttons for browsers which don't fully=0A=
+	// support it.=0A=
+	mwEditButtons[mwEditButtons.length] =3D=0A=
+		{"imageId": imageId,=0A=
+		 "imageFile": imageFile,=0A=
+		 "speedTip": speedTip,=0A=
+		 "tagOpen": tagOpen,=0A=
+		 "tagClose": tagClose,=0A=
+		 "sampleText": sampleText};=0A=
+}=0A=
+=0A=
+// this function generates the actual toolbar buttons with localized text=0A=
+// we use it to avoid creating the toolbar where javascript is not =
+enabled=0A=
+function mwInsertEditButton(parent, item) {=0A=
+	var image =3D document.createElement("img");=0A=
+	image.width =3D 23;=0A=
+	image.height =3D 22;=0A=
+	image.className =3D "mw-toolbar-editbutton";=0A=
+	if (item.imageId) image.id =3D item.imageId;=0A=
+	image.src =3D item.imageFile;=0A=
+	image.border =3D 0;=0A=
+	image.alt =3D item.speedTip;=0A=
+	image.title =3D item.speedTip;=0A=
+	image.style.cursor =3D "pointer";=0A=
+	image.onclick =3D function() {=0A=
+		insertTags(item.tagOpen, item.tagClose, item.sampleText);=0A=
+		return false;=0A=
+	};=0A=
+=0A=
+	parent.appendChild(image);=0A=
+	return true;=0A=
+}=0A=
+=0A=
+function mwSetupToolbar() {=0A=
+	var toolbar =3D document.getElementById('toolbar');=0A=
+	if (!toolbar) { return false; }=0A=
+=0A=
+	var textbox =3D document.getElementById('wpTextbox1');=0A=
+	if (!textbox) { return false; }=0A=
+=0A=
+	// Don't generate buttons for browsers which don't fully=0A=
+	// support it.=0A=
+	if (!document.selection && textbox.selectionStart =3D=3D=3D null) {=0A=
+		return false;=0A=
+	}=0A=
+=0A=
+	for (var i =3D 0; i < mwEditButtons.length; i++) {=0A=
+		mwInsertEditButton(toolbar, mwEditButtons[i]);=0A=
+	}=0A=
+	for (var i =3D 0; i < mwCustomEditButtons.length; i++) {=0A=
+		mwInsertEditButton(toolbar, mwCustomEditButtons[i]);=0A=
+	}=0A=
+	return true;=0A=
+}=0A=
+=0A=
+function escapeQuotes(text) {=0A=
+	var re =3D new RegExp("'","g");=0A=
+	text =3D text.replace(re,"\\'");=0A=
+	re =3D new RegExp("\\n","g");=0A=
+	text =3D text.replace(re,"\\n");=0A=
+	return escapeQuotesHTML(text);=0A=
+}=0A=
+=0A=
+function escapeQuotesHTML(text) {=0A=
+	var re =3D new RegExp('&',"g");=0A=
+	text =3D text.replace(re,"&amp;");=0A=
+	re =3D new RegExp('"',"g");=0A=
+	text =3D text.replace(re,"&quot;");=0A=
+	re =3D new RegExp('<',"g");=0A=
+	text =3D text.replace(re,"&lt;");=0A=
+	re =3D new RegExp('>',"g");=0A=
+	text =3D text.replace(re,"&gt;");=0A=
+	return text;=0A=
+}=0A=
+=0A=
+// apply tagOpen/tagClose to selection in textarea,=0A=
+// use sampleText instead of selection if there is none=0A=
+// copied and adapted from phpBB=0A=
+function insertTags(tagOpen, tagClose, sampleText) {=0A=
+	var txtarea;=0A=
+	if (document.editform) {=0A=
+		txtarea =3D document.editform.wpTextbox1;=0A=
+	} else {=0A=
+		// some alternate form? take the first one we can find=0A=
+		var areas =3D document.getElementsByTagName('textarea');=0A=
+		txtarea =3D areas[0];=0A=
+	}=0A=
+=0A=
+	// IE=0A=
+	if (document.selection  && !is_gecko) {=0A=
+		var theSelection =3D document.selection.createRange().text;=0A=
+		if (!theSelection) {=0A=
+			theSelection=3DsampleText;=0A=
+		}=0A=
+		txtarea.focus();=0A=
+		if (theSelection.charAt(theSelection.length - 1) =3D=3D " ") { // =
+exclude ending space char, if any=0A=
+			theSelection =3D theSelection.substring(0, theSelection.length - 1);=0A=
+			document.selection.createRange().text =3D tagOpen + theSelection + =
+tagClose + " ";=0A=
+		} else {=0A=
+			document.selection.createRange().text =3D tagOpen + theSelection + =
+tagClose;=0A=
+		}=0A=
+=0A=
+	// Mozilla=0A=
+	} else if(txtarea.selectionStart || txtarea.selectionStart =3D=3D '0') {=0A=
+		var replaced =3D false;=0A=
+		var startPos =3D txtarea.selectionStart;=0A=
+		var endPos =3D txtarea.selectionEnd;=0A=
+		if (endPos-startPos) {=0A=
+			replaced =3D true;=0A=
+		}=0A=
+		var scrollTop =3D txtarea.scrollTop;=0A=
+		var myText =3D (txtarea.value).substring(startPos, endPos);=0A=
+		if (!myText) {=0A=
+			myText=3DsampleText;=0A=
+		}=0A=
+		var subst;=0A=
+		if (myText.charAt(myText.length - 1) =3D=3D " ") { // exclude ending =
+space char, if any=0A=
+			subst =3D tagOpen + myText.substring(0, (myText.length - 1)) + =
+tagClose + " ";=0A=
+		} else {=0A=
+			subst =3D tagOpen + myText + tagClose;=0A=
+		}=0A=
+		txtarea.value =3D txtarea.value.substring(0, startPos) + subst +=0A=
+			txtarea.value.substring(endPos, txtarea.value.length);=0A=
+		txtarea.focus();=0A=
+		//set new selection=0A=
+		if (replaced) {=0A=
+			var cPos =3D startPos+(tagOpen.length+myText.length+tagClose.length);=0A=
+			txtarea.selectionStart =3D cPos;=0A=
+			txtarea.selectionEnd =3D cPos;=0A=
+		} else {=0A=
+			txtarea.selectionStart =3D startPos+tagOpen.length;=0A=
+			txtarea.selectionEnd =3D startPos+tagOpen.length+myText.length;=0A=
+		}=0A=
+		txtarea.scrollTop =3D scrollTop;=0A=
+=0A=
+	// All other browsers get no toolbar.=0A=
+	// There was previously support for a crippled "help"=0A=
+	// bar, but that caused more problems than it solved.=0A=
+	}=0A=
+	// reposition cursor if possible=0A=
+	if (txtarea.createTextRange) {=0A=
+		txtarea.caretPos =3D document.selection.createRange().duplicate();=0A=
+	}=0A=
+}=0A=
+=0A=
+=0A=
+/**=0A=
+ * Set the accesskey prefix based on browser detection.=0A=
+ */=0A=
+var tooltipAccessKeyPrefix =3D 'alt-';=0A=
+if (is_opera) {=0A=
+	tooltipAccessKeyPrefix =3D 'shift-esc-';=0A=
+} else if (is_safari=0A=
+	   || navigator.userAgent.toLowerCase().indexOf('mac') !=3D -1=0A=
+	   || navigator.userAgent.toLowerCase().indexOf('konqueror') !=3D -1 ) {=0A=
+	tooltipAccessKeyPrefix =3D 'ctrl-';=0A=
+} else if (is_ff2_x11 || is_ff2_win) {=0A=
+	tooltipAccessKeyPrefix =3D 'alt-shift-';=0A=
+}=0A=
+var tooltipAccessKeyRegexp =3D /\[(ctrl-)?(alt-)?(shift-)?(esc-)?.\]$/;=0A=
+=0A=
+/**=0A=
+ * Add the appropriate prefix to the accesskey shown in the tooltip.=0A=
+ * If the nodeList parameter is given, only those nodes are updated;=0A=
+ * otherwise, all the nodes that will probably have accesskeys by=0A=
+ * default are updated.=0A=
+ *=0A=
+ * @param Array nodeList -- list of elements to update=0A=
+ */=0A=
+function updateTooltipAccessKeys( nodeList ) {=0A=
+	if ( !nodeList ) {=0A=
+		// skins without a "column-one" element don't seem to have links with =
+accesskeys either=0A=
+		var columnOne =3D document.getElementById("column-one");=0A=
+		if ( columnOne )=0A=
+			updateTooltipAccessKeys( columnOne.getElementsByTagName("a") );=0A=
+		// these are rare enough that no such optimization is needed=0A=
+		updateTooltipAccessKeys( document.getElementsByTagName("input") );=0A=
+		updateTooltipAccessKeys( document.getElementsByTagName("label") );=0A=
+		return;=0A=
+	}=0A=
+=0A=
+	for ( var i =3D 0; i < nodeList.length; i++ ) {=0A=
+		var element =3D nodeList[i];=0A=
+		var tip =3D element.getAttribute("title");=0A=
+		var key =3D element.getAttribute("accesskey");=0A=
+		if ( key && tooltipAccessKeyRegexp.exec(tip) ) {=0A=
+			tip =3D tip.replace(tooltipAccessKeyRegexp,=0A=
+					  "["+tooltipAccessKeyPrefix+key+"]");=0A=
+			element.setAttribute("title", tip );=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+/**=0A=
+ * Add a link to one of the portlet menus on the page, including:=0A=
+ *=0A=
+ * p-cactions: Content actions (shown as tabs above the main content in =
+Monobook)=0A=
+ * p-personal: Personal tools (shown at the top right of the page in =
+Monobook)=0A=
+ * p-navigation: Navigation=0A=
+ * p-tb: Toolbox=0A=
+ *=0A=
+ * This function exists for the convenience of custom JS authors.  All=0A=
+ * but the first three parameters are optional, though providing at=0A=
+ * least an id and a tooltip is recommended.=0A=
+ *=0A=
+ * By default the new link will be added to the end of the list.  To=0A=
+ * add the link before a given existing item, pass the DOM node of=0A=
+ * that item (easily obtained with document.getElementById()) as the=0A=
+ * nextnode parameter; to add the link _after_ an existing item, pass=0A=
+ * the node's nextSibling instead.=0A=
+ *=0A=
+ * @param String portlet -- id of the target portlet ("p-cactions", =
+"p-personal", "p-navigation" or "p-tb")=0A=
+ * @param String href -- link URL=0A=
+ * @param String text -- link text (will be automatically lowercased by =
+CSS for p-cactions in Monobook)=0A=
+ * @param String id -- id of the new item, should be unique and =
+preferably have the appropriate prefix ("ca-", "pt-", "n-" or "t-")=0A=
+ * @param String tooltip -- text to show when hovering over the link, =
+without accesskey suffix=0A=
+ * @param String accesskey -- accesskey to activate this link (one =
+character, try to avoid conflicts)=0A=
+ * @param Node nextnode -- the DOM node before which the new item should =
+be added, should be another item in the same list=0A=
+ *=0A=
+ * @return Node -- the DOM node of the new item (an LI element) or null=0A=
+ */=0A=
+function addPortletLink(portlet, href, text, id, tooltip, accesskey, =
+nextnode) {=0A=
+	var node =3D document.getElementById(portlet);=0A=
+	if ( !node ) return null;=0A=
+	node =3D node.getElementsByTagName( "ul" )[0];=0A=
+	if ( !node ) return null;=0A=
+=0A=
+	var link =3D document.createElement( "a" );=0A=
+	link.appendChild( document.createTextNode( text ) );=0A=
+	link.href =3D href;=0A=
+=0A=
+	var item =3D document.createElement( "li" );=0A=
+	item.appendChild( link );=0A=
+	if ( id ) item.id =3D id;=0A=
+=0A=
+	if ( accesskey ) {=0A=
+		link.setAttribute( "accesskey", accesskey );=0A=
+		tooltip +=3D " ["+accesskey+"]";=0A=
+	}=0A=
+	if ( tooltip ) {=0A=
+		link.setAttribute( "title", tooltip );=0A=
+	}=0A=
+	if ( accesskey && tooltip ) {=0A=
+		updateTooltipAccessKeys( new Array( link ) );=0A=
+	}=0A=
+=0A=
+	if ( nextnode && nextnode.parentNode =3D=3D node )=0A=
+		node.insertBefore( item, nextnode );=0A=
+	else=0A=
+		node.appendChild( item );  // IE compatibility (?)=0A=
+=0A=
+	return item;=0A=
+}=0A=
+=0A=
+=0A=
+/**=0A=
+ * Set up accesskeys/tooltips from the deprecated ta array.  If doId=0A=
+ * is specified, only set up for that id.  Note that this function is=0A=
+ * deprecated and will not be supported indefinitely -- use=0A=
+ * updateTooltipAccessKey() instead.=0A=
+ *=0A=
+ * @param mixed doId string or null=0A=
+ */=0A=
+function akeytt( doId ) {=0A=
+	// A lot of user scripts (and some of the code below) break if=0A=
+	// ta isn't defined, so we make sure it is.  Explictly using=0A=
+	// window.ta avoids a "ta is not defined" error.=0A=
+	if (!window.ta) window.ta =3D new Array;=0A=
+=0A=
+	// Make a local, possibly restricted, copy to avoid clobbering=0A=
+	// the original.=0A=
+	var ta;=0A=
+	if ( doId ) {=0A=
+		ta =3D new Array;=0A=
+		ta[doId] =3D window.ta[doId];=0A=
+	} else {=0A=
+		ta =3D window.ta;=0A=
+	}=0A=
+=0A=
+	// Now deal with evil deprecated ta=0A=
+	var watchCheckboxExists =3D document.getElementById( 'wpWatchthis' ) ? =
+true : false;=0A=
+	for (var id in ta) {=0A=
+		var n =3D document.getElementById(id);=0A=
+		if (n) {=0A=
+			var a =3D null;=0A=
+			var ak =3D '';=0A=
+			// Are we putting accesskey in it=0A=
+			if (ta[id][0].length > 0) {=0A=
+				// Is this object a object? If not assume it's the next child.=0A=
+=0A=
+				if (n.nodeName.toLowerCase() =3D=3D "a") {=0A=
+					a =3D n;=0A=
+				} else {=0A=
+					a =3D n.childNodes[0];=0A=
+				}=0A=
+			 	// Don't add an accesskey for the watch tab if the watch=0A=
+			 	// checkbox is also available.=0A=
+				if (a && ((id !=3D 'ca-watch' && id !=3D 'ca-unwatch') || =
+!watchCheckboxExists)) {=0A=
+					a.accessKey =3D ta[id][0];=0A=
+					ak =3D ' ['+tooltipAccessKeyPrefix+ta[id][0]+']';=0A=
+				}=0A=
+			} else {=0A=
+				// We don't care what type the object is when assigning tooltip=0A=
+				a =3D n;=0A=
+				ak =3D '';=0A=
+			}=0A=
+=0A=
+			if (a) {=0A=
+				a.title =3D ta[id][1]+ak;=0A=
+			}=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+function setupRightClickEdit() {=0A=
+	if (document.getElementsByTagName) {=0A=
+		var spans =3D document.getElementsByTagName('span');=0A=
+		for (var i =3D 0; i < spans.length; i++) {=0A=
+			var el =3D spans[i];=0A=
+			if(el.className =3D=3D 'editsection') {=0A=
+				addRightClickEditHandler(el);=0A=
+			}=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+function addRightClickEditHandler(el) {=0A=
+	for (var i =3D 0; i < el.childNodes.length; i++) {=0A=
+		var link =3D el.childNodes[i];=0A=
+		if (link.nodeType =3D=3D 1 && link.nodeName.toLowerCase() =3D=3D 'a') {=0A=
+			var editHref =3D link.getAttribute('href');=0A=
+			// find the enclosing (parent) header=0A=
+			var prev =3D el.parentNode;=0A=
+			if (prev && prev.nodeType =3D=3D 1 &&=0A=
+			prev.nodeName.match(/^[Hh][1-6]$/)) {=0A=
+				prev.oncontextmenu =3D function(e) {=0A=
+					if (!e) { e =3D window.event; }=0A=
+					// e is now the event in all browsers=0A=
+					var targ;=0A=
+					if (e.target) { targ =3D e.target; }=0A=
+					else if (e.srcElement) { targ =3D e.srcElement; }=0A=
+					if (targ.nodeType =3D=3D 3) { // defeat Safari bug=0A=
+						targ =3D targ.parentNode;=0A=
+					}=0A=
+					// targ is now the target element=0A=
+=0A=
+					// We don't want to deprive the noble reader of a context menu=0A=
+					// for the section edit link, do we?  (Might want to extend this=0A=
+					// to all <a>'s?)=0A=
+					if (targ.nodeName.toLowerCase() !=3D 'a'=0A=
+					|| targ.parentNode.className !=3D 'editsection') {=0A=
+						document.location =3D editHref;=0A=
+						return false;=0A=
+					}=0A=
+					return true;=0A=
+				};=0A=
+			}=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+var checkboxes;=0A=
+var lastCheckbox;=0A=
+=0A=
+function setupCheckboxShiftClick() {=0A=
+	checkboxes =3D [];=0A=
+	lastCheckbox =3D null;=0A=
+	var inputs =3D document.getElementsByTagName('input');=0A=
+	addCheckboxClickHandlers(inputs);=0A=
+}=0A=
+=0A=
+function addCheckboxClickHandlers(inputs, start) {=0A=
+	if ( !start) start =3D 0;=0A=
+=0A=
+	var finish =3D start + 250;=0A=
+	if ( finish > inputs.length )=0A=
+		finish =3D inputs.length;=0A=
+=0A=
+	for ( var i =3D start; i < finish; i++ ) {=0A=
+		var cb =3D inputs[i];=0A=
+		if ( !cb.type || cb.type.toLowerCase() !=3D 'checkbox' )=0A=
+			continue;=0A=
+		cb.index =3D checkboxes.push(cb) - 1;=0A=
+		cb.onmouseup =3D checkboxMouseupHandler;=0A=
+	}=0A=
+=0A=
+	if ( finish < inputs.length ) {=0A=
+		setTimeout( function () {=0A=
+			addCheckboxClickHandlers(inputs, finish);=0A=
+		}, 200 );=0A=
+	}=0A=
+}=0A=
+=0A=
+function checkboxMouseupHandler(e) {=0A=
+	if (typeof e =3D=3D 'undefined') {=0A=
+		e =3D window.event;=0A=
+	}=0A=
+	if ( !e.shiftKey || lastCheckbox =3D=3D=3D null ) {=0A=
+		lastCheckbox =3D this.index;=0A=
+		return true;=0A=
+	}=0A=
+	var endState =3D !this.checked;=0A=
+	if ( is_opera ) { // opera has already toggled the checkbox by this =
+point=0A=
+		endState =3D !endState;=0A=
+	}=0A=
+	var start, finish;=0A=
+	if ( this.index < lastCheckbox ) {=0A=
+		start =3D this.index + 1;=0A=
+		finish =3D lastCheckbox;=0A=
+	} else {=0A=
+		start =3D lastCheckbox;=0A=
+		finish =3D this.index - 1;=0A=
+	}=0A=
+	for (var i =3D start; i <=3D finish; ++i ) {=0A=
+		checkboxes[i].checked =3D endState;=0A=
+	}=0A=
+	lastCheckbox =3D this.index;=0A=
+	return true;=0A=
+}=0A=
+=0A=
+function toggle_element_activation(ida,idb) {=0A=
+	if (!document.getElementById) {=0A=
+		return;=0A=
+	}=0A=
+	document.getElementById(ida).disabled=3Dtrue;=0A=
+	document.getElementById(idb).disabled=3Dfalse;=0A=
+}=0A=
+=0A=
+function toggle_element_check(ida,idb) {=0A=
+	if (!document.getElementById) {=0A=
+		return;=0A=
+	}=0A=
+	document.getElementById(ida).checked=3Dtrue;=0A=
+	document.getElementById(idb).checked=3Dfalse;=0A=
+}=0A=
+=0A=
+function fillDestFilename(id) {=0A=
+	if (!document.getElementById) {=0A=
+		return;=0A=
+	}=0A=
+	var path =3D document.getElementById(id).value;=0A=
+	// Find trailing part=0A=
+	var slash =3D path.lastIndexOf('/');=0A=
+	var backslash =3D path.lastIndexOf('\\');=0A=
+	var fname;=0A=
+	if (slash =3D=3D -1 && backslash =3D=3D -1) {=0A=
+		fname =3D path;=0A=
+	} else if (slash > backslash) {=0A=
+		fname =3D path.substring(slash+1, 10000);=0A=
+	} else {=0A=
+		fname =3D path.substring(backslash+1, 10000);=0A=
+	}=0A=
+=0A=
+	// Capitalise first letter and replace spaces by underscores=0A=
+	fname =3D =
+fname.charAt(0).toUpperCase().concat(fname.substring(1,10000)).replace(/ =
+/g, '_');=0A=
+=0A=
+	// Output result=0A=
+	var destFile =3D document.getElementById('wpDestFile');=0A=
+	if (destFile) {=0A=
+		destFile.value =3D fname;=0A=
+	}=0A=
+}=0A=
+=0A=
+function scrollEditBox() {=0A=
+	var editBoxEl =3D document.getElementById("wpTextbox1");=0A=
+	var scrollTopEl =3D document.getElementById("wpScrolltop");=0A=
+	var editFormEl =3D document.getElementById("editform");=0A=
+=0A=
+	if (editBoxEl && scrollTopEl) {=0A=
+		if (scrollTopEl.value) { editBoxEl.scrollTop =3D scrollTopEl.value; }=0A=
+		editFormEl.onsubmit =3D function() {=0A=
+			document.getElementById("wpScrolltop").value =3D =
+document.getElementById("wpTextbox1").scrollTop;=0A=
+		};=0A=
+	}=0A=
+}=0A=
+=0A=
+hookEvent("load", scrollEditBox);=0A=
+=0A=
+var allmessages_nodelist =3D false;=0A=
+var allmessages_modified =3D false;=0A=
+var allmessages_timeout =3D false;=0A=
+var allmessages_running =3D false;=0A=
+=0A=
+function allmessagesmodified() {=0A=
+	allmessages_modified =3D !allmessages_modified;=0A=
+	allmessagesfilter();=0A=
+}=0A=
+=0A=
+function allmessagesfilter() {=0A=
+	if ( allmessages_timeout )=0A=
+		window.clearTimeout( allmessages_timeout );=0A=
+=0A=
+	if ( !allmessages_running )=0A=
+		allmessages_timeout =3D window.setTimeout( 'allmessagesfilter_do();', =
+500 );=0A=
+}=0A=
+=0A=
+function allmessagesfilter_do() {=0A=
+	if ( !allmessages_nodelist )=0A=
+		return;=0A=
+=0A=
+	var text =3D document.getElementById('allmessagesinput').value;=0A=
+	var nodef =3D allmessages_modified;=0A=
+=0A=
+	allmessages_running =3D true;=0A=
+=0A=
+	for ( var name in allmessages_nodelist ) {=0A=
+		var nodes =3D allmessages_nodelist[name];=0A=
+		var display =3D ( name.indexOf( text ) =3D=3D -1 ? 'none' : '' );=0A=
+=0A=
+		for ( var i =3D 0; i < nodes.length; i++)=0A=
+			nodes[i].style.display =3D=0A=
+				( nodes[i].className =3D=3D "def" && nodef=0A=
+				  ? 'none' : display );=0A=
+	}=0A=
+=0A=
+	if ( text !=3D document.getElementById('allmessagesinput').value ||=0A=
+	     nodef !=3D allmessages_modified )=0A=
+		allmessagesfilter_do();  // repeat=0A=
+=0A=
+	allmessages_running =3D false;=0A=
+}=0A=
+=0A=
+function allmessagesfilter_init() {=0A=
+	if ( allmessages_nodelist )=0A=
+		return;=0A=
+=0A=
+	var nodelist =3D new Array();=0A=
+	var templist =3D new Array();=0A=
+=0A=
+	var table =3D document.getElementById('allmessagestable');=0A=
+	if ( !table ) return;=0A=
+=0A=
+	var rows =3D document.getElementsByTagName('tr');=0A=
+	for ( var i =3D 0; i < rows.length; i++ ) {=0A=
+		var id =3D rows[i].getAttribute('id')=0A=
+		if ( id && id.substring(0,16) !=3D 'sp-allmessages-r' ) continue;=0A=
+		templist[ id ] =3D rows[i];=0A=
+	}=0A=
+=0A=
+	var spans =3D table.getElementsByTagName('span');=0A=
+	for ( var i =3D 0; i < spans.length; i++ ) {=0A=
+		var id =3D spans[i].getAttribute('id')=0A=
+		if ( id && id.substring(0,17) !=3D 'sp-allmessages-i-' ) continue;=0A=
+		if ( !spans[i].firstChild || spans[i].firstChild.nodeType !=3D 3 ) =
+continue;=0A=
+=0A=
+		var nodes =3D new Array();=0A=
+		var row1 =3D templist[ id.replace('i', 'r1') ];=0A=
+		var row2 =3D templist[ id.replace('i', 'r2') ];=0A=
+=0A=
+		if ( row1 ) nodes[nodes.length] =3D row1;=0A=
+		if ( row2 ) nodes[nodes.length] =3D row2;=0A=
+		nodelist[ spans[i].firstChild.nodeValue ] =3D nodes;=0A=
+	}=0A=
+=0A=
+	var k =3D document.getElementById('allmessagesfilter');=0A=
+	if (k) { k.style.display =3D ''; }=0A=
+=0A=
+	allmessages_nodelist =3D nodelist;=0A=
+}=0A=
+=0A=
+hookEvent( "load", allmessagesfilter_init );=0A=
+=0A=
+/*=0A=
+	Written by Jonathan Snook, http://www.snook.ca/jonathan=0A=
+	Add-ons by Robert Nyman, http://www.robertnyman.com=0A=
+	Author says "The credit comment is all it takes, no license. Go crazy =
+with it!:-)"=0A=
+	From =
+http://www.robertnyman.com/2005/11/07/the-ultimate-getelementsbyclassname=
+/=0A=
+*/=0A=
+function getElementsByClassName(oElm, strTagName, oClassNames){=0A=
+	var arrElements =3D (strTagName =3D=3D "*" && oElm.all)? oElm.all : =
+oElm.getElementsByTagName(strTagName);=0A=
+	var arrReturnElements =3D new Array();=0A=
+	var arrRegExpClassNames =3D new Array();=0A=
+	if(typeof oClassNames =3D=3D "object"){=0A=
+		for(var i=3D0; i<oClassNames.length; i++){=0A=
+			arrRegExpClassNames.push(new RegExp("(^|\\s)" + =
+oClassNames[i].replace(/\-/g, "\\-") + "(\\s|$)"));=0A=
+		}=0A=
+	}=0A=
+	else{=0A=
+		arrRegExpClassNames.push(new RegExp("(^|\\s)" + =
+oClassNames.replace(/\-/g, "\\-") + "(\\s|$)"));=0A=
+	}=0A=
+	var oElement;=0A=
+	var bMatchesAll;=0A=
+	for(var j=3D0; j<arrElements.length; j++){=0A=
+		oElement =3D arrElements[j];=0A=
+		bMatchesAll =3D true;=0A=
+		for(var k=3D0; k<arrRegExpClassNames.length; k++){=0A=
+			if(!arrRegExpClassNames[k].test(oElement.className)){=0A=
+				bMatchesAll =3D false;=0A=
+				break;=0A=
+			}=0A=
+		}=0A=
+		if(bMatchesAll){=0A=
+			arrReturnElements.push(oElement);=0A=
+		}=0A=
+	}=0A=
+	return (arrReturnElements)=0A=
+}=0A=
+=0A=
+function redirectToFragment(fragment) {=0A=
+	var match =3D navigator.userAgent.match(/AppleWebKit\/(\d+)/);=0A=
+	if (match) {=0A=
+		var webKitVersion =3D parseInt(match[1]);=0A=
+		if (webKitVersion < 420) {=0A=
+			// Released Safari w/ WebKit 418.9.1 messes up horribly=0A=
+			// Nightlies of 420+ are ok=0A=
+			return;=0A=
+		}=0A=
+	}=0A=
+	if (is_gecko) {=0A=
+		// Mozilla needs to wait until after load, otherwise the window =
+doesn't scroll=0A=
+		addOnloadHook(function () {=0A=
+			if (window.location.hash =3D=3D "")=0A=
+				window.location.hash =3D fragment;=0A=
+		});=0A=
+	} else {=0A=
+		if (window.location.hash =3D=3D "")=0A=
+			window.location.hash =3D fragment;=0A=
+	}=0A=
+}=0A=
+=0A=
+/*=0A=
+ * Table sorting script  by Joost de Valk, check it out at =
+http://www.joostdevalk.nl/code/sortable-table/.=0A=
+ * Based on a script from =
+http://www.kryogenix.org/code/browser/sorttable/.=0A=
+ * Distributed under the MIT license: =
+http://www.kryogenix.org/code/browser/licence.html .=0A=
+ *=0A=
+ * Copyright (c) 1997-2006 Stuart Langridge, Joost de Valk.=0A=
+ *=0A=
+ * @todo don't break on colspans/rowspans (bug 8028)=0A=
+ * @todo language-specific digit grouping/decimals (bug 8063)=0A=
+ * @todo support all accepted date formats (bug 8226)=0A=
+ */=0A=
+=0A=
+var ts_image_path =3D stylepath+"/common/images/";=0A=
+var ts_image_up =3D "sort_up.gif";=0A=
+var ts_image_down =3D "sort_down.gif";=0A=
+var ts_image_none =3D "sort_none.gif";=0A=
+var ts_europeandate =3D wgContentLanguage !=3D "en"; // The =
+non-American-inclined can change to "true"=0A=
+var ts_alternate_row_colors =3D true;=0A=
+var SORT_COLUMN_INDEX;=0A=
+=0A=
+function sortables_init() {=0A=
+	var idnum =3D 0;=0A=
+	// Find all tables with class sortable and make them sortable=0A=
+	var tables =3D getElementsByClassName(document, "table", "sortable");=0A=
+	for (var ti =3D 0; ti < tables.length ; ti++) {=0A=
+		if (!tables[ti].id) {=0A=
+			tables[ti].setAttribute('id','sortable_table_id_'+idnum);=0A=
+			++idnum;=0A=
+		}=0A=
+		ts_makeSortable(tables[ti]);=0A=
+	}=0A=
+}=0A=
+=0A=
+function ts_makeSortable(table) {=0A=
+	var firstRow;=0A=
+	if (table.rows && table.rows.length > 0) {=0A=
+		if (table.tHead && table.tHead.rows.length > 0) {=0A=
+			firstRow =3D table.tHead.rows[table.tHead.rows.length-1];=0A=
+		} else {=0A=
+			firstRow =3D table.rows[0];=0A=
+		}=0A=
+	}=0A=
+	if (!firstRow) return;=0A=
+=0A=
+	// We have a first row: assume it's the header, and make its contents =
+clickable links=0A=
+	for (var i =3D 0; i < firstRow.cells.length; i++) {=0A=
+		var cell =3D firstRow.cells[i];=0A=
+		if ((" "+cell.className+" ").indexOf(" unsortable ") =3D=3D -1) {=0A=
+			cell.innerHTML +=3D '&nbsp;&nbsp;<a href=3D"#" class=3D"sortheader" =
+onclick=3D"ts_resortTable(this);return false;"><span =
+class=3D"sortarrow"><img src=3D"'+ ts_image_path + ts_image_none + '" =
+alt=3D"&darr;"/></span></a>';=0A=
+		}=0A=
+	}=0A=
+	if (ts_alternate_row_colors) {=0A=
+		ts_alternate(table);=0A=
+	}=0A=
+}=0A=
+=0A=
+function ts_getInnerText(el) {=0A=
+	if (typeof el =3D=3D "string") return el;=0A=
+	if (typeof el =3D=3D "undefined") { return el };=0A=
+	if (el.innerText) return el.innerText;	// Not needed but it is faster=0A=
+	var str =3D "";=0A=
+=0A=
+	var cs =3D el.childNodes;=0A=
+	var l =3D cs.length;=0A=
+	for (var i =3D 0; i < l; i++) {=0A=
+		switch (cs[i].nodeType) {=0A=
+			case 1: //ELEMENT_NODE=0A=
+				str +=3D ts_getInnerText(cs[i]);=0A=
+				break;=0A=
+			case 3:	//TEXT_NODE=0A=
+				str +=3D cs[i].nodeValue;=0A=
+				break;=0A=
+		}=0A=
+	}=0A=
+	return str;=0A=
+}=0A=
+=0A=
+function ts_resortTable(lnk) {=0A=
+	// get the span=0A=
+	var span =3D lnk.getElementsByTagName('span')[0];=0A=
+=0A=
+	var td =3D lnk.parentNode;=0A=
+	var tr =3D td.parentNode;=0A=
+	var column =3D td.cellIndex;=0A=
+=0A=
+	var table =3D tr.parentNode;=0A=
+	while (table && !(table.tagName && table.tagName.toLowerCase() =3D=3D =
+'table'))=0A=
+		table =3D table.parentNode;=0A=
+	if (!table) return;=0A=
+=0A=
+	// Work out a type for the column=0A=
+	if (table.rows.length <=3D 1) return;=0A=
+=0A=
+	// Skip the first row if that's where the headings are=0A=
+	var rowStart =3D (table.tHead && table.tHead.rows.length > 0 ? 0 : 1);=0A=
+=0A=
+	var itm =3D "";=0A=
+	for (var i =3D rowStart; i < table.rows.length; i++) {=0A=
+		if (table.rows[i].cells.length > column) {=0A=
+			itm =3D ts_getInnerText(table.rows[i].cells[column]);=0A=
+			itm =3D itm.replace(/^[\s\xa0]+/, "").replace(/[\s\xa0]+$/, "");=0A=
+			if (itm !=3D "") break;=0A=
+		}=0A=
+	}=0A=
+=0A=
+	sortfn =3D ts_sort_caseinsensitive;=0A=
+	if (itm.match(/^\d\d[\/. -][a-zA-Z]{3}[\/. -]\d\d\d\d$/))=0A=
+		sortfn =3D ts_sort_date;=0A=
+	if (itm.match(/^\d\d[\/.-]\d\d[\/.-]\d\d\d\d$/))=0A=
+		sortfn =3D ts_sort_date;=0A=
+	if (itm.match(/^\d\d[\/.-]\d\d[\/.-]\d\d$/))=0A=
+		sortfn =3D ts_sort_date;=0A=
+	if (itm.match(/^[\u00a3$\u20ac]/)) // pound dollar euro=0A=
+		sortfn =3D ts_sort_currency;=0A=
+	if (itm.match(/^[\d.,]+\%?$/))=0A=
+		sortfn =3D ts_sort_numeric;=0A=
+=0A=
+	var reverse =3D (span.getAttribute("sortdir") =3D=3D 'down');=0A=
+=0A=
+	var newRows =3D new Array();=0A=
+	for (var j =3D rowStart; j < table.rows.length; j++) {=0A=
+		var row =3D table.rows[j];=0A=
+		var keyText =3D ts_getInnerText(row.cells[column]);=0A=
+		var oldIndex =3D (reverse ? -j : j);=0A=
+=0A=
+		newRows[newRows.length] =3D new Array(row, keyText, oldIndex);=0A=
+	}=0A=
+=0A=
+	newRows.sort(sortfn);=0A=
+=0A=
+	var arrowHTML;=0A=
+	if (reverse) {=0A=
+			arrowHTML =3D '<img src=3D"'+ ts_image_path + ts_image_down + '" =
+alt=3D"&darr;"/>';=0A=
+			newRows.reverse();=0A=
+			span.setAttribute('sortdir','up');=0A=
+	} else {=0A=
+			arrowHTML =3D '<img src=3D"'+ ts_image_path + ts_image_up + '" =
+alt=3D"&uarr;"/>';=0A=
+			span.setAttribute('sortdir','down');=0A=
+	}=0A=
+=0A=
+	// We appendChild rows that already exist to the tbody, so it moves =
+them rather than creating new ones=0A=
+	// don't do sortbottom rows=0A=
+	for (var i =3D 0; i < newRows.length; i++) {=0A=
+		if ((" "+newRows[i][0].className+" ").indexOf(" sortbottom ") =3D=3D =
+-1)=0A=
+			table.tBodies[0].appendChild(newRows[i][0]);=0A=
+	}=0A=
+	// do sortbottom rows only=0A=
+	for (var i =3D 0; i < newRows.length; i++) {=0A=
+		if ((" "+newRows[i][0].className+" ").indexOf(" sortbottom ") !=3D -1)=0A=
+			table.tBodies[0].appendChild(newRows[i][0]);=0A=
+	}=0A=
+=0A=
+	// Delete any other arrows there may be showing=0A=
+	var spans =3D getElementsByClassName(tr, "span", "sortarrow");=0A=
+	for (var i =3D 0; i < spans.length; i++) {=0A=
+		spans[i].innerHTML =3D '<img src=3D"'+ ts_image_path + ts_image_none + =
+'" alt=3D"&darr;"/>';=0A=
+	}=0A=
+	span.innerHTML =3D arrowHTML;=0A=
+=0A=
+	ts_alternate(table);		=0A=
+}=0A=
+=0A=
+function ts_dateToSortKey(date) {	=0A=
+	// y2k notes: two digit years less than 50 are treated as 20XX, greater =
+than 50 are treated as 19XX=0A=
+	if (date.length =3D=3D 11) {=0A=
+		switch (date.substr(3,3).toLowerCase()) {=0A=
+			case "jan": var month =3D "01"; break;=0A=
+			case "feb": var month =3D "02"; break;=0A=
+			case "mar": var month =3D "03"; break;=0A=
+			case "apr": var month =3D "04"; break;=0A=
+			case "may": var month =3D "05"; break;=0A=
+			case "jun": var month =3D "06"; break;=0A=
+			case "jul": var month =3D "07"; break;=0A=
+			case "aug": var month =3D "08"; break;=0A=
+			case "sep": var month =3D "09"; break;=0A=
+			case "oct": var month =3D "10"; break;=0A=
+			case "nov": var month =3D "11"; break;=0A=
+			case "dec": var month =3D "12"; break;=0A=
+			// default: var month =3D "00";=0A=
+		}=0A=
+		return date.substr(7,4)+month+date.substr(0,2);=0A=
+	} else if (date.length =3D=3D 10) {=0A=
+		if (ts_europeandate =3D=3D false) {=0A=
+			return date.substr(6,4)+date.substr(0,2)+date.substr(3,2);=0A=
+		} else {=0A=
+			return date.substr(6,4)+date.substr(3,2)+date.substr(0,2);=0A=
+		}=0A=
+	} else if (date.length =3D=3D 8) {=0A=
+		yr =3D date.substr(6,2);=0A=
+		if (parseInt(yr) < 50) { =0A=
+			yr =3D '20'+yr; =0A=
+		} else { =0A=
+			yr =3D '19'+yr; =0A=
+		}=0A=
+		if (ts_europeandate =3D=3D true) {=0A=
+			return yr+date.substr(3,2)+date.substr(0,2);=0A=
+		} else {=0A=
+			return yr+date.substr(0,2)+date.substr(3,2);=0A=
+		}=0A=
+	}=0A=
+	return "00000000";=0A=
+}=0A=
+=0A=
+function ts_parseFloat(num) {=0A=
+	if (!num) return 0;=0A=
+	num =3D parseFloat(num.replace(/,/, ""));=0A=
+	return (isNaN(num) ? 0 : num);=0A=
+}=0A=
+=0A=
+function ts_sort_date(a,b) {=0A=
+	var aa =3D ts_dateToSortKey(a[1]);=0A=
+	var bb =3D ts_dateToSortKey(b[1]);=0A=
+	return (aa < bb ? -1 : aa > bb ? 1 : a[2] - b[2]);=0A=
+}=0A=
+=0A=
+function ts_sort_currency(a,b) {=0A=
+	var aa =3D ts_parseFloat(a[1].replace(/[^0-9.]/g,''));=0A=
+	var bb =3D ts_parseFloat(b[1].replace(/[^0-9.]/g,''));=0A=
+	return (aa !=3D bb ? aa - bb : a[2] - b[2]);=0A=
+}=0A=
+=0A=
+function ts_sort_numeric(a,b) {=0A=
+	var aa =3D ts_parseFloat(a[1]);=0A=
+	var bb =3D ts_parseFloat(b[1]);=0A=
+	return (aa !=3D bb ? aa - bb : a[2] - b[2]);=0A=
+}=0A=
+=0A=
+function ts_sort_caseinsensitive(a,b) {=0A=
+	var aa =3D a[1].toLowerCase();=0A=
+	var bb =3D b[1].toLowerCase();=0A=
+	return (aa < bb ? -1 : aa > bb ? 1 : a[2] - b[2]);=0A=
+}=0A=
+=0A=
+function ts_sort_default(a,b) {=0A=
+	return (a[1] < b[1] ? -1 : a[1] > b[1] ? 1 : a[2] - b[2]);=0A=
+}=0A=
+=0A=
+function ts_alternate(table) {=0A=
+	// Take object table and get all it's tbodies.=0A=
+	var tableBodies =3D table.getElementsByTagName("tbody");=0A=
+	// Loop through these tbodies=0A=
+	for (var i =3D 0; i < tableBodies.length; i++) {=0A=
+		// Take the tbody, and get all it's rows=0A=
+		var tableRows =3D tableBodies[i].getElementsByTagName("tr");=0A=
+		// Loop through these rows=0A=
+		// Start at 1 because we want to leave the heading row untouched=0A=
+		for (var j =3D 0; j < tableRows.length; j++) {=0A=
+			// Check if j is even, and apply classes for both possible results=0A=
+			var oldClasses =3D tableRows[j].className.split(" ");=0A=
+			var newClassName =3D "";=0A=
+			for (var k =3D 0; k < oldClasses.length; k++) {=0A=
+				if (oldClasses[k] !=3D "" && oldClasses[k] !=3D "even" && =
+oldClasses[k] !=3D "odd")=0A=
+					newClassName +=3D oldClasses[k] + " ";=0A=
+			}=0A=
+			tableRows[j].className =3D newClassName + (j % 2 =3D=3D 0 ? "even" : =
+"odd");=0A=
+		}=0A=
+	}=0A=
+}=0A=
+=0A=
+/*=0A=
+ * End of table sorting code=0A=
+ */=0A=
+=0A=
+function runOnloadHook() {=0A=
+	// don't run anything below this for non-dom browsers=0A=
+	if (doneOnloadHook || !(document.getElementById && =
+document.getElementsByTagName)) {=0A=
+		return;=0A=
+	}=0A=
+=0A=
+	// set this before running any hooks, since any errors below=0A=
+	// might cause the function to terminate prematurely=0A=
+	doneOnloadHook =3D true;=0A=
+=0A=
+	histrowinit();=0A=
+	unhidetzbutton();=0A=
+	tabbedprefs();=0A=
+	updateTooltipAccessKeys( null );=0A=
+	akeytt( null );=0A=
+	scrollEditBox();=0A=
+	setupCheckboxShiftClick();=0A=
+	sortables_init();=0A=
+=0A=
+	// Run any added-on functions=0A=
+	for (var i =3D 0; i < onloadFuncts.length; i++) {=0A=
+		onloadFuncts[i]();=0A=
+	}=0A=
+}=0A=
+=0A=
+//note: all skins should call runOnloadHook() at the end of html output,=0A=
+//      so the below should be redundant. It's there just in case.=0A=
+hookEvent("load", runOnloadHook);=0A=
+=0A=
+hookEvent("load", mwSetupToolbar);=0A=
+
+------=_NextPart_000_004A_01C9ABD2.92656450
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://wiki.programadoresdejogos.com/allegrobr/index.php?title=-&action=raw&gen=js
+
+/* generated javascript */=0A=
+var skin =3D 'monobook';=0A=
+var stylepath =3D '/allegrobr/skins';=0A=
+=0A=
+/* MediaWiki:Common.js */=0A=
+/* Any JavaScript here will be loaded for all users on every page load. =
+*/=0A=
+=0A=
+/* MediaWiki:Monobook.js (deprecated; migrate to Common.js!) */=0A=
+/* Deprecated; use [[MediaWiki:common.js]] */
+------=_NextPart_000_004A_01C9ABD2.92656450--

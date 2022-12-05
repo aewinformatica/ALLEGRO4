@@ -1,0 +1,1799 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0052)http://www.bdjogos.com/biblioteca_conteudo.php?id=31 -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="CENARIO_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="CENARIO_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="CENARIO_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY class=conteudo vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff 
+leftMargin=0 background=CENARIO_arquivos/bg.jpg topMargin=0 marginheight="0" 
+marginwidth="0">
+<SCRIPT language=javascript src="CENARIO_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="CENARIO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=CENARIO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="CENARIO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="CENARIO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=CENARIO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background=CENARIO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="CENARIO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=CENARIO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="CENARIO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="CENARIO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="CENARIO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=CENARIO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="CENARIO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="CENARIO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=CENARIO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background=CENARIO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="CENARIO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=CENARIO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="CENARIO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="CENARIO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="CENARIO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=CENARIO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="CENARIO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="CENARIO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=CENARIO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background=CENARIO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="CENARIO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=CENARIO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="CENARIO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="CENARIO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="CENARIO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=CENARIO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="CENARIO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="CENARIO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=CENARIO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background=CENARIO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="CENARIO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=CENARIO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="CENARIO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="CENARIO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="CENARIO_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="CENARIO_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="CENARIO_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="CENARIO_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="CENARIO_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="CENARIO_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background=CENARIO_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="CENARIO_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background=CENARIO_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="CENARIO_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="CENARIO_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD class=conteudo vAlign=top>
+            <HR>
+            <SPAN class=titulos id=CenarioArquivo name="CenarioArquivo">Cenário 
+            em Arquivos </SPAN>
+            <HR>
+
+            <P><SPAN class=conteudo>Esse artigo tem como objetivo mostrar como 
+            carregar várias fases de um jogo através de arquivos textos. Com 
+            certeza existem muitas outras maneiras de se fazer isso, mas aqui 
+            irei exemplificar uma forma simples e fácil de entender. </SPAN></P>
+            <P><SPAN class=conteudo>Com base nessas informações você poderá 
+            montar a sua própria maneira de organizar as fases do seu 
+            jogo.<BR></SPAN></P>
+            <TABLE class=conteudo cellSpacing=0 cellPadding=0 align=center 
+            border=1>
+              <TBODY>
+              <TR>
+                <TD width=576 colSpan=3>
+                  <P align=center><STRONG>Arquivo de Fases</STRONG></P></TD></TR>
+              <TR>
+                <TD vAlign=top width=192>
+                  <P align=center><STRONG>Fase 1</STRONG></P></TD>
+                <TD vAlign=top width=192>
+                  <P align=center><STRONG>Fase 2</STRONG></P></TD>
+                <TD vAlign=top width=192>
+                  <P align=center><STRONG>Fase 3</STRONG></P></TD></TR>
+              <TR>
+                <TD vAlign=top width=192>
+                  <P class=style1 
+                  align=center>####################<BR>#..................#<BR>#.........########.#<BR>###########........#<BR>#..................#<BR>#.........##########<BR>#.#########........#<BR>#..................#<BR>#.........########.#<BR>###########........#<BR>#..................#<BR>#.........##########<BR>#.#########........#<BR>#..................#<BR>####################</P></TD>
+                <TD vAlign=top width=192>
+                  <P class=style1 
+                  align=center>####################<BR>#------------------#<BR>#-###-###--###-###-#<BR>#------------------#<BR>#-###-###--###-###-#<BR>#------------------#<BR>#-###-###--###-###-#<BR>#------------------#<BR>#-###-###--###-###-#<BR>#------------------#<BR>#-###-###--###-###-#<BR>#------------------#<BR>#-###-###--###-###-#<BR>#------------------#<BR>####################</P></TD>
+                <TD vAlign=top width=192>
+                  <P class=style1 
+                  align=center>####################<BR>#..................#<BR>#.#.######.#####.#.#<BR>#.#..............#.#<BR>#.#.###.####.###.#.#<BR>#...#..........#...#<BR>#.#.#.########.#.#.#<BR>#..................#<BR>#.#.#.########.#.#.#<BR>#...#..........#...#<BR>#.#.###.####.###.#.#<BR>#.#..............#.#<BR>#.#.#####.######.#.#<BR>#..................#<BR>####################</P></TD></TR></TBODY></TABLE><BR>
+            <P>Abaixo vamos apresentar as texturas utilizadas e o resultado 
+            final do cenário montado.</P>
+            <TABLE cellSpacing=0 cellPadding=0 align=center border=1>
+              <TBODY>
+              <TR>
+                <TD width=576 colSpan=3>
+                  <P align=center><STRONG>Texturas</STRONG></P></TD></TR>
+              <TR>
+                <TD vAlign=top width=192>
+                  <P align=center><STRONG>Parede</STRONG></P></TD>
+                <TD vAlign=top width=192>
+                  <P align=center><STRONG>Grama</STRONG></P></TD>
+                <TD vAlign=top width=192>
+                  <P align=center><STRONG>Chão</STRONG></P></TD></TR>
+              <TR>
+                <TD width=192>
+                  <P align=center><IMG height=32 
+                  src="CENARIO_arquivos/parede.png" width=32></P></TD>
+                <TD width=192>
+                  <P align=center><IMG height=32 
+                  src="CENARIO_arquivos/grama.png" width=32></P></TD>
+                <TD width=192>
+                  <P align=center><IMG height=32 src="CENARIO_arquivos/chao.png" 
+                  width=32></P></TD></TR>
+              <TR>
+                <TD vAlign=top width=192>
+                  <P align=center><STRONG>Representação</STRONG></P></TD>
+                <TD vAlign=top width=192>
+                  <P align=center><STRONG>Representação</STRONG></P></TD>
+                <TD vAlign=top width=192>
+                  <P align=center><STRONG>Representação</STRONG></P></TD></TR>
+              <TR>
+                <TD width=192>
+                  <P align=center># (Sustenido)</P></TD>
+                <TD width=192>
+                  <P align=center>- (Traço)</P></TD>
+                <TD width=192>
+                  <P align=center>. (Ponto)</P></TD></TR></TBODY></TABLE>
+            <P>&nbsp;</P>
+            <P><BR></P>
+            <TABLE class=conteudo cellSpacing=0 cellPadding=4 align=center 
+            border=1>
+              <TBODY>
+              <TR>
+                <TD colSpan=2>
+                  <P align=center><STRONG>Resultado Final</STRONG></P></TD></TR>
+              <TR>
+                <TD vAlign=top>
+                  <P align=center><STRONG>Fase 1</STRONG></P></TD>
+                <TD vAlign=top>
+                  <P align=center><STRONG>Fase 2</STRONG></P></TD></TR>
+              <TR>
+                <TD>
+                  <P align=center><IMG height=180 
+                  src="CENARIO_arquivos/fase1.png" width=240 border=1></P></TD>
+                <TD>
+                  <P align=center><IMG height=180 
+                  src="CENARIO_arquivos/fase2.png" width=240 
+              border=1></P></TD></TR></TBODY></TABLE>
+            <TABLE class=conteudo cellSpacing=0 cellPadding=4 align=center 
+            border=1>
+              <TBODY>
+              <TR>
+                <TD vAlign=top width=195>
+                  <P align=center><STRONG>Fase 3</STRONG></P></TD></TR>
+              <TR>
+                <TD width=195>
+                  <P align=center><IMG height=180 
+                  src="CENARIO_arquivos/fase3.png" width=240 border=1> 
+              </P></TD></TR></TBODY></TABLE>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>A parte mais importante do código é a função 
+            <STRONG>CarregaMatriz</STRONG>() que vamos explicar logo 
+            abaixo.<BR>O restante do código você, obrigatoriamente, já deve 
+            estar familiarizado se estiver acompanhando os tutoriais 
+            anteriores.<BR><BR>Adotamos o tamanho da tela como sendo 640x480 e 
+            os tiles terão 32pixels de altura e largura. <BR>Dessa forma teremos 
+            20 tiles na horizontal e 15 tiles na vertical. <BR><BR><STRONG>Se 
+            houver dúvida faça: </STRONG>640/32 = 20 tiles na horizontal e 
+            480/32 = 15 tiles na vertical.<BR><BR><BR>No código de exemplo usei 
+            uma matriz tridimensional onde o primeiro string identifica a fase 
+            os outros 2 identificam a quantidade de tiles na horizontal e na 
+            vertical.<BR><BR>A ilustração abaixo se trata de uma visão da matriz 
+            referente à primeira fase. Onde a cor azul identifica a fase, a cor 
+            amarela identifica os tiles na horizontal e a cor laranja identifica 
+            os tiles na vertical. Observe bem o gráfico abaixo para poder 
+            entender a forma de ler o arquivo mais adiante.<BR><BR></P>
+            <TABLE class=conteudo cellSpacing=0 cellPadding=0 width=578 
+            align=center border=1>
+              <TBODY>
+              <TR>
+                <TD width=15>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=29>
+                  <P align=center><SPAN class=style1></SPAN></P></TD>
+                <TD width=23 bgColor=#ffff66>
+                  <P class=style1 align=center>C0</P></TD>
+                <TD width=23 bgColor=#ffff66>
+                  <P class=style1 align=center>C1</P></TD>
+                <TD width=23 bgColor=#ffff66>
+                  <P class=style1 align=center>C2</P></TD>
+                <TD width=23 bgColor=#ffff66>
+                  <P class=style1 align=center>C3</P></TD>
+                <TD width=23 bgColor=#ffff66>
+                  <P class=style1 align=center>C4</P></TD>
+                <TD width=23 bgColor=#ffff66>
+                  <P class=style1 align=center>C5</P></TD>
+                <TD width=23 bgColor=#ffff66>
+                  <P class=style1 align=center>C6</P></TD>
+                <TD width=23 bgColor=#ffff66>
+                  <P class=style1 align=center>C7</P></TD>
+                <TD width=23 bgColor=#ffff66>
+                  <P class=style1 align=center>C8</P></TD>
+                <TD width=29 bgColor=#ffff66>
+                  <P class=style1 align=center>C9</P></TD>
+                <TD width=29 bgColor=#ffff66>
+                  <P class=style1 align=center>C10</P></TD>
+                <TD width=29 bgColor=#ffff66>
+                  <P class=style1 align=center>C11</P></TD>
+                <TD width=29 bgColor=#ffff66>
+                  <P class=style1 align=center>C12</P></TD>
+                <TD width=29 bgColor=#ffff66>
+                  <P class=style1 align=center>C13</P></TD>
+                <TD width=29 bgColor=#ffff66>
+                  <P class=style1 align=center>C14</P></TD>
+                <TD width=29 bgColor=#ffff66>
+                  <P class=style1 align=center>C15</P></TD>
+                <TD width=29 bgColor=#ffff66>
+                  <P class=style1 align=center>C16</P></TD>
+                <TD width=29 bgColor=#ffff66>
+                  <P class=style1 align=center>C17</P></TD>
+                <TD width=29 bgColor=#ffff66>
+                  <P class=style1 align=center>C18</P></TD>
+                <TD width=29 bgColor=#ffff66>
+                  <P class=style1 align=center>C19</P></TD></TR>
+              <TR>
+                <TD width=15 bgColor=#00ccff rowSpan=15>
+                  <P align=center>1</P></TD>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L0</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L1</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L2</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L3</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L4</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L5</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L6</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L7</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L8</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L9</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L10</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L11</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L12</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L13</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>.</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR>
+              <TR>
+                <TD width=29 bgColor=#ff9900>
+                  <P class=style1 align=center>L14</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=23>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD>
+                <TD width=29>
+                  <P class=style1 align=center>#</P></TD></TR></TBODY></TABLE><BR>
+            <P>Note que você sabe que obrigatoriamente a quantidade de tiles na 
+            largura tem que ser 20, então, levando em conta essa informação 
+            vamos criar uma variável do tipo <STRONG>char</STRONG> chamada 
+            “<STRONG>sLinha</STRONG>” com 20 posições de caracteres. 
+            <BR><BR><STRONG>char</STRONG> sLinha[20];<BR><BR>Apenas para 
+            entendimento, se agente atribuir o texto “BDJogos” para a string 
+            acima o resultado vai ser o seguinte:</P>
+            <TABLE cellSpacing=0 cellPadding=0 border=1>
+              <TBODY>
+              <TR>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=27>
+                  <P align=center>0</P></TD>
+                <TD width=27>
+                  <P align=center>1</P></TD>
+                <TD width=27>
+                  <P align=center>2</P></TD>
+                <TD width=27>
+                  <P align=center>3</P></TD>
+                <TD width=27>
+                  <P align=center>4</P></TD>
+                <TD width=27>
+                  <P align=center>5</P></TD>
+                <TD width=27>
+                  <P align=center>6</P></TD>
+                <TD width=27>
+                  <P align=center>7</P></TD>
+                <TD width=27>
+                  <P align=center>8</P></TD>
+                <TD width=27>
+                  <P align=center>9</P></TD>
+                <TD width=27>
+                  <P align=center>10</P></TD>
+                <TD width=27>
+                  <P align=center>11</P></TD>
+                <TD width=27>
+                  <P align=center>12</P></TD>
+                <TD width=27>
+                  <P align=center>13</P></TD>
+                <TD width=27>
+                  <P align=center>14</P></TD>
+                <TD width=27>
+                  <P align=center>15</P></TD>
+                <TD width=27>
+                  <P align=center>16</P></TD>
+                <TD width=27>
+                  <P align=center>17</P></TD>
+                <TD width=27>
+                  <P align=center>18</P></TD>
+                <TD width=27>
+                  <P align=center>19</P></TD></TR>
+              <TR>
+                <TD width=27>
+                  <P align=center>sLinha</P></TD>
+                <TD width=27>
+                  <P align=center>B</P></TD>
+                <TD width=27>
+                  <P align=center>D</P></TD>
+                <TD width=27>
+                  <P align=center>J</P></TD>
+                <TD width=27>
+                  <P align=center>o</P></TD>
+                <TD width=27>
+                  <P align=center>g</P></TD>
+                <TD width=27>
+                  <P align=center>o</P></TD>
+                <TD width=27>
+                  <P align=center>s</P></TD>
+                <TD width=27>
+                  <P align=center>\n</P></TD>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=27>
+                  <P align=center>&nbsp;</P></TD></TR></TBODY></TABLE><BR><BR>
+            <P align=left>Até aqui você obrigatoriamente deve entender que se 
+            pegarmos a posição sLinha[0] o valor que ela deve retornar é B, 
+            sLinha[1] = D ... E assim sucessivamente. <BR><BR>É dessa forma que 
+            vamos preencher a matriz com os caracteres do arquivo texto. 
+            <BR>Como nossa matriz é tridimensional e, nesse caso, iremos 
+            carregar todas as fases de uma vez só na matriz para posteriormente 
+            montar o cenário, devemos ter 3 sequências de repetição FOR. </P>
+            <P align=left>Uma para a fase, uma para os tiles na horizontal e uma 
+            para os tiles na vertical. <BR><BR>Entre uma fase e outra iremos 
+            carregar o arquivo de fase para leitura e entre uma linha e outra 
+            iremos preencher a matriz.<BR><BR>O modo que a função preenche a 
+            matriz segue da esquerda para a direita e de cima para baixo. 
+            <BR>Posiciona no Y, e varre o X atribuindo os valores na 
+            matriz[iFase][x][y]. Execute o código de exemplo para entender 
+            melhor.<BR><BR>Após entender a função 
+            <STRONG>CarregaMatriz()</STRONG> a função para desenhar as texturas 
+            na tela é fácil. <BR>Precisamos apenas interpretar os caracteres nos 
+            arquivos e substituí-los por um objeto ou textura.<BR><BR>Para o 
+            código abaixo funcionar dentro da pasta do seu projeto você deve ter 
+            uma pasta chamada “<STRONG>fases</STRONG>” e outra chamada 
+            “<STRONG>tiles</STRONG>”. Dentro de cada uma você coloca seus 
+            respectivos arquivos de fases e imagens que vão utilizar na montagem 
+            do cenário.&nbsp; </P>
+            <P align=left>Segue a tela abaixo para exemplificar a disposição dos 
+            arquivos dentro da pasta do seu projeto.<BR><BR>
+            <CENTER><IMG height=353 src="CENARIO_arquivos/arqdir.png" width=344 
+            border=1><BR></CENTER><BR>Chega de teoria. Abaixo, segue o código 
+            para carregar 3 tipos de cenários diferentes.<BR><BR><BR>
+            <P></P>
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO...</SPAN> 
+            <HR>
+
+            <TABLE class=codigo border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top>001<FONT color=red>:</FONT><BR>002<FONT 
+                  color=red>:</FONT><BR>003<FONT color=red>:</FONT><BR>004<FONT 
+                  color=red>:</FONT><BR>005<FONT color=red>:</FONT><BR>006<FONT 
+                  color=red>:</FONT><BR>007<FONT color=red>:</FONT><BR>008<FONT 
+                  color=red>:</FONT><BR>009<FONT color=red>:</FONT><BR>010<FONT 
+                  color=red>:</FONT><BR>011<FONT color=red>:</FONT><BR>012<FONT 
+                  color=red>:</FONT><BR>013<FONT color=red>:</FONT><BR>014<FONT 
+                  color=red>:</FONT><BR>015<FONT color=red>:</FONT><BR>016<FONT 
+                  color=red>:</FONT><BR>017<FONT color=red>:</FONT><BR>018<FONT 
+                  color=red>:</FONT><BR>019<FONT color=red>:</FONT><BR>020<FONT 
+                  color=red>:</FONT><BR>021<FONT color=red>:</FONT><BR>022<FONT 
+                  color=red>:</FONT><BR>023<FONT color=red>:</FONT><BR>024<FONT 
+                  color=red>:</FONT><BR>025<FONT color=red>:</FONT><BR>026<FONT 
+                  color=red>:</FONT><BR>027<FONT color=red>:</FONT><BR>028<FONT 
+                  color=red>:</FONT><BR>029<FONT color=red>:</FONT><BR>030<FONT 
+                  color=red>:</FONT><BR>031<FONT color=red>:</FONT><BR>032<FONT 
+                  color=red>:</FONT><BR>033<FONT color=red>:</FONT><BR>034<FONT 
+                  color=red>:</FONT><BR>035<FONT color=red>:</FONT><BR>036<FONT 
+                  color=red>:</FONT><BR>037<FONT color=red>:</FONT><BR>038<FONT 
+                  color=red>:</FONT><BR>039<FONT color=red>:</FONT><BR>040<FONT 
+                  color=red>:</FONT><BR>041<FONT color=red>:</FONT><BR>042<FONT 
+                  color=red>:</FONT><BR>043<FONT color=red>:</FONT><BR>044<FONT 
+                  color=red>:</FONT><BR>045<FONT color=red>:</FONT><BR>046<FONT 
+                  color=red>:</FONT><BR>047<FONT color=red>:</FONT><BR>048<FONT 
+                  color=red>:</FONT><BR>049<FONT color=red>:</FONT><BR>050<FONT 
+                  color=red>:</FONT><BR>051<FONT color=red>:</FONT><BR>052<FONT 
+                  color=red>:</FONT><BR>053<FONT color=red>:</FONT><BR>054<FONT 
+                  color=red>:</FONT><BR>055<FONT color=red>:</FONT><BR>056<FONT 
+                  color=red>:</FONT><BR>057<FONT color=red>:</FONT><BR>058<FONT 
+                  color=red>:</FONT><BR>059<FONT color=red>:</FONT><BR>060<FONT 
+                  color=red>:</FONT><BR>061<FONT color=red>:</FONT><BR>062<FONT 
+                  color=red>:</FONT><BR>063<FONT color=red>:</FONT><BR>064<FONT 
+                  color=red>:</FONT><BR>065<FONT color=red>:</FONT><BR>066<FONT 
+                  color=red>:</FONT><BR>067<FONT color=red>:</FONT><BR>068<FONT 
+                  color=red>:</FONT><BR>069<FONT color=red>:</FONT><BR>070<FONT 
+                  color=red>:</FONT><BR>071<FONT color=red>:</FONT><BR>072<FONT 
+                  color=red>:</FONT><BR>073<FONT color=red>:</FONT><BR>074<FONT 
+                  color=red>:</FONT><BR>075<FONT color=red>:</FONT><BR>076<FONT 
+                  color=red>:</FONT><BR>077<FONT color=red>:</FONT><BR>078<FONT 
+                  color=red>:</FONT><BR>079<FONT color=red>:</FONT><BR>080<FONT 
+                  color=red>:</FONT><BR>081<FONT color=red>:</FONT><BR>082<FONT 
+                  color=red>:</FONT><BR>083<FONT color=red>:</FONT><BR>084<FONT 
+                  color=red>:</FONT><BR>085<FONT color=red>:</FONT><BR>086<FONT 
+                  color=red>:</FONT><BR>087<FONT color=red>:</FONT><BR>088<FONT 
+                  color=red>:</FONT><BR>089<FONT color=red>:</FONT><BR>090<FONT 
+                  color=red>:</FONT><BR>091<FONT color=red>:</FONT><BR>092<FONT 
+                  color=red>:</FONT><BR>093<FONT color=red>:</FONT><BR>094<FONT 
+                  color=red>:</FONT><BR>095<FONT color=red>:</FONT><BR>096<FONT 
+                  color=red>:</FONT><BR>097<FONT color=red>:</FONT><BR>098<FONT 
+                  color=red>:</FONT><BR>099<FONT color=red>:</FONT><BR>100<FONT 
+                  color=red>:</FONT><BR>101<FONT color=red>:</FONT><BR>102<FONT 
+                  color=red>:</FONT><BR>103<FONT color=red>:</FONT><BR>104<FONT 
+                  color=red>:</FONT><BR>105<FONT color=red>:</FONT><BR>106<FONT 
+                  color=red>:</FONT><BR>107<FONT color=red>:</FONT><BR>108<FONT 
+                  color=red>:</FONT><BR>109<FONT color=red>:</FONT><BR>110<FONT 
+                  color=red>:</FONT><BR>111<FONT color=red>:</FONT><BR>112<FONT 
+                  color=red>:</FONT><BR>113<FONT color=red>:</FONT><BR>114<FONT 
+                  color=red>:</FONT><BR>115<FONT color=red>:</FONT><BR>116<FONT 
+                  color=red>:</FONT><BR>117<FONT color=red>:</FONT><BR>118<FONT 
+                  color=red>:</FONT><BR>119<FONT color=red>:</FONT><BR>120<FONT 
+                  color=red>:</FONT><BR>121<FONT color=red>:</FONT><BR>122<FONT 
+                  color=red>:</FONT><BR>123<FONT color=red>:</FONT><BR>124<FONT 
+                  color=red>:</FONT><BR>125<FONT color=red>:</FONT><BR>126<FONT 
+                  color=red>:</FONT><BR>127<FONT color=red>:</FONT><BR>128<FONT 
+                  color=red>:</FONT><BR>129<FONT color=red>:</FONT><BR>130<FONT 
+                  color=red>:</FONT><BR>131<FONT color=red>:</FONT><BR>132<FONT 
+                  color=red>:</FONT><BR>133<FONT color=red>:</FONT><BR>134<FONT 
+                  color=red>:</FONT><BR>135<FONT color=red>:</FONT><BR>136<FONT 
+                  color=red>:</FONT><BR>137<FONT color=red>:</FONT><BR>138<FONT 
+                  color=red>:</FONT><BR>139<FONT color=red>:</FONT><BR>140<FONT 
+                  color=red>:</FONT><BR>141<FONT color=red>:</FONT><BR>142<FONT 
+                  color=red>:</FONT><BR>143<FONT color=red>:</FONT><BR>144<FONT 
+                  color=red>:</FONT><BR>145<FONT color=red>:</FONT><BR>146<FONT 
+                  color=red>:</FONT><BR>147<FONT color=red>:</FONT><BR>148<FONT 
+                  color=red>:</FONT><BR>149<FONT color=red>:</FONT><BR>150<FONT 
+                  color=red>:</FONT><BR>151<FONT color=red>:</FONT><BR>152<FONT 
+                  color=red>:</FONT><BR>153<FONT color=red>:</FONT><BR>154<FONT 
+                  color=red>:</FONT><BR>155<FONT color=red>:</FONT><BR>156<FONT 
+                  color=red>:</FONT><BR>157<FONT color=red>:</FONT><BR>158<FONT 
+                  color=red>:</FONT><BR>159<FONT color=red>:</FONT><BR>160<FONT 
+                  color=red>:</FONT><BR>161<FONT color=red>:</FONT><BR>162<FONT 
+                  color=red>:</FONT><BR>163<FONT color=red>:</FONT><BR>164<FONT 
+                  color=red>:</FONT><BR>165<FONT color=red>:</FONT><BR>166<FONT 
+                  color=red>:</FONT><BR>167<FONT color=red>:</FONT><BR>168<FONT 
+                  color=red>:</FONT><BR>169<FONT color=red>:</FONT><BR>170<FONT 
+                  color=red>:</FONT><BR>171<FONT color=red>:</FONT><BR>172<FONT 
+                  color=red>:</FONT><BR>173<FONT color=red>:</FONT><BR>174<FONT 
+                  color=red>:</FONT><BR>175<FONT color=red>:</FONT><BR>176<FONT 
+                  color=red>:</FONT><BR>177<FONT color=red>:</FONT><BR>178<FONT 
+                  color=red>:</FONT><BR>179<FONT color=red>:</FONT><BR>180<FONT 
+                  color=red>:</FONT><BR>181<FONT color=red>:</FONT><BR>182<FONT 
+                  color=red>:</FONT><BR>183<FONT color=red>:</FONT><BR>184<FONT 
+                  color=red>:</FONT><BR>185<FONT color=red>:</FONT><BR>186<FONT 
+                  color=red>:</FONT><BR>187<FONT color=red>:</FONT><BR>188<FONT 
+                  color=red>:</FONT><BR>189<FONT color=red>:</FONT><BR>190<FONT 
+                  color=red>:</FONT><BR>191<FONT color=red>:</FONT><BR>192<FONT 
+                  color=red>:</FONT><BR>193<FONT color=red>:</FONT><BR>194<FONT 
+                  color=red>:</FONT><BR>195<FONT color=red>:</FONT><BR>196<FONT 
+                  color=red>:</FONT><BR>197<FONT color=red>:</FONT><BR>198<FONT 
+                  color=red>:</FONT><BR>199<FONT color=red>:</FONT><BR>200<FONT 
+                  color=red>:</FONT><BR>201<FONT color=red>:</FONT><BR>202<FONT 
+                  color=red>:</FONT><BR>203<FONT color=red>:</FONT><BR>204<FONT 
+                  color=red>:</FONT><BR>205<FONT color=red>:</FONT><BR>206<FONT 
+                  color=red>:</FONT><BR>207<FONT color=red>:</FONT><BR>208<FONT 
+                  color=red>:</FONT><BR>209<FONT color=red>:</FONT><BR>210<FONT 
+                  color=red>:</FONT><BR>211<FONT color=red>:</FONT><BR>212<FONT 
+                  color=red>:</FONT><BR>213<FONT color=red>:</FONT><BR>214<FONT 
+                  color=red>:</FONT><BR>215<FONT color=red>:</FONT><BR>216<FONT 
+                  color=red>:</FONT><BR>217<FONT color=red>:</FONT><BR>218<FONT 
+                  color=red>:</FONT><BR>219<FONT color=red>:</FONT><BR>220<FONT 
+                  color=red>:</FONT><BR>221<FONT color=red>:</FONT><BR>222<FONT 
+                  color=red>:</FONT><BR>223<FONT color=red>:</FONT><BR>224<FONT 
+                  color=red>:</FONT><BR>225<FONT color=red>:</FONT><BR>226<FONT 
+                  color=red>:</FONT><BR>227<FONT color=red>:</FONT><BR>228<FONT 
+                  color=red>:</FONT><BR>
+                <TD>
+                <TD vAlign=top><FONT color=red>#</FONT>include&nbsp;<FONT 
+                  color=red>&lt;</FONT>allegro<FONT color=red>.</FONT>h<FONT 
+                  color=red>&gt;</FONT><BR><FONT 
+                  color=red>#</FONT>include&nbsp;<FONT 
+                  color=red>&lt;</FONT>iostream<FONT 
+                  color=red>&gt;</FONT><BR><FONT 
+                  color=red>#</FONT>include&nbsp;<FONT 
+                  color=red>&lt;</FONT>fstream<FONT 
+                  color=red>&gt;</FONT><BR><BR>using&nbsp;namespace&nbsp;std<FONT 
+                  color=red>;</FONT><BR><BR>int&nbsp;fps&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;0<FONT 
+                  color=red>;</FONT><BR>int&nbsp;fps_antigo&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;0<FONT 
+                  color=red>;</FONT><BR>int&nbsp;fps_speed&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;0<FONT color=red>;</FONT><BR><BR><SPAN 
+                  class=comentario>//&nbsp;prototipo&nbsp;do&nbsp;contador&nbsp;de&nbsp;frames</SPAN><BR>void&nbsp;frame_rate<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR><BR><SPAN 
+                  class=comentario>//&nbsp;prototipo&nbsp;do&nbsp;contador&nbsp;de&nbsp;velocidade&nbsp;</SPAN><BR>void&nbsp;incrementa_speed<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR><BR>void&nbsp;Teclado<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>void&nbsp;CarregaMatriz<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>void&nbsp;CarregaTexturas<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>void&nbsp;DesenhaCenario<FONT 
+                  color=red>(</FONT>BITMAP&nbsp;*,&nbsp;int&nbsp;<FONT 
+                  color=red>)</FONT><FONT color=red>;</FONT><BR><BR><SPAN 
+                  class=comentario>//A&nbsp;variável&nbsp;abaixo&nbsp;guarda&nbsp;o&nbsp;local&nbsp;onde&nbsp;estão&nbsp;as&nbsp;fases&nbsp;em&nbsp;arquivo&nbsp;texto<FONT 
+                  color=red>.</FONT></SPAN><BR>const&nbsp;char&nbsp;*ArqFases<FONT 
+                  color=red>[</FONT><FONT color=red>]</FONT>&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;<FONT color=red>{</FONT><FONT 
+                  color=red>"</FONT>fases/fase1<FONT color=red>.</FONT>txt<FONT 
+                  color=red>"</FONT>,&nbsp;<FONT 
+                  color=red>"</FONT>fases/fase2<FONT color=red>.</FONT>txt<FONT 
+                  color=red>"</FONT>,&nbsp;<FONT 
+                  color=red>"</FONT>fases/fase3<FONT color=red>.</FONT>txt<FONT 
+                  color=red>"</FONT><FONT color=red>}</FONT><FONT 
+                  color=red>;</FONT><BR><BR>const&nbsp;int&nbsp;iQtdeFases&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;3<FONT 
+                  color=red>;</FONT>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Jogo&nbsp;com&nbsp;3&nbsp;fases</SPAN><BR>const&nbsp;int&nbsp;iTamTilesX&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;32<FONT 
+                  color=red>;</FONT>&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Largura&nbsp;do&nbsp;Tile</SPAN><BR>const&nbsp;int&nbsp;iTamTilesY&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;32<FONT 
+                  color=red>;</FONT>&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Altura&nbsp;do&nbsp;Tile</SPAN><BR>const&nbsp;int&nbsp;iTilesX&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;&nbsp;20<FONT 
+                  color=red>;</FONT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Qtde&nbsp;de&nbsp;Tiles&nbsp;na&nbsp;horizontal&nbsp;<FONT 
+                  color=red>-</FONT>&nbsp;32*20&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;640<FONT 
+                  color=red>;</FONT></SPAN><BR>const&nbsp;int&nbsp;iTilesY&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;15<FONT 
+                  color=red>;</FONT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Qtde&nbsp;de&nbsp;Tiles&nbsp;na&nbsp;vertical&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>-</FONT>&nbsp;32*15&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;480<FONT 
+                  color=red>;</FONT></SPAN><BR><SPAN class=comentario>/* 
+                  <BR>Com&nbsp;base&nbsp;nas&nbsp;variáveis&nbsp;acima&nbsp;temos&nbsp;o&nbsp;tamanho&nbsp;da&nbsp;tela&nbsp;640x480,&nbsp;conforme&nbsp;abaixo<FONT 
+                  color=red>:</FONT>&nbsp;<BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>(</FONT>iTamTilesX&nbsp;*&nbsp;iTilesX<FONT 
+                  color=red>)</FONT>&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;SCREEN_W<FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>(</FONT>iTamTilesY&nbsp;*&nbsp;iTilesY<FONT 
+                  color=red>)</FONT>&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;SCREEN_H<FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>(</FONT>32&nbsp;*&nbsp;20<FONT 
+                  color=red>)</FONT>&nbsp;<FONT color=red>=</FONT>&nbsp;640<FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>(</FONT>32&nbsp;*&nbsp;15<FONT 
+                  color=red>)</FONT>&nbsp;<FONT color=red>=</FONT>&nbsp;480<FONT 
+                  color=red>;</FONT><BR>*/</SPAN><BR><BR>int&nbsp;iFaseAtual&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;0<FONT color=red>;</FONT>&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Guarda&nbsp;o&nbsp;index&nbsp;da&nbsp;fase&nbsp;atual<FONT 
+                  color=red>.</FONT></SPAN><BR><BR><SPAN 
+                  class=comentario>//Variável&nbsp;do&nbsp;tipo&nbsp;BITMAP&nbsp;responsável&nbsp;por&nbsp;guardar&nbsp;as&nbsp;texturas</SPAN><BR>BITMAP&nbsp;*Textura<FONT 
+                  color=red>[</FONT>3<FONT color=red>]</FONT>&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;<FONT 
+                  color=red>{</FONT>NULL,&nbsp;NULL,&nbsp;NULL<FONT 
+                  color=red>}</FONT><FONT color=red>;</FONT><BR><BR><SPAN 
+                  class=comentario>/* 
+                  &nbsp;<BR>Variáveis&nbsp;Mapa&nbsp;tridimensional&nbsp;sendo&nbsp;o&nbsp;primeiro&nbsp;ecrãn&nbsp;a&nbsp;Fase&nbsp;e&nbsp;os&nbsp;<BR>outros&nbsp;dois&nbsp;correspondem&nbsp;a&nbsp;quantidade&nbsp;de&nbsp;Tiles&nbsp;na&nbsp;horizontal&nbsp;e&nbsp;vertical<FONT 
+                  color=red>.</FONT><BR>*/</SPAN><BR>int&nbsp;Mapa<FONT 
+                  color=red>[</FONT>iQtdeFases<FONT color=red>]</FONT><FONT 
+                  color=red>[</FONT>iTilesX<FONT color=red>]</FONT><FONT 
+                  color=red>[</FONT>iTilesY<FONT color=red>]</FONT><FONT 
+                  color=red>;</FONT><BR><BR>int&nbsp;main<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><BR><FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;allegro_init<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;install_keyboard<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;set_color_depth<FONT 
+                  color=red>(</FONT>32<FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;set_gfx_mode<FONT 
+                  color=red>(</FONT>GFX_AUTODETECT_WINDOWED,&nbsp;640,&nbsp;480,&nbsp;0,&nbsp;0<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;set_window_title<FONT 
+                  color=red>(</FONT>&nbsp;<FONT 
+                  color=red>"</FONT>Fases&nbsp;em&nbsp;arquivos&nbsp;textos<FONT 
+                  color=red>"</FONT>&nbsp;<FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;install_timer<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;install_int<FONT 
+                  color=red>(</FONT>&nbsp;frame_rate,&nbsp;1000&nbsp;<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;install_int_ex<FONT 
+                  color=red>(</FONT>&nbsp;incrementa_speed,&nbsp;BPS_TO_TIMER<FONT 
+                  color=red>(</FONT>60<FONT color=red>)</FONT>&nbsp;<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//Habilita&nbsp;Acentuação</SPAN><BR>&nbsp;&nbsp;&nbsp;set_uformat<FONT 
+                  color=red>(</FONT>U_ASCII<FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;BITMAP&nbsp;*Buffer&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;NULL<FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;Buffer&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;create_bitmap<FONT 
+                  color=red>(</FONT>SCREEN_W,&nbsp;SCREEN_H<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;CarregaMatriz<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;CarregaTexturas<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;while&nbsp;<FONT 
+                  color=red>(</FONT>!key<FONT color=red>[</FONT>KEY_ESC<FONT 
+                  color=red>]</FONT><FONT 
+                  color=red>)</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while&nbsp;<FONT 
+                  color=red>(</FONT>&nbsp;<FONT color=red>:</FONT><FONT 
+                  color=red>:</FONT>fps_speed&nbsp;<FONT 
+                  color=red>&gt;</FONT>&nbsp;0&nbsp;<FONT 
+                  color=red>)</FONT>&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>{</FONT>&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear_bitmap<FONT 
+                  color=red>(</FONT>Buffer<FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DesenhaCenario<FONT 
+                  color=red>(</FONT>Buffer,&nbsp;iFaseAtual<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Teclado<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex<FONT 
+                  color=red>(</FONT>&nbsp;Buffer,&nbsp;font,&nbsp;8,&nbsp;10,&nbsp;makecol<FONT 
+                  color=red>(</FONT>255,255,0<FONT 
+                  color=red>)</FONT>,&nbsp;<FONT color=red>-</FONT>1,&nbsp;<FONT 
+                  color=red>"</FONT>FPS<FONT color=red>:</FONT>&nbsp;<FONT 
+                  color=red>%</FONT>d<FONT color=red>"</FONT>,&nbsp;<FONT 
+                  color=red>:</FONT><FONT 
+                  color=red>:</FONT>fps_antigo&nbsp;<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_centre_ex<FONT 
+                  color=red>(</FONT>Buffer,&nbsp;font,&nbsp;SCREEN_W/2,&nbsp;<FONT 
+                  color=red>(</FONT>SCREEN_H/2<FONT color=red>)</FONT><FONT 
+                  color=red>-</FONT>10,&nbsp;makecol<FONT 
+                  color=red>(</FONT>255,&nbsp;255,&nbsp;0<FONT 
+                  color=red>)</FONT>,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>-</FONT>1,&nbsp;<FONT color=red>"</FONT>FASE<FONT 
+                  color=red>:</FONT>&nbsp;<FONT color=red>%</FONT>d<FONT 
+                  color=red>"</FONT>,&nbsp;iFaseAtual<FONT 
+                  color=red>+</FONT>1<FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_centre_ex<FONT 
+                  color=red>(</FONT>Buffer,&nbsp;font,&nbsp;SCREEN_W/2,&nbsp;SCREEN_H/2,&nbsp;makecol<FONT 
+                  color=red>(</FONT>255,&nbsp;255,&nbsp;0<FONT 
+                  color=red>)</FONT>,&nbsp;<FONT 
+                  color=red>-</FONT>1,&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>"</FONT>Pressione&nbsp;espaço&nbsp;para&nbsp;mudar&nbsp;de&nbsp;fase<FONT 
+                  color=red>.</FONT><FONT color=red>"</FONT><FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>:</FONT><FONT color=red>:</FONT>fps_speed<FONT 
+                  color=red>-</FONT><FONT color=red>-</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>:</FONT><FONT color=red>:</FONT>fps<FONT 
+                  color=red>+</FONT><FONT color=red>+</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>}</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blit&nbsp;<FONT 
+                  color=red>(</FONT>Buffer,screen,&nbsp;0,&nbsp;0,&nbsp;0,&nbsp;0,SCREEN_W,&nbsp;SCREEN_H<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>}</FONT><BR><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//Desaloca&nbsp;as&nbsp;imagens&nbsp;da&nbsp;memória</SPAN><BR>&nbsp;&nbsp;&nbsp;destroy_bitmap<FONT 
+                  color=red>(</FONT>Buffer<FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;destroy_bitmap<FONT 
+                  color=red>(</FONT>Textura<FONT color=red>[</FONT>0<FONT 
+                  color=red>]</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;destroy_bitmap<FONT 
+                  color=red>(</FONT>Textura<FONT color=red>[</FONT>1<FONT 
+                  color=red>]</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;destroy_bitmap<FONT 
+                  color=red>(</FONT>Textura<FONT color=red>[</FONT>2<FONT 
+                  color=red>]</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;allegro_exit<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;return&nbsp;0<FONT 
+                  color=red>;</FONT><BR><FONT color=red>}</FONT><BR><SPAN 
+                  class=comentario>/* 
+                  <BR>A&nbsp;função&nbsp;abaixo&nbsp;é&nbsp;a&nbsp;mais&nbsp;importante&nbsp;com&nbsp;relação&nbsp;ao&nbsp;arquivo&nbsp;de&nbsp;fases<FONT 
+                  color=red>.</FONT>&nbsp;Ela&nbsp;serve&nbsp;<BR>para&nbsp;carregar&nbsp;os&nbsp;valores&nbsp;que&nbsp;estão&nbsp;dentro&nbsp;do&nbsp;arquivo&nbsp;de&nbsp;fase&nbsp;para&nbsp;a&nbsp;matriz<FONT 
+                  color=red>.</FONT>&nbsp;<BR>Com&nbsp;base&nbsp;na&nbsp;matriz&nbsp;iremos&nbsp;montar&nbsp;o&nbsp;cenário&nbsp;de&nbsp;cada&nbsp;fase&nbsp;e&nbsp;posicionar&nbsp;suas&nbsp;<BR>respectivas&nbsp;texturas&nbsp;ou&nbsp;objetos,&nbsp;dependendo&nbsp;de&nbsp;como&nbsp;você&nbsp;modificar&nbsp;o&nbsp;código<FONT 
+                  color=red>.</FONT><BR>*/</SPAN><BR>void&nbsp;CarregaMatriz<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><BR><FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;int&nbsp;x&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;0<FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;int&nbsp;y&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;0<FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;int&nbsp;iFase&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;0<FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;char&nbsp;sLinha<FONT 
+                  color=red>[</FONT>&nbsp;iTilesX&nbsp;<FONT 
+                  color=red>]</FONT><FONT color=red>;</FONT>&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Qtde&nbsp;de&nbsp;caracteres&nbsp;por&nbsp;linha</SPAN><BR><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//O&nbsp;FOR&nbsp;abaixo&nbsp;é&nbsp;para&nbsp;preencher&nbsp;todas&nbsp;as&nbsp;fases<FONT 
+                  color=red>.</FONT></SPAN><BR>&nbsp;&nbsp;&nbsp;for&nbsp;<FONT 
+                  color=red>(</FONT>iFase<FONT color=red>=</FONT>0<FONT 
+                  color=red>;</FONT>&nbsp;iFase<FONT 
+                  color=red>&lt;</FONT>iQtdeFases<FONT 
+                  color=red>;</FONT>&nbsp;iFase<FONT color=red>+</FONT><FONT 
+                  color=red>+</FONT><FONT 
+                  color=red>)</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Abre&nbsp;o&nbsp;arquivo&nbsp;de&nbsp;fases&nbsp;para&nbsp;leitura&nbsp;com&nbsp;base&nbsp;no&nbsp;iFase&nbsp;e&nbsp;o&nbsp;Array&nbsp;de&nbsp;fases</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ifstream&nbsp;oLendoFase<FONT 
+                  color=red>(</FONT>ArqFases<FONT color=red>[</FONT>iFase<FONT 
+                  color=red>]</FONT>,&nbsp;ios<FONT color=red>:</FONT><FONT 
+                  color=red>:</FONT>in&nbsp;<FONT color=red>)</FONT><FONT 
+                  color=red>;</FONT>&nbsp;&nbsp;&nbsp;&nbsp;<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//Preenche&nbsp;a&nbsp;matriz&nbsp;na&nbsp;horizontal&nbsp;e&nbsp;vertical</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;<FONT 
+                  color=red>(</FONT>y<FONT color=red>=</FONT>0<FONT 
+                  color=red>;</FONT>&nbsp;y<FONT 
+                  color=red>&lt;</FONT>iTilesY<FONT 
+                  color=red>;</FONT>&nbsp;y<FONT color=red>+</FONT><FONT 
+                  color=red>+</FONT><FONT 
+                  color=red>)</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>{</FONT>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>/* 
+                  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Atribui&nbsp;na&nbsp;variável&nbsp;sLinha&nbsp;a&nbsp;linha&nbsp;atual&nbsp;do&nbsp;arquivo&nbsp;texto<FONT 
+                  color=red>.</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Toda&nbsp;vez&nbsp;que&nbsp;essa&nbsp;rotina&nbsp;for&nbsp;chamada&nbsp;ele&nbsp;pula&nbsp;para&nbsp;a&nbsp;proxima&nbsp;linha&nbsp;e<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;joga&nbsp;o&nbsp;valor&nbsp;para&nbsp;sLinha,&nbsp;até&nbsp;finalizar&nbsp;as&nbsp;15&nbsp;linhas<FONT 
+                  color=red>.</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oLendoFase&nbsp;<FONT 
+                  color=red>&gt;</FONT><FONT 
+                  color=red>&gt;</FONT>&nbsp;sLinha<FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>/* 
+                  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Já&nbsp;com&nbsp;o&nbsp;sLinha&nbsp;preenchido,&nbsp;agora,&nbsp;o&nbsp;FOR&nbsp;abaixo&nbsp;varre&nbsp;todas&nbsp;as&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;posições&nbsp;dessa&nbsp;linha&nbsp;e&nbsp;acrescenta&nbsp;na&nbsp;linha&nbsp;da&nbsp;matriz<FONT 
+                  color=red>.</FONT>&nbsp;Após&nbsp;terminar<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;de&nbsp;varrer&nbsp;o&nbsp;sLinha&nbsp;sai&nbsp;do&nbsp;for&nbsp;e&nbsp;espera&nbsp;próxima&nbsp;linha,&nbsp;se&nbsp;houver<FONT 
+                  color=red>.</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*/</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;<FONT 
+                  color=red>(</FONT>x<FONT color=red>=</FONT>0<FONT 
+                  color=red>;</FONT>&nbsp;x<FONT 
+                  color=red>&lt;</FONT>iTilesX<FONT 
+                  color=red>;</FONT>&nbsp;x<FONT color=red>+</FONT><FONT 
+                  color=red>+</FONT><FONT 
+                  color=red>)</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mapa<FONT 
+                  color=red>[</FONT>iFase<FONT color=red>]</FONT><FONT 
+                  color=red>[</FONT>x<FONT color=red>]</FONT><FONT 
+                  color=red>[</FONT>y<FONT color=red>]</FONT>&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;sLinha<FONT color=red>[</FONT>x<FONT 
+                  color=red>]</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>}</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>}</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oLendoFase<FONT 
+                  color=red>.</FONT>close<FONT color=red>(</FONT><FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>}</FONT><BR><FONT color=red>}</FONT><BR><SPAN 
+                  class=comentario>/* 
+                  <BR>A&nbsp;função&nbsp;abaixo&nbsp;é&nbsp;responsável&nbsp;por&nbsp;declarar&nbsp;e&nbsp;definir&nbsp;as&nbsp;imagens&nbsp;que&nbsp;iremos<BR>utilizar&nbsp;no&nbsp;Array&nbsp;Textura<FONT 
+                  color=red>.</FONT>&nbsp;Essa&nbsp;imagens&nbsp;devem&nbsp;estar&nbsp;dentro&nbsp;da&nbsp;pasta&nbsp;imagens&nbsp;no&nbsp;<BR>nosso&nbsp;projeto,caso&nbsp;contrário&nbsp;o&nbsp;programa&nbsp;irá&nbsp;apresentar&nbsp;a&nbsp;mensagem&nbsp;de&nbsp;erro&nbsp;fatal<FONT 
+                  color=red>.</FONT><BR>*/</SPAN><BR>void&nbsp;CarregaTexturas<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><BR><FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Define&nbsp;o&nbsp;índice&nbsp;0&nbsp;da&nbsp;textura&nbsp;como&nbsp;sendo&nbsp;parede</SPAN><BR>&nbsp;&nbsp;&nbsp;Textura<FONT 
+                  color=red>[</FONT>0<FONT color=red>]</FONT>&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;create_bitmap<FONT 
+                  color=red>(</FONT>iTamTilesX,&nbsp;iTamTilesY<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;Textura<FONT 
+                  color=red>[</FONT>0<FONT color=red>]</FONT>&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;load_bitmap<FONT 
+                  color=red>(</FONT><FONT color=red>"</FONT>tiles/parede<FONT 
+                  color=red>.</FONT>bmp<FONT color=red>"</FONT>,&nbsp;NULL<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Define&nbsp;o&nbsp;índice&nbsp;1&nbsp;da&nbsp;textura&nbsp;como&nbsp;sendo&nbsp;grama</SPAN><BR>&nbsp;&nbsp;&nbsp;Textura<FONT 
+                  color=red>[</FONT>1<FONT color=red>]</FONT>&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;create_bitmap<FONT 
+                  color=red>(</FONT>iTamTilesX,&nbsp;iTamTilesY<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;Textura<FONT 
+                  color=red>[</FONT>1<FONT color=red>]</FONT>&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;load_bitmap<FONT 
+                  color=red>(</FONT><FONT color=red>"</FONT>tiles/grama<FONT 
+                  color=red>.</FONT>bmp<FONT color=red>"</FONT>,NULL<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Define&nbsp;o&nbsp;índice&nbsp;2&nbsp;da&nbsp;textura&nbsp;como&nbsp;sendo&nbsp;chão</SPAN><BR>&nbsp;&nbsp;&nbsp;Textura<FONT 
+                  color=red>[</FONT>2<FONT color=red>]</FONT>&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;create_bitmap<FONT 
+                  color=red>(</FONT>iTamTilesX,&nbsp;iTamTilesY<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;Textura<FONT 
+                  color=red>[</FONT>2<FONT color=red>]</FONT>&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;load_bitmap<FONT 
+                  color=red>(</FONT><FONT color=red>"</FONT>tiles/chao<FONT 
+                  color=red>.</FONT>bmp<FONT color=red>"</FONT>,NULL<FONT 
+                  color=red>)</FONT><FONT color=red>;</FONT><BR><FONT 
+                  color=red>}</FONT><BR><BR><SPAN class=comentario>/* 
+                  <BR>Essa&nbsp;função&nbsp;é&nbsp;responsável&nbsp;por&nbsp;desenhar&nbsp;as&nbsp;texturas&nbsp;do&nbsp;cenário<FONT 
+                  color=red>.</FONT>&nbsp;O&nbsp;cenário&nbsp;a&nbsp;ser&nbsp;<BR>carregado&nbsp;é&nbsp;informado&nbsp;através&nbsp;de&nbsp;um&nbsp;argumento<FONT 
+                  color=red>.</FONT>&nbsp;Essa&nbsp;função&nbsp;usa&nbsp;como&nbsp;base&nbsp;a&nbsp;matriz<BR>carregada&nbsp;anteriormente&nbsp;para&nbsp;desenhar&nbsp;as&nbsp;texturas<FONT 
+                  color=red>.</FONT><BR>*/</SPAN><BR>void&nbsp;DesenhaCenario<FONT 
+                  color=red>(</FONT>BITMAP&nbsp;*Cenario,&nbsp;int&nbsp;iFase<FONT 
+                  color=red>)</FONT><BR><FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;int&nbsp;x&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;0<FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;int&nbsp;y&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;0<FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;for&nbsp;<FONT 
+                  color=red>(</FONT>y<FONT color=red>=</FONT>0<FONT 
+                  color=red>;</FONT>&nbsp;y<FONT 
+                  color=red>&lt;</FONT>iTilesY<FONT 
+                  color=red>;</FONT>&nbsp;y<FONT color=red>+</FONT><FONT 
+                  color=red>+</FONT><FONT 
+                  color=red>)</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for&nbsp;<FONT 
+                  color=red>(</FONT>x<FONT color=red>=</FONT>0<FONT 
+                  color=red>;</FONT>&nbsp;x<FONT 
+                  color=red>&lt;</FONT>iTilesX<FONT 
+                  color=red>;</FONT>&nbsp;x<FONT color=red>+</FONT><FONT 
+                  color=red>+</FONT><FONT 
+                  color=red>)</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;&nbsp;<FONT 
+                  color=red>(</FONT><FONT color=red>(</FONT>char<FONT 
+                  color=red>)</FONT>Mapa<FONT color=red>[</FONT>iFase<FONT 
+                  color=red>]</FONT><FONT color=red>[</FONT>x<FONT 
+                  color=red>]</FONT><FONT color=red>[</FONT>y<FONT 
+                  color=red>]</FONT>&nbsp;<FONT color=red>=</FONT><FONT 
+                  color=red>=</FONT>&nbsp;<FONT color=red>'</FONT><FONT 
+                  color=red>#</FONT><FONT color=red>'</FONT><FONT 
+                  color=red>)</FONT>&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Parede</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite<FONT 
+                  color=red>(</FONT>Cenario,Textura<FONT 
+                  color=red>[</FONT>0<FONT 
+                  color=red>]</FONT>,&nbsp;x*iTamTilesX,&nbsp;y*iTamTilesY<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;&nbsp;<FONT 
+                  color=red>(</FONT><FONT color=red>(</FONT>char<FONT 
+                  color=red>)</FONT>Mapa<FONT color=red>[</FONT>iFase<FONT 
+                  color=red>]</FONT><FONT color=red>[</FONT>x<FONT 
+                  color=red>]</FONT><FONT color=red>[</FONT>y<FONT 
+                  color=red>]</FONT>&nbsp;<FONT color=red>=</FONT><FONT 
+                  color=red>=</FONT>&nbsp;<FONT color=red>'</FONT><FONT 
+                  color=red>-</FONT><FONT color=red>'</FONT><FONT 
+                  color=red>)</FONT>&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Grama</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite<FONT 
+                  color=red>(</FONT>Cenario,Textura<FONT 
+                  color=red>[</FONT>1<FONT 
+                  color=red>]</FONT>,&nbsp;x*iTamTilesX,&nbsp;y*iTamTilesY<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;&nbsp;<FONT 
+                  color=red>(</FONT><FONT color=red>(</FONT>char<FONT 
+                  color=red>)</FONT>Mapa<FONT color=red>[</FONT>iFase<FONT 
+                  color=red>]</FONT><FONT color=red>[</FONT>x<FONT 
+                  color=red>]</FONT><FONT color=red>[</FONT>y<FONT 
+                  color=red>]</FONT>&nbsp;<FONT color=red>=</FONT><FONT 
+                  color=red>=</FONT>&nbsp;<FONT color=red>'</FONT><FONT 
+                  color=red>.</FONT><FONT color=red>'</FONT><FONT 
+                  color=red>)</FONT>&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Chão</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite<FONT 
+                  color=red>(</FONT>Cenario,Textura<FONT 
+                  color=red>[</FONT>2<FONT 
+                  color=red>]</FONT>,&nbsp;x*iTamTilesX,&nbsp;y*iTamTilesY<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>}</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>}</FONT><BR><FONT color=red>}</FONT><BR><SPAN 
+                  class=comentario>/* 
+                  <BR>A&nbsp;função&nbsp;abaixo&nbsp;é&nbsp;responsável&nbsp;por&nbsp;controlar&nbsp;as&nbsp;entradas&nbsp;do&nbsp;teclado,&nbsp;qualquer<BR>tecla&nbsp;pressionada&nbsp;durante&nbsp;a&nbsp;execução&nbsp;do&nbsp;jogo<FONT 
+                  color=red>.</FONT><BR>*/</SPAN><BR>void&nbsp;Teclado<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><BR><FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>/* 
+                  <BR>&nbsp;&nbsp;&nbsp;Quando&nbsp;declaramos&nbsp;uma&nbsp;variável&nbsp;como&nbsp;sendo&nbsp;static&nbsp;quer&nbsp;dizer&nbsp;que&nbsp;mesmo&nbsp;saindo<BR>&nbsp;&nbsp;&nbsp;da&nbsp;função&nbsp;ela&nbsp;não&nbsp;vai&nbsp;perder&nbsp;o&nbsp;valor&nbsp;dela<FONT 
+                  color=red>.</FONT>&nbsp;Dessa&nbsp;forma,&nbsp;utilizamos&nbsp;a&nbsp;variável&nbsp;<BR>&nbsp;&nbsp;&nbsp;abaixo&nbsp;para&nbsp;controlar&nbsp;o&nbsp;tempo&nbsp;de&nbsp;uma&nbsp;tecla&nbsp;a&nbsp;outra<FONT 
+                  color=red>.</FONT><BR>&nbsp;&nbsp;&nbsp;*/</SPAN><BR>&nbsp;&nbsp;&nbsp;static&nbsp;int&nbsp;Buffer_Teclado&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;0<FONT 
+                  color=red>;</FONT><BR><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//Tudo&nbsp;que&nbsp;estiver&nbsp;dentro&nbsp;o&nbsp;IF&nbsp;abaixo&nbsp;será&nbsp;executado&nbsp;a&nbsp;cada&nbsp;30&nbsp;ciclos&nbsp;de&nbsp;CPU</SPAN><BR>&nbsp;&nbsp;&nbsp;if&nbsp;<FONT 
+                  color=red>(</FONT>Buffer_Teclado&nbsp;<FONT 
+                  color=red>=</FONT><FONT color=red>=</FONT>&nbsp;0<FONT 
+                  color=red>)</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+                  class=comentario>//&nbsp;Muda&nbsp;o&nbsp;Cenário&nbsp;caso&nbsp;aperte&nbsp;a&nbsp;tecla&nbsp;espaço</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;<FONT 
+                  color=red>(</FONT>key<FONT color=red>[</FONT>KEY_SPACE<FONT 
+                  color=red>]</FONT><FONT 
+                  color=red>)</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if&nbsp;<FONT 
+                  color=red>(</FONT>iFaseAtual&nbsp;<FONT 
+                  color=red>&lt;</FONT>&nbsp;<FONT 
+                  color=red>(</FONT>iQtdeFases<FONT color=red>-</FONT>1<FONT 
+                  color=red>)</FONT><FONT 
+                  color=red>)</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iFaseAtual<FONT 
+                  color=red>+</FONT><FONT color=red>+</FONT><FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iFaseAtual&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;0<FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buffer_Teclado&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;30<FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>}</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>}</FONT>&nbsp;else&nbsp;Buffer_Teclado<FONT 
+                  color=red>-</FONT><FONT color=red>-</FONT><FONT 
+                  color=red>;</FONT><BR><FONT 
+                  color=red>}</FONT><BR><BR>void&nbsp;frame_rate<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><BR><FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>:</FONT><FONT 
+                  color=red>:</FONT>fps_antigo&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;<FONT color=red>:</FONT><FONT 
+                  color=red>:</FONT>fps<FONT 
+                  color=red>;</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>:</FONT><FONT color=red>:</FONT>fps&nbsp;<FONT 
+                  color=red>=</FONT>&nbsp;0<FONT color=red>;</FONT><BR><FONT 
+                  color=red>}</FONT><BR>&nbsp;&nbsp;&nbsp;<BR>void&nbsp;incrementa_speed<FONT 
+                  color=red>(</FONT><FONT color=red>)</FONT><BR><FONT 
+                  color=red>{</FONT><BR>&nbsp;&nbsp;&nbsp;<FONT 
+                  color=red>:</FONT><FONT color=red>:</FONT>fps_speed<FONT 
+                  color=red>+</FONT><FONT color=red>+</FONT><FONT 
+                  color=red>;</FONT>&nbsp;<BR><FONT 
+                  color=red>}</FONT><BR>END_OF_MAIN<FONT color=red>(</FONT><FONT 
+                  color=red>)</FONT><FONT 
+            color=red>;</FONT><BR></TD></TR></TBODY></TABLE>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO...</SPAN> 
+            <HR>
+
+            <P><BR><BR>Ao executar o código acima você irá perceber que ele 
+            mostra apenas um cenário montado. Aperte a barra de espaço para 
+            mostrar os demais cenários.<BR><BR>De qualquer forma, você já 
+            consegue fazer um jogo de puzzle com vários cenários carregados a 
+            partir de um arquivo de dados. <BR>Mais adiante após estudar mais 
+            sobre organização de cenários dentro de arquivos, estarei 
+            disponibilizando mais materiais sobre o assunto.<BR><BR>Para melhor 
+            entendimento do código acima compile, execute e altere o código como 
+            bem entender. Quaisquer dúvidas estaremos no fórum para tentar 
+            ajudar.<BR><BR>Abraço.<BR></P><BR><SPAN 
+            class=conteudo><B>Contribuidor</B> <BR>Bruno A. Rovela<BR>10/06/2008 
+            </SPAN>
+            <P class=conteudo><A class=conteudo 
+            href="javascript:history.go(-1)">Voltar </A></P></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background=CENARIO_arquivos/111.jpg><IMG height=1 
+      src="CENARIO_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background=CENARIO_arquivos/111.jpg colSpan=2 height=1><IMG 
+      height=1 src="CENARIO_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

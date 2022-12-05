@@ -1,0 +1,180 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0064)http://pjmoo.codigolivre.org.br/gdj/pag_artigo_leitura.php?id=20 -->
+<HTML><HEAD><TITLE>GDJ :: Artigos :: Programação :: C/C++ :: Escrevendo uma Rotina para Fontes</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META 
+content="Site voltado para o Desenvolvimento de Jogos com material para criação e desenvolvimento de games para Computador" 
+name=description>
+<META 
+content="Artigos :: Programação :: C/C++ Escrevendo uma Rotina para Fontes" 
+name=keywords><LINK 
+href="GDJ  Artigos  Programação  C-C++  Escrevendo uma Rotina para Fontes_arquivos/artigo_estilo.css" 
+rel=stylesheet><LINK href="favicon.ico" rel="shortcut icon">
+<SCRIPT language=JavaScript 
+src="GDJ  Artigos  Programação  C-C++  Escrevendo uma Rotina para Fontes_arquivos/site.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY>
+<TABLE height="100%" cellSpacing=1 cellPadding=8 width=760 align=center 
+bgColor=#a0a0b0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=site_area vAlign=top height="100%">
+      <TABLE height="100%" cellSpacing=0 cellPadding=1 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=middle width="100%" HEIGTH="260">
+            <TABLE width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=252><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/index.php"><IMG 
+                  src="GDJ  Artigos  Programação  C-C++  Escrevendo uma Rotina para Fontes_arquivos/logo.gif" 
+                  width=252 border=0></A></TD>
+                <TD align=middle width="100%"><B>[</B><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_categoria.php?id=2">Artigos</A><B>] 
+                  [</B><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/sobre.php">Sobre</A><B>]</B></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD align=middle width="100%" height=20><A 
+            href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_lista.php?id=21"><B>
+            <DIV class=categoria_artigo>Artigos :: Programação :: 
+            C/C++</DIV></B></A></TD></TR>
+        <TR>
+          <TD vAlign=top width="100%" height="100%"><!-- AREA DE TEXTO - INICIO -->
+            <TABLE width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top align=middle>
+                  <H1>Escrevendo uma Rotina para Fontes</H1><SUP>Autor : <A 
+                  href="mailto:lordvader@grupoatena.com.br">LordVader</A>&nbsp;&nbsp;</SUP> 
+                </TD></TR>
+              <TR>
+                <TD vAlign=top align=JUSTIFY width="100%">
+                  <DIV align=left>
+                  <P>
+                  <CENTER><B><FONT face=Verdana color=#008000 size=5>Escrevendo 
+                  uma Rotina para Fontes<BR></FONT></B><FONT face=Verdana 
+                  size=2><B>por Ben Hanson<BR>traduzido por <A 
+                  href="mailto:ehasis@mailbr.com.br">Edison Henrique 
+                  Andreassy</A></B></FONT></CENTER>
+                  <P></P>
+                  <P><B><FONT face=Verdana color=#008000 
+                  size=4>Introdução</FONT></B> </P>
+                  <P><FONT face=Verdana size=2>Este artigo tem a intenção de 
+                  mostrar como implementar a utilização de fontes no seu jogo. O 
+                  alvo do artigo cobre mais os iniciantes. Irei mostrar a forma 
+                  mais simples (na minha opinião) de se fazer isto. O tutorial 
+                  irá trabalhar com DirectX, em 16-bit de cores e assumo que 
+                  você já tenha inicializado toda a biblioteca. Irei utilizar 
+                  lpddsbak como <I>back buffer</I>.</FONT> 
+                  <P><B><FONT face=Verdana color=#008000 
+                  size=4>Configurando</FONT></B> </P>
+                  <P><FONT face=Verdana size=2>Primeiro você tem que criar uma 
+                  variável HFONT, algo como:</FONT> 
+                  <BLOCKQUOTE>
+                    <P><FONT face="Courier New" color=#000080 size=2>HFONT 
+                    fnt;<BR></FONT></P></BLOCKQUOTE>
+                  <P><FONT face=Verdana size=2>Então deve preencher a estrutura 
+                  com a função CreateFont:</FONT> 
+                  <BLOCKQUOTE>
+                    <P><FONT face="Courier New" color=#008000 size=2>// preenche 
+                    os valores com a estrutura padrão&nbsp;<BR>// utilizando a 
+                    fonte Arial<BR></FONT><FONT face="Courier New" color=#000080 
+                    size=2>fnt = CreateFont(14,0,0,0,0,0,0,0,0,0,0,0,0, 
+                    "Arial")</FONT></P></BLOCKQUOTE>
+                  <P><FONT face=Verdana size=2>O que foi feito, foi informar o 
+                  windows para utilizar todos os valores padrão com a fonte 
+                  Arial. O próximo passo é criar uma função para utilizar estes 
+                  valores.</FONT> 
+                  <P><B><FONT face=Verdana color=#008000 size=4>Desenhando o 
+                  Texto</FONT></B> </P>
+                  <P><FONT face=Verdana size=2>Criar uma função para desenhar o 
+                  texto utilizando o GDI é um pouco complicado, então vou 
+                  mostrar o corpo da função:</FONT> 
+                  <BLOCKQUOTE>
+                    <P><FONT face="Courier New" color=#000080 size=2>void 
+                    Draw_Text(char *text, int x,int 
+                    y,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    COLORREF 
+                    color,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    LPDIRECTDRAWSURFACE 
+                    lpdds,<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    HFONT fnt)<BR>{<BR></FONT><FONT face="Courier New" 
+                    color=#008000 size=2>//esta função desenha o texto no modo 
+                    DX 16-bit<BR>//com uma fonte selecionada<BR></FONT><FONT 
+                    face="Courier New" color=#000080 size=2><BR>HDC dc; 
+                    </FONT><FONT face="Courier New" color=#008000 size=2>// o dc 
+                    (device context)</FONT><FONT face="Courier New" 
+                    color=#000080 size=2><BR></FONT><FONT face="Courier New" 
+                    color=#008000 size=2>// pega o dc da 
+                    superfície<BR></FONT><FONT face="Courier New" color=#000080 
+                    size=2>lpdds-&gt;GetDC(&amp;dc)<BR><BR></FONT><FONT 
+                    face="Courier New" color=#008000 size=2>// define as 
+                    cores&nbsp;<BR></FONT><FONT face="Courier New" color=#000080 
+                    size=2>SetTextColor(dc,color);<BR><BR></FONT><FONT 
+                    face="Courier New" color=#008000 size=2>// define o fundo 
+                    para o modo transparente<BR>// desta forma o preto não será 
+                    copiado<BR></FONT><FONT face="Courier New" color=#000080 
+                    size=2>SetBkMode(dc, TRANSPARENT);<BR><BR></FONT><FONT 
+                    face="Courier New" color=#008000 size=2>// desenha o texto 
+                    utilizando a fonte<BR></FONT><FONT face="Courier New" 
+                    color=#000080 size=2>SelectObject(dc, 
+                    fnt);<BR>TextOut(dc,x,y,text,strlen(text));<BR><BR></FONT><FONT 
+                    face="Courier New" color=#008000 size=2>// libera o 
+                    dc<BR></FONT><FONT face="Courier New" color=#000080 
+                    size=2>lpdds-&gt;ReleaseDC(dc);<BR><BR>} </FONT><FONT 
+                    face="Courier New" color=#008000 size=2>// fim 
+                    Draw_Text</FONT></P></BLOCKQUOTE>
+                  <P><B><FONT face=Verdana color=#008000 
+                  size=4>Utilizando</FONT></B> </P>
+                  <P><FONT face=Verdana size=2>Agora vou mostrar um exemplo de 
+                  como utilizar tudo isto:</FONT> 
+                  <BLOCKQUOTE>
+                    <P><FONT face="Courier New" color=#008000 size=2>//primeiro 
+                    cria a fonte<BR></FONT><FONT face="Courier New" 
+                    color=#000080 size=2>HFONT fnt;<BR>fnt = 
+                    CreateFont(14,0,0,0,0,0,0,0,0,0,0,0,0,"Arial");<BR></FONT><FONT 
+                    face="Courier New" color=#008000 size=2>//desenha o texto 
+                    com a fonte arial<BR></FONT><FONT face="Courier New" 
+                    color=#000080 size=2>Draw_Text("Este texto é com a fonte 
+                    Arial 
+                    14",<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                    0,0,RGB(255, 255, 255), lpddsback, 
+                  fnt);<BR></FONT></P></BLOCKQUOTE>
+                  <P><FONT face=Verdana size=2>E isto é tudo. Você pode mudar o 
+                  tamanho da fonte bastando trocar o número 14 no exemplo acima. 
+                  Da mesma forma você pode trocar a face da fonte de Arial para 
+                  qualquer outra. Para maiores informações dê uma olhada na 
+                  documentação do seu compilador (assumo que seja o MSVC) sobre 
+                  a função CreateFont. Ela irá te mostrar o que significa cada 
+                  parâmetro.<BR><BR><I>[Notas do editor: Apesar desta técnica 
+                  ser simples e fácil de implementar, ela é um pouco lenta em 
+                  comparação com outros métodos. Para jogos que estão limitados 
+                  a saída de texto ou não requer muita performance, irá 
+                  funcionar muito bem, mas para jogos de ponta existem técnicas 
+                  muito mais rápidas.]</I> </FONT></P></DIV></TD></TR>
+              <TR>
+                <TD align=middle><BR>
+                  <HR>
+
+                  <TABLE cellSpacing=2 cellPadding=2 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=middle><A target=_blank 
+                        noHREF="javascript:Janela('../mailfriendart.asp?artigo={SCRIPT_NAME}&amp;ID=20',350,490);"><IMG 
+                        alt="Enviar para um Amigo" 
+                        src="GDJ  Artigos  Programação  C-C++  Escrevendo uma Rotina para Fontes_arquivos/botao_enviar.gif" 
+                        border=0 ALGIN="CENTER" VALIGN="TOP"><BR>Enviar para um 
+                        Amigo</A></TD>
+                      <TD align=middle><FONT class=info><A 
+                        href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_leitura_impressao.php?ID=20" 
+                        target=_blank><IMG alt="Versão para Impressão" 
+                        src="GDJ  Artigos  Programação  C-C++  Escrevendo uma Rotina para Fontes_arquivos/botao_impressora.gif" 
+                        border=0 ALGIN="CENTER" VALIGN="TOP"><BR>Versão para 
+                        Impressão</A></FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- AREA DE TEXTO - FIM --></TD></TR>
+        <TR>
+          <TD align=middle width="100%" HEIGTH="20"><B>
+            <DIV class=categoria_artigo>GDJ 2005 - Colaboração das Comunidades 
+            ArsLudica/PDJ 
+(2001/2003)</DIV></B></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>

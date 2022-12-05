@@ -1,0 +1,140 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0044)http://www.allegro.cc/resource/code/fade.php -->
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<STYLE>BODY {
+	BACKGROUND: #666666
+}
+.code {
+	BORDER-RIGHT: black 3px double; PADDING-RIGHT: 8px; BORDER-TOP: black 3px double; PADDING-LEFT: 8px; FONT-SIZE: 10pt; BACKGROUND: white; PADDING-BOTTOM: 8px; MARGIN: 8px; BORDER-LEFT: black 3px double; PADDING-TOP: 8px; BORDER-BOTTOM: black 3px double; FONT-FAMILY: Verdana, Arial, Helvetica
+}
+.code .a {
+	FONT-WEIGHT: bold
+}
+.code DIV.c {
+	BORDER-RIGHT: green 1px solid; PADDING-RIGHT: 4px; BORDER-TOP: green 1px solid; PADDING-LEFT: 4px; PADDING-BOTTOM: 4px; BORDER-LEFT: green 1px solid; PADDING-TOP: 4px; BORDER-BOTTOM: green 1px solid
+}
+.code .c {
+	FONT-SIZE: 8pt; BACKGROUND: #eeffee; COLOR: #009933; FONT-STYLE: italic
+}
+.code .p {
+	COLOR: #990099; FONT-STYLE: italic
+}
+.code .k {
+	FONT-WEIGHT: bold; COLOR: #000099
+}
+.code .o {
+	COLOR: #ff0000
+}
+</STYLE>
+
+<META content="MSHTML 6.00.3790.3959" name=GENERATOR></HEAD>
+<BODY><PRE class=code><DIV class=c>/**
+	fade.c - High Color Fading Routines
+
+	Last Revision: 21 June, 2002
+
+	Author: Matthew Leverton
+	
+	Description: Functions to fade out the currently displayed screen to black,
+	and to fade in a full screen bitmap to from a black screen.
+	
+	Usage: 
+		highcolor_fade_in(BITMAP *bmp_orig, int speed)
+			bmp_orig: a full screen bitmap with the desired fade-in picture
+			speed: a value from 1 to 255; the higher the value, the quicker the fade
+			
+		highcolor_fade_out(speed)
+			speed: a value from 1 to 255; the higher the value, the quicker the fade
+			
+	Notes:
+		The speed is best from a range of 8 to 64. These routines are rather slow
+		and stop all action, so they are only useful as transitions.
+**/</DIV>
+
+<SPAN class=p>#include &lt;allegro.h&gt;</SPAN>
+
+<SPAN class=k>void</SPAN> <SPAN class=f>highcolor_fade_in</SPAN><SPAN class=o>(</SPAN><SPAN class=a>BITMAP</SPAN> *bmp_orig, <SPAN class=k>int</SPAN> speed<SPAN class=o>)</SPAN>
+<SPAN class=o>{</SPAN>
+   <SPAN class=a>BITMAP</SPAN> *bmp_buff;
+
+    <SPAN class=k>if</SPAN> <SPAN class=o>(</SPAN><SPAN class=o>(</SPAN>bmp_buff = <SPAN class=a>create_bitmap</SPAN><SPAN class=o>(</SPAN><SPAN class=a>SCREEN_W</SPAN>, <SPAN class=a>SCREEN_H</SPAN><SPAN class=o>)</SPAN><SPAN class=o>)</SPAN><SPAN class=o>)</SPAN>
+    <SPAN class=o>{</SPAN>
+        <SPAN class=k>int</SPAN> a;
+        <SPAN class=k>if</SPAN> <SPAN class=o>(</SPAN>speed &lt;= 0<SPAN class=o>)</SPAN> speed = 16;
+        
+        <SPAN class=k>for</SPAN> <SPAN class=o>(</SPAN>a = 0; a &lt; 256; a+=speed<SPAN class=o>)</SPAN>
+        <SPAN class=o>{</SPAN>
+            <SPAN class=a>clear</SPAN><SPAN class=o>(</SPAN>bmp_buff<SPAN class=o>)</SPAN>;
+            <SPAN class=a>set_trans_blender</SPAN><SPAN class=o>(</SPAN>0,0,0,a<SPAN class=o>)</SPAN>;
+            <SPAN class=a>draw_trans_sprite</SPAN><SPAN class=o>(</SPAN>bmp_buff, bmp_orig, 0, 0<SPAN class=o>)</SPAN>;
+            <SPAN class=a>vsync</SPAN><SPAN class=o>(</SPAN><SPAN class=o>)</SPAN>;
+            <SPAN class=a>blit</SPAN><SPAN class=o>(</SPAN>bmp_buff, screen, 0,0, 0,0, <SPAN class=a>SCREEN_W</SPAN>, <SPAN class=a>SCREEN_H</SPAN><SPAN class=o>)</SPAN>;
+        <SPAN class=o>}</SPAN>
+        <SPAN class=a>destroy_bitmap</SPAN><SPAN class=o>(</SPAN>bmp_buff<SPAN class=o>)</SPAN>;
+    <SPAN class=o>}</SPAN> 
+
+    <SPAN class=a>blit</SPAN><SPAN class=o>(</SPAN>bmp_orig, <SPAN class=a>screen</SPAN>, 0,0, 0,0, <SPAN class=a>SCREEN_W</SPAN>, <SPAN class=a>SCREEN_H</SPAN><SPAN class=o>)</SPAN>;
+<SPAN class=o>}</SPAN>
+
+<SPAN class=k>void</SPAN> highcolor_fade_out<SPAN class=o>(</SPAN><SPAN class=k>int</SPAN> speed<SPAN class=o>)</SPAN>
+<SPAN class=o>{</SPAN>
+    <SPAN class=a>BITMAP</SPAN> *bmp_orig, *bmp_buff;
+
+    <SPAN class=k>if</SPAN> <SPAN class=o>(</SPAN><SPAN class=o>(</SPAN>bmp_orig = <SPAN class=a>create_bitmap</SPAN><SPAN class=o>(</SPAN><SPAN class=a>SCREEN_W</SPAN>, <SPAN class=a>SCREEN_H</SPAN><SPAN class=o>)</SPAN><SPAN class=o>)</SPAN><SPAN class=o>)</SPAN>
+    <SPAN class=o>{</SPAN>
+        <SPAN class=k>if</SPAN> <SPAN class=o>(</SPAN><SPAN class=o>(</SPAN>bmp_buff = create_bitmap<SPAN class=o>(</SPAN><SPAN class=a>SCREEN_W</SPAN>, <SPAN class=a>SCREEN_H</SPAN><SPAN class=o>)</SPAN><SPAN class=o>)</SPAN><SPAN class=o>)</SPAN>
+        <SPAN class=o>{</SPAN>
+            <SPAN class=k>int</SPAN> a;
+            <SPAN class=a>blit</SPAN><SPAN class=o>(</SPAN><SPAN class=a>screen</SPAN>, bmp_orig, 0,0, 0,0, <SPAN class=a>SCREEN_W</SPAN>, <SPAN class=a>SCREEN_H</SPAN><SPAN class=o>)</SPAN>;
+            <SPAN class=k>if</SPAN> <SPAN class=o>(</SPAN>speed &lt;= 0<SPAN class=o>)</SPAN> speed = 16;
+        
+            <SPAN class=k>for</SPAN> <SPAN class=o>(</SPAN>a = 255-speed; a &gt; 0; a-=speed<SPAN class=o>)</SPAN>
+            <SPAN class=o>{</SPAN>
+                <SPAN class=a>clear</SPAN><SPAN class=o>(</SPAN>bmp_buff<SPAN class=o>)</SPAN>;
+                <SPAN class=a>set_trans_blender</SPAN><SPAN class=o>(</SPAN>0,0,0,a<SPAN class=o>)</SPAN>;
+                <SPAN class=a>draw_trans_sprite</SPAN><SPAN class=o>(</SPAN>bmp_buff, bmp_orig, 0, 0<SPAN class=o>)</SPAN>;
+                <SPAN class=a>vsync</SPAN><SPAN class=o>(</SPAN><SPAN class=o>)</SPAN>;
+                <SPAN class=a>blit</SPAN><SPAN class=o>(</SPAN>bmp_buff, <SPAN class=a>screen</SPAN>, 0,0, 0,0, <SPAN class=a>SCREEN_W</SPAN>, <SPAN class=a>SCREEN_H</SPAN><SPAN class=o>)</SPAN>;
+            <SPAN class=o>}</SPAN>
+            <SPAN class=a>destroy_bitmap</SPAN><SPAN class=o>(</SPAN>bmp_buff<SPAN class=o>)</SPAN>;
+        <SPAN class=o>}</SPAN>
+        <SPAN class=a>destroy_bitmap</SPAN><SPAN class=o>(</SPAN>bmp_orig<SPAN class=o>)</SPAN>;
+    <SPAN class=o>}</SPAN>
+
+    <SPAN class=a>rectfill</SPAN><SPAN class=o>(</SPAN><SPAN class=a>screen</SPAN>, 0,0, <SPAN class=a>SCREEN_W</SPAN>,<SPAN class=a>SCREEN_H</SPAN>, <SPAN class=a>makecol</SPAN><SPAN class=o>(</SPAN>0,0,0<SPAN class=o>)</SPAN><SPAN class=o>)</SPAN>;
+<SPAN class=o>}</SPAN>
+
+<SPAN class=k>int</SPAN> main<SPAN class=o>(</SPAN><SPAN class=k>void</SPAN><SPAN class=o>)</SPAN>
+<SPAN class=o>{</SPAN>
+    <SPAN class=a>BITMAP</SPAN> *tmp;
+
+    <SPAN class=a>allegro_init</SPAN><SPAN class=o>(</SPAN><SPAN class=o>)</SPAN>;
+    <SPAN class=a>install_keyboard</SPAN><SPAN class=o>(</SPAN><SPAN class=o>)</SPAN>;
+
+    <SPAN class=a>set_color_depth</SPAN><SPAN class=o>(</SPAN>32<SPAN class=o>)</SPAN>;
+    <SPAN class=a>set_gfx_mode</SPAN><SPAN class=o>(</SPAN><SPAN class=a>GFX_AUTODETECT_WINDOWED</SPAN>, 640, 480, 0, 0<SPAN class=o>)</SPAN>;
+
+    <SPAN class=c>/* set up a temp bitmap to so we can fade back later */</SPAN>
+    <SPAN class=k>if</SPAN> <SPAN class=o>(</SPAN>!<SPAN class=o>(</SPAN>tmp = <SPAN class=a>create_bitmap</SPAN><SPAN class=o>(</SPAN><SPAN class=a>SCREEN_W</SPAN>, <SPAN class=a>SCREEN_H</SPAN><SPAN class=o>)</SPAN><SPAN class=o>)</SPAN><SPAN class=o>)</SPAN> exit<SPAN class=o>(</SPAN>1<SPAN class=o>)</SPAN>;
+    
+    <SPAN class=c>/* create a test screen */</SPAN>
+    <SPAN class=a>rectfill</SPAN><SPAN class=o>(</SPAN><SPAN class=a>screen</SPAN>, 0,0, <SPAN class=a>SCREEN_W</SPAN>,<SPAN class=a>SCREEN_H</SPAN>, <SPAN class=a>makecol</SPAN><SPAN class=o>(</SPAN>255,255,255<SPAN class=o>)</SPAN><SPAN class=o>)</SPAN>;
+    <SPAN class=a>circlefill</SPAN><SPAN class=o>(</SPAN><SPAN class=a>screen</SPAN>, 75,75, 25, <SPAN class=a>makecol</SPAN><SPAN class=o>(</SPAN>255,0,0<SPAN class=o>)</SPAN><SPAN class=o>)</SPAN>;
+
+    <SPAN class=c>/* save this test screen so we can fade_in to it later */</SPAN>
+    <SPAN class=a>blit</SPAN><SPAN class=o>(</SPAN><SPAN class=a>screen</SPAN>, tmp, 0,0, 0,0, <SPAN class=a>SCREEN_W</SPAN>, <SPAN class=a>SCREEN_H</SPAN><SPAN class=o>)</SPAN>;
+    <SPAN class=a>readkey</SPAN><SPAN class=o>(</SPAN><SPAN class=o>)</SPAN>;
+    
+    highcolor_fade_out<SPAN class=o>(</SPAN>16<SPAN class=o>)</SPAN>;
+    <SPAN class=a>readkey</SPAN><SPAN class=o>(</SPAN><SPAN class=o>)</SPAN>;
+
+    highcolor_fade_in<SPAN class=o>(</SPAN>tmp, 16<SPAN class=o>)</SPAN>;
+    <SPAN class=a>readkey</SPAN><SPAN class=o>(</SPAN><SPAN class=o>)</SPAN>;
+
+    <SPAN class=a>destroy_bitmap</SPAN><SPAN class=o>(</SPAN>tmp<SPAN class=o>)</SPAN>;
+    <SPAN class=k>return</SPAN> 0;
+<SPAN class=o>}</SPAN>
+<SPAN class=a>END_OF_MAIN</SPAN><SPAN class=o>(</SPAN><SPAN class=o>)</SPAN>
+
+</PRE></BODY></HTML>

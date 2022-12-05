@@ -1,0 +1,126 @@
+BODY {
+	MARGIN: 0px
+}
+.conteudo {
+	FONT-SIZE: 12px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+A.conteudo:link {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+A.conteudo:visited {
+	COLOR: #910000; TEXT-DECORATION: underline
+}
+A.conteudo:hover {
+	COLOR: #0033ff; TEXT-DECORATION: underline
+}
+A.conteudo:active {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+.conteudo9 {
+	FONT-SIZE: 9px; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+A.conteudo9:link {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+A.conteudo9:visited {
+	COLOR: #910000; TEXT-DECORATION: underline
+}
+A.conteudo9:hover {
+	COLOR: #0033ff; TEXT-DECORATION: underline
+}
+A.conteudo9:active {
+	COLOR: #ff0000; TEXT-DECORATION: underline
+}
+.comentario {
+	FONT-SIZE: 12px; COLOR: #006600; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+A.comentario:link {
+	COLOR: #006600; TEXT-DECORATION: underline
+}
+A.comentario:visited {
+	COLOR: #006600; TEXT-DECORATION: underline
+}
+A.comentario:hover {
+	COLOR: #006600; TEXT-DECORATION: underline
+}
+A.comentario:active {
+	COLOR: #006600; TEXT-DECORATION: underline
+}
+.codigo {
+	FONT-SIZE: 12px; COLOR: #000000; FONT-FAMILY: "Courier New", Courier, monospace
+}
+A.codigo:link {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A.codigo:visited {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A.codigo:hover {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+A.codigo:active {
+	COLOR: #000000; TEXT-DECORATION: underline
+}
+.conteudo2 {
+	FONT-SIZE: 12px; COLOR: #0000ff; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+A.conteudo2:link {
+	COLOR: #0000ff; TEXT-DECORATION: underline
+}
+A.conteudo2:visited {
+	COLOR: #0000ff; TEXT-DECORATION: underline
+}
+A.conteudo2:hover {
+	COLOR: #0000ff; TEXT-DECORATION: underline
+}
+A.conteudo2:active {
+	COLOR: #0000ff; TEXT-DECORATION: underline
+}
+.titulos {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #666666; FONT-FAMILY: Trebuchet MS, Arial, Helvetica, sans-serif
+}
+A.titulos:link {
+	FONT-WEIGHT: bold; COLOR: #666666; TEXT-DECORATION: underline
+}
+A.titulos:visited {
+	FONT-WEIGHT: bold; COLOR: #666666; TEXT-DECORATION: underline
+}
+A.titulos:hover {
+	FONT-WEIGHT: bold; COLOR: #72e400; TEXT-DECORATION: underline
+}
+A.titulos:active {
+	FONT-WEIGHT: bold; COLOR: #666666; TEXT-DECORATION: underline
+}
+.titulos_texto {
+	FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: #ff6600; FONT-FAMILY: Trebuchet MS, Arial, Helvetica, sans-serif
+}
+.rodape {
+	FONT-SIZE: 11px; COLOR: #c3c3c3; FONT-FAMILY: Trebuchet MS, Verdana, Arial, Helvetica, sans-serif
+}
+A.rodape:link {
+	COLOR: #c3c3c3; TEXT-DECORATION: underline
+}
+A.rodape:visited {
+	COLOR: #c3c3c3; TEXT-DECORATION: underline
+}
+A.rodape:hover {
+	COLOR: #ff9900; TEXT-DECORATION: underline
+}
+A.rodape:active {
+	COLOR: #c3c3c3; TEXT-DECORATION: underline
+}
+.form {
+	BORDER-RIGHT: #000000 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; PADDING-BOTTOM: 2px; BORDER-LEFT: #000000 1px solid; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: #000000 1px solid; FONT-FAMILY: Trebuchet MS, Arial, Helvetica, sans-serif; HEIGHT: 18px; BACKGROUND-COLOR: #b9e8ff
+}
+.mensagem {
+	BORDER-RIGHT: #000000 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; PADDING-BOTTOM: 2px; BORDER-LEFT: #000000 1px solid; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: #000000 1px solid; FONT-FAMILY: Trebuchet MS, Arial, Helvetica, sans-serif; HEIGHT: 100px; BACKGROUND-COLOR: #b9e8ff
+}
+.bt_form {
+	BORDER-RIGHT: #000000 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #000000 1px solid; PADDING-LEFT: 2px; FONT-SIZE: 12px; PADDING-BOTTOM: 2px; BORDER-LEFT: #000000 1px solid; COLOR: #000000; PADDING-TOP: 2px; BORDER-BOTTOM: #000000 1px solid; FONT-FAMILY: Trebuchet MS, Arial, Helvetica, sans-serif; HEIGHT: 25px; BACKGROUND-COLOR: #b9e8ff
+}
+.tabela {
+	BORDER-RIGHT: #003366 thin dotted; BORDER-TOP: #003366 thin dotted; BORDER-LEFT: #003366 thin dotted; BORDER-BOTTOM: #003366 thin dotted
+}
+.style1 {
+	FONT-FAMILY: "Courier New", Courier, monospace
+}

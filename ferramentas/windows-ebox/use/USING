@@ -1,0 +1,215 @@
+Jon Rafkind
+email: workmin@ccs.neu.edu
+10/25/2002
+
+HOWTO USE EBOX: Estimated Boxes
+
+Requires: Allegro Graphics Library by Shawn Hargreaves
+Please be sure to read almost entire documentation or you will be confused.
+
+Ebox works with the Allegro library to test to see if two BITMAP objects collide with each other at an 
+arbitrary point in space. It takes a fair amount of processing time to create an EBox object, so you probably 
+want to only make it once, thus not allowing for rotating bitmaps. If you have multiple frames for some object
+to rotate through, you can make multiple EBox's for that object and the collision will be relevant to the 
+current frame.
+
+Basic use of EBox's:
+
+The actual name of the object that you will use is ECollide. EBox is an object used by ECollide but i chose
+the names in the wrong order and now you are stuck with what i have chosen.
+
+To start off with, create some sort of bitmap. Then create an ECollide object and pass it the bitmap and
+some other paramaters. ECollide is a class with the following constructors:
+
+ECollide()
+parameters: none
+result: an empty collision object which will do nothing when colliding with other objects
+
+ECollide( BITMAP * work, int size, int mask, double enough );
+parameters:
+work: BITMAP object. This is the object you are trying to convert into a series of boxes.
+size: The minimum size bitmap will be split up into when slicing into boxes. The smaller the number most
+likely the more boxes you will have and the more accurate the collision will be.
+mask: The masking color that the BITMAP object uses. The masking color will not be counted as part of the
+object.
+enough: Minimum percent of how many pixels per box there must be for it to count as part of the object.
+This should be in a range from 0.01 to 100.0
+result: Creates an ECollide object by analyzing the bitmap passed.
+
+Once you create an ECollide object, it can now collide with other ECollide objects. Simply do this test
+to see if two objcets collide with each other.
+
+ECollide * collide_one = new ECollide( bmp, 3, makecol(255,0,255), 50.0 );
+ECollide * collide_two = new ECollide( bmp2, 4, makecol(255,0,255), 50.0 );
+
+if ( collide_one->Collision( collide_two, x1, y1, x2, y2 ) )
+	the two objects collided!
+
+Here is the description of the Collision function:
+
+bool Collision( ECollide * hit, int mx, int my, int ax, int ay );
+paremeters: 
+hit: Another ECollide object
+mx: X coordinate of the object that is calling the function at the center
+my: Y coordinate of the object that is calling the function at the center
+ax: X coordinate of the object that is passed as the parameter at the center
+ay: Y coordinate of the object that is passed as the parameter at the center
+result: Returns true if the two objects collide with each other. False otherwise.
+
+Typically, you only need to construct the ECollide object and use the Collision method, but other
+methods exist if you want to do special things.
+
+The rest of the functions that the user is allowed to use are the following:
+
+void add( int x1, int y1, int x2, int y2 );
+parameters:
+x1: upper left X coordinate
+y1: upper left Y coordinate
+x2: lower right X coordinate
+y2: lower right Y coordinate
+result: adds a box into the list of boxes for ECollide to check.
+
+void remove();
+parameters: none
+result: removes the last box added to the list of boxes for ECollide to check.
+
+void finalize();
+parameters: none
+result: analyzes the box list that ECollide has set up. After adding boxes to its list, this is the final
+method called in the constructor. To work effeciently, the ECollide structure first checks whether the 
+entire bitmap has collided with another entire bitmap before it checks to see if the parts of the bitmap
+that are not masked have collided. This is achieved by checking the upper left and lower right boundaries
+of the two bitmaps. This should always be called after the last add for the ECollide object.
+
+bool Single( int mx, int my, int ax, int ay );
+parameters:
+mx: X coordinate of the calling ECollide object located at the center
+my: Y coordinate of the calling ECollide obejct located at the center
+ax: X coordinate of point
+ay: Y coordinate of point
+result: Returns true if point ax,ay is within the ECollide object centered at mx, my.
+
+You may have to use this method as often as you use the Collision method as it tells you when
+single points are within the ECollide object. I have found that it is a very bad idea to make an
+ECollide object out of bitmaps that are either 1x1 or smaller than 2x2. 
+	
+void display( BITMAP * buf, int x, int y );
+parameters:
+buf: bitmap to draw the ECollide object onto
+x: X coordinate to draw at. Center of ECollide object
+y: Y coordinate to draw at. Center of ECollide object
+result: draws all the boxes that the ECollide object uses to estimate where the pixels are in the
+object. This is mainly used for debugging as it shows you exactly what is being checked when two 
+ECollide objects interact with each other. 
+
+To use EBox with you projects, just include EBox.h EBox.cpp in your project files. There arent enough
+files to make entire library out of it, so i just distribute the source code to add.
+
+********IMPORTANT************
+ECollide assumes the X and Y coordinates you pass it are the MIDDLE of the bitmap. i.e, when you draw the
+bitmap, it assumes you are drawing it in the following fashion.
+
+object.x = upper left X coordinate of the bitmap
+object.y = upper left Y coordinate of the bitmap
+draw_sprite( buffer, bmp1, object.x - bmp1->w/2, object.y - bmp1->h/2 );
+
+Thus you can pass object.x, and object.y in the normal fashion without having to change them to
+see if objects collide.
+
+if ( c1->Collision( c2, object1.x, object1.y, object2.x, object2.y ) ) 
+	they collided!
+
+If this is not what you want, you can either edit the source code to EBox.cpp by changing the variables
+xs and ys to 0 in the constructor, or do your own math before you pass points to the Collision method.
+
+********EXPLANATION**********
+Lets look in more detail what the constructor does and why I passed the parameters I did.
+
+ECollide * collide_one = new ECollide( bmp1, 3, makecol(255,0,255), 50.0 );
+
+bmp1 is the bitmap object i am trying to analyze and make a list of boxes that estimate where the 
+important pixels are located within the bitmap.
+
+3 is the minimum size of a box that will be created when cutting up the bitmap. I usually have a value
+somewhere between 4 and 6, but for very small bitmaps( less than 20x20 ) you probably want to use
+a value of 2-3 or even 1. A value of 1 should give pixel perfect collision and some estimation as the
+algorithm for splicing the bitmap tries to put boxes near each other together to form one box. For
+very large bitmaps, a size between 8 or 10 is probably your best choice, but you can decide for yourself.
+
+makcol(255,0,255) this is the typical masking color for 15,16,24, and 32 bit color modes. Bright pink.
+The bitmap passed is assumed to have its background this color and these pixels will be skipped when
+checking to see where the object lays in the bitmap. You can change this value to whatever you want, most
+notable in 8 bit color you probably want to have color 0 or makecol(0,0,0). 
+
+50.0 as will be explained later, this is the percentage that the algorithm uses for determining whether
+a box filled with pixels has enough non-masked color pixels to be considered part of the ECollide object.
+The lower the number, the more mask color pixels will be allowed in the box.
+
+Algorithm ECollide constructor uses:
+Let these 0's and 1's represent a bitmap where the 0's mean the masking color and the 1's mean any other color.
+
+bmp1:
+00110011
+01100110
+00111100
+00111000
+11111100
+11110000
+00110000
+
+A constructor is called in the following manner:
+new ECollide( bmp1, 3, makecol(255,0,255), 50 );
+
+The constructor splits the bitmap into sections 3x3 becuase you passed a value of 3 for the size.
+So it think of the bitmap like this:
+
+001 100 11
+011 001 10
+001 111 00
+
+001 110 00
+111 111 00
+111 100 00
+
+001 100 00
+
+Notice how it doesnt care if the edges are less than the size variable, it just splits them into whatever
+is left of the bitmap. Now it looks at each section and does the following computation
+
+percent = ( total number of non masked color pixels ) / ( total number of pixels )
+You can see that in the first box
+001
+011
+001
+We have 4 non masking pixels and a total of 9 pixels for a percent of 4/9 or 44%. This is less than the
+value of the enough variable that was passed to the constructor, which was 50.0, and thus this block
+wont be included in the list of boxes. For this bitmap, 50.0 was probably too high of a choice and something
+more like 35 percent would be more reasonable too allow for more pixels to be added. Once all the boxes
+have been determined, a map of all the boxes is made and an algorithm to put them together is performed.
+If you cant tell already, maybe you will later but the final map will look like this:
+
+1 1 1
+1 1 0
+0 0 0
+
+A 1 meaning that box has pixels in it and a 0 meaning no pixels there. We have no reduced a large bitmap
+down to a 3x3 bitmap. This 3x3 has nothing to do with the 3 that we passed, there just happen to
+not be enough pixels to make a bigger map. I do not wish to take the time to explain how the boxes are 
+put together, nor do you need to worry about it. But now that the map has been created, a linked list
+of boxes will be created each one carrying the x1,y1,x2,y2 coordinates of each map[x][y]. 
+
+There is also the EBox class which i suppose you could use, but i am not going to explian how it is used.
+Although it is not very complicated, so you can figure it out yourself and play with it if you like.
+
+******QUICK REFERENCE*******
+
+ECollide();
+ECollide( BITMAP * work, int size, int mask, double enough );
+bool Collision( ECollide * hit, int mx, int my, int ax, int ay );
+void display( BITMAP * buf, int x, int y );
+bool Single( int mx, int my, int ax, int ay );
+
+void add( int x1, int y1, int x2, int y2 );
+void remove();
+void finalize();
+

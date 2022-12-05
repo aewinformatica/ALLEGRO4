@@ -1,0 +1,975 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0057)http://www.bdjogos.com/conteudo.php?link=adicional_30.php -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="criando mapa_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="criando mapa_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="criando mapa_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background="criando mapa_arquivos/bg.jpg" topMargin=0 marginheight="0" 
+marginwidth="0">
+<SCRIPT language=javascript src="criando mapa_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="criando mapa_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background="criando mapa_arquivos/linha_hor_cima.gif"><IMG 
+      height=8 src="criando mapa_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="criando mapa_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background="criando mapa_arquivos/linha_vertical.gif">
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background="criando mapa_arquivos/linha_ver_di.gif">&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="criando mapa_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background="criando mapa_arquivos/linha_horizo.gif"><IMG 
+      height=8 src="criando mapa_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="criando mapa_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="criando mapa_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background="criando mapa_arquivos/linha_hor_cima.gif"><IMG 
+      height=8 src="criando mapa_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="criando mapa_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background="criando mapa_arquivos/linha_vertical.gif">
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background="criando mapa_arquivos/linha_ver_di.gif">&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="criando mapa_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background="criando mapa_arquivos/linha_horizo.gif"><IMG 
+      height=8 src="criando mapa_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="criando mapa_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="criando mapa_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background="criando mapa_arquivos/linha_hor_cima.gif"><IMG 
+      height=8 src="criando mapa_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="criando mapa_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background="criando mapa_arquivos/linha_vertical.gif">
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background="criando mapa_arquivos/linha_ver_di.gif">&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="criando mapa_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background="criando mapa_arquivos/linha_horizo.gif"><IMG 
+      height=8 src="criando mapa_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="criando mapa_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="criando mapa_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background="criando mapa_arquivos/linha_hor_cima.gif"><IMG 
+      height=8 src="criando mapa_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="criando mapa_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background="criando mapa_arquivos/linha_vertical.gif">
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background="criando mapa_arquivos/linha_ver_di.gif">&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="criando mapa_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background="criando mapa_arquivos/linha_horizo.gif"><IMG 
+      height=8 src="criando mapa_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="criando mapa_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="criando mapa_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="criando mapa_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="criando mapa_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="criando mapa_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="criando mapa_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="criando mapa_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background="criando mapa_arquivos/111.jpg" 
+      rowSpan=2><IMG height=1 src="criando mapa_arquivos/111.jpg" 
+  width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background="criando mapa_arquivos/111.jpg" 
+      rowSpan=2><IMG height=1 src="criando mapa_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="criando mapa_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD vAlign=top><LINK href="criando mapa_arquivos/estilos.css" 
+            type=text/css rel=stylesheet>
+            <P><SPAN class=titulos>30 - Scrolling de Tiles </SPAN></P>
+            <HR>
+
+            <P><SPAN class=conteudo>No tutorial 26 "Utilizando Tiles" já foi 
+            explicado conceitos básicos sobre tiles e sua aplicação. Nesse 
+            tutorial, estarei mostrando uma técnica chamada SCROLLING de TILES 
+            (Não é importante que você tenha lido o tutorial 26 antes de 
+            continuar neste tutorial, pois estarei mostrando uma abordagem 
+            diferente sobre o assunto). Para imprimir tiles na tela, é usado um 
+            mapa para representar a posição de cada tile. Para preenchermos uma 
+            tela de 640x480, e usando tiles de 32x32, precisaríamos de 20 tiles 
+            na horizontal e 15 na vertical. Com SCROLLING DE TILES, podemos ter 
+            o mapa do tamanho que quisermos (não preciso nem dizer que o mapa é 
+            representado por uma matriz multidimensional). SCROLING DE TILES é 
+            amplamente usado em jogos 2d, como Mario ou Metroid. </SPAN></P>
+            <P class=conteudo>Portanto, poderemos ter um mapa de tamanho 
+            qualquer, não importa a altura nem a largura, nosso algoritmo deve 
+            imprimir os tiles na tela perfeitamente. Você pode estar pensando: 
+            "é só imprimir todos os tiles na tela". Nada impede que você faça 
+            isso, mas seu jogo ficará extremamente lento. O correto é imprimir 
+            somente a área correspondente ao tamanho da tela. </P>
+            <P class=titulos>Básico </P>
+            <P class=conteudo>O tutorial 26 mostrou um jeito fácil de imprimir 
+            tiles na tela. Nessa parte básica, vou mostrar outra forma de obter 
+            o mesmo resultado, ou seja, imprimir tiles carregando o mapa a 
+            partir de um arquivo. Primeiro, precisamos declarar algumas 
+            constantes e estruturas básicas: </P>
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO...</SPAN> 
+            <HR>
+
+            <P class=comentario>/* Tamanho do tile */</P>
+            <P class=codigo><CODE>#define TILEWH 32</CODE></P>
+            <P class=codigo><CODE>typedef 
+            struct<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;BITMAP * bitmap;</CODE></P>
+            <P class=codigo><CODE>} SPRITE;</CODE></P>
+            <P class=codigo><CODE>typedef 
+            struct<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;SPRITE * sprite;</CODE></P>
+            <P class=codigo><CODE>} TILE;</CODE></P>
+            <P class=codigo><CODE>typedef 
+            struct<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;int 
+            w;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int h;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;TILE ** 
+            tiles;</CODE></P>
+            <P class=codigo><CODE>} MAP;</CODE></P>
+            <P class=codigo><CODE>typedef 
+            struct<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;int 
+            w;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int h;</CODE></P>
+            <P class=codigo><CODE>} MAPINFO;</CODE></P>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO...</SPAN> 
+            <HR>
+
+            <P class=conteudo>A primeira estrutura, SPRITE, armazenará 
+            informações do tile atual, que no nosso caso vai ser somente 
+            estático (imagem fixa). <BR>A segunda estrutura, TILE, armazenará 
+            informações sobre que tipo de SPRITE iremos imprimir na tela. <BR>A 
+            estrutura MAP armazenará o mapa, contendo a posição x e y da cada 
+            tile. <BR><BR>MAPINFO é um estrutura adicional e será explicada mais 
+            à frente. </P>
+            <P class=conteudo><STRONG class=titulos>Os 
+            Tiles</STRONG><BR><BR>Usarei tiles de 32x32px de tamanho neste 
+            tutorial. Portanto, o arquivo Bitmap deve ser múltiplo de 32. 
+            <BR>Poderíamos carregar os tiles manualmente, mas um processo 
+            automatizado é sempre melhor, então, criaremos uma função para 
+            carregar os tiles a partir de um arquivo Bitmap. <BR>A função irá 
+            retornar um vetor de SPRITE. </P>
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO...</SPAN> 
+            <HR>
+
+            <P class=comentario>/* Função para carga de tiles */ </P>
+            <P class=codigo><CODE>SPRITE * load_tiles(const char * 
+            filename)<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp; <CODE><SPAN 
+            class=comentario>/* Armazenando o bitmap em uma variável temporária 
+            */</SPAN></CODE> </CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;BITMAP * tmp = 
+            load_bitmap(filename, NULL);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Verificando se o bitmap foi carregado 
+            */</SPAN></CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if (tmp == 
+            NULL)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 
+            NULL;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp; <CODE><SPAN 
+            class=comentario>/* Pegando o número de tiles na horizontal e na 
+            vertical */</SPAN></CODE> </CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int xtiles = tmp-&gt;w 
+            / TILEWH;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int ytiles = tmp-&gt;h / 
+            TILEWH;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Total de tiles no bitmap */</SPAN></CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int total = xtiles * 
+            ytiles;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Criando o vetor de SPRITE */</SPAN></CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;SPRITE * spr = (SPRITE 
+            *) malloc(sizeof(SPRITE) * total);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int 
+            x;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int y;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Índice para o vetor de SPRITE */</SPAN></CODE> 
+            </P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int i = 0;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Faça enquanto houver tiles na horizontal e na 
+            vertical */</SPAN></CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;for (y = 0; y &lt; 
+            ytiles; 
+            y++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for 
+            (x = 0; x &lt; xtiles; 
+            x++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <CODE><SPAN class=comentario>/* Criando o BITMAP que vai armazenar o 
+            tile */</SPAN></CODE> </CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;spr[i].bitmap 
+            = create_bitmap(TILEWH, TILEWH);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</CODE> 
+            <CODE><SPAN class=comentario>/* Copiando o pedaço da imagem para o 
+            SPRITE */</SPAN></CODE> </P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blit(tmp, 
+            spr[i].bitmap, x * TILE, y * TILE, 0, 0, TILE, TILE);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</CODE> 
+            <CODE><SPAN class=comentario>/* Próximo índice */</SPAN></CODE> </P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;}</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;</CODE> 
+            <CODE><CODE><SPAN class=comentario>/* Libere a memória alocada para 
+            o bitmap */</SPAN></CODE> </CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;destroy_bitmap(tmp);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Retorne o vetor de SPRITE */</SPAN></CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;return 
+            spr;<BR>}</CODE></P>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO...</SPAN> 
+            <HR>
+
+            <P><STRONG class=titulos>Explicando</STRONG><BR><BR><SPAN 
+            class=conteudo>No código acima, criamos uma rotina de carga de 
+            tiles. Um arquivo Bitmap é requerido. <BR>Para obtermos o número de 
+            tiles na horizontal e na vertical, basta pegar a altura e largura do 
+            Bitmap e dividir pelo tamanho do tile.</SPAN> </P>
+            <P class=codigo><CODE>int xtiles = tmp-&gt;w / TILEWH;<BR>int ytiles 
+            = tmp-&gt;h / TILEWH;</CODE></P>
+            <P class=conteudo>Calculamos o total de tiles no bitmap</P>
+            <P class=codigo><CODE>int total = xtiles * ytiles;</CODE></P>
+            <P class=conteudo>Já temos condição de criar o vetor de SPRITE, que 
+            armazenará os tiles: </P>
+            <P class=codigo><CODE>SPRITE * spr = (SPRITE *) 
+            malloc(sizeof(SPRITE) * total);</CODE></P>
+            <P class=conteudo>E o final: carregar os tiles do bitmap "tmp" no 
+            vetor. </P>
+            <P class=codigo><CODE>int x;<BR>int y;</CODE></P>
+            <P class=codigo><CODE>int i = 0;</CODE></P>
+            <P class=codigo><CODE>for (y = 0; y &lt; ytiles; 
+            y++)<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;for (x = 0; x &lt; xtiles; 
+            x++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;spr[i]-&gt;bitmap 
+            = create_bitmap(TILE, TILE);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blit(tmp, 
+            spr[i]-&gt;bitmap, x * TILE, y * TILE, 0, 0, TILE, TILE);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;<BR>&nbsp;&nbsp;&nbsp;&nbsp;}<BR>}</CODE></P>
+            <P class=conteudo>Primeiro, declaramos uma variável i, que 
+            armazenará o índice no vetor de SPRITE (nosso vetor de SPRITE é 
+            linear). <BR>Os dois laços de repetição FOR são usados para 
+            percorrer o bitmap "tmp" de cima para baixo e da esquerda para a 
+            direita. <BR><BR>Para cada vez que o laço y for executado, o laço x 
+            será executado N vezes. <BR><BR>Na prática ficaria: </P>
+            <P><CODE>+-------+-------+-------+<BR>|&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<BR>| 
+            &nbsp;&nbsp;1&nbsp;&nbsp; |&nbsp;&nbsp; 2&nbsp;&nbsp; |&nbsp;&nbsp; 
+            3&nbsp;&nbsp; |<BR>+-------+-------+-------+</CODE></P>
+            <P class=conteudo>Isso se tivéssemos um BITMAP de 96x32. Se 
+            tivéssemos um BITMAP de 96x96: </P>
+            <P><CODE>+-------+-------+-------+<BR>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<BR>| 
+            &nbsp;&nbsp;1&nbsp;&nbsp; | &nbsp;&nbsp;2&nbsp;&nbsp; |&nbsp;&nbsp; 
+            3&nbsp;&nbsp; 
+            |<BR>+-------+-------+-------+<BR>|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            | 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            |<BR>| &nbsp;&nbsp;4&nbsp;&nbsp; |&nbsp;&nbsp; 5 
+            &nbsp;&nbsp;|&nbsp;&nbsp; 6&nbsp;&nbsp; 
+            |<BR>+-------+-------+-------+<BR>| 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |<BR>| 
+            &nbsp;&nbsp;7&nbsp;&nbsp; |&nbsp;&nbsp; 8&nbsp;&nbsp; |&nbsp;&nbsp; 
+            9&nbsp;&nbsp; |<BR>+-------+-------+-------+</CODE></P>
+            <P class=conteudo>Os tiles ficariam organizados nessa ordem no 
+            vetor. Para finalizar, criamos realmente o BITMAP da estrutura 
+            SPRITE e "blitamos" o tile nele: </P>
+            <P class=codigo><CODE>spr[i]-&gt;bitmap = create_bitmap(TILEWH, 
+            TILEWH);</CODE></P>
+            <P class=codigo><CODE>blit(tmp, spr[i]-&gt;bitmap, x * TILEWH, y * 
+            TILEWH, 0, 0, TILEWH, TILEWH);</CODE></P>
+            <P class=conteudo>Lembrando que a posição do tile é definida pelos 
+            parâmetros x e y dos laços. <BR>Como nossos TILES tem 32x32 de 
+            tamanho, fica fácil encontrar sua posição no BITMAP tmp, pois é só 
+            multiplicar por 32. </P>
+            <P><STRONG><SPAN class=titulos>O Mapa</SPAN></STRONG><SPAN 
+            class=conteudo><BR></SPAN></P>
+            <P class=conteudo>Normalmente, tudo em um jogo é colocado dentro de 
+            arquivos, no caso de mapas, é mais simples e você ainda tem a 
+            possibilidade de criar outros mapas para seu jogo. Pode-se usar 
+            programas como o Mappy ou Tile Studio, mas a verdade é que VOCÊ deve 
+            fazer seu próprio editor de mapas. O mapa pode ser armazenado em 
+            arquivos texto ou binário.</P>
+            <P class=conteudo>Para usarmos arquivos texto, precisaríamos criar 
+            um ANALISADOR LÉXICO para ler os tokens. Escrever um analisador 
+            léxico (descente) não é fácil, e outra coisa, o mapa ficaria exposto 
+            (com qualquer editor de texto poderíamos editar o mapa). Com 
+            arquivos binários, é mais simples e para alterar o mapa será 
+            necessário um editor hexadecimal.</P>
+            <P class=conteudo>Usaremos o Mappy para criar os mapas, mas não 
+            usaremos sua API para imprimi-lo na tela. Baixe o Mappy no 
+            endereço:</P>
+            <P class=conteudo><A href="http://www.tilemap.co.uk/mappy.php" 
+            target=_top>http://www.tilemap.co.uk/mappy.php</A></P>
+            <P class=conteudo>Basta descompactá-lo e executar normalmente. 
+            Abra-o e uma tela como essa será apresentada:</P>
+            <P align=center><IMG height=480 alt=Mappy 
+            src="criando mapa_arquivos/1.png" width=640 border=1></P>
+            <P class=conteudo>Para criar um mapa, basta ir ao menu "File / New 
+            Map". Altere o tamanho do tile se quiser, mas a configuração padrão 
+            é a de tiles de 32x32. Mais abaixo, coloque o tamanho na horizontal 
+            (tiles wide) e na vertical (tiles high), lembrando que isso 
+            significa o tamanho da tela em tiles, não em pixels. Crie um mapa 
+            com tiles de 32x32 e a tela com 40 tiles na horizontal e 15 na 
+            vertical.</P>
+            <P class=conteudo>Depois de criar o mapa, é só importar o tiles. 
+            Baixe os seguintes tiles (clique em cima da imagem para fazer o 
+            download):</P>
+            <P align=center><A class=conteudo 
+            href="http://www.bdjogos.com/conteudos/imagens/adicional_30/tiles.bmp"><IMG 
+            height=32 src="criando mapa_arquivos/2.png" width=192 
+            border=1></A></P>
+            <P class=conteudo>Agora, para importar, vá no menu "File / Import", 
+            e escolha um arquivo .bmp contendo os tiles que você baixou ou os de 
+            sua escolha. Selecione o tile na janela à direita e depois pinte o 
+            mapa. Faça um mapa parecido com este: </P>
+            <P align=center><IMG height=240 src="criando mapa_arquivos/3.png" 
+            width=641 border=1></P>
+            <P class=conteudo>Depois que o mapa estiver pronto, precisaremos 
+            gerar um arquivo. <BR>Como não usaremos a API do Mappy, precisaremos 
+            exportar para um outro formato de arquivo que seja fácil de 
+            abrirmos. <BR><BR>Vá no menu "Custom / Export binary file". 
+            <BR><BR>Uma janela abrirá, basta clicar em OK e outra janela abrirá. 
+            <BR><BR>Nela diz se você quer ajustar os valores dos tiles (pode-se 
+            ajustar tanto para cima quanto para baixo). <BR>O valor "-1" é o 
+            padrão, mas devemos alterar para "0" pelo seguinte fato: <BR>os 
+            tiles vazios são representados pelo número "0", e o nosso primeiro 
+            tile é representado pelo número "1", se colocarmos o valor de ajuste 
+            como "-1", nosso primeiro tile será "0", ou seja, ele será um tile 
+            vazio!</P>
+            <P class=conteudo>Ao final, um arquivo .map será criado. Segue-se a 
+            estrutura desse tipo de arquivo:</P>
+            <P><CODE>+----------------------+<BR>| <CODE>Cabeçalho</CODE> 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            |<BR>+----------------------+<BR>| Dados sobre a fase 
+            &nbsp;&nbsp;|<BR>| 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR>| 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR>| 
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|<BR>+----------------------+</CODE></P>
+            <P class=conteudo>As primeiras informações no arquivo referem-se ao 
+            tamanho do mapa (em tiles) na horizontal e na vertical. <BR>Usaremos 
+            a estrutura MAPINFO para obter essas informações para depois ler o 
+            mapa. Segue a rotina de carga de mapa: </P>
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO...</SPAN> 
+            <HR>
+
+            <P class=comentario>/* Rotina para carga de mapa */</P>
+            <P class=codigo><CODE>MAP * load_map(const char * filename, SPRITE * 
+            spr)<BR>{<BR>&nbsp;&nbsp;&nbsp;<SPAN class=comentario>&nbsp;/* 
+            Abrindo o arquivo de mapa */</SPAN></CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;FILE * file = 
+            fopen(filename, "rb");</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Verificando se ele existe */</SPAN></CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (!file)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 
+            NULL;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;</CODE> <CODE><SPAN 
+            class=comentario>/* Alocando memória para o mapa */</SPAN></CODE> 
+            </P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;MAP * map = (MAP *) 
+            malloc(sizeof(MAP));</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;</CODE><CODE><SPAN 
+            class=comentario>/* Pegando informaçõe sobre o mapa 
+            */</SPAN></CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;MAPINFO 
+            info;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;fread(&amp; info, 
+            sizeof(MAPINFO), 1, file);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Altura e largura do mapa */</SPAN></CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;map-&gt;w = 
+            info.w;<BR>&nbsp;&nbsp;&nbsp;&nbsp;map-&gt;h = info.h;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Crie a matriz na vertical */</SPAN></CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;map-&gt;tiles = (TILE 
+            **) malloc(sizeof(TILE) * map-&gt;h);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int 
+            x;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int y;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int value;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;for (y = 0; y &lt; 
+            map-&gt;h; 
+            y++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Crie a matriz na horizontal */</SPAN></CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map-&gt;tiles[y] 
+            = (TILE *) malloc(sizeof(TILE) * map-&gt;w);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for 
+            (x = 0; x &lt; map-&gt;w; 
+            x++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Lendo o tipo de tile */</SPAN></CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fread(&amp; 
+            value, sizeof(int), 1, file);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            <CODE><SPAN class=comentario>/* Se o valor do tile for diferente de 
+            0, atribua o SPRITE, senão, NULL */</SPAN></CODE> </CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map-&gt;tiles[y][x].sprite 
+            = value != 0 ? &amp; spr[value - 1] : 
+            NULL;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;}</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Feche o handle de arquivo */</SPAN></CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;fclose(file);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Retorne o mapa */</SPAN></CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;return 
+            map;<BR>}</CODE></P>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO...</SPAN> 
+            <HR>
+
+            <P class=conteudo><STRONG class=titulos>Explicando</STRONG><BR></P>
+            <P class=conteudo>No código acima, um arquivo de mapa é requerido e 
+            o vetor de SPRITE contendo os tiles. <BR><BR>Primeiramente, pegamos 
+            as informações referentes ao mapa (altura e largura em tiles). A 
+            partir daí, é só carregar o mapa. A leitura do mapa é feita 
+            sequencialmente, quem define a posição de cada tile são os laços de 
+            repetição FOR. <BR><BR>Lemos um inteiro de cada vez e verificamos se 
+            o seu valor não é 0. Se for 0, o valor NULL é atribuído, senão, 
+            atribua o ponteiro para o vetor de SPRITE (lembrando que na rotina 
+            de carga de tiles, os SPRITEs são carregados linearmente, começando 
+            pelo índice 0, que é o primeiro tile).</P>
+            <P class=conteudo>Obs.: No Mappy, o primeiro tile representa o 
+            índice 1, por isso a subtração por 1.</P>
+            <P class=titulos><STRONG>Imprimindo o mapa</STRONG><BR></P>
+            <P class=conteudo>A rotina de impressão de mapa deste tutorial 
+            difere um pouco do tutorial 26. Se você reparar bem, o código 
+            mostrado até agora parece ser uma extensão do allegro. Eis a rotina 
+            de impressão de mapa: </P>
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO...</SPAN> 
+            <HR>
+
+            <P class=comentario>/* Rotina de impressão de mapa */ </P>
+            <P class=codigo><CODE>void draw_map(BITMAP * bitmap, MAP * map, int 
+            xpos, int ypos)<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp; <CODE><SPAN 
+            class=comentario>/* Posição inicial */</SPAN></CODE> </CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int xbegin = abs(xpos 
+            / TILEWH);<BR>&nbsp;&nbsp;&nbsp;&nbsp;int ybegin = abs(ypos / 
+            TILEWH);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp; <CODE><SPAN 
+            class=comentario>/* Verificando se não ultrapassa o mapa 
+            */</SPAN></CODE> </CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if (xpos &gt; 
+            0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xbegin = 
+            0;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if (ypos &gt; 
+            0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ybegin = 
+            0;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp; <CODE><SPAN 
+            class=comentario>/* Posição final */</SPAN></CODE> </CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int xend = SCREEN_W / 
+            TILEWH + xbegin + 1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int yend = SCREEN_H 
+            / TILEWH + ybegin + 1;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp; <CODE><SPAN 
+            class=comentario>/* Verificando se não ultrapassa o mapa 
+            */</SPAN></CODE> </CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if (xend &gt; 
+            map-&gt;w)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xend = 
+            map-&gt;w;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if (yend &gt; 
+            map-&gt;h)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yend = 
+            map-&gt;h;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int 
+            x;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int y;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>/* Imprima o mapa! */</SPAN></CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;for (y = ybegin; y 
+            &lt; yend; 
+            y++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (x = 
+            xbegin; x &lt; xend; 
+            x++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (map-&gt;tiles[y][x].sprite)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite(bitmap, 
+            map-&gt;tiles[y][x].sprite-&gt;bitmap, x * TILEWH + xpos, y * TILEWH 
+            + ypos);<BR>}</CODE> </P>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO...</SPAN> 
+            <HR>
+
+            <P><SPAN class=conteudo><STRONG 
+            class=titulos>Explicando</STRONG><BR></SPAN></P>
+            <P class=conteudo><SPAN class=conteudo>A rotina acima se propõe a 
+            imprimir um MAPA no "BITMAP bitmap". As posições x e y são também 
+            requeridas. Primeiro, pegamos as posições iniciais x e y de pintura 
+            da tela. Como dito anteriormente, a tela fica sendo dividida em 
+            tiles, então, devemos pegar a posição do tile e não a posição na 
+            tela, portanto, devemos dividir as posições x e y pelo tamanho do 
+            tile que estamos usando (32x32).</SPAN></P>
+            <P class=conteudo>Se xpos for 16, dividido por 32, fica sendo 0,5. 
+            Arredondando dá 0. Então essa é a posição x inicial. O mesmo para 
+            ypos (abs() foi usando pois não adianta imprimir antes da posição 
+            0,0 da tela). os dois IF's verificam se as posições xpos e ypos são 
+            maiores que 0, então, a posição inicial x e y ficam sendo 0.</P>
+            <P class=conteudo>Já encontramos as posições iniciais x e y, agora 
+            falta encontrar as posições finais. As posições finais são fáceis de 
+            encontrar: basta pegar o tamanho da tela em tiles (tanto na 
+            horizontal quanto na vertical) e somar com o x e y inicial. O "+ 1" 
+            é para que a rotina de impressão imprima até para fora da tela 
+            (somente 1 tile a mais). Sem isso, os tiles não serão impressos até 
+            que preencham a tela toda.</P>
+            <P class=conteudo>Sabendo as posições iniciais e finais, basta 
+            imprimir na tela. Antes de imprimir, verificamos se o SPRITE é nulo 
+            (NULL), e se não for, imprimimos ele na tela. Encontramos a posição 
+            correta de cada tile multiplicando pelo tamanho do mesmo, ou 
+            seja:</P>
+            <P class=conteudo>Tile: 0,0 - Posição: 0, 0<BR>Tile: 0,1 - Posição: 
+            0, 32<BR>...<BR>Tile: 1,1 - Posição: 32, 32<BR>...</P>
+            <P class=conteudo>Acrecentamos também xpos e ypos à posição do tile, 
+            para não dar um efeito de MOSAICO na tela.</P>
+            <P><STRONG class=titulos>O Código Completo</STRONG> </P>
+            <P class=conteudo>Para executar o código abaixo, baixe o seguinte 
+            arquivo : <A class=conteudo 
+            href="http://www.bdjogos.com/conteudos/imagens/adicional_30/mapa.map">mapa.map</A><BR></P>
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO...</SPAN> 
+            <HR>
+
+            <P class=codigo><CODE>#include &lt;allegro.h&gt;<BR>#include 
+            &lt;stdio.h&gt;<BR>#include &lt;stdlib.h&gt;<BR>#include 
+            &lt;math.h&gt;</CODE></P>
+            <P class=codigo><CODE>#define TILEWH 32</CODE></P>
+            <P class=codigo><CODE>#define SPEED 1 </CODE></P>
+            <P class=codigo><CODE>typedef 
+            struct<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;BITMAP * bitmap;</CODE></P>
+            <P class=codigo><CODE>} SPRITE;</CODE></P>
+            <P class=codigo><CODE>typedef 
+            struct<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;SPRITE * sprite;</CODE></P>
+            <P class=codigo><CODE>} TILE;</CODE></P>
+            <P class=codigo><CODE>typedef 
+            struct<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;TILE ** tiles;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int 
+            w;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int h;</CODE></P>
+            <P class=codigo><CODE>} MAP;</CODE></P>
+            <P class=codigo><CODE>typedef 
+            struct<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;int 
+            w;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int h;</CODE></P>
+            <P class=codigo><CODE>} MAPINFO;</CODE></P>
+            <P class=codigo><CODE>BITMAP * buffer;</CODE></P>
+            <P class=codigo><CODE>SPRITE * load_tiles(const char *);</CODE></P>
+            <P class=codigo><CODE>MAP * load_map(const char *, SPRITE 
+            *);<BR>void draw_map(BITMAP *, MAP *, int, int);</CODE></P>
+            <P class=codigo><CODE>int main(int argc, char ** 
+            argv)<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;allegro_init();</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;install_keyboard();</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;set_color_depth(16);<BR>&nbsp;&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_WINDOWED, 
+            640, 480, 0, 0);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;buffer = 
+            create_bitmap(SCREEN_W, SCREEN_H);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;SPRITE * spr = 
+            load_tiles("tiles.bmp");</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (!spr)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;allegro_message("Falha 
+            ao carregar SPRITES!");</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 
+            1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;}</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;MAP * map = 
+            load_map("mapa.map", spr);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (!map)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;allegro_message("Falha 
+            ao carregar MAPA!");</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 
+            1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;}</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int xmap = 
+            0;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int ymap = 0;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int x = 
+            0;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int y = 0;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;while 
+            (!key[KEY_ESC])<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (key[KEY_LEFT])<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmap 
+            += SPEED;</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (key[KEY_RIGHT])<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xmap 
+            -= SPEED;</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear(buffer);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_map(buffer, 
+            map, xmap, 0);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blit(buffer, 
+            screen, 0, 0, 0, 0, SCREEN_W, 
+            SCREEN_H);<BR>&nbsp;&nbsp;&nbsp;&nbsp;}</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;destroy_bitmap(buffer);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;allegro_exit();</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;return 
+            0;<BR>}<BR>END_OF_MAIN();</CODE></P>
+            <P class=codigo><CODE>SPRITE * load_tiles(const char * 
+            filename)<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;BITMAP * tmp = 
+            load_bitmap(filename, NULL);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (!tmp)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 
+            NULL;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int xtiles = tmp-&gt;w 
+            / TILEWH;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int ytiles = tmp-&gt;h / 
+            TILEWH;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int total = xtiles * 
+            ytiles;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;SPRITE * spr = (SPRITE 
+            *) malloc(sizeof(SPRITE *) * total);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int 
+            x;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int y;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int i = 0;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;for (y = 0; y &lt; 
+            ytiles; 
+            y++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for 
+            (x = 0; x &lt; xtiles; 
+            x++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;spr[i].bitmap 
+            = create_bitmap(TILEWH, TILEWH);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blit(tmp, 
+            spr[i].bitmap, x * TILEWH, y * TILEWH, 0, 0, TILEWH, 
+            TILEWH);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i++;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;}</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;destroy_bitmap(tmp);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;return 
+            spr;<BR>}</CODE></P>
+            <P class=codigo><CODE>MAP * load_map(const char * filename, SPRITE * 
+            spr)<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;FILE * file = fopen(filename, 
+            "rb");</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (!file)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 
+            NULL;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;MAP * map = (MAP *) 
+            malloc(sizeof(MAP));</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;MAPINFO 
+            info;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;fread(&amp; info, 
+            sizeof(MAPINFO), 1, file);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;map-&gt;w = 
+            info.w;<BR>&nbsp;&nbsp;&nbsp;&nbsp;map-&gt;h = info.h;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;map-&gt;tiles = (TILE 
+            **) malloc(sizeof(TILE **) * map-&gt;h);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int 
+            x;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int y;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int value;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;for (y = 0; y &lt; 
+            map-&gt;h; 
+            y++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map-&gt;tiles[y] 
+            = (TILE *) malloc(sizeof(TILE *) * map-&gt;w);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for 
+            (x = 0; x &lt; map-&gt;w; 
+            x++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fread(&amp; 
+            value, sizeof(int), 1, file);</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map-&gt;tiles[y][x].sprite 
+            = value != 0 ? &amp; spr[value - 1] : 
+            NULL;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;}</CODE></P>
+            <P 
+            class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;fclose(file);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;return 
+            map;<BR>}</CODE></P>
+            <P class=codigo><CODE>void draw_map(BITMAP * bitmap, MAP * map, int 
+            xpos, int ypos)<BR>{<BR>&nbsp;&nbsp;&nbsp;&nbsp;int xbegin = 
+            abs(xpos / TILEWH);<BR>&nbsp;&nbsp;&nbsp;&nbsp;int ybegin = abs(ypos 
+            / TILEWH);</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if (xpos &gt; 
+            0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xbegin = 
+            0;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if (ypos &gt; 
+            0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ybegin = 
+            0;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int xend = SCREEN_W / 
+            TILEWH + xbegin + 1;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int yend = SCREEN_H 
+            / TILEWH + ybegin + 1;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if (xend &gt; 
+            map-&gt;w)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xend = 
+            map-&gt;w;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;if (yend &gt; 
+            map-&gt;h)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;yend = 
+            map-&gt;h;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;int 
+            x;<BR>&nbsp;&nbsp;&nbsp;&nbsp;int y;</CODE></P>
+            <P class=codigo><CODE>&nbsp;&nbsp;&nbsp;&nbsp;for (y = ybegin; y 
+            &lt; yend; 
+            y++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (x = 
+            xbegin; x &lt; xend; 
+            x++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (map-&gt;tiles[y][x].sprite)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite(bitmap, 
+            map-&gt;tiles[y][x].sprite-&gt;bitmap, x * TILEWH + xpos, y * TILEWH 
+            + ypos);<BR>}</CODE></P>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO...</SPAN> 
+            <HR>
+
+            <P class=conteudo><STRONG>Fim</STRONG><BR></P>
+            <P class=conteudo>Chegamos ao final deste EXTENSO tutorial. Se 
+            houver alguma dúvida, crítica ou sugestão sobre o tutorial é só ir 
+            no fórum, ficarei muito grato. Num próximo tutorial, estarei 
+            escrevendo sobre colisão com o cenário (um dos assuntos mais 
+            comentados sobre desenvolvimento de jogos).</P>
+            <P class=conteudo>Mais uma coisa: se você quer ver a rotina de 
+            impressão de mapa trabalhar, altere o código da seguinte forma:</P>
+            <P class=codigo><CODE>for (y = ybegin + 1; y &lt; yend - 1; 
+            y++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;for (x = xbegin + 1; x &lt; xend - 
+            1; x++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (map-&gt;tiles[y][x].sprite)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;draw_sprite(bitmap, 
+            map-&gt;tiles[y][x].sprite-&gt;bitmap, x * TILEWH + xpos, y * TILEWH 
+            + ypos);</CODE></P>
+            <P class=conteudo>Você pode incrementar o cenário, imprimindo uma 
+            imagem de fundo atrás do mapa, como um céu ou uma caverna.</P>
+            <P><SPAN class=conteudo>Espero que tenham gostado do tutorial e até 
+            mais...</SPAN></P>
+            <P>&nbsp;</P>
+            <P><BR></P><BR><SPAN class=conteudo><B>Contribuidor</B> 
+            <BR>Arabasso<BR>04/02/2009 </SPAN>
+            <P>
+            <HR>
+            &nbsp;
+            <P></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="40%" align=center 
+            bgColor=#ffffff border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center 
+                  bgColor=#000099 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD bgColor=#f7f7f7>
+                              <P class=conteudo align=center><A class=conteudo 
+                              href="http://www.bdjogos.com/conteudo.php?link=capitulo_30.php">«&nbsp;Anterior 
+                              </A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+                <TD>&nbsp;</TD>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center 
+                  bgColor=#000099 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD bgColor=#f7f7f7>
+                              <P class=conteudo align=center><A class=conteudo 
+                              href="http://www.bdjogos.com/conteudo.php?link=capitulo_31.php">Próximo 
+                              » 
+                </A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background="criando mapa_arquivos/111.jpg"><IMG 
+      height=1 src="criando mapa_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background="criando mapa_arquivos/111.jpg" colSpan=2 
+      height=1><IMG height=1 src="criando mapa_arquivos/111.jpg" 
+  width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

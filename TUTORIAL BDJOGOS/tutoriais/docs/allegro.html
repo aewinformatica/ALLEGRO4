@@ -1,0 +1,107 @@
+<HTML>
+
+<HEAD><TITLE>A Biblioteca Gr&aacute;fica Allegro</TITLE></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" BGCOLOR="#FFFFFF">
+
+<P>Data da &uacute;ltima atualiza&ccedil;&atilde;o: 19/06/2002<BR>
+&copy;2002 - <A HREF="mailto:tiagomt@nce.ufrj.br">Tiago da Concei&ccedil;&atilde;o Mota</A><BR><BR>
+<I>Powered by vi</I></P>
+
+<H1>A Biblioteca Gr&aacute;fica Allegro</H1>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<OL>
+	<LI><A HREF="#primeira">A Biblioteca Gr&aacute;fica Allegro</A></LI>
+	<OL>
+		<LI><A HREF="#introduc">Introdu&ccedil;&atilde;o</A></LI>
+		<LI><A HREF="#instal">Instalando o Allegro</A></LI>
+		<LI><A HREF="#pas_bas">Passos B&aacute;sicos</A></LI>
+	</OL>
+	<LI><A HREF="programa.html">Programando com o Allegro</A></LI>
+	<OL>
+		<LI><A HREF="programa.html#esq">Esquema de um Programa</A></LI>
+		<LI><A HREF="programa.html#prog">Programando com Exemplos</A></LI>
+	</OL>
+	<LI><A HREF="tecnicas.html">T&eacute;cnicas de Programa&ccedil;&atilde;o de Jogos</A></LI>
+	<OL>
+		<LI><A HREF="tecnicas.html#double_buffering">Double Buffering</A></LI>
+		<LI><A HREF="tecnicas.html#scrolling">Scrolling</A></LI>
+		<LI><A HREF="tecnicas.html#sprites">Sprites</A></LI>
+		<LI><A HREF="tecnicas.html#detec_colisao">Detec&ccedil;&atilde;o de Colis&atilde;o</A></LI>
+	</OL>
+	<LI><A HREF="montando.html">Montando um Jogo Usando o Allegro</A></LI>
+	<OL>
+		<LI><A HREF="montando.html#geral">Vis&atilde;o Geral do Jogo</A></LI>
+		<LI><A HREF="montando.html#defines">Defini&ccedil;&otilde;es e Outras Fun&ccedil;&otilde;es</A></LI>
+		<LI><A HREF="montando.html#inic">As Inicializa&ccedil;&otilde;es</A></LI>
+		<LI><A HREF="montando.html#loop">O Loop Principal</A></LI>
+		<LI><A HREF="montando.html#final">As Finaliza&ccedil;&otilde;es</A></LI>
+	</OL>
+	<LI><A HREF="funcoes.html">As Fun&ccedil;&otilde;es do Allegro</A></LI>
+</OL>
+
+<A NAME="primeira">
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="introduc">
+<H2>1. Introdu&ccedil;&atilde;o</H2>
+
+<P>Uma importante &aacute;rea da computa&ccedil;&atilde;o, mas que normalmente &eacute; deixada em segundo plano no meio acad&ecirc;mico, &eacute; a de jogos. Os jogos, por&eacute;m, constituem um ramo com grande potencial de explora&ccedil;&atilde;o, devido ao uso de diversos elementos da computa&ccedil;&atilde;o em sua produ&ccedil;&atilde;o.</P>
+
+<P>Al&eacute;m dos elementos mais aparentes para um leigo num jogo, como a intelig&ecirc;ncia artifical (com destaque para os jogos de tabuleiro) e a computa&ccedil;&atilde;o gr&aacute;fica, outros est&atilde;o &quot;escondidos&quot;, como o de algoritmos (visando a efici&ecirc;ncia para respostas mais r&aacute;pidas pela m&aacute;quina) e de estruturas de dados (facilitando ao criar uma abstra&ccedil;&atilde;o para os objetos utilizados nos jogos).</P>
+
+<P>Assim, devido &agrave; complexidade e &agrave; completeza da &aacute;rea de jogos, entendemos que estes s&atilde;o fonte inesgot&aacute;vel de pesquisas e, portanto, devem ter maior foco no meio acad&ecirc;mico.</P>
+
+<P>O objetivo principal desta apostila, no entanto, &eacute; tentar ensinar a usar, pelo menos de maneira b&aacute;sica, a biblioteca Allegro, uma das mais populares ferramentas para confec&ccedil;&atilde;o de jogos existente. Explica&ccedil;&otilde;es de algumas t&eacute;cnicas de programa&ccedil;&atilde;o de jogos aparecer&atilde;o naturalmente como necessidade para contornar determinados problemas e/ou simplificar determinadas tarefas.</P>
+
+<P>Como efeito da programa&ccedil;&atilde;o de jogos utilizada nesta apostila, pretendemos criar uma nova mentalidade a respeito dos mesmos, mostrando a necessidade da pesquisa nessa &aacute;rea. Assim, como segundo objetivo e resultado do primeiro, esta apostila visa introduzir o aluno ao mundo da programa&ccedil;&atilde;o de jogos, que pode, nos pr&oacute;ximos anos, tornar-se uma tend&ecirc;ncia no meio acad&ecirc;mico, caso o preconceito em rela&ccedil;&atilde;o a ele seja superada.</P>
+
+<P>A apostila est&aacute; dividida em dois blocos: um did&aacute;tico e outro de refer&ecirc;ncia.</P>
+
+<P>O primeiro bloco, por sua vez, est&aacute; subdividido em quatro partes: a primeira delas, da qual esta introdu&ccedil;&atilde;o faz parte, apenas ensina como instalar o Allegro e alguns passos b&aacute;sicos a serem tomados antes de come&ccedil;ar a programar; a <A HREF="programa.html">segunda</A> ensina como usar as fun&ccedil;&otilde;es mais importantes do Allegro, sempre com exemplos que ilustrem o uso das mesmas; a <A HREF="tecnicas.html">terceira</A> ensina algumas t&eacute;cnicas de programa&ccedil;&atilde;o de jogos que foram mostradas durante a segunda parte, ou que sejam interessantes para a confec&ccedil;&atilde;o de um jogo b&aacute;sico; e a <A HREF="montando.html">quarta</A> ensina como montar um jogo utilizando as fun&ccedil;&otilde;es mostradas na segunda parte e algumas t&eacute;cnicas utilizadas na terceira.</P>
+
+<P>O segundo bloco cont&eacute;m um <A HREF="funcoes.html">guia de refer&ecirc;ncia</A> com as fun&ccedil;&otilde;es do Allegro mais &uacute;teis, e deve ser consultado quando as explica&ccedil;&otilde;es do primeiro bloco n&atilde;o forem profundas o suficiente, ou quando se desejar saber, de forma r&aacute;pida e eficiente, sobre o funcionamento de determinada fun&ccedil;&atilde;o.</P>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="instal">
+<H2>2. Instalando o Allegro</H2>
+
+<P>Primeiramente, entre no site <A HREF="http://www.allegro.cc/">allegro.cc</A> para fazer o download da vers&atilde;o mais recente e est&aacute;vel. Caso exista algum arquivo de nome <TT>all<B>xyz</B>.zip</TT> (vers&atilde;o <TT><B>x</B></TT>.<TT><B>y</B></TT>.<TT><B>z</B></TT>) entre os arquivos de instala&ccedil;&atilde;o do DJGPP/GCC, n&atilde;o ser&aacute; necess&aacute;rio baix&aacute;-lo novamente, ao menos que se deseje adquirir uma vers&atilde;o mais recente. A vers&atilde;o mais recente do Allegro, at&eacute; a &uacute;ltima atualiza&ccedil;&atilde;o desta p&aacute;gina, &eacute; a 4.0.1, que pode ser obtida clicando-se diretamente <A HREF="ftp://ftp.allegronetwork.com/4.0.1/all401.zip">aqui</A>.</P>
+
+<P>Em seguida, crie um subdiret&oacute;rio dentro do diret&oacute;rio do DJGPP/GCC (normalmente <TT>C:\DJGPP\Allegro</TT>) e, ent&atilde;o, extraia para este diret&oacute;rio os arquivos do arquivo .ZIP anteriormente mencionado.</P>
+
+<P>O pr&oacute;ximo passo, e talvez o mais importante e (muito) demorado, &eacute; a compila&ccedil;&atilde;o dos arquivos do Allegro, uma vez que o arquivo .ZIP &eacute; constitu&iacute;do apenas pelos arquivos-fonte.<BR>
+Para isto, abra um Prompt do MS-DOS, mude para o diret&oacute;rio do Allegro e, em seguida, digite <TT>make</TT>. Caso ocorra algum erro durante o processo de compila&ccedil;&atilde;o do Allegro, tente digitar <TT>make all</TT>. Se ainda assim ocorrerem erros, tente executar o make novamente. Ao final deste processo, digite <TT>make install</TT> para que o Allegro seja instalado de forma correta, fazendo com que o GCC/DJGPP possa utiliz&aacute;-lo.</P>
+
+<P>Ap&oacute;s o make, &eacute; recomend&aacute;vel verificar se os arquivos <TT>allegro.h</TT> e <TT>liballeg.a</TT> est&atilde;o, respectivamente, nos diret&oacute;rios <TT>C:\DJGPP\Include</TT> e <TT>C:\DJGPP\Lib</TT>. Caso n&atilde;o estejam, copie-os manualmente a partir do diret&oacute;rio do Allegro.</P>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="pas_bas">
+<H2>3. Passos B&aacute;sicos</H2>
+
+<P>Assim como se faz com qualquer outra biblioteca, &eacute; necess&aacute;rio incluir o arquivo de cabe&ccedil;alho do Allegro. Para tal, <B>AP&Oacute;S</B> todas as outras diretivas <TT>#include</TT> das bibliotecas padr&atilde;o (ex: <TT>stdio.h</TT>, <TT>stdlib.h</TT>), inclua a seguinte linha:
+<TT><OL>
+#include &lt;allegro.h&gt;
+</OL></TT></P>
+
+<P>O pr&oacute;ximo passo &eacute; fazer com que o compilador C possa linkar corretamente a biblioteca Allegro (liballeg.a).<BR>
+Para tanto, os usu&aacute;rios do RHIDE devem ir ao menu Options-&gt;Libraries, adicionar a palavra <U>alleg</U> na primeira linha em branco e marcar o quadrado ao lado. J&aacute; para os usu&aacute;rios do GCC, &eacute; necess&aacute;rio adicionar o parâmetro <U>-lalleg</U> &agrave; linha de comando. Por exemplo:
+<TT><OL>
+gcc -o jogo.exe jogo.c -Wall -lalleg
+</OL></TT></P>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<P><CENTER>
+<A HREF="indice.htm"><IMG SRC="return.gif" HSPACE=5 HEIGHT=30 WIDTH=30 ALIGN=CENTER></A>
+<A HREF="indice.htm">&Iacute;ndice</A>
+</CENTER></P>
+
+</BODY>
+
+</HTML>

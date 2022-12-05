@@ -1,0 +1,2264 @@
+From: <Salvo pelo Windows Internet Explorer 8>
+Subject: C++ Game Programming
+Date: Thu, 15 Jul 2010 18:02:44 -0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0075_01CB2447.ECAC3DA0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0075_01CB2447.ECAC3DA0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.cppgameprogramming.com/cgi/nav.cgi?page=io
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HMTL><HTML><HEAD><TITLE>C++ Game Programming</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<META name=3Dkeywords=20
+content=3D" C++, programming, games, coding, dev-c++, graphics, 2d, =
+tutorial, lesson, basic, network, two dimensional, allegro">
+<META name=3Ddescription=20
+content=3D"Learn everything from the basics up to how to create your own =
+video games in C++!"><LINK=20
+rel=3Dstylesheet type=3Dtext/css=20
+href=3D"http://www.cppgameprogramming.com/CSS/style.css">
+<SCRIPT language=3DJavaScript>=0A=
+=0A=
+	var myMenu =3D 0;=0A=
+	var myParent=3D 0;=0A=
+	var myText =3D 0;=0A=
+	var lastMenu;=0A=
+	var myLastMenu;=0A=
+	var x =3D 0;=0A=
+	var y =3D 0;=0A=
+	var quickShow =3D 0;=0A=
+	var tempX;=0A=
+	var tempY;=0A=
+	var subX;=0A=
+	var subY;=0A=
+=0A=
+	if (!document.all) document.captureEvents(Event.MOUSEMOVE);=0A=
+	document.onmousemove =3D getMouseXY;=0A=
+=0A=
+	function getMouseXY(e) {=0A=
+	if (document.all) { =0A=
+		tempX =3D event.clientX + document.body.scrollLeft;=0A=
+		tempY =3D event.clientY + document.body.scrollTop;=0A=
+	} else {  =0A=
+		tempX =3D e.pageX;=0A=
+		tempY =3D e.pageY;=0A=
+	}  =0A=
+	}	=0A=
+=0A=
+	function revealSubMenu( menu){=0A=
+=0A=
+		if(document.all){=0A=
+=0A=
+			myMenu =3D document.all(menu).style;=0A=
+=0A=
+		}=0A=
+=0A=
+		else if(document.getElementById){=0A=
+=0A=
+			myMenu =3D document.getElementById(menu).style;=0A=
+=0A=
+		} =0A=
+=0A=
+		else if(document.layers){=0A=
+=0A=
+			myMenu =3D document.layers[menu];=0A=
+=0A=
+		}=0A=
+=0A=
+		if(document.layers){=0A=
+=0A=
+			if(myMenu.visibility =3D=3D "show"){=0A=
+			=0A=
+				myMenu.visibility =3D "hide";=0A=
+				myMenu.position =3D "absolute";=0A=
+=0A=
+			} else {=0A=
+=0A=
+=0A=
+				myMenu.visibility =3D "show";=0A=
+				myMenu.position =3D "relative";=0A=
+=0A=
+			}=0A=
+=0A=
+		}=0A=
+=0A=
+		else if(document.all){=0A=
+=0A=
+			if(myMenu.visibility =3D=3D "visible"){=0A=
+			=0A=
+				myMenu.visibility =3D "hidden";=0A=
+				myMenu.position =3D "absolute";=0A=
+=0A=
+			} else {=0A=
+=0A=
+=0A=
+				myMenu.visibility =3D "visible";=0A=
+				myMenu.position =3D "relative";=0A=
+=0A=
+			}=0A=
+=0A=
+		}=0A=
+=0A=
+		else if(document.getElementById){=0A=
+=0A=
+			if(myMenu.visibility =3D=3D "visible"){=0A=
+			=0A=
+				myMenu.visibility =3D "hidden";=0A=
+				myMenu.position =3D "absolute";=0A=
+=0A=
+			} else {=0A=
+=0A=
+=0A=
+				myMenu.visibility =3D "visible";=0A=
+				myMenu.position =3D "relative";=0A=
+=0A=
+			}=0A=
+=0A=
+		}=0A=
+=0A=
+	}=0A=
+=0A=
+=0A=
+	function revealDesc(menu){=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+		if(document.all){=0A=
+=0A=
+			myMenu =3D document.all(menu).style;=0A=
+=0A=
+		}=0A=
+=0A=
+		else if(document.getElementById){=0A=
+=0A=
+			myMenu =3D document.getElementById(menu).style;=0A=
+=0A=
+		} =0A=
+=0A=
+		else if(document.layers){=0A=
+=0A=
+			myMenu =3D document.layers[menu];=0A=
+=0A=
+		}=0A=
+=0A=
+=0A=
+		if(document.layers){=0A=
+=0A=
+			if(myMenu.visibility =3D=3D "show"){=0A=
+			=0A=
+				myMenu.visibility =3D "hide";=0A=
+=0A=
+			} else {=0A=
+=0A=
+=0A=
+				myMenu.visibility =3D "show";=0A=
+=0A=
+			}=0A=
+=0A=
+		}=0A=
+=0A=
+=0A=
+		else if(document.all){=0A=
+=0A=
+			if(myMenu.visibility =3D=3D "visible"){=0A=
+			=0A=
+				myMenu.visibility =3D "hidden";=0A=
+			} else {=0A=
+=0A=
+=0A=
+				myMenu.visibility =3D "visible";=0A=
+			}=0A=
+=0A=
+		}=0A=
+=0A=
+=0A=
+		else if(document.getElementById){=0A=
+=0A=
+=0A=
+			if(myMenu.visibility =3D=3D "visible"){	=0A=
+				myMenu.visibility =3D "hidden";=0A=
+			} else {=0A=
+=0A=
+				myMenu.visibility =3D "visible";=0A=
+			}=0A=
+=0A=
+		}=0A=
+=0A=
+=0A=
+	}=0A=
+=0A=
+=0A=
+	function bookmark(){=0A=
+=0A=
+		window.external.AddFavorite("http://www.cppgameprogramming.com/","C++ =
+Game Programming");=0A=
+=0A=
+	}=0A=
+=0A=
+	function showLogo(menu){=0A=
+=0A=
+=0A=
+=0A=
+		if(document.all){=0A=
+=0A=
+			myMenu =3D document.all(menu).style;=0A=
+=0A=
+		}=0A=
+=0A=
+		else if(document.getElementById){=0A=
+=0A=
+			myMenu =3D document.getElementById(menu).style;=0A=
+=0A=
+		} =0A=
+=0A=
+		else if(document.layers){=0A=
+=0A=
+			myMenu =3D document.layers[menu];=0A=
+=0A=
+		}=0A=
+=0A=
+=0A=
+		if(document.all){=0A=
+=0A=
+			=0A=
+=0A=
+				if (x <=3D 280){=0A=
+					++x;=0A=
+					myMenu.width =3D x;=0A=
+				}=0A=
+=0A=
+				if (y <=3D 100){=0A=
+					++y;=0A=
+					myMenu.height =3D y;=0A=
+				}=0A=
+=0A=
+				if (x <=3D 280){=0A=
+					setTimeout("showLogo('logo')", 1);=0A=
+				}=0A=
+		}=0A=
+=0A=
+		else if(document.getElementById){=0A=
+=0A=
+			=0A=
+=0A=
+				if (x <=3D 280){=0A=
+					++x;=0A=
+					myMenu.width =3D x;=0A=
+				}=0A=
+=0A=
+				if (y <=3D 100){=0A=
+					++y;=0A=
+					myMenu.height =3D y;=0A=
+				}=0A=
+=0A=
+				if (x <=3D 280){=0A=
+					setTimeout("showLogo('logo')", 1);=0A=
+				}=0A=
+		}=0A=
+=0A=
+		else if(document.layers){=0A=
+=0A=
+			=0A=
+=0A=
+				if (x <=3D 280){=0A=
+					++x;=0A=
+					myMenu.width =3D x;=0A=
+				}=0A=
+=0A=
+				if (y <=3D 100){=0A=
+					++y;=0A=
+					myMenu.height =3D y;=0A=
+				}=0A=
+=0A=
+				if (x <=3D 280){=0A=
+					setTimeout("showLogo('logo')", 1);=0A=
+				}=0A=
+		}=0A=
+=0A=
+	}=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+	function showQuickLinks(){=0A=
+=0A=
+		subX=3D tempX+150;=0A=
+		subY=3D tempY;=0A=
+=0A=
+		if(document.all){=0A=
+=0A=
+			myMenu =3D document.all("quickLinksMenu").style;=0A=
+=0A=
+		}=0A=
+=0A=
+		else if(document.getElementById){=0A=
+=0A=
+			myMenu =3D document.getElementById("quickLinksMenu").style;=0A=
+=0A=
+		} =0A=
+=0A=
+		else if(document.layers){=0A=
+=0A=
+			myMenu =3D document.layers["quickLinksMenu"];=0A=
+=0A=
+		}=0A=
+=0A=
+=0A=
+=0A=
+		if (quickShow =3D=3D 0){=0A=
+=0A=
+=0A=
+			quickShow =3D 1;=0A=
+=0A=
+=0A=
+			if(document.layers){=0A=
+=0A=
+				myMenu.visibility =3D "show";=0A=
+				myMenu.left =3D tempX;=0A=
+				myMenu.top =3D tempY;=0A=
+	=0A=
+			}=0A=
+=0A=
+	=0A=
+			else if(document.all){=0A=
+=0A=
+				myMenu.visibility =3D "visible";=0A=
+				myMenu.left =3D tempX;=0A=
+				myMenu.top =3D tempY;=0A=
+=0A=
+			}=0A=
+=0A=
+=0A=
+			else if(document.getElementById){=0A=
+=0A=
+=0A=
+				myMenu.visibility =3D "visible";=0A=
+				myMenu.left =3D tempX;=0A=
+				myMenu.top =3D tempY;=0A=
+			}=0A=
+=0A=
+=0A=
+=0A=
+		} else {=0A=
+=0A=
+			quickShow =3D 0;=0A=
+=0A=
+			if(document.layers){=0A=
+=0A=
+				myMenu.visibility =3D "hide";=0A=
+	=0A=
+			}=0A=
+=0A=
+	=0A=
+			else if(document.all){=0A=
+=0A=
+				myMenu.visibility =3D "hidden";=0A=
+=0A=
+			}=0A=
+=0A=
+=0A=
+			else if(document.getElementById){=0A=
+=0A=
+=0A=
+				myMenu.visibility =3D "hidden";=0A=
+			}=0A=
+=0A=
+=0A=
+		}=0A=
+=0A=
+=0A=
+		if( lastMenu) showQuickSubMenu(lastMenu, 'quickLinksMenu');=0A=
+=0A=
+=0A=
+	}=0A=
+=0A=
+=0A=
+	function showQuickSubMenu(menu, parent){=0A=
+=0A=
+=0A=
+		if(document.all){=0A=
+=0A=
+			myMenu =3D document.all(menu).style;=0A=
+			myParent =3D document.all(parent).style;=0A=
+=0A=
+		}=0A=
+=0A=
+		else if(document.getElementById){=0A=
+=0A=
+			myMenu =3D document.getElementById(menu).style;=0A=
+			myParent =3D document.getElementById(parent).style;=0A=
+=0A=
+		} =0A=
+=0A=
+		else if(document.layers){=0A=
+=0A=
+			myMenu =3D document.layers[menu];=0A=
+			myParent =3D document.layers[parent];=0A=
+=0A=
+		}=0A=
+=0A=
+=0A=
+=0A=
+		if (lastMenu){=0A=
+			if(document.all){=0A=
+=0A=
+				myLastMenu =3D document.all(lastMenu).style;=0A=
+=0A=
+			}=0A=
+=0A=
+			else if(document.getElementById){=0A=
+=0A=
+				myLastMenu =3D document.getElementById(lastMenu).style;=0A=
+=0A=
+			} =0A=
+=0A=
+			else if(document.layers){=0A=
+=0A=
+				myLastMenu =3D document.layers[lastMenu];=0A=
+=0A=
+			}=0A=
+=0A=
+		}=0A=
+=0A=
+		lastMenu =3D menu;=0A=
+=0A=
+		if(document.layers){=0A=
+=0A=
+			if(myMenu.visibility =3D=3D "show"){=0A=
+			=0A=
+				myMenu.visibility =3D "hide";=0A=
+=0A=
+			} else {=0A=
+=0A=
+=0A=
+				myMenu.visibility =3D "show";=0A=
+				myMenu.left =3D subX;=0A=
+				myMenu.top =3D subY;=0A=
+=0A=
+				myLastMenu.visibility =3D "hide";=0A=
+=0A=
+			}=0A=
+=0A=
+		}=0A=
+=0A=
+		else if(document.all){=0A=
+=0A=
+			if(myMenu.visibility =3D=3D "visible"){=0A=
+			=0A=
+				myMenu.visibility =3D "hidden";=0A=
+=0A=
+			} else {=0A=
+=0A=
+=0A=
+				myMenu.visibility =3D "visible";=0A=
+				myMenu.left =3D subX;=0A=
+				myMenu.top =3D subY;=0A=
+=0A=
+				myLastMenu.visibility =3D "hidden";=0A=
+=0A=
+			}=0A=
+=0A=
+		}=0A=
+=0A=
+		else if(document.getElementById){=0A=
+=0A=
+			if(myMenu.visibility =3D=3D "visible"){=0A=
+			=0A=
+				myMenu.visibility =3D "hidden";=0A=
+=0A=
+			} else {=0A=
+=0A=
+=0A=
+				myMenu.visibility =3D "visible";=0A=
+				myMenu.left =3D subX;=0A=
+				myMenu.top =3D subY;=0A=
+=0A=
+				myLastMenu.visibility =3D "hidden";=0A=
+=0A=
+			}=0A=
+=0A=
+		}=0A=
+=0A=
+=0A=
+=0A=
+	}=0A=
+=0A=
+</SCRIPT>
+
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18702"></HEAD>
+<BODY ondblclick=3DshowQuickLinks() onload=3D"showLogo('logo')">
+<DIV id=3Dlogo2><IMG =
+src=3D"http://www.cppgameprogramming.com/Images/logo2.gif">=20
+</DIV>
+<DIV id=3Dlogo><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dindex"><IMG =
+border=3D0=20
+src=3D"http://www.cppgameprogramming.com/Images/logo.gif"></A> </DIV>
+<DIV id=3DmainMenu class=3DbasicTitle>(Double click anywhere to bring up =
+menu)<BR><A=20
+onmouseover=3D"javascript: revealDesc('descBasic','textBasic')"=20
+onmouseout=3D"javascript: revealDesc('descBasic')"=20
+onclick=3D"javascript:revealSubMenu('subMenuBasic');"=20
+href=3D"javascript:;">&gt;&gt;Basic C++ Lessons:</A> <BR>
+<DIV id=3DsubMenuBasic class=3DsubMenu><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dintro">Intro=
+duction to=20
+C++</A> <BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Darrays">Arra=
+ys</A>=20
+<BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dconditional"=
+>Conditional=20
+Statements</A> <BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dstrings">Str=
+ings</A>=20
+<BR><A =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dloops">Loops=
+</A>=20
+<BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dfunctions">F=
+unctions</A>=20
+<BR><A =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dio">File =
+I/O</A>=20
+<BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dclasses">Cla=
+sses</A>=20
+<BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Darrayclasses=
+">Array of=20
+Classes</A> <BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dmultithreadi=
+ng">Multi-Threading</A>=20
+</DIV><A onmouseover=3D"javascript: revealDesc('descAllegro')"=20
+onmouseout=3D"javascript: revealDesc('descAllegro')"=20
+onclick=3D"javascript: revealSubMenu('subMenuAllegro')"=20
+href=3D"javascript:;">&gt;&gt;Allegro Lessons:</A> <BR>
+<DIV id=3DsubMenuAllegro class=3DsubMenu><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dallegbasics"=
+>Allegro=20
+Basics</A> <BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dallegio">I/O=
+</A> <BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dallegprimiti=
+ve">Drawing=20
+Primitives</A> <BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dallegfiles">=
+Drawing=20
+Graphics From Files</A> <BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dalleganimati=
+on">Animation</A>=20
+<BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dallegbackgro=
+und">Backgrounds</A>=20
+<BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dallegmouse">=
+Mouse</A>=20
+<BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dalleganimati=
+on2">Animation=20
+II</A> </DIV><A onmouseover=3D"javascript: revealDesc('descGames')"=20
+onmouseout=3D"javascript: revealDesc('descGames')"=20
+onclick=3D"javascript: revealSubMenu('subMenuGames')"=20
+href=3D"javascript:;">&gt;&gt;Example Games:</A> <BR>
+<DIV id=3DsubMenuGames class=3DsubMenu><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dtictactoe">T=
+ic-Tac-Toe</A>=20
+<BR><A =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dpong">Pong</=
+A>=20
+<BR><A=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dspacefight">=
+Space=20
+Fight</A> </DIV><A onmouseover=3D"javascript: revealDesc('descBoards')"=20
+onmouseout=3D"javascript: revealDesc('descBoards')"=20
+onclick=3D"javascript: revealSubMenu('subMenuBoards')"=20
+href=3D"javascript:;">&gt;&gt;Message Boards:</A> <BR>
+<DIV id=3DsubMenuBoards class=3DsubMenu><A=20
+href=3D"http://www.cppgameprogramming.com/newforums/index.php">Message =
+Boards</A>=20
+<BR><A href=3D"http://www.cppgameprogramming.com/forums/index.php">Old =
+Message=20
+Boards</A> </DIV><A onmouseover=3D"javascript: revealDesc('descLinks')"=20
+onmouseout=3D"javascript: revealDesc('descLinks')"=20
+onclick=3D"javascript: revealSubMenu('subMenuLinks')"=20
+href=3D"javascript:;">&gt;&gt;Links:</A> <BR>
+<DIV id=3DsubMenuLinks class=3DsubMenu><A =
+href=3D"http://www.bloodshed.net/">Bloodshed=20
+(Dev-C++ compiler)</A> <BR><A=20
+href=3D"http://www.talula.demon.co.uk/allegro/">Allegro</A> <BR><A=20
+href=3D"http://www.programmersheaven.com/">Programmers Heaven</A> =
+</DIV><A=20
+onmouseover=3D"javascript: revealDesc('descBooks')"=20
+onmouseout=3D"javascript: revealDesc('descBooks')"=20
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dbooks">&gt;&=
+gt;Recommended=20
+Books:</A> <BR><A =
+href=3D"mailto:webmaster@CPPGAMEPROGRAMMING.COM">Contact=20
+Webmaster</A>=20
+<DIV id=3Dpoll class=3DbasicTitle>What is your favorite way of learning =
+a new=20
+programming language? <BR>
+<FORM action=3Dhttp://www.cppgameprogramming.com/cgi/poll.cgi><INPUT =
+value=3Dio=20
+type=3Dhidden name=3Dlastpage><INPUT value=3D1 type=3Dradio =
+name=3Dradio>Online=20
+tutorials<BR><INPUT value=3D2 type=3Dradio name=3Dradio>Books<BR><INPUT =
+value=3D3=20
+type=3Dradio name=3Dradio>Classes<BR><INPUT value=3D4 CHECKED =
+type=3Dradio=20
+name=3Dradio>Source Code<BR><INPUT value=3DSubmit =
+type=3Dsubmit></FORM></DIV></DIV>
+<DIV id=3DdescBasic class=3Ddesc>
+<TABLE width=3D150>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"FILTER: =
+progid:DXImageTransform.Microsoft.Gradient(startColorStr=3D'#A52A2A', =
+endColorStr=3D'#FCF394', gradientType=3D'1')"=20
+    bgColor=3Dbrown>
+      <CENTER><FONT color=3D#ffffff>Basic C++ Lessons</FONT> =
+</CENTER></TD></TR>
+  <TR>
+    <TD bgColor=3D#f3fd80>This set of lessons will give you a simple=20
+      introduction to programming in the C++ language.=20
+</TD></TR></TBODY></TABLE></DIV>
+<DIV id=3DdescAllegro class=3Ddesc>
+<TABLE width=3D150>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"FILTER: =
+progid:DXImageTransform.Microsoft.Gradient(startColorStr=3D'#A52A2A', =
+endColorStr=3D'#FCF394', gradientType=3D'1')"=20
+    bgColor=3Dbrown>
+      <CENTER><FONT color=3D#ffffff>Allegro Lessons</FONT> =
+</CENTER></TD></TR>
+  <TR>
+    <TD bgColor=3D#f3fd80>This set of lessons will demonstrate how to =
+use the=20
+      Allegro graphics library to create video games. =
+</TD></TR></TBODY></TABLE></DIV>
+<DIV id=3DdescGames class=3Ddesc>
+<TABLE width=3D150>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"FILTER: =
+progid:DXImageTransform.Microsoft.Gradient(startColorStr=3D'#A52A2A', =
+endColorStr=3D'#FCF394', gradientType=3D'1')"=20
+    bgColor=3Dbrown>
+      <CENTER><FONT color=3D#ffffff>Game Source Code</FONT> =
+</CENTER></TD></TR>
+  <TR>
+    <TD bgColor=3D#f3fd80>Here you will find source code to several =
+games so=20
+      that you can see the code in action. =
+</TD></TR></TBODY></TABLE></DIV>
+<DIV id=3DdescLinks class=3Ddesc>
+<TABLE width=3D150>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"FILTER: =
+progid:DXImageTransform.Microsoft.Gradient(startColorStr=3D'#A52A2A', =
+endColorStr=3D'#FCF394', gradientType=3D'1')"=20
+    bgColor=3Dbrown>
+      <CENTER><FONT color=3D#ffffff>Links</FONT> </CENTER></TD></TR>
+  <TR>
+    <TD bgColor=3D#f3fd80>Here are links to other great C++ sites.=20
+</TD></TR></TBODY></TABLE></DIV>
+<DIV id=3DdescBooks class=3Ddesc>
+<TABLE width=3D150>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"FILTER: =
+progid:DXImageTransform.Microsoft.Gradient(startColorStr=3D'#A52A2A', =
+endColorStr=3D'#FCF394', gradientType=3D'1')"=20
+    bgColor=3Dbrown>
+      <CENTER><FONT color=3D#ffffff>Recommended Books</FONT> =
+</CENTER></TD></TR>
+  <TR>
+    <TD bgColor=3D#f3fd80>Here is a list of books which should help you =
+with C++=20
+    </TD></TR></TBODY></TABLE></DIV>
+<DIV id=3DquickLinksMenu class=3DquickLinks>
+<TABLE=20
+style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px solid; =
+BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+width=3D150 bgColor=3Dbrown>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      onmouseover=3D"javascript:showQuickSubMenu('basicQuickLink', =
+'quickLinksMenu')"=20
+      href=3D"javascript:;">Basic C++ Lessons &gt;</A> =
+</CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      onmouseover=3D"javascript:showQuickSubMenu('allegQuickLink', =
+'quickLinksMenu')"=20
+      href=3D"javascript:;">Allegro Lessons &gt;</A> </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      onmouseover=3D"javascript:showQuickSubMenu('gameQuickLink', =
+'quickLinksMenu')"=20
+      href=3D"javascript:;">Game Examples &gt;</A> </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      onmouseover=3D"javascript:showQuickSubMenu('boardQuickLink', =
+'quickLinksMenu')"=20
+      href=3D"javascript:;">Message Boards &gt;</A> </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      onmouseover=3D"javascript:showQuickSubMenu('linkQuickLink', =
+'quickLinksMenu')"=20
+      href=3D"javascript:;">Links &gt;</A> =
+</CENTER></TD></TR></TBODY></TABLE></DIV>
+<DIV id=3DbasicQuickLink class=3DquickLinks>
+<TABLE=20
+style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px solid; =
+BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+width=3D150 bgColor=3Dbrown>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dintro">Intro=
+duction=20
+      to C++</A> </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Darrays">Arra=
+ys</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dstrings">Str=
+ings</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dloops">Loops=
+</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dfunctions">F=
+unctions</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dio">File =
+I/O</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dclasses">Cla=
+sses</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Darrayclasses=
+">Array=20
+      of Classes</A> </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dmultithreadi=
+ng">Multi-Threading</A>=20
+      </CENTER></TD></TR></TBODY></TABLE></DIV>
+<DIV id=3DallegQuickLink class=3DquickLinks>
+<TABLE=20
+style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px solid; =
+BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+width=3D150 bgColor=3Dbrown>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dallegbasics"=
+>Allegro=20
+      Basics</A> </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dallegio">I/O=
+</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dallegprimiti=
+ve">Drawing=20
+      Primitives</A> </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dallegfiles">=
+Drawing=20
+      Graphics From File</A> </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dalleganimati=
+on">Animation</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dallegbackgro=
+und">Backgrounds</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dallegmouse">=
+Mouse</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dalleganimati=
+on2">Animation=20
+      II</A> </CENTER></TD></TR></TBODY></TABLE></DIV>
+<DIV id=3DgameQuickLink class=3DquickLinks>
+<TABLE=20
+style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px solid; =
+BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+width=3D150 bgColor=3Dbrown>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dtictactoe">T=
+ic-Tac-Toe</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dpong">Pong</=
+A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/cgi/nav.cgi?page=3Dspacefight">=
+Space=20
+      Fight</A> </CENTER></TD></TR></TR></TBODY></TABLE></DIV>
+<DIV id=3DboardQuickLink class=3DquickLinks>
+<TABLE=20
+style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px solid; =
+BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+width=3D150 bgColor=3Dbrown>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A=20
+      =
+href=3D"http://www.cppgameprogramming.com/newforums/index.php">Message=20
+      Boards</A> </CENTER></TD></TR></TD></TR></TBODY></TABLE></DIV>
+<DIV id=3DlinkQuickLink class=3DquickLinks>
+<TABLE=20
+style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px solid; =
+BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+width=3D150 bgColor=3Dbrown>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A href=3D"http://www.bloodshed.net/">Bloodshed =
+(Dev-C++)</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A =
+href=3D"http://www.talula.demon.co.uk/allegro/">Allegro</A>=20
+      </CENTER></TD></TR>
+  <TR>
+    <TD=20
+    style=3D"BORDER-BOTTOM: brown 1px solid; BORDER-LEFT: brown 1px =
+solid; BORDER-TOP: brown 1px solid; BORDER-RIGHT: brown 1px solid"=20
+    bgColor=3D#f7e064>
+      <CENTER><A href=3D"http://www.programmersheaven.com/">Programmers =
+Heaven</A>=20
+      </CENTER></TD></TR></TBODY></TABLE></DIV></TR></TABLE>
+<DIV></DIV>
+<DIV id=3DmainBody>
+<TABLE>
+  <CENTER>
+  <SCRIPT type=3Dtext/javascript><!--=0A=
+google_ad_client =3D "pub-5829955768621483";=0A=
+google_ad_width =3D 728;=0A=
+google_ad_height =3D 90;=0A=
+google_ad_format =3D "728x90_as";=0A=
+google_ad_channel =3D"";=0A=
+//--></SCRIPT>
+
+  <SCRIPT type=3Dtext/javascript=20
+  src=3D"http://pagead2.googlesyndication.com/pagead/show_ads.js">=0A=
+</SCRIPT>
+  </CENTER>
+  <TBODY>
+  <TR>
+    <TD=20
+    style=3D"FILTER: =
+progid:DXImageTransform.Microsoft.Gradient(startColorStr=3D'#A52A2A', =
+endColorStr=3D'#FCF394', )"=20
+    bgColor=3Dbrown>
+      <CENTER><FONT style=3D"FILTER: glow(); WIDTH: 100%" =
+color=3D#ffffff>File=20
+      I/O</FONT> </CENTER></TD>
+  <TR>
+    <TD bgColor=3D#f3fd80>File input and output is extremely simple in =
+C++=20
+      compared to C. It works just like reading and writting to standard =
+I/O. In=20
+      order to use the C++ functions needed to accomplish file I/O you =
+must=20
+      include the header file <FSTREAM>. Here is an example: </TD>
+    <P></P>
+  <TR>
+    <TD bgColor=3D#f7e064><PRE>
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+
+using namespace std;
+
+int main(){
+
+	ofstream outputFile("file.txt"); //ofstream will create the file if it =
+doesn't exist, ifstream will not
+	ifstream inputFile;
+
+	char myString[50];
+
+	cout &lt;&lt; "Enter a string: ";
+	cin.getline( myString, 50, '\n');
+
+	cout &lt;&lt; "Writting string to file...\n";
+
+	outputFile &lt;&lt; myString;
+
+	outputFile.close();
+
+	inputFile.open("file.txt");
+
+	cout &lt;&lt; "Reading string from file...\n";
+
+	inputFile.getline(myString, 50, '\n');
+
+
+	cout &lt;&lt; myString;
+
+
+
+
+	system("pause");
+
+	return 0;
+
+}
+</PRE></TD></TR>
+  <P>
+  <TR>
+    <TD bgColor=3D#f3fd80>Here are two new data types, ofstream and =
+ifstream.=20
+      When a program open a file it asigns it a number called a handle =
+in order=20
+      to keep track of it, this is what is assigned to the ofstream and =
+ifstream=20
+      type variables every time you open a file. As you see there are =
+two was of=20
+      opening a file, at the declaration, "ofstream =
+outputFile("file.txt");",=20
+      and anywhere else by using open(), "inputFile.open("test.txt");".=20
+      <P>Output works just like cout, and input works exactly like cin! =
+Notice=20
+      how I used getline() with inputFile and it worked exactly like it =
+would=20
+      with cin.=20
+      <P>If a file is opened from an ifstream and the file does not =
+exist, it=20
+      will not create the file. Ofstream will create a non-existant =
+file, but=20
+      will also wipe out its contents. What if you wanted ifstream to =
+create the=20
+      file, and ofstream not to? Or have ofstream add to a file rather =
+than=20
+      delete it? Heres how: </P></TD>
+    <P></P>
+  <TR>
+    <TD bgColor=3D#f7e064><PRE>
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+
+using namespace std;
+
+int main(){
+
+	ofstream outputFile("file.txt", ios::app); //ofstream will append to =
+file
+	ifstream inputFile;
+
+	char myString[50];
+
+	cout &lt;&lt; "Enter a string: ";
+	cin.getline( myString, 50, '\n');
+
+	cout &lt;&lt; "Writting string to file...\n";
+
+	outputFile &lt;&lt; myString;
+
+	outputFile.close();
+
+	inputFile.open("file.txt");
+
+	cout &lt;&lt; "Reading string from file...\n";
+
+	inputFile.getline(myString, 50, '\n');
+
+
+	cout &lt;&lt; myString;
+
+
+
+
+	system("pause");
+
+	return 0;
+
+}
+</PRE></TD></TR>
+  <P>
+  <TR>
+    <TD bgColor=3D#f3fd80>Here we have the same program from before, =
+except we=20
+      are now adding on to file.txt. Here are other options for files: =
+</TD>
+    <P></P>
+  <TR>
+    <TD bgColor=3D#f7e064><PRE>
+ios::app - Apend
+ios::trunc - wipe out file
+ios::ate - Set position at end of file
+</PRE></TD></TR>
+  <P>
+  <TR>
+    <TD bgColor=3D#f3fd80>
+      <CENTER><!-- SiteSearch Google -->
+      <FORM method=3Dget action=3Dhttp://www.google.com/custom =
+target=3D_top>
+      <TABLE border=3D0 bgColor=3D#ffffff>
+        <TBODY>
+        <TR>
+          <TD height=3D32 vAlign=3Dtop noWrap align=3Dleft><A=20
+            href=3D"http://www.google.com/"><IMG border=3D0 alt=3DGoogle =
+
+            =
+src=3D"http://www.google.com/logos/Logo_25wht.gif"></IMG></A> </TD>
+          <TD noWrap><INPUT type=3Dhidden name=3Ddomains></INPUT> <INPUT =
+
+            maxLength=3D255 size=3D31 name=3Dq></INPUT> <INPUT =
+value=3DSearch type=3Dsubmit name=3Dsa></INPUT> </TD></TR>
+        <TR>
+          <TD>&nbsp;</TD>
+          <TD noWrap><INPUT value=3Dpub-5829955768621483 type=3Dhidden=20
+            name=3Dclient></INPUT> <INPUT value=3D1 type=3Dhidden =
+name=3Dforid></INPUT>=20
+            <INPUT value=3DISO-8859-1 type=3Dhidden name=3Die></INPUT> =
+<INPUT=20
+            value=3DISO-8859-1 type=3Dhidden name=3Doe></INPUT> <INPUT=20
+            =
+value=3DGALT:#008000;GL:1;DIV:#336699;VLC:663399;AH:center;BGC:FFFFFF;LBG=
+C:336699;ALC:0000FF;LC:0000FF;T:000000;GFNT:0000FF;GIMP:0000FF;FORID:1;=20
+            type=3Dhidden name=3Dcof></INPUT> <INPUT value=3Den =
+type=3Dhidden=20
+            name=3Dhl></INPUT> </TD></TR></TBODY></TABLE></FORM><!-- =
+SiteSearch Google =
+--></CENTER></TD></TR></P></TBODY></TABLE></DIV></BODY></HTML>
+
+------=_NextPart_000_0075_01CB2447.ECAC3DA0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.cppgameprogramming.com/Images/logo2.gif
+
+R0lGODlhGAFkAPcAAP//////zP//mf//Zv//M///AP/M///MzP/Mmf/MZv/MM//MAP+Z//+ZzP+Z
+mf+ZZv+ZM/+ZAP9m//9mzP9mmf9mZv9mM/9mAP8z//8zzP8zmf8zZv8zM/8zAP8A//8AzP8Amf8A
+Zv8AM/8AAMz//8z/zMz/mcz/Zsz/M8z/AMzM/8zMzMzMmczMZszMM8zMAMyZ/8yZzMyZmcyZZsyZ
+M8yZAMxm/8xmzMxmmcxmZsxmM8xmAMwz/8wzzMwzmcwzZswzM8wzAMwA/8wAzMwAmcwAZswAM8wA
+AJn//5n/zJn/mZn/Zpn/M5n/AJnM/5nMzJnMmZnMZpnMM5nMAJmZ/5mZzJmZmZmZZpmZM5mZAJlm
+/5lmzJlmmZlmZplmM5lmAJkz/5kzzJkzmZkzZpkzM5kzAJkA/5kAzJkAmZkAZpkAM5kAAGb//2b/
+zGb/mWb/Zmb/M2b/AGbM/2bMzGbMmWbMZmbMM2bMAGaZ/2aZzGaZmWaZZmaZM2aZAGZm/2ZmzGZm
+mWZmZmZmM2ZmAGYz/2YzzGYzmWYzZmYzM2YzAGYA/2YAzGYAmWYAZmYAM2YAADP//zP/zDP/mTP/
+ZjP/MzP/ADPM/zPMzDPMmTPMZjPMMzPMADOZ/zOZzDOZmTOZZjOZMzOZADNm/zNmzDNmmTNmZjNm
+MzNmADMz/zMzzDMzmTMzZjMzMzMzADMA/zMAzDMAmTMAZjMAMzMAAAD//wD/zAD/mQD/ZgD/MwD/
+AADM/wDMzADMmQDMZgDMMwDMAACZ/wCZzACZmQCZZgCZMwCZAABm/wBmzABmmQBmZgBmMwBmAAAz
+/wAzzAAzmQAzZgAzMwAzAAAA/wAAzAAAmQAAZgAAMwAAAP7+/v39/fv7+/j4+Pf39/T09PLy8vDw
+8O7u7u3t7erq6unp6efn5+Tk5OPj4+Dg4N/f39zc3Nvb29nZ2dbW1tXV1dLS0tDQ0M7Ozs3NzcvL
+y8nJycfHx8TExMLCwsHBwb+/v7y8vLm5ubS0tKurq6SkpJGRkf///yH5BAEAAP8ALAAAAAAYAWQA
+AAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuX
+MGPKnEmzps2bOHPq3Mmzp8+fQIMKHUq0qNGjSJMqXcq0qdOnUKNKnUq1qtWrWLNq3cq1q9evYMOK
+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
+mZq5mZzZmZ75maAZmqI5mqRJFAEBADs=
+
+------=_NextPart_000_0075_01CB2447.ECAC3DA0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.cppgameprogramming.com/Images/logo.gif
+
+R0lGODlhGAFkAPcAAP//////zP//mf//Zv//M///AP/M///MzP/Mmf/MZv/MM//MAP+Z//+ZzP+Z
+mf+ZZv+ZM/+ZAP9m//9mzP9mmf9mZv9mM/9mAP8z//8zzP8zmf8zZv8zM/8zAP8A//8AzP8Amf8A
+Zv8AM/8AAMz//8z/zMz/mcz/Zsz/M8z/AMzM/8zMzMzMmczMZszMM8zMAMyZ/8yZzMyZmcyZZsyZ
+M8yZAMxm/8xmzMxmmcxmZsxmM8xmAMwz/8wzzMwzmcwzZswzM8wzAMwA/8wAzMwAmcwAZswAM8wA
+AJn//5n/zJn/mZn/Zpn/M5n/AJnM/5nMzJnMmZnMZpnMM5nMAJmZ/5mZzJmZmZmZZpmZM5mZAJlm
+/5lmzJlmmZlmZplmM5lmAJkz/5kzzJkzmZkzZpkzM5kzAJkA/5kAzJkAmZkAZpkAM5kAAGb//2b/
+zGb/mWb/Zmb/M2b/AGbM/2bMzGbMmWbMZmbMM2bMAGaZ/2aZzGaZmWaZZmaZM2aZAGZm/2ZmzGZm
+mWZmZmZmM2ZmAGYz/2YzzGYzmWYzZmYzM2YzAGYA/2YAzGYAmWYAZmYAM2YAADP//zP/zDP/mTP/
+ZjP/MzP/ADPM/zPMzDPMmTPMZjPMMzPMADOZ/zOZzDOZmTOZZjOZMzOZADNm/zNmzDNmmTNmZjNm
+MzNmADMz/zMzzDMzmTMzZjMzMzMzADMA/zMAzDMAmTMAZjMAMzMAAAD//wD/zAD/mQD/ZgD/MwD/
+AADM/wDMzADMmQDMZgDMMwDMAACZ/wCZzACZmQCZZgCZMwCZAABm/wBmzABmmQBmZgBmMwBmAAAz
+/wAzzAAzmQAzZgAzMwAzAAAA/wAAzAAAmQAAZgAAMwAAAP0AAvsAA/kABfYAB/MACe8AC+AAF9gA
+HNIAIcwAJccAKcEALbcANf+bAP+TAP+OAP+KAPmJBP+GAPmFBNqAGv+BAP97AP90ANpzGv9tAP9g
+ANpjGv9aAP9SAP9JAOVREf9AAOVIEuE1FP8LAP8FAP8DAIGBgf///yH5BAEAAP8ALAAAAAAYAWQA
+AAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuX
+MGPKnEmzps2bOHPq3Mmzp8+fQIMKHaoTm9Fs2bRpAxlOnFNx48YRnUp1o1FsSJUybeo0atWvYCWO
+OJp06cdwXKFKDcu2LcKxWLNuferVrV2H8ujppVevXk64SJNuTbv2ruGBFxJfkMd4b9/H9iLbmwlY
+7lm0XQsfdjsvnmfFixvrhVxPsj18+GCOqGzWI1rCmzm/8/w5MeO8jiGbRo1aX8vVVwVfTisuNtt3
+yGnHA307t+7I+E7z9q0S+NHWHV/TNf51njvkyWkr/27u3F5pybzxdUhdHW7cwWm5U23nrj545cxF
+831+WjrvlatVBhI42jklH1Ht0GffbLPVFhpuo/Vl3m7psZdSgGQNWGBxBwaVoILf3efgg86dRyFq
+HXy0z4or8uMiP/30E2BlZW2zDTc4ctPNjgh546OP3wT5DThEErhhVFGRo+SS5HRIEzwf1rdgg8uN
+p99+EqLnn4UcsbgPP1++KCOGZCll44047thNjz9+442QQxK5oVpIMqmkkzOp8yGIIjpIXoSlmbgl
+lxt52aKLMc44VmBKaWNjjjquedCPQMJZpJGEJTmOnU3iCRM66uiZoJR9VmmbQY+ZGF16KrII5osw
+Jv9qXVZmPhqppAZR6qalcr7GFZKbbsqkpy/BA6qoUoZIZZUMmTZoq67CKuustJ6ZI4+T6iokOHFi
++hSdwg5LbEvnHBslqeHFA9GJhGpkaJiIThtcjbZGyqa2QV7qLVTg2jkuS8aiY+6o7yjr2UT9/efR
+u/DGOmOZtUKKa0GUvvnmtgTu22+4nf6b0jnlDswngxVtuZK82AzYa1Me2wSywKGeq+xF+kh3sqIp
+f3QpZi3TBHLIoSI7ZUao3UymypiG0/NM5vwM856kVhXjmGMhjenSMjUNdMyj2ie1vFa/hnVM5mgN
+s9D1fTU1hiB1K/bYLpVt9rFoqz3tCFYbCXfcZTv/HfS5XzkcYNs7K703SxHI/TKo574T+N2EF4nW
+4Yj3vTjX9IEVK9WR90r5SolbLjDjH2q+9mptd0vg5ypFELrfmGsuON4f5Ss56ymFrvXWpePuu0yu
+K857gr8X/1Lwoots/PKg67446e0wL/1Jrr/+8t/RT6+9SOXoPreo7cyz/fgede/88NnjdM367Lfv
+/vvwxy///PTXb//9+Of/flDVW18u9jrRnwAHSMACGvCA6wsKO5A3t4EFEIEQjKAEJ0g/oVTPcv/j
+mjvIx0GNmE94ZxNVB0dokQ8mD3sbxEhkSCi9BSLPadBLX8lWyELmdU946EvhRPKRpRoy74InBF/m
+/yRCmsn4cHlAhCHm0vaQemBJQirxhxSlyJEp+kMmVMQdA5+nwagtxDFYouFJsviPK26EimR8iRm1
+6L+zyQw8jivIbSCUqtKgJI0DmWIey3hFPQrEjwTJIhrL+EcyWvGPhDxkIdG4xkMaMpGGBOS4FghC
+kSkIjvixzZVIc8c1BpKPheRjH0cJykCa0YqMBKUgR+lHRrLSlaJMpR5PScqWvTBk0EtWqaykn1QZ
+0SSr9CQhh7nKYRozlKksZSLzWEtmllKQzzylKmn5yJ7h0I1dM5h4NAmhJ/6yJMFcpDSjiUphKrKY
+i3RmIx1JS0Sik5TBbCTWMIjNkaUrP7hxYqo6+flJaBKTmsI0pUCVCchBRvOgkAxlQuO5x3l+D3zo
+Spep/uTLlDxSnv9EZkLS+M5aGrSY70QoPNvZzrH9bHi6lGh+9vLEKLKzlQp1JR45us5IzpKZsyyp
+R6WZTJkGtGXwuN4Sp5RJEjmnZ3i8I+XSUc8p3ZOXLPUYKl0qyb2tA3OX3CU36ZGPpVV1jD+l3Kjs
+WdQL3OOIaGWINtWV1ra69a1wjatc50rXusqVgnjNq17dZ1eH7PWvgIVgXwdL2MIa9rCITaxiF8vY
+xjr2sZCNrGQnS9nKWvaymM2sZjfL2c569rOgDa1oR0va0pr2tKhNrWpXy9rWujYkAQEAOw==
+
+------=_NextPart_000_0075_01CB2447.ECAC3DA0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.google.com/logos/Logo_25wht.gif
+
+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
+5JRXbvnlNAUEADs=
+
+------=_NextPart_000_0075_01CB2447.ECAC3DA0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.cppgameprogramming.com/CSS/style.css
+
+A:link {
+	COLOR: black
+}
+A:active {
+	COLOR: black
+}
+A:visited {
+	COLOR: black
+}
+A:hover {
+	BACKGROUND: black; COLOR: white; TEXT-DECORATION: underline
+}
+BODY {
+	BACKGROUND-IMAGE: url(../Images/background.gif); BACKGROUND-COLOR: =
+#fcf394; BACKGROUND-ATTACHMENT: fixed
+}
+#logo {
+	POSITION: absolute; OVERFLOW: hidden; TOP: 24px; LEFT: 25px
+}
+#mainBody {
+	BORDER-BOTTOM: brown 2px double; POSITION: absolute; BORDER-LEFT: brown =
+2px double; BACKGROUND: #f3fd80; FONT-SIZE: 20px; OVERFLOW: visible; =
+BORDER-TOP: brown 4px double; TOP: 110px; BORDER-RIGHT: brown 2px =
+double; LEFT: 280px; layer-backgroud-color: #F3FD80
+}
+#mainMenu {
+	BORDER-BOTTOM: brown 2px double; POSITION: absolute; BORDER-LEFT: brown =
+2px double; WIDTH: 240px; BACKGROUND: #f3fd80; OVERFLOW: visible; =
+BORDER-TOP: brown 4px double; TOP: 110px; BORDER-RIGHT: brown 2px =
+double; LEFT: 20px; layer-backgroud-color: #F3FD80
+}
+.subMenu {
+	POSITION: absolute; MARGIN-LEFT: 20px
+}
+.desc {
+	TOP: 100px; LEFT: 200px
+}
+.quickLinks {
+	Z-INDEX: 1; POSITION: absolute
+}
+#quickLinksMenu {
+	POSITION: absolute; VISIBILITY: hidden
+}
+#basicQuickLink {
+	POSITION: absolute; VISIBILITY: hidden
+}
+#allegQuickLink {
+	POSITION: absolute; VISIBILITY: hidden
+}
+#gameQuickLink {
+	POSITION: absolute; VISIBILITY: hidden
+}
+#boardQuickLink {
+	POSITION: absolute; VISIBILITY: hidden
+}
+#linkQuickLink {
+	POSITION: absolute; VISIBILITY: hidden
+}
+#subMenuBasic {
+	POSITION: absolute; VISIBILITY: hidden
+}
+#subMenuAllegro {
+	POSITION: absolute; VISIBILITY: hidden
+}
+#subMenuGames {
+	POSITION: absolute; VISIBILITY: hidden
+}
+#subMenuBoards {
+	POSITION: absolute; VISIBILITY: hidden
+}
+#subMenuLinks {
+	POSITION: absolute; VISIBILITY: hidden
+}
+#descBasic {
+	Z-INDEX: 1; POSITION: absolute; VISIBILITY: hidden
+}
+#descAllegro {
+	Z-INDEX: 1; POSITION: absolute; VISIBILITY: hidden
+}
+#descGames {
+	Z-INDEX: 1; POSITION: absolute; VISIBILITY: hidden
+}
+#descLinks {
+	Z-INDEX: 1; POSITION: absolute; VISIBILITY: hidden
+}
+#descBooks {
+	Z-INDEX: 1; POSITION: absolute; VISIBILITY: hidden
+}
+.basicTitle {
+	FONT-SIZE: 12px
+}
+#textBasic {
+	TEXT-DECORATION: underline
+}
+
+------=_NextPart_000_0075_01CB2447.ECAC3DA0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://pagead2.googlesyndication.com/pagead/show_ads.js
+
+=0A=
+(function(){var h=3Dtrue,i=3Dnull,j=3Dfalse,k=3D(new =
+Date).getTime(),aa=3Dfunction(a){var b=3D(new =
+Date).getTime()-k;b=3D"&dtd=3D"+(b<1E4?b:"M");return a+b};var =
+l=3Dthis,ba=3Dfunction(a,b,c){a=3Da.split(".");c=3Dc||l;!(a[0]in =
+c)&&c.execScript&&c.execScript("var "+a[0]);for(var =
+d;a.length&&(d=3Da.shift());)if(!a.length&&b!=3D=3Dundefined)c[d]=3Db;els=
+e c=3Dc[d]?c[d]:c[d]=3D{}},m=3Dfunction(a){var b=3Dtypeof =
+a;if(b=3D=3D"object")if(a){if(a instanceof Array||!(a instanceof =
+Object)&&Object.prototype.toString.call(a)=3D=3D"[object Array]"||typeof =
+a.length=3D=3D"number"&&typeof a.splice!=3D"undefined"&&typeof =
+a.propertyIsEnumerable!=3D"undefined"&&!a.propertyIsEnumerable("splice"))=
+return"array";if(!(a instanceof=0A=
+Object)&&(Object.prototype.toString.call(a)=3D=3D"[object =
+Function]"||typeof a.call!=3D"undefined"&&typeof =
+a.propertyIsEnumerable!=3D"undefined"&&!a.propertyIsEnumerable("call")))r=
+eturn"function"}else return"null";else if(b=3D=3D"function"&&typeof =
+a.call=3D=3D"undefined")return"object";return b},n=3Dfunction(a){return =
+m(a)=3D=3D"array"},ca=3Dfunction(a){var b=3Dm(a);return =
+b=3D=3D"array"||b=3D=3D"object"&&typeof =
+a.length=3D=3D"number"},p=3Dfunction(a){return typeof =
+a=3D=3D"string"},da=3Dfunction(a){a=3Dm(a);return =
+a=3D=3D"object"||a=3D=3D"array"||a=3D=3D"function"},=0A=
+q=3Dfunction(a,b){var c=3Db||l;if(arguments.length>2){var =
+d=3DArray.prototype.slice.call(arguments,2);return function(){var =
+e=3DArray.prototype.slice.call(arguments);Array.prototype.unshift.apply(e=
+,d);return a.apply(c,e)}}else return function(){return =
+a.apply(c,arguments)}},ea=3Dfunction(a){var =
+b=3DArray.prototype.slice.call(arguments,1);return function(){var =
+c=3DArray.prototype.slice.call(arguments);c.unshift.apply(c,b);return =
+a.apply(this,c)}},r=3Dfunction(a,b,c){ba(a,b,c)},fa=3Dfunction(a,b,c){a[b=
+]=3Dc};var s=3Dfunction(a,b){var c=3DparseFloat(a);return =
+isNaN(c)||c>1||c<0?b:c},t=3Dfunction(a,b){if(a=3D=3D"true")return =
+h;if(a=3D=3D"false")return j;return =
+b},ga=3D/^([\w-]+\.)*([\w-]{2,})(\:[0-9]+)?$/,u=3Dfunction(a,b){if(!a)ret=
+urn b;var c=3Da.match(ga);return c?c[0]:b};var ha=3Dfunction(){return =
+u("","googleads.g.doubleclick.net")},ia=3Dfunction(){return =
+u("","pagead2.googlesyndication.com")},v=3Dfunction(){return =
+u("","pagead2.googlesyndication.com")};var =
+oa=3Dfunction(a,b){if(b)return =
+a.replace(ja,"&amp;").replace(ka,"&lt;").replace(la,"&gt;").replace(ma,"&=
+quot;");else{if(!na.test(a))return =
+a;if(a.indexOf("&")!=3D-1)a=3Da.replace(ja,"&amp;");if(a.indexOf("<")!=3D=
+-1)a=3Da.replace(ka,"&lt;");if(a.indexOf(">")!=3D-1)a=3Da.replace(la,"&gt=
+;");if(a.indexOf('"')!=3D-1)a=3Da.replace(ma,"&quot;");return =
+a}},ja=3D/&/g,ka=3D/</g,la=3D/>/g,ma=3D/\"/g,na=3D/[&<>\"]/,ra=3Dfunction=
+(a){if(a.indexOf("&")!=3D-1)return"document"in =
+l&&a.indexOf("<")=3D=3D-1?pa(a):qa(a);return a},pa=3Dfunction(a){var b=3D=0A=
+l.document.createElement("a");b.innerHTML=3Da;b.normalize&&b.normalize();=
+a=3Db.firstChild.nodeValue;b.innerHTML=3D"";return =
+a},qa=3Dfunction(a){return =
+a.replace(/&([^;]+);/g,function(b,c){switch(c){case "amp":return"&";case =
+"lt":return"<";case "gt":return">";case =
+"quot":return'"';default:if(c.charAt(0)=3D=3D"#"){var =
+d=3DNumber("0"+c.substr(1));if(!isNaN(d))return =
+String.fromCharCode(d)}return b}})},sa=3Dfunction(a,b){var =
+c=3Db.length;for(var d=3D0;d<c;d++){var =
+e=3Dc=3D=3D1?b:b.charAt(d);if(a.charAt(0)=3D=3De&&a.charAt(a.length-=0A=
+1)=3D=3De)return a.substring(1,a.length-1)}return =
+a},ua=3Dfunction(a,b){var =
+c=3D0,d=3DString(a).replace(/^[\s\xa0]+|[\s\xa0]+$/g,"").split("."),e=3DS=
+tring(b).replace(/^[\s\xa0]+|[\s\xa0]+$/g,"").split("."),f=3DMath.max(d.l=
+ength,e.length);for(var g=3D0;c=3D=3D0&&g<f;g++){var =
+o=3Dd[g]||"",Q=3De[g]||"",I=3DRegExp("(\\d*)(\\D*)","g"),ac=3DRegExp("(\\=
+d*)(\\D*)","g");do{var =
+R=3DI.exec(o)||["","",""],S=3Dac.exec(Q)||["","",""];if(R[0].length=3D=3D=
+0&&S[0].length=3D=3D0)break;c=3DR[1].length=3D=3D0?0:parseInt(R[1],10);va=
+r bc=3DS[1].length=3D=3D0?0:parseInt(S[1],=0A=
+10);c=3Dta(c,bc)||ta(R[2].length=3D=3D0,S[2].length=3D=3D0)||ta(R[2],S[2]=
+)}while(c=3D=3D0)}return c},ta=3Dfunction(a,b){if(a<b)return-1;else =
+if(a>b)return 1;return 0};var =
+w=3DArray.prototype,va=3Dw.forEach?function(a,b,c){w.forEach.call(a,b,c)}=
+:function(a,b,c){var d=3Da.length,e=3Dp(a)?a.split(""):a;for(var =
+f=3D0;f<d;f++)f in e&&b.call(c,e[f],f,a)},wa=3Dfunction(){return =
+w.concat.apply(w,arguments)},xa=3Dfunction(a){if(n(a))return =
+wa(a);else{var b=3D[],c=3D0;for(var =
+d=3Da.length;c<d;c++)b[c]=3Da[c];return b}};var =
+x=3Dfunction(a,b){this.width=3Da;this.height=3Db};x.prototype.ceil=3Dfunc=
+tion(){this.width=3DMath.ceil(this.width);this.height=3DMath.ceil(this.he=
+ight);return =
+this};x.prototype.floor=3Dfunction(){this.width=3DMath.floor(this.width);=
+this.height=3DMath.floor(this.height);return =
+this};x.prototype.round=3Dfunction(){this.width=3DMath.round(this.width);=
+this.height=3DMath.round(this.height);return =
+this};x.prototype.scale=3Dfunction(a){this.width*=3Da;this.height*=3Da;re=
+turn this};var ya=3Dfunction(a,b,c){for(var d in =
+a)b.call(c,a[d],d,a)},za=3D["constructor","hasOwnProperty","isPrototypeOf=
+","propertyIsEnumerable","toLocaleString","toString","valueOf"],Aa=3Dfunc=
+tion(a){var b,c;for(var =
+d=3D1;d<arguments.length;d++){c=3Darguments[d];for(b in =
+c)a[b]=3Dc[b];for(var =
+e=3D0;e<za.length;e++){b=3Dza[e];if(Object.prototype.hasOwnProperty.call(=
+c,b))a[b]=3Dc[b]}}};var y,Ba,Ca,Da,Ea,Fa,Ga,Ha,Ia,Ja=3Dfunction(){return =
+l.navigator?l.navigator.userAgent:i},Ka=3Dfunction(){return =
+l.navigator},La=3Dfunction(){Ea=3DDa=3DCa=3DBa=3Dy=3Dj;var =
+a;if(a=3DJa()){var =
+b=3DKa();y=3Da.indexOf("Opera")=3D=3D0;Ba=3D!y&&a.indexOf("MSIE")!=3D-1;D=
+a=3D(Ca=3D!y&&a.indexOf("WebKit")!=3D-1)&&a.indexOf("Mobile")!=3D-1;Ea=3D=
+!y&&!Ca&&b.product=3D=3D"Gecko"}};La();=0A=
+var Ma=3Dy,z=3DBa,Na=3DEa,Oa=3DCa,Pa=3DDa,Qa=3Dfunction(){var =
+a=3DKa();return =
+a&&a.platform||""},Ra=3DQa(),Sa=3Dfunction(){Fa=3DRa.indexOf("Mac")!=3D-1=
+;Ga=3DRa.indexOf("Win")!=3D-1;Ha=3DRa.indexOf("Linux")!=3D-1;Ia=3D!!Ka()&=
+&(Ka().appVersion||"").indexOf("X11")!=3D-1};Sa();=0A=
+var Ta=3DFa,Ua=3DGa,Va=3DHa,Wa=3Dfunction(){var =
+a=3D"",b;if(Ma&&l.opera){a=3Dl.opera.version;a=3Dtypeof =
+a=3D=3D"function"?a():a}else{if(Na)b=3D/rv\:([^\);]+)(\)|;)/;else =
+if(z)b=3D/MSIE\s+([^\);]+)(\)|;)/;else =
+if(Oa)b=3D/WebKit\/(\S+)/;if(b)a=3D(a=3Db.exec(Ja()))?a[1]:""}return =
+a},Xa=3DWa(),Ya=3D{},A=3Dfunction(a){return =
+Ya[a]||(Ya[a]=3Dua(Xa,a)>=3D0)};var Za=3Dfunction(a){return =
+p(a)?document.getElementById(a):a},$a=3DZa,bb=3Dfunction(a,b){ya(b,functi=
+on(c,d){if(d=3D=3D"style")a.style.cssText=3Dc;else =
+if(d=3D=3D"class")a.className=3Dc;else =
+if(d=3D=3D"for")a.htmlFor=3Dc;else if(d in =
+ab)a.setAttribute(ab[d],c);else =
+a[d]=3Dc})},ab=3D{cellpadding:"cellPadding",cellspacing:"cellSpacing",col=
+span:"colSpan",rowspan:"rowSpan",valign:"vAlign",height:"height",width:"w=
+idth",usemap:"useMap",frameborder:"frameBorder",type:"type"},cb=3Dfunctio=
+n(a){var b=3Da.document;if(Oa&&!A("500")&&!Pa){if(typeof =
+a.innerHeight=3D=3D=0A=
+"undefined")a=3Dwindow;b=3Da.innerHeight;var =
+c=3Da.document.documentElement.scrollHeight;if(a=3D=3Da.top)if(c<b)b-=3D1=
+5;return new =
+x(a.innerWidth,b)}a=3Db.compatMode=3D=3D"CSS1Compat";if(Ma&&!A("9.50"))a=3D=
+j;a=3Da?b.documentElement:b.body;return new =
+x(a.clientWidth,a.clientHeight)},eb=3Dfunction(){return =
+db(document,arguments)},db=3Dfunction(a,b){var =
+c=3Db[0],d=3Db[1];if(z&&d&&(d.name||d.type)){c=3D["<",c];d.name&&c.push('=
+ name=3D"',oa(d.name),'"');if(d.type){c.push(' =
+type=3D"',oa(d.type),'"');var e=3D{};Aa(e,d);d=3De;delete =
+d.type}c.push(">");=0A=
+c=3Dc.join("")}c=3Da.createElement(c);if(d)if(p(d))c.className=3Dd;else =
+bb(c,d);b.length>2&&fb(a,c,b,2);return =
+c},fb=3Dfunction(a,b,c,d){function =
+e(g){if(g)b.appendChild(p(g)?a.createTextNode(g):g)}for(d=3Dd;d<c.length;=
+d++){var =
+f=3Dc[d];ca(f)&&!(da(f)&&f.nodeType>0)?va(gb(f)?xa(f):f,e):e(f)}},hb=3Dfu=
+nction(a,b){a.appendChild(b)},gb=3Dfunction(a){if(a&&typeof =
+a.length=3D=3D"number")if(da(a))return typeof =
+a.item=3D=3D"function"||typeof a.item=3D=3D"string";else =
+if(m(a)=3D=3D"function")return typeof a.item=3D=3D"function";return =
+j};var ib=3Ddocument,B=3Dwindow,jb=3Dfunction(a){var =
+b=3Di;if((a=3Da.getElementsByTagName("script"))&&a.length){b=3Da[a.length=
+-1];b=3Db.parentNode}return b},kb=3Djb(ib);v();=0A=
+var C=3Dfunction(a,b){for(var c in =
+a)Object.prototype.hasOwnProperty.call(a,c)&&b.call(i,a[c],c,a)},lb=3Dfun=
+ction(a){return!!a&&typeof =
+a=3D=3D"function"&&!!a.call},mb=3Dfunction(a){return!!a&&(typeof =
+a=3D=3D"object"||typeof =
+a=3D=3D"function")},ob=3Dfunction(a,b){if(!a||!mb(a))return =
+h;return!nb(a,b.prototype)},nb=3Dfunction(a,b){if(!a)return j;var =
+c=3Dh;C(b,function(d,e){if(!c||!(e in a)||typeof d!=3Dtypeof =
+a[e])c=3Dj});return c},pb=3Dfunction(a){if(arguments.length<2)return =
+a.length;var b=3D1;for(var =
+c=3Darguments.length;b<c;++b)a.push(arguments[b]);return a.length};=0A=
+function D(a){return typeof =
+encodeURIComponent=3D=3D"function"?encodeURIComponent(a):escape(a)}functi=
+on qb(a,b,c){var =
+d=3Ddocument.createElement("script");d.type=3D"text/javascript";if(b)d.on=
+load=3Db;if(c)d.id=3Dc;d.src=3Da;var =
+e=3Ddocument.getElementsByTagName("head")[0];if(!e)return =
+j;window.setTimeout(function(){e.appendChild(d)},0);return h}function =
+rb(a,b){if(a.attachEvent){a.attachEvent("onload",b);return =
+h}if(a.addEventListener){a.addEventListener("load",b,j);return h}return =
+j}=0A=
+var sb=3Dfunction(a){if(!("google_onload_fired"in =
+a)){a.google_onload_fired=3Dj;rb(a,function(){a.google_onload_fired=3Dh})=
+}};function =
+tb(a,b){a.google_image_requests||(a.google_image_requests=3D[]);var =
+c=3Dnew Image;c.src=3Db;a.google_image_requests.push(c)}function =
+ub(a){if(a in vb)return vb[a];return =
+vb[a]=3Dnavigator.userAgent.toLowerCase().indexOf(a)!=3D-1}var vb=3D{};=0A=
+function wb(){if(navigator.plugins&&navigator.mimeTypes.length){var =
+a=3Dnavigator.plugins["Shockwave Flash"];if(a&&a.description)return =
+a.description.replace(/([a-zA-Z]|\s)+/,"").replace(/(\s)+r/,".")}else =
+if(navigator.userAgent&&navigator.userAgent.indexOf("Windows =
+CE")>=3D0){a=3D3;for(var b=3D1;b;)try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash."+(a+1));a++}catch(c){b=3Di}=
+return a.toString()}else if(ub("msie")&&!window.opera){b=3Di;try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash.7")}catch(d){a=3D=0A=
+0;try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash.6");a=3D6;b.AllowScriptAcces=
+s=3D"always"}catch(e){if(a=3D=3D6)return a.toString()}try{b=3Dnew =
+ActiveXObject("ShockwaveFlash.ShockwaveFlash")}catch(f){}}if(b){a=3Db.Get=
+Variable("$version").split(" ")[1];return =
+a.replace(/,/g,".")}}return"0"}function xb(a){var =
+b=3Da.google_ad_format;if(b)return b.indexOf("_0ads")>0;return =
+a.google_ad_output!=3D"html"&&a.google_num_radlinks>0}function =
+E(a){return!!a&&a.indexOf("_sdo")!=3D-1}=0A=
+function yb(a,b){if(!(Math.random()<1.0E-4)){var =
+c=3DMath.random();if(c<b){c=3DMath.floor(c/b*a.length);return =
+a[c]}}return""}=0A=
+var zb=3Dfunction(a){a.u_tz=3D-(new =
+Date).getTimezoneOffset();a.u_his=3Dwindow.history.length;a.u_java=3Dnavi=
+gator.javaEnabled();if(window.screen){a.u_h=3Dwindow.screen.height;a.u_w=3D=
+window.screen.width;a.u_ah=3Dwindow.screen.availHeight;a.u_aw=3Dwindow.sc=
+reen.availWidth;a.u_cd=3Dwindow.screen.colorDepth}if(navigator.plugins)a.=
+u_nplug=3Dnavigator.plugins.length;if(navigator.mimeTypes)a.u_nmime=3Dnav=
+igator.mimeTypes.length},Ab=3Dfunction(a,b){var =
+c=3Db||B;if(a&&c.top!=3Dc)c=3Dc.top;try{return =
+c.document&&!c.document.body?new x(-1,=0A=
+-1):cb(c||window)}catch(d){return new =
+x(-12245933,-12245933)}},Bb=3Dfunction(a,b){var =
+c=3Da.length;if(c=3D=3D0)return 0;var d=3Db||305419896;for(var =
+e=3D0;e<c;e++){var =
+f=3Da.charCodeAt(e);d^=3D(d<<5)+(d>>2)+f&4294967295}return =
+d>0?d:4294967296+d},Cb=3Dfunction(a){if(a=3D=3Da.top)return 0;var =
+b=3D[];b.push(a.document.URL);a.name&&b.push(a.name);var =
+c=3Dh;a=3DAb(!c,a);b.push(a.width.toString());b.push(a.height.toString())=
+;return Bb(b.join(""))},Db=3Dfunction(a){if(!a)return"";var =
+b=3D[],c=3D0;for(a=3Da;a&&c<25;a=3Da.parentNode,++c)b.push(a.id||=0A=
+"");return b.join()};var =
+Eb=3D{google_ad_channel:"channel",google_ad_host:"host",google_ad_host_ch=
+annel:"h_ch",google_ad_host_tier_id:"ht_id",google_ad_section:"region",go=
+ogle_ad_type:"ad_type",google_adtest:"adtest",google_allow_expandable_ads=
+:"ea",google_alternate_ad_url:"alternate_ad_url",google_alternate_color:"=
+alt_color",google_bid:"bid",google_city:"gcs",google_color_bg:"color_bg",=
+google_color_border:"color_border",google_color_line:"color_line",google_=
+color_link:"color_link",google_color_text:"color_text",google_color_url:"=
+color_url",=0A=
+google_contents:"contents",google_country:"gl",google_cpm:"cpm",google_cu=
+st_age:"cust_age",google_cust_ch:"cust_ch",google_cust_gender:"cust_gende=
+r",google_cust_id:"cust_id",google_cust_interests:"cust_interests",google=
+_cust_job:"cust_job",google_cust_l:"cust_l",google_cust_lh:"cust_lh",goog=
+le_cust_u_url:"cust_u_url",google_disable_video_autoplay:"disable_video_a=
+utoplay",google_ed:"ed",google_encoding:"oe",google_feedback:"feedback_li=
+nk",google_flash_version:"flash",google_font_face:"f",google_font_size:"f=
+s",=0A=
+google_hints:"hints",google_kw:"kw",google_kw_type:"kw_type",google_langu=
+age:"hl",google_page_url:"url",google_region:"gr",google_reuse_colors:"re=
+use_colors",google_safe:"adsafe",google_tag_info:"gut",google_targeting:"=
+targeting",google_targeting_video_doc_id:"tvdi",google_ui_features:"ui",g=
+oogle_ui_version:"uiv",google_video_doc_id:"video_doc_id",google_video_pr=
+oduct_type:"video_product_type"},Fb=3D{google_ad_block:"ad_block",google_=
+ad_client:"client",google_ad_format:"format",google_ad_output:"output",=0A=
+google_ad_callback:"callback",google_ad_height:"h",google_ad_override:"go=
+ogle_ad_override",google_ad_slot:"slotname",google_ad_width:"w",google_ct=
+r_threshold:"ctr_t",google_image_size:"image_size",google_last_modified_t=
+ime:"lmt",google_max_num_ads:"num_ads",google_max_radlink_len:"max_radlin=
+k_len",google_num_radlinks:"num_radlinks",google_num_radlinks_per_unit:"n=
+um_radlinks_per_unit",google_only_ads_with_video:"only_ads_with_video",go=
+ogle_rl_dest_url:"rl_dest_url",google_rl_filtering:"rl_filtering",=0A=
+google_rl_mode:"rl_mode",google_rt:"rt",google_skip:"skip"},Gb=3D{google_=
+only_pyv_ads:"pyv",google_with_pyv_ads:"withpyv"};var =
+Hb=3Dfunction(a,b,c){b=3D"border:none;height:"+c+"px;margin:0;padding:0;p=
+osition:relative;visibility:visible;width:"+b+"px";a=3D['<ins =
+style=3D"display:inline-table;',b,'">','<ins =
+style=3D"display:block;',b,'">',a,"</ins></ins>"];return a.join("")};var =
+Ib=3Ds("0",0),Jb=3Ds("0",0),Kb=3Ds("0.005",0),Lb=3Ds("1",0),Mb=3Ds("0.01"=
+,0),Nb=3Ds("0.01",0),Ob=3Ds("0.008",0),Pb=3Ds("0.01",0),Qb=3Ds("0",0);var=
+ =
+Rb=3Dt("false",j),Sb=3Dt("false",h),Tb=3Dt("false",j),Ub=3Dt("false",j);v=
+ar =
+Vb=3Dfunction(a,b,c){b=3Dq(b,l,a);a=3Dwindow.onerror;window.onerror=3Db;t=
+ry{c()}catch(d){c=3Dd.toString();var =
+e=3D"";if(d.fileName)e=3Dd.fileName;var =
+f=3D-1;if(d.lineNumber)f=3Dd.lineNumber;b=3Db(c,e,f);if(!b)throw =
+d;}window.onerror=3Da};r("google_protectAndRun",Vb);=0A=
+var Xb=3Dfunction(a,b,c,d){if(Math.random()<0.01){var =
+e=3Dib;a=3D["http://",ia(),"/pagead/gen_204","?id=3Djserror","&jscb=3D",R=
+b?1:0,"&jscd=3D",Tb?1:0,"&context=3D",D(a),"&msg=3D",D(b),"&file=3D",D(c)=
+,"&line=3D",D(d.toString()),"&url=3D",D(e.URL.substring(0,512)),"&ref=3D"=
+,D(e.referrer.substring(0,512))];a.push(Wb());tb(B,a.join(""))}return!Ub}=
+;r("google_handleError",Xb);=0A=
+var Zb=3Dfunction(a){Yb|=3Da},Yb=3D0,Wb=3Dfunction(){var =
+a=3D["&client=3D",D(B.google_ad_client),"&format=3D",D(B.google_ad_format=
+),"&slotname=3D",D(B.google_ad_slot),"&output=3D",D(B.google_ad_output),"=
+&ad_type=3D",D(B.google_ad_type)];return a.join("")};var =
+$b=3Dfunction(a){var b=3D"google_test";try{var =
+c=3Da[b];a[b]=3D!c;if(a[b]=3D=3D=3D!c){a[b]=3Dc;return =
+h}}catch(d){}return =
+j},cc=3Dfunction(a){for(;a!=3Da.parent&&$b(a.parent);)a=3Da.parent;return=
+ a},dc=3Di,ec=3Dfunction(){dc||(dc=3Dcc(window));return dc};var =
+fc,F=3Dfunction(){this.p=3D[];this.P=3Dwindow;this.d=3D0},gc=3Dfunction(a=
+,b){this.fn=3Da;this.win=3Db};F.prototype.enqueue=3Dfunction(a,b){this.p.=
+push(new =
+gc(a,b||this.P));this.g()};F.prototype.o=3Dfunction(){this.d=3D1};F.proto=
+type.q=3Dfunction(){if(this.d=3D=3D1)this.d=3D0;this.g()};fa(F.prototype,=
+"nq",F.prototype.enqueue);fa(F.prototype,"al",F.prototype.o);fa(F.prototy=
+pe,"rl",F.prototype.q);F.prototype.g=3Dfunction(){this.P.setTimeout(q(thi=
+s.O,this),0)};=0A=
+F.prototype.O=3Dfunction(){if(this.d=3D=3D0&&this.p.length){var =
+a=3Dthis.p.shift();this.d=3D2;a.win.setTimeout(q(this.J,this,a),0);this.g=
+()}};F.prototype.J=3Dfunction(a){this.d=3D0;a.fn()};var =
+hc=3Dfunction(a){return =
+mb(a)&&lb(a.nq)&&lb(a.al)&&lb(a.rl)},ic=3Dfunction(){if(fc)return fc;var =
+a=3Dec(),b=3Da.google_jobrunner;if(hc(b))return fc=3Db;return =
+a.google_jobrunner=3Dfc=3Dnew =
+F},jc=3Dfunction(a,b){ic().nq(a,b)},kc=3Dfunction(){ic().al()},lc=3Dfunct=
+ion(){var a=3Dec().google_jobrunner;hc(a)&&a.rl()};var =
+mc,nc,oc,pc,qc,rc,sc,tc=3Dfunction(){sc=3Drc=3Dqc=3Dpc=3Doc=3Dnc=3Dmc=3Dj=
+;var a=3DJa();if(a)if(a.indexOf("Firefox")!=3D-1)mc=3Dh;else =
+if(a.indexOf("Camino")!=3D-1)nc=3Dh;else =
+if(a.indexOf("iPhone")!=3D-1||a.indexOf("iPod")!=3D-1)oc=3Dh;else =
+if(a.indexOf("iPad")!=3D-1)pc=3Dh;else =
+if(a.indexOf("Android")!=3D-1)qc=3Dh;else =
+if(a.indexOf("Chrome")!=3D-1)rc=3Dh;else =
+if(a.indexOf("Safari")!=3D-1)sc=3Dh};tc();var uc=3Dmc,vc=3Drc;var =
+G=3D!!window.google_async_iframe_id,H=3DG&&window.parent||window,wc=3Dfun=
+ction(a,b,c){var d=3D["<iframe"];for(var e in =
+a)pb(d,e+"=3D"+a[e]);d.push('style=3D"left:0;position:absolute;top:0;"');=
+d.push("></iframe>");a=3Dd.join(" ");return =
+b=3DHb(a,b,c)},xc=3Dfunction(a,b){var c=3Da.document,d=3Db.id;for(var =
+e=3D0;!d||a.document.getElementById(d);)d=3D"aswift_"+e++;b.id=3Dd;e=3Da.=
+google_ad_width;var f=3Da.google_ad_height;c.write(wc(b,e,f));return =
+d},yc=3Dfunction(a,b,c){a=3Da.document.getElementById(b).contentWindow.do=
+cument;a.open();=0A=
+a.write(c)},zc=3Dfunction(a){if(G&&a!=3Da.parent){lc();a.setTimeout(funct=
+ion(){a.document.close()},0)}};function Ac(a,b){try{return =
+a.top.document=3D=3Db}catch(c){}return j}function =
+Bc(a,b,c,d){c=3Dc||a.google_ad_width;d=3Dd||a.google_ad_height;if(Ac(a,b)=
+)return j;var e=3Db.documentElement;if(c&&d){var =
+f=3D1,g=3D1;if(a.innerHeight){f=3Da.innerWidth;g=3Da.innerHeight}else =
+if(e&&e.clientHeight){f=3De.clientWidth;g=3De.clientHeight}else =
+if(b.body){f=3Db.body.clientWidth;g=3Db.body.clientHeight}if(g>2*d||f>2*c=
+)return j}return h}function =
+Cc(a,b){C(b,function(c,d){a["google_"+d]=3Dc})}=0A=
+function Dc(a,b){if(!b)return a.URL;return a.referrer}function =
+Ec(a,b){if(!b&&a.google_referrer_url=3D=3Di)return"0";else =
+if(b&&a.google_referrer_url=3D=3Di)return"1";else =
+if(!b&&a.google_referrer_url!=3Di)return"2";else =
+if(b&&a.google_referrer_url!=3Di)return"3";return"4"}function =
+Fc(a,b,c){a.page_url=3DDc(b,c);a.page_location=3Di}function =
+Gc(a,b,c,d){a.page_url=3Db.google_page_url;a.page_location=3DDc(c,d)||"EM=
+PTY"}=0A=
+function Hc(a,b){var =
+c=3D{},d=3DBc(H,b,a.google_ad_width,a.google_ad_height);c.iframing=3DEc(a=
+,d);a.google_page_url?Gc(c,a,b,d):Fc(c,b,d);c.last_modified_time=3Db.URL=3D=
+=3Dc.page_url?Date.parse(b.lastModified)/1E3:i;c.referrer_url=3Dd?a.googl=
+e_referrer_url:a.google_page_url&&a.google_referrer_url?a.google_referrer=
+_url:b.referrer;return c}function Ic(a){var =
+b=3D{},c=3Da.URL.substring(a.URL.lastIndexOf("http"));b.iframing=3Di;b.pa=
+ge_url=3Dc;b.page_location=3Da.URL;b.last_modified_time=3Di;b.referrer_ur=
+l=3Dc;return b}=0A=
+function Jc(a){var b=3DKc(a,H.document);Cc(a,b)}function Kc(a,b){var =
+c;return c=3Da.google_page_url=3D=3Di&&Lc[b.domain]?Ic(b):Hc(a,b)}var =
+Lc=3D{};Lc["ad.yieldmanager.com"]=3Dh;var =
+Mc=3D"",Pc=3Dfunction(){if(window.google_ad_frameborder=3D=3Di)window.goo=
+gle_ad_frameborder=3D0;if(window.google_ad_output=3D=3Di)window.google_ad=
+_output=3D"html";if(E(window.google_ad_format)){var =
+a=3Dwindow.google_ad_format.match(/^(\d+)x(\d+)_.*/);if(a){window.google_=
+ad_width=3DparseInt(a[1],10);window.google_ad_height=3DparseInt(a[2],10);=
+window.google_ad_output=3D"html"}}window.google_ad_format=3DNc(window.goo=
+gle_ad_format,String(window.google_ad_output),Number(window.google_ad_wid=
+th),Number(window.google_ad_height),=0A=
+window.google_ad_slot,!!window.google_override_format);Mc=3Dwindow.google=
+_ad_client||"";window.google_ad_client=3DOc(window.google_ad_format,windo=
+w.google_ad_client);Jc(window);if(window.google_flash_version=3D=3Di)wind=
+ow.google_flash_version=3Dwb();window.google_ad_section=3Dwindow.google_a=
+d_section||window.google_ad_region||"";window.google_country=3Dwindow.goo=
+gle_country||window.google_gl||"";a=3D(new =
+Date).getTime();if(n(window.google_color_bg))window.google_color_bg=3DJ(w=
+indow.google_color_bg,a);if(n(window.google_color_text))window.google_col=
+or_text=3D=0A=
+J(window.google_color_text,a);if(n(window.google_color_link))window.googl=
+e_color_link=3DJ(window.google_color_link,a);if(n(window.google_color_url=
+))window.google_color_url=3DJ(window.google_color_url,a);if(n(window.goog=
+le_color_border))window.google_color_border=3DJ(window.google_color_borde=
+r,a);if(n(window.google_color_line))window.google_color_line=3DJ(window.g=
+oogle_color_line,a)},Qc=3Dfunction(a){C(Eb,function(b,c){a[c]=3Di});C(Fb,=
+function(b,c){a[c]=3Di});C(Gb,function(b,c){a[c]=3Di});a.google_container=
+_id=3Di;=0A=
+a.google_disable_async=3Di;a.google_eids=3Di;a.google_page_location=3Di;a=
+.google_referrer_url=3Di;a.google_ad_region=3Di;a.google_gl=3Di},J=3Dfunc=
+tion(a,b){Zb(2);return =
+a[b%a.length]},Oc=3Dfunction(a,b){if(!b)return"";b=3Db.toLowerCase();retu=
+rn =
+b=3DE(a)?Rc(b):Sc(b)},Sc=3Dfunction(a){if(a&&a.substring(0,3)!=3D"ca-")a=3D=
+"ca-"+a;return =
+a},Rc=3Dfunction(a){if(a&&a.substring(0,7)!=3D"ca-aff-")a=3D"ca-aff-"+a;r=
+eturn =
+a},Nc=3Dfunction(a,b,c,d,e,f){if(!a&&b=3D=3D"html")a=3Dc+"x"+d;return =
+a=3DTc(a,e,f)?a.toLowerCase():""},Tc=3Dfunction(a,b,c){if(!a)return j;=0A=
+if(!b)return h;return c};var K=3Ddocument,L=3Dnavigator,M=3Dwindow;=0A=
+function Uc(){var a=3DK.cookie,b=3DMath.round((new =
+Date).getTime()/1E3),c=3DM.google_analytics_domain_name;c=3Dtypeof =
+c=3D=3D"undefined"?Vc("auto"):Vc(c);var =
+d=3Da.indexOf("__utma=3D"+c+".")>-1,e=3Da.indexOf("__utmb=3D"+c)>-1,f=3Da=
+.indexOf("__utmc=3D"+c)>-1,g=3D{},o=3D!!M&&!!M.gaGlobal;if(d){a=3Da.split=
+("__utma=3D"+c+".")[1].split(";")[0].split(".");g.sid=3De&&f?a[3]+"":o&&M=
+.gaGlobal.sid?M.gaGlobal.sid:b+"";g.vid=3Da[0]+"."+a[1];g.from_cookie=3Dh=
+}else{g.sid=3Do&&M.gaGlobal.sid?M.gaGlobal.sid:b+"";g.vid=3Do&&M.gaGlobal=
+.vid?M.gaGlobal.vid:=0A=
+(Math.round(Math.random()*2147483647)^Wc()&2147483647)+"."+b;g.from_cooki=
+e=3Dj}g.dh=3Dc;g.hid=3Do&&M.gaGlobal.hid?M.gaGlobal.hid:Math.round(Math.r=
+andom()*2147483647);return M.gaGlobal=3Dg}=0A=
+function Wc(){var =
+a=3DK.cookie?K.cookie:"",b=3DM.history.length,c,d=3D[L.appName,L.version,=
+L.language?L.language:L.browserLanguage,L.platform,L.userAgent,L.javaEnab=
+led()?1:0].join("");if(M.screen)d+=3DM.screen.width+"x"+M.screen.height+M=
+.screen.colorDepth;else =
+if(M.java){c=3Djava.awt.Toolkit.getDefaultToolkit().getScreenSize();d+=3D=
+c.screen.width+"x"+c.screen.height}d+=3Da;d+=3DK.referrer?K.referrer:"";f=
+or(a=3Dd.length;b>0;)d+=3Db--^a++;return Xc(d)}=0A=
+function Xc(a){var =
+b=3D1,c=3D0,d;if(!(a=3D=3Dundefined||a=3D=3D"")){b=3D0;for(d=3Da.length-1=
+;d>=3D0;d--){c=3Da.charCodeAt(d);b=3D(b<<6&268435455)+c+(c<<14);c=3Db&266=
+338304;b=3Dc!=3D0?b^c>>21:b}}return b}function =
+Vc(a){if(!a||a=3D=3D""||a=3D=3D"none")return =
+1;if("auto"=3D=3Da){a=3DK.domain;if("www."=3D=3Da.substring(0,4))a=3Da.su=
+bstring(4,a.length)}return Xc(a.toLowerCase())};var =
+N=3Dfunction(){this.defaultBucket=3D[];this.layers=3D{};var =
+a=3D0;for(var =
+b=3Darguments.length;a<b;++a)this.layers[arguments[a]]=3D""},Yc=3Dfunctio=
+n(a){var b=3Dnew N,c=3D0;for(var =
+d=3Da.defaultBucket.length;c<d;++c)b.defaultBucket.push(a.defaultBucket[c=
+]);C(a.layers,q(N.prototype.k,b));return =
+b};N.prototype.k=3Dfunction(a,b){this.layers[b]=3Da};N.prototype.N=3Dfunc=
+tion(a,b){if(a=3D=3D"")return"";if(!b){this.defaultBucket.push(a);return =
+a}if(this.layers.hasOwnProperty(b))return this.layers[b]=3Da;return""};=0A=
+N.prototype.b=3Dfunction(a,b,c){if(this.A(c)&&!(Math.random()<1.0E-4)&&Ma=
+th.random()<b){b=3DMath.floor(Math.random()*a.length);return =
+this.N(a[b],c)}return""};N.prototype.A=3Dfunction(a){if(!a)return =
+h;return =
+this.layers.hasOwnProperty(a)&&this.layers[a]=3D=3D""};N.prototype.c=3Dfu=
+nction(a){if(this.layers.hasOwnProperty(a))return =
+this.layers[a];return""};N.prototype.geil=3DN.prototype.c;=0A=
+N.prototype.z=3Dfunction(){var =
+a=3D[],b=3Dfunction(c){c!=3D""&&a.push(c)};C(this.layers,b);if(this.defau=
+ltBucket.length>0&&a.length>0)return =
+this.defaultBucket.join(",")+","+a.join(",");return =
+this.defaultBucket.join(",")+a.join(",")};var =
+$c=3Dfunction(a){this.a=3Dthis.S=3Da;Zc(this)},ad=3D{};ad.google_persiste=
+nt_state=3Dh;ad.google_persistent_state_async=3Dh;=0A=
+var =
+bd=3D{},O=3Dfunction(a){a=3Da&&ad[a]?a:G?"google_persistent_state_async":=
+"google_persistent_state";if(bd[a])return =
+bd[a];if(a=3D=3D"google_persistent_state_async")var b=3DH,c=3D{};else =
+c=3Db=3DH;var d=3Db[a];if(typeof d!=3D"object"||typeof =
+d.S!=3D"object")return b[a]=3Dbd[a]=3Dnew $c(c);return =
+bd[a]=3Dd},Zc=3Dfunction(a){P(a,1,j);P(a,2,j);P(a,3,i);P(a,4,0);P(a,5,0);=
+P(a,6,0);P(a,7,(new =
+Date).getTime());P(a,8,{});P(a,9,{});P(a,10,{});P(a,11,[]);P(a,12,0)},cd=3D=
+function(a){switch(a){case 1:return"google_new_domain_enabled";case =
+2:return"google_new_domain_checked";=0A=
+case 3:return"google_exp_persistent";case =
+4:return"google_num_sdo_slots";case 5:return"google_num_0ad_slots";case =
+6:return"google_num_ad_slots";case 7:return"google_correlator";case =
+8:return"google_prev_ad_formats_by_region";case =
+9:return"google_prev_ad_slotnames_by_region";case =
+10:return"google_num_slots_by_channel";case =
+11:return"google_viewed_host_channels";case =
+12:return"google_num_slot_to_show"}},T=3Dfunction(a,b){var =
+c=3Dcd(b);return c=3Da.S[c]},U=3Dfunction(a,b,c){return =
+a.S[cd(b)]=3Dc},P=3Dfunction(a,=0A=
+b,c){a=3Da.S;b=3Dcd(b);if(a[b]=3D=3D=3Dundefined)return a[b]=3Dc;return =
+a[b]},dd=3Dfunction(a){if(T(a,1))return h;return =
+U(a,1,!!window.google_new_domain_enabled)},ed=3Dfunction(a,b){return =
+U(a,3,b)};var fd,gd,V=3Dfunction(){if(fd)return fd;var =
+a=3DO(),b=3DT(a,3);if(ob(b,N))return fd=3Ded(a,new N(1,2,3,4));return =
+fd=3Db},hd=3Dfunction(){gd||(gd=3DYc(V()));return =
+gd},id=3D{CONTROL:"33895100",LOADER:"33895101",RELEASE_CANDIDATE_LOADER:"=
+33895150",BLOCKING_LOADER:"33895151",NO_LOADER:"33895152"},jd=3D{ASWIFT_L=
+OADER:"33895131",BLOCKING_LOADER:"33895132"};var =
+W=3Dfunction(){};W.prototype.serialize=3Dfunction(a){var =
+b=3D[];this.h(a,b);return =
+b.join("")};W.prototype.h=3Dfunction(a,b){switch(typeof a){case =
+"string":this.r(a,b);break;case "number":this.L(a,b);break;case =
+"boolean":b.push(a);break;case "undefined":b.push("null");break;case =
+"object":if(a=3D=3Di){b.push("null");break}if(n(a)){this.K(a,b);break}thi=
+s.M(a,b);break;case "function":break;default:throw Error("Unknown type: =
+"+typeof a);}};=0A=
+var =
+kd=3D{'"':'\\"',"\\":"\\\\","/":"\\/","\u0008":"\\b","\u000c":"\\f","\n":=
+"\\n","\r":"\\r","\t":"\\t","\u000b":"\\u000b"},ld=3D/\uffff/.test("\ufff=
+f")?/[\\\"\x00-\x1f\x7f-\uffff]/g:/[\\\"\x00-\x1f\x7f-\xff]/g;W.prototype=
+.r=3Dfunction(a,b){b.push('"',a.replace(ld,function(c){if(c in kd)return =
+kd[c];var d=3Dc.charCodeAt(0),e=3D"\\u";if(d<16)e+=3D"000";else =
+if(d<256)e+=3D"00";else if(d<4096)e+=3D"0";return =
+kd[c]=3De+d.toString(16)}),'"')};W.prototype.L=3Dfunction(a,b){b.push(isF=
+inite(a)&&!isNaN(a)?a:"null")};=0A=
+W.prototype.K=3Dfunction(a,b){var c=3Da.length;b.push("[");var =
+d=3D"";for(var =
+e=3D0;e<c;e++){b.push(d);this.h(a[e],b);d=3D","}b.push("]")};W.prototype.=
+M=3Dfunction(a,b){b.push("{");var c=3D"";for(var d in =
+a)if(a.hasOwnProperty(d)){var e=3Da[d];if(typeof =
+e!=3D"function"){b.push(c);this.r(d,b);b.push(":");this.h(e,b);c=3D","}}b=
+.push("}")};var =
+md=3D["google_ad_block","google_ad_channel","google_ad_client","google_ad=
+_format","google_ad_height","google_ad_host","google_ad_host_channel","go=
+ogle_ad_host_tier_id","google_ad_output","google_ad_override","google_ad_=
+region","google_ad_section","google_ad_slot","google_ad_type","google_ad_=
+width","google_adtest","google_allow_expandable_ads","google_alternate_ad=
+_url","google_alternate_color","google_analytics_domain_name","google_ana=
+lytics_uacct","google_bid","google_city","google_color_bg","google_color_=
+border",=0A=
+"google_color_line","google_color_link","google_color_text","google_color=
+_url","google_container_id","google_contents","google_country","google_cp=
+m","google_ctr_threshold","google_cust_age","google_cust_ch","google_cust=
+_gender","google_cust_id","google_cust_interests","google_cust_job","goog=
+le_cust_l","google_cust_lh","google_cust_u_url","google_disable_video_aut=
+oplay","google_ed","google_eids","google_enable_osd","google_encoding","g=
+oogle_font_face","google_font_size","google_frame_id","google_gl",=0A=
+"google_hints","google_image_size","google_kw","google_kw_type","google_l=
+anguage","google_max_num_ads","google_max_radlink_len","google_num_radlin=
+ks","google_num_radlinks_per_unit","google_num_slots_to_rotate","google_o=
+nly_ads_with_video","google_only_pyv_ads","google_override_format","googl=
+e_page_url","google_referrer_url","google_region","google_reuse_colors","=
+google_rl_dest_url","google_rl_filtering","google_rl_mode","google_rt","g=
+oogle_safe","google_skip","google_tag_info","google_targeting",=0A=
+"google_ui_features","google_ui_version","google_video_doc_id","google_vi=
+deo_product_type","google_with_pyv_ads"],nd=3Dfunction(a){var =
+b=3D[],c=3D0;for(var d=3Dmd.length;c<d;c++){var =
+e=3Dmd[c];if(a[e]!=3Di){var f;try{f=3D(new =
+W).serialize(a[e])}catch(g){}f&&b.push(e,"=3D",f,";")}}return =
+b.join("")},od=3Dfunction(a){var b=3D0;for(var =
+c=3Dmd.length;b<c;b++){var d=3Dmd[b];a[d]=3Di}};var pd=3Dfunction(a){var =
+b=3D"google_unique_id";if(a[b])++a[b];else a[b]=3D1;return =
+a[b]},qd=3Dfunction(){var a=3D"script";return["<",a,' =
+src=3D"http://',v(),,'/pagead/js/r20100711/r20100614/show_ads_impl.js"></=
+',a,">"].join("")},rd=3Dfunction(){if(window.google_disable_async)return =
+j;return =
+ib.domain=3D=3DB.location.hostname&&(z||vc||uc&&!!window.document.body)&&=0A=
+!window.google_container_id&&(!window.google_ad_output||window.google_ad_=
+output=3D=3D"html")},sd=3Dfunction(a){var =
+b=3D"script",c=3D{allowtransparency:'"true"',frameborder:'"'+(a.google_ad=
+_frameborder||0)+'"',height:'"'+a.google_ad_height+'"',hspace:'"0"',margi=
+nwidth:'"0"',marginheight:'"0"',name:'"google_ads_frame"',scrolling:'"no"=
+',vspace:'"0"',width:'"'+a.google_ad_width+'"'};a.google_ad_frameborder=3D=
+i;var d=3Dxc(a,c);c=3Dnd(a);od(a);var e=3Dk,f=3D(new =
+Date).getTime(),g=3D["<!doctype =
+html><html><body><",b,">",c,"google_unique_id=3D",=0A=
+a.google_unique_id,';google_async_iframe_id=3D"',d,'";google_start_time=3D=
+',e,";google_bpp=3D",f>e?f-e:1,";</",b,">",qd(),"</body></html>"].join(""=
+);jc(function(){kc();yc(a,d,g)})},td=3Dfunction(){var =
+a=3Did;a=3D[a.RELEASE_CANDIDATE_LOADER,a.BLOCKING_LOADER,a.NO_LOADER];V()=
+.b(a,Kb,3)},ud=3Dfunction(){if(G){var =
+a=3DO("google_persistent_state"),b=3DT(a,3);a=3D3;if("geil"in =
+b){b=3Db.geil(a);V().b([b],1,a)}}},vd=3Dfunction(){var =
+a=3DV();return"geil"in a?a.geil(3):""},wd=3Dfunction(){var =
+a=3Dvd(),b=3Did;return a=3D=3Db.RELEASE_CANDIDATE_LOADER},=0A=
+xd=3Dfunction(){var a=3Dvd(),b=3Did;return =
+a=3D=3Db.BLOCKING_LOADER},yd=3Dfunction(){if(Sb){G&&ud();var =
+a=3Djd,b=3D0;b=3DG?a.ASWIFT_LOADER:a.BLOCKING_LOADER;V().b([b],1,4)}};var=
+ =
+zd=3D{google:1,googlegroups:1,gmail:1,googlemail:1,googleimages:1,googlep=
+rint:1};function =
+Ad(a){a=3Da.google_page_location||a.google_page_url;if(!a)return =
+j;a=3Da.toString();if(a.indexOf("http://")=3D=3D0)a=3Da.substring(7,a.len=
+gth);else =
+if(a.indexOf("https://")=3D=3D0)a=3Da.substring(8,a.length);var =
+b=3Da.indexOf("/");if(b=3D=3D-1)b=3Da.length;a=3Da.substring(0,b);a=3Da.s=
+plit(".");b=3Dj;if(a.length>=3D3)b=3Da[a.length-3]in =
+zd;if(a.length>=3D2)b=3Db||a[a.length-2]in zd;return b}=0A=
+function Bd(a,b,c){var =
+d=3DO();if(Ad(a))return!U(d,2,h);if(!T(d,2)){a=3DMath.random();if(a<=3Dc)=
+{c=3D"http://"+ha()+"/pagead/test_domain.js";a=3D"script";b.write("<"+a+'=
+ src=3D"'+c+'"></'+a+">");return U(d,2,h)}}return j}var =
+Cd=3Dfunction(a){var b=3DV();if(b.c(1)=3D=3D"44901228")return =
+j;if(b.c(1)=3D=3D"44901229"||Math.random()<Jb)return =
+1=3D=3DMath.floor(a/2)%2;return j};=0A=
+function Dd(a,b){var c=3DO();if(!Ad(a)&&dd(c))return =
+Cd(b)?"http://"+u("","googleads2.g.doubleclick.net"):"http://"+ha();retur=
+n"http://"+ia()};var =
+X=3Dfunction(a){this.e=3Da;this.n=3D[];this.m=3D0;this.f=3D[];this.F=3D0;=
+this.i=3D[];this.C=3Dj;this.s=3Dthis.t=3D"";this.B=3Dj};X.prototype.H=3Df=
+unction(a,b){var =
+c=3Dthis.e[b],d=3Dthis.n;this.e[b]=3Dfunction(e){if(e&&e.length>0){var =
+f=3De.length>1?e[1].url:i;d.push([a,ra(e[0].url),f])}c(e)}};X.prototype.G=
+=3Dfunction(){this.m++};X.prototype.I=3Dfunction(a){this.f.push(a)};var =
+Ed=3D"http://"+v()+"/pagead/osd.js";X.prototype.D=3Dfunction(){if(!this.C=
+){sb(H);qb(Ed);this.C=3Dh}};=0A=
+X.prototype.u=3Dfunction(a){if(this.m>0){var =
+b=3Dthis.e.document.getElementsByTagName("iframe"),c=3Dthis.B?"google_ads=
+_iframe_":"google_ads_frame";for(var d=3D0;d<b.length;d++){var =
+e=3Db.item(d);e.src&&e.name&&e.name.indexOf(c)=3D=3D0&&a(e,e.src)}}};=0A=
+X.prototype.v=3Dfunction(a){var b=3Dthis.n;if(b.length>0){var =
+c=3Dthis.e.document.getElementsByTagName("a");for(var =
+d=3D0;d<c.length;d++)for(var =
+e=3D0;e<b.length;e++)if(c.item(d).href=3D=3Db[e][1]){var =
+f=3Dc.item(d).parentNode;if(b[e][2]){var g=3Df;for(var =
+o=3D0;o<4;o++){if(g.innerHTML.indexOf(b[e][2])>0){f=3Dg;break}g=3Dg.paren=
+tNode}}a(f,b[e][0]);b.splice(e,1);break}}};X.prototype.w=3Dfunction(a){fo=
+r(var b=3D0;b<this.f.length;b++){var =
+c=3Dthis.f[b],d=3DFd(c);if(d)(d=3Dthis.e.document.getElementById("google_=
+ads_div_"+d))&&a(d,c)}};=0A=
+X.prototype.j=3Dfunction(a){this.v(a);this.w(a);this.u(a)};X.prototype.se=
+tupOsd=3Dfunction(a,b,c){this.F=3Da;this.t=3Db;this.s=3Dc};X.prototype.ge=
+tOsdMode=3Dfunction(){return =
+this.F};X.prototype.getEid=3Dfunction(){return =
+this.t};X.prototype.getCorrelator=3Dfunction(){return =
+this.s};X.prototype.l=3Dfunction(){return =
+this.n.length+this.m+this.f.length};X.prototype.setValidOutputTypes=3Dfun=
+ction(a){this.i=3Da};=0A=
+X.prototype.registerAdBlockByType=3Dfunction(a,b,c){if(this.i.length>0){f=
+or(var =
+d=3D0;d<this.i.length;d++)if(this.i[d]=3D=3Da){this.B=3Dc;if(a=3D=3D"js")=
+this.H(b,"google_ad_request_done");else if(a=3D=3D"html")this.G();else =
+a=3D=3D"json_html"&&this.I(b)}this.D()}};var =
+Fd=3Dfunction(a){if((a=3Da.match(/[&\?](?:slotname)=3D([^&]+)/))&&a.lengt=
+h=3D=3D2)return a[1];return""},Gd=3Dfunction(){var =
+a=3DH;a.__google_ad_urls||(a.__google_ad_urls=3Dnew X(a));return =
+a.__google_ad_urls};r("Goog_AdSense_getAdAdapterInstance",Gd);=0A=
+r("Goog_AdSense_OsdAdapter",X);r("Goog_AdSense_OsdAdapter.prototype.numBl=
+ocks",X.prototype.l);r("Goog_AdSense_OsdAdapter.prototype.findBlocks",X.p=
+rototype.j);r("Goog_AdSense_OsdAdapter.prototype.getOsdMode",X.prototype.=
+getOsdMode);r("Goog_AdSense_OsdAdapter.prototype.getEid",X.prototype.getE=
+id);r("Goog_AdSense_OsdAdapter.prototype.getCorrelator",X.prototype.getCo=
+rrelator);r("Goog_AdSense_OsdAdapter.prototype.setValidOutputTypes",X.pro=
+totype.setValidOutputTypes);=0A=
+r("Goog_AdSense_OsdAdapter.prototype.setupOsd",X.prototype.setupOsd);r("G=
+oog_AdSense_OsdAdapter.prototype.registerAdBlockByType",X.prototype.regis=
+terAdBlockByType);var Hd=3Dfunction(a,b){var =
+c=3Da.nodeType=3D=3D9?a:a.ownerDocument||a.document;if(c.defaultView&&c.d=
+efaultView.getComputedStyle)if(c=3Dc.defaultView.getComputedStyle(a,""))r=
+eturn c[b];return i},Id=3Dfunction(a,b){return =
+Hd(a,b)||(a.currentStyle?a.currentStyle[b]:i)||a.style[b]},Jd=3Dfunction(=
+a,b,c,d){if(typeof =
+d=3D=3D"number")d=3D(b?Math.round(d):d)+"px";c.style[a]=3Dd};ea(Jd,"heigh=
+t",h);ea(Jd,"width",h);=0A=
+var Kd=3Dfunction(a,b,c,d){if(/^\d+px?$/.test(b))return =
+parseInt(b,10);else{var =
+e=3Da.style[c],f=3Da.runtimeStyle[c];a.runtimeStyle[c]=3Da.currentStyle[c=
+];a.style[c]=3Db;b=3Da.style[d];a.style[c]=3De;a.runtimeStyle[c]=3Df;retu=
+rn b}},Ld=3Dfunction(a){var =
+b=3Da.nodeType=3D=3D9?a:a.ownerDocument||a.document,c=3D"";if(b.body.crea=
+teTextRange){c=3Db.body.createTextRange();c.moveToElementText(a);c=3Dc.qu=
+eryCommandValue("FontName")}if(!c){c=3DId(a,"fontFamily");if(Ma&&Va)c=3Dc=
+.replace(/ \[[^\]]*\]/,"")}a=3Dc.split(",");if(a.length>1)c=3Da[0];=0A=
+return =
+sa(c,"\"'")},Md=3D/[^\d]+$/,Nd=3Dfunction(a){return(a=3Da.match(Md))&&a[0=
+]||i},Od=3D{cm:1,"in":1,mm:1,pc:1,pt:1},Pd=3D{em:1,ex:1},Qd=3Dfunction(a)=
+{var b=3DId(a,"fontSize"),c=3DNd(b);if(b&&"px"=3D=3Dc)return =
+parseInt(b,10);if(z)if(c in Od)return Kd(a,b,"left","pixelLeft");else =
+if(a.parentNode&&a.parentNode.nodeType=3D=3D1&&c in =
+Pd){a=3Da.parentNode;c=3DId(a,"fontSize");return =
+Kd(a,b=3D=3Dc?"1em":b,"left","pixelLeft")}c=3Deb("span",{style:"visibilit=
+y:hidden;position:absolute;line-height:0;padding:0;margin:0;border:0;heig=
+ht:1em;"});=0A=
+hb(a,c);b=3Dc.offsetHeight;c&&c.parentNode&&c.parentNode.removeChild(c);r=
+eturn b};var Y=3D{};function Rd(a){if(a=3D=3D1)return =
+h;return!Y[a]}function =
+Sd(a,b){if(!(!a||a=3D=3D""))if(b=3D=3D1)if(Y[b])Y[b]+=3D","+a;else =
+Y[b]=3Da;else Y[b]=3Da}function Td(){var =
+a=3D[];C(Y,function(b){a.push(b)});return a.join(",")}function =
+Ud(a,b){if(n(a))for(var c=3D0;c<a.length;c++)p(a[c])&&Sd(a[c],b)}var =
+Vd=3Dj;=0A=
+function Wd(a,b){var =
+c=3D"script";Vd=3DXd(a,b);if(!Vd)a.google_allow_expandable_ads=3Dj;var =
+d=3D!Yd();Vd&&d&&b.write("<"+c+' =
+src=3D"http://'+v()+'/pagead/expansion_embed.js"></'+c+">");var =
+e=3DBd(a,b,Lb);(d=3Dd||e)&&ub("msie")&&!window.opera?b.write("<"+c+' =
+src=3D"http://'+v()+'/pagead/render_ads.js"></'+c+">"):b.write("<"+c+'>go=
+ogle_protectAndRun("ads_core.google_render_ad", google_handleError, =
+google_render_ad);</'+c+">")}var =
+Z=3Dfunction(a){a=3Da.google_unique_id;if(typeof a=3D=3D"number")return =
+a;return 0};=0A=
+function $(a){return a!=3Di?'"'+a+'"':'""'}var Zd=3Dfunction(a,b){var =
+c=3Db.slice(-1),d=3Dc=3D=3D"?"||c=3D=3D"#"?"":"&",e=3D[b];c=3Dfunction(f,=
+g){if(f||f=3D=3D=3D0||f=3D=3D=3Dj){if(typeof =
+f=3D=3D"boolean")f=3Df?1:0;pb(e,d,g,"=3D",D(f));d=3D"&"}};C(a,c);return =
+e.join("")};function $d(){var =
+a=3Dz&&A("6"),b=3DNa&&A("1.8.1"),c=3DOa&&A("525");if(Ua&&(a||b||c))return=
+ h;else if(Ta&&(c||b))return h;else if(Va&&b)return h;return j}=0A=
+function Yd(){return(typeof =
+ExpandableAdSlotFactory=3D=3D"function"||typeof =
+ExpandableAdSlotFactory=3D=3D"object")&&typeof =
+ExpandableAdSlotFactory.createIframe=3D=3D"function"}function =
+Xd(a,b){var =
+c=3Da.google_ad_width,d=3Da.google_ad_height;if(a.google_allow_expandable=
+_ads=3D=3D=3Dj||!b.body||a.google_ad_output!=3D"html"||Bc(H,b,c,d)||!ae(a=
+)||isNaN(a.google_ad_height)||isNaN(a.google_ad_width)||!$d()||b.domain!=3D=
+a.location.hostname)return j;return h}=0A=
+function ae(a){var b=3Da.google_ad_format;if(E(b))return =
+j;if(xb(a)&&b!=3D"468x15_0ads_al")return j;return h}function be(){var =
+a;if(B.google_ad_output=3D=3D"html"&&!(xb(B)||E(B.google_ad_format))&&Rd(=
+0)){a=3D["6083035","6083034"];a=3Dyb(a,Qb);Sd(a,0)}return =
+a=3D=3D"6083035"}=0A=
+function =
+ce(a,b){if(!(G?Z(a)=3D=3D1:!Z(a))||E(a.google_ad_format))return"";var =
+c=3D"",d=3Dxb(a);if(b=3D=3D"html"||d)c=3Dyb(["36815001","36815002"],Mb);i=
+f(c=3D=3D""&&(b=3D=3D"js"||d))c=3Dyb(["36815003","36815004"],Nb);if(c=3D=3D=
+""&&(b=3D=3D"html"||b=3D=3D"js"))c=3Dyb(["36813005","36813006"],Ob);retur=
+n c}=0A=
+function de(){if(G)return"";var =
+a=3DGd(),b=3Dwindow.google_enable_osd,c;if(b=3D=3D=3Dh){c=3D"36813006";ee=
+(c,a)}else =
+if(b!=3D=3Dj&&Rd(0)){c=3Da.getEid();if(c=3D=3D"")(c=3Dce(window,String(wi=
+ndow.google_ad_output||"")))&&ee(c,a);else =
+if(c!=3D"36815001"&&c!=3D"36815002"&&c!=3D"36815003"&&c!=3D"36815004"&&c!=
+=3D"36813005"&&c!=3D"36813006")c=3D""}if(c){Sd(c,0);return c}return""}=0A=
+function ee(a,b){var c=3Db.getOsdMode(),d=3D[];switch(a){case =
+"36815004":c=3D1;d=3D["js"];break;case =
+"36815002":c=3D1;d=3D["html"];break;case =
+"36813006":c=3D0;d=3D["html","js"];break}d.length>0&&b.setValidOutputType=
+s(d);d=3DO();b.setupOsd(c,a,T(d,7).toString())}=0A=
+function fe(a,b,c,d){G||pd(a);var =
+e=3DZ(a);c=3DZd({ifi:e},c);c=3Dc.substring(0,1991);c=3Dc.replace(/%\w?$/,=
+"");var =
+f=3D"script";if((a.google_ad_output=3D=3D"js"||a.google_ad_output=3D=3D"j=
+son_html")&&(a.google_ad_request_done||a.google_radlink_request_done))b.w=
+rite("<"+f+' language=3D"JavaScript1.1" =
+src=3D'+$(aa(c))+"></"+f+">");else =
+if(a.google_ad_output=3D=3D"html")if(Vd&&Yd()){b=3Da.google_container_id|=
+|d||i;a["google_expandable_ad_slot"+e]=3DExpandableAdSlotFactory.createIf=
+rame("google_ads_frame"+e,aa(c),a.google_ad_width,=0A=
+a.google_ad_height,b,H,a.google_async_iframe_id)}else{e=3D'<iframe =
+name=3D"google_ads_frame" width=3D'+$(String(a.google_ad_width))+" =
+height=3D"+$(String(a.google_ad_height))+" =
+frameborder=3D"+$(String(a.google_ad_frameborder=3D=3Di?"":a.google_ad_fr=
+ameborder))+" src=3D"+$(aa(c))+' marginwidth=3D"0" marginheight=3D"0" =
+vspace=3D"0" hspace=3D"0" allowtransparency=3D"true" =
+scrolling=3D"no"></iframe>';a.google_container_id?ge(a.google_container_i=
+d,b,e):b.write(e)}return c}function he(a){Qc(a)}=0A=
+function ie(a){var b=3Dhd().c(2)=3D=3D"44901217";if(!je(b))return =
+j;b=3Dbe();var =
+c=3DDd(window,Z(window));a=3Dke(a);b=3Dc+le(a.google_ad_format,b);window.=
+google_ad_url=3DZd(a,b);return h}=0A=
+var =
+pe=3Dfunction(a){a.dt=3Dk;if(G&&window.google_bpp)a.bpp=3Dwindow.google_b=
+pp;a.shv=3D"r20100711";var =
+b=3DO(),c=3DT(b,8),d=3Dwindow.google_ad_section,e=3Dwindow.google_ad_form=
+at,f=3Dwindow.google_ad_slot;if(c[d])E(e)||(a.prev_fmts=3Dc[d]);var =
+g=3DT(b,9);if(g[d])a.prev_slotnames=3Dg[d].toLowerCase();if(e){if(!E(e))i=
+f(c[d])c[d]+=3D","+e;else c[d]=3De}else if(f)if(g[d])g[d]+=3D","+f;else =
+g[d]=3Df;a.correlator=3DT(b,7);if(T(b,2)&&!dd(b))a.dblk=3D1;if(window.goo=
+gle_ad_channel){c=3DT(b,10);d=3D"";e=3Dwindow.google_ad_channel.split(me)=
+;=0A=
+for(f=3D0;f<e.length;f++){g=3De[f];if(c[g])d+=3Dg+"+";else =
+c[g]=3Dh}a.pv_ch=3Dd}if(window.google_ad_host_channel){b=3Dne(window.goog=
+le_ad_host_channel,T(b,11));a.pv_h_ch=3Db}if(Rb)a.jscb=3D1;if(Tb)a.jscd=3D=
+1;a.frm=3Dwindow.google_iframing;a.adk=3Doe();b=3DUc();a.ga_vid=3Db.vid;a=
+.ga_sid=3Db.sid;a.ga_hid=3Db.hid;a.ga_fc=3Db.from_cookie;a.ga_wpids=3Dwin=
+dow.google_analytics_uacct},qe=3Dfunction(a){var =
+b=3Dh;if(b=3DAb(b)){a.biw=3Db.width;a.bih=3Db.height}},oe=3Dfunction(){va=
+r =
+a=3D[];pb(a,B.google_ad_slot,B.google_ad_format,B.google_ad_type,B.google=
+_ad_width,=0A=
+B.google_ad_height);if(kb){var =
+b=3DDb(kb);b&&a.push(b)}b=3D0;if(a)b=3DBb(a.join(":"));return =
+b.toString()},re=3Dfunction(a){var =
+b=3DCb(H);if(b!=3D0)a.ifk=3Db.toString()};function ne(a,b){var =
+c=3Da.split("|"),d=3D-1,e=3D[];for(var f=3D0;f<c.length;f++){var =
+g=3Dc[f].split(me);b[f]||(b[f]=3D{});var o=3D"";for(var =
+Q=3D0;Q<g.length;Q++){var I=3Dg[Q];if(I!=3D"")if(b[f][I])o+=3D"+"+I;else =
+b[f][I]=3Dh}o=3Do.slice(1);e[f]=3Do;if(o!=3D"")d=3Df}c=3D"";if(d>-1){for(=
+f=3D0;f<d;f++)c+=3De[f]+"|";c+=3De[d]}return c}=0A=
+function se(){var =
+a=3D["44901228","44901229"];V().b(a,Ib,1);a=3D["44901218","44901217"];V()=
+.b(a,Pb,2)}var te=3Dfunction(){ec()!=3DH&&Zb(4)};=0A=
+function ue(){te();(G?Z(window)=3D=3D1:!Z(window))&&se();var =
+a=3Dde(),b=3Di,c=3D"",d=3DMath.random()<0.01;if(d)if(b=3Dwindow.google_as=
+ync_iframe_id)b=3DH.document.getElementById(b);else{c=3D"google_temp_span=
+";b=3Dve(c)}d=3Die(b);b&&b.id=3D=3Dc&&(b&&b.parentNode?b.parentNode.remov=
+eChild(b):i);if(d){c=3Dfe(window,document,window.google_ad_url);if(a)Gd()=
+.registerAdBlockByType(String(window.google_ad_output||""),c,j);he(window=
+)}zc(window)}=0A=
+var =
+we=3Dfunction(a){C(Fb,function(b,c){a[b]=3Dwindow[c]});C(Eb,function(b,c)=
+{a[b]=3Dwindow[c]});C(Gb,function(b,c){a[b]=3Dwindow[c]})},xe=3Dfunction(=
+a){Ud(window.google_eids,1);a.eid=3DTd();var =
+b=3Dhd().z();if(a.eid.length>0&&b.length>0)a.eid+=3D",";a.eid+=3Db};funct=
+ion ye(a,b,c,d){a=3DXb(a,b,c,d);Wd(window,document);return a}function =
+ze(){Pc()}=0A=
+function Ae(a){var =
+b=3D{};a=3Da.split("?");a=3Da[a.length-1].split("&");for(var =
+c=3D0;c<a.length;c++){var =
+d=3Da[c].split("=3D");if(d[0])try{b[d[0].toLowerCase()]=3Dd.length>1?wind=
+ow.decodeURIComponent?decodeURIComponent(d[1].replace(/\+/g," =
+")):unescape(d[1]):""}catch(e){}}return b}function Be(){var =
+a=3Dwindow,b=3DAe(document.URL);if(b.google_ad_override){a.google_ad_over=
+ride=3Db.google_ad_override;a.google_adtest=3D"on"}}=0A=
+function =
+ge(a,b,c){if(a)if((a=3Db.getElementById(a))&&c&&c.length!=3D""){a.style.v=
+isibility=3D"visible";a.innerHTML=3Dc}}=0A=
+var le=3Dfunction(a,b){var c;return =
+c=3DE(a)?"/pagead/sdo?":b?"/pagead/render_iframe_ads.html#":"/pagead/ads?=
+"},Ce=3Dfunction(a,b){b.dff=3DLd(a).toLowerCase();b.dfs=3DQd(a)},De=3Dfun=
+ction(a){a.ref=3Dwindow.google_referrer_url;a.loc=3Dwindow.google_page_lo=
+cation},je=3Dfunction(a){var =
+b=3DO(),c=3DT(b,8),d=3DT(b,9),e=3Dwindow.google_ad_section;if(E(window.go=
+ogle_ad_format)){if(U(b,4,T(b,4)+1)>4&&!a)return j}else =
+if(xb(window)){if(U(b,5,T(b,5)+1)>3&&!a)return j}else{var =
+f=3DU(b,6,T(b,6)+1);if(window.google_num_slots_to_rotate){Zb(1);=0A=
+c[e]=3D"";d[e]=3D"";T(b,12)||U(b,12,(new =
+Date).getTime()%window.google_num_slots_to_rotate+1);if(T(b,12)!=3Df)retu=
+rn j}else if(!a&&f>6&&e=3D=3D"")return j}return h},ke=3Dfunction(a){var =
+b=3D{};we(b);pe(b);zb(b);a&&Ce(a,b);qe(b);re(b);xe(b);De(b);b.fu=3DYb;ret=
+urn b},ve=3Dfunction(a){var =
+b=3Dwindow.google_container_id,c=3Db&&$a(b)||$a(a);if(!c&&!b&&a){document=
+.write("<span id=3D"+a+"></span>");c=3D$a(a)}return c},me=3D/[+, =
+]/;window.google_render_ad=3Due;var Ee=3Dfunction(){Be();yd();var =
+a=3Dwindow.google_start_time;if(typeof =
+a=3D=3D"number"){k=3Da;window.google_start_time=3Di}Vb("show_ads.google_i=
+nit_globals",ye,ze);Wd(window,document)},Fe=3Dfunction(){window.google_st=
+art_time=3Dk;document.write(qd())},Ge=3Dfunction(){if(rd()){pd(window);sd=
+(window)}else Fe()};function He(){if(Ub&&typeof =
+B.alternateShowAds=3D=3D"function")B.alternateShowAds.call(i);else =
+if(Sb)Ee();else{Z(window)||td();if(wd())Ge();else =
+xd()?Fe():Ee()}}Vb("show_ads.main",Xb,He);})()=0A=
+
+------=_NextPart_000_0075_01CB2447.ECAC3DA0--

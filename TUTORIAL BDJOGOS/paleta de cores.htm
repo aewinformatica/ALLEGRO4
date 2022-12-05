@@ -1,0 +1,1844 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0051)http://www.bdjogos.com/biblioteca_conteudo.php?id=5 -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="paleta de cores_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="paleta de cores_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript 
+src="paleta de cores_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background="paleta de cores_arquivos/bg.jpg" topMargin=0 marginheight="0" 
+marginwidth="0">
+<SCRIPT language=javascript src="paleta de cores_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 
+      src="paleta de cores_arquivos/borda_cima1.gif" width=8></TD>
+    <TD width="97%" 
+      background="paleta de cores_arquivos/linha_hor_cima.gif"><IMG height=8 
+      src="paleta de cores_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 
+      src="paleta de cores_arquivos/borda_cima2.gif" width=8></TD></TR>
+  <TR>
+    <TD background="paleta de cores_arquivos/linha_vertical.gif">
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background="paleta de cores_arquivos/linha_ver_di.gif">&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="paleta de cores_arquivos/borda_baixo1.gif" 
+    width=8></TD>
+    <TD vAlign=center 
+      background="paleta de cores_arquivos/linha_horizo.gif"><IMG height=8 
+      src="paleta de cores_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="paleta de cores_arquivos/borda_baixo2.gif" 
+    width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 
+      src="paleta de cores_arquivos/borda_cima1.gif" width=8></TD>
+    <TD width="97%" 
+      background="paleta de cores_arquivos/linha_hor_cima.gif"><IMG height=8 
+      src="paleta de cores_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 
+      src="paleta de cores_arquivos/borda_cima2.gif" width=8></TD></TR>
+  <TR>
+    <TD background="paleta de cores_arquivos/linha_vertical.gif">
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background="paleta de cores_arquivos/linha_ver_di.gif">&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="paleta de cores_arquivos/borda_baixo1.gif" 
+    width=8></TD>
+    <TD vAlign=center 
+      background="paleta de cores_arquivos/linha_horizo.gif"><IMG height=8 
+      src="paleta de cores_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="paleta de cores_arquivos/borda_baixo2.gif" 
+    width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 
+      src="paleta de cores_arquivos/borda_cima1.gif" width=8></TD>
+    <TD width="97%" 
+      background="paleta de cores_arquivos/linha_hor_cima.gif"><IMG height=8 
+      src="paleta de cores_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 
+      src="paleta de cores_arquivos/borda_cima2.gif" width=8></TD></TR>
+  <TR>
+    <TD background="paleta de cores_arquivos/linha_vertical.gif">
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background="paleta de cores_arquivos/linha_ver_di.gif">&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="paleta de cores_arquivos/borda_baixo1.gif" 
+    width=8></TD>
+    <TD vAlign=center 
+      background="paleta de cores_arquivos/linha_horizo.gif"><IMG height=8 
+      src="paleta de cores_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="paleta de cores_arquivos/borda_baixo2.gif" 
+    width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 
+      src="paleta de cores_arquivos/borda_cima1.gif" width=8></TD>
+    <TD width="97%" 
+      background="paleta de cores_arquivos/linha_hor_cima.gif"><IMG height=8 
+      src="paleta de cores_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 
+      src="paleta de cores_arquivos/borda_cima2.gif" width=8></TD></TR>
+  <TR>
+    <TD background="paleta de cores_arquivos/linha_vertical.gif">
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background="paleta de cores_arquivos/linha_ver_di.gif">&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="paleta de cores_arquivos/borda_baixo1.gif" 
+    width=8></TD>
+    <TD vAlign=center 
+      background="paleta de cores_arquivos/linha_horizo.gif"><IMG height=8 
+      src="paleta de cores_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="paleta de cores_arquivos/borda_baixo2.gif" 
+    width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="paleta de cores_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="paleta de cores_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="paleta de cores_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="paleta de cores_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="paleta de cores_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="paleta de cores_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background="paleta de cores_arquivos/111.jpg" 
+    rowSpan=2><IMG height=1 src="paleta de cores_arquivos/111.jpg" 
+  width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background="paleta de cores_arquivos/111.jpg" 
+    rowSpan=2><IMG height=1 src="paleta de cores_arquivos/111.jpg" 
+  width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="paleta de cores_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD class=conteudo vAlign=top>
+            <P><SPAN class=titulos>FUNÇÃO int makecol(int,int,int) 
+            </SPAN><BR><BR>Durante a declaração de algumas funções no Allegro 
+            você vai perceber que existe um argumento responsável por 
+            identificar a cor. Dependendo do argumento a função altera a cor do 
+            fundo da imagem, do fundo do texto ou do próprio texto. </P>
+            <P>Todas as funções que pedirem a definição de uma cor no argumento 
+            nós iremos utilizar o a função <STRONG>makecol</STRONG> e seguir a 
+            tabela de cores RGB.<BR></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#000099 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=5 width="100%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=#f7f7f7>
+                        <P class=conteudo><B>É importante saber que se você 
+                        quiser um fundo transparente ao invés de usar a função 
+                        makecol utilize o valor -1 no 
+                        argumento</B>.<BR><BR>Dessa forma você pode usar 
+                        qualquer cor na fonte e para a cor do fundo da fonte 
+                        você poderá utilizar a transparência 
+                    (-1).</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P><BR>Essa função transforma o valor <B>RGB</B> em um valor inteiro 
+            responsável por identificar a cor que queremos utilizar. As cores 
+            <B>RGB</B> são formadas por uma combinação de 3 valores. Como você 
+            pode notar, ela é composta de 3 trios de valores separados por uma 
+            vírgula.<BR><BR><B>Exemplo:</B> makecol(<B><FONT color=red> 
+            000</FONT></B>, <B><FONT color=green>000</FONT></B>, <B><FONT 
+            color=blue>000 </FONT></B>);<BR><BR>O primeiro trio significa a 
+            "quantidade" de vermelho colocada nesta cor, o "R", de "Red". <BR>O 
+            segundo trio é a “quantidade” de verde, "G", de "Green".<BR>O 
+            terceiro trio é a “quantidade” de azul, "B" de "Blue".<BR>Por isso 
+            este tipo de "colorido" é chamado <B>RGB</B>.<BR><BR>Você pode criar 
+            sua própria cor, variando estes valores. Em cada trio o valor mínimo 
+            é de 000 e o valor máximo de acordo com a tabela <B>RGB</B> é de 
+            255.<BR><BR>Quanto maior o número mais clara é a cor que você está 
+            criando. Deste modo, makecol(<B><FONT 
+            color=red>000</FONT></B>,<B><FONT 
+            color=green>000</FONT></B>,<B><FONT color=blue>000</FONT></B>) 
+            representa preto e makecol(<B><FONT 
+            color=red>255</FONT></B>,<B><FONT 
+            color=green>255</FONT></B>,<B><FONT color=blue>255</FONT></B>), 
+            branco.<BR><BR>Para um melhor entendimento veremos em seguida um 
+            exemplo simples da função makecol.<BR><BR></P>
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO...</SPAN> 
+            <HR>
+            <BR><SPAN class=codigo>#include &lt;allegro.h&gt;<BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(32);<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_WINDOWED, 
+            640, 480, 0, 0);<BR><BR>&nbsp;&nbsp;&nbsp;<SPAN class=comentario>// 
+            Texto em Vermelho com fundo 
+            transparente</SPAN><BR>&nbsp;&nbsp;&nbsp;textprintf_ex(screen,font,0,0,<B>makecol</B>(255,0,0),-1, 
+            "VERMELHO"); <BR><BR>&nbsp;&nbsp;&nbsp;<SPAN class=comentario>// 
+            Texto em Verde com fundo 
+            transparente</SPAN><BR>&nbsp;&nbsp;&nbsp;textprintf_ex(screen,font,0,10,<B>makecol</B>(0,255,0),-1,"VERDE");<BR><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Texto em Azul com fundo 
+            transparente</SPAN><BR>&nbsp;&nbsp;&nbsp;textprintf_ex(screen,font,0,20,<B>makecol</B>(0,0,255),-1,"AZUL"); 
+            <BR><BR>&nbsp;&nbsp;&nbsp;while(!key[KEY_ESC])<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>//Código</SPAN><BR>&nbsp;&nbsp;&nbsp;}<BR><BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+            0; <BR>}<BR>END_OF_MAIN();<BR></SPAN><BR>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO</SPAN> 
+            <HR>
+            <BR>O exemplo acima imprime 3 textos na tela. Cada texto corresponde 
+            a cor da fonte.<BR>A única coisa que interessa para nós na função 
+            <B>textprintf_ex</B> por enquanto é o argumento de definição de 
+            cores.<BR><BR>void textprintf_ex(BITMAP *bmp, const FONT *f, int x, 
+            int y, <B>int color</B>,<B> int bg</B>, const char *fmt, 
+            ...);<BR><BR><B>int color:</B> Altera a cor da fonte<BR><B>int 
+            bg:</B> Altera a cor do fundo da fonte.<BR><BR>Nesse exemplo usamos 
+            a cor do fundo transparente, -1. Poderiamos usar a função makecol 
+            novamente sem nenhum problema.<BR><BR>Para o texto em <FONT 
+            color=red>VERMELHO</FONT>: Lembre-se que o primeiro trio corresponde 
+            a cor vermelha da tabela RGB (R = Red (Vermelho)). Como eu quero uma 
+            cor do tipo vermelho claro eu setei o valor do trio que corresponde 
+            o vermelho no máximo (255). Para escurecer diminua o valor do trio 
+            correspondente a cor.<BR><BR>Para o texto em <FONT 
+            color=green>VERDE</FONT>: Lembre-se que o segundo trio corresponde a 
+            cor verde da tabela RGB (G = Green (Verde)). Como eu quero uma cor 
+            do tipo verde claro eu setei o valor do trio que corresponde o verde 
+            no máximo (255). Para escurecer diminua o valor do trio 
+            correspondente a cor.<BR><BR>Para o texto em <FONT 
+            color=blue>AZUL</FONT>: Lembre-se que o terceiro trio corresponde a 
+            cor azul da tabela RGB (B = Blue (Azul)). Como eu quero uma cor do 
+            tipo azul claro eu setei o valor do trio que corresponde o azul no 
+            máximo (255). Para escurecer diminua o valor do trio correspondente 
+            a cor.<BR><BR>
+            <CENTER><IMG src="paleta de cores_arquivos/makecol.gif" 
+            border=0></CENTER><BR>
+            <CENTER></CENTER><BR>
+            <HR>
+
+            <P><SPAN class=titulos>VARIAÇÕES DA FUNÇÃO int 
+            makecol(int,int,int)</SPAN> </P>
+            <P>Existem outros tipos de variações da função makecol. Por 
+            exemplo:<BR><BR><B>int makecol8(int r, int g, int b);<BR>int 
+            makecol15(int r, int g, int b);<BR>int makecol16(int r, int g, int 
+            b);<BR>int makecol24(int r, int g, int b);<BR>int makecol32(int r, 
+            int g, int b);<BR>int makecol_depth(int color_depth, int r, int g, 
+            int b);</B><BR><BR>Todas elas funcionam exatamente como a função 
+            makecol. No entanto, cada uma dessas funções deixa claro que serve 
+            apenas para um tipo de profundidade de cores, um tipo de pallet. 8, 
+            15, 16, 24 e 32 bits.<BR><BR>Pallet é a paleta de cores ou nome que 
+            é dado a profundidade de cores que você está utilizando no jogo. No 
+            caso do exemplo acima usamos pallet de 32 bits. Nesse caso 
+            poderíamos usar o makecol32 ao invés de makecol. Mas como makecol32 
+            trata-se de uma função muito especifica utilizamos somente o makecol 
+            porque é uma função mais genérica e funciona para todos os tipos de 
+            pallets.<BR><BR>Imagine o seu jogo com centenas de códigos usando a 
+            função makecol8 em todas as funções. Agora você quer melhorar os 
+            gráficos para 32 bits. Você terá que alterar linha por linha a 
+            função para makecol32 ou makecol.<BR><BR>MASSSS....... nós temos a 
+            função makecol_depth como uma segunda solução.<BR></P>
+            <P>Diferença da função <B>makecol</B> para 
+            <B>makecol_depth:</B><BR><B>makecol_depth:</B> Você precisa 
+            especificar o pallet de cores antes de especificar as cores 
+            RGB.<BR><BR><B>Exemplo:</B><BR>int makecol_depth(32, 255, 000, 
+            000);<BR><BR>32 bits de profundidade e a cor do texto será 
+            vermelho.<BR><BR><B>makecol:</B> Você não precisa especificar a 
+            profundidade de cores porque a função identifica 
+            automaticamente.<BR><BR>Abaixo segue um exemplo da função 
+            <B>makecol_depth</B>.<BR><BR></P>
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO...</SPAN> 
+            <HR>
+            <SPAN class=codigo>#include &lt;allegro.h&gt;<BR><BR><SPAN 
+            class=comentario>//Definição da profundidade de 
+            cores</SPAN><BR>const int <FONT color=red>iPallet</FONT> = 
+            32;<BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(<FONT 
+            color=red>iPallet</FONT>); <SPAN class=comentario>//Seta a 
+            profundidade de cores do 
+            video</SPAN><BR><BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_WINDOWED, 
+            640, 480, 0, 0);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Texto em Vermelho com fundo 
+            transparente</SPAN><BR>&nbsp;&nbsp;&nbsp;textprintf_ex(screen,font,0,0,<B>makecol_depth</B>(<FONT 
+            color=red>iPallet</FONT>,255,0,0),-1, "VERMELHO"); 
+            <BR><BR>&nbsp;&nbsp;&nbsp;<SPAN class=comentario>// Texto em Verde 
+            com fundo 
+            transparente</SPAN><BR>&nbsp;&nbsp;&nbsp;textprintf_ex(screen,font,0,10,<B>makecol_depth</B>(<FONT 
+            color=red>iPallet</FONT>,0,255,0),-1,"VERDE");<BR><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Texto em Azul com fundo 
+            transparente</SPAN><BR>&nbsp;&nbsp;&nbsp;textprintf_ex(screen,font,0,20,<B>makecol_depth</B>(<FONT 
+            color=red>iPallet</FONT>,0,0,255),-1,"AZUL"); 
+            <BR><BR>&nbsp;&nbsp;&nbsp;while(!key[KEY_ESC])<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>//Código</SPAN><BR>&nbsp;&nbsp;&nbsp;}<BR><BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+            0; <BR>}<BR>END_OF_MAIN();<BR></SPAN><BR>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO...</SPAN> 
+            <HR>
+            <BR>O resultado do exemplo acima é exatamente igual ao exemplo 
+            anterior com a função makecol. O que muda é a forma que utilizamos a 
+            função no código.<BR><BR>Note que utilizamos uma variável global 
+            constante do tipo inteiro para definir a profundidade de cores que 
+            iremos utilizar durante o desenvolvimento do jogo. Se eventualmente 
+            precisarmos alterar a qualidade das imagens é só alterar o valor da 
+            variável. Dessa forma, a função torna-se genérica.<BR><BR>Para 
+            facilitar a visualização e o aprendizado segue abaixo uma tabela de 
+            cores RGB.<BR><BR>
+            <HR>
+            <SPAN class=titulos>TABELA DE CORES RGB </SPAN>
+            <HR>
+            <BR>
+            <TABLE class=conteudo9 width="99%" align=center border=1>
+              <TBODY>
+              <TR>
+                <TD width="20%" bgColor=#fffafa>Snow</TD>
+                <TD width="10%">255 250 250</TD>
+                <TD width="1%">&nbsp;</TD>
+                <TD width="20%" bgColor=#8b795e>NavajoWhite4</TD>
+                <TD width="10%">139 121 94</TD>
+                <TD width="1%">&nbsp;</TD>
+                <TD width="20%" bgColor=#8b7500>Gold4</TD>
+                <TD width="10%">139 117 0</TD></TR>
+              <TR>
+                <TD bgColor=#f8f8ff>GhostWhite</TD>
+                <TD>248 248 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#fffacd>LemonChiffon1</TD>
+                <TD>255 250 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffc125>Goldenrod1</TD>
+                <TD width="10%">255 193 37</TD></TR>
+              <TR>
+                <TD bgColor=#f5f5f5>WhiteSmoke</TD>
+                <TD>245 245 245</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eee9bf>LemonChiffon2</TD>
+                <TD>238 233 191</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eeb422>Goldenrod2</TD>
+                <TD width="10%">238 180 34</TD></TR>
+              <TR>
+                <TD bgColor=#dcdcdc>Gainsboro</TD>
+                <TD>220 220 220</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdc9a5>LemonChiffon3</TD>
+                <TD>205 201 165</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd9b1d>Goldenrod3</TD>
+                <TD width="10%">205 155 29</TD></TR>
+              <TR>
+                <TD bgColor=#fffaf0>FloralWhite</TD>
+                <TD>255 250 240</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b8970>LemonChiffon4</TD>
+                <TD>139 137 112</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b6914>Goldenrod4</TD>
+                <TD width="10%">139 105 20</TD></TR>
+              <TR>
+                <TD bgColor=#fdf5e6>OldLace</TD>
+                <TD>253 245 230</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#fff8dc>Cornsilk1</TD>
+                <TD>255 248 220</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffb9f>DarkGoldenrod1</TD>
+                <TD width="10%">255 185 15</TD></TR>
+              <TR>
+                <TD bgColor=#faf0e6>Linen</TD>
+                <TD>250 240 230</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eee8cd>Cornsilk2</TD>
+                <TD>238 232 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eeade>DarkGoldenrod2</TD>
+                <TD width="10%">238 173 14</TD></TR>
+              <TR>
+                <TD bgColor=#faebd7>AntiqueWhite</TD>
+                <TD>250 235 215</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdc8b1>Cornsilk3</TD>
+                <TD>205 200 177</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd95c>DarkGoldenrod3</TD>
+                <TD width="10%">205 149 12</TD></TR>
+              <TR>
+                <TD bgColor=#ffefd5>PapayaWhip</TD>
+                <TD>255 239 213</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b8878>Cornsilk4</TD>
+                <TD>139 136 120</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b6508>DarkGoldenrod4</TD>
+                <TD width="10%">139 101 8</TD></TR>
+              <TR>
+                <TD bgColor=#ffebcd>BlanchedAlmond</TD>
+                <TD>255 235 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#fffff0>Ivory1</TD>
+                <TD>255 255 240</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffc1c1>RosyBrown1</TD>
+                <TD width="10%">255 193 193</TD></TR>
+              <TR>
+                <TD bgColor=#ffe4c4>Bisque</TD>
+                <TD>255 228 196</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eeeee0>Ivory2</TD>
+                <TD>238 238 224</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eeb4b4>RosyBrown2</TD>
+                <TD width="10%">238 180 180</TD></TR>
+              <TR>
+                <TD bgColor=#ffdab9>PeachPuff</TD>
+                <TD>255 218 185</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdcdc1>Ivory3</TD>
+                <TD>205 205 193</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd9b9b>RosyBrown3</TD>
+                <TD width="10%">205 155 155</TD></TR>
+              <TR>
+                <TD bgColor=#ffdead>NavajoWhite</TD>
+                <TD>255 222 173</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b8b83>Ivory4</TD>
+                <TD>139 139 131</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b6969>RosyBrown4</TD>
+                <TD width="10%">139 105 105</TD></TR>
+              <TR>
+                <TD bgColor=#ffe4b5>Moccasin</TD>
+                <TD>255 228 181</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#f0fff0>Honeydew1</TD>
+                <TD>240 255 240</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff0000>IndianRed1</TD>
+                <TD width="10%">255 106 106</TD></TR>
+              <TR>
+                <TD bgColor=#fff8dc>Cornsilk</TD>
+                <TD>255 248 220</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#e0eee0>Honeydew2</TD>
+                <TD>224 238 224</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee6363>IndianRed2</TD>
+                <TD width="10%">238 99 99</TD></TR>
+              <TR>
+                <TD bgColor=#fffff0>Ivory</TD>
+                <TD>255 255 240</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#c1cdc1>Honeydew3</TD>
+                <TD>193 205 193</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd5555>IndianRed3</TD>
+                <TD width="10%">205 85 85</TD></TR>
+              <TR>
+                <TD bgColor=#fffacd>LemonChiffon</TD>
+                <TD>255 250 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#838b83>Honeydew4</TD>
+                <TD>131 139 131</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b0000>IndianRed4</TD>
+                <TD width="10%">139 58 58</TD></TR>
+              <TR>
+                <TD bgColor=#fff5ee>Seashell</TD>
+                <TD>255 245 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#fff0f5>LavenderBlush1</TD>
+                <TD>255 240 245</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff8247>Sienna1</TD>
+                <TD width="10%">255 130 71</TD></TR>
+              <TR>
+                <TD bgColor=#f0fff0>Honeydew</TD>
+                <TD>240 255 240</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eee0e5>LavenderBlush2</TD>
+                <TD>238 224 229</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee7942>Sienna2</TD>
+                <TD width="10%">238 121 66</TD></TR>
+              <TR>
+                <TD bgColor=#f5fffa>MintCream</TD>
+                <TD>245 255 250</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdc1c5>LavenderBlush3</TD>
+                <TD>205 193 197</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd6839>Sienna3</TD>
+                <TD width="10%">205 104 57</TD></TR>
+              <TR>
+                <TD bgColor=#f0ffff>Azure</TD>
+                <TD>240 255 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b8386>LavenderBlush4</TD>
+                <TD>139 131 134</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b4726>Sienna4</TD>
+                <TD width="10%">139 71 38</TD></TR>
+              <TR>
+                <TD bgColor=#f0f8ff>AliceBlue</TD>
+                <TD>240 248 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffe4e1>MistyRose1</TD>
+                <TD>255 228 225</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffd39b>Burlywood1</TD>
+                <TD width="10%">255 211 155</TD></TR>
+              <TR>
+                <TD bgColor=#e6e6fa>lavender</TD>
+                <TD>230 230 250</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eed5d2>MistyRose2</TD>
+                <TD>238 213 210</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eec591>Burlywood2</TD>
+                <TD width="10%">238 197 145</TD></TR>
+              <TR>
+                <TD bgColor=#fff0f5>LavenderBlush</TD>
+                <TD>255 240 245</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdb7b5>MistyRose3</TD>
+                <TD>205 183 181</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdaa7d>Burlywood3</TD>
+                <TD width="10%">205 170 125</TD></TR>
+              <TR>
+                <TD bgColor=#ffe4e1>MistyRose</TD>
+                <TD>255 228 225</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b7d7b>MistyRose4</TD>
+                <TD>139 125 123</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b7355>Burlywood4</TD>
+                <TD width="10%">139 115 85</TD></TR>
+              <TR>
+                <TD bgColor=#ffffff>White</TD>
+                <TD>255 255 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#f0ffff>Azure1</TD>
+                <TD>240 255 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffe7ba>Wheat1</TD>
+                <TD width="10%">255 231 186</TD></TR>
+              <TR>
+                <TD bgColor=#000000>Black</TD>
+                <TD>0 0 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#e0eeee>Azure2</TD>
+                <TD>224 238 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eed8ae>Wheat2</TD>
+                <TD width="10%">238 216 174</TD></TR>
+              <TR>
+                <TD bgColor=#2f4f4f>DarkSlateGray</TD>
+                <TD>47 79 79</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#c1cdcd>Azure3</TD>
+                <TD>193 205 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdba96>Wheat3</TD>
+                <TD width="10%">205 186 150</TD></TR>
+              <TR>
+                <TD bgColor=#696969>DimGrey</TD>
+                <TD>105 105 105</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#838b8b>Azure4</TD>
+                <TD>131 139 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b7e66>Wheat4</TD>
+                <TD width="10%">139 126 102</TD></TR>
+              <TR>
+                <TD bgColor=#708090>SlateGrey</TD>
+                <TD>112 128 144</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#836fff>SlateBlue1</TD>
+                <TD>131 111 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffa54f>Tan1</TD>
+                <TD width="10%">255 165 79</TD></TR>
+              <TR>
+                <TD bgColor=#778899>LightSlateGray</TD>
+                <TD>119 136 153</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#0067ee>SlateBlue2</TD>
+                <TD>122 103 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee0049>Tan2</TD>
+                <TD width="10%">238 154 73</TD></TR>
+              <TR>
+                <TD bgColor=#bebebe>Grey</TD>
+                <TD>190 190 190</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#6959cd>SlateBlue3</TD>
+                <TD>105 89 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd853f>Tan3</TD>
+                <TD width="10%">205 133 63</TD></TR>
+              <TR>
+                <TD bgColor=#d3d3d3>LightGray</TD>
+                <TD>211 211 211</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#473c8b>SlateBlue4</TD>
+                <TD>71 60 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b002b>Tan4</TD>
+                <TD width="10%">139 90 43</TD></TR>
+              <TR>
+                <TD bgColor=#191970>MidnightBlue</TD>
+                <TD>25 25 112</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#4876ff>RoyalBlue1</TD>
+                <TD>72 118 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff7f24>Chocolate1</TD>
+                <TD width="10%">255 127 36</TD></TR>
+              <TR>
+                <TD bgColor=#000080>NavyBlue (Navy)</TD>
+                <TD>0 0 128</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#436eee>RoyalBlue2</TD>
+                <TD>67 110 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee7621>Chocolate2</TD>
+                <TD width="10%">238 118 33</TD></TR>
+              <TR>
+                <TD bgColor=#6495ed>CornflowerBlue</TD>
+                <TD>100 149 237</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#005fcd>RoyalBlue3</TD>
+                <TD>58 95 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd661d>Chocolate3</TD>
+                <TD width="10%">205 102 29</TD></TR>
+              <TR>
+                <TD bgColor=#483d8b>DarkSlateBlue</TD>
+                <TD>72 61 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#27408b>RoyalBlue4</TD>
+                <TD>39 64 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b4513>Chocolate4</TD>
+                <TD width="10%">139 69 19</TD></TR>
+              <TR>
+                <TD bgColor=#0000cd>SlateBlue</TD>
+                <TD>106 90 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#0000ff>Blue1</TD>
+                <TD>0 0 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff3030>Firebrick1</TD>
+                <TD width="10%">255 48 48</TD></TR>
+              <TR>
+                <TD bgColor=#7b68ee>MediumSlateBlue</TD>
+                <TD>123 104 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#0000ee>Blue2</TD>
+                <TD>0 0 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee2c2c>Firebrick2</TD>
+                <TD width="10%">238 44 44</TD></TR>
+              <TR>
+                <TD bgColor=#8470ff>LightSlateBlue</TD>
+                <TD>132 112 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#0000cd>Blue3</TD>
+                <TD>0 0 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd2626>Firebrick3</TD>
+                <TD width="10%">205 38 38</TD></TR>
+              <TR>
+                <TD bgColor=#0000cd>MediumBlue</TD>
+                <TD>0 0 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00008b>Blue4</TD>
+                <TD>0 0 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b0000>Firebrick4</TD>
+                <TD width="10%">139 26 26</TD></TR>
+              <TR>
+                <TD bgColor=#4169e1>RoyalBlue</TD>
+                <TD>65 105 225</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#1e90ff>DodgerBlue1</TD>
+                <TD>30 144 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff4040>Brown1</TD>
+                <TD width="10%">255 64 64</TD></TR>
+              <TR>
+                <TD bgColor=#0000ff>Blue</TD>
+                <TD>0 0 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#1c86ee>DodgerBlue2</TD>
+                <TD>28 134 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee3b3b>Brown2</TD>
+                <TD width="10%">238 59 59</TD></TR>
+              <TR>
+                <TD bgColor=#1e90ff>DodgerBlue</TD>
+                <TD>30 144 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#1874cd>DodgerBlue3</TD>
+                <TD>24 116 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd3333>Brown3</TD>
+                <TD width="10%">205 51 51</TD></TR>
+              <TR>
+                <TD bgColor=#00bfff>DeepSkyBlue</TD>
+                <TD>0 191 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#104e8b>DodgerBlue4</TD>
+                <TD>16 78 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b2323>Brown4</TD>
+                <TD width="10%">139 35 35</TD></TR>
+              <TR>
+                <TD bgColor=#87ceeb>SkyBlue</TD>
+                <TD>135 206 235</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#63b8ff>SteelBlue1</TD>
+                <TD>99 184 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff8c69>Salmon1</TD>
+                <TD width="10%">255 140 105</TD></TR>
+              <TR>
+                <TD bgColor=#87cefa>LightSkyBlue</TD>
+                <TD>135 206 250</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#5cacee>SteelBlue2</TD>
+                <TD>92 172 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee8262>Salmon2</TD>
+                <TD width="10%">238 130 98</TD></TR>
+              <TR>
+                <TD bgColor=#4682b4>SteelBlue</TD>
+                <TD>70 130 180</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#4f94cd>SteelBlue3</TD>
+                <TD>79 148 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd7054>Salmon3</TD>
+                <TD width="10%">205 112 84</TD></TR>
+              <TR>
+                <TD bgColor=#b0c4de>LightSteelBlue</TD>
+                <TD>176 196 222</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#36648b>SteelBlue4</TD>
+                <TD>54 100 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b4c39>Salmon4</TD>
+                <TD width="10%">139 76 57</TD></TR>
+              <TR>
+                <TD bgColor=#add8e6>LightBlue</TD>
+                <TD>173 216 230</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00bfff>DeepSkyBlue1</TD>
+                <TD>0 191 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffa000>LightSalmon1</TD>
+                <TD width="10%">255 160 122</TD></TR>
+              <TR>
+                <TD bgColor=#b0e0e6>PowderBlue</TD>
+                <TD>176 224 230</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00b2ee>DeepSkyBlue2</TD>
+                <TD>0 178 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee9572>LightSalmon2</TD>
+                <TD width="10%">238 149 114</TD></TR>
+              <TR>
+                <TD bgColor=#afeeee>PaleTurquoise</TD>
+                <TD>175 238 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#0000cd>DeepSkyBlue3</TD>
+                <TD>0 154 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd8162>LightSalmon3</TD>
+                <TD width="10%">205 129 98</TD></TR>
+              <TR>
+                <TD bgColor=#00ced1>DarkTurquoise</TD>
+                <TD>0 206 209</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00688b>DeepSkyBlue4</TD>
+                <TD>0 104 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b5742>LightSalmon4</TD>
+                <TD width="10%">139 87 66</TD></TR>
+              <TR>
+                <TD bgColor=#48d1cc>MediumTurquoise</TD>
+                <TD>72 209 204</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#87ceff>SkyBlue1</TD>
+                <TD>135 206 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffa500>Orange1</TD>
+                <TD width="10%">255 165 0</TD></TR>
+              <TR>
+                <TD bgColor=#40e0d0>Turquoise</TD>
+                <TD>64 224 208</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#7ec0ee>SkyBlue2</TD>
+                <TD>126 192 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee0000>Orange2</TD>
+                <TD width="10%">238 154 0</TD></TR>
+              <TR>
+                <TD bgColor=#00ffff>Cyan</TD>
+                <TD>0 255 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#6ca6cd>SkyBlue3</TD>
+                <TD>108 166 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd8500>Orange3</TD>
+                <TD width="10%">205 133 0</TD></TR>
+              <TR>
+                <TD bgColor=#e0ffff>LightCyan</TD>
+                <TD>224 255 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00708b>SkyBlue4</TD>
+                <TD>74 112 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b0000>Orange4</TD>
+                <TD width="10%">139 90 0</TD></TR>
+              <TR>
+                <TD bgColor=#5f9ea0>CadetBlue</TD>
+                <TD>95 158 160</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#b0e2ff>LightSkyBlue1</TD>
+                <TD>176 226 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff7f00>DarkOrange1</TD>
+                <TD width="10%">255 127 0</TD></TR>
+              <TR>
+                <TD bgColor=#66cdaa>MediumAquamarine</TD>
+                <TD>102 205 170</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#a4d3ee>LightSkyBlue2</TD>
+                <TD>164 211 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee7600>DarkOrange2</TD>
+                <TD width="10%">238 118 0</TD></TR>
+              <TR>
+                <TD bgColor=#7fffd4>Aquamarine</TD>
+                <TD>127 255 212</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8db6cd>LightSkyBlue3</TD>
+                <TD>141 182 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd6600>DarkOrange3</TD>
+                <TD width="10%">205 102 0</TD></TR>
+              <TR>
+                <TD bgColor=#006400>DarkGreen</TD>
+                <TD>0 100 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#607b8b>LightSkyBlue4</TD>
+                <TD>96 123 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b4500>DarkOrange4</TD>
+                <TD width="10%">139 69 0</TD></TR>
+              <TR>
+                <TD bgColor=#556b2f>DarkOliveGreen</TD>
+                <TD>85 107 47</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#c6e2ff>SlateGray1</TD>
+                <TD>198 226 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff7256>Coral1</TD>
+                <TD width="10%">255 114 86</TD></TR>
+              <TR>
+                <TD bgColor=#8fbc8f>DarkSeaGreen</TD>
+                <TD>143 188 143</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#b9d3ee>SlateGray2</TD>
+                <TD>185 211 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee0050>Coral2</TD>
+                <TD width="10%">238 106 80</TD></TR>
+              <TR>
+                <TD bgColor=#2e8b57>SeaGreen</TD>
+                <TD>46 139 87</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#9fb6cd>SlateGray3</TD>
+                <TD>159 182 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd5b45>Coral3</TD>
+                <TD width="10%">205 91 69</TD></TR>
+              <TR>
+                <TD bgColor=#3cb371>MediumSeaGreen</TD>
+                <TD>60 179 113</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#6c7b8b>SlateGray4</TD>
+                <TD>108 123 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b3e2f>Coral4</TD>
+                <TD width="10%">139 62 47</TD></TR>
+              <TR>
+                <TD bgColor=#20b2aa>LightSeaGreen</TD>
+                <TD>32 178 170</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cae1ff>LightSteelBlue1</TD>
+                <TD>202 225 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff6347>Tomato1</TD>
+                <TD width="10%">255 99 71</TD></TR>
+              <TR>
+                <TD bgColor=#98fb98>PaleGreen</TD>
+                <TD>152 251 152</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#bcd2ee>LightSteelBlue2</TD>
+                <TD>188 210 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee5c42>Tomato2</TD>
+                <TD width="10%">238 92 66</TD></TR>
+              <TR>
+                <TD bgColor=#00ff7f>SpringGreen</TD>
+                <TD>0 255 127</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#a2b5cd>LightSteelBlue3</TD>
+                <TD>162 181 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd4f39>Tomato3</TD>
+                <TD width="10%">205 79 57</TD></TR>
+              <TR>
+                <TD bgColor=#7cfc00>LawnGreen</TD>
+                <TD>124 252 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#6e7b8b>LightSteelBlue4</TD>
+                <TD>110 123 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b3626>Tomato4</TD>
+                <TD width="10%">139 54 38</TD></TR>
+              <TR>
+                <TD bgColor=#00ff00>Green</TD>
+                <TD>0 255 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#bfefff>LightBlue1</TD>
+                <TD>191 239 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff4500>OrangeRed1</TD>
+                <TD width="10%">255 69 0</TD></TR>
+              <TR>
+                <TD bgColor=#7fff00>Chartreuse</TD>
+                <TD>127 255 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#b2dfee>LightBlue2</TD>
+                <TD>178 223 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee4000>OrangeRed2</TD>
+                <TD width="10%">238 64 0</TD></TR>
+              <TR>
+                <TD bgColor=#00fa00>MediumSpringGreen</TD>
+                <TD>0 250 154</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00c0cd>LightBlue3</TD>
+                <TD>154 192 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd3700>OrangeRed3</TD>
+                <TD width="10%">205 55 0</TD></TR>
+              <TR>
+                <TD bgColor=#adff2f>GreenYellow</TD>
+                <TD>173 255 47</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#68838b>LightBlue4</TD>
+                <TD>104 131 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b2500>OrangeRed4</TD>
+                <TD width="10%">139 37 0</TD></TR>
+              <TR>
+                <TD bgColor=#32cd32>LimeGreen</TD>
+                <TD>50 205 50</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#e0ffff>LightCyan1</TD>
+                <TD>224 255 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff0000>Red1</TD>
+                <TD width="10%">255 0 0</TD></TR>
+              <TR>
+                <TD bgColor=#00cd32>YellowGreen</TD>
+                <TD>154 205 50</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#d1eeee>LightCyan2</TD>
+                <TD>209 238 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee0000>Red2</TD>
+                <TD width="10%">238 0 0</TD></TR>
+              <TR>
+                <TD bgColor=#228b22>ForestGreen</TD>
+                <TD>34 139 34</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#b4cdcd>LightCyan3</TD>
+                <TD>180 205 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd0000>Red3</TD>
+                <TD width="10%">205 0 0</TD></TR>
+              <TR>
+                <TD bgColor=#6b8e23>OliveDrab</TD>
+                <TD>107 142 35</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#008b8b>LightCyan4</TD>
+                <TD>122 139 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b0000>Red4</TD>
+                <TD width="10%">139 0 0</TD></TR>
+              <TR>
+                <TD bgColor=#bdb76b>DarkKhaki</TD>
+                <TD>189 183 107</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#bbffff>PaleTurquoise1</TD>
+                <TD>187 255 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff1493>DeepPink1</TD>
+                <TD width="10%">255 20 147</TD></TR>
+              <TR>
+                <TD bgColor=#f0e68c>Khaki</TD>
+                <TD>240 230 140</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#aeeeee>PaleTurquoise2</TD>
+                <TD>174 238 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee1289>DeepPink2</TD>
+                <TD width="10%">238 18 137</TD></TR>
+              <TR>
+                <TD bgColor=#eee8aa>PaleGoldenrod</TD>
+                <TD>238 232 170</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#96cdcd>PaleTurquoise3</TD>
+                <TD>150 205 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd1076>DeepPink3</TD>
+                <TD width="10%">205 16 118</TD></TR>
+              <TR>
+                <TD bgColor=#fafad2>LightGoldenrodYellow</TD>
+                <TD>250 250 210</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#668b8b>PaleTurquoise4</TD>
+                <TD>102 139 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8ba50>DeepPink4</TD>
+                <TD width="10%">139 10 80</TD></TR>
+              <TR>
+                <TD bgColor=#ffffe0>LightYellow</TD>
+                <TD>255 255 224</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#98f5ff>CadetBlue1</TD>
+                <TD>152 245 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff6eb4>HotPink1</TD>
+                <TD width="10%">255 110 180</TD></TR>
+              <TR>
+                <TD bgColor=#ffff00>Yellow</TD>
+                <TD>255 255 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8ee5ee>CadetBlue2</TD>
+                <TD>142 229 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee00a7>HotPink2</TD>
+                <TD width="10%">238 106 167</TD></TR>
+              <TR>
+                <TD bgColor=#ffd700>Gold</TD>
+                <TD>255 215 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00c5cd>CadetBlue3</TD>
+                <TD>122 197 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd6090>HotPink3</TD>
+                <TD width="10%">205 96 144</TD></TR>
+              <TR>
+                <TD bgColor=#eedd82>LightGoldenrod</TD>
+                <TD>238 221 130</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#53868b>CadetBlue4</TD>
+                <TD>83 134 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b0062>HotPink4</TD>
+                <TD width="10%">139 58 98</TD></TR>
+              <TR>
+                <TD bgColor=#daa520>goldenrod</TD>
+                <TD>218 165 32</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00f5ff>Turquoise1</TD>
+                <TD>0 245 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffb5c5>Pink1</TD>
+                <TD width="10%">255 181 197</TD></TR>
+              <TR>
+                <TD bgColor=#b886b>DarkGoldenrod</TD>
+                <TD>184 134 11</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00e5ee>Turquoise2</TD>
+                <TD>0 229 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eea9b8>Pink2</TD>
+                <TD width="10%">238 169 184</TD></TR>
+              <TR>
+                <TD bgColor=#bc8f8f>RosyBrown</TD>
+                <TD>188 143 143</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00c5cd>Turquoise3</TD>
+                <TD>0 197 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd919e>Pink3</TD>
+                <TD width="10%">205 145 158</TD></TR>
+              <TR>
+                <TD bgColor=#cd5c5c>IndianRed</TD>
+                <TD>205 92 92</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00868b>Turquoise4</TD>
+                <TD>0 134 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b636c>Pink4</TD>
+                <TD width="10%">139 99 108</TD></TR>
+              <TR>
+                <TD bgColor=#8b4513>SaddleBrown</TD>
+                <TD>139 69 19</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00ffff>Cyan1</TD>
+                <TD>0 255 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffaeb9>LightPink1</TD>
+                <TD width="10%">255 174 185</TD></TR>
+              <TR>
+                <TD bgColor=#a0522d>Sienna</TD>
+                <TD>160 82 45</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00eeee>Cyan2</TD>
+                <TD>0 238 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eea2ad>LightPink2</TD>
+                <TD width="10%">238 162 173</TD></TR>
+              <TR>
+                <TD bgColor=#cd853f>Peru</TD>
+                <TD>205 133 63</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00cdcd>Cyan3</TD>
+                <TD>0 205 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd8c95>LightPink3</TD>
+                <TD width="10%">205 140 149</TD></TR>
+              <TR>
+                <TD bgColor=#deb887>Burlywood</TD>
+                <TD>222 184 135</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#008b8b>Cyan4</TD>
+                <TD>0 139 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b5f65>LightPink4</TD>
+                <TD width="10%">139 95 101</TD></TR>
+              <TR>
+                <TD bgColor=#f5f5dc>Beige</TD>
+                <TD>245 245 220</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#97ffff>DarkSlateGray1</TD>
+                <TD>151 255 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff82ab>PaleVioletRed1</TD>
+                <TD width="10%">255 130 171</TD></TR>
+              <TR>
+                <TD bgColor=#f5deb3>Wheat</TD>
+                <TD>245 222 179</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8deeee>DarkSlateGray2</TD>
+                <TD>141 238 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee799f>PaleVioletRed2</TD>
+                <TD width="10%">238 121 159</TD></TR>
+              <TR>
+                <TD bgColor=#f4a460>SandyBrown</TD>
+                <TD>244 164 96</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#79cdcd>DarkSlateGray3</TD>
+                <TD>121 205 205</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd6889>PaleVioletRed3</TD>
+                <TD width="10%">205 104 137</TD></TR>
+              <TR>
+                <TD bgColor=#d2b48c>Tan</TD>
+                <TD>210 180 140</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#528b8b>DarkSlateGray4</TD>
+                <TD>82 139 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b475d>PaleVioletRed4</TD>
+                <TD width="10%">139 71 93</TD></TR>
+              <TR>
+                <TD bgColor=#d2691e>Chocolate</TD>
+                <TD>210 105 30</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#7fffd4>Aquamarine1</TD>
+                <TD>127 255 212</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff34b3>Maroon1</TD>
+                <TD width="10%">255 52 179</TD></TR>
+              <TR>
+                <TD bgColor=#b22222>Firebrick</TD>
+                <TD>178 34 34</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#76eec6>Aquamarine2</TD>
+                <TD>118 238 198</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee30a7>Maroon2</TD>
+                <TD width="10%">238 48 167</TD></TR>
+              <TR>
+                <TD bgColor=#a50000>Brown</TD>
+                <TD>165 42 42</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#66cdaa>Aquamarine3</TD>
+                <TD>102 205 170</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd2990>Maroon3</TD>
+                <TD width="10%">205 41 144</TD></TR>
+              <TR>
+                <TD bgColor=#e99600>DarkSalmon</TD>
+                <TD>233 150 122</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#458b74>Aquamarine4</TD>
+                <TD>69 139 116</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b1c62>Maroon4</TD>
+                <TD width="10%">139 28 98</TD></TR>
+              <TR>
+                <TD bgColor=#fa8072>Salmon</TD>
+                <TD>250 128 114</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#c1ffc1>DarkSeaGreen1</TD>
+                <TD>193 255 193</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff3e96>VioletRed1</TD>
+                <TD width="10%">255 62 150</TD></TR>
+              <TR>
+                <TD bgColor=#ffa000>LightSalmon</TD>
+                <TD>255 160 122</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#b4eeb4>DarkSeaGreen2</TD>
+                <TD>180 238 180</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee008c>VioletRed2</TD>
+                <TD width="10%">238 58 140</TD></TR>
+              <TR>
+                <TD bgColor=#ffa500>Orange</TD>
+                <TD>255 165 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#9bcd9b>DarkSeaGreen3</TD>
+                <TD>155 205 155</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd3278>VioletRed3</TD>
+                <TD width="10%">205 50 120</TD></TR>
+              <TR>
+                <TD bgColor=#ff8c00>DarkOrange</TD>
+                <TD>255 140 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#698b69>DarkSeaGreen4</TD>
+                <TD>105 139 105</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b2252>VioletRed4</TD>
+                <TD width="10%">139 34 82</TD></TR>
+              <TR>
+                <TD bgColor=#ff7f50>Coral</TD>
+                <TD>255 127 80</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#54ff9f>SeaGreen1</TD>
+                <TD>84 255 159</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff00ff>Magenta1</TD>
+                <TD width="10%">255 0 255</TD></TR>
+              <TR>
+                <TD bgColor=#f08080>LightCoral</TD>
+                <TD>240 128 128</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#4eee94>SeaGreen2</TD>
+                <TD>78 238 148</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee00ee>Magenta2</TD>
+                <TD width="10%">238 0 238</TD></TR>
+              <TR>
+                <TD bgColor=#ff6347>Tomato</TD>
+                <TD>255 99 71</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#43cd80>SeaGreen3</TD>
+                <TD>67 205 128</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd00cd>Magenta3</TD>
+                <TD width="10%">205 0 205</TD></TR>
+              <TR>
+                <TD bgColor=#ff4500>OrangeRed</TD>
+                <TD>255 69 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#2e8b57>SeaGreen4</TD>
+                <TD>46 139 87</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b008b>Magenta4</TD>
+                <TD width="10%">139 0 139</TD></TR>
+              <TR>
+                <TD bgColor=#ff0000>Red</TD>
+                <TD>255 0 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00ff00>PaleGreen1</TD>
+                <TD>154 255 154</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ff83fa>Orchid1</TD>
+                <TD width="10%">255 131 250</TD></TR>
+              <TR>
+                <TD bgColor=#ff69b4>HotPink</TD>
+                <TD>255 105 180</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#90ee90>PaleGreen2</TD>
+                <TD>144 238 144</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ee00e9>Orchid2</TD>
+                <TD width="10%">238 122 233</TD></TR>
+              <TR>
+                <TD bgColor=#ff1493>DeepPink</TD>
+                <TD>255 20 147</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#7ccd7c>PaleGreen3</TD>
+                <TD>124 205 124</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd69c9>Orchid3</TD>
+                <TD width="10%">205 105 201</TD></TR>
+              <TR>
+                <TD bgColor=#ffc0cb>Pink</TD>
+                <TD>255 192 203</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#548b54>PaleGreen4</TD>
+                <TD>84 139 84</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b4789>Orchid4</TD>
+                <TD width="10%">139 71 137</TD></TR>
+              <TR>
+                <TD bgColor=#ffb6c1>LightPink</TD>
+                <TD>255 182 193</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00ff7f>SpringGreen1</TD>
+                <TD>0 255 127</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffbbff>Plum1</TD>
+                <TD width="10%">255 187 255</TD></TR>
+              <TR>
+                <TD bgColor=#db7093>PaleVioletRed</TD>
+                <TD>219 112 147</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00ee76>SpringGreen2</TD>
+                <TD>0 238 118</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eeaeee>Plum2</TD>
+                <TD width="10%">238 174 238</TD></TR>
+              <TR>
+                <TD bgColor=#b03060>Maroon</TD>
+                <TD>176 48 96</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00cd66>SpringGreen3</TD>
+                <TD>0 205 102</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cd96cd>Plum3</TD>
+                <TD width="10%">205 150 205</TD></TR>
+              <TR>
+                <TD bgColor=#c71585>MediumVioletRed</TD>
+                <TD>199 21 133</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#008b45>SpringGreen4</TD>
+                <TD>0 139 69</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b668b>Plum4</TD>
+                <TD width="10%">139 102 139</TD></TR>
+              <TR>
+                <TD bgColor=#d02090>VioletRed</TD>
+                <TD>208 32 144</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00ff00>Green1</TD>
+                <TD>0 255 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#e066ff>MediumOrchid1</TD>
+                <TD width="10%">224 102 255</TD></TR>
+              <TR>
+                <TD bgColor=#ff00ff>Magenta</TD>
+                <TD>255 0 255</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00ee00>Green2</TD>
+                <TD>0 238 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#d15fee>MediumOrchid2</TD>
+                <TD width="10%">209 95 238</TD></TR>
+              <TR>
+                <TD bgColor=#ee82ee>Violet</TD>
+                <TD>238 130 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00cd00>Green3</TD>
+                <TD>0 205 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#b452cd>MediumOrchid3</TD>
+                <TD width="10%">180 82 205</TD></TR>
+              <TR>
+                <TD bgColor=#dda0dd>Plum</TD>
+                <TD>221 160 221</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#008b00>Green4</TD>
+                <TD>0 139 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00378b>MediumOrchid4</TD>
+                <TD width="10%">122 55 139</TD></TR>
+              <TR>
+                <TD bgColor=#da70d6>Orchid</TD>
+                <TD>218 112 214</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#7fff00>Chartreuse1</TD>
+                <TD>127 255 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#bf3eff>DarkOrchid1</TD>
+                <TD width="10%">191 62 255</TD></TR>
+              <TR>
+                <TD bgColor=#ba55d3>MediumOrchid</TD>
+                <TD>186 85 211</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#76ee00>Chartreuse2</TD>
+                <TD>118 238 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#b200ee>DarkOrchid2</TD>
+                <TD width="10%">178 58 238</TD></TR>
+              <TR>
+                <TD bgColor=#9932cc>DarkOrchid</TD>
+                <TD>153 50 204</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#66cd00>Chartreuse3</TD>
+                <TD>102 205 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#0032cd>DarkOrchid3</TD>
+                <TD width="10%">154 50 205</TD></TR>
+              <TR>
+                <TD bgColor=#9400d3>DarkViolet</TD>
+                <TD>148 0 211</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#458b00>Chartreuse4</TD>
+                <TD>69 139 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#68228b>DarkOrchid4</TD>
+                <TD width="10%">104 34 139</TD></TR>
+              <TR>
+                <TD bgColor=#002be2>BlueViolet</TD>
+                <TD>138 43 226</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#c0ff3e>OliveDrab1</TD>
+                <TD>192 255 62</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#9b30ff>Purple1</TD>
+                <TD width="10%">155 48 255</TD></TR>
+              <TR>
+                <TD bgColor=#a020f0>Purple</TD>
+                <TD>160 32 240</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#b3ee00>OliveDrab2</TD>
+                <TD>179 238 58</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#912cee>Purple2</TD>
+                <TD width="10%">145 44 238</TD></TR>
+              <TR>
+                <TD bgColor=#9370db>MediumPurple</TD>
+                <TD>147 112 219</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00cd32>OliveDrab3</TD>
+                <TD>154 205 50</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#7d26cd>Purple3</TD>
+                <TD width="10%">125 38 205</TD></TR>
+              <TR>
+                <TD bgColor=#d8bfd8>Thistle</TD>
+                <TD>216 191 216</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#698b22>OliveDrab4</TD>
+                <TD>105 139 34</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#55008b>Purple4</TD>
+                <TD width="10%">85 26 139</TD></TR>
+              <TR>
+                <TD bgColor=#fffafa>Snow1</TD>
+                <TD>255 250 250</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#caff70>DarkOliveGreen1</TD>
+                <TD>202 255 112</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ab82ff>MediumPurple1</TD>
+                <TD width="10%">171 130 255</TD></TR>
+              <TR>
+                <TD bgColor=#eee9e9>Snow2</TD>
+                <TD>238 233 233</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#bcee68>DarkOliveGreen2</TD>
+                <TD>188 238 104</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#9f79ee>MediumPurple2</TD>
+                <TD width="10%">159 121 238</TD></TR>
+              <TR>
+                <TD bgColor=#cdc9c9>Snow3</TD>
+                <TD>205 201 201</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#a2cd00>DarkOliveGreen3</TD>
+                <TD>162 205 90</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8968cd>MediumPurple3</TD>
+                <TD width="10%">137 104 205</TD></TR>
+              <TR>
+                <TD bgColor=#8b8989>Snow4</TD>
+                <TD>139 137 137</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#6e8b3d>DarkOliveGreen4</TD>
+                <TD>110 139 61</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#5d478b>MediumPurple4</TD>
+                <TD width="10%">93 71 139</TD></TR>
+              <TR>
+                <TD bgColor=#fff5ee>Seashell1</TD>
+                <TD>255 245 238</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#fff68f>Khaki1</TD>
+                <TD>255 246 143</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffe1ff>Thistle1</TD>
+                <TD width="10%">255 225 255</TD></TR>
+              <TR>
+                <TD bgColor=#eee5de>Seashell2</TD>
+                <TD>238 229 222</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eee685>Khaki2</TD>
+                <TD>238 230 133</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eed2ee>Thistle2</TD>
+                <TD width="10%">238 210 238</TD></TR>
+              <TR>
+                <TD bgColor=#cdc5bf>Seashell3</TD>
+                <TD>205 197 191</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdc673>Khaki3</TD>
+                <TD>205 198 115</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdb5cd>Thistle3</TD>
+                <TD width="10%">205 181 205</TD></TR>
+              <TR>
+                <TD bgColor=#8b8682>Seashell4</TD>
+                <TD>139 134 130</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b864e>Khaki4</TD>
+                <TD>139 134 78</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b7b8b>Thistle4</TD>
+                <TD width="10%">139 123 139</TD></TR>
+              <TR>
+                <TD bgColor=#ffefdb>AntiqueWhite1</TD>
+                <TD>255 239 219</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffec8b>LightGoldenrod1</TD>
+                <TD>255 236 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#1c1c1c>grey11</TD>
+                <TD width="10%">28 28 28</TD></TR>
+              <TR>
+                <TD bgColor=#eedfcc>AntiqueWhite2</TD>
+                <TD>238 223 204</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eedc82>LightGoldenrod2</TD>
+                <TD>238 220 130</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#363636>grey21</TD>
+                <TD width="10%">54 54 54</TD></TR>
+              <TR>
+                <TD bgColor=#cdc0b0>AntiqueWhite3</TD>
+                <TD>205 192 176</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdbe70>LightGoldenrod3</TD>
+                <TD>205 190 112</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#4f4f4f>grey31</TD>
+                <TD width="10%">79 79 79</TD></TR>
+              <TR>
+                <TD bgColor=#8b8378>AntiqueWhite4</TD>
+                <TD>139 131 120</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b814c>LightGoldenrod4</TD>
+                <TD>139 129 76</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#696969>grey41</TD>
+                <TD width="10%">105 105 105</TD></TR>
+              <TR>
+                <TD bgColor=#ffe4c4>Bisque1</TD>
+                <TD>255 228 196</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffffe0>LightYellow1</TD>
+                <TD>255 255 224</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#828282>grey51</TD>
+                <TD width="10%">130 130 130</TD></TR>
+              <TR>
+                <TD bgColor=#eed5b7>Bisque2</TD>
+                <TD>238 213 183</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eeeed1>LightYellow2</TD>
+                <TD>238 238 209</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#9c9c9c>grey61</TD>
+                <TD width="10%">156 156 156</TD></TR>
+              <TR>
+                <TD bgColor=#cdb79e>Bisque3</TD>
+                <TD>205 183 158</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdcdb4>LightYellow3</TD>
+                <TD>205 205 180</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#b5b5b5>grey71</TD>
+                <TD width="10%">181 181 181</TD></TR>
+              <TR>
+                <TD bgColor=#8b7d6b>Bisque4</TD>
+                <TD>139 125 107</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b8b00>LightYellow4</TD>
+                <TD>139 139 122</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cfcfcf>gray81</TD>
+                <TD width="10%">207 207 207</TD></TR>
+              <TR>
+                <TD bgColor=#ffdab9>PeachPuff1</TD>
+                <TD>255 218 185</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffff00>Yellow1</TD>
+                <TD>255 255 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#e8e8e8>gray91</TD>
+                <TD width="10%">232 232 232</TD></TR>
+              <TR>
+                <TD bgColor=#eecbad>PeachPuff2</TD>
+                <TD>238 203 173</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eeee00>Yellow2</TD>
+                <TD>238 238 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#a9a9a9>DarkGrey</TD>
+                <TD width="10%">169 169 169</TD></TR>
+              <TR>
+                <TD bgColor=#cdaf95>PeachPuff3</TD>
+                <TD>205 175 149</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdcd00>Yellow3</TD>
+                <TD>205 205 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#00008b>DarkBlue</TD>
+                <TD width="10%">0 0 139</TD></TR>
+              <TR>
+                <TD bgColor=#8b7765>PeachPuff4</TD>
+                <TD>139 119 101</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b8b00>Yellow4</TD>
+                <TD>139 139 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#008b8b>DarkCyan</TD>
+                <TD width="10%">0 139 139</TD></TR>
+              <TR>
+                <TD bgColor=#ffdead>NavajoWhite1</TD>
+                <TD>255 222 173</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#ffd700>Gold1</TD>
+                <TD>255 215 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b008b>DarkMagenta</TD>
+                <TD width="10%">139 0 139</TD></TR>
+              <TR>
+                <TD bgColor=#eecfa1>NavajoWhite2</TD>
+                <TD>238 207 161</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#eec900>Gold2</TD>
+                <TD>238 201 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#8b0000>DarkRed</TD>
+                <TD width="10%">139 0 0</TD></TR>
+              <TR>
+                <TD bgColor=#cdb38b>NavajoWhite3</TD>
+                <TD>205 179 139</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#cdad00>Gold3</TD>
+                <TD>205 173 0</TD>
+                <TD>&nbsp;</TD>
+                <TD bgColor=#90ee90>LightGreen</TD>
+                <TD width="10%">144 238 144</TD></TR></TBODY></TABLE><BR>
+            <HR>
+            Caro leitor, chegamos ao fim do entendimento da função 
+            makecol.<BR>Se você encontrou alguma dificuldade no entendimento 
+            desse artigo favor entrar em contato pelo forum.<BR><BR>Abraço - 
+            BDJogos<BR><BR>
+            <HR>
+            <BR><SPAN class=conteudo><B>Contribuidor</B> <BR>Bruno A. 
+            Rovela<BR>19/06/2007 </SPAN>
+            <P class=conteudo><A class=conteudo 
+            href="javascript:history.go(-1)">Voltar </A></P></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background="paleta de cores_arquivos/111.jpg"><IMG 
+      height=1 src="paleta de cores_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background="paleta de cores_arquivos/111.jpg" colSpan=2 
+    height=1><IMG height=1 src="paleta de cores_arquivos/111.jpg" 
+  width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

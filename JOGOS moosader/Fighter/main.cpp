@@ -1,0 +1,180 @@
+#include <iostream>
+#include <allegro.h>
+#include "PlayerClass.h"
+#include "Global.h"
+using namespace std;
+
+#define LEFT       4
+#define RIGHT     6
+#define UP           8
+#define DOWN     2
+
+volatile long speed_counter = 0;
+
+void increment_speed_counter();
+void init_crap(bool);
+bool isCollision(const PlayerClass*, const PlayerClass*);
+
+int main(int argc, char *argv[])
+{
+    cout<<"\"Kogeki\" gameplay test\nRachel J. Morris, April 2008"<<endl;
+    bool fullscreen = false;
+    bool done = false;
+    init_crap(fullscreen);
+    PlayerClass player[2];
+    //int tx, int ty, int tw, int th, int tact, int tcode
+    player[0].setup(0, 440, 128, 128, 0, 0);
+    player[1].setup(800-128, 440, 128, 128, 0, 1);
+    BITMAP *buffer = create_bitmap(SCR_W,SCR_H);
+    BITMAP *background = load_bitmap("background.bmp", NULL);
+    BITMAP *sprites = load_bitmap("sprites.bmp", NULL);
+    int win = -1;
+
+    while (!done)
+    {
+        while (speed_counter > 0)
+        {
+            if (key[KEY_F5])
+            {
+                if ( fullscreen ) { set_gfx_mode(GFX_AUTODETECT_WINDOWED, SCR_W, SCR_H, 0, 0); fullscreen = false; }
+                else { set_gfx_mode(GFX_AUTODETECT, SCR_W, SCR_H, 0, 0); fullscreen = true; }
+            }
+            if (key[KEY_F4] && key[KEY_ESC])
+            {
+                done = true;
+            }
+            //movement - player 1
+            if ( key[KEY_A] )
+            {
+                player[0].move(LEFT);
+            }
+            else if ( key[KEY_D] )
+            {
+                player[0].move(RIGHT);
+            }
+            if ( !key[KEY_A] && !key[KEY_D] )
+            {
+                player[0].noMove();
+            }
+            if ( key[KEY_F] )
+            {
+                player[0].attack();
+            }
+            if ( key[KEY_SPACE] )
+            {
+                player[0].jump();
+            }
+            //movement - player 2
+            if ( key[KEY_LEFT] )
+            {
+                player[1].move(LEFT);
+            }
+            else if ( key[KEY_RIGHT] )
+            {
+                player[1].move(RIGHT);
+            }
+            if ( !key[KEY_LEFT] && !key[KEY_RIGHT] )
+            {
+                player[1].noMove();
+            }
+            if ( key[KEY_RCONTROL] )
+            {
+                player[1].attack();
+            }
+            if ( key[KEY_RSHIFT] )
+            {
+                player[1].jump();
+            }
+
+            if (isCollision(&player[0], &player[1]))
+            {
+                if ( player[0].isAttacking && player[1].invincible == false )
+                {
+                    player[1].hit();
+                }
+                if ( player[1].isAttacking && player[0].invincible == false )
+                {
+                    player[0].hit();
+                }
+                if ( player[0].HP == 0 )
+                    win = 1;
+                else if ( player[1].HP == 0 )
+                    win = 0;
+            }
+
+            player[0].update();
+            player[1].update();
+            speed_counter--;
+        }//while (speed_counter > 0)
+
+        text_mode(-1);
+        vsync();
+        acquire_screen();
+        if ( win == -1 )
+        {
+            stretch_sprite(buffer, background, 0, 0, SCR_W, SCR_H);
+            //draw_sprite(buffer, background, 0, 0);
+            textprintf(buffer,font,0-1,30-1,makecol(0, 0, 0), "Player 1 - WASD to move     Space to jump     F to attack");
+            textprintf(buffer,font,0+1,30-1,makecol(0, 0, 0), "Player 1 - WASD to move     Space to jump     F to attack");
+            textprintf(buffer,font,0+1,30+1,makecol(0, 0, 0), "Player 1 - WASD to move     Space to jump     F to attack");
+            textprintf(buffer,font,0-1,30+1,makecol(0, 0, 0), "Player 1 - WASD to move     Space to jump     F to attack");
+            textprintf(buffer,font,0-1,40-1,makecol(0, 0, 0), "Player 2 - Arrow keys to move     Shift to jump     Ctrl to attack");
+            textprintf(buffer,font,0+1,40-1,makecol(0, 0, 0), "Player 2 - Arrow keys to move     Shift to jump     Ctrl to attack");
+            textprintf(buffer,font,0-1,40+1,makecol(0, 0, 0), "Player 2 - Arrow keys to move     Shift to jump     Ctrl to attack");
+            textprintf(buffer,font,0+1,40+1,makecol(0, 0, 0), "Player 2 - Arrow keys to move     Shift to jump     Ctrl to attack");
+            textprintf(buffer,font,0,30,makecol(255,50,200), "Player 1 - WASD to move     Space to jump     F to attack");
+            textprintf(buffer,font,0,40,makecol(150,150,255), "Player 2 - Arrow keys to move     Shift to jump     Ctrl to attack");
+            textout_centre(buffer, font, "Kogeki! ~ Demo", 400, 0, makecol(255,255,255));
+            textout_centre(buffer, font, "Rachel J. Morris", 400, 10, makecol(255,255,255));
+
+            textprintf(buffer, font, player[0].x+30, player[0].y - 10, makecol(0, 0, 0), "HP: %i", player[0].HP);
+            textprintf(buffer, font, player[1].x+30, player[1].y - 10, makecol(0, 0, 0), "HP: %i", player[1].HP);
+            player[0].draw(buffer, sprites);
+            player[1].draw(buffer, sprites);
+        }
+        else if ( win == 0 )
+        {
+            textout_centre(buffer, font, "P l a y e r  0  w i n s ", SCR_W/2, SCR_H/2, makecol(255,100,100));
+        }
+        else if ( win == 1 )
+        {
+            textout_centre(buffer, font, "P l a y e r  1  w i n s ", SCR_W/2, SCR_H/2, makecol(100,100,255));
+        }
+        blit(buffer, screen, 0, 0, 0, 0, SCR_W, SCR_H);
+        clear_bitmap(buffer);
+        release_screen();
+    }//while (!key[KEY_ESC])
+
+    return 0;
+}
+END_OF_MAIN();
+
+void init_crap(bool fullscreen)
+{
+    allegro_init();
+    install_keyboard();
+    install_timer();
+    install_mouse();
+    install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, 0);
+    install_joystick(JOY_TYPE_AUTODETECT);
+    LOCK_VARIABLE(speed_counter);
+    LOCK_FUNCTION(increment_speed_counter);
+    install_int_ex(increment_speed_counter,BPS_TO_TIMER(90));
+    set_color_depth(16);
+    if ( fullscreen ) { set_gfx_mode(GFX_AUTODETECT, SCR_W, SCR_H, 0, 0); }
+    else { set_gfx_mode(GFX_AUTODETECT_WINDOWED, SCR_W, SCR_H, 0, 0); }
+}
+
+void increment_speed_counter()
+{
+    speed_counter++;
+}
+
+bool isCollision( const PlayerClass *player1, const PlayerClass *player2 )
+{
+    if ( (player1->x + player1->w > player2->x && player1->x < player2->x + player2->w) &&
+            (player1->y + player1->h > player2->y && player1->y < player2->y + player2->h))
+        return true;
+
+    return false;
+}

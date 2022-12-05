@@ -1,0 +1,785 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0063)http://pjmoo.codigolivre.org.br/gdj/pag_artigo_leitura.php?id=4 -->
+<HTML><HEAD><TITLE>GDJ :: Artigos :: API :: Allegro :: Guia básico de Allegro 3.12 para DJGPP</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META 
+content="Site voltado para o Desenvolvimento de Jogos com material para criação e desenvolvimento de games para Computador" 
+name=description>
+<META content="Artigos :: API :: Allegro Guia básico de Allegro 3.12 para DJGPP" 
+name=keywords><LINK 
+href="GDJ  Artigos  API  Allegro  Guia básico de Allegro 3_12 para DJGPP_arquivos/artigo_estilo.css" 
+rel=stylesheet><LINK href="favicon.ico" rel="shortcut icon">
+<SCRIPT language=JavaScript 
+src="GDJ  Artigos  API  Allegro  Guia básico de Allegro 3_12 para DJGPP_arquivos/site.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2853" name=GENERATOR></HEAD>
+<BODY>
+<TABLE height="100%" cellSpacing=1 cellPadding=8 width=760 align=center 
+bgColor=#a0a0b0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=site_area vAlign=top height="100%">
+      <TABLE height="100%" cellSpacing=0 cellPadding=1 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=middle width="100%" HEIGTH="260">
+            <TABLE width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=252><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/index.php"><IMG 
+                  src="GDJ  Artigos  API  Allegro  Guia básico de Allegro 3_12 para DJGPP_arquivos/logo.gif" 
+                  width=252 border=0></A></TD>
+                <TD align=middle width="100%"><B>[</B><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_categoria.php?id=2">Artigos</A><B>] 
+                  [</B><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/sobre.php">Sobre</A><B>]</B></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD align=middle width="100%" height=20><A 
+            href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_lista.php?id=25"><B>
+            <DIV class=categoria_artigo>Artigos :: API :: 
+          Allegro</DIV></B></A></TD></TR>
+        <TR>
+          <TD vAlign=top width="100%" height="100%"><!-- AREA DE TEXTO - INICIO -->
+            <TABLE width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top align=middle>
+                  <H1>Guia básico de Allegro 3.12 para DJGPP</H1><SUP>Autor : <A 
+                  href="mailto:superely@inespecifico.com">SuperEly</A>&nbsp;&nbsp;</SUP> 
+                </TD></TR>
+              <TR>
+                <TD vAlign=top align=JUSTIFY width="100%">
+                  <DIV align=left>
+                  <P align=center> 
+                  <P align=center><STRONG>"A game programming library"</STRONG> 
+                  <P>Allegro é sem dúvida a melhor biblioteca para programação 
+                  de games para DOS. Possui funções para manipulação de 
+                  gráficos, sons, animações, teclado, mouse, joystick, arquivos, 
+                  tec... Para os iniciantes em Allegro eu estou desenvolvendo 
+                  este guia, espero que seja útil. Este guia está divido em 
+                  partes: <STRONG><FONT color=#00008b><STRONG>Como iniciar 
+                  Allegro,Como utilizar Arquivos em Allegro,RLE sprites,Double 
+                  Buffer, Velocidade, Teclado, Mouse, 
+                  Sons.</STRONG></FONT></STRONG> 
+                  <P><STRONG></STRONG>
+                  <H2>Como iniciar Allegro</H2>
+                  <P><FONT color=#00008b><STRONG>Como iniciar 
+                  Allegro</STRONG></FONT> 
+                  <P>Allegro precisa ser iniciada para funcionar, e existem 
+                  várias configurações a serem feitas, neste parte eu ensinarei 
+                  a iniciar Allegro de modo rápido e eficiente, sem 
+                  complicações.<BR><BR>1) No cabeçalho de seu programa, avise o 
+                  compilador para usar Allegro com a seguinte linha:<BR><FONT 
+                  color=#008000>#include &lt;allegro.h&gt;</FONT><BR><BR>2) 
+                  Agora na função main de seu programa, você deve iniciar os 
+                  elementos de Allegro que deseja utilizar, são eles:<BR><FONT 
+                  color=#008000>allegro_init(); * Inicia a Allegro propriamente 
+                  dita.<BR>install_keyboard(); * Instala suporte ao 
+                  teclado.<BR>install_timer(); * Instala suporte ao 
+                  gerenciamento de tempo.<BR>install_mouse(); * Instala suporte 
+                  ao mouse.</FONT><BR><BR>3) Você deve agora configurar a 
+                  quantidade de cores que vai utilizar, faça da seguinte 
+                  forma:<BR><FONT color=#008000>set_color_depth(int 
+                  depth);</FONT><BR><BR>substitua int depth por uma dessas 
+                  quantidades de cores em bits:<BR>8, 15, 16, 24, ou 32 
+                  bits.<BR><BR>Se você quizer usar 8 bits, ou seja 256 cores, 
+                  que é a mais usada devido a velocidade, você nem precisa 
+                  configurar isso, não precisa chamar set_color_depth, já vem 
+                  por padrão.<BR><BR>Então para configurar a quantidade de cores 
+                  chame a função, por exemplo, assim:<BR><FONT 
+                  color=#008000>set_color_depth(16);</FONT><BR><BR>Isso 
+                  configura o vídeo para 16 bits, ou seja, milhares de 
+                  cores...<BR><BR>4) Agora você está pronto para configurar o 
+                  gráfico com a resolução de sua preferência, a função que faz 
+                  isso é a seguinte:<BR><FONT 
+                  color=#008000>set_gfx_mode(GFX_AUTODETECT, 640, 480, 0, 
+                  0);</FONT><BR><BR>* O parâmetro GFX_AUTODETECT detecta 
+                  automaticamente sua placa de vídeo, o que é ótimo.<BR>* Os 
+                  parâmentros 640 e 480, indicam a resolução horizontal e 
+                  vertical, as possibilidade para SVGA são: 640x480, 800x600, 
+                  1024x768, apesar de aceitar resolução menores, mas acho que 
+                  você não irá querer usar menos que isso hoje em dia.<BR><BR>A 
+                  função set_gfx_mode retorna 0 se tudo deu certo ou outra coisa 
+                  se houver erro, então faça assim:<BR><BR><FONT 
+                  color=#008000>if (set_gfx_mode(GFX_AUTODETECT, 640, 480, 0, 0) 
+                  !=0) {<BR>allegro_exit();<BR>printf("Erro configurando grafico 
+                  ");<BR>exit(1);<BR>}</FONT><BR><BR>5) Se você for usar sons em 
+                  seu programa/jogo, você deve fazer sua configuração, a função 
+                  que faz isso é:<BR><FONT 
+                  color=#008000>install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, 
+                  0);</FONT><BR><BR>Essa função retorna 0 se tudo deu certo, ou 
+                  outra coisa se não.<BR>Para configurar o som então faça 
+                  assim:<BR><BR><FONT color=#008000>if 
+                  (install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, 0) != 0) 
+                  {<BR>allegro_exit();<BR>printf("Erro inicializando sons 
+                  ");<BR>exit(1);<BR>} </FONT><BR><BR>6) Bom, as configurações 
+                  inicias foram feitas, viu como é simples? Então um programa em 
+                  Allegro poderia iniciar da seguinte forma:<BR><BR><FONT 
+                  color=#008000>#include &lt;string.h&gt;<BR>#include 
+                  &lt;stdlib.h&gt;<BR>#include &lt;stdio.h&gt;<BR>#include 
+                  "allegro.h"<BR><BR>int main(int argc, char 
+                  *argv[])<BR>{<BR><BR>/* Iniciando Elementos 
+                  */<BR>allegro_init();<BR>install_keyboard(); 
+                  <BR>install_timer();<BR>install_mouse();<BR><BR>/* Iniciando 
+                  Grafico */<BR>if (set_gfx_mode(GFX_AUTODETECT, 640, 480, 0, 0) 
+                  !=0) {<BR>allegro_exit();<BR>printf("Erro configurando grafico 
+                  ");<BR>exit(1);<BR>}<BR><BR>/* Iniciando Sons */<BR>if 
+                  (install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, 0) != 0) 
+                  {<BR>allegro_exit();<BR>printf("Erro inicializando sons 
+                  ");<BR>exit(1);<BR>} <BR><BR>play_game();<BR><BR>/* Finaliza 
+                  Allegro */<BR>allegro_exit();<BR>}<BR></FONT><BR>Neste exemplo 
+                  eu não configurei a quantidade de cores, então será usado o 
+                  padrão, 8 bits, ou seja, 256 cores.<BR>A função play_game() 
+                  não é da allegro, seria uma função qualquer para iniciar o 
+                  jogo.<BR></P>
+                  <H2>Como utilizar Arquivos em Allegro</H2>
+                  <P><FONT color=#00008b><STRONG>Como utilizar Arquivos em 
+                  Allegro</STRONG></FONT></P>
+                  <P>Você pode estar imaginando como utilizar seus arquivos de 
+                  imagens, sons, tec em um jogo, sem que seus arquivos fiquem em 
+                  um diretório qualquer. Pois Allegro permite que você coloque 
+                  todos eles dentro de um arquivo e os use de modo simples e 
+                  eficiente em seus programas. Como fazer isso? veja a 
+                  seguir.<BR><BR>1) Allegro vem com um utilitário chamado 
+                  Grabber, que faz esse trabalho para você. Então você tem um 
+                  diretório chamado jogo, em algum lugar, e dentro dele você 
+                  pode criar outro diretório chamado arquivos, ou sei lá, 
+                  qualquer outro nome, e lá deverão ficar os arquivos de seu 
+                  jogo, como imagens, sons, etc..., mas não seu código fonte, 
+                  executáveis, isso fica no diretório raiz de seu jogo.<BR>Agora 
+                  crie imagens para seu jogo, melhor começar com imagens de 256 
+                  cores, use qualquer programa, até o paint serve para começar, 
+                  mas todas as imagens devem ter a mesma paleta de cores.<BR>No 
+                  diretório jogo, ou seja qual for o nome, crie um arquivo, que 
+                  pode se chamar gra.bat, só para automatizar o processo, ele 
+                  deve chamar o grabber para editar seu arquivo dat. Escreva em 
+                  gra.bat o seguinte:<BR><BR>C:djgppallegro oolsgrabber 
+                  arquivo.dat<BR><BR>Sendo "C:" o drive onde está o DJGPP, e 
+                  "arquivo.dat" um nome de sua preferência para seu arquivo 
+                  dat.<BR>Agora para editar seu dat basta escrever "gra" e 
+                  pronto.<BR><BR>Pois bem, agora que você já tem as imagens que 
+                  vai usar, com 256 cores, chame "gra"e vamos começar.<BR><BR>2) 
+                  Dentro do grabber, clique no menu "object" escolha "new..." e 
+                  escolha "bitmap", escreva então o nome desse objeto, pode ser 
+                  "imagem1" por exemplo. Esse objeto será criado na lista à 
+                  equerda, com o nome que você escolheu, mas você deve colocar 
+                  uma bmp lá dentro, clique nele com o botão direito do mouse e 
+                  escolha "grab", vá para o diretório onde estão as imagens, 
+                  selecione a que você quer e clique "OK". Pronto, a imagem está 
+                  lá, agora crie diversas outras, quantas quizer da mesma forma, 
+                  elas ficarão feias devido a falta de paleta, agora veja como 
+                  colocar essa paleta.<BR><BR>3) Bom, essas imagem BMP que ficam 
+                  lá, ocupam menos espaço que o normal, pois não tem paleta de 
+                  cores, essa paleta deve ser colocada em separado. Crie novo 
+                  objeto, mas dessa vez escolha o tipo "palette", escreva um 
+                  nome de sua preferência, como "paleta". O objeto será criado. 
+                  Clique nele com o botão direito e escolha "grab", vá ao 
+                  diretório das imagens, escolha alguma delas (já que você deve 
+                  ter criado todas com a mesma paleta), e clique "OK", agora de 
+                  um duplo clique nesse objeto para carregar. Pronto.<BR><BR>4) 
+                  Agora sempre que você entrar de novo no grabber para editar 
+                  seu arquivo, de duplo clique sobre o objeto paleta para 
+                  carregá-lo.<BR><BR>5) Antes de sair do grabber você deve 
+                  salvar seu trabalho, sempre clique em "file" e "save" antes de 
+                  sair, senão você perde as modificações.<BR><BR>6) Agora você 
+                  tem um arquivo ".dat" com várias imagens e uma paleta de 
+                  cores, mas como usar isso em seu programa? Primeiro crie um 
+                  arquivo de indice, chamado "jogo.h" ou algo do gênero, no 
+                  diretório do seu jogo, e escreva ele mais ou menos 
+                  assim:<BR><BR><FONT color=#008000>#define Imagem1 0 /* BMP 
+                  */<BR>#define Imagem2 1 /* BMP */<BR>#define Imagem3 2 /* BMP 
+                  */<BR>#define Imagem4 3 /* BMP */<BR>#define Imagem5 4 /* BMP 
+                  */<BR>#define Imagem6 5 /* BMP */<BR>#define Paleta 6 /* PAL 
+                  */</FONT><BR><BR>Isso porque você sempre deve se referir ao 
+                  arquivo dat com o número do objeto a ser usado, começando do 
+                  zero. Esta ordem deve ser a mesma do arquivo dat. Esses "/* 
+                  BMP */" são apenas para referência, você não precisa colocar 
+                  se não quizer. <BR>Isso é apenas um exemplo, seu arquivo ".h" 
+                  deve estar como seu arquivo ".dat". Os nomes definidos aqui, 
+                  como "Imagem1" não precisam ser idênticos ao arquivo dat, são 
+                  apenas para você não ter que usar os números, mas devem estar 
+                  na mesma ordem, ou seja, a ordem alfabética do arquivo 
+                  dat.<BR><BR>Mas existe uma outra maneira muito mais simples de 
+                  criar o arquivo de índice. O Grabber vem com uma opção que faz 
+                  isso automaticamente para você. Funciona da seguinte forma: 
+                  Logo abaixo dos menus do Grabber você algumas opções, dentre 
+                  elas "Editing" e "Header". Pois bem, em "Editing" escreva o 
+                  nome do arquivo dat devidamente acompanhado do caminho, como 
+                  por exemplo "c:jogoarquivo.dat", e em "Header" escreva apenas 
+                  o nome do arquivo de índice, como por exemplo 
+                  "jogo.h".<BR>Agora quando você salvar o arquivo dat o arquivo 
+                  de índice será gerado automaticamente, eliminando a 
+                  necessidade de criá-lo manualmente. Lembrando que assim as 
+                  definições dentro do arquivo "jogo.h" serão os mesmos nomes 
+                  que você deu para os objetos no Grabber, e na mesma ordem, a 
+                  alfabética.<BR>Agradeço a Luiz Toscano Menezes por me dar essa 
+                  dica.<BR><BR>7) Agora no início do seu programa você deve 
+                  carregar esse arquivo dat, faça assim:<BR><BR>* No cabeçalho 
+                  do programa adicione a linha: <BR><FONT color=#008000>#include 
+                  "jogo.h"</FONT><BR><BR>Sendo "jogo.h" o nome do arquivo de 
+                  indice que você criou com as instruções lá de cima.<BR><BR>* 
+                  Nas definições de variáveis globais, defina a variável 
+                  datafile assim:<BR><FONT color=#008000>DATAFILE 
+                  *datafile;</FONT><BR><BR>Sendo que este último "datafile" pode 
+                  ser outro nome, mas você deve mudar em todas as refências a 
+                  esta variável.<BR><BR>* Nas configurações do Allegro adicione 
+                  isso:<BR><BR><FONT color=#008000>datafile = 
+                  load_datafile("arquivo.dat");<BR>if (!datafile) 
+                  {<BR>allegro_exit();<BR>printf("Erro carregando arquivo Data! 
+                  ");<BR>return 1;<BR>}</FONT><BR><BR>Sendo que "arquivo.dat" é 
+                  o nome de seu arquivo dat.<BR><BR><BR>8) Você deve carregar a 
+                  paleta de cores para poder usar as imagens, faça 
+                  assim:<BR><FONT 
+                  color=#008000>set_pallete(datafile[paleta].dat);</FONT><BR><BR>Agora 
+                  sim você usou um objeto do arquivo dat. Veja que será sempre 
+                  assim, datafile[objeto].dat sendo "objeto" o nome do objeto 
+                  que você colocou no arquivo de indice, ou o número do objeto 
+                  do arquivo dat, tanto faz.<BR><BR>9) Para exibir uma imagem do 
+                  arquivo dat na tela, use essa função:<BR>draw_sprite(screen, 
+                  datafile[Imagem1].dat, x, y);<BR><BR>Sendo que "screen" 
+                  representa a tela do monitor, "datafile[Imagem1].dat" a imagem 
+                  que você quer colocar lá, x e y a localização onde você quer 
+                  colocar a imagem, a partir o canto superior esquerdo 
+                  dela.<BR><BR>10) Então aqui vai um exemplo de 
+                  programa:<BR>Suponhamos que você colocou no arquivo dat apenas 
+                  uma imagem de 256 cores e a paleta de cores dela, e chamou 
+                  este arquivo de "arquivo.dat".<BR><BR>Depois você criou um 
+                  arquivo de indice, que chamou de "jogo.h" com o 
+                  seguinte:<BR><FONT color=#008000>#define Imagem1 0 /* BMP 
+                  */<BR>#define Paleta 1 /* PAL */</FONT><BR><BR>Obs: A ordem 
+                  desses objetos deve ser a mesma que ficou no arquivo dat, ou 
+                  seja, a ordem alfabética.<BR><BR>Agora você cria seu programa 
+                  assim:<BR><BR><BR><FONT color=#008000>#include 
+                  &lt;string.h&gt;<BR>#include &lt;stdlib.h&gt;<BR>#include 
+                  &lt;stdio.h&gt;<BR>#include "allegro.h"<BR>#include 
+                  "jogo.h"<BR><BR>/* Declara variavel datafile */<BR>DATAFILE 
+                  *datafile;<BR><BR>int main(int argc, char 
+                  *argv[])<BR>{<BR><BR>/* Iniciando Elementos 
+                  */<BR>allegro_init();<BR>install_keyboard(); 
+                  <BR>install_timer();<BR>install_mouse();<BR><BR>/* Carrega 
+                  arquivo dat */<BR>datafile = 
+                  load_datafile("arquivo.dat");<BR>if (!datafile) 
+                  {<BR>allegro_exit();<BR>printf("Erro carregando arquivo Data! 
+                  ");<BR>return 1;<BR>}<BR><BR>/* Iniciando Grafico */<BR>if 
+                  (set_gfx_mode(GFX_AUTODETECT, 640, 480, 0, 0) !=0) 
+                  {<BR>allegro_exit();<BR>printf("Erro configurando grafico 
+                  ");<BR>exit(1);<BR>}<BR><BR>/* Iniciando Sons */<BR>if 
+                  (install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, 0) != 0) 
+                  {<BR>allegro_exit();<BR>printf("Erro inicializando sons 
+                  ");<BR>exit(1);<BR>} <BR><BR>/* Configurando Palleta 
+                  */<BR>set_pallete(datafile[Paleta].dat);<BR><BR>/* Coloca uma 
+                  imagem na tela na localização 100, 100 
+                  */<BR>draw_sprite(screen, datafile[Imagem1].dat, 100, 
+                  100);<BR><BR>/* Espera o usuario pressionar alguma tecla para 
+                  continuar */<BR>readkey();<BR><BR>/* Finaliza Allegro 
+                  */<BR>allegro_exit();<BR>}<BR></FONT><BR><BR>Ótimo, eu acabei 
+                  de testar e funcionou, você deve compilar assim:<BR><BR>gcc 
+                  jogo.c -o jogo.exe -lalleg<BR><BR>Sendo "jogo.c" o nome que 
+                  você deu para o arquivo.<BR>O parâmetro "-lalleg" avisa o 
+                  compilador que ele deve usar Allegro.<BR><BR>Então 
+                  recapitulando, você tem três arquivos:<BR>jogo.c - O codigo 
+                  fonte principal de seu programa.<BR>jogo.h - O arquivo de 
+                  indice com definições sobre seu arquivo dat.<BR>arquivo.dat - 
+                  Seu "datafile" com os arquivos a serem usados pelo seu 
+                  jogo.<BR><BR>Obs: Você não precisa instalar som nesse 
+                  programa, pois não vai usar, pode tirar aquela parte. E se for 
+                  usar som, não precisa mandar sair do programa se ele não puder 
+                  ser configurado. Pode fazer assim:<BR><BR><FONT 
+                  color=#008000>if (install_sound(DIGI_AUTODETECT, 
+                  MIDI_AUTODETECT, 0) != 0) {<BR>Som=FALSE;<BR>}</FONT> 
+                  <BR><BR>Sendo "Som" uma variável qualquer que você pode criar 
+                  para saber se deve ou não tocar sons em seu programa. Assim se 
+                  a pessoa não tiver placa de som no computador, poderá mesmo 
+                  assim usar seu programa.<BR></P>
+                  <H2>RLE sprites</H2>
+                  <P><FONT color=#00008b><STRONG>RLE sprites</STRONG></FONT></P>
+                  <P>O que são RLE sprites? Para que serve isso?<BR>Bom, na 
+                  "Parte B" desse guia nós utilizamos imagens em objetos 
+                  chamados de Bitmaps, esse é um formato de gravação de imagens 
+                  bem comum, mas muito complexo, e como em seus jogos você vai 
+                  querer desempenho máximo, é melhor que sejam utilizadas 
+                  imagens em um formato compacto e otimizado, este é o RLE 
+                  sprite.<BR><BR>RLE sprites devem ser utilizados para gravar 
+                  imagens com fundo transparente, como um boneco por exemplo, a 
+                  moldura da imagem é retangular, mas o desenho do boneco fica 
+                  apenas no interior dessa imagem, e como você vai querer 
+                  desenhar apenas o boneco, e não o fundo da imagem, deve 
+                  utilizar RLE.<BR><BR>Quando você grava uma imagem em um RLE 
+                  sprite, ela deve ter o fundo com a cor 0 (zero), e este fundo 
+                  simplesmente não será gravado, diminuindo o tamanho da imagem, 
+                  e tornando sua colocação na tela muito mais 
+                  veloz.<BR><BR>Vamos imaginar seu jogo: você desenha uma tela 
+                  no fundo, com montanhas, nuvens, etc... e agora você quer 
+                  desenhar um boneco nessa tela, somente o boneco, o fundo dele 
+                  não, esse boneco deve ser um RLE sprite.<BR><BR>1) Para usar 
+                  RLE sprite e não BMP, você deve seguir praticamente o mesmo 
+                  procedimento demostrado na "Parte B" para colocar as imagens 
+                  em seu arquivo dat, mas quando for criar o objeto, você deve 
+                  ir ao menu "objetc", escolher "new..." e ao invés de escolher 
+                  "bitmap" escolha "RLE sprite", agora escolha o nome e coloque 
+                  sua imagem lá dentro, ela ficará com o fundo 
+                  transparente.<BR>Lembre-se: o fundo da imagem de ter cor 0 
+                  (zero) para ficar transparente.<BR><BR>2) O arquivo de indice 
+                  você pode fazer da mesma forma, mas é bom mudar /* BMP */ por 
+                  /* RLE */, só para que você saiba que objeto é de que tipo, 
+                  isso não influencia.<BR>Ficaria assim:<BR><BR><FONT 
+                  color=#008000>#define Imagem1 0 /* RLE */<BR>#define Imagem2 1 
+                  /* RLE */<BR>...</FONT><BR><BR>Mas caso você esteja deixando 
+                  que o arquivo de indice seja criado automaticamente não 
+                  precisa se preocupar com isso.<BR><BR>3) No seu programa, ao 
+                  invés de usar a função: draw_sprite(screen, 
+                  datafile[Imagem1].dat, x, y);<BR>Você deve usar:<BR><FONT 
+                  color=#008000>draw_rle_sprite(screen, datafile[Imagem1].dat, 
+                  x, y);</FONT><BR><BR>É praticamente a mesma coisa, só 
+                  adiciona-se o "rle".<BR><BR>4) Se você quizer testar agora, 
+                  crie uma imagem grande, pode ser de 640x480, e uma outra menor 
+                  com fundo transparente (cor 0), com a mesma paleta de cores, e 
+                  coloque-as num arquivo dat, a primeira como bitmap comum, e a 
+                  segunda como RLE, e coloque a paleta.<BR><BR>Deixe que o 
+                  Grabber crie o arquivo de índice com o nome de "jogo.h", ou 
+                  crie manualmente assim:<BR><BR><FONT color=#008000>#define 
+                  Imagem1 0 /* BMP */<BR>#define Imagem2 1 /* RLE */<BR>#define 
+                  Paleta 2 /* PAL */</FONT><BR><BR><BR>Agora você cria seu 
+                  programa assim:<BR><BR><BR><FONT color=#008000>#include 
+                  &lt;string.h&gt;<BR>#include &lt;stdlib.h&gt;<BR>#include 
+                  &lt;stdio.h&gt;<BR>#include "allegro.h"<BR>#include 
+                  "jogo.h"</FONT><BR><BR><FONT color=#008000>/* Declara variavel 
+                  datafile */<BR>DATAFILE *datafile;<BR><BR>int main(int argc, 
+                  char *argv[])<BR>{<BR><BR>/* Iniciando Elementos 
+                  */<BR>allegro_init();<BR>install_keyboard(); 
+                  <BR>install_timer();<BR>install_mouse();<BR><BR>/* Carrega 
+                  arquivo dat */<BR>datafile = 
+                  load_datafile("arquivo.dat");<BR>if (!datafile) 
+                  {<BR>allegro_exit();<BR>printf("Erro carregando arquivo Data! 
+                  ");<BR>return 1;<BR>}<BR><BR>/* Iniciando Grafico */<BR>if 
+                  (set_gfx_mode(GFX_AUTODETECT, 640, 480, 0, 0) !=0) 
+                  {<BR>allegro_exit();<BR>printf("Erro configurando grafico 
+                  ");<BR>exit(1);<BR>}<BR><BR>/* Iniciando Sons */<BR>if 
+                  (install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, 0) != 0) 
+                  {<BR>allegro_exit();<BR>printf("Erro inicializando sons 
+                  ");<BR>exit(1);<BR>} <BR><BR>/* Configurando Palleta 
+                  */<BR>set_pallete(datafile[Paleta].dat);<BR><BR>/* Coloca uma 
+                  imagem grande, de fundo, na localização 0, 0 
+                  */<BR>draw_sprite(screen, datafile[Imagem1].dat, 0, 
+                  0);<BR><BR>/* Coloca a imagem com fundo transparente, na 
+                  localização 50, 50 */<BR>draw_rle_sprite(screen, 
+                  datafile[Imagem2].dat, 50, 50);<BR><BR>/* Espera o usuario 
+                  pressionar alguma tecla para continuar 
+                  */<BR>readkey();<BR><BR>/* Finaliza Allegro 
+                  */<BR>allegro_exit();<BR>}</FONT><BR><BR><BR>Você deve 
+                  compilar assim:<BR><BR><STRONG>gcc jogo.c -o jogo.exe 
+                  -lalleg</STRONG><BR><BR>Sendo "jogo.c" o nome que você deu 
+                  para o arquivo.<BR>O parâmetro "-lalleg" avisa o compilador 
+                  que ele deve usar Allegro.<BR><BR>Pronto, rode seu jogo e veja 
+                  que a segunda imagem ficou com fundo transparente sobre a 
+                  outra.<BR>Seus jogos certamente serão muito mais rápidos com a 
+                  utilização de RLE sprites.</P>
+                  <P><FONT color=#00008b><STRONG></STRONG></FONT></P>
+                  <H2>Double Buffer</H2>
+                  <P><FONT color=#00008b><STRONG>Double 
+                  Buffer</STRONG></FONT></P>
+                  <P>Duble Buffer, sabe o que é isso? A maioria dos 
+                  programadores de jogos sabe o que é, pois trata-se de um 
+                  método importante que deve-se conhecer.<BR>Trata-se de um 
+                  método eficiente de desenhar coisas na tela do monitor sem que 
+                  o usuário veja que elas estão sendo desenhadas.<BR><BR>Como 
+                  funciona?<BR>É simples, ao invés de desenhar direto na tela do 
+                  monitor, você desenha todos os objetos, textos, fundos, etc em 
+                  uma imagem virtual, e quando ela estiver montada e pronta, 
+                  você a coloca no monitor.<BR>Este é um ótimo método, e Allegro 
+                  oferece pleno suporte para que você faça isso. Vejamos 
+                  como:<BR><BR>1) Primeiro você deve saber que pode criar 
+                  quantas imagens virtuais desejar, da seguinte forma:<BR>* 
+                  Declare uma variável do tipo BITMAP:<BR><FONT 
+                  color=#008000>BITMAP *tela;</FONT><BR><BR>Sendo "tela" o nome 
+                  da variável, pode ser qualquer um de sua 
+                  preferência.<BR><BR>*Crie a bitmap:<BR><FONT 
+                  color=#008000>tela = create_bitmap(640, 
+                  480);</FONT><BR><BR>Sendo 640 o tamanho horizontal e 480 o 
+                  tamanho vertical, você pode criar qualquer imagem de qualquer 
+                  tamanho, no caso usei 640x480 por ser a resolução que vamos 
+                  usar, e a imagem, para esse propósito, deve ser do tamanho da 
+                  tela.<BR><BR>*Limpe a bitmap:<BR><FONT 
+                  color=#008000>clear(tela);</FONT><BR><BR>Dispensa 
+                  comentários.<BR><BR>2) Agora não desenhe seus sprites na 
+                  "screen", desenhe em "tela" para depois, com tudo pronto, 
+                  desenhar a "tela" na "screen" de uma só vez.<BR><BR>Faça 
+                  assim:<BR><BR><FONT color=#008000>/* Coloca um sprite na 
+                  imagem "tela" na localização 100, 100 */<BR>draw_sprite(tela, 
+                  datafile[Imagem1].dat, 100, 100);<BR><BR>/* Coloca a variavel 
+                  "tela" na "screen" (monitor) na localização 0, 0 
+                  */<BR>blit(tela, screen, 0, 0, 0, 0, 640, 
+                  480);</FONT><BR><BR><BR>Como você viu, "screen" é a tela do 
+                  monitor, e o que mudou aqui é que nós desenhamos a Imagem1 na 
+                  variavel tela para depois colocar a "tela" na 
+                  "screen".<BR><BR>A função blit funciona assim:<BR><FONT 
+                  color=#008000>blit(imagem1, imagem2, x1, y1, x2, y2, tx, 
+                  ty);</FONT><BR><BR>Sendo "imagem1" uma imagem qualquer que 
+                  você queira desenhar em "imagem2" .<BR>"x1" e "y1" as 
+                  variaveis que indicam o canto superior esquerdo da 
+                  "imagem1".<BR>"x2" e "y2" as variaveis que indicam o canto 
+                  superior esquerdo da "imagem2".<BR>"tx" e "ty" a quantidade de 
+                  pixels que você queira desenhar.<BR><BR>Obs: Eu estou usando a 
+                  designação variavel para essas bitmaps, mas na verdade elas 
+                  são apenas ponteiros que apontam para o endereços da memória 
+                  onde estão as imagens.<BR><BR>3) Veja um exemplo parecido com 
+                  o da "Parte B"<BR><BR><FONT color=#008000>#include 
+                  &lt;string.h&gt;<BR>#include &lt;stdlib.h&gt;<BR>#include 
+                  &lt;stdio.h&gt;<BR>#include "allegro.h"<BR>#include 
+                  "jogo.h"<BR><BR>/* Declara variavel datafile */<BR>DATAFILE 
+                  *datafile;<BR><BR>/* Declara variavel tela do tipo 
+                  BITMAP<BR>BITMAP *tela;<BR><BR>int main(int argc, char 
+                  *argv[])<BR>{<BR><BR>/* Iniciando Elementos 
+                  */<BR>allegro_init();<BR>install_keyboard(); 
+                  <BR>install_timer();<BR>install_mouse();<BR><BR>/* Carrega 
+                  arquivo dat */<BR>datafile = 
+                  load_datafile("arquivo.dat");<BR>if (!datafile) 
+                  {<BR>allegro_exit();<BR>printf("Erro carregando arquivo Data! 
+                  ");<BR>return 1;<BR>}<BR><BR>/* Iniciando Grafico */<BR>if 
+                  (set_gfx_mode(GFX_AUTODETECT, 640, 480, 0, 0) !=0) 
+                  {<BR>allegro_exit();<BR>printf("Erro configurando grafico 
+                  ");<BR>exit(1);<BR>}<BR><BR>/* Iniciando Sons */<BR>if 
+                  (install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, 0) != 0) 
+                  {<BR>allegro_exit();<BR>printf("Erro inicializando sons 
+                  ");<BR>exit(1);<BR>} <BR><BR>/* Configurando Palleta 
+                  */<BR>set_pallete(datafile[Paleta].dat);<BR><BR>/* Cria bitmap 
+                  em tela */<BR>tela = create_bitmap(640, 480);<BR><BR>/* Limpa 
+                  a bitmap tela */<BR>clear(tela);<BR><BR>/* Coloca uma imagem 
+                  na variavel "tela" na localização 100, 100 
+                  */<BR>draw_sprite(tela, datafile[Imagem1].dat, 100, 
+                  100);<BR><BR>/* Coloca a variavel "tela" na "screen" (monitor) 
+                  na localização 0, 0 */<BR>blit(tela, screen, 0, 0, 0, 0, 640, 
+                  480);<BR><BR>/* Espera o usuario pressionar alguma tecla para 
+                  continuar */<BR>readkey();<BR><BR>/* Finaliza Allegro 
+                  */<BR>allegro_exit();<BR>}</FONT><BR><BR><BR>Pode parecer que 
+                  deu mais trabalho e só isso, mas quando você estiver 
+                  programando um jogo, que desenha dezenas ou centenas de itens 
+                  na tela de cada vez, várias vezes por segundo, a qualidade 
+                  será muito maior com a utilização de Double Buffer.<BR></P>
+                  <H2>Velocidade</H2>
+                  <P><FONT color=#00008b><STRONG>Velocidade</STRONG></FONT></P>
+                  <P>A velocidade é um fator muito importante em jogos. Veja 
+                  bem, não estou me referindo a jogos lentos ou rápidos, estou 
+                  me referindo a velocidade do jogo que deve ser constante em 
+                  diversos computadores. Vejamos um exemplo:<BR><BR>Você faz um 
+                  jogo em seu "Pentium II 400MHz". Neste computador ele funciona 
+                  em uma velocidade muito boa, ajustada por você, mas quando 
+                  você testa seu jogo em um "Pentium 100MHz" por exemplo, a 
+                  velocidade será muito inferior, o que certamente é 
+                  prejudicial, principalmente se você pretende que ele funcione 
+                  em rede ou algo do gênero.<BR><BR>Para evitar isso e fazer com 
+                  que seu jogo funcione na mesma velocidade em computadores mais 
+                  potentes e mais fracos você deve utilizar algumas funções da 
+                  Allegro.<BR><BR>1) Defina uma variavel para velocidade, mais 
+                  ou menos assim:<BR><FONT color=#008000>volatile int game_speed 
+                  = 0;</FONT><BR><BR>Sendo "game_speed" qualquer nome que você 
+                  queira usar, desde que use sempre ele no resto do 
+                  programa.<BR><BR>2) Faça uma função para controle da 
+                  velocidade, pode ser assim:<BR><FONT color=#008000>void 
+                  game_speeds()<BR>{<BR>game_speed++;<BR>}<BR>END_OF_FUNCTION(game_speeds);</FONT><BR><BR>Para 
+                  aumentar a velocidade do jogo aumente a soma da game_speed, 
+                  como: game_speed+=2, game_speed+=3, etc.<BR>O nome da função, 
+                  o "game_speeds" pode ser outro, desde que você mude no resto 
+                  do programa.<BR><BR>4) Agora "tranque" a variavel e a função. 
+                  Depois instale a velocidade. Faça desse modo:<BR><BR><FONT 
+                  color=#008000>LOCK_VARIABLE(game_speed);<BR>LOCK_FUNCTION(game_speeds);<BR><BR>install_int(game_speeds, 
+                  10);</FONT><BR><BR>Sendo que o segundo parâmetro, o número 10, 
+                  pode ser mudado, ele tambem modifica a velocidade do 
+                  jogo.<BR><BR>5) Agora você deve fazer uma função que vai 
+                  servir de "loop" principal para seu programa. Esse loop é 
+                  necessário para o controle de velocidade. Faça 
+                  assim:<BR><BR><FONT color=#008000>void 
+                  play_game()<BR>{<BR>LOCK_VARIABLE(game_speed);<BR>LOCK_FUNCTION(game_speeds);<BR><BR>install_int(game_speeds, 
+                  10);<BR><BR>while (!fim) {<BR>while (game_speed &gt; 0) 
+                  {<BR>controle();<BR>game_speed--;<BR>}<BR>display();<BR>}<BR>}</FONT><BR><BR><BR>Isto 
+                  requer muitas explicações, vamos lá:<BR>Esta função 
+                  "play_game" pode ter outro nome qualquer, ela deve ser chamada 
+                  para começar o jogo, nela eu coloquei os passos do Item 4 como 
+                  você pode ver.<BR>A variavel "fim" deve ser declara como 
+                  global, e deve ser FALSE. Você deve deixa-la TRUE apenas 
+                  quando for terminar o jogo, pois o loop será encerrado quando 
+                  isso acontecer.<BR>A função "controle" que é chamada, deve ser 
+                  feita como você preferir, ela deve controlar o jogo.<BR>A 
+                  função "display" deve exibir seu jogo na tela, note que ela 
+                  não será chamada a cada ciclo de seu jogo, isso é importante 
+                  para o controle de velocidade.<BR><BR>6) Nada como um exemplo 
+                  para entender melhor, então aqui está ele:<BR><BR><FONT 
+                  color=#008000>#include &lt;string.h&gt;<BR>#include 
+                  &lt;stdlib.h&gt;<BR>#include &lt;stdio.h&gt;<BR>#include 
+                  "allegro.h"<BR><BR>/******* Velocidade do Jogo */<BR>volatile 
+                  int game_speed = 0;<BR><BR>/******* Variaveis */<BR>int 
+                  fim;<BR><BR>/***--- Funcao para controle da velocidade 
+                  ---------------------*/<BR>void game_speeds()<BR>{<BR>// 
+                  aumentar a soma para aumentar a 
+                  velociade<BR>game_speed++;<BR>}<BR><BR>END_OF_FUNCTION(game_speeds);<BR><BR><BR>/***--- 
+                  Funcao principal 
+                  --------------------------------------*/<BR>void 
+                  play_game()<BR>{<BR>LOCK_VARIABLE(game_speed);<BR>LOCK_FUNCTION(game_speeds);<BR><BR>install_int(game_speeds, 
+                  10);<BR><BR>while (!fim) {<BR>while (game_speed &gt; 0) 
+                  {<BR>controle();<BR>game_speed--;<BR>}<BR>display();<BR>}<BR>}<BR><BR><BR>/***--- 
+                  Controle 
+                  -------------------------------------------*/<BR>controle()<BR>{<BR>// 
+                  Controlar seu jogo aqui.<BR>}<BR><BR><BR>/***--- Display 
+                  ---------------------------------------------*/<BR>display()<BR>{<BR>// 
+                  Colocar seu jogo na tela aqui, somente 
+                  aqui.<BR>}<BR><BR><BR><BR>/***--- Main Funcao 
+                  ---------------------------------------*/<BR>int main(int 
+                  argc, char *argv[])<BR>{<BR><BR>/* Iniciando Elementos 
+                  */<BR>allegro_init();<BR>install_keyboard(); 
+                  <BR>install_timer();<BR>install_mouse();<BR><BR>/* Iniciando 
+                  Grafico */<BR>if (set_gfx_mode(GFX_AUTODETECT, 640, 480, 0, 0) 
+                  !=0) {<BR>allegro_exit();<BR>printf("Erro configurando grafico 
+                  ");<BR>exit(1);<BR>}<BR><BR>/* Iniciando Sons */<BR>if 
+                  (install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, argv[0]) != 
+                  0) {<BR>allegro_exit();<BR>printf("Erro inicializando sons 
+                  ");<BR>exit(1);<BR>} <BR><BR>/* Inicia do Loop principal 
+                  */<BR>play_game();<BR><BR>/* Finaliza Allegro 
+                  */<BR>allegro_exit();<BR>}</FONT><BR><BR><BR>Simples não? 
+                  Quando isto estiver em seu jogo mude os valores das variaveis 
+                  ligadas a velocidade e teste qual a melhor configuração. </P>
+                  <P><FONT color=#00008b><STRONG></STRONG></FONT></P>
+                  <H2>Teclado</H2>
+                  <P><FONT color=#00008b><STRONG>Teclado</STRONG></FONT></P>
+                  <P>Você já deve ter notado como era dificil e complicado ler 
+                  corretamente o teclado e o mouse não é mesmo? Era, pois agora 
+                  você está usando Allegro, e tudo se tornou tão simples quanto 
+                  você jamais imaginou. Veja como funciona:<BR><BR>1) Em um 
+                  jogo, normalmente você precisa saber quais as teclas 
+                  pressionadas no momento não é mesmo? Várias teclas ao mesmo 
+                  tempo. Pois com Allegro você pode simplesmente testar se esta 
+                  ou aquela tecla está pressiona, basta usar essa 
+                  função:<BR><FONT color=#008000>if (key[KEY_ESC]) {<BR>// A 
+                  tecla &lt;ESC&gt; está pressionada<BR>}<BR>else {<BR>// A 
+                  tecla &lt;ESC&gt; não está pressionada<BR>}</FONT><BR><BR>Viu, 
+                  não tem complicação. Para testar outras teclas basta trocar a 
+                  tecla a ser testada assim:<BR><FONT color=#008000>if 
+                  (key[KEY_LEFT]) { } * Seta esquerda<BR>if (key[KEY_RIGHT]) { } 
+                  * Seta direita</FONT><BR><BR>2) Mas também existem teclas 
+                  extendidas, sabe o que é isso? São teclas pressionadas 
+                  juntamente com "shift", "ctrl", "alt" e ainda as teclas do 
+                  "windows", aquelas dos teclados desenvolvidos para Windows, 
+                  com a bandeirinha do Bill Gates.<BR>Mas como usar 
+                  isso?<BR>Simples. Veja, se nenhuma tecla especial está 
+                  pressionada o modo fica normal, e você testa o normal 
+                  assim:<BR><FONT color=#008000>if (key[KEY_ENTER] &amp; 
+                  KB_NORMAL) {<BR>// Você pressionou &lt;ENTER&gt; e nenhuma 
+                  tecla especial.<BR>}</FONT><BR><BR>Viu que a diferença está no 
+                  "KB_NORMAL", se você pressionou "shift" por exemplo ai o teste 
+                  deve mudar, faça assim:<BR><FONT color=#008000>if 
+                  (key[KEY_ENTER] &amp; KB_EXTENDED) {<BR>// Você pressionou 
+                  &lt;ENTER&gt; junto com alguma tecla 
+                  especial.<BR>}</FONT><BR><BR>Na prática se você não tiver que 
+                  saber se o usuário está usando teclas extendidas não tem que 
+                  fazer estes testes, apenas o "Passo 1".<BR><BR>3) A tabela de 
+                  possiveis teclas é essa:<BR><BR>* Teclas especiais, aquelas 
+                  que são testadas para teclas extendidas:<BR><FONT 
+                  color=#008000>#define KB_SHIFT_FLAG 0x0001<BR>#define 
+                  KB_CTRL_FLAG 0x0002<BR>#define KB_ALT_FLAG 0x0004<BR>#define 
+                  KB_LWIN_FLAG 0x0008<BR>#define KB_RWIN_FLAG 0x0010<BR>#define 
+                  KB_MENU_FLAG 0x0020<BR>#define KB_SCROLOCK_FLAG 
+                  0x0100<BR>#define KB_NUMLOCK_FLAG 0x0200<BR>#define 
+                  KB_CAPSLOCK_FLAG 0x0400<BR>#define KB_INALTSEQ_FLAG 
+                  0x0800<BR>#define KB_ACCENT1_FLAG 0x1000<BR>#define 
+                  KB_ACCENT1_S_FLAG 0x2000<BR>#define KB_ACCENT2_FLAG 
+                  0x4000<BR>#define KB_ACCENT2_S_FLAG 0x8000<BR><BR>* Teclas 
+                  extendidas, ou não:<BR>#define KB_NORMAL 1<BR>#define 
+                  KB_EXTENDED 2<BR><BR>* Lista de todas as possíveis 
+                  teclas:<BR>#define KEY_ESC 1 <BR>#define KEY_1 2 <BR>#define 
+                  KEY_2 3 <BR>#define KEY_3 4<BR>#define KEY_4 5<BR>#define 
+                  KEY_5 6<BR>#define KEY_6 7<BR>#define KEY_7 8<BR>#define KEY_8 
+                  9<BR>#define KEY_9 10<BR>#define KEY_0 11<BR>#define KEY_MINUS 
+                  12<BR>#define KEY_EQUALS 13<BR>#define KEY_BACKSPACE 
+                  14<BR>#define KEY_TAB 15 <BR>#define KEY_Q 16<BR>#define KEY_W 
+                  17<BR>#define KEY_E 18<BR>#define KEY_R 19<BR>#define KEY_T 
+                  20<BR>#define KEY_Y 21<BR>#define KEY_U 22<BR>#define KEY_I 
+                  23<BR>#define KEY_O 24<BR>#define KEY_P 25<BR>#define 
+                  KEY_OPENBRACE 26<BR>#define KEY_CLOSEBRACE 27<BR>#define 
+                  KEY_ENTER 28<BR>#define KEY_CONTROL 29<BR>#define KEY_LCONTROL 
+                  29<BR>#define KEY_A 30<BR>#define KEY_S 31<BR>#define KEY_D 
+                  32<BR>#define KEY_F 33<BR>#define KEY_G 34<BR>#define KEY_H 
+                  35<BR>#define KEY_J 36<BR>#define KEY_K 37<BR>#define KEY_L 
+                  38<BR>#define KEY_COLON 39<BR>#define KEY_QUOTE 40<BR>#define 
+                  KEY_TILDE 41<BR>#define KEY_LSHIFT 42<BR>#define KEY_BACKSLASH 
+                  43<BR>#define KEY_Z 44<BR>#define KEY_X 45<BR>#define KEY_C 
+                  46<BR>#define KEY_V 47<BR>#define KEY_B 48<BR>#define KEY_N 
+                  49<BR>#define KEY_M 50<BR>#define KEY_COMMA 51<BR>#define 
+                  KEY_STOP 52<BR>#define KEY_SLASH 53<BR>#define KEY_RSHIFT 
+                  54<BR>#define KEY_ASTERISK 55<BR>#define KEY_ALT 56<BR>#define 
+                  KEY_SPACE 57<BR>#define KEY_CAPSLOCK 58<BR>#define KEY_F1 
+                  59<BR>#define KEY_F2 60<BR>#define KEY_F3 61<BR>#define KEY_F4 
+                  62<BR>#define KEY_F5 63<BR>#define KEY_F6 64<BR>#define KEY_F7 
+                  65<BR>#define KEY_F8 66<BR>#define KEY_F9 67<BR>#define 
+                  KEY_F10 68<BR>#define KEY_NUMLOCK 69<BR>#define KEY_SCRLOCK 
+                  70<BR>#define KEY_HOME 71<BR>#define KEY_UP 72<BR>#define 
+                  KEY_PGUP 73<BR>#define KEY_MINUS_PAD 74<BR>#define KEY_LEFT 
+                  75<BR>#define KEY_5_PAD 76<BR>#define KEY_RIGHT 77<BR>#define 
+                  KEY_PLUS_PAD 78<BR>#define KEY_END 79<BR>#define KEY_DOWN 
+                  80<BR>#define KEY_PGDN 81<BR>#define KEY_INSERT 82<BR>#define 
+                  KEY_DEL 83<BR>#define KEY_PRTSCR 84<BR>#define KEY_F11 
+                  87<BR>#define KEY_F12 88<BR>#define KEY_LWIN 91<BR>#define 
+                  KEY_RWIN 92<BR>#define KEY_MENU 93<BR>#define KEY_PAD 
+                  100<BR>#define KEY_RCONTROL 120<BR>#define KEY_ALTGR 
+                  121<BR>#define KEY_SLASH2 122<BR>#define KEY_PAUSE 
+                  123</FONT><BR><BR>Para facilitar sua vida aqui vai a lista das 
+                  mais usadas para jogos, todas estão listadas acima:<BR><FONT 
+                  color=#008000>if (key[KEY_ESC]) { } Pressionada tecla 
+                  ESCAPE.<BR>if (key[KEY_UP]) { } Pressionada SETA PARA 
+                  CIMA.<BR>if (key[KEY_DOWN]) { } Pressionada SETA PARA 
+                  BAIXO.<BR>if (key[KEY_LEFT]) { } Pressionada SETA PARA 
+                  ESQUERDA.<BR>if (key[KEY_RIGHT]) { } Pressionada SETA PARA 
+                  DIREITA.<BR>if (key[KEY_SPACE]) { } Pressionada BARRA DE 
+                  ESPAÇO.<BR>if (key[KEY_CONTROL]) { } Pressionada tecla CONTROL 
+                  DO LADO ESQUERDO.<BR>if (key[KEY_RCONTROL]) { } Pressionada 
+                  tecla CONTROL DO LADO DIREITO.<BR>if (key[KEY_ENTER]) { } 
+                  Pressionada tecla ENTER.</FONT> </P>
+                  <P><FONT color=#00008b><STRONG></STRONG></FONT></P>
+                  <H2>Mouse</H2>
+                  <P><FONT color=#00008b><STRONG>Mouse</STRONG></FONT></P>
+                  <P>A leitura do mouse é bastante simplificada com Allegro. 
+                  Observe:<BR><BR>1) Primeiro é bom saber a localização do mouse 
+                  na tela, não é mesmo? Pois a leitura da localização do mouse 
+                  pode ser feita assim:<BR><FONT color=#008000>mouse_x; // 
+                  localização x do mouse<BR>mouse_y; // localização y do 
+                  mouse</FONT><BR><BR>2) Para saber se algum botão do mouse está 
+                  pressionado, utilize:<BR><FONT color=#008000>if (mouse_b &amp; 
+                  1) { // O botão esquerdo está pressionado }<BR>if (mouse_b 
+                  &amp; 2) { // O botão direito está pressionado }<BR>if 
+                  (mouse_b &amp; 4) { // Ambos os botões estão pressionados 
+                  }</FONT><BR><BR>3) Se você quizer exibir um cursor do mouse na 
+                  tela existem três opções:<BR><BR>1- Você pode utilizar o 
+                  cursor padrão e deixar que Allegro cuide de desenha-lo na tela 
+                  assim:<BR>// deixa Allegro encarregada de desenhar sempre o 
+                  cursor padrão na tela<BR><FONT 
+                  color=#008000>show_mouse(screen);</FONT><BR><BR>2- Você pode 
+                  utilizar uma bmp qualquer como cursor e deixar que Allegro 
+                  cuide de desenha-lo na tela assim:<BR><FONT color=#008000>// 
+                  Declara um variável qualquer como BITMAP<BR>BITMAP 
+                  *cursor;<BR><BR>// Cria uma bitmap a partir da 
+                  variável<BR>cursor = create_bitmap(32, 32);<BR><BR>// Limpa a 
+                  bitmap cursor<BR>clear(cursor); <BR><BR>// Desenha círculos na 
+                  bitmap cursor<BR>for (c=0; c&lt;8; c++)<BR>circle(cursor, 16, 
+                  16, c*2, c);<BR><BR>// seleciona um sprite para o mouse, no 
+                  caso a bitmap cursor<BR>set_mouse_sprite(cursor);<BR><BR>// 
+                  seleciona um foco para o cursor, que ponto da bitmap ficará no 
+                  centro do mouse<BR>set_mouse_sprite_focus(16, 16);<BR><BR>// 
+                  deixa Allegro encarregada de desenhar sempre o cursor na 
+                  tela<BR>show_mouse(screen);</FONT><BR><BR>3- A terceira 
+                  maneira de desenhar o cursor do mouse na tela é a que você tem 
+                  total controle sobre onde, quando e como desenhar o cursor. 
+                  Para isso você deve desenhar uma imagem de sua preferência 
+                  (seja bitmap, rle ou qualquer outro), no local onde está o 
+                  cursor, através de mouse_x e mouse_y. Faça assim:<BR><BR><FONT 
+                  color=#008000>// Declara um variável qualquer como 
+                  BITMAP<BR>BITMAP *cursor;<BR><BR>// Cria uma bitmap a partir 
+                  da variável<BR>cursor = create_bitmap(32, 32);<BR><BR>// Limpa 
+                  a bitmap cursor<BR>clear(cursor); <BR><BR>// Desenha círculos 
+                  na bitmap cursor<BR>for (c=0; c&lt;8; c++)<BR>circle(cursor, 
+                  16, 16, c*2, c);</FONT><BR><BR><FONT color=#008000>// Agora na 
+                  função que desenha itens na tela, você desenha a bitmap 
+                  "cursor" na tela, na localização mouse_x e 
+                  mouse_y.<BR><BR>draw_sprite(tela, cursor, mouse_x, 
+                  mouse_y);</FONT><BR><BR><BR>O importante é compreender os 
+                  fundamentos do que foi feito, de modo que você possa implantar 
+                  isso em seu programa/jogo da maneira mais apropriada. </P>
+                  <P><FONT color=#00008b><STRONG></STRONG></FONT><FONT 
+                  color=#00008b><STRONG></STRONG></FONT></P>
+                  <H2>Sons</H2>
+                  <P><FONT color=#00008b><STRONG>Sons</STRONG></FONT></P>
+                  <P>Agora veremos como usar sons em seu programa/jogo, tanto 
+                  músicas de fundo quanto sons de efeitos.<BR><BR>1) Vamos 
+                  começar relembrando como iniciar a configuração para uso de 
+                  sons. Faça assim:<BR><BR><FONT 
+                  color=#008000>install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, 
+                  0);</FONT><BR><BR>Essa função retorna 0 se tudo deu certo, ou 
+                  outra coisa se não.<BR>Para configurar o som então faça 
+                  assim:<BR><BR><FONT color=#008000>som=TRUE;<BR>if 
+                  (install_sound(DIGI_AUTODETECT, MIDI_AUTODETECT, 0) != 0) 
+                  {<BR>som=FALSE;<BR>} <BR></FONT><BR>Nesse caso a variável som 
+                  terá valor FALSE caso não seja possível iniciar algum 
+                  dispositivo de som. Utilize isso para controlar o uso de sons 
+                  ou não em seu programa.<BR><BR>2) Agora que já sabemos iniciar 
+                  os dispositivos de som vamos aprender a tocar uma música de 
+                  fundo, para isso crie um arquivo dat, como descrito na Parte 
+                  B, e crie somente um objeto "MIDI file" e coloque nele algum 
+                  arquivo de música ".mid". Inicie o arquivo dat normalmente em 
+                  seu programa, e para tocar esse objeto midi use essa 
+                  função:<BR><BR><FONT color=#008000>play_midi(musica, 
+                  loop);</FONT><BR><BR>Sendo que musica é o objeto midi a ser 
+                  tocado, e loop indica se o toque será contínuo (1) ou não 
+                  (0).<BR>Então uma função capaz de tocar uma música poderia ser 
+                  escrita assim:<BR><BR><FONT 
+                  color=#008000>play_midi(datafile[musica].dat, 
+                  1);</FONT><BR><BR>Assim será tocado o arquivo musica 
+                  continuamente (1).<BR><BR>Se você quizer parar a música, basta 
+                  usar essa função:<BR><BR><FONT 
+                  color=#008000>stop_midi();</FONT><BR><BR>3) Mas nem só de 
+                  música vive um jogo, os usuários adoram efeitos especiais de 
+                  explosões, tiros, etc. Para isso você deve usar sons no 
+                  formato Wav ou Voc. Proceda da seguinte forma:<BR>* Obtenha um 
+                  arquivo .wav ou .voc que contenha um som de tiro, explosão ou 
+                  algo do gênero (Qualquer barulho serve).<BR>* Coloque no 
+                  arquivo dat do mesmo modo que a música, mas crie também um 
+                  objeto "Sample" e coloque nele algum arquivo de som ".wav" ou 
+                  ".Voc". Inicie o arquivo dat normalmente em seu programa, e 
+                  para tocar esse objeto sample use essa função:<BR><BR><FONT 
+                  color=#008000>play_sample(som, volume, caixa, frequencia, 
+                  loop);</FONT><BR><BR>Vamos às explicações:<BR>*som é o objeto 
+                  sample que contêm o som .wav ou .Voc;<BR>*volume é o volume 
+                  (hehe), de 0 a 255.<BR>*caixa é a direção na qual vai ser 
+                  tocado o som, de 0 a 255. Funciona assim, 128 é o meio, som 
+                  igual nas duas caixas; quanto mais próximo de 0, mais som na 
+                  caixa esquerda e menos som na caixa direito; quanto mais 
+                  próximo de 255, mas som na caixa direito e menos na 
+                  esquerda.<BR>*frequencia se refere à velocidade com que o som 
+                  é tocado. 1000 é o padrão gravado no som, 2000 o máximo de 
+                  velocidade e 0 o mínimo.<BR>*loop indica se a reprodução será 
+                  contínua (1) ou não (0).<BR><BR>Então faça assim:<BR><BR><FONT 
+                  color=#008000>play_sample(datafile[som].dat, 255, 128, 1000, 
+                  0);</FONT><BR><BR>Isso vai tocar o som do objeto chamado som 
+                  no arquivo dat, no volume máximo, igualmente nas duas caixas, 
+                  à velocidade padrão, e apenas uma vez.<BR>Simples não? Afinal 
+                  estamos usando Allegro.<BR><BR>Para parar um som que esteja em 
+                  reprodução proceda assim:<BR><BR><FONT 
+                  color=#008000>stop_sample(som);</FONT><BR><BR>Sendo que som é 
+                  o objeto que contêm o som e que está sendo tocado.<BR>Isso é 
+                  muito útil quando você toca um som continuamente, então para 
+                  fazê-lo parar essa função deve ser chamada.<BR>Outro ponto 
+                  interessante para quando você estiver um tocando um som 
+                  continuamente é que você pode alterar suas propriedades sem 
+                  ter que pará-lo, basta usar essa função:<BR><BR><FONT 
+                  color=#008000>adjust_sample(som, volume, caixa, frequencia, 
+                  loop);</FONT><BR><BR>Os parâmetros podem ser alterados da 
+                  mesma forma como são setados ao tocar o som, aqui você pode 
+                  aumentar ou diminuir o volume, mudar a direção, 
+                  etc.<BR><BR><BR>Logo eu continuo este guia com tudo (quase 
+                  tudo) que você precisa saber sobre Allegro, desde o Loop 
+                  básico do jogo com controle de tempo até manipulação de 
+                  transparências e luminosidade, pretendo também dar dicas de 
+                  como usar rede IPX para programação de games com uma outra 
+                  lib, a libnet, também de livre 
+              distribuição.<BR></P></DIV></TD></TR>
+              <TR>
+                <TD align=middle><BR>
+                  <HR>
+
+                  <TABLE cellSpacing=2 cellPadding=2 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=middle><A target=_blank 
+                        noHREF="javascript:Janela('../mailfriendart.asp?artigo={SCRIPT_NAME}&amp;ID=4',350,490);"><IMG 
+                        alt="Enviar para um Amigo" 
+                        src="GDJ  Artigos  API  Allegro  Guia básico de Allegro 3_12 para DJGPP_arquivos/botao_enviar.gif" 
+                        border=0 ALGIN="CENTER" VALIGN="TOP"><BR>Enviar para um 
+                        Amigo</A></TD>
+                      <TD align=middle><FONT class=info><A 
+                        href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_leitura_impressao.php?ID=4" 
+                        target=_blank><IMG alt="Versão para Impressão" 
+                        src="GDJ  Artigos  API  Allegro  Guia básico de Allegro 3_12 para DJGPP_arquivos/botao_impressora.gif" 
+                        border=0 ALGIN="CENTER" VALIGN="TOP"><BR>Versão para 
+                        Impressão</A></FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- AREA DE TEXTO - FIM --></TD></TR>
+        <TR>
+          <TD align=middle width="100%" HEIGTH="20"><B>
+            <DIV class=categoria_artigo>GDJ 2005 - Colaboração das Comunidades 
+            ArsLudica/PDJ 
+(2001/2003)</DIV></B></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>

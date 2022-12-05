@@ -1,0 +1,292 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0064)http://pjmoo.codigolivre.org.br/gdj/pag_artigo_leitura.php?id=58 -->
+<HTML><HEAD><TITLE>GDJ :: Artigos :: Programação :: C/C++ :: Métodos de Detecção de Colisão em 2D</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META 
+content="Site voltado para o Desenvolvimento de Jogos com material para criação e desenvolvimento de games para Computador" 
+name=description>
+<META 
+content="Artigos :: Programação :: C/C++ Métodos de Detecção de Colisão em 2D" 
+name=keywords><LINK 
+href="GDJ  Artigos  Programação  C-C++  Métodos de Detecção de Colisão em 2D_arquivos/artigo_estilo.css" 
+rel=stylesheet><LINK href="favicon.ico" rel="shortcut icon">
+<SCRIPT language=JavaScript 
+src="GDJ  Artigos  Programação  C-C++  Métodos de Detecção de Colisão em 2D_arquivos/site.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY>
+<TABLE height="100%" cellSpacing=1 cellPadding=8 width=760 align=center 
+bgColor=#a0a0b0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=site_area vAlign=top height="100%">
+      <TABLE height="100%" cellSpacing=0 cellPadding=1 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=middle width="100%" HEIGTH="260">
+            <TABLE width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=252><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/index.php"><IMG 
+                  src="GDJ  Artigos  Programação  C-C++  Métodos de Detecção de Colisão em 2D_arquivos/logo.gif" 
+                  width=252 border=0></A></TD>
+                <TD align=middle width="100%"><B>[</B><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_categoria.php?id=2">Artigos</A><B>] 
+                  [</B><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/sobre.php">Sobre</A><B>]</B></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD align=middle width="100%" height=20><A 
+            href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_lista.php?id=21"><B>
+            <DIV class=categoria_artigo>Artigos :: Programação :: 
+            C/C++</DIV></B></A></TD></TR>
+        <TR>
+          <TD vAlign=top width="100%" height="100%"><!-- AREA DE TEXTO - INICIO -->
+            <TABLE width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top align=middle>
+                  <H1>Métodos de Detecção de Colisão em 2D</H1><SUP>Autor : <A 
+                  href="mailto:lordvader@grupoatena.com.br">LordVader</A>&nbsp;&nbsp;</SUP> 
+                </TD></TR>
+              <TR>
+                <TD vAlign=top align=JUSTIFY width="100%">
+                  <DIV align=left><FONT face="verdana, tahoma, arial" size=2>
+                  <H3>Introdução</H3>
+                  <P>As rotinas de detecção de colisão são uma das coisas mais 
+                  comuns na programação de jogos, alias, não só comum, como 
+                  também fundamental. Praticamente todos os jogos que envolve 
+                  algum tipo de ação possuem estas rotinas.</P>
+                  <P>Existem vários tipos de detecção de colisão, umas mais 
+                  simples que envolve apenas alguns testes lógicos e matemáticos 
+                  e outras mais complexas que envolvem vários testes e cálculos, 
+                  principalmente se forem jogos 3D.</P>
+                  <P>Neste artigo vamos ver dois métodos bastante comuns para 
+                  jogos 2D, que é a detecção baseada em retângulos e a baseada 
+                  em círculos.</P>
+                  <P>No final do artigo você poderá baixar um arquivo compactado 
+                  com dois projetos do Dev-C++ 5 com os exemplos prontos, 
+                  utilizando a biblioteca Allegro. Lembrando que estarei 
+                  utilizando a linguagem C++ nos exemplos.</P></FONT>
+                  <H2>Detecção Baseada em Retângulos</H2><FONT 
+                  face="verdana, tahoma, arial" size=2>
+                  <H3>Detecção Baseada em Retângulos</H3>
+                  <P>A detecção de colisão baseada em retângulos é muito comum 
+                  em jogos 2D, pois muitas vezes utilizamos os próprios 
+                  <I>sprites</I> para efetuar os testes. Esta basicamente 
+                  consiste em efetuar quatro testes que no caso se referem aos 
+                  lados dos retângulos.</P>
+                  <P>Muitas vezes as pessoas se confundem com estes testes, pois 
+                  em geral eles expressam a falta da colisão. Isto é devido ao 
+                  fato de que na maioria dos casos é muito mais comum não haver 
+                  colisão do que haver, logo, a rotina se mostra mais eficaz 
+                  para estes casos. Todavia, independente de verificar a colisão 
+                  ou a falta dela, em ambos métodos o resultado final será o 
+                  mesmo.</P>
+                  <P>Digamos que a seguinte estrutura represente os nossos 
+                  objetos.</P></FONT><PRE><FONT color=#000080>struct RETANGULO
+
+{
+
+    int x, y; </FONT><FONT color=#008000>//posição x e y na tela</FONT><FONT color=#000080>
+
+    int l, a; </FONT><FONT color=#008000>//largura e altura do retângulo</FONT><FONT color=#000080>
+
+};</FONT></PRE><FONT face="verdana, tahoma, arial" size=2>
+                  <P>E a seguinte função é a responsável por detectar a colisão. 
+                  Retornando falso (false) se não houver colisão e verdadeiro 
+                  (true) se houver colisão.</P></FONT><PRE><FONT color=#000080>bool Colisao(RETANGULO &amp;obj1, RETANGULO &amp;obj2)
+
+{
+
+    if (obj1.x &gt; obj2.x + obj2.l) return false; </FONT><FONT color=#008000>//obj1 está a direita de obj2</FONT><FONT color=#000080>
+
+    if (obj1.y &gt; obj2.y + obj2.a) return false; </FONT><FONT color=#008000>//obj1 está abaixo de obj2</FONT><FONT color=#000080>
+
+    if (obj1.x + obj1.l &lt; obj2.x) return false; </FONT><FONT color=#008000>//obj1 está a esquerda de obj2</FONT><FONT color=#000080>
+
+    if (obj1.y + obj1.a &lt; obj2.y) return false; </FONT><FONT color=#008000>//obj1 está acima de obj2</FONT><FONT color=#000080>
+
+
+
+    return true; </FONT><FONT color=#008000>//existe colisão, ou seja, obj1 está tocando em obj2</FONT><FONT color=#000080>
+
+}</FONT></PRE><FONT face="verdana, tahoma, arial" size=2>
+                  <P>Esta construção da rotina é muito eficaz e clara, pois se 
+                  por exemplo o primeiro teste for verdadeiro, o que significa 
+                  que no plano x, o objeto 1 está a direita do objeto 2 mais a 
+                  sua largura, então cai fora dizendo que não há colisão, o 
+                  mesmo acontece para outros testes. Veja os exemplos 
+abaixo.</P>
+                  <TABLE border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=126 
+                        src="GDJ  Artigos  Programação  C-C++  Métodos de Detecção de Colisão em 2D_arquivos/colisao1.gif" 
+                        width=150 border=0></TD>
+                      <TD>obj1 está a direita de obj2<BR>obj1 não está abaixo 
+                        de obj2<BR>obj1 não está a esquerda de obj2<BR>obj1 não 
+                        está acima de obj2<BR>(não existe colisão devido ao 
+                        primeiro caso)</TD></TR>
+                    <TR>
+                      <TD><IMG height=126 
+                        src="GDJ  Artigos  Programação  C-C++  Métodos de Detecção de Colisão em 2D_arquivos/colisao2.gif" 
+                        width=150 border=0></TD>
+                      <TD>obj1 não está a direita de obj2<BR>obj1 está abaixo 
+                        de obj2<BR>obj1 não está a esquerda de obj2<BR>obj1 não 
+                        está acima de obj2<BR>(não existe colisão devido ao 
+                        segundo caso)</TD></TR>
+                    <TR>
+                      <TD><IMG height=126 
+                        src="GDJ  Artigos  Programação  C-C++  Métodos de Detecção de Colisão em 2D_arquivos/colisao3.gif" 
+                        width=150 border=0></TD>
+                      <TD>obj1 não está a direita de obj2<BR>obj1 não está 
+                        abaixo de obj2<BR>obj1 não está a esquerda de 
+                        obj2<BR>obj1 não está acima de obj2<BR>(existe colisão 
+                        pois nenhum dos testes foram 
+                  verdadeiros)</TD></TR></TBODY></TABLE></FONT>
+                  <H2>Detecção Baseada em Círculos</H2><FONT 
+                  face="verdana, tahoma, arial" size=2>
+                  <H3>Detecção Baseada em Círculos</H3>
+                  <P>A detecção de colisão baseada em círculos é menos comum, 
+                  penso eu que devido a falta de literatura. Todavia este método 
+                  é bastante simples, pois, basicamente consistem em efetuar um 
+                  cálculo matemático.</P>
+                  <P>Dependendo do estilo de jogo, este método fica mais mais 
+                  interessante, já que nem sempre os objetos ocupam toda a área 
+                  do retângulo.</P>
+                  <P>O cálculo utilizado é derivado do teorema de Pitágoras, ou 
+                  seja é o cálculo para verificar se um ponto está dentro da 
+                  circunferência, que é: x^2 + y^2 &lt;= raio^2. Porém se 
+                  quisermos verificar se uma circunferência está tocando a outra 
+                  então devemos utilizar: (x2-x1)^2 + (y2 -x1)^2 &lt;= (raio1 + 
+                  raio2)^2, onde x2 - x1 é a distância entre x1 e x2 no eixo x e 
+                  y2 - y1 é a distância entre y1 e y2 no eixo y.</P>
+                  <P>Abaixo segue a codificação</P></FONT><PRE><FONT color=#008000>//para utilizar a função pow(), que serve para </FONT><FONT color=#008000>elevar</FONT><FONT color=#008000>
+
+//um número ao outro. Ex: pow(3, 2) é igual a 9
+
+</FONT><FONT color=#000080>#include &lt;cmath&gt;
+
+struct CIRCULO
+
+{
+
+    int x, y; </FONT><FONT color=#008000>//posição x e y na tela</FONT><FONT color=#000080>
+
+    int raio; </FONT><FONT color=#008000>//raio da circunferência</FONT><FONT color=#000080>
+
+};
+
+
+
+bool Colisao(CIRCULO &amp;obj1, CIRCULO &amp;obj2)
+
+{
+
+    float qx, qy, qr; </FONT><FONT color=#008000>//para guardar o quadrado de x, y e raio</FONT><FONT color=#000080>
+
+
+
+    qx = pow(obj2.x - obj1.x, 2); </FONT><FONT color=#008000>//quadrado da distância em x</FONT><FONT color=#000080>
+
+    qy = pow(obj2.y - obj1.y, 2); </FONT><FONT color=#008000>//quadrado da distância em y</FONT><FONT color=#000080>
+
+    qr = pow(obj1.raio + obj2.raio, 2); </FONT><FONT color=#008000>//quadrado da soma dos raios</FONT><FONT color=#000080>
+
+
+
+    if (qx + qy &lt;= qr)
+
+        return true; </FONT><FONT color=#008000>//existe colisão</FONT><FONT color=#000080>
+
+
+
+    return false;
+
+}</FONT></PRE><FONT face="verdana, tahoma, arial" size=2>
+                  <P>Como podemos verificar, para haver a colisão, a soma dos 
+                  quadrados das distâncias tem que ser menor ou igual ao 
+                  quadrado da soma dos raios. Veja os exemplos abaixo.</P>
+                  <P>Digamos que os objetos possuem raio = 10; obj1.x = 20; 
+                  obj.y = 15.</P>
+                  <TABLE border=0>
+                    <TBODY>
+                    <TR>
+                      <TD><IMG height=126 
+                        src="GDJ  Artigos  Programação  C-C++  Métodos de Detecção de Colisão em 2D_arquivos/colisao4.gif" 
+                        width=150 border=0></TD></FONT>
+                      <TD><PRE><FONT size=2><FONT color=#000080>obj2.x = 38; obj2.y = 32;
+
+qx = pow(38 - 20, 2); </FONT><FONT color=#008000>// 324</FONT><FONT color=#000080>
+
+qy = pow(32 - 15, 2); </FONT><FONT color=#008000>// 289</FONT><FONT color=#000080>
+
+qr = pow(10 + 10, 2); </FONT><FONT color=#008000>// 400</FONT><FONT color=#000080>
+
+</FONT><FONT color=#008000>
+
+//Como 324 + 289 É MAIOR que 400 então
+
+//NÃO existe colisão</FONT><FONT color=#000080> </FONT></FONT></PRE></TD></TR><FONT 
+                    face="verdana, tahoma, arial" size=2>
+                    <TR>
+                      <TD><IMG height=126 
+                        src="GDJ  Artigos  Programação  C-C++  Métodos de Detecção de Colisão em 2D_arquivos/colisao5.gif" 
+                        width=150 border=0></TD></FONT>
+                      <TD><PRE><FONT size=2><FONT color=#000080>obj2.x = 35; obj2.y = 22;
+
+qx = pow(35 - 20, 2); </FONT><FONT color=#008000>// 225</FONT><FONT color=#000080>
+
+qy = pow(22 - 15, 2); </FONT><FONT color=#008000>// 49</FONT><FONT color=#000080>
+
+qr = pow(10 + 10, 2); </FONT><FONT color=#008000>// 400</FONT><FONT color=#000080>
+
+</FONT><FONT color=#008000>
+
+//Como 225 + 49 NÃO é maior que 400 então
+
+//EXISTE colisão</FONT></FONT></PRE></TD></TR></TBODY></TABLE>
+                  <H2>Considerações Finais</H2><FONT 
+                  face="verdana, tahoma, arial" size=2>
+                  <H3>Considerações Finais</H3></FONT>
+                  <P><FONT face="verdana, tahoma, arial" size=2>Como vimos 
+                  então, para detectar a colisão entre objetos retangulares, 
+                  basta fazer no máximo quatro testes simples para saber se há 
+                  ou não colisão. Já entre objetos circulares, o teste também é 
+                  simples e se resume em utilizar uma fórmula simples da 
+                  matemática. </FONT></P>
+                  <P><FONT face="verdana, tahoma, arial" size=2>Sem dúvida 
+                  alguma há outras formas de fazer tais testes, mas acredito que 
+                  em se tratando de duas dimensões, estes são os mais 
+                  eficazes.</FONT></P>
+                  <P><FONT face="verdana, tahoma, arial" size=2><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/site/tutorial/14112002_130633/colisao.zip">Pegue 
+                  aqui o código fonte e o executável do artigo.</A></FONT></P>
+                  <P align=right><FONT face="verdana, tahoma, arial" 
+                  size=2>Edison Henrique 
+                  Andreassy<BR>ehasis@mailbr.com.br</FONT></P></DIV></TD></TR>
+              <TR>
+                <TD align=middle><BR>
+                  <HR>
+
+                  <TABLE cellSpacing=2 cellPadding=2 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=middle><A target=_blank 
+                        noHREF="javascript:Janela('../mailfriendart.asp?artigo={SCRIPT_NAME}&amp;ID=58',350,490);"><IMG 
+                        alt="Enviar para um Amigo" 
+                        src="GDJ  Artigos  Programação  C-C++  Métodos de Detecção de Colisão em 2D_arquivos/botao_enviar.gif" 
+                        border=0 ALGIN="CENTER" VALIGN="TOP"><BR>Enviar para um 
+                        Amigo</A></TD>
+                      <TD align=middle><FONT class=info><A 
+                        href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_leitura_impressao.php?ID=58" 
+                        target=_blank><IMG alt="Versão para Impressão" 
+                        src="GDJ  Artigos  Programação  C-C++  Métodos de Detecção de Colisão em 2D_arquivos/botao_impressora.gif" 
+                        border=0 ALGIN="CENTER" VALIGN="TOP"><BR>Versão para 
+                        Impressão</A></FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- AREA DE TEXTO - FIM --></TD></TR>
+        <TR>
+          <TD align=middle width="100%" HEIGTH="20"><B>
+            <DIV class=categoria_artigo>GDJ 2005 - Colaboração das Comunidades 
+            ArsLudica/PDJ 
+(2001/2003)</DIV></B></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>

@@ -1,0 +1,6 @@
+
+Load_from: rawr-level.map
+Save_to: rawr-level.map
+Tileset: rawr-tileset.bmp
+W: 32
+H: 32

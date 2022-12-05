@@ -1,0 +1,708 @@
+<HTML>
+
+<HEAD><TITLE>As Fun&ccedil;&otilde;es do Allegro</TITLE></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" BGCOLOR="#FFFFFF">
+
+<P>Data da &uacute;ltima atualiza&ccedil;&atilde;o: 19/06/2002<BR>
+&copy;2002 - <A HREF="mailto:luisms@dcc.ufrj.br">Luis Menasch&eacute; Schechter</A><BR><BR>
+<I>Powered by vi</I></P>
+
+<H1>As Fun&ccedil;&otilde;es do Allegro</H1>
+
+<P><IMG SRC="y_bar.gif" WIDTH=100% ALT="---------------------------------------"></P>
+
+<OL>
+	<LI><A HREF="#bas">Fun&ccedil;&otilde;es B&aacute;sicas</A></LI>
+	<LI><A HREF="#video">Fun&ccedil;&otilde;es de V&iacute;deo</A></LI>
+	<OL>
+		<LI><A HREF="#video_bas">Fun&ccedil;&otilde;es B&aacute;sicas de V&iacute;deo</A></LI>
+		<LI><A HREF="#video_bmp">Fun&ccedil;&otilde;es de Bitmaps</A></LI>
+		<LI><A HREF="#video_pal">Fun&ccedil;&otilde;es de Paleta</A></LI>
+		<LI><A HREF="#video_font">Fun&ccedil;&otilde;es de Fonte</A></LI>
+	</OL>
+	<LI><A HREF="#keyboard">Fun&ccedil;&otilde;es de Teclado</A></LI>
+	<LI><A HREF="#mouse">Fun&ccedil;&otilde;es de Mouse</A></LI>
+	<LI><A HREF="#sound">Fun&ccedil;&otilde;es de Som</A></LI>
+	<LI><A HREF="#outras">Outras Fun&ccedil;&otilde;es</A></LI>
+	<OL>
+		<LI><A HREF="#outras_timer">Fun&ccedil;&otilde;es de Timer</A></LI>
+		<LI><A HREF="#outras_datafile">Fun&ccedil;&otilde;es de DataFile</A></LI>
+		<LI><A HREF="#outras_config">Fun&ccedil;&otilde;es de Arquivos de Configura&ccedil;&atilde;o</A></LI>
+	</OL>
+</OL>
+
+<P><IMG SRC="y_bar.gif" WIDTH=100% ALT="---------------------------------------"></P>
+
+<A NAME="bas">
+<H2>1. Fun&ccedil;&otilde;es B&aacute;sicas</H2>
+
+<A NAME="bas_allegro_init">
+<P><TT><B>int allegro_init();</B></TT><BR><BR>
+Inicializa a biblioteca Allegro. N&atilde;o faz muita coisa a n&atilde;o ser inicializar algumas vari&aacute;veis globais 
+e reservar mem&oacute;ria. Retorna zero em caso de sucesso (na verdade, n&atilde;o &eacute; necess&aacute;rio checar se a 
+fun&ccedil;&atilde;o foi bem sucedida, pois, ao ser usada no in&iacute;cio do programa, como &eacute; recomendada, ela 
+nunca falha). Deve ser a primeira fun&ccedil;&atilde;o do Allegro a ser chamada.</P>
+
+<A NAME="bas_allegro_exit">
+<P><TT><B>void allegro_exit();</B></TT><BR><BR>
+Fecha o Allegro. Isto inclui retornar ao modo texto e remover qualquer rotina de mouse, teclado ou temporizador que tenha 
+sido instalada. N&atilde;o h&aacute; necessidade (embora seja recomend&aacute;vel) de chamar explicitamente essa 
+fun&ccedil;&atilde;o pois, normalmente, isto &eacute; feito automaticamente quando o programa termina.</P>
+
+<P><IMG SRC="y_bar.gif" WIDTH=100% ALT="---------------------------------------"></P>
+
+<A NAME="video">
+<H2>2. Fun&ccedil;&otilde;es de V&iacute;deo</H2>
+
+<A NAME="video_bas">
+<H3>2.1. Fun&ccedil;&otilde;es B&aacute;sicas de V&iacute;deo</H3>
+
+<A NAME="video_bas_set_color_depth">
+<P><TT><B>void set_color_depth(int depth);</B></TT><BR><BR>
+Esta fun&ccedil;&atilde;o configura o n&uacute;mero de bits de cores (determinado pelo par&acirc;metro 
+<TT><B>depth</B></TT>) com que os gr&aacute;ficos ser&atilde;o exibidos. Os poss&iacute;veis valores para 
+<TT><B>depth</B></TT> s&atilde;o 8, 15, 16, 24 e 32. Esta fun&ccedil;&atilde;o deve ser chamada sempre <B>ANTES</B> da 
+fun&ccedil;&atilde;o <A HREF="#video_bas_set_gfx_mode"><TT>set_gfx_mode</TT></A>.</P>
+
+<A NAME="video_bas_set_gfx_mode">
+<P><TT><B>int set_gfx_mode(int card, int w, int h, int v_w, int v_h);</B></TT><BR><BR>
+Instrui o Allegro a mudar para o modo gr&aacute;fico. O par&acirc;metro <TT><B>card</B></TT> deve ser um dos seguintes 
+valores:<BR><BR></P>
+<CENTER><TABLE ROWS="10" COLS="2" WIDTH="70%" BORDER="1">
+<TR><TD WIDTH="35%">GFX_TEXT</TD><TD>retorna para o modo texto</TD></TR>
+<TR><TD WIDTH="35%">GFX_AUTODETECT</TD><TD>faz com que o Allegro escolha o driver gr&aacute;fico mais apropriado 
+(normalmente tem problemas com placas de v&iacute;deo mais recentes)</TD></TR>
+<TR><TD WIDTH="35%">GFX_VGA</TD><TD>modo VGA (320x200, 320x100, 160x120, 80x80)</TD></TR>
+<TR><TD WIDTH="35%">GFX_MODEX</TD><TD>uma vers&atilde;o planar do modo VGA (tweaked)</TD></TR>
+<TR><TD WIDTH="35%">GFX_VESA1</TD><TD>usa o driver VESA 1.x</TD></TR>
+<TR><TD WIDTH="35%">GFX_VESA2B</TD><TD>usa o driver VBE 2.0 em modo banked</TD></TR>
+<TR><TD WIDTH="35%">GFX_VESA2L</TD><TD>usa o driver VBE 2.0 com framebuffer linear</TD></TR>
+<TR><TD WIDTH="35%">GFX_VESA3</TD><TD>usa o driver VBE 3.0</TD></TR>
+<TR><TD WIDTH="35%">GFX_VBEAF</TD><TD>usa o acelerador de hardware API VBE/AF</TD></TR>
+<TR><TD WIDTH="35%">GFX_XTENDED</TD><TD>usa o driver 640x480 unchained</TD></TR>
+</TABLE></CENTER><BR>
+<P>Os par&acirc;metros <TT><B>w</B></TT> e <TT><B>h</B></TT> informam o numero de pixels existentes, respectivamente, em 
+uma linha e em uma coluna do v&iacute;deo. Ex: w=800 e h=600.</P>
+<P>Os par&acirc;metros <TT><B>v_w</B></TT> e <TT><B>v_h</B></TT> determinam o tamanho da tela virtual, ou seja, o tamanho 
+de uma pseudo-tela da qual pode-se visualizar apenas um peda&ccedil;o (determinado pelos par&acirc;metros 
+<TT><B>w</B></TT> e <TT><B>h</B></TT>). Para manipular telas virtuais, o Allegro oferece uma s&eacute;rie de 
+fun&ccedil;&otilde;es de rolamento da tela. Por&eacute;m, n&atilde;o as abordaremos. Para desabilitar este recurso, 
+atribua 0 (zero) a ambos os par&acirc;metros.</P>
+<P>O valor retornado por esta fun&ccedil;&atilde;o ser&aacute; menor do que 0 (zero) se, e somente se, um erro ocorrer. 
+&Eacute; interessante conferir o valor retornado por esta fun&ccedil;&atilde;o, de modo a escolher o driver de 
+v&iacute;deo adequado, caso o selecionado n&atilde;o funcione. Por exemplo:</P>
+<TT><OL>#define VIDEO_CARD GFX_VESA1<BR>
+#define TAM_X 800<BR>
+#define TAM_Y 600<BR>
+#define ALT_TAM_X 640<BR>
+#define ALT_TAM_Y 480<BR>
+<BR>
+(...)<BR>
+<BR>
+if (set_gfx_mode(VIDEO_CARD, TAM_X, TAM_Y, 0, 0) &lt; 0) {<BR>
+	<OL>if (set_gfx_mode(GFX_AUTODETECT, ALT_TAM_X, ALT_TAM_Y, 0, 0) &lt; 0) {<BR>
+		<OL>/* Mensagem de erro. */<BR>
+		<BR>
+		(...)<BR>
+		</OL><BR>
+	}</OL><BR>
+}<BR></OL></TT>
+
+<HR>
+
+<A NAME="video_bmp">
+<H3>2.2. Fun&ccedil;&otilde;es de Bitmaps</H3>
+
+O Allegro trata todos os gr&aacute;ficos que podem ser exibidos na tela ou carregados na mem&oacute;ria como 
+<U>bitmaps</U>. <U>Bitmaps</U> s&atilde;o matrizes de pixels, em que cada valor indica uma cor. Para declarar um bitmap, 
+digite:
+<TT><OL>BITMAP *nome_do_bitmap;</OL></TT>
+
+<A NAME="video_bmp_screen">
+<P><TT><B>extern BITMAP *screen;</B></TT><BR><BR>
+Para facilitar o uso de suas fun&ccedil;&otilde;es de manipula&ccedil;&atilde;o de bitmaps, o Allegro trata a tela 
+tamb&eacute;m como um bitmap, que &eacute; definido no arquivo <TT>allegro.h</TT> como <TT>screen</TT>.</P>
+
+<P>Assim, nas fun&ccedil;&otilde;es de manipula&ccedil;&atilde;o de bitmaps abaixo, sempre que desejarmos apresentar 
+diretamente na tela algum gr&aacute;fico, passaremos como argumento da fun&ccedil;&atilde;o a vari&aacute;vel 
+<TT>screen</TT>.</P>
+
+<A NAME="video_bmp_create_bitmap">
+<P><TT><B>BITMAP *create_bitmap(int width, int height);</B></TT><BR><BR>
+Cria um bitmap na mem&oacute;ria com largura <TT><B>width</B></TT> e altura <TT><B>height</B></TT>. O valor retornado 
+&eacute; o do endere&ccedil;o da &aacute;rea de mem&oacute;ria onde foi alocado o espa&ccedil;o; assim, caso a 
+fun&ccedil;&atilde;o retorne <TT><B>NULL</B></TT>, significa que n&atilde;o foi poss&iacute;vel alocar a mem&oacute;ria 
+necess&aacute;ria para armazenar o bitmap com as dimens&otilde;es requisitadas.</P>
+<P>&Eacute; importante notar que a fun&ccedil;&atilde;o apenas aloca o espa&ccedil;o, sem "limp&aacute;-lo", e, com isso, 
+&eacute; necess&aacute;rio usar a fun&ccedil;&atilde;o <A HREF="#video_bmp_clear"><TT>clear</TT></A> ou <A 
+HREF="#video_bmp_clear_to_color"><TT>clear_to_color</TT></A>, mencionadas adiante.</P>
+
+<A NAME="video_bmp_destroy_bitmap">
+<P><TT><B>void destroy_bitmap(BITMAP *bitmap);</B></TT><BR><BR>
+Destr&oacute;i o bitmap apontado por <TT><B>bitmap</B></TT>, liberando a mem&oacute;ria ocupada por este.</P>
+
+<A NAME="video_bmp_load_bitmap">
+<P><TT><B>BITMAP *load_bitmap(char *filename, PALETTE pal);</B></TT><BR><BR>
+Carrega um bitmap de um arquivo, cujo nome &eacute; <TT><B>filename</B></TT>, e carrega a paleta por ele usada no 
+endere&ccedil;o apontado por <TT><B>pal</B></TT>. O tipo do arquivo (BMP, LBM, PCX, TGA) &eacute; informado atrav&eacute;s 
+da extens&atilde;o do mesmo. Deve-se destruir o bitmap ap&oacute;s o uso com a fun&ccedil;&atilde;o <A 
+HREF="#video_bmp_destroy_bitmap"><TT>destroy_bitmap</TT></A>. A fun&ccedil;&atilde;o retorna um NULL se houver algum erro 
+no carregamento do arquivo.</P>
+
+<P><TT><B>int save_bitmap(char *filename, BITMAP *bmp, PALETTE pal);</B></TT><BR><BR>
+Salva o bitmap apontado por <TT><B>bmp</B></TT>, com a paleta apontada por <TT><B>pal</B></TT>, no arquivo de nome 
+<TT><B>filename</B></TT>. O tipo do arquivo (BMP, LBM, PCX, TGA) &eacute; informado atrav&eacute;s da extens&atilde;o do 
+mesmo. A fun&ccedil;&atilde;o retorna um n&uacute;mero diferente de zero caso ocorra algum erro.</P>
+
+<A NAME="video_bmp_clear">
+<P><TT><B>void clear(BITMAP *bitmap);</B></TT><BR><BR>
+Limpa o bitmap apontado por <TT><B>bitmap</B></TT> para a cor 0 (zero).</P>
+
+<A NAME="video_bmp_clear_to_color">
+<P><TT><B>void clear_to_color(BITMAP *bitmap, int color);</B></TT><BR><BR>
+Limpa o bitmap apontado por <TT><B>bitmap</B></TT> para a cor especificada por <TT><B>color</B></TT>.</P>
+
+<P><TT><B>void putpixel(BITMAP *bmp, int x, int y, int color);</B></TT><BR><BR>
+Desenha um ponto, no bitmap apontado por <TT><B>bmp</B></TT>, na coordenada (x, y), utilizando a cor especificada por 
+<TT><B>color</B></TT>.</P>
+
+<P><TT><B>int getpixel(BITMAP *bmp, int x, int y);</B></TT><BR><BR>
+Retorna o c&oacute;digo de cor da coordenada (x, y) no bitmap apontado por <TT><B>bmp</B></TT>; retorna -1 caso o ponto 
+esteja fora do bitmap.</P>
+
+<P><TT><B>void line(BITMAP *bmp, int x1, int y1, int x2, int y2, int color);</B></TT><BR><BR>
+Desenha uma linha, no bitmap apontado por <TT><B>bmp</B></TT>, da coordenada (<TT><B>x1</B></TT>, <TT><B>y1</B></TT>) 
+at&eacute; a coordenada (<TT><B>x2</B></TT>, <TT><B>y2</B></TT>), utilizando a cor especificada por 
+<TT><B>color</B></TT>.</P>
+
+<P><TT><B>void hline(BITMAP *bmp, int x1, int y, int x2, int color);</B></TT><BR><BR>
+Desenha uma linha horizontal, no bitmap apontado por <TT><B>bmp</B></TT>, da coordenada (<TT><B>x1</B></TT>, 
+<TT><B>y</B></TT>) at&eacute; a coordenada (<TT><B>x2</B></TT>, <TT><B>y</B></TT>), utilizando a cor especificada por 
+<TT><B>color</B></TT>.</P>
+
+<P><TT><B>void vline(BITMAP *bmp, int x, int y1, int y2, int color);</B></TT><BR><BR>
+Desenha uma linha vertical, no bitmap apontado por <TT><B>bmp</B></TT>, da coordenada (<TT><B>x</B></TT>, 
+<TT><B>y1</B></TT>) at&eacute; a coordenada (<TT><B>x</B></TT>, <TT><B>y2</B></TT>), utilizando a cor especificada por 
+<TT><B>color</B></TT>.</P>
+
+<A NAME="video_bmp_rect">
+<P><TT><B>void rect(BITMAP *bmp, int x1, int y1, int x2, int y2, int color);</B></TT><BR><BR>
+Desenha a borda de um ret&acirc;ngulo, no bitmap apontado por <TT><B>bmp</B></TT>, da coordenada (<TT><B>x1</B></TT>, 
+<TT><B>y1</B></TT>) at&eacute; a coordenada (<TT><B>x2</B></TT>, <TT><B>y2</B></TT>), utilizando a cor especificada por 
+<TT><B>color</B></TT>.</P>
+
+<P><TT><B>void rectfill(BITMAP *bmp, int x1, int y1, int x2, int y2, int color);</B></TT><BR><BR>
+Desenha um ret&acirc;ngulo, no bitmap apontado por <TT><B>bmp</B></TT>, da coordenada (<TT><B>x1</B></TT>, 
+<TT><B>y1</B></TT>) at&eacute; a coordenada (<TT><B>x2</B></TT>, <TT><B>y2</B></TT>), utilizando a cor especificada por 
+<TT><B>color</B></TT>.</P>
+
+<P><TT><B>void triangle(BITMAP *bmp, int x1, int y1, int x2, int y2, int x3, int y3, int color);</B></TT><BR><BR>
+Desenha um tri&acirc;ngulo, no bitmap apontado por <TT><B>bmp</B></TT>, com v&eacute;rtices (<TT><B>x1</B></TT>, 
+<TT><B>y1</B></TT>), (<TT><B>x2</B></TT>, <TT><B>y2</B></TT>) e (<TT><B>x3</B></TT>, <TT><B>y3</B></TT>).</P>
+
+<P><TT><B>void polygon(BITMAP *bmp, int vertices, int *points, int color);</B></TT><BR><BR>
+Desenha um pol&iacute;gono, no bitmap apontado por <TT><B>bmp</B></TT>, com <TT><B>vertices</B></TT> v&eacute;rtices 
+especificados pelo vetor <TT><B>points</TT></B> de pares de coordenadas (x, y), com cor <TT><B>color</B></TT>. Por 
+exemplo:</P>
+<TT><OL>int *pontos = { 1, 1, 2, 4, 6, 3, 5, 5 };<BR>
+BITMAP *bmp;<BR>
+<BR>
+(...)<BR>
+<BR>
+bmp = create_bitmap(50, 50);<BR>
+polygon(bmp, 4, pontos, 100);<BR>
+<BR>
+(...)<BR>
+<BR>
+</OL></TT>
+<P>ir&aacute; desenhar um quadril&aacute;tero com v&eacute;rtices (1, 1), (2, 4), (6, 3), (5, 5) no bitmap 
+<TT><B>bmp</B></TT> com cor 100.</P>
+
+<P><TT><B>void circle(BITMAP *bmp, int x, int y, int radius, int color);</B></TT><BR><BR>
+Desenha uma circunfer&ecirc;ncia, no bitmap apontado por <TT><B>bmp</B></TT>, com centro (<TT><B>x</B></TT>, 
+<TT><B>y</B></TT>) e raio <TT><B>radius</B></TT>, utilizando a cor especificada por <TT><B>color</B></TT>.</P>
+
+<P><TT><B>void circlefill(BITMAP *bmp, int x, int y, int radius, int color);</B></TT><BR><BR>
+Desenha um c&iacute;rculo, no bitmap apontado por <TT><B>bmp</B></TT>, com centro (<TT><B>x</B></TT>, <TT><B>y</B></TT>) e 
+raio <TT><B>radius</B></TT>, utilizando a cor especificada por <TT><B>color</B></TT>.</P>
+
+<A NAME="video_bmp_blit">
+<P><TT><B>void blit(BITMAP *source, BITMAP *dest, int source_x, int source_y, int dest_x, int dest_y, int width, int 
+height);</B></TT><BR><BR>
+Copia uma &aacute;rea retangular, de largura <TT><B>width</B></TT> e altura <TT><B>height</B></TT>, da coordenada 
+(<TT><B>source_x</B></TT>, <TT><B>source_y</B></TT>) do bitmap apontado por <TT><B>source</B></TT> para a coordenada 
+(<TT><B>dest_x</B></TT>, <TT><B>dest_y</B></TT>) do bitmap apontado por <TT><B>dest</B></TT>.
+
+<A NAME="video_bmp_draw_sprite">
+<P><TT><B>void draw_sprite(BITMAP *bmp, BITMAP *sprite, int x, int y);</B></TT><BR><BR>
+Copia inteiramente o bitmap apontado por <TT><B>sprite</B></TT> na coordenada (<TT><B>x</B></TT>, <TT><B>y</B></TT>) do 
+bitmap apontado por <TT><B>bmp</B></TT>. Equivalente a blit(<TT><B>sprite</B></TT>, <TT><B>bmp</B></TT>, 0, 0, x, y, 
+<TT><B>sprite-&gt;w</B></TT>, <TT><B>sprite-&gt;h</B></TT>).</P>
+<P>A grande diferen&ccedil;a entre as fun&ccedil;&otilde;es <A HREF="#video_bmp_blit"><TT>blit</TT></A> e 
+<TT>draw_sprite</TT> &eacute; que a primeira desenha o bitmap como ele &eacute;, enquanto a segunda trata como 
+transparente as cores 0 (normalmente preto, no modo 8 bits) e rosa claro (nos outros modos).</P>
+
+<HR>
+
+<A NAME="video_pal">
+<H3>2.3. Fun&ccedil;&otilde;es de Paleta</H3>
+
+Todas as fun&ccedil;&otilde;es de desenho do Allegro usam par&acirc;metros inteiros para representar cores. No modo de 256 
+cores, esses valores correspondem a &iacute;ndices de um vetor, onde cada elemento &eacute; uma estrutura que 
+cont&eacute;m as intensidades de vermelho, verde e azul de cada uma das 256 cores poss&iacute;veis. Este vetor &eacute; 
+denominado paleta. Para declar&aacute;-la, digite:
+<TT><OL>PALETTE nome_da_paleta;</OL></TT>
+
+O Allegro define algumas paletas padr&otilde;es, que podem ser utilizadas pelo usu&aacute;rio para determinadas 
+situa&ccedil;&otilde;es. S&atilde;o elas:
+
+<P><TT><B>extern PALETTE desktop_palette;</B></TT><BR><BR>
+Esta paleta era utilizada pelo Atari ST. &Eacute; utilizada pelos programas de teste e exemplo do Allegro e &eacute; a 
+paleta padr&atilde;o utilizada pelo mesmo, caso nenhuma outra paleta seja setada.</P>
+
+<A NAME="video_pal_black_palette">
+<P><TT><B>extern PALETTE black_palette;</B></TT><BR><BR>
+Nesta paleta, todas as 256 cores poss&iacute;veis correspondem a cor preta. Esta paleta &eacute; utilizada pelas 
+func&otilde;es de <I>fade</I>, e pode ser utilizada tamb&eacute;m pelo usu&aacute;rio em determinadas 
+situa&ccedil;&otilde;es, em conjunto com a fun&ccedil;&atilde;o <A 
+HREF="#video_pal_set_palette"><TT>set_palette</TT></A>.</P>
+
+<A NAME="video_pal_set_palette">
+<P><TT><B>void set_palette(PALETTE p);</B></TT><BR><BR>
+Seleciona a paleta especificada por <TT><B>p</B></TT> como a paleta a ser utilizada.</P>
+
+<P><TT><B>void set_palette_range(PALETTE p, int from, int to, int vsync);</B></TT><BR><BR>
+Seleciona, da paleta especificada por <TT><B>p</B></TT>, os &iacute;ndices de <TT><B>from</B></TT> at&eacute; 
+<TT><B>to</B></TT>. Se <TT><B>vsync</B></TT> tiver um valor verdadeiro, o Allegro espera pelo retra&ccedil;o vertical 
+antes de selecionar a paleta. Tem o mesmo efeito da fun&ccedil;&atilde;o <A 
+HREF="#video_pal_set_palette"><TT>set_palette</TT></A>, com a diferen&ccedil;a que apenas um trecho da paleta &eacute; 
+selecionado para uso.</P>
+
+<P><TT><B>void get_palette(PALETTE p);</B></TT><BR><BR>
+Guarda a paleta utilizada atualmente em <TT><B>p</B></TT>.</P>
+
+<P><TT><B>void get_palette_range(PALETTE p, int from, int to);</B></TT><BR><BR>
+Guarda parte da paleta utilizada atualmente em <TT><B>p</B></TT>, com &iacute;ndices de <TT><B>from</B></TT> at&eacute; 
+<TT><B>to</B></TT>.</P>
+
+<A NAME="video_pal_fade_in">
+<P><TT><B>void fade_in(PALETTE p, int speed);</B></TT><BR><BR>
+Altera gradualmente as cores da paleta atual, desde a <A HREF="#video_pal_black_palette"><TT>black_palette</TT></A> 
+at&eacute; a paleta <TT><B>p</B></TT>, com velocidade <TT><B>speed</B></TT> (1 - devagar, 64 - muito r&aacute;pido).</P>
+
+<A NAME="video_pal_fade_out">
+<P><TT><B>void fade_out(int speed);</B></TT><BR><BR>
+Altera gradualmente as cores da plaheta atual at&eacute; atingir a <A 
+HREF="#video_pal_black_palette"><TT>black_palette</TT></A>, com velocidade <TT><B>speed</B></TT> (1 - devagar, 64 - muito 
+r&aacute;pido).</P>
+
+<P><TT><B>void fade_in_range(PALETTE p, int speed, int from, int to);</B></TT><BR><BR>
+Altera gradualmente as cores da paleta atual, dos &iacute;ndices de <TT><B>from</B></TT> at&eacute; <TT><B>to</B></TT>, 
+desde a <A HREF="#video_pal_black_palette"><TT>black_palette</TT></A> at&eacute; a paleta <TT><B>p</B></TT>, com 
+velocidade <TT><B>speed</B></TT> (1 - devagar, 64 - muito r&aacute;pido).</P>
+
+<P><TT><B>void fade_from(PALETTE source, PALETTE dest, int speed);</B></TT><BR><BR>
+Atlera gradualmente as cores da paleta atual, desde a paleta <TT><B>source</B></TT> at&eacute; a paleta 
+<TT><B>dest</B></TT>, com velocidade <TT><B>speed</B></TT> (1 - devagar, 64 - muito r&aacute;pido).</P>
+
+<HR>
+
+<A NAME="video_font">
+<H3>2.4. Fun&ccedil;&otilde;es de Fonte</H3>
+
+Assim como para os bitmaps e paletas, o Allegro define um tipo FONT, que cont&eacute;m a descri&ccedil;&atilde;o de fontes 
+que podem ser desenhadas na tela. Para declarar uma fonte, digite:
+<TT><OL>FONT *nome_da_fonte;</OL></TT>
+
+<P><TT><B>extern FONT *font;</B></TT><BR><BR>
+Esta fonte &eacute; utilizada como padr&atilde;o para determinadas tarefas do Allegro, e pode ser alterada para que o 
+Allegro utilize uma nova fonte nessas fun&ccedil;&otilde;es.</P>
+
+<A NAME="video_font_text_mode">
+<P><TT><B>void text_mode(int mode);</B></TT><BR><BR>
+Altera o modo de desenho do texto. Se <TT><B>mode</B></TT> for 0 (zero) ou positivo, o fundo dos caracteres ter&aacute; a 
+cor de c&oacute;digo <TT><B>mode</B></TT>. Caso seja negativo, o fundo ser&aacute; transparente. O padr&atilde;o &eacute; 
+0 (zero).</P>
+
+<A NAME="video_font_textout">
+<P><TT><B>void textout(BITMAP *bmp, FONT *f, unsigned char *s, int x, int y, int color);</B></TT><BR><BR>
+Escreve a string <TT><B>s</B></TT>, na coordenada (<TT><B>x</B></TT>, <TT><B>y</B></TT>) do bitmap apontado por 
+<TT><B>bmp</B></TT>, utilizando a fonte apontada por <TT><B>f</B></TT> e a cor <TT><B>color</B></TT>. Se o valor de 
+<TT><B>color</B></TT> for -1, a cor utilizada ser&aacute; a cor original do bitmap da fonte.</P>
+
+<A NAME="video_font_textout_centre">
+<P><TT><B>void textout_centre(BITMAP *bmp, FONT *f, unsigned char *s, int x, int y, int color);</B></TT><BR><BR>
+Semelhante a fun&ccedil;&atilde;o <A HREF="#video_font_textout"><TT>textout</TT></A>, por&eacute;m, imprime a string 
+<TT><B>s</B></TT> centralizada na coordenada especificada.</P>
+
+<A NAME="video_font_textprintf">
+<P><TT><B>void textprintf(BITMAP *bmp, FONT *f, int x, int y, int color, char *fmt, ...);</B></TT><BR><BR>
+Escreve um texto formatado (no mesmo estilo da fun&ccedil;&atilde;o printf) no bitmap apontado por <TT><B>bmp</B></TT>, na 
+coordenada (<TT><B>x</B></TT>, <TT><B>y</B></TT>), utilizando a fonte apontada por <TT><B>f</B></TT> e a cor 
+<TT><B>color</B></TT>.</P>
+
+<A NAME="video_font_textprintf_centre">
+<P><TT><B>void textprintf_centre(BITMAP *bmp, FONT *f, int x, int y, int color, char *fmt, ...);</B></TT><BR><BR>
+Semelhante a fun&ccedil;&atilde;o <A HREF="#video_font_textprintf"><TT>textprintf</TT></A>, por&eacute;m, imprime o texto 
+formatado centralizado na coordenada especificada.</P>
+
+<P><IMG SRC="y_bar.gif" WIDTH=100% ALT="---------------------------------------"></P>
+
+<A NAME="keyboard">
+<H2>3. Fun&ccedil;&otilde;es de Teclado</H2>
+
+<A NAME="keyboard_install_keyboard">
+<P><TT><B>int install_keyboard();</B></TT><BR><BR>
+Inicializa o teclado para ser usado pelo Allegro. Deve-se chamar esta fun&ccedil;&atilde;o antes de qualquer outra 
+fun&ccedil;&atilde;o de teclado. Ap&oacute;s a chamada desta fun&ccedil;&atilde;o, n&atilde;o se pode mais utilizar as 
+fun&ccedil;&otilde;es padr&otilde;es de acesso ao teclado (scanf, getchar, etc.). Para usar as fun&ccedil;&otilde;es 
+padr&otilde;es de acesso ao teclado novamente utilize a fun&ccedil;&atilde;o <A 
+HREF="#keyboard_remove_keyboard"><TT>remove_keyboard</TT></A>.</P>
+
+<A NAME="keyboard_remove_keyboard">
+<P><TT><B>void remove_keyboard();</B></TT><BR><BR>
+Devolve o controle do teclado a BIOS. Faz o contr&aacute;rio da fun&ccedil;&atilde;o <A 
+HREF="#keyboard_install_keyboard"><TT>install_keyboard</TT></A>. Normalmente, n&atilde;o &eacute; necess&aacute;rio chamar 
+esta fun&ccedil;&atilde;o, pois a fun&ccedil;&atilde;o <A HREF="#bas_allegro_exit"><TT>allegro_exit</TT></A> j&aacute; o 
+faz.</P>
+
+<A NAME="keyboard_clear_keybuf">
+<P><TT><B>void clear_keybuf();</B></TT><BR><BR>
+Limpa o <I>buffer</I> do teclado. Qualquer tecla anteriormente pressionada que ainda n&atilde;o tenha sido lida pela 
+fun&ccedil;&atilde;o <A HREF="#keyboard_readkey"><TT>readkey</TT></A> ser&aacute; perdida.</P>
+
+<A NAME="keyboard_keypressed">
+<P><TT><B>int keypressed();</B></TT><BR><BR>
+Retorna verdadeiro caso alguma tecla tenha sido pressionada e esteja no <I>buffer</I> a espera da leitura. Equivalente a 
+fun&ccedil;&atilde;o kbhit da conio.</P>
+
+<A NAME="keyboard_readkey">
+<P><TT><B>int readkey();</B></TT><BR><BR>
+Retorna o pr&oacute;ximo caractere do <I>buffer</I> do teclado. Se o <I>buffer</I> estiver vazio, a fun&ccedil;&atilde;o 
+espera at&eacute; que uma tecla seja pressionada. O byte baixo do valor retornado cont&eacute;m o c&oacute;digo ASCII do 
+caracter, enquanto o byte alto retorna o scancode da tecla. O scancode n&atilde;o &eacute; afetado pelas teclas SHIFT, 
+CTRL e ALT. O c&oacute;digo ASCII &eacute; afetado normalmente pelas teclas SHIFT e CTRL (a tecla SHIFT altera o caso, 
+enquanto a tecla CTRL retorna a posi&ccedil;&atilde;o da tecla pressionada simultaneamente). Ao pressionar a tecla ALT o 
+c&oacute;digo ASCII retornado &eacute; 0 (zero), retornando apenas o scancode (ainda no byte alto). Por exemplo:</P>
+<TT><OL>/* Pelo codigo ASCII */<BR>
+if ((readkey() &amp; 0xFF) == 'd')<BR>
+	<OL>printf("Voce pressionou a tecla 'd'\n");</OL><BR>
+<BR>
+/* Pelo scancode */<BR>
+if ((readkey() &gt;&gt; 8) == KEY_SPACE)<BR>
+	<OL>printf("Voce pressionou a tecla Espa&ccedil;o\n");</OL><BR>
+<BR>
+/* Pressionando CTRL+[letra] */<BR>
+if ((readkey() &amp; 0xFF) == 3)<BR>
+	<OL>printf("Voce pressionou CTRL+C\n");</OL><BR>
+<BR>
+/* Pressionando ALT+[letra] */<BR>
+if (readkey() == (KEY_X &lt;&lt; 8))<BR>
+	<OL>printf("Voce pressionou ALT+X\n");</OL><BR>
+</OL></TT>
+
+<P><TT><B>extern volatile char key[KEY_MAX];</B></TT><BR><BR>
+Vetor de <TT><B>KEY_MAX</B></TT> posi&ccedil;&otilde;es, cada uma representando uma das teclas do teclado. Caso o valor de 
+key[KEY_TECLA] seja verdadeiro, a tecla est&aacute; sendo pressionada. Por exemplo:</P>
+<TT><OL>if (key[KEY_D])<BR>
+	<OL>printf("Voce pressionou a tecla 'D'\n");</OL><BR>
+<BR>
+if (key[KEY_SPACE])<BR>
+	<OL>printf("Voce pressionou a tecla Espa&ccedil;o\n");</OL><BR>
+<BR>
+if ((key[KEY_CTRL]) && (key[KEY_C]))<BR>
+	<OL>printf("Voce pressionou CTRL+C\n");</OL><BR>
+<BR>
+if ((key[KEY_ALT] && (key[KEY_X]))<BR>
+	<OL>printf("Voce pressionou ALT+X\n");</OL><BR>
+</OL></TT>
+<P>Note que key[KEY_TECLA] apenas informa o estado da tecla, n&atilde;o espera pelo pressionamento da mesma.</P>
+
+<P><IMG SRC="y_bar.gif" WIDTH=100% ALT="---------------------------------------"></P>
+
+<A NAME="mouse">
+<H2>4. Fun&ccedil;&otilde;es de Mouse</H2>
+
+<A NAME="mouse_install_mouse">
+<P><TT><B>int install_mouse();</B></TT><BR><BR>
+Inicializa o mouse para ser usado pelo Allegro. &Eacute; necess&aacute;rio chamar esta fun&ccedil;&atilde;o antes de 
+qualquer outra fun&ccedil;&atilde;o de mouse. Retorna -1 se ocorrer algum erro; caso contr&aacute;rio, retorna o 
+n&uacute;mero de bot&otilde;es do mouse.</P>
+
+<P><TT><B>void remove_mouse();</B></TT><BR><BR>
+Remove o controle do Allegro sobre o mouse. Normalmente, n&atilde;o &eacute; necess&aacute;rio chamar esta 
+fun&ccedil;&atilde;o, pois a fun&ccedil;&atilde;o <A HREF="#bas_allegro_exit"><TT>allegro_exit</TT></A> j&aacute; o 
+faz.</P>
+
+<A NAME="mouse_mouse_x_y">
+<P><TT><B>extern volatile int mouse_x;</B></TT><BR>
+<TT><B>extern volatile int mouse_y;</B></TT><BR><BR>
+Guardam os valores da posi&ccedil;&atilde;o x e y do cursor do mouse.</P>
+
+<A NAME="mouse_mouse_b">
+<P><TT><B>extern volatile int mouse_b;</B></TT><BR><BR>
+Guarda o estado atual do pressionamento dos bot&otilde;es do mouse. O bit 0 de <TT><B>mouse_b</B></TT> guarda o estado do 
+bot&atilde;o esquerdo, o bit 1 o do bot&atilde;o esquerdo, e o bit 2 o do bot&atilde;o do meio.</P>
+<TT><OL>if (mouse_b &amp; 1)<BR>
+	<OL>printf("Bot&atilde;o esquerdo do mouse pressionado\n");</OL><BR>
+<BR>
+if (!(mouse_b &amp; 2))<BR>
+	<OL>printf("Bot&atilde;o direito do mouse n&atilde;o pressionado\n");</OL><BR>
+<BR>
+if (mouse_b &amp; 4)<BR>
+	<OL>printf("Bot&atilde;o do meio do mouse pressionado\n");</OL><BR>
+</OL></TT>
+
+<P><TT><B>void set_mouse_range(int x1, int y1, int x2, int y2);</B></TT><BR><BR>
+Define a &aacute;rea onde o ponteiro do mouse pode se locomover na tela. A &aacute;rea &eacute; definida pelo 
+ret&acirc;ngulo de coordenada superior esquerda (<TT><B>x1</B></TT>, <TT><B>y1</B></TT>) e coordenada inferior direita 
+(<TT><B>x2</B></TT>, <TT><B>y2</B></TT>).</P>
+
+<P><TT><B>void position_mouse(int x, int y);</B></TT><BR><BR>
+Move o ponteiro do mouse para a coordenada (<TT><B>x</B></TT>, <TT><B>y</B></TT>).</P>
+
+<A NAME="mouse_show_mouse">
+<P><TT><B>void show_mouse(BITMAP *bmp);</B></TT><BR><BR>
+Mostra o ponteiro do mouse no bitmap apontado por <TT><B>bmp</B></TT>. Funciona apenas se o <A 
+HREF="#outras_timer">timer</A> estiver instalado. Para esconder o ponteiro do mouse, passe o valor <TT><B>NULL</B></TT> 
+como argumento. N&atilde;o &eacute; recomend&aacute;vel desenhar na tela enquanto o ponteiro do mouse estiver 
+vis&iacute;vel, pois isto pode gerar manchas provocadas pelo rastro do mouse. Tamb&eacute;m n&atilde;o &eacute; uma boa 
+id&eacute;ia esconder o mouse, desenhar na tela e exibir o mouse novamente, pois isto faz com que o mouse fique "piscando" 
+na tela. O ideal &eacute; que sejam utilizadas t&eacute;cnicas como o double buffering.</P>
+
+<P><IMG SRC="y_bar.gif" WIDTH=100% ALT="---------------------------------------"></P>
+
+<A NAME="sound">
+<H2>5. Fun&ccedil;&otilde;es de Som</H2>
+
+<A NAME="sound_install_sound">
+<P><TT><B>int install_sound(int digi_card, int midi_card, char *cfg_path);</B></TT><BR><BR>
+Inicializa o m&oacute;dulo de som para ser usado com o Allegro. Os par&acirc;metros <TT><B>digi_card</B></TT> e 
+<TT><B>midi_card</B></TT> referem-se, respectivamente, aos controladores de som digital e MIDI.</P>
+<P>O valor de <TT><B>digi_card</B></TT> deve ser um dos abaixo:</P>
+<CENTER><TABLE ROWS="10" COLS="2" WIDTH="70%" BORDER="1">
+<TR><TD>DIGI_AUTODETECT</TD><TD>instrui o Allegro a escolher o driver de som</TD></TR>
+<TR><TD>DIGI_NONE</TD><TD>sem som digital</TD></TR>
+<TR><TD>DIGI_SB</TD><TD>auto-detecta placas do tipo Sound Blaster</TD></TR>
+<TR><TD>DIGI_SB10</TD><TD>Sound Blaster 1.0 (8 bit mono)</TD></TR>
+<TR><TD>DIGI_SB15</TD><TD>Sound Blaster 1.5 (8 bit mono)</TD></TR>
+<TR><TD>DIGI_SB20</TD><TD>Sound Blaster 2.0 (8 bit mono)</TD></TR>
+<TR><TD>DIGI_SBPRO</TD><TD>Sound Blaster Pro (8 bit stereo)</TD></TR>
+<TR><TD>DIGI_SB16</TD><TD>Sound Blaster 16 (16 bit stereo)</TD></TR>
+<TR><TD>DIGI_AUDIODRIVE</TD><TD>ESS AudioDrive</TD></TR>
+<TR><TD>DIGI_SOUNDSCAPE</TD><TD>Ensoniq Soundscape</TD></TR>
+</TABLE></CENTER>
+<P>O valor de <TT><B>midi_card</B></TT> deve ser um dos abaixo:</P>
+<CENTER><TABLE ROWS="10" COLS="2" WIDTH="70%" BORDER="1">
+<TR><TD>MIDI_AUTODETECT</TD><TD>instrui o Allegro a escolher o driver de MIDI</TD></TR>
+<TR><TD>MIDI_NONE</TD><TD>sem som MIDI</TD></TR>
+<TR><TD>MIDI_ADLIB</TD><TD>auto-detecta sintetizadores do tipo Adlib ou Sound Blaster FM</TD></TR>
+<TR><TD>MIDI_OPL2</TD><TD>sintetizador OPL2 (mono, usado em Adlib e Sound Blaster)</TD></TR>
+<TR><TD>MIDI_2XOPL2</TD><TD>sintetizador OPL2 dual (stereo, usado em Sound Blaster Pro-I)</TD></TR>
+<TR><TD>MIDI_OPL3</TD><TD>sintetizador OPL3 (stereo, usado em Sound Blaster Pro-II e acima)</TD></TR>
+<TR><TD>MIDI_SB_OUT</TD><TD>interface MIDI Sound Blaster</TD></TR>
+<TR><TD>MIDI_MPU</TD><TD>interface MIDI MPU-401</TD></TR>
+<TR><TD>MIDI_DIGMID</TD><TD>sample-based software wavetable player</TD></TR>
+<TR><TD>MIDI_AWE32</TD><TD>AWE32 (EMU8000 chip)</TD></TR>
+</TABLE></CENTER>
+<P>O par&acirc;metro <TT><B>cfg_path</B></TT> existe apenas para compatibilidade com vers&otilde;es anteriores do Allegro. 
+Ignore-o passando o valor <TT><B>NULL</B></TT>.</P>
+
+<P><TT><B>void remove_sound();</B></TT><BR><BR>
+Remove o m&oacute;dulo de som. Normalmente n&atilde;o &eacute; necess&aacute;rio chamar esta fun&ccedil;&atilde;o, pois a 
+fun&ccedil;&atilde;o <A HREF="#bas_allegro_exit"><TT>allegro_exit</TT></A> j&aacute; o faz.</P>
+
+<A NAME="sound_load_midi">
+<P><TT><B>MIDI *load_midi(char *filename);</B></TT><BR><BR>
+Carrega um arquivo MIDI, retornando um ponteiro para uma estrutura <TT><B>MIDI</B></TT>. Caso ocorra um erro, o valor 
+<TT><B>NULL</B></TT> ser&aacute; retornado.</P>
+
+<A NAME="sound_play_midi">
+<P><TT><B>int play_midi(MIDI *midi, int loop);</B></TT><BR><BR>
+Toca a MIDI especificada por <TT><B>midi</B></TT>, parando de tocar qualquer m&uacute;sica que estivesse sendo tocada 
+anteriormente. Se a flag <TT><B>loop</B></TT> estiver setada, a m&uacute;sica ser&aacute; tocada at&eacute; que a 
+fun&ccedil;&atilde;o seja novamente chamada para tocar outra m&uacute;sica, ou a fun&ccedil;&atilde;o <A 
+HREF="#sound_stop_midi"><TT>stop_midi</TT></A> seja chamada. Caso a flag <TT><B>loop</B></TT> n&atilde;o esteja setada, a 
+m&uacute;sica ir&aacute; parar de tocar ao alcan&ccedil;ar o final do MIDI. Retorna um valor diferente de zero se um erro 
+ocorrer.</P>
+
+<A NAME="sound_stop_midi">
+<P><TT><B>void stop_midi();</B></TT><BR><BR>
+Faz parar de tocar qualquer m&uacute;sica que esteja sendo tocada. Tem o mesmo efeito da instru&ccedil;&atilde;o 
+<TT><B>play_midi(NULL, FALSE)</B></TT>.</P>
+
+<A NAME="sound_load_sample">
+<P><TT><B>SAMPLE *load_sample(char *filename);</B></TT><BR><BR>
+Carrega um arquivo sample, retornando um ponteiro para uma estrutura <TT><B>SAMPLE</B></TT>. Caso ocorra um erro, o valor 
+<TT><B>NULL</B></TT> ser&aacute; retornado. Aceita arquivos do tipo WAV (mono e stereo) e VOC (mono) em formato 8 e 16 
+bits.</P>
+
+<A NAME="sound_play_sample">
+<P><TT><B>int play_sample(SAMPLE *spl, int vol, int pam, int freq, int loop);</B></TT><BR><BR>
+Inicializa o sample especificado por <TT><B>spl</B></TT> utilizando determinados argumentos. O argumento 
+<TT><B>vol</B></TT> determina o volume (valores de 0 at&eacute; 255), o argumento <TT><B>pan</B></TT> determina o 
+balan&ccedil;o (valores de 0 at&eacute; 255), o argumento <TT><B>freq</B></TT> determina a frequ&ecirc;ncia com que o 
+sample &eacute; tocado (o valor 1000 faz com que o sample seja tocado na mesma frequ&ecirc;ncia que foi gravado; o valor 
+2000 &eacute; o dobro da frequ&ecirc;ncia, etc.) e o argumento <TT><B>loop</B></TT> informa se o Allegro deve repetir o 
+sample infinitamente ou n&atilde;o.</P>
+
+<A NAME="sound_stop_sample">
+<P><TT><B>void stop_sample(SAMPLE *spl);</B></TT><BR><BR>
+Faz parar de tocar o sample especificado por <TT><B>spl</B></TT>. &Eacute; necess&aacute;rio chamar esta 
+fun&ccedil;&atilde;o caso o sample tenha sido incializado com a flag <TT><B>loop</B></TT> setada.</P>
+
+<P><IMG SRC="y_bar.gif" WIDTH=100% ALT="---------------------------------------"></P>
+
+<A NAME="outras">
+<H2>6. Outras Fun&ccedil;&otilde;es</H2>
+
+<A NAME="outras_timer">
+<H3>6.1. Fun&ccedil;&otilde;es de Timer</H3>
+
+<A NAME="outras_timer_install_timer">
+<P><TT><B>int install_timer();</B></TT><BR><BR>
+Inicializa o temporizador do Allegro. &Eacute; necess&aacute;rio chamar esta fun&ccedil;&atilde;o antes de usar qualquer 
+fun&ccedil;&atilde;o de timer, bem como antes de mostrar o ponteiro do mouse ou tocar uma MIDI.</P>
+
+<P><TT><B>void remove_timer();</B></TT><BR><BR>
+Remove o temporizador do Allegro. Normalmente, n&atilde;o &eacute; necess&aacute;rio chamar esta fun&ccedil;&atilde;o, 
+pois a fun&ccedil;&atilde;o <A HREF="#bas_allegro_exit"><TT>allegro_exit</TT></A> j&aacute; o faz.</P>
+
+<P><TT><B>int install_int(void (*proc)(), int speed);</B></TT><BR><BR>
+Inicializa um temporizador para que, a cada intervalo de <TT><B>speed</B></TT> milisegundos, a fun&ccedil;&atilde;o 
+<TT><B>proc</B></TT> seja chamada. Caso a fun&ccedil;&atilde;o install_int seja chamada antes da 
+inicializa&ccedil;&atilde;o do temporizador do Allegro, a fun&ccedil;&atilde;o <A 
+HREF="#outras_timer_install_timer"><TT>install_timer</TT></A> ser&aacute; automaticamente chamada.</P>
+
+<P><TT><B>void remove_int(void (*proc)());</B></TT><BR><BR>
+Remove o temporizador que chama a fun&ccedil;&atilde;o <TT><B>proc</B></TT>. A remo&ccedil;&atilde;o dos temporizadores 
+&eacute; feita automaticamente pela fun&ccedil;&atilde;o <A HREF="#bas_allegro_exit"><TT>allegro_exit</TT></A>.</P>
+
+<P><TT><B>LOCK_VARIABLE(<I>variavel</I>)<BR>
+LOCK_FUNCTION(<I>funcao</I>)<BR>
+END_OF_FUNCTION(<I>funcao</I>)</B></TT><BR><BR>
+Essas tr&ecirc;s macros s&atilde;o necess&aacute;rias quando utiliza-se temporizadores. As macros 
+<TT><B>LOCK_VARIABLE</B></TT> e <TT><B>LOCK_FUNCTION</B></TT> bloqueiam a &aacute;rea de mem&oacute;ria ultilizada pela 
+vari&aacute;vel ou fun&ccedil;&atilde;o, enquanto a macro <TT><B>END_OF_FUNCTION</B></TT> determina o final de uma 
+fun&ccedil;&atilde;o dentro do programa. Por exemplo:</P>
+<TT><OL>int x;<BR>
+<BR>
+(...)<BR>
+<BR>
+int aumenta_x()<BR>
+{<BR>
+<OL>x++;</OL><BR>
+}<BR>
+END_OF_FUNCTION(aumenta_x);<BR>
+<BR>
+int main()<BR>
+{<BR>
+<OL>
+	<BR>
+	(...)<BR>
+	<BR>
+	/*<OL>
+		Bloqueia a variavel x e a funcao aumenta_x<BR>
+		e instala um temporizador que chamara a<BR>
+		funcao aumenta_x a cada 0,2 segundo (200<BR>
+		milisegundos).
+	</OL>*/<BR>
+	LOCK_VARIABLE(x);<BR>
+	LOCK_FUNCTION(aumenta_x);<BR>
+	install_int(aumenta_x, 200);<BR>
+	<BR>
+	(...)<BR>
+	<BR>
+</OL>
+}<BR>
+</OL></TT>
+
+<P><TT><B>void rest(long time);</B></TT><BR><BR>
+Provoca uma pausa de <TT><B>time</B></TT> milisegundos no programa.</P>
+
+<HR>
+
+<A NAME="outras_datafile">
+<H3>6.2. Fun&ccedil;&otilde;es de DataFile</H3>
+
+<P>DataFile &eacute; um tipo especial de arquivo, com extens&atilde;o .dat, e que pode armazenar diversos tipos de 
+arquivos, como BitMaps, MIDIs, fontes, paletas, que podem ser carregados e utilizados durante a execu&ccedil;&atilde;o do 
+programa.</P>
+<P>Para criar um arquivo DataFile existe um utilit&aacute;rio chamado <I>Grabber</I>, que se encontra no diret&oacute;rio 
+<TT><B>tools</B></TT>, dentro do diret&oacute;rio principal do Allegro. O programa possui uma interface que facilita a 
+confec&ccedil;&atilde;o do arquivo DataFile.</P>
+
+<P>Para acessar um arquivo DataFile num programa, utiliza-se o tipo <TT><B>DATAFILE</B></TT>, da seguinte maneira:</P>
+<TT><B><OL>DATAFILE *dat;</OL></B></TT>
+<P>Depois de determinar um ponteiro para o arquivo DataFile, pode-se abri-lo utilizando a fun&ccedil;&atilde;o <A 
+HREF="#outras_datafile_load_datafile"><TT>load_datafile</TT></A>, descrita abaixo:</P>
+
+<A NAME="#outras_datafile_load_datafile">
+<P><TT><B>DATAFILE *load_datafile(const char *filename);</B></TT><BR><BR>
+Abre o arquivo de nome <TT><B>filename</B></TT> como um arquivo datafile, preparando-o para a leitura de seus dados. 
+Retorna <TT><B>NULL</B></TT> caso ocorra algum erro.</P>
+
+<HR>
+
+<A NAME="#outras_config">
+<H3>6.3. Fun&ccedil;&otilde;es de Arquivos de Configura&ccedil;&atilde;o</H3>
+
+<TT><B>void set_config_file(const char *filename);</B></TT><BR><BR>
+Instrui o Allegro a utilizar o arquivo <TT><B>filename</B></TT> para as futuras chamadas a outras fun&ccedil;&otilde;es de 
+arquivos de configura&ccedil;&atilde;o. Caso as outras fun&ccedil;&otilde;es sejam chamadas antes da fun&ccedil;&atilde;o 
+set_config_file, o Allegro utiliza o arquivo <TT><B>allegro.cfg</B></TT> do diret&oacute;rio atual como o arquivo de 
+configura&ccedil;&atilde;o a ser lido.</P>
+
+<A NAME="outras_config_set_config_string">
+<P><TT><B>void set_config_string(const char *section, const char *name, const char *val);</B></TT><BR><BR>
+Escreve uma string no arquivo de configura&ccedil;&atilde;o atual na chave <TT><B>name</B></TT> da se&ccedil;&atilde;o 
+<TT><B>section</B></TT>. Caso <TT><B>val</B></TT> seja <TT><B>NULL</B></TT>, a chave &eacute; removida do arquivo. Caso 
+<TT><B>section</B></TT> seja <TT><B>NULL</B></TT>, a chave &eacute; escrita na raiz do arquivo de 
+configura&ccedil;&atilde;o. Os dados s&atilde;o escritos no arquivo ao chamar a fun&ccedil;&atilde;o <A 
+HREF="#bas_allegro_exit"><TT>allegro_exit</TT></A>.</P>
+<P>As linhas iniciadas com um '#' n&atilde;o s&atilde;o lidas ou escritas no arquivo de configura&ccedil;&atilde;o, sendo 
+tratadas como coment&aacute;rios.</P>
+
+<A NAME="outras_config_set_config_id">
+<P><TT><B>void set_config_id(const char *section, const char *name, int val);</B></TT><BR><BR>
+Faz o mesmo que a fun&ccedil;&atilde;o <A HREF="#outras_config_set_config_string"><TT>set_config_string</TT></A>, exceto 
+pelo fato de escrever um ID no arquivo, ao inv&eacute;s de uma string. Para cada valor de <TT><B>val</B></TT> existe um ID 
+de 4 letras correspondente. Isto &eacute; &uacute;til para guardar informa&ccedil;&otilde;es sobre placas de v&iacute;deo 
+e som nos arquivos de configura&ccedil;&atilde;o.</P>
+
+<P><TT><B>void set_config_int(const char *section, const char *name, int val);</B></TT><BR>
+<TT><B>void set_config_hex(const char *section, const char *name, int val);</B></TT><BR>
+<TT><B>void set_config_float(const char *section, const char *name, float val);</B></TT><BR><BR>
+Fazem o mesmo que a fun&ccedil;&atilde;o <A HREF="#outras_config_set_config_string"><TT>set_config_string</TT></A>, exceto 
+pelo fato de escreverem, respectivamente, n&uacute;meros inteiros, hexadecimais e de ponto flutuante.</P>
+
+<A NAME="outras_config_get_config_string">
+<P><TT><B>const char *get_config_string(const char *section, const char *name, const char *def);</B></TT><BR><BR>
+L&ecirc; uma string do arquivo de configura&ccedil;&atilde;o atual da chave <TT><B>name</B></TT> da se&ccedil;&atilde;o 
+<TT><B>section</B></TT>. Caso <TT><B>section</B></TT> seja <TT><B>NULL</B></TT>, a chave &eacute; lida da raiz do arquivo 
+de configura&ccedil;&atilde;o. Caso a chave n&atilde;o seja encontrada, o valor de <TT><B>def</B></TT> &eacute; 
+retornado.</P>
+
+<P><TT><B>int get_config_id(const char *section, const char *name, int def);</B></TT><BR><BR>
+L&ecirc; uma ID (veja em <A HREF="#outras_config_set_config_id"><TT>set_config_id</TT></A>) do arquivo de 
+configura&ccedil;&atilde;o atual (mais detalhes em <A 
+HREF="#outras_config_get_config_string"><TT>get_config_string</TT></A>).</P>
+
+<P><TT><B>int get_config_int(const char *section, const char *name, int def);</B></TT><BR>
+<TT><B>int get_config_hex(const char *section, const char *name, int def);</B></TT><BR>
+<TT><B>float get_config_float(const char *section, const char *name, float def);</B></TT><BR><BR>
+L&ecirc;em, respectivamente, um n&uacute;mero inteiro, hexadecimal e de ponto flutuante, do arquivo de 
+configura&ccedil;&atilde;o atual (mais detalhes em <A 
+HREF="#outras_config_get_config_string"><TT>get_config_string</TT></A>).</P>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<P><CENTER>
+<A HREF="indice.htm"><IMG SRC="return.gif" HSPACE=5 HEIGHT=30 WIDTH=30 ALIGN=CENTER></A>
+<A HREF="indice.htm">&Iacute;ndice</A>
+</CENTER></P>
+
+</BODY>
+
+</HTML>

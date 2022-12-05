@@ -1,0 +1,714 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0057)http://www.bdjogos.com/conteudo.php?link=adicional_29.php -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="DIRECAO_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="DIRECAO_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="DIRECAO_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background=DIRECAO_arquivos/bg.jpg topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT language=javascript src="DIRECAO_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="DIRECAO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=DIRECAO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="DIRECAO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="DIRECAO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=DIRECAO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background=DIRECAO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="DIRECAO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=DIRECAO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="DIRECAO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="DIRECAO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="DIRECAO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=DIRECAO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="DIRECAO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="DIRECAO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=DIRECAO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background=DIRECAO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="DIRECAO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=DIRECAO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="DIRECAO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="DIRECAO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="DIRECAO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=DIRECAO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="DIRECAO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="DIRECAO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=DIRECAO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background=DIRECAO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="DIRECAO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=DIRECAO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="DIRECAO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="DIRECAO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="DIRECAO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=DIRECAO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="DIRECAO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="DIRECAO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=DIRECAO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background=DIRECAO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="DIRECAO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=DIRECAO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="DIRECAO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="DIRECAO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="DIRECAO_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="DIRECAO_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="DIRECAO_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="DIRECAO_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="DIRECAO_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="DIRECAO_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background=DIRECAO_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="DIRECAO_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background=DIRECAO_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="DIRECAO_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="DIRECAO_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD vAlign=top>
+            <STYLE type=text/css>.style1 {
+	COLOR: #0000ff
+}
+.style2 {
+	COLOR: #ff0000
+}
+</STYLE>
+            <LINK href="DIRECAO_arquivos/estilos.css" type=text/css 
+            rel=stylesheet><SPAN class=titulos>Trocar de direção usando 
+            Sprite</SPAN> 
+            <HR>
+
+            <P class=conteudo>Nesse artigo vou ilustrar o código para 
+            movimentação do pacman em todas as direções utilizando 
+            sprites.<BR><BR>Antes de iniciar o código será necessário entender 
+            como estão organizados os sprites no arquivo. <BR>A tabela abaixo 
+            mostra que na vertical estão definidas as direções dos desenhos, 
+            Direita, Esquerda, Cima e Baixo. <BR><BR>Já na horizontal estão 
+            definidas as seqüências dos sprites que irão definir o movimento do 
+            pacman.</P>
+            <TABLE class=conteudo cellSpacing=1 cellPadding=5 align=center 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD width=400 colSpan=6>
+                  <P align=center><STRONG>Posições dos Sprites</STRONG><BR><SPAN 
+                  class=style1><STRONG>Animação (x)</STRONG></SPAN><STRONG>, 
+                  <SPAN class=style2>Direção (y)</SPAN>.</STRONG></P></TD></TR>
+              <TR>
+                <TD width=73>
+                  <P align=center>&nbsp;</P></TD>
+                <TD width=65>
+                  <P class=style1 align=center>Sprite<BR>1</P></TD>
+                <TD width=65>
+                  <P class=style1 align=center>Sprite<BR>2</P></TD>
+                <TD width=65>
+                  <P class=style1 align=center>Sprite<BR>3</P></TD>
+                <TD width=65>
+                  <P class=style1 align=center>Sprite<BR>4</P></TD>
+                <TD width=65>
+                  <P class=style1 align=center>Sprite<BR>5</P></TD></TR>
+              <TR>
+                <TD width=73>
+                  <P class=style2 align=center>Direita</P></TD>
+                <TD width=65>
+                  <P align=center>0,0</P></TD>
+                <TD width=65>
+                  <P align=center>25,0</P></TD>
+                <TD width=65>
+                  <P align=center>50,0</P></TD>
+                <TD width=65>
+                  <P align=center>75,0</P></TD>
+                <TD width=65>
+                  <P align=center>100,0</P></TD></TR>
+              <TR>
+                <TD width=73>
+                  <P class=style2 align=center>Esquerda</P></TD>
+                <TD width=65>
+                  <P align=center>0,25</P></TD>
+                <TD width=65>
+                  <P align=center>25,25</P></TD>
+                <TD width=65>
+                  <P align=center>50,25</P></TD>
+                <TD width=65>
+                  <P align=center>75,25</P></TD>
+                <TD width=65>
+                  <P align=center>100,25</P></TD></TR>
+              <TR>
+                <TD width=73>
+                  <P class=style2 align=center>Cima</P></TD>
+                <TD width=65>
+                  <P align=center>0,50</P></TD>
+                <TD width=65>
+                  <P align=center>25,50</P></TD>
+                <TD width=65>
+                  <P align=center>50,50</P></TD>
+                <TD width=65>
+                  <P align=center>75,50</P></TD>
+                <TD width=65>
+                  <P align=center>100,50</P></TD></TR>
+              <TR>
+                <TD width=73>
+                  <P class=style2 align=center>Baixo</P></TD>
+                <TD width=65>
+                  <P align=center>0,75</P></TD>
+                <TD width=65>
+                  <P align=center>25,75</P></TD>
+                <TD width=65>
+                  <P align=center>50,75</P></TD>
+                <TD width=65>
+                  <P align=center>75,75</P></TD>
+                <TD width=65>
+                  <P align=center>100,75</P></TD></TR></TBODY></TABLE>
+            <P class=conteudo>Ao selecionar a posição 0,0 você deverá desenhar 
+            na tela o pacman virado para a direita e de boca fechada. <BR><BR>Já 
+            na posição 100,0 o pacman está virado para a direita e de boca 
+            aberta. <BR>Para fazer a simulação de movimento e de troca de 
+            direção é necessário juntar a tabela acima com os direcionais do 
+            teclado.<BR><BR>Abaixo segue as especificações dos sprites.</P>
+            <TABLE class=conteudo cellSpacing=0 cellPadding=0 width="80%" 
+            align=center bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff colSpan=2>
+                        <DIV align=center><SPAN 
+                        class=conteudo2><STRONG>pacpac.bmp</STRONG></SPAN></DIV></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff colSpan=2>
+                        <P class=conteudo2 align=center><IMG height=100 alt="" 
+                        src="DIRECAO_arquivos/capitulo29_03.jpg" 
+                      width=125></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff colSpan=2>
+                        <P 
+                      align=center><STRONG>Especificações</STRONG><BR></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width="50%" bgColor=#ffffff>
+                        <P align=right><STRONG>Qtde de Desenhos em x[0]:<BR>Qtde 
+                        de Desenhos em y[0]:<BR>Largura total:<BR>Largura 
+                        individual:<BR>Altura:</STRONG></P></TD>
+                      <TD vAlign=top width="50%" bgColor=#ffffff>5 <BR>4 
+                        <BR>125 pixels <BR>25 pixels <BR>25 pixels </TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff colSpan=2>
+                        <DIV align=center>OBS: Salvar a imagem acima como .BMP. 
+                        O allegro não aceita o tipo jpg. 
+                  </DIV></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <P class=conteudo>O código que iremos usar para movimentar o Robocop 
+            e o dragão é o mesmo. </P>
+            <P class=conteudo>Porém, antes de executar cada um é necessário 
+            fazer algumas configurações com relação às especificações citadas 
+            acima. <BR><BR><BR>O código será dividido em 3 arquivos. São 
+            eles:</P>
+            <UL>
+              <LI class=conteudo>main.cpp 
+              <LI class=conteudo>Jogador.h 
+              <LI class=conteudo>Jogador.cpp </LI></UL>
+            <HR>
+            <SPAN class=titulos>CÓDIGO...</SPAN> 
+            <HR>
+
+            <P><SPAN class=codigo>#include &lt;allegro.h&gt;<BR>#include 
+            "cjogador.h"</SPAN></P>
+            <P><SPAN class=codigo><SPAN class=comentario>// Arquivo: main.cpp 
+            </SPAN><BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(32);<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_WINDOWED, 
+            640, 480, 0, 0);<BR><BR>&nbsp;&nbsp;&nbsp;CJogador Jogador; <SPAN 
+            class=comentario>// Instacia o 
+            Pacman</SPAN><BR><BR>&nbsp;&nbsp;&nbsp;BITMAP *Buffer = 
+            NULL;<BR>&nbsp;&nbsp;&nbsp;Buffer = 
+            create_bitmap(SCREEN_W,SCREEN_H);<BR><BR>&nbsp;&nbsp;&nbsp;while 
+            (!key[KEY_ESC])<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear_bitmap(Buffer);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex(Buffer, 
+            font, 0, 0, makecol(0, 255, 255),-1,"SPRITE EM 
+            MOVIMENTO");<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>//Atualiza o Pacman na 
+            tela</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jogador.Atualiza(Buffer);<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>//Controle para Movimentação do Pacman na 
+            tela</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jogador.Controle(25);<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blit(Buffer,screen,0,0,0,0,SCREEN_W,SCREEN_H);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync();<BR>&nbsp;&nbsp;&nbsp;}<BR><BR>&nbsp;&nbsp;&nbsp;destroy_bitmap(Buffer);<BR>&nbsp;&nbsp;&nbsp;delete 
+            Buffer;<BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+            0;<BR>}<BR>END_OF_MAIN();<BR></SPAN><BR></P>
+            <HR>
+            <SPAN class=titulos>FIM DO CÓDIGO</SPAN> 
+            <HR>
+            <BR>
+            <TABLE class=conteudo cellSpacing=1 cellPadding=5 align=center 
+            border=1>
+              <TBODY>
+              <TR>
+                <TD vAlign=top width=576>
+                  <P align=center><STRONG>main.cpp</STRONG></P></TD></TR>
+              <TR>
+                <TD vAlign=top width=576>
+                  <P align=left>Dentro desse arquivo é possível encontrar:</P>
+                  <UL>
+                    <LI>Referência aos arquivos de recursos. 
+                    <LI>Inicialização da biblioteca allegro. 
+                    <LI>Referência a classe Jogador (Pacman) 
+                    <LI>Loop principal do jogo. 
+                    <LI>Liberação dos ponteiros. 
+                    <LI>Encerramento do programa. 
+            </LI></UL></TD></TR></TBODY></TABLE><BR>
+            <HR>
+            <SPAN class=titulos>CÓDIGO... </SPAN>
+            <HR>
+
+            <P><SPAN class=codigo>#ifndef CJOGADOR_H <BR>#define 
+            CJOGADOR_H<BR><BR>#include &lt;allegro.h&gt;</SPAN></P>
+            <P><SPAN class=codigo><SPAN class=comentario>// Arquivo: cjogador.h 
+            </SPAN><BR><BR>class 
+            CJogador<BR>{<BR><BR>private:<BR>&nbsp;&nbsp;&nbsp;BITMAP 
+            *imgJogador;<BR>&nbsp;&nbsp;&nbsp;int 
+            iPosx;<BR>&nbsp;&nbsp;&nbsp;int iPosy;<BR>&nbsp;&nbsp;&nbsp;int 
+            iSpritex;<BR>&nbsp;&nbsp;&nbsp;int 
+            iSpritey;<BR><BR>public:<BR>&nbsp;&nbsp;&nbsp;int 
+            iLargura;<BR>&nbsp;&nbsp;&nbsp;int 
+            iAltura;<BR><BR>&nbsp;&nbsp;&nbsp;CJogador();<BR>&nbsp;&nbsp;&nbsp;~CJogador();<BR>&nbsp;&nbsp;&nbsp;void 
+            Setax(int);<BR>&nbsp;&nbsp;&nbsp;void 
+            Setay(int);<BR>&nbsp;&nbsp;&nbsp;void Atualiza(BITMAP 
+            *buffer);<BR>&nbsp;&nbsp;&nbsp;void 
+            Controle(int);<BR>};<BR><BR>#endif<BR></SPAN><BR></P>
+            <HR>
+            <SPAN class=titulos>FIM DO CÓDIGO</SPAN> 
+            <HR>
+
+            <TABLE class=conteudo cellSpacing=1 cellPadding=5 align=center 
+            border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top width=576>
+                  <P align=center><STRONG>Jocador.h</STRONG></P></TD></TR>
+              <TR>
+                <TD vAlign=top width=576>
+                  <P align=left>Arquivo de recurso responsável por armazenar 
+                  apenas a definição da classe Jogador. Todas as características 
+                  que o pacman vai possuir estão definidas nesse arquivo. São 
+                  elas:</P>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=1>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P align=left><STRONG>Variável</STRONG></P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left><STRONG>Descrição</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P align=left>BITMAP *imgJogador</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Guarda imagem do Pacmam</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P align=left>int iPosx</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Posição x do pacman na tela</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P align=left>int iPosy</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Posição y do pacman na tela</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P align=left>int iSpritex</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Posição da animação do sprite</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P align=left>int iSpritey</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Posição da direção do sprite</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P class=conteudo>int iLargura</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Armazena a largura de um sprite</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P align=left>int iAltura</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Armazena a altura de um 
+                    sprite</P></TD></TR></TBODY></TABLE><BR>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=1>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P align=left><STRONG>Variável</STRONG></P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left><STRONG>Descrição</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P class=conteudo>CJogador();</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Construtor para iniciar as variáveis da 
+                        classe.</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P class=conteudo>~CJogador();</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Destrutor responsável por liberar a imagem 
+                        do pacman da memória.</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P class=conteudo>void Setax(int);</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Seta a posição x do pacman a partir de uma 
+                        velocidade passada por argumento.</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P class=conteudo>void Setay(int);</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Seta a posição y do pacman a partir de uma 
+                        velocidade passada por argumento.</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P class=conteudo>void Atualiza(BITMAP *buffer);</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Renderiza o pacman na tela.</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=248>
+                        <P class=conteudo>void Controle(int);</P></TD>
+                      <TD vAlign=top width=318>
+                        <P align=left>Controla a direção do pacman através das 
+                        setas do 
+            teclado.</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR>
+            <SPAN class=titulos>CÓDIGO... </SPAN>
+            <HR>
+
+            <P class=conteudo><SPAN class=codigo>#include 
+            "cjogador.h"<BR><BR><SPAN class=comentario>// Arquivo: 
+            cjogador.cpp</SPAN><BR><BR>static int iVelSprite = 
+            4;<BR><BR>CJogador::CJogador()<BR>{<BR>&nbsp;&nbsp;&nbsp;this-&gt;imgJogador 
+            = load_bitmap("pacpac.bmp",NULL); <SPAN class=comentario>// Sprites 
+            do PacPac</SPAN><BR>&nbsp;&nbsp;&nbsp;this-&gt;iPosx = 0; <SPAN 
+            class=comentario>// Posição x do pacman na 
+            tela</SPAN><BR>&nbsp;&nbsp;&nbsp;this-&gt;iPosy = 0; <SPAN 
+            class=comentario>// Posição y do pacman na 
+            tela</SPAN><BR>&nbsp;&nbsp;&nbsp;this-&gt;iLargura = 25; <SPAN 
+            class=comentario>// Define a largura do 
+            sprite</SPAN><BR>&nbsp;&nbsp;&nbsp;this-&gt;iAltura = 25; <SPAN 
+            class=comentario>// Define a altura do 
+            sprite</SPAN><BR>&nbsp;&nbsp;&nbsp;this-&gt;iSpritex = 0; <SPAN 
+            class=comentario>// Inicia animação na posição 
+            zero.</SPAN><BR>&nbsp;&nbsp;&nbsp;this-&gt;iSpritey = 0; <SPAN 
+            class=comentario>// Inicia virado para a 
+            direita</SPAN><BR>}<BR><BR>CJogador::~CJogador()<BR>{<BR>&nbsp;&nbsp;&nbsp;delete 
+            this-&gt;imgJogador;<BR>}<BR><BR>void CJogador::Setax(int 
+            vx)<BR>{<BR>&nbsp;&nbsp;&nbsp;this-&gt;iPosx += 
+            vx;<BR><BR>&nbsp;&nbsp;&nbsp;if (vx&lt;0) this-&gt;iSpritey = 25; 
+            <SPAN class=comentario>// Vira Sprite para 
+            esquerda</SPAN><BR>&nbsp;&nbsp;&nbsp;if (vx&gt;0) this-&gt;iSpritey 
+            = 0; <SPAN class=comentario>// Vira o Sprite para a 
+            direita</SPAN><BR>}<BR><BR>void CJogador::Setay(int 
+            vy)<BR>{<BR>&nbsp;&nbsp;&nbsp;this-&gt;iPosy += 
+            vy;<BR><BR>&nbsp;&nbsp;&nbsp;if (vy&lt;0) this-&gt;iSpritey = 50; 
+            <SPAN class=comentario>// Vira o Sprite para 
+            Cima</SPAN><BR>&nbsp;&nbsp;&nbsp;if (vy&gt;0) this-&gt;iSpritey = 
+            75; <SPAN class=comentario>// Vira o Sprite para 
+            Baixo</SPAN><BR>}<BR><BR>void CJogador::Atualiza(BITMAP 
+            *buffer)<BR>{<BR>&nbsp;&nbsp;&nbsp;if (iSpritex &gt;= 100) iSpritex 
+            = 
+            0;<BR><BR>&nbsp;&nbsp;&nbsp;masked_blit(imgJogador,buffer,this-&gt;iSpritex,this-&gt;iSpritey,this-&gt;iPosx,this-&gt;iPosy,this-&gt;iLargura,this-&gt;iAltura);<BR>&nbsp;&nbsp;&nbsp;iVelSprite--;<BR><BR>&nbsp;&nbsp;&nbsp;if 
+            (iVelSprite&lt;=0)<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;iSpritex 
+            += 25;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iVelSprite = 
+            4;<BR>&nbsp;&nbsp;&nbsp;}<BR>}<BR><BR>void CJogador::Controle(int 
+            Vel)<BR>{<BR>&nbsp;&nbsp;&nbsp;static int Buffer_Teclado 
+            =0;<BR>&nbsp;&nbsp;&nbsp;<SPAN class=comentario>// A cada movimento 
+            reinicia o buffer do teclado.</SPAN><BR></SPAN><SPAN 
+            class=codigo><BR>&nbsp;&nbsp;&nbsp;if (Buffer_Teclado == 
+            0)<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (key[KEY_UP])<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;Setay(-Vel);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buffer_Teclado 
+            = 
+            10;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            else&nbsp;if 
+            (key[KEY_DOWN])<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;Setay(Vel);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buffer_Teclado 
+            = 
+            10;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            else&nbsp;if 
+            (key[KEY_LEFT])<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;Setax(-Vel);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buffer_Teclado 
+            = 
+            10;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            else&nbsp;if 
+            (key[KEY_RIGHT])<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this-&gt;Setax(Vel);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Buffer_Teclado 
+            = 
+            10;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR><BR>&nbsp;&nbsp;&nbsp;} 
+            <BR>&nbsp;&nbsp;&nbsp;else <BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp; 
+            &nbsp;&nbsp;&nbsp;Buffer_Teclado--;<BR>&nbsp;&nbsp;&nbsp;}<BR>}<BR></SPAN><BR></P>
+            <HR>
+            <SPAN class=titulos>FIM DO CÓDIGO</SPAN> 
+            <HR>
+
+            <TABLE class=conteudo cellSpacing=1 cellPadding=5 align=center 
+            border=1>
+              <TBODY>
+              <TR>
+                <TD vAlign=top width=576>
+                  <P align=center><STRONG>Jogador.cpp</STRONG></P></TD></TR>
+              <TR>
+                <TD vAlign=top width=576>
+                  <P align=left>Esse arquivo faz referencia ao arquivo de 
+                  recursos Jogador.h. No entanto, ele guarda apenas o código 
+                  responsável pela movimentação do pacman na 
+              tela.</P></TD></TR></TBODY></TABLE>
+            <P class=conteudo>Caro leitor chegamos ao fim do entendimento da 
+            troca de sprites durante a animação. Espero ter escrito um código 
+            auto explicativo. </P>
+            <P class=conteudo>Se houver alguma dúvida ou dificuldade favor 
+            entrar em contato com o pessoal pelo Forum.<BR><BR>Abraço<BR>BDJogos 
+            <BR><BR></P><BR><SPAN class=conteudo><B>Contribuidor</B> <BR>Bruno 
+            A. Rovela<BR>05/09/2007 </SPAN>
+            <P>
+            <HR>
+            &nbsp;
+            <P></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="40%" align=center 
+            bgColor=#ffffff border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center 
+                  bgColor=#000099 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD bgColor=#f7f7f7>
+                              <P class=conteudo align=center><A class=conteudo 
+                              href="http://www.bdjogos.com/conteudo.php?link=capitulo_29.php">«&nbsp;Anterior 
+                              </A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+                <TD>&nbsp;</TD>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center 
+                  bgColor=#000099 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD bgColor=#f7f7f7>
+                              <P class=conteudo align=center><A class=conteudo 
+                              href="http://www.bdjogos.com/conteudo.php?link=capitulo_30.php">Próximo 
+                              » 
+                </A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background=DIRECAO_arquivos/111.jpg><IMG height=1 
+      src="DIRECAO_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background=DIRECAO_arquivos/111.jpg colSpan=2 height=1><IMG 
+      height=1 src="DIRECAO_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

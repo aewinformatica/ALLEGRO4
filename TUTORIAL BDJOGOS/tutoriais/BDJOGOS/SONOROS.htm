@@ -1,0 +1,419 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0052)http://www.bdjogos.com/biblioteca_conteudo.php?id=21 -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="SONOROS_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="SONOROS_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="SONOROS_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background=SONOROS_arquivos/bg.jpg topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT language=javascript src="SONOROS_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="SONOROS_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=SONOROS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="SONOROS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="SONOROS_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=SONOROS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background=SONOROS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="SONOROS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=SONOROS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="SONOROS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="SONOROS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="SONOROS_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=SONOROS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="SONOROS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="SONOROS_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=SONOROS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background=SONOROS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="SONOROS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=SONOROS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="SONOROS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="SONOROS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="SONOROS_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=SONOROS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="SONOROS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="SONOROS_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=SONOROS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background=SONOROS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="SONOROS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=SONOROS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="SONOROS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="SONOROS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="SONOROS_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=SONOROS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="SONOROS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="SONOROS_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=SONOROS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background=SONOROS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="SONOROS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=SONOROS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="SONOROS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="SONOROS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="SONOROS_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="SONOROS_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="SONOROS_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="SONOROS_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="SONOROS_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="SONOROS_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background=SONOROS_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="SONOROS_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background=SONOROS_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="SONOROS_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="SONOROS_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD class=conteudo vAlign=top><LINK 
+            href="SONOROS_arquivos/estilos.css" type=text/css rel=stylesheet>
+            <STYLE type=text/css>.style1 {
+	FONT-WEIGHT: bold
+}
+</STYLE>
+            <SPAN class=titulos>Usando sons e efeitos sonoros nos jogos</SPAN> 
+            <HR>
+
+            <P class=conteudo>Antes de iniciarmos a explicação das funções 
+            responsáveis pela execução dos efeitos sonoros teremos que entender 
+            e declarar a função para a instalação do dispositivo de som no 
+            Allegro.<BR><BR>Podemos fazer a declaração do dispositivo da 
+            seguinte forma:</P>
+            <P class=conteudo><STRONG>install_sound(DIGI_AUTODETECT, 
+            MIDI_AUTODETECT, NULL);</STRONG></P>
+            <P><SPAN class=conteudo>Dessa forma o som será detectado 
+            automaticamente.<BR><BR>O Allegro disponibiliza algumas variedades 
+            de formatos de sons, <BR>cobrindo o necessário para o 
+            desenvolvimento de qualquer jogo. <BR><BR><STRONG>Nesse tutorial 
+            vamos ver os formatos MIDI e SAMPLE (WAV). </STRONG></SPAN><BR><BR>
+            <P>
+            <P>
+            <P>&nbsp;</P>
+            <P class=titulos>ARQUIVOS DO TIPO MIDI</P>
+            <HR>
+            <SPAN class=conteudo>Os MIDIs são responsáveis pela música de fundo 
+            dos jogos. </SPAN>
+            <P class=conteudo>Seguindo o padrão do Allegro, existe um tipo MIDI 
+            para guardar arquivos de música. <BR>Podemos, então, declarar e 
+            carregar um MIDI da seguinte forma: </P>
+            <P class=conteudo><STRONG>MIDI *somFundo = NULL;</STRONG> 
+            <BR><STRONG>somFundo = load_midi("somfundo.mid");</STRONG> </P>
+            <P class=conteudo align=left>Para tocar o arquivo de MIDI podemos 
+            fazer da seguinte forma:</P>
+            <P class=conteudo><STRONG>play_midi(somFundo,TRUE);</STRONG></P>
+            <P class=conteudo>O segundo argumento é do tipo boleano (Verdadeiro, 
+            Falso) que indica se o som deve entrar em looping ou não. <BR>Se o 
+            argumento for FALSE quando se a música chegar ao final não será mais 
+            tocada. <BR><BR>No exemplo acima se o som chegar no final ele toca 
+            novamente.<BR>Em qualquer momento podemos parar de tocar no som de 
+            fundo com apenas um dos comandos abaixo:</P>
+            <P class=conteudo><STRONG>stop_midi();</STRONG> 
+            <BR>ou<BR><STRONG>play_midi(NULL, FALSE); </STRONG></P>
+            <P class=conteudo>Como podemos ver acima é extremamente simples 
+            executar um arquivo de som do tipo MIDI no Allegro.</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P class=titulos>ARQUIVOS DO TIPO SAMPLE (WAV)</P>
+            <HR>
+
+            <P class=conteudo>Da mesma forma que os MIDIs, os SAMPLES possuem 
+            seu próprio tipo. <BR>No entanto, ao contrário de arquivos MIDIs, 
+            eles são usados para efeitos sonoros dos personagens ou de cenários. 
+            <BR><BR>Se quisermos declarar e carregar um arquivo SAMPLE, podemos 
+            fazê-lo da seguinte forma: </P>
+            <P class=conteudo><STRONG>SAMPLE *somTiro = 
+            NULL;</STRONG><BR><STRONG>somTiro = 
+            load_sample("somtiro.wav");</STRONG> </P>
+            <P class=conteudo align=left>Para tocar o arquivo de SAMPLE podemos 
+            fazer da seguinte forma:</P>
+            <P class=conteudo><STRONG>play_sample(somTiro, 255, 128, 1000, FALSE 
+            );</STRONG> </P>
+            <P class=conteudo>A função para tocar o SAMPLE possui vários 
+            argumentos. São eles:</P>
+            <P class=conteudo>255 – Esse argumento indica o volume do som. 
+            <BR>Nesse caso está no máximo. O valor varia de 0 a 255.<BR><BR>128 
+            – Esse argumento indica o balanço do som. <BR>O valor vai se 0 a 
+            255. <BR><BR></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#000099 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=5 width="100%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=#f7f7f7>
+                        <P class=titulos_texto><IMG height=17 
+                        src="SONOROS_arquivos/pic_pisca.gif" width=17>VOCÊ 
+                        PRECISA SABER... </P>
+                        <P class=conteudo>128 quer dizer que o som estará 
+                        dividido igual tanto para o lado direito da caixa de som 
+                        quanto para o lado 
+              esquerdo.</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo><BR><BR>1000 – Esse argumento indica e freqüência 
+            que o som será tocado. <BR>Você pode mudar esse valor de acordo com 
+            o efeito que você achar bom. <BR>Ou use 1000 para freqüência normal, 
+            500 para metade da freqüência ou 2000 para o dobro da 
+freqüência.</P>
+            <P class=conteudo><BR>FALSE – Esse argumento indica se o som será 
+            tocado em loop depois que chegar ao fim. <BR>Nesse caso, como o 
+            valor é FALSE, ele toca apenas uma vez e para.<BR><BR><BR>Abaixo 
+            segue um código exemplificando onde e como utilizar as funções para 
+            execução dos efeitos sonoros.</P>
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO...</SPAN><BR>
+            <HR>
+            <SPAN class=codigo>#include &lt;allegro.h&gt;<BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(32);<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_WINDOWED, 
+            640, 480, 0, 
+            0);<BR>&nbsp;&nbsp;&nbsp;<STRONG>install_sound(DIGI_AUTODETECT, 
+            MIDI_AUTODETECT, NULL);<BR><BR>&nbsp;&nbsp;&nbsp;MIDI *somFundo = 
+            NULL;<BR>&nbsp;&nbsp;&nbsp;somFundo = 
+            load_midi("somfundo.mid");<BR><BR>&nbsp;&nbsp;&nbsp;SAMPLE *somTiro 
+            = NULL;<BR>&nbsp;&nbsp;&nbsp;somTiro = 
+            load_sample("somtiro.wav");</STRONG><BR><BR>&nbsp;&nbsp;&nbsp;int 
+            buffer_teclado = 0;<BR><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=style1>play_midi(somFundo,TRUE);</SPAN><BR><BR>&nbsp;&nbsp;&nbsp;while 
+            (!key[KEY_ESC])<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (buffer_teclado == 
+            0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (key[KEY_SPACE])<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=style1>play_sample(somTiro,255,128,1000,FALSE);</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buffer_teclado=30;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}else 
+            buffer_teclado--;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync();<BR>&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=style1>stop_midi();<BR>&nbsp;&nbsp;&nbsp;delete 
+            somFundo;<BR>&nbsp;&nbsp;&nbsp;delete 
+            somTiro;</SPAN><BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+            0;<BR>}<BR>END_OF_MAIN();<BR></SPAN><BR>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO</SPAN><BR>
+            <HR>
+
+            <P class=conteudo>Podemos notar que é muito simples utilizar as 
+            funções do Allegro para tocar sons e tornar nosso jogo muito mais 
+            dinâmico. <BR><BR>Para a execução do código acima você precisa de um 
+            arquivo MIDI chamado <STRONG>somfundo.mid</STRONG> e um arquivo de 
+            WAV chamado <STRONG>somtiro.wav</STRONG>. <BR>Ambos precisam estar 
+            dentro da pasta do seu projeto.<BR><BR>Caro leitor chegamos ao fim 
+            do entendimento e utilização das funções responsáveis pelos efeitos 
+            sonoros de um jogo usando a biblioteca Allegro. <BR>Se houver alguma 
+            dúvida ou dificuldade favor entrar em contato com os membros da 
+            BDJogos pelo Forum.<BR><BR>Abraço<BR>BDJogos <BR><BR></P><BR><SPAN 
+            class=conteudo><B>Contribuidor</B> <BR>Bruno A. Rovela<BR>25/09/2007 
+            </SPAN>
+            <P class=conteudo><A class=conteudo 
+            href="javascript:history.go(-1)">Voltar </A></P></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background=SONOROS_arquivos/111.jpg><IMG height=1 
+      src="SONOROS_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background=SONOROS_arquivos/111.jpg colSpan=2 height=1><IMG 
+      height=1 src="SONOROS_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

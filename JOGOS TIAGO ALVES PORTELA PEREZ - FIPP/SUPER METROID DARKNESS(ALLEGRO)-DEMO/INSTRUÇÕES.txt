@@ -1,0 +1,22 @@
+COMANDOS BÁSICOS:
+
+W - CIMA
+S- BAIXO
+A- TRAS
+D -FRENTE
+
+SPACE - PULO
+F - TIRO
+ENTER - MENU
+
+
+OBS- ao salvar o jogo você pode iniciar o jogo e continuar de onde parou selecionando no menu principal
+    o seu salve.
+
+O JOGO NÃO ESTA COMPLETO FALTA MUITO PARA CHEGAR NO QUE PRETENDO,PAREI DE FAZER DEVIDO OS ESTUDOS DA FACULDADE,
+FOI FEITO EM ALEGRO 4.1 + LINGUAGEM C EM DEV C++.
+
+
+TIAGO ALVES PORTELA PEREZ - RA: 261029991 - FIPP
+
+E-MAIL e MSN : eutiagoportela@hotmail.com

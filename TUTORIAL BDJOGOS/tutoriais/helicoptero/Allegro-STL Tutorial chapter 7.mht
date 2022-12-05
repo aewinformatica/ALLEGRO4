@@ -1,0 +1,157 @@
+From: <Salvo pelo Windows Internet Explorer 8>
+Subject: Allegro/STL Tutorial: chapter 7
+Date: Sun, 28 Aug 2011 23:33:45 -0300
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://alleg.sourceforge.net/docs/ovehk_stl_tutorial_en/tut7.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.6109
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD><TITLE>Allegro/STL Tutorial: chapter 7</TITLE>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type>
+<META name=3Dauthor content=3D"Ove K=E5ven">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.19120"></HEAD>
+<BODY aLink=3D#ff0000 link=3D#0000ef bgColor=3D#ffffff text=3D#000000 =
+vLink=3D#51188e>
+<H1>Chapter 7</H1>
+<H2>7. Action</H2>If you downloaded the tutorial data file before =
+Section 2 of=20
+this chapter was written (Feb 28), please <A=20
+href=3D"http://alleg.sourceforge.net/docs/ovehk_stl_tutorial.zip">redownl=
+oad</A>=20
+it (don't forget to regenerate <CODE>tutorial.h</CODE>), because three =
+sound=20
+effects have been added to it to support Section 2. There will also be =
+another=20
+update to support Section 3 soon.=20
+<H3>7.1 Explosions</H3>There are few action games without any =
+explosions, and we=20
+don't really want to be worse, we want A LOT of explosions. We can't =
+have any of=20
+that fully armed bombs falling into the ground and magically vanishing =
+without=20
+an explosion, can we? Now, an explosion effect is an independent effect =
+that can=20
+be triggered by a bomb, but then exists independent of it. Thus, we need =
+to=20
+write an explosion class, and launch one whenever the bomb hits the =
+ground.=20
+<P>Since the code is getting large, I will not show it in its entirety=20
+unnecessarily. So, at the top, add <PRE>#define BOOM_DELAY 5
+</PRE>and add this class before the <CODE>projectile</CODE> class =
+<PRE>class explosion : public sprite {
+ int frame,delay,magnitude;
+public:
+ explosion(fix _X,fix _Y,int mag)
+  : sprite(_X,_Y,(RLE_SPRITE*)data[TUT_BOOM1].dat) {
+  magnitude=3Dmag; frame=3D0; delay=3D0;
+ }
+ virtual void draw(BITMAP*dest) {
+  draw_rle_sprite(dest,image,X-image-&gt;w/2,Y-image-&gt;h/2);
+ }
+ virtual bool animate() {
+  if ((delay++)&gt;BOOM_DELAY) {
+   if ((frame++)&gt;magnitude) return TRUE;
+   image=3D(RLE_SPRITE*)data[TUT_BOOM1+frame].dat;
+   delay=3D0;
+  }
+  return FALSE;
+ }
+};
+</PRE>Here, the <CODE>magnitude</CODE> field tells how many frames of =
+the=20
+explosions should be shown, and the <CODE>draw()</CODE> method is =
+overridden to=20
+show the explosion with X,Y representing the center position instead of =
+the=20
+top-left position of the sprites, mostly because our explosion sprites =
+have=20
+different sizes but they are all centered.=20
+<P>To make it easy for the code to choose which graphics to show, we =
+have=20
+ordered the sprites (in the data file) by numbering each =
+<CODE>BOOM</CODE>=20
+sprite, thus making it easy to choose the correct image by just adding =
+the frame=20
+number we want to <CODE>BOOM1</CODE>, and showing that. Since the =
+Grabber=20
+automatically sorts the data file, this is very handy for animations =
+where=20
+several frames has to be shown in sequence.=20
+<P>Now, we need an explosion to be activated when a bomb hits the =
+ground, so we=20
+will need to change the <CODE>projectile</CODE> class to: <PRE>class =
+projectile : public sprite {
+ fix DX,DY;
+ int force;
+public:
+ projectile(fix _X,fix _Y,fix _DX,fix _DY,RLE_SPRITE*img,int power)
+  : sprite(_X,_Y,img) { DX=3D_DX; DY=3D_DY; force=3Dpower; }
+ virtual bool animate() {
+  move(DX,DY); DY+=3DGRAVITY;
+  if (Y+image-&gt;h&gt;=3DMAX_Y) {
+   sprites.push_back(new =
+explosion(X+image-&gt;w/2,Y+image-&gt;h,force/2));
+   return TRUE;
+  } else return FALSE;
+ }
+};
+</PRE>When a bomb hits the ground now, it will spawn an explosion with a =
+
+magnitude that is one half of the assigned explosive power (which we set =
+to 5=20
+for a bomb, so the magnitude will be 2).=20
+<H3>7.2 Sound Effects</H3>With Allegro, this is trivial. First, we must =
+install=20
+sound support. After <CODE>install_keyboard();</CODE> (or wherever) in=20
+<CODE>main()</CODE>, insert <PRE> =
+install_sound(DIGI_AUTODETECT,MIDI_NONE,NULL);
+</PRE>to install the Allegro Sound System. Now, we will trigger a neat =
+explosion=20
+sound whenever an explosion is set off. Change the =
+<CODE>explosion</CODE>=20
+constructor to read: <PRE> explosion(fix _X,fix _Y,int mag)
+  : sprite(_X,_Y,(RLE_SPRITE*)data[TUT_BOOM1].dat) {
+  magnitude=3Dmag; frame=3D0; delay=3D0;
+  stop_sample((SAMPLE*)data[TUT_BANG0].dat);
+  =
+play_sample((SAMPLE*)data[TUT_BANG0].dat,255,(256*(int)X)/SCREEN_W,1000,F=
+ALSE);
+ }
+</PRE>Here, we stop any previously playing explosion sounds (otherwise =
+the=20
+result might get *very* loud and distorted, especially considering the =
+quantity=20
+of bombs we are able to pour out), then start a new one. The loudness is =
+here=20
+255 (max), the pan (0-255) is set according to the X position of the =
+explosion=20
+for those lucky enough to have a stereo sound card, and the frequency is =
+
+normalized (1000), and it should not loop. (The <CODE>int</CODE> =
+typecast in the=20
+pan calculation is for avoiding a fixed-point overflow.)=20
+<P>For fun, you may try the other two sound effects I put in the =
+datafile,=20
+<CODE>TUT_BANG1</CODE> and <CODE>TUT_BANG2</CODE>, but these were =
+sampled from=20
+videos by a friend, so they are probably copyrighted.=20
+<H3>7.3 Enemies</H3>
+<H3>7.4 Collision Detection</H3>These have not been written yet. Please =
+be=20
+patient. Meanwhile, try <A =
+href=3D"http://www.grandgent.com/gfoot/vivace/">Allegro=20
+Vivace</A>, the related <A =
+href=3D"http://www.grandgent.com/gfoot/htpg/">How To=20
+Program Games</A>, <A =
+href=3D"http://www.grandgent.com/allegro/faq/">Allegro FAQ=20
+and Coding Techniques</A>, <A href=3D"http://www.sgi.com/tech/stl/">SGI =
+STL=20
+Reference</A>, and so on.=20
+<P>If you have any suggestions for improvement so far, send them to <A=20
+href=3D"mailto:ovek@arcticnet.no">ovek@arcticnet.no</A> =
+</P></BODY></HTML>

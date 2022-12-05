@@ -1,0 +1,658 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://www.bdjogos.com/conteudo.php?link=resposta_27.php -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="EXERC27_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="EXERC27_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="EXERC27_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background=EXERC27_arquivos/bg.jpg topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT language=javascript src="EXERC27_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="EXERC27_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=EXERC27_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="EXERC27_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="EXERC27_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=EXERC27_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background=EXERC27_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="EXERC27_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=EXERC27_arquivos/linha_horizo.gif><IMG 
+      height=8 src="EXERC27_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="EXERC27_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="EXERC27_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=EXERC27_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="EXERC27_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="EXERC27_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=EXERC27_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background=EXERC27_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="EXERC27_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=EXERC27_arquivos/linha_horizo.gif><IMG 
+      height=8 src="EXERC27_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="EXERC27_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="EXERC27_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=EXERC27_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="EXERC27_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="EXERC27_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=EXERC27_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background=EXERC27_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="EXERC27_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=EXERC27_arquivos/linha_horizo.gif><IMG 
+      height=8 src="EXERC27_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="EXERC27_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="EXERC27_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=EXERC27_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="EXERC27_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="EXERC27_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=EXERC27_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background=EXERC27_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="EXERC27_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=EXERC27_arquivos/linha_horizo.gif><IMG 
+      height=8 src="EXERC27_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="EXERC27_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="EXERC27_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="EXERC27_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="EXERC27_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="EXERC27_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="EXERC27_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="EXERC27_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background=EXERC27_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="EXERC27_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background=EXERC27_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="EXERC27_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="EXERC27_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD vAlign=top>
+            <P class=titulos>Respostas dos Exercícios </P>
+            <P class=conteudo>- Utilizando o programa do capítulo 27, crie uma 
+            classe para imprimir vários quadrados "objetos" na tela.<BR>O 
+            quadrado que se move deve detectar colisão nos outros objetos 
+            inseridos.<BR>Imprima 5 quadrados na tela de tamanho diferentes e 
+            verifique a colisão com todos eles.</P>
+            <P class=conteudo>&nbsp;</P>
+            <P class=conteudo>Preste atenção na forma que a classe foi 
+            criada.<BR>Quanto mais prática a classe ficar, melhor para seu jogo. 
+            Você poderá usar ela muito mais fácil.<BR>Evite complicações. </P>
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO... </SPAN>
+            <HR>
+            <SPAN class=codigo>#ifndef PAREDE_H<BR>#define PAREDE_H<BR><BR><SPAN 
+            class=comentario>// ARQUIVO: parede.h</SPAN><BR><SPAN 
+            class=comentario>// Data: 01/08/2007</SPAN><BR><BR>class Parede 
+            {<BR>public:<BR><BR>Parede( int, int, int, int 
+            );<BR>&nbsp;&nbsp;&nbsp;void imprimir( BITMAP * 
+            );<BR>&nbsp;&nbsp;&nbsp;bool colide( int, int, int, int 
+            );<BR><BR>private:<BR><BR>&nbsp;&nbsp;&nbsp;int 
+            x;<BR>&nbsp;&nbsp;&nbsp;int y;<BR>&nbsp;&nbsp;&nbsp;int 
+            tamanho_x;<BR>&nbsp;&nbsp;&nbsp;int 
+            tamanho_y;<BR>};<BR><BR>#endif<BR></SPAN><BR>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO... </SPAN>
+            <HR>
+
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO... </SPAN>
+            <HR>
+            <SPAN class=codigo>#include &lt;allegro.h&gt;<BR>#include 
+            "parede.h"<BR><BR><SPAN class=comentario>// ARQUIVO: 
+            parede.cpp</SPAN><BR><SPAN class=comentario>// Data: 
+            01/08/2007</SPAN><BR><BR><SPAN class=comentario>// Este é o 
+            construtor do objeto</SPAN><BR>Parede::Parede( int x, int y, int 
+            tam_x, int tam_y )<BR>{<BR>&nbsp;&nbsp;&nbsp;this-&gt;x = 
+            x;<BR>&nbsp;&nbsp;&nbsp;this-&gt;y = 
+            y;<BR>&nbsp;&nbsp;&nbsp;this-&gt;tamanho_x = 
+            tam_x;<BR>&nbsp;&nbsp;&nbsp;this-&gt;tamanho_y = 
+            tam_y;<BR>}<BR><BR><SPAN class=comentario>// Essa função imprime o 
+            objeto na tela,</SPAN><BR><SPAN class=comentario>// passamos o local 
+            aonde queremos imprimir</SPAN><BR>void Parede::imprimir( BITMAP 
+            *screen )<BR>{<BR>&nbsp;&nbsp;&nbsp;rectfill( screen, x, y, 
+            x+tamanho_x, y+tamanho_y, makecol(255, 255, 0) );<BR>}<BR><BR><SPAN 
+            class=comentario>// Testa a colisão com o objeto atual ( isso quer 
+            dizer 1 de cada vez )</SPAN><BR>bool Parede::colide( int x, int y, 
+            int tamanho_x, int tamanho_y )<BR>{<BR>&nbsp;&nbsp;&nbsp;if 
+            (<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( x+tamanho_x &gt; 
+            this-&gt;x ) &amp;&amp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( x 
+            &lt; this-&gt;x+this-&gt;tamanho_x ) 
+            &amp;&amp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( y+tamanho_y &gt; 
+            this-&gt;y ) &amp;&amp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;( y 
+            &lt; this-&gt;y+this-&gt;tamanho_y 
+            )<BR>&nbsp;&nbsp;&nbsp;)<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 
+            true;<BR>&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;return 
+            false;<BR>}<BR></SPAN><BR>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO... </SPAN>
+            <HR>
+
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO... </SPAN>
+            <HR>
+            <SPAN class=codigo><SPAN class=comentario>// Colisão com vários 
+            objetos </SPAN><BR>#include &lt;allegro.h&gt;<BR>#include 
+            "parede.h"<BR><BR><SPAN class=comentario>// ARQUIVO: 
+            main.cpp</SPAN><BR><SPAN class=comentario>// Data: 
+            01/08/2007</SPAN><BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(16);<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_FULLSCREEN, 
+            640, 480, 0, 0);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// inicio da programação 
+            atual</SPAN><BR>&nbsp;&nbsp;&nbsp;int x = 
+            0;<BR>&nbsp;&nbsp;&nbsp;int y = 
+            0;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;int x_atual = 
+            x;<BR>&nbsp;&nbsp;&nbsp;int y_atual = 
+            y;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;const int tamanho_x = 
+            20;<BR>&nbsp;&nbsp;&nbsp;const int tamanho_y = 
+            10;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;const int 
+            total_paredes = 5;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;bool 
+            colidindo = false;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// forma de iniciar vários objetos com 
+            construtor</SPAN><BR>&nbsp;&nbsp;&nbsp;Parede aparede[total_paredes] 
+            = {<BR>&nbsp;&nbsp;&nbsp;Parede( 300, 50, 10, 30 
+            ),<BR>&nbsp;&nbsp;&nbsp;Parede( 150, 150, 50, 30 
+            ),<BR>&nbsp;&nbsp;&nbsp;Parede( 300, 150, 150, 50 
+            ),<BR>&nbsp;&nbsp;&nbsp;Parede( 250, 250, 50, 150 
+            ),<BR>&nbsp;&nbsp;&nbsp;Parede( 500, 250, 80, 80 
+            )<BR>&nbsp;&nbsp;&nbsp;} 
+            ;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;int i = 
+            0;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Criando BUFFER para double 
+            buffer</SPAN><BR>&nbsp;&nbsp;&nbsp;BITMAP *buffer = 
+            NULL;<BR>&nbsp;&nbsp;&nbsp;buffer = 
+            create_bitmap(800,800);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Laço 
+            principal</SPAN><BR>&nbsp;&nbsp;&nbsp;while( !key[KEY_ESC] 
+            )<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x_atual 
+            = x;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y_atual = 
+            y;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( key[KEY_UP] 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y 
+            -= 
+            5;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( key[KEY_DOWN] 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y 
+            += 
+            5;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( key[KEY_LEFT] 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x 
+            -= 
+            5;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( key[KEY_RIGHT] 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x 
+            += 
+            5;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Aqui vem o 
+            complicado</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Nós olhamos objeto por objeto, se colidir com um 
+            deles</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// paramos o for e não deixamos nosso quadrado 
+            andar</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for ( i=0; 
+            i&lt;total_paredes; i++ 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;colidindo 
+            = aparede[i].colide( x, y, tamanho_x, tamanho_y 
+            );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( colidindo == true 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i 
+            = 
+            total_paredes;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( colidindo == false 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x_atual 
+            = 
+            x;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y_atual 
+            = 
+            y;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// volta para os valores 
+            antigos</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x 
+            = 
+            x_atual;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y 
+            = 
+            y_atual;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// limpa o nosso novo 
+            buffer</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear( buffer 
+            );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// escreve o quadrado no 
+            buffer</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rectfill( 
+            buffer, x_atual, y_atual, x_atual+tamanho_x, y_atual+tamanho_y, 
+            makecol(255, 0, 0) 
+            );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// imprimimos as coordenadas x e y na tela para o 
+            usuário ver no 
+            buffer</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex( 
+            buffer, font, 10, 10, makecol(255,0,0), -1, "Variavel X: %d", 
+            x);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex( buffer, 
+            font, 10, 20, makecol(255,0,0), -1, "Variavel Y: %d", 
+            y);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex( 
+            buffer, font, 10, 50, makecol(255,0,0), -1, "colide: %d", 
+            colidindo);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// imprime todos os quadrados no destino ( buffer 
+            )</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for ( i=0; 
+            i&lt;total_paredes; i++ 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aparede[i].imprimir( 
+            buffer 
+            );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// imprime o buffer na 
+            tela</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync();<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blit(buffer, 
+            screen, 0,0,0,0, SCREEN_W, 
+            SCREEN_H);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// essa função faz o allegro esperar um pouco antes 
+            de voltar para o 
+            while</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rest(10);<BR>&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+            0;<BR>}<BR>END_OF_MAIN();<BR>&nbsp;&nbsp;&nbsp;<BR></SPAN><BR>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO... </SPAN>
+            <HR>
+
+            <P class=conteudo></P>
+            <P class=conteudo>Preste muita atenção a forma que as paredes foram 
+            criadas.<BR>Também preste atenção em como fazemos a colisão, olhando 
+            um objeto de cada vez.<BR><BR>Será que em um jogo grande isso seria 
+            válido?? <BR>Imagine testar a colisão desta forma em toda uma fase 
+            do Super Mario Bros ?<BR>Quantos testes seriam necessários? </P>
+            <P class=conteudo>Por enquanto não se preocupe com otimização de 
+            código, poderiam ter 5 mil objetos na tela que o C++ iria<BR>dar 
+            conta do recado. Utilize sua imaginação sem pensar que seu jogo irá 
+            ficar lento. </P>
+            <P class=conteudo></P>
+            <P class=conteudo></P>
+            <P class=conteudo></P>
+            <P class=conteudo>&nbsp;</P>
+            <P class=conteudo>- Faça com que uma bola ande de um lado para outro 
+            na tela, de forma que ele se colida com o final da tela e volte para 
+            o inicio da tela.</P>
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO... </SPAN>
+            <HR>
+            <SPAN class=codigo><SPAN class=comentario>// Bolinha andadora 
+            </SPAN><BR>#include &lt;allegro.h&gt;<BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(16);<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_FULLSCREEN, 
+            640, 480, 0, 0);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// inicio da programação 
+            atual</SPAN><BR>&nbsp;&nbsp;&nbsp;int x = 
+            0;<BR>&nbsp;&nbsp;&nbsp;int y = SCREEN_H/2;<BR>&nbsp;&nbsp;&nbsp;int 
+            tamanho = 20;<BR>&nbsp;&nbsp;&nbsp;bool colide = 
+            false;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;int variavel = 
+            1;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Criando BUFFER para double 
+            buffer</SPAN><BR>&nbsp;&nbsp;&nbsp;BITMAP *buffer = 
+            NULL;<BR>&nbsp;&nbsp;&nbsp;buffer = 
+            create_bitmap(800,800);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Laço 
+            principal</SPAN><BR>&nbsp;&nbsp;&nbsp;while( !key[KEY_ESC] 
+            )<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( variavel == 1 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x 
+            += 
+            5;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x 
+            -= 
+            5;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// limpa o nosso novo 
+            buffer</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear( buffer 
+            );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// escreve o quadrado no 
+            buffer</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ellipsefill(buffer, 
+            x, y, tamanho, tamanho, makecol(255,255,0) 
+            );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// imprimimos as coordenadas x e y na tela para o 
+            usuário ver no 
+            buffer</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex( 
+            buffer, font, 10, 10, makecol(255,0,0), -1, "Variavel X: %d", 
+            x);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex( buffer, 
+            font, 10, 20, makecol(255,0,0), -1, "Variavel Y: %d", 
+            y);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// limitando o quadrado dentro da 
+            tela</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( x &lt; 0 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variavel 
+            = variavel * 
+            (-1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( (x+tamanho) &gt; SCREEN_W 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variavel 
+            = variavel * 
+            (-1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// imprime o buffer na 
+            tela</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync();<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blit(buffer, 
+            screen, 0,0,0,0, SCREEN_W, 
+            SCREEN_H);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// essa função faz o allegro esperar um pouco antes 
+            de voltar para o 
+            while</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rest(10);<BR>&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+            0;<BR>}<BR>END_OF_MAIN();<BR></SPAN><BR>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO... </SPAN>
+            <HR>
+
+            <P class=conteudo></P>
+            <P class=conteudo>- Faça com que uma bola ande por toda tela, 
+            colidindo com as paredes.<BR>Quando a bola colidir, ela deve alterar 
+            para aonde ela vai colidir da próxima vez, de forma que ela fique 
+            andando por toda a tela.</P>
+            <HR>
+            <SPAN class=titulos_texto>CÓDIGO... </SPAN>
+            <HR>
+
+            <P><SPAN class=codigo><SPAN class=comentario>// Bolinha colisão 
+            </SPAN><BR>#include &lt;allegro.h&gt;<BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(16);<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_FULLSCREEN, 
+            640, 480, 0, 0);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// inicio da programação 
+            atual</SPAN><BR>&nbsp;&nbsp;&nbsp;int x = 
+            0;<BR>&nbsp;&nbsp;&nbsp;int y = SCREEN_H/2;<BR>&nbsp;&nbsp;&nbsp;int 
+            tamanho = 20;<BR>&nbsp;&nbsp;&nbsp;bool colide = 
+            false;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;int variavel_x = 
+            10;<BR>&nbsp;&nbsp;&nbsp;int variavel_y = 
+            10;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Criando BUFFER para double 
+            buffer</SPAN><BR>&nbsp;&nbsp;&nbsp;BITMAP *buffer = 
+            NULL;<BR>&nbsp;&nbsp;&nbsp;buffer = 
+            create_bitmap(800,800);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Laço 
+            principal</SPAN><BR>&nbsp;&nbsp;&nbsp;while( !key[KEY_ESC] 
+            )<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( variavel_x == 1 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x 
+            += 
+            variavel_x;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x 
+            -= 
+            variavel_x;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( variavel_y == 1 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y 
+            += 
+            variavel_y;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y 
+            -= 
+            variavel_y;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// limpa o nosso novo 
+            buffer</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear( buffer 
+            );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// escreve o quadrado no 
+            buffer</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ellipsefill(buffer, 
+            x, y, tamanho, tamanho, makecol(255,255,0) 
+            );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// imprimimos as coordenadas x e y na tela para o 
+            usuário ver no 
+            buffer</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex( 
+            buffer, font, 10, 10, makecol(255,0,0), -1, "Variavel X: %d", 
+            x);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex( buffer, 
+            font, 10, 20, makecol(255,0,0), -1, "Variavel Y: %d", 
+            y);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// limitando o quadrado dentro da 
+            tela</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if ( x &lt; 0 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variavel_x 
+            = variavel_x * 
+            (-1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( (x+tamanho) &gt; SCREEN_W 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variavel_x 
+            = variavel_x * 
+            (-1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( y &lt; 0 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variavel_y 
+            = variavel_y * 
+            (-1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            ( (y+tamanho) &gt; SCREEN_H 
+            )<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;variavel_y 
+            = variavel_y * 
+            (-1);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// imprime o buffer na 
+            tela</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync();<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blit(buffer, 
+            screen, 0,0,0,0, SCREEN_W, 
+            SCREEN_H);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// essa função faz o allegro esperar um pouco antes 
+            de voltar para o 
+            while</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rest(10);<BR>&nbsp;&nbsp;&nbsp;}<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+            0;<BR>}<BR>END_OF_MAIN();<BR></SPAN></P>
+            <HR>
+            <SPAN class=titulos_texto>FIM DE CÓDIGO... </SPAN>
+            <HR>
+
+            <P><SPAN class=codigo><BR></SPAN><BR></P><BR><SPAN 
+            class=conteudo><B>Contribuidor</B> <BR>Adriano 
+            Waltrick<BR>01/08/2007 </SPAN>
+            <P>
+            <HR>
+            &nbsp;
+            <P></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="40%" align=center 
+            bgColor=#ffffff border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center 
+                  bgColor=#000099 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD bgColor=#f7f7f7>
+                              <P class=conteudo align=center><A class=conteudo 
+                              href="http://www.bdjogos.com/conteudo.php?link=exercicio_27.php">«&nbsp;Anterior 
+                              </A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+                <TD>&nbsp;</TD>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center 
+                  bgColor=#000099 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD bgColor=#f7f7f7>
+                              <P class=conteudo align=center><A class=conteudo 
+                              href="http://www.bdjogos.com/conteudo.php?link=capitulo_28.php">Próximo 
+                              » 
+                </A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background=EXERC27_arquivos/111.jpg><IMG height=1 
+      src="EXERC27_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background=EXERC27_arquivos/111.jpg colSpan=2 height=1><IMG 
+      height=1 src="EXERC27_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

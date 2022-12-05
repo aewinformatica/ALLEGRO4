@@ -1,0 +1,497 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://www.bdjogos.com/conteudo.php?link=capitulo_29.php -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="MOVSPRITES_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="MOVSPRITES_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="MOVSPRITES_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background=MOVSPRITES_arquivos/bg.jpg topMargin=0 marginheight="0" 
+marginwidth="0">
+<SCRIPT language=javascript src="MOVSPRITES_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="MOVSPRITES_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=MOVSPRITES_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="MOVSPRITES_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="MOVSPRITES_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=MOVSPRITES_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background=MOVSPRITES_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="MOVSPRITES_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=MOVSPRITES_arquivos/linha_horizo.gif><IMG 
+      height=8 src="MOVSPRITES_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="MOVSPRITES_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="MOVSPRITES_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=MOVSPRITES_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="MOVSPRITES_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="MOVSPRITES_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=MOVSPRITES_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background=MOVSPRITES_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="MOVSPRITES_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=MOVSPRITES_arquivos/linha_horizo.gif><IMG 
+      height=8 src="MOVSPRITES_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="MOVSPRITES_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="MOVSPRITES_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=MOVSPRITES_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="MOVSPRITES_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="MOVSPRITES_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=MOVSPRITES_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background=MOVSPRITES_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="MOVSPRITES_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=MOVSPRITES_arquivos/linha_horizo.gif><IMG 
+      height=8 src="MOVSPRITES_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="MOVSPRITES_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="MOVSPRITES_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=MOVSPRITES_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="MOVSPRITES_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="MOVSPRITES_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=MOVSPRITES_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background=MOVSPRITES_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="MOVSPRITES_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=MOVSPRITES_arquivos/linha_horizo.gif><IMG 
+      height=8 src="MOVSPRITES_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="MOVSPRITES_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="MOVSPRITES_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="MOVSPRITES_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="MOVSPRITES_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="MOVSPRITES_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="MOVSPRITES_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="MOVSPRITES_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background=MOVSPRITES_arquivos/111.jpg 
+      rowSpan=2><IMG height=1 src="MOVSPRITES_arquivos/111.jpg" 
+  width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background=MOVSPRITES_arquivos/111.jpg 
+      rowSpan=2><IMG height=1 src="MOVSPRITES_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="MOVSPRITES_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD vAlign=top><SPAN class=titulos><BR>29 - Movimentação de Sprites 
+            </SPAN>
+            <HR>
+
+            <P class=conteudo>Sprites é um conjunto de imagens que organizadas 
+            em uma determinada seqüência simulam o movimento de algum objeto ou 
+            personagem. Praticamente todos os jogos 2D possuem algum tipo de 
+            sprites. </P>
+            <P class=conteudo>Podemos definir como sprites a movimentação do 
+            jogador principal, as folhas caindo no chão, os inimigos em 
+            movimento e principalmente os efeitos entre os objetos do cenário. 
+            </P>
+            <P class=conteudo>A seguir iremos selecionar alguns sprites prontos 
+            de jogos e colocá-los em movimento.<BR>Se você proferir escolher 
+            algum outro sprite segue uma seqüência de sites abaixo com uma 
+            infinidade de sprites de jogos.</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <DIV align=center><STRONG>Links para Sprites 
+                        </STRONG></DIV></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P><A href="http://tsgk.captainn.net/" 
+                        target=_blank>http://tsgk.captainn.net/</A><BR><A 
+                        href="http://www.panelmonkey.org/category.php?id=1&amp;theme=1" 
+                        target=_blank>http://www.panelmonkey.org/category.php?id=1&amp;theme=1</A><BR><A 
+                        href="http://www.molotov.nu/?page=graphics" 
+                        target=_blank>http://www.molotov.nu/?page=graphics</A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff colSpan=2>
+                        <DIV align=center><SPAN 
+                        class=conteudo2><STRONG>dragao.bmp</STRONG></SPAN></DIV></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff colSpan=2>
+                        <P class=conteudo2 align=center><IMG height=55 
+                        src="MOVSPRITES_arquivos/capitulo29_01.jpg" width=360 
+                        border=1></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff colSpan=2>
+                        <P 
+                      align=center><STRONG>Especificações</STRONG><BR></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width="50%" bgColor=#ffffff>
+                        <P align=right><STRONG>Qtde de Desenhos em x[0]:<BR>Qtde 
+                        de Desenhos em y[0]:<BR>Largura total:<BR>Largura 
+                        individual:<BR>Altura:</STRONG></P></TD>
+                      <TD vAlign=top width="50%" bgColor=#ffffff>6 <BR>0 
+                        <BR>360 pixels <BR>60 pixels <BR>55 pixels 
+                  </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff colSpan=2>
+                        <DIV align=center><SPAN 
+                        class=conteudo2><STRONG>robocop.bmp</STRONG></SPAN></DIV></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff colSpan=2>
+                        <P class=conteudo2 align=center><IMG height=80 
+                        src="MOVSPRITES_arquivos/capitulo29_02.jpg" width=415 
+                        border=1></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff colSpan=2>
+                        <P 
+                      align=center><STRONG>Especificações</STRONG><BR></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width="50%" bgColor=#ffffff>
+                        <P align=right><STRONG>Qtde de Desenhos em x[0]:<BR>Qtde 
+                        de Desenhos em y[0]:<BR>Largura total:<BR>Largura 
+                        individual:<BR>Altura:</STRONG></P></TD>
+                      <TD vAlign=top width="50%" bgColor=#ffffff>6 <BR>0 
+                        <BR>415 pixels <BR>69 pixels <BR>80 pixels 
+                  </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P>&nbsp;</P>
+            <P class=conteudo>Não se esqueça de converter as imagens acima para 
+            bitmap. <BR></P>
+            <P class=conteudo>O código que iremos usar para movimentar o Robocop 
+            e o dragão é o mesmo. <BR>Porém, antes de executar cada um é 
+            necessário fazer algumas configurações com relação às especificações 
+            citadas acima. <BR></P>
+            <HR>
+            <SPAN class=titulos>CÓDIGO...</SPAN> 
+            <HR>
+
+            <P><SPAN class=codigo>#include &lt;allegro.h&gt;<BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(16);<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_WINDOWED, 
+            640, 480, 0, 0);<BR><BR>&nbsp;&nbsp;&nbsp;BITMAP *imgSprites = 
+            NULL;<BR>&nbsp;&nbsp;&nbsp;imgSprites = 
+            load_bitmap("robocop.bmp",NULL);<BR><BR>&nbsp;&nbsp;&nbsp;BITMAP 
+            *Buffer = NULL;<BR>&nbsp;&nbsp;&nbsp;Buffer = 
+            create_bitmap(SCREEN_W,SCREEN_H);<BR><BR>&nbsp;&nbsp;&nbsp;const int 
+            iSprite_Largura = 69;&nbsp;&nbsp;&nbsp;<SPAN class=comentario>// 
+            Largura de um sprite</SPAN><BR>&nbsp;&nbsp;&nbsp;const int 
+            iSprite_Altura = 80; <SPAN 
+            class=comentario>&nbsp;&nbsp;&nbsp;&nbsp;// Altura de um 
+            sprite</SPAN><BR>&nbsp;&nbsp;&nbsp;const int Qtde_Spritesx = 6; 
+            <SPAN class=comentario>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Qtde de 
+            Desenhos em x[0] - Horizontal</SPAN><BR>&nbsp;&nbsp;&nbsp;const int 
+            Qtde_Spritesy = 0; <SPAN 
+            class=comentario>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Qtde de Desenhos 
+            em y[0] - Vertical</SPAN><BR><BR>&nbsp;&nbsp;&nbsp;const int iCiclo 
+            = 30; <SPAN class=comentario>// Ciclo de troca de 
+            sprite</SPAN><BR><BR>&nbsp;&nbsp;&nbsp;int iPosx = 0; <SPAN 
+            class=comentario>// Posição x do 
+            corte.</SPAN><BR>&nbsp;&nbsp;&nbsp;int iPosy = 0; <SPAN 
+            class=comentario>// Posição y do corte. Como é apenas uma fileira 
+            então y sempre vai ser 0</SPAN><BR><BR>&nbsp;&nbsp;&nbsp;int 
+            buffer_animacao = 0; <SPAN class=comentario>// Buffer para controle 
+            do ciclo</SPAN><BR><BR>&nbsp;&nbsp;&nbsp;while 
+            (!key[KEY_ESC])<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clear_bitmap( 
+            Buffer 
+            );<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;textprintf_ex(Buffer, 
+            font, 0, 0, makecol(0, 255, 255),-1,"ANIMACAO 
+            SPRITES");<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Controle para mudar o sprite 
+            </SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(buffer_animacao == 
+            0)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (iPosx &gt; 0 &amp;&amp; iPosx == 
+            Qtde_Spritesx-1)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR></SPAN><SPAN 
+            class=codigo>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iPosx 
+            = 
+            0;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if 
+            (Qtde_Spritesx &gt; 0) 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iPosx++;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;buffer_animacao 
+            = iCiclo;<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+            <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else <BR>&nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+            buffer_animacao--;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</SPAN><SPAN 
+            class=codigo><BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Corta e desenha o 
+            sprite</SPAN><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;masked_blit(imgSprites,Buffer,iPosx*iSprite_Largura,iPosy,SCREEN_W/2,&nbsp;SCREEN_H/2,iSprite_Largura,iSprite_Altura);<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;blit(Buffer,screen,0,0,0,0,SCREEN_W,SCREEN_H);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vsync();<BR><BR>&nbsp;&nbsp;&nbsp;}<BR><BR>&nbsp;&nbsp;&nbsp;destroy_bitmap(imgSprites);&nbsp;<BR>&nbsp;&nbsp;&nbsp;destroy_bitmap(Buffer);&nbsp;&nbsp;&nbsp;<BR><BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR><BR>&nbsp;&nbsp;&nbsp;return 
+            0;<BR>}<BR>END_OF_MAIN();<BR></SPAN><BR></P>
+            <HR>
+            <SPAN class=titulos>FIM DO CÓDIGO</SPAN> 
+            <HR>
+
+            <P class=conteudo>Logo acima temos um código genérico para a 
+            movimentação dos sprites na horizontal. No processo para a 
+            movimentação dos sprites na vertical a única coisa que muda é o eixo 
+            x para y.</P>
+            <P class=conteudo>Basicamente, o código possui a informação da 
+            largura, altura e quantidade de sprites na horizontal. <BR>Com essas 
+            informações é possível fazer um corte nas imagens com a função 
+            <STRONG>blit</STRONG> vista em outro artigo. </P>
+            <P class=conteudo>Para que as imagens não fossem trocadas na 
+            velocidade de processamento de cada computador adicionamos um buffer 
+            de animação <STRONG>iCiclo</STRONG>. <BR>Dessa forma nossa animação 
+            terá um movimento mais pausado e uma impressão de movimento muito 
+            melhor. </P>
+            <P class=conteudo>Caro leitor chegamos ao fim do entendimento da 
+            movimentação de sprites. Se houver alguma dúvida ou dificuldade 
+            favor entrar em contato com o pessoal pelo 
+            Forum.<BR><BR>Abraço<BR>BDJogos <BR><BR></P><BR><SPAN 
+            class=conteudo><B>Contribuidor</B> <BR>Bruno A. Rovela<BR>22/08/2007 
+            </SPAN>
+            <P>
+            <HR>
+            &nbsp;
+            <P></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="40%" align=center 
+            bgColor=#ffffff border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center 
+                  bgColor=#000099 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD bgColor=#f7f7f7>
+                              <P class=conteudo align=center><A class=conteudo 
+                              href="http://www.bdjogos.com/conteudo.php?link=capitulo_28.php">«&nbsp;Anterior 
+                              </A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+                <TD>&nbsp;</TD>
+                <TD>
+                  <TABLE cellSpacing=0 cellPadding=0 width="100%" align=center 
+                  bgColor=#000099 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>
+                        <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <TR>
+                            <TD bgColor=#f7f7f7>
+                              <P class=conteudo align=center><A class=conteudo 
+                              href="http://www.bdjogos.com/conteudo.php?link=adicional_29.php">Próximo 
+                              » 
+                </A></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background=MOVSPRITES_arquivos/111.jpg><IMG 
+      height=1 src="MOVSPRITES_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background=MOVSPRITES_arquivos/111.jpg colSpan=2 
+      height=1><IMG height=1 src="MOVSPRITES_arquivos/111.jpg" 
+  width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

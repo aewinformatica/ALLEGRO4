@@ -1,0 +1,214 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0064)http://pjmoo.codigolivre.org.br/gdj/pag_artigo_leitura.php?id=55 -->
+<HTML><HEAD><TITLE>GDJ :: Artigos :: Programação :: C/C++ :: Como Funciona Salvar e Carregar um Jogo em C++</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META 
+content="Site voltado para o Desenvolvimento de Jogos com material para criação e desenvolvimento de games para Computador" 
+name=description>
+<META 
+content="Artigos :: Programação :: C/C++ Como Funciona Salvar e Carregar um Jogo em C++" 
+name=keywords><LINK 
+href="GDJ  Artigos  Programação  C-C++  Como Funciona Salvar e Carregar um Jogo em C++_arquivos/artigo_estilo.css" 
+rel=stylesheet><LINK href="favicon.ico" rel="shortcut icon">
+<SCRIPT language=JavaScript 
+src="GDJ  Artigos  Programação  C-C++  Como Funciona Salvar e Carregar um Jogo em C++_arquivos/site.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY>
+<TABLE height="100%" cellSpacing=1 cellPadding=8 width=760 align=center 
+bgColor=#a0a0b0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=site_area vAlign=top height="100%">
+      <TABLE height="100%" cellSpacing=0 cellPadding=1 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=middle width="100%" HEIGTH="260">
+            <TABLE width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=252><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/index.php"><IMG 
+                  src="GDJ  Artigos  Programação  C-C++  Como Funciona Salvar e Carregar um Jogo em C++_arquivos/logo.gif" 
+                  width=252 border=0></A></TD>
+                <TD align=middle width="100%"><B>[</B><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_categoria.php?id=2">Artigos</A><B>] 
+                  [</B><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/sobre.php">Sobre</A><B>]</B></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD align=middle width="100%" height=20><A 
+            href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_lista.php?id=21"><B>
+            <DIV class=categoria_artigo>Artigos :: Programação :: 
+            C/C++</DIV></B></A></TD></TR>
+        <TR>
+          <TD vAlign=top width="100%" height="100%"><!-- AREA DE TEXTO - INICIO -->
+            <TABLE width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top align=middle>
+                  <H1>Como Funciona Salvar e Carregar um Jogo em 
+                  C++</H1><SUP>Autor : <A 
+                  href="mailto:lordvader@grupoatena.com.br">LordVader</A>&nbsp;&nbsp;</SUP> 
+                </TD></TR>
+              <TR>
+                <TD vAlign=top align=JUSTIFY width="100%">
+                  <DIV align=left>
+                  <P><B><FONT face=Verdana size=4>Introdução</FONT></B></P>
+                  <P><FONT face=Verdana size=2>Você provavelmente já deve ter se 
+                  perguntado como funciona as rotinas de salvamento e 
+                  carregamento de um jogo. Bom, o conceito é muito simples, 
+                  basicamente, no salvamento consiste gravar em um arquivo um 
+                  cabeçalho e o valor das variáveis mais significativas para o 
+                  jogos. No carregamento, ler o cabeçalho para saber se o 
+                  arquivo é válido e saber informações sobre o conteúdo, depois 
+                  ler o restante do mesmo, jogando os valores nas 
+                  variáveis.</FONT></P>
+                  <P><FONT face=Verdana size=2>Devido a minha preferência por 
+                  C++, o código de exemplo estará escrito para esta linguagem, 
+                  mas o conceito é válido para qualquer outra. No final do 
+                  artigo você poderá baixar um arquivo compactado contendo um 
+                  projeto feito no Dev-C++ 5 (beta), utilizando a biblioteca 
+                  Allegro.</FONT> </P>
+                  <H2>Salvar</H2>
+                  <P><B><FONT face=Verdana size=4>Salvar</FONT></B></P>
+                  <P><FONT face=Verdana size=2>Como havia dito, a rotina de 
+                  salvamento consistem em gravar um cabeçalho e depois o 
+                  conteúdo das variáveis, para isto é necessário 3 passos, que 
+                  são:</FONT></P>
+                  <P><FONT face=Verdana size=2>1. Criar o arquivo<BR>2. Gravar o 
+                  cabeçalho<BR>3. Gravar o conteúdo</FONT></P>
+                  <P><FONT face=Verdana size=2>Certo, bem simples, vamos ao 
+                  trabalho então.</FONT></P>
+                  <P><B><FONT face=Verdana size=4>Criar o Arquivo</FONT></B></P>
+                  <P><FONT face=Verdana size=2>O primeiro passo consiste em 
+                  abrir o arquivo para gravação e testar se realmente foi aberto 
+                  corretamente.</FONT></P>
+                  <P><FONT face="Courier New" color=#000080 size=2>#include 
+                  &lt;fstream&gt;<BR><BR>ofstream arq("meujogo.sav", 
+                  ios::binary);<BR>if (!arq.is_open())<BR>{<BR></FONT><FONT 
+                  face="Courier New" color=#008000 size=2>&nbsp;&nbsp;&nbsp; 
+                  //fazer alguma coisa<BR></FONT><FONT face="Courier New" 
+                  color=#000080 size=2>}</FONT></P>
+                  <P><B><FONT face=Verdana size=4>Gravar o 
+                  Cabeçalho</FONT></B></P>
+                  <P><FONT face=Verdana size=2>O segundo passo consiste em 
+                  gravar um cabeçalho com informações importantes sobre o 
+                  arquivo, como uma assinatura e dados sobre o que será 
+                  carregado.<BR><BR></FONT><FONT face="Courier New" 
+                  color=#008000 size=2>//cabeçalho<BR></FONT><FONT 
+                  face="Courier New" color=#000080 size=2>struct 
+                  CABECALHO<BR>{<BR>&nbsp;&nbsp;&nbsp; char 
+                  assinatura[4];<BR>&nbsp;&nbsp;&nbsp; int 
+                  jogadores;<BR>&nbsp;&nbsp;&nbsp; int 
+                  inimigos;<BR>};<BR><BR>#define NUM_JOGADORES 1<BR>#define 
+                  NUM_INIMIGOS 3<BR><BR>CABECALHO cab = { "SAV", NUM_JOGADORES, 
+                  NUM_INIMIGOS };<BR><BR></FONT><FONT face="Courier New" 
+                  color=#008000 size=2>//gravação do cabeçalho<BR></FONT><FONT 
+                  face="Courier New" color=#000080 
+                  size=2>arq.write(reinterpret_cast&lt;char *&gt;(&amp;cab), 
+                  sizeof(CABECALHO));</FONT></P>
+                  <P><B><FONT face=Verdana size=4>Gravar o 
+                  Conteúdo</FONT></B></P>
+                  <P><FONT face=Verdana size=2>O terceiro passo consiste em 
+                  gravar o conteúdo das variáveis mais importantes. No exemplo 
+                  abaixo coloquei a declaração dos objetos apenas a título de 
+                  informação, o importante são as duas chamadas de 
+                  arq.write().</FONT></P>
+                  <P><FONT face="Courier New" color=#000080 size=2>CObjeto 
+                  jogador;<BR>CObjeto inimigo[NUM_INIMIGOS];<BR><BR></FONT><FONT 
+                  face="Courier New" color=#008000 size=2>//gravação do 
+                  conteúdo<BR></FONT><FONT face="Courier New" color=#000080 
+                  size=2>arq.write(reinterpret_cast&lt;const char 
+                  *&gt;(&amp;jogador), sizeof(CObjeto) * 
+                  cab.jogadores);<BR>arq.write(reinterpret_cast&lt;const char 
+                  *&gt;(&amp;inimigo), sizeof(CObjeto) * 
+                  cab.inimigos);</FONT></P>
+                  <P><FONT face=Verdana size=2>Depois que gravar tudo, não 
+                  esqueça de fechar o arquivo:</FONT></P>
+                  <P><FONT face="Courier New" color=#000080 
+                  size=2>arq.close();</FONT></P>
+                  <H2>Carregar</H2>
+                  <P><B><FONT face=Verdana size=4>Carregar</FONT></B></P>
+                  <P><FONT face=Verdana size=2>A rotina de carregamento do 
+                  arquivo é muito parecida com a de salvamento, diferenciando no 
+                  fato que você irá fazer a leitura do arquivo. Também será 
+                  executada em 3 passos:</FONT></P>
+                  <P><FONT face=Verdana size=2>1. Abrir o arquivo<BR>2. Ler o 
+                  cabeçalho<BR>3. Ler o conteúdo</FONT></P>
+                  <P><B><FONT face=Verdana size=4>Abrir o Arquivo</FONT></B></P>
+                  <P><FONT face=Verdana size=2>Neste primeiro passo vamos abrir 
+                  o arquivo para leitura e verificar se realmente foi 
+                  aberto.</FONT></P>
+                  <P><FONT face="Courier New" color=#000080 size=2>ifstream 
+                  arq("meujogo.sav", ios::binary);<BR>if 
+                  (!arq.is_open())<BR>{<BR></FONT><FONT face="Courier New" 
+                  color=#008000 size=2>&nbsp;&nbsp;&nbsp; //fazer alguma 
+                  coisa<BR></FONT><FONT face="Courier New" color=#000080 
+                  size=2>}</FONT></P>
+                  <P><FONT face=Verdana size=2>Note que aqui utilizamos 
+                  ifstream, que é uma classe para leitura.</FONT></P>
+                  <P><B><FONT face=Verdana size=4>Ler o Cabeçalho</FONT></B></P>
+                  <P><FONT face=Verdana size=2>Na leitura do cabeçalho será 
+                  necessário validar a assinatura para saber se este arquivo é 
+                  realmente o que gravamos.</FONT></P>
+                  <P><FONT face="Courier New" color=#000080 size=2>CABECALHO 
+                  cab;<BR>arq.read(reinterpret_cast&lt;char *&gt;(&amp;cab), 
+                  sizeof(CABECALHO));<BR>if (strcmp(cab.assinatura, "SAV") != 0) 
+                  return;</FONT></P>
+                  <P><B><FONT face=Verdana size=2>Ler o Conteúdo</FONT></B></P>
+                  <P><FONT face=Verdana size=2>Baseada nas informações do 
+                  cabeçalho, agora faremos a leitura do resto do 
+                  arquivo.</FONT></P>
+                  <P><FONT face="Courier New" color=#000080 
+                  size=2>arq.read(reinterpret_cast&lt;char *&gt;(&amp;jogador), 
+                  sizeof(CObjeto) * 
+                  cab.jogadores);<BR>arq.read(reinterpret_cast&lt;char 
+                  *&gt;(&amp;inimigo), sizeof(CObjeto) * 
+                  cab.inimigos);<BR></FONT><FONT face=Verdana 
+                  size=2><BR>Novamente, não esqueça de fechar o arquivo depois 
+                  de fazer a leitura.</FONT></P>
+                  <P><FONT face="Courier New" color=#000080 
+                  size=2>arq.close();</FONT></P>
+                  <H2>Considerações Finais</H2>
+                  <P><B><FONT face=Verdana size=4>Considerações 
+                  Finais</FONT></B></P>
+                  <P><FONT face=Verdana size=2>Como vimos, o conceito é simples 
+                  e fácil de implementar, mas também pode ficar complicado se 
+                  quisermos acrescentar algumas funcionalidades como 
+                  criptografia e compressão e gravação em múltiplos arquivos, o 
+                  que são bastante comuns.</FONT></P>
+                  <P><FONT face=Verdana size=2>Lembre-se de sempre criar um 
+                  cabeçalho, para se saber o que se está lendo. Seria 
+                  interessante permitir que o usuário escolha o nome do arquivo. 
+                  Após a leitura dos dados, também não esqueça de restaurar 
+                  algumas coisas como imagens, mapas e tudo mais, pois imagine 
+                  carregar dados do jogador que estava na 6ª fase, mas as 
+                  imagens ainda ser da 1ª.</FONT></P>
+                  <P><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/site/tutorial/06112002_083135/sajogos.zip"><FONT 
+                  face=Verdana size=2>Pegue aqui o código fonte e o executável 
+                  do artigo.</FONT></A></P></DIV></TD></TR>
+              <TR>
+                <TD align=middle><BR>
+                  <HR>
+
+                  <TABLE cellSpacing=2 cellPadding=2 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=middle><A target=_blank 
+                        noHREF="javascript:Janela('../mailfriendart.asp?artigo={SCRIPT_NAME}&amp;ID=55',350,490);"><IMG 
+                        alt="Enviar para um Amigo" 
+                        src="GDJ  Artigos  Programação  C-C++  Como Funciona Salvar e Carregar um Jogo em C++_arquivos/botao_enviar.gif" 
+                        border=0 ALGIN="CENTER" VALIGN="TOP"><BR>Enviar para um 
+                        Amigo</A></TD>
+                      <TD align=middle><FONT class=info><A 
+                        href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_leitura_impressao.php?ID=55" 
+                        target=_blank><IMG alt="Versão para Impressão" 
+                        src="GDJ  Artigos  Programação  C-C++  Como Funciona Salvar e Carregar um Jogo em C++_arquivos/botao_impressora.gif" 
+                        border=0 ALGIN="CENTER" VALIGN="TOP"><BR>Versão para 
+                        Impressão</A></FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- AREA DE TEXTO - FIM --></TD></TR>
+        <TR>
+          <TD align=middle width="100%" HEIGTH="20"><B>
+            <DIV class=categoria_artigo>GDJ 2005 - Colaboração das Comunidades 
+            ArsLudica/PDJ 
+(2001/2003)</DIV></B></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>

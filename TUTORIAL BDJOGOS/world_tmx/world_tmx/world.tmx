@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<map version="0.99b" orientation="orthogonal" width="320" height="14" tilewidth="32" tileheight="32">
+ <tileset name="Cenario" firstgid="1" tilewidth="32" tileheight="32">
+  <image source="cenario.png"/>
+ </tileset>
+ <tileset name="Objetos" firstgid="97" tilewidth="32" tileheight="32">
+  <image source="objetos.png"/>
+ </tileset>
+ <tileset name="Colisao" firstgid="193" tilewidth="32" tileheight="32">
+  <image source="colisao.png"/>
+ </tileset>
+ <layer name="Fundo" width="320" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAO3UIQEAAAjEwM9G/1BEQCBA3LkVWAIAAAAAAAAAAAAAAHxWQwOw560AAADAlQZArtn+AEYAAA==
+  </data>
+ </layer>
+ <layer name="Centro" width="320" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAO1Zy1IVQQxtH6gLqwTEx8IqFRTcKPgq3fjkoRupQkDZ6B/cxf3/DZmiu4ixk066hzuXS07VKWaGpjtJp89kQggOh8PhcDgcDofD4XA4HBcbd4BzwGtDG+JwRNwc2gDHzKLTu7vxegF4KXIReGUoowbCONLRhnHoN5YPeprH4cBIepe07nE41b9l4HXg7cGsc5xXjMnPVrj+Oc4CSe+S1i3F+6fA1fhsZTDr+sNL4CuGrydox0WpLWel/pvlXtAkfJPWGDq2l8NprdfxHvBJvF4LJ9qXWPoOHtqXEr4AvyLuoOvNxrklbe1DYy2xbd2Had3Hkv7V2I37PjlMuhc0CifvixF5zuVXS05JvpXiIkHbS2uJbYt9CW9C+cxSvmXmsvpyw2DnOnBDOVaKC9U/TIv+5dZIc2NN7WsNS2xrcmraer/cHkr6V3OWad8nB00vSPPua30ncrmLc2oU/tdNCZxvmrhwsPTSavtsLfZhzTsI/FnluM3Ma/XlvsLWpHufgJ+ZMSNELi40P7ucwz7l8pfLS24NSVut+tfSj5XG/gDu9rjWc+ALpU9aSLkt6V/NWaZ9H+on/jaSekGavW/NCY3+WSD5VoqLBG0vTRtbzRrYvl/A38CjeE9rPEnz9oA/CffJmJz+1fii0b+ke5L+YXBxobmzSe7x73eCnFfaNRI1NTatqS39WKxppX34A/zbsFaHW8D5eP0B+JGJE8Y74HvFuJw9OLc5/as5y7m+zwozZ6kXdFb6h89yn/pX8u1qyMcl2ZN4FP5FLqZcLw2vYemzSfuWO2s1NZ6l/rPkCcYzwccEi/5JcbHon5RXljUSt5jnXEwtOdTFNmmaZh+o/lnX6vAQ+CheU/3D5wOfjW/A75lxmvODNSmnf7VnufZ71Tm95LQO13W0npOY+7vDKfDzPFHz/un0L/2ftKYn67Szz5rA6XTWE9d/mnrR2c5jYqCYRgBGAAA=
+  </data>
+ </layer>
+ <layer name="Frente" width="320" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAO3UMQHAMAzEwAAqhBIIhPInUgyePnbuEGjSWgAAAADAiZ50AEDImw4ACPE/4Fb+B9zK/5hipwNox/+Y4ksH0I7/MYX/UeV/TOF/VPkfAABVP3a7JBsARgAA
+  </data>
+ </layer>
+ <layer name="Colisao" width="320" height="14">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAAAO2YWwrDIBBFs60uKAtr6U+hq7BdWAkkUIRUo6N3bM6BS34kM456fUwTAMBYvNUJAACIwP/AE3d1AgNAjezA/8AD86qnOhGHzF9aoEZ24H+gZk43GZqwCuoIk30t8T/oxU2dAAxNiL4W4H96FO85rWOeweteCfXiLGfLX+e/OVMx+J+W7c2r9x2QNyTfpLy1t8d6pmbt/Lv/7e0ZHuZUPG6jv4OFQqnyhPGpXTMe/S9372vtXyXrRH3v6x2/1PMU/pcTNyev1JxT76u5PDLb7c0p6/E7+j+L84LC/66CmGpqfKlHvXJjWPidZ/+L8VT7hdKaHh3fmrYl/Tka2wqP5z/wQQuva+l/l4P9GZHWNbXwv9J4I/tfr7WCEEIIIbSnDXUeZ9EHb7hnWgBGAAA=
+  </data>
+ </layer>
+</map>

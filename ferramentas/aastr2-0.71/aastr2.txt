@@ -1,0 +1,162 @@
+1.	AASTR and AASTR2:
+
+
+
+
+AASTR is an library for use with the Allegro game programming library.
+It provides anti-aliased stretching and rotation routines.
+
+AASTR2 is a modified version of AASTR that adds new features, like 
+dithering, alpha blending, non-integer destination rectangles, 
+adjustable background color, etc..
+
+AASTR2 is gift-ware. This package is given to you freely as a gift.
+You may use, modify, redistribute, and generally hack it about in any
+way you like, and you do not have to give anyone anything in return.
+
+I do not accept any responsibility for any effects, adverse or
+otherwise, that this code may have on just about anything that you can
+think of. Use it at your own risk.
+
+AASTR was created by Michael Bukin.
+(mailto:bukinm@inp.nsk.su)
+
+AASTR2 was created by orz.
+(AIM: orzagonal)
+
+
+
+
+2.	Rendering Options:
+
+
+
+
+See aastr.h for more information on the new features and the API.
+
+	AA_ALPHA
+
+AA_ALPHA causes the source bitmap to be treated as an alpha bitmap.  
+If the source bitmap is 32 bpp, it will be treated as 32 bpp RGBA 8888 
+(or BGRA 8888, if Allegro is in BGR mode 32 bpp).  If the source is 16 
+bpp it will be treated as RGBA 4444.  If the source is none of the 
+above, this option will be ignored.  This option is normally used wih 
+either AA_BLEND or AA_RAW_ALPHA.  
+
+	AA_BLEND
+
+If AA_BLEND is specified, the source will be blended with the 
+destination as dictated by the alpha channel & partial transparency.  
+Note that this is not necessary for output pixels that would be 100% 
+transparent - those never over-write the background.  This just means 
+that pixels that would be < 100% transparency, either due to an alpha 
+channel to due to partial coverage by mask-colored source pixels, will 
+be blended with the background image instead of a single background 
+color.  
+
+	AA_RAW_ALPHA
+
+If AA_RAW_ALPHA is enabled, then the destination will be treated as an 
+alpha bitmap.  This option is suitable for copying, scaling, & 
+converting alpha channel bitmaps.  This option is incompatible with 
+AA_BLEND.  This option is ignored if the destination color depth is 
+neither 16 bpp nor 32 bpp.  
+
+	AA_MASKED
+
+If AA_MASKED is specified, then mask-color pixels in the source bitmap 
+will be considered to be completely transparent.  
+
+	AA_VFLIP
+	AA_HFLIP
+
+AA_VFLIP and AA_HFLIP are exactly what they sound like - vertical and 
+horizontal flipping of the destination.  Note that this currently does 
+not work in conjuntion with rotation.  
+
+	AA_NO_ALIGN
+
+AA_NO_ALIGN allows non-integer source & destination rectangles.  Note 
+that this currently does not work in conjuntion with rotation.  
+
+	AA_DITHER
+
+AA_DITHER causes blits to 8, 15, or 16 bpp destinations to be 
+spatially dithered with a simple dithering algorithm.  
+
+	AA_NOTRANS
+
+AA_NOTRANS will cause the destination mask-color to not be written out.  
+This is helpful when converting / scaling sprites.  
+
+	AA_NO_AA
+
+AA_NO_AA will cause anti-aliasing to not be performed.  If none of the 
+other options (except AA_MASKED) are specified, AND the destination and 
+source are the same color depth AND you're not doing any rotation, then
+this will cause Allegro's stretch_blit or mask_stretch_blit to be called
+instead, which are much faster than AASTR2.  If other options are
+enabled then AASTR2 will be used, but with the AA part disabled, which
+speeds up AASTR2 substantially.  
+
+
+
+
+3.  Speed of AASTR2:
+
+
+
+
+
+According to my non-scientific measurements, AASTR2's stretching 
+functions are about 25% of the speed of normal Allegro stretching 
+functions.  If AA_NO_AA is enabled, then they speed up to about 50% of 
+the speed of Allegro's stretching functions.  
+
+Also, if you're doing many stretch-blits to very small destinations, 
+then AA_NO_ALIGN can slow things down a lot.  If your destination 
+rectangles are large however, then the performance hit of AA_NO_ALIGN 
+is near-zero.  
+
+I haven't bothered trying to measure the speed of AASTR2's rotation 
+functions, but I expect they're in the same boat as the stretching 
+functions.  
+
+
+4.  Limitations of AASTR2:
+
+
+
+If you try to shrink or expand an image by more than 15x15, then
+AASTR2 may start to have issues due to either loss of precision or
+integer overflow, or due to some of the compromises that AASTR2 uses
+to avoid integer overflow.  When scaling by extreme factors it's best
+to turn off the AA_NO_ALIGN option.  
+
+
+5.  This version of AASTR2:
+
+
+
+At the time of writting, the latest version of AASTR2 is 0.60.
+The zip aastr2070.zip contains this stuff:
+
+File            Desciption
+
+aastr2.txt      This file that you're reading
+exscale.c       An example program (demonstrates the basic stretching routines)
+exalpha.c       An example program (demonstrates the AA_ALPHA & AA_BLEND options)
+exblend.c       An example program (demonstrates aa_set_trans() and AA_BLEND)
+mysha.pcx       An image used by the example programs
+allegro.pcx     An image used by the example programs
+
+aastr.h         The main header for AASTR2
+aastr.c         High-level stretching code
+aarot.c         High-level rotation code
+aautil.h        The internal header for AASTR2
+aautil.c        Low-level code
+
+types.h		A header used by aastr.c and aautil.c
+round.c		Provides simple rounding functions used by aastr.c & aarot.c.  
+round.h         header for round.c
+

@@ -1,0 +1,2088 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0064)http://pjmoo.codigolivre.org.br/gdj/pag_artigo_leitura.php?id=22 -->
+<HTML><HEAD><TITLE>GDJ :: Artigos :: API :: Allegro :: Técnicas Básicas para Jogos 2D</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META 
+content="Site voltado para o Desenvolvimento de Jogos com material para criação e desenvolvimento de games para Computador" 
+name=description>
+<META content="Artigos :: API :: Allegro Técnicas Básicas para Jogos 2D" 
+name=keywords><LINK 
+href="GDJ  Artigos  API  Allegro  Técnicas Básicas para Jogos 2D_arquivos/artigo_estilo.css" 
+rel=stylesheet><LINK href="favicon.ico" rel="shortcut icon">
+<SCRIPT language=JavaScript 
+src="GDJ  Artigos  API  Allegro  Técnicas Básicas para Jogos 2D_arquivos/site.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2600.0" name=GENERATOR></HEAD>
+<BODY>
+<TABLE height="100%" cellSpacing=1 cellPadding=8 width=760 align=center 
+bgColor=#a0a0b0 border=0>
+  <TBODY>
+  <TR>
+    <TD class=site_area vAlign=top height="100%">
+      <TABLE height="100%" cellSpacing=0 cellPadding=1 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top align=middle width="100%" HEIGTH="260">
+            <TABLE width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD width=252><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/index.php"><IMG 
+                  src="GDJ  Artigos  API  Allegro  Técnicas Básicas para Jogos 2D_arquivos/logo.gif" 
+                  width=252 border=0></A></TD>
+                <TD align=middle width="100%"><B>[</B><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_categoria.php?id=2">Artigos</A><B>] 
+                  [</B><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/sobre.php">Sobre</A><B>]</B></TD></TR></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD align=middle width="100%" height=20><A 
+            href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_lista.php?id=25"><B>
+            <DIV class=categoria_artigo>Artigos :: API :: 
+          Allegro</DIV></B></A></TD></TR>
+        <TR>
+          <TD vAlign=top width="100%" height="100%"><!-- AREA DE TEXTO - INICIO -->
+            <TABLE width="100%" border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top align=middle>
+                  <H1>Técnicas Básicas para Jogos 2D</H1><SUP>Autor : <A 
+                  href="mailto:killocan@hotmail.com">killocan</A>&nbsp;&nbsp;</SUP> 
+                </TD></TR>
+              <TR>
+                <TD vAlign=top align=JUSTIFY width="100%">
+                  <DIV align=left>
+                  <H1>Introdução</H1>
+                  <P>Neste tutorial eu irei falar sobre sprites, como dar vida a 
+                  eles e como detectar se houve colisão entre eles. É bem pouco 
+                  mas de muita ajuda para quem está começando agora. Para um bom 
+                  aproveitamento deste tutorial recomendo que leia <A 
+                  href="http://arsludica.speedserv.com.br/index.php?TIPO=ARTIGO_LEITURA&amp;ID=4">"O 
+                  Guia Básico da Allegro"</A> aqui no arsludica, já que vou 
+                  utilizar a lib Allegro para demonstrar o que irei explicar. 
+                  Versões em DX e SDL serão disponibilizadas futuramente no 
+                  fórum, mas tudo o que for dito aqui pode ser usado em qualquer 
+                  lib. Também é importante que você saiba utilizar estruturas 
+                  (<I>structs</I>) em C. Todos os exemplos estão disponíveis 
+                  para download no final do tutorial. </P>
+                  <H2>SPRITES</H2><BR>
+                  <P>O que são sprites ? Bem, a definição exata depende muito, 
+                  na tela geralmente são tudo o que não faz parte do background 
+                  do jogo, exemplo: </P><IMG height=275 
+                  src="GDJ  Artigos  API  Allegro  Técnicas Básicas para Jogos 2D_arquivos/megaman.jpg" 
+                  width=350 border=0> 
+                  <P>O megaman e o bichinho com cabeça de capacete são sprites. 
+                  Outro exemplo é o DOOM: os inimigos que você enfrenta são 
+                  sprites, que são desenhados maiores ou menores dependendo de 
+                  sua profundidade na tela, como o que a função 
+                  <B>stretch_blit</B> da Allegro faz. Sprites são imagens na 
+                  tela que podem ter suas coordenadas e ações modificadas, tanto 
+                  pelo jogador tanto pelo jogo em si. Por exemplo: o sprite do 
+                  megaman é modificado de acordo com os controles do jogador 
+                  para andar, pular, agachar etc. Já o bichinho do capacete é 
+                  modificado pelo jogo, com base em alguma lógica. Internamente 
+                  um sprite geralmente é uma estrutura, em C seria algo como: 
+                  </P><PRE>
+struct sprite
+
+{
+
+   int x, y;
+
+   float dx, dy;
+
+   BITMAP *img;
+
+}
+
+</PRE>
+                  <P>Claro que se trata de uma estrutura bem simples, mas para o 
+                  começo tá ótimo. Quem mexe com C++ poderia usar uma classe pra 
+                  fazer isso, mas eu prefiro usar C puro. Aliás, eu penso assim: 
+                  "se for utilizar funções para cada sprite, diferentes funções 
+                  de desenho etc, uso uma classe (facilita), porém se for algo 
+                  bem simples como acima uso uma struct mesmo, dá na mesma". 
+</P>
+                  <P>Dissecando a estrutura: </P><PRE>
+<B>int x, y</B> -&gt; Armazenam as posições x e y na tela do sprite.
+
+<B>float dx, dy</B> -&gt; Armazenam as velocidades X (dx), e Y (dy)
+
+<B>BITMAP *img</B> -&gt; Ponteiro para a imagem que representa esse sprite, por exemplo a imagem do megaman
+
+</PRE>
+                  <P>Simples não? Em seguida, dando vida aos sprites. </P></DIV>
+                  <H2>Dando vida aos Sprites</H2>
+                  <H1>Dando vida aos Sprites</H1>
+                  <P>Agora vamos fazer essa estrutura se tornar útil. Vamos 
+                  supor que a imagem que esse sprite representa seja uma bola: 
+                  </P><IMG height=110 
+                  src="GDJ  Artigos  API  Allegro  Técnicas Básicas para Jogos 2D_arquivos/bola.jpg" 
+                  width=111 border=0>
+                  <P></P>
+                  <P>e desejamos que ela inicie no ponto x=50, y=50 da tela. 
+                  Faremos algo parecido com isso: </P><PRE>
+struct sprite bola; // declara a variável do tipo sprite
+
+bola.x = 50;        // coloca a bola na posição 50 no eixo X
+
+bola.y = 50;        // o mesmo do comando acima só que no eixo Y
+
+</PRE>
+                  <P>Para desenhar, você usaria algo como: </P><PRE>
+draw_sprite (screen, bola.img, bola.x, bola.y);  // desenha a imagem nas coordenadas 
+
+                                                 // x e y que foram setadas antes
+
+</PRE>
+                  <P>Claro que para que isso funcione você deve antes carregar 
+                  uma imagem qualquer ou pelo menos inicializar o BITMAP, o que 
+                  seria algo como: </P><PRE>
+bola.img = load_bitmap ("bola.bmp", NULL); // carrega um arquivo chamado "bola.bmp"
+
+</PRE>
+                  <P>ou</P><PRE>
+// cria a imagem com 60x60 e limpa.
+
+bola.img = create_bitmap (60,60); 
+
+clear (bola.img);
+
+</PRE>
+                  <P>E para movimentar esse sprite ?? Bem, podemos imaginar 
+                  várias situações onde a posição do sprite poderia mudar. Vamos 
+                  supor que você esteja controlando isso pelo teclado, por 
+                  exemplo: </P><PRE>
+if (key[KEY_LEFT])
+
+   bola.x -= 5;
+
+</PRE>
+                  <P>Isso faz com que nosso sprite seja movido 5 pixels pra 
+                  esquerda caso o jogador pressione a seta esquerda. Lembre-se 
+                  que isso só modifica a estrutura, você deve redesenhar a 
+                  imagem na nova posição para notar que ela foi movida. Vou 
+                  mostrar um exemplo simples aqui: </P><PRE>
+#include <ALLEGRO.H>
+
+
+
+struct sprite
+
+{
+
+  int x, y;
+
+  float dx, dy;
+
+  BITMAP *img;
+
+};
+
+
+
+int main()
+
+{
+
+  BITMAP *buffer;      // usado para o double buffer
+
+  struct sprite bola;  // cria a variavel do tipo sprite.
+
+
+
+  allegro_init();
+
+  install_keyboard();
+
+
+
+  set_color_depth (16);
+
+  set_gfx_mode (GFX_AUTODETECT, 640, 480, 0, 0);
+
+
+
+  bola.x = 100;        // inicia o x
+
+  bola.y = 100;        // inicia o y
+
+  bola.img = load_bitmap ("bola.bmp", NULL); // carrega a imagem da bola
+
+                                             // a imagem e" 20x20
+
+
+
+  // cria um buffer de tela para o double buffer
+
+  buffer = create_bitmap (640, 480);
+
+
+
+  while (!key[KEY_ESC])
+
+  {
+
+    if (key[KEY_LEFT])  // se pressionar para esquerda
+
+      if (bola.x &gt; 0)   // e a posicao do sprite for maior que 0 na horizontal
+
+        bola.x -= 2;    // move 2 pixels para esquerda.
+
+
+
+    if (key[KEY_RIGHT])    // se pressionar para direita
+
+      if (bola.x &lt; 640-20) // e a posicao do sprite for menor que o tamanho da tela na horizontal menos 20 
+
+        bola.x += 2;       // move 2 pixels para direita.
+
+
+
+    if (key[KEY_UP])   // se pressionar para cima
+
+      if (bola.y &gt; 0)  // e a posicao do sprite for maior que 0 na vertical
+
+        bola.y -= 2;   // move 2 pixels para cima.
+
+
+
+    if (key[KEY_DOWN])     // se pressionar para baixo
+
+      if (bola.y &lt; 480-20) // e a posicao do sprite for menor que o tamanho da tela na vertical menos 20
+
+        bola.y += 2;       // move 2 pixels para esquerda.
+
+
+
+    draw_sprite (buffer, bola.img, bola.x, bola.y); // desenha a bola
+
+    blit (buffer, screen, 0, 0, 0, 0, 640, 480);
+
+    clear (buffer);
+
+  }
+
+
+
+  allegro_exit();
+
+
+
+ return 0;
+
+}
+
+END_OF_MAIN();
+
+/*
+
+ no dev-c++ tem de usar isso. pela falta da winmain. caso vc uso outro
+
+ compilador naum precisa usar isso, djgpp por exemplo.
+
+*/
+
+</PRE>
+                  <P>Esse programinha carrega uma imagem chamada "bola.bmp" e 
+                  move-a pela tela de acordo com o teclado. Como você pode ver é 
+                  algo bem simples. Mas espera aí, e o dx e o dy ?? Não utilizei 
+                  eles aqui pois não tinha pra quê, já que a não importa a 
+                  velocidade do sprite. Nesse código o sprite sempre vai mudar 2 
+                  pixels. Mas imagine que você está escrevendo um jogo onde o 
+                  carinha possa saltar de uma plataforma, e você quer que ele vá 
+                  acelerando a velocidade da queda de acordo com o tempo que ele 
+                  está caindo. Nesse caso você faz: </P><PRE>
+bola.dy =+ 0.1		// aumenta velocidade
+
+bola.y += bola.dy;  // incrementa posicao (usando novo valor da velocidade)
+
+</PRE>
+                  <P>Claro que é bom você colocar um limite para a velocidade, 
+                  mas no geral é isso. No exemplo final vou mostrar melhor como 
+                  utilizar as velocidades, mas existem N meios de utilizar o dx 
+                  e dy. Acho que isso já é o suficiente para irmos para a 
+                  próxima parte, detectando se os sprites colidiram ou não... 
+                  </P>
+                  <H2>Detectando colisões</H2>
+                  <H1>Detectando colisões</H1>
+                  <P>Uma das coisas que qualquer jogo deve saber é se algo 
+                  colidiu com algo: se o caro bate no poste, se a bala atingiu o 
+                  alvo etc. Em jogos complexos geralmente existem vários 
+                  tratadores de colisão, para as mais diversas condições. O que 
+                  eu vou explicar aqui se aplica a quase todo jogo 2d. O método 
+                  é chamado muitas vezes de <I>bounding-box</I> porque os 
+                  sprites são tratados como retângulos, mesmo que tenham uma 
+                  forma não retangular. No caso de um círculo, por exemplo, a 
+                  <I>bounding box</I> seria um quadrado com lado igual o 
+                  diâmetro do circulo. A técnica consiste em comparar os limites 
+                  das <I>bounding boxes</I> para verificar se elas estão em 
+                  colisão. Isso ficará mais claro com os exemplos. Para utilizar 
+                  tal método precisamos fazer algumas modificações na nossa 
+                  estrutura de sprite: </P><PRE>
+struct sprite
+
+{
+
+   int x, y;
+
+   int height, width; // NOVOS... largura e altura do sprite.
+
+   float dx, dy;
+
+   BITMAP *img;
+
+};
+
+</PRE>
+                  <P>Introduzimos duas novas variáveis na estrutura, 
+                  <B>height</B> e <B>width</B>, que vão ajudar na hora de 
+                  detectar uma colisão. Essas variáveis devem ser ajustadas de 
+                  acordo com o tamanho da imagem ou do tamanho do espaço que 
+                  você quer que seu sprite ocupe. Vamos levar em conta o tamanho 
+                  da imagem: </P><PRE>
+bola.img = load_bitmap ("bola.img", NULL);
+
+bola.height = bola.img-&gt;h;
+
+bola.width = bola.img-&gt;w;
+
+</PRE>
+                  <P>Isso funciona porque a estrutura BITMAP contém as variáveis 
+                  <B>w</B>, e <B>h</B> que são ajustadas de acordo com o tamanho 
+                  da imagem. Agora vamos estudar os casos possíveis. </P><PRE>
+Figura 1:
+
+  ____________
+
+  |    **    |
+
+  | ******** |
+
+  |**********|
+
+  |**********|  
+
+  | ******** |
+
+  |    **    |
+
+  ------------ 
+
+                  ____________
+
+                  |    **    |
+
+                  | ******** |
+
+                  |**********|
+
+                  |**********|  
+
+                  | ******** |
+
+                  |    **    |
+
+                  ------------ 
+
+</PRE>
+                  <P>Neste caso não está ocorrendo colisão entre os sprites pois 
+                  as <I>bounding boxes</I> não se sobrepoem.</P><PRE>
+Figura 2: 
+
+ 
+
+  ____________
+
+  |    **    |
+
+  | ******** |
+
+  |**********|
+
+  |**********|
+
+  | ********_|________
+
+  |    **  | |  **    |
+
+  -----------******** |
+
+           |**********|
+
+           |**********|
+
+           | ******** |
+
+           |    **    |
+
+           ------------
+
+</PRE>
+                  <P>Já na Figura 2 os dois sprites estão colidindo, mesmo que a 
+                  imagem que eles contém não estejam propriamente colidindo. 
+                  Essa é a desvantagem da técnica. Mais tarde vamos ver um jeito 
+                  legal de testar se dois círculos colidiram, mas no momento 
+                  vamos nos concentrar na colisão dos sprites. Para detectar se 
+                  eles estão ou não colidindo poderíamos usar uma função como 
+                  essa: </P><PRE>
+int sprite_collide (struct sprite object1, struct sprite object2) 
+
+{
+
+  
+
+    int left1, left2;
+
+    int right1, right2;
+
+    int top1, top2;
+
+    int bottom1, bottom2;
+
+ 
+
+    left1   = object1.x;
+
+    left2   = object2.x;
+
+    right1  = object1.x + object1.width;
+
+    right2  = object2.x + object2.width;
+
+    top1    = object1.y;
+
+    top2    = object2.y;
+
+    bottom1 = object1.y + object1.height;
+
+    bottom2 = object2.y + object2.height;
+
+ 
+
+    if (bottom1 &lt; top2) return(0);        // 1
+
+    if (top1 &gt; bottom2) return(0);        // 2
+
+ 
+
+    if (right1 &lt; left2) return(0);        // 3
+
+    if (left1 &gt; right2) return(0);        // 4
+
+ 
+
+    return(1);
+
+}
+
+</PRE>
+                  <P>A função retorna 1 caso os sprites estejam colidindo, ou 0 
+                  caso contrario. Ela funciona verificando os seguintes fatos: 
+                  </P>
+                  <OL>
+                    <LI>se a parte de baixo do primeiro sprite estiver menor que 
+                    o topo do outro, não tem como eles estarem colidindo já que 
+                    o primeiro vai estar mais alto que o outro 
+                    <LI>se o topo do primeiro estiver mais alto que a parte de 
+                    baixo do outro não tem como eles estarem colidindo 
+                    <LI>se o lado direito do primeiro estiver mais à esquerda 
+                    que o lado esquerdo do segundo eles não podem colidir lado a 
+                    lado 
+                    <LI>se o lado esquerdo do primeiro estiver mais à direita 
+                    que o lado direito do segundo também não há colisão, pois 
+                    não tem como estarem um do lado do outro </LI></OL>
+                  <P>Caso todas essas condições falhem os sprites estão 
+                  colidindo de algum lado. Para determinar de que lado ocorre a 
+                  colisão basta fazer testes semelhantes aos da função 
+                  <B>sprite_collide()</B> com as coordenadas da <I>bounding 
+                  box</I>. Mas aqui nos exemplos o lado exato da colisão não é 
+                  importante. Vamos ver um exemplo completo que detecta se duas 
+                  bolas colidiram: </P><PRE>
+#include <ALLEGRO.H>
+
+ 
+
+struct sprite
+
+{
+
+  int x, y;
+
+  int height, width;
+
+  float dx, dy;
+
+  BITMAP *img;
+
+};
+
+ 
+
+int sprite_collide(struct sprite object1, struct sprite object2)
+
+{
+
+    int left1, left2;
+
+    int right1, right2;
+
+    int top1, top2;
+
+    int bottom1, bottom2;
+
+ 
+
+    left1 = object1.x;
+
+    left2 = object2.x;
+
+    right1 = object1.x + object1.width;
+
+    right2 = object2.x + object2.width;
+
+    top1 = object1.y;
+
+    top2 = object2.y;
+
+    bottom1 = object1.y + object1.height;
+
+    bottom2 = object2.y + object2.height;
+
+ 
+
+    if (bottom1 &lt; top2) return(0);
+
+    if (top1 &gt; bottom2) return(0);
+
+ 
+
+    if (right1 &lt; left2) return(0);
+
+    if (left1 &gt; right2) return(0);
+
+ 
+
+    return(1);
+
+}
+
+ 
+
+int main()
+
+{
+
+  BITMAP *buffer;        // usado para o double buffer
+
+  struct sprite quadro1; // sprite 1 
+
+  struct sprite quadro2; // sprite 2
+
+ 
+
+  allegro_init();
+
+  install_keyboard();
+
+ 
+
+  set_color_depth (16);
+
+  set_gfx_mode (GFX_AUTODETECT, 640, 480, 0, 0);
+
+ 
+
+  quadro1.x = 100; // inicia o x
+
+  quadro1.y = 100; // inicia o y
+
+  quadro1.img = load_bitmap ("quadro1.bmp", NULL); // carrega a imagem
+
+  quadro1.height = quadro1.img-&gt;h;
+
+  quadro1.width = quadro1.img-&gt;w;
+
+ 
+
+  quadro2.x = 640/2; // inicia o x
+
+  quadro2.y = 480/2; // inicia o y
+
+  quadro2.img = load_bitmap ("quadro2.bmp", NULL); // carrega a imagem
+
+  quadro2.height = quadro2.img-&gt;h;
+
+  quadro2.width = quadro2.img-&gt;w;
+
+ 
+
+  buffer = create_bitmap (640, 480);
+
+ 
+
+  while (!key[KEY_ESC])
+
+  {
+
+    if (key[KEY_LEFT])   // se pressionar para esquerda
+
+      if (quadro1.x &gt; 0) // e a posição do sprite for maior que 0 na horizontal
+
+        quadro1.x -= 2;  // move 2 pixels para esquerda.
+
+ 
+
+    if (key[KEY_RIGHT])       // se pressionar para direita
+
+      if (quadro1.x &lt; 640-20) // e a posição do sprite for menor que o tamanho da tela na horizontal menos 20
+
+        quadro1.x += 2;	      // move 2 pixels para direita.
+
+ 
+
+    if (key[KEY_UP])     // se pressionar para cima
+
+      if (quadro1.y &gt; 0) // e a posição do sprite for maior que 0 na vertical
+
+        quadro1.y -= 2;  // move 2 pixels para cima.
+
+ 
+
+    if (key[KEY_DOWN])        // se pressionar para baixo
+
+      if (quadro1.y &lt; 480-20) // e a posição do sprite for menor que o tamanho da tela na vertical menos 20
+
+        quadro1.y += 2;       // move 2 pixels para esquerda.
+
+ 
+
+    if (sprite_collide (quadro1, quadro2))
+
+      textout (buffer, font, "COLIDIU !!!", 640/2, 10, makecol(255,0,0));
+
+ 
+
+    draw_sprite (buffer, quadro1.img, quadro1.x, quadro1.y); // desenha o quadro1
+
+    draw_sprite (buffer, quadro2.img, quadro2.x, quadro2.y); // desenha o quadro2
+
+    blit (buffer, screen, 0, 0, 0, 0, 640, 480);
+
+    clear (buffer);
+
+  }
+
+ 
+
+  allegro_exit();
+
+ 
+
+ return 0;
+
+}
+
+END_OF_MAIN();
+
+/*
+
+ no dev-c++ tem de usar isso. pela falta da winmain. caso você uso outro
+
+ compilador não precisa usar isso, djgpp por exemplo.
+
+*/
+
+</PRE>
+                  <P>Esse exemplo mostra "COLIDIU !!!" mais ou menos no meio da 
+                  tela lá em cima... ;) Só existe um problema que é o que eu já 
+                  havia falado. Caso a imagem seja um circulo uma colisão pode 
+                  ser acusada mesmo antes de as imagens realmente se sobreporem. 
+                  Então, como resolver isso ?? Tem várias formas mas uma bem 
+                  simples é a seguinte: uma boa imagem (falo desenhada para 
+                  utilizar o maximo do tamanho disponível) geralmente ocupa algo 
+                  em torno de 80% da <I>bounding box</I>. Então, nós poderíamos 
+                  ignorar umas certas partes da imagem para fazer a colisão 
+                  parecer mais real. Basicamente vamos ter de colocar mais 
+                  algumas coisitas na estrutura e também mudar um pouco o método 
+                  de inicializa-la. Vejamos como: </P><PRE>
+struct sprite 
+
+{
+
+  int x, y;
+
+  int height, width;
+
+  int col_height, col_width;      // NOVOS campo largura e altura a ser considerado na colisão
+
+  int col_x_offset, col_y_offset; // NOVOS offset Y e X
+
+  float dx, dy;
+
+  BITMAP *img;
+
+};
+
+
+</PRE>
+                  <P>para inicializar teremos de fazer o seguinte:</P><PRE>
+struct sprite object;
+
+ 
+
+object.width = object.img-&gt;w;
+
+object.height = object.img-&gt;h;
+
+ 
+
+object.col_width = object.width * 0.80;   // aqui esta parte magica, essa conta resulta no valor que corresponde
+
+object.col_height = object.height * 0.80; // a 80% da area de colisao, pode mudar para o que quiser...
+
+ 
+
+object-col_x_offset = (object-width - object-col_width) / 2;    // aqui nos fazemos com que a os limites do sprite
+
+object-col_y_offset = (object-height - object-col_height) / 2;  // sejam reduzidos o que reduz o campo de colisao
+
+</PRE>
+                  <P>a função sprite_collide() tb deve ser modificada para algo 
+                  como:</P><PRE>
+int sprite_collide(struct sprite object1, struct sprite object2)
+
+{
+
+    int left1, left2;
+
+    int right1, right2;
+
+    int top1, top2;
+
+    int bottom1, bottom2;
+
+ 
+
+    left1 = object1.x + object1.col_x_offset;
+
+    left2 = object2.x + object2.col_x_offset;
+
+    right1 = left1 + object1.col_width;
+
+    right2 = left2 + object2.col_width;
+
+    top1 = object1.y + object1.col_y_offset;
+
+    top2 = object2.y + object1.col_y_offset;
+
+    bottom1 = top1 + object1.col_height;
+
+    bottom2 = top2 + object2.col_height;
+
+ 
+
+    if (bottom1 &lt; top2) return(0);
+
+    if (top1 &gt; bottom2) return(0);
+
+ 
+
+    if (right1 &lt; left2) return(0);
+
+    if (left1 &gt; right2) return(0);
+
+ 
+
+    return(1);
+
+}
+
+</PRE>
+                  <P>Embora não seja lá grande coisa melhora muito o realismo 
+                  das colisões. Agora vou mostrar um meio mongo de descobrir se 
+                  dois círculos colidiram. É assim: todo circulo tem um diâmetro 
+                  (Dhu) e metade disso é o raio então você pode testar assim: 
+                  </P><PRE>
+if (bola.x+bola.raio == bola2.x || bola.y+diametro == bola2.y) return 1;
+
+</PRE>
+                  <P>Isso funciona mas não e muito bom não, já que depende muito 
+                  de onde posição a bola veio. Aliás tem jeito de fazer isso 
+                  funcionar 100% mas só no caso de círculos ou formas primitivas 
+                  como quadrado, etc. Em uma figura toda irregular não 
+                  funcionaria. Você pode usar essa função alterada 
+                  <B>sprite_collide</B>, que irá funcionar com certeza. No 
+                  exemplo final utilizarei a mesma função. </P>
+                  <P>Existe também outra técnica de detecção de colisão, que é a 
+                  detecção por pixel, que verifica se a imagem colidiu com outra 
+                  lendo as duas imagens e comparando se os pixels se sobrepõem, 
+                  mas no geral é uma implementação mais lenta e cheia de 
+                  detalhes frescos. Nesse caso é melhor usar algo pronto como a 
+                  PPcol, mas um método bem simples seria: </P>
+                  <OL>
+                    <LI>se colidiu pegar coordenada x e y de onde ouve colisão 
+                    <LI>ler os pixels adjacentes a essa posição e verificar se 
+                    algum sobrepõe o outro </LI></OL>
+                  <P>ou então</P>
+                  <P>Caso haja colisão, ler pixels nas imagens e so retornar 
+                  verdadeiro caso não seja 0 o valor dos pixels na região. </P>
+                  <P>Isso vai ignorar as partes não desenhadas do sprites, 
+                  lembre-se que na allegro em modos truecolor a cor transparente 
+                  não é mais o primeiro índice da paleta de cores e sim o 
+                  magenta em RGB (255,0,255): máximo vermelho e azul, verde 0. 
+                  <P>Bem, acho que tá bom, vamos aos 2 exemplos maiores ;) </P>
+                  <H2>Exemplos Comentados</H2>
+                  <H1>Exemplos Comentados</H1>
+                  <P>Irei dar dois exemplos de joguinhos, um com as técnicas de 
+                  colisão mostradas, e outro que mostra o dx e o dy em uso além 
+                  da detecçào de colisão. Espero que gostem. </P>
+                  <H3>TOM&amp;JERRY:</H3>
+                  <P>Esse é bem básico mesmo, você é um rato e deve escapar do 
+                  gato. Simples, mas mostra como usar a colisão ignorando 25% da 
+                  imagem. Segue abaixo o código que ta mais ou menos bem 
+                  comentado... </P><PRE>
+#include "allegro.h"
+
+ 
+
+typedef struct
+
+{
+
+        int x, y, height, width;
+
+        int col_x_offset, col_y_offset, col_width, col_height;
+
+        BITMAP *img;
+
+} BICHO; // essa e nossa estrutura sprite, e que resolvi chamar de BICHO
+
+ 
+
+BITMAP *Buffer; 
+
+BICHO Cat; // o gato
+
+BICHO Mouse; // o rato
+
+ 
+
+void InitAllegro();
+
+void InitData();
+
+void UpdateCat();
+
+void UpdateMouse();
+
+char Sprite_Collide(BICHO object1, BICHO object2);
+
+void end_game();
+
+ 
+
+ 
+
+void end_game() // essa mostra a msg final da um fade na tela e reenicia o jogo
+
+{   
+
+   char *msg = "MORREU WUAWAUWUAHWUAWAU";
+
+ 
+
+   textout(screen, font, msg,
+
+   (SCREEN_W/2)-(text_length(font, msg)/2),
+
+   (SCREEN_H/2)-(text_height(font)),
+
+   makecol(255,0,0));
+
+ 
+
+   rest(3000);
+
+   fade_out(5);
+
+   InitData();
+
+}  
+
+ 
+
+char Sprite_Collide(BICHO object1, BICHO object2) // detecta se um encostou no outro
+
+{
+
+    int left1, left2;
+
+    int right1, right2;
+
+    int top1, top2;
+
+    int bottom1, bottom2;
+
+ 
+
+    left1 = object1.x + object1.col_x_offset;
+
+    left2 = object2.x + object2.col_x_offset;
+
+    right1 = left1 + object1.col_width;
+
+    right2 = left2 + object2.col_width;
+
+    top1 = object1.y + object1.col_y_offset;
+
+    top2 = object2.y + object1.col_y_offset;
+
+    bottom1 = top1 + object1.col_height;
+
+    bottom2 = top2 + object2.col_height;
+
+ 
+
+    if (bottom1 &lt; top2) return(0);
+
+    if (top1 &gt; bottom2) return(0);
+
+ 
+
+    if (right1 &lt; left2) return(0);
+
+    if (left1 &gt; right2) return(0);
+
+ 
+
+    return(1);
+
+}
+
+
+
+void InitAllegro() // inicia a allegro em modo 640x480 8bpp utilizando paleta de cores
+
+{
+
+   allegro_init();
+
+   install_keyboard();
+
+   install_timer();
+
+ 
+
+   set_gfx_mode(GFX_AUTODETECT, 640, 480, 0, 0);
+
+}
+
+ 
+
+void InitData()
+
+{
+
+   Buffer = create_bitmap(SCREEN_W, SCREEN_H);
+
+   clear_to_color(Buffer, 255);
+
+ 
+
+   // inicia o gato e o rato usando 75 por cento da imagem.
+
+   Cat.x = 10, Cat.y = 10;
+
+   Cat.img = load_bitmap("gato.bmp", desktop_pallete);
+
+   Cat.width = Cat.img-&gt;w, Cat.height = Cat.img-&gt;h;
+
+   Cat.col_width = Cat.width * 0.75;
+
+   Cat.col_height = Cat.height * 0.75;
+
+   Cat.col_x_offset = (Cat.width - Cat.col_width) / 2;
+
+   Cat.col_y_offset = (Cat.height - Cat.col_height) / 2;
+
+   
+
+   Mouse.x = 100, Mouse.y = 100;
+
+   Mouse.img = load_bitmap("rato.bmp", desktop_pallete);
+
+   Mouse.width = Mouse.img-&gt;w, Mouse.height = Mouse.img-&gt;h;
+
+   Mouse.col_width = Mouse.width * 0.75;
+
+   Mouse.col_height = Mouse.height * 0.75;
+
+   Mouse.col_x_offset = (Mouse.width - Mouse.col_width) / 2;
+
+   Mouse.col_y_offset = (Mouse.height - Mouse.col_height) / 2;
+
+ 
+
+   set_palette(desktop_palette);
+
+}
+
+ 
+
+void UpdateCat() // A IA simples do gato para perseguir o rato
+
+{
+
+      if(Cat.x &lt; Mouse.x) // se a possição do gato for menor que a do rato no eixo X
+
+      {
+
+          if (Cat.x &lt;= SCREEN_W-Cat.width) // e o gato ainda estiver na tela o eixo X
+
+             Cat.x++; // almenta sua possição
+
+          else
+
+             Cat.x = Cat.x; // caso contrario mantem parado no local
+
+      }
+
+      if(Cat.x &gt; Mouse.x) // se a possição do gato for maio que a do rato no eixo X
+
+      {
+
+          if (Cat.x &gt;= 1) // e a possição do gato for maior que 1 no eixo X
+
+             Cat.x--; // diminue sua possição
+
+          else
+
+             Cat.x = Cat.x; // caso contrario mantem parado
+
+      }
+
+      if(Cat.y &lt; Mouse.y) // caso o gato esteja em uma possição menor no eixo Y
+
+      {
+
+          if (Cat.y &lt;= SCREEN_H-Cat.height) // e ainda estiver em uma possição dentro da tela 
+
+             Cat.y++; // almenta o Y
+
+          else
+
+             Cat.y = Cat.y; // caso contrario diminue
+
+      }
+
+      if(Cat.y &gt; Mouse.y) // caso o gato esteja em uma possição maior no eixo Y
+
+      {
+
+          if (Cat.y &gt;= 1) // e ainda estiver em uma possição possitiva na tela
+
+             Cat.y--; // diminue sua possição
+
+          else
+
+             Cat.y = Cat.y; // caso contrario mantem parado
+
+      }
+
+}
+
+ 
+
+void UpdateMouse() // trata o teclado e atualiza o rato com base na entrada do usuario
+
+{
+
+      if(key[KEY_LEFT])
+
+      {
+
+           if (Mouse.x &gt;= 1)
+
+              Mouse.x-=2;
+
+           else
+
+              Mouse.x = Mouse.x;
+
+      }
+
+      if(key[KEY_RIGHT])
+
+      {
+
+          if (Mouse.x &lt;= SCREEN_W-Mouse.width)
+
+              Mouse.x+=2;
+
+          else
+
+              Mouse.x = Mouse.x;
+
+      }
+
+      if(key[KEY_UP])
+
+      {
+
+            if (Mouse.y &gt;= 1)
+
+              Mouse.y-=2;
+
+            else
+
+              Mouse.y = Mouse.y;
+
+      }
+
+      if(key[KEY_DOWN])
+
+      {
+
+            if (Mouse.y &lt;= SCREEN_H-Mouse.height)
+
+                Mouse.y+=2;
+
+            else
+
+                Mouse.y = Mouse.y;
+
+      }
+
+}
+
+
+
+int main() // nossa main ;)
+
+{ 
+
+      InitAllegro(); 
+
+      InitData(); 
+
+      text_mode(-1); 
+
+         
+
+      while(!key[KEY_ESC]) 
+
+      { 
+
+           clear_to_color(Buffer, makecol(0,0,0)); 
+
+ 
+
+           UpdateCat();  // atualiza o gato com base numa IA bem simplezinha e deterministica
+
+           UpdateMouse(); // atualiza a posisaum do rato com base no teclado
+
+ 
+
+           if (Sprite_Collide(Cat, Mouse))  // se o gato triscar em vc já era ;)
+
+             end_game(); 
+
+
+
+           rect (Buffer, 0, 0, SCREEN_W-1, SCREEN_H-1, makecol(0, 255, 0));  // desenha as bordas da tela
+
+           draw_sprite(Buffer, Cat.img, Cat.x, Cat.y); // desenha o gato
+
+           draw_sprite(Buffer, Mouse.img, Mouse.x, Mouse.y); // desenha o rato
+
+           textout(Buffer, font, "TOM &amp; JERRY", 10, 10, makecol(128,128,255)); // escreve na tela 
+
+           vsync(); 
+
+           blit(Buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H); 
+
+        } 
+
+ 
+
+      return 0; 
+
+} 
+
+END_OF_MAIN();
+
+</PRE>
+                  <H3>GLUB</H3>
+                  <P>Este é bem simples também. É uma copia quase fiel de um 
+                  jogo que tinha pra atari chamado glub, não é dos mais 
+                  conhecidos mais segue aquele padrão de apanhar coisas que caem 
+                  do céu, ele usa praticamente tudo que eu expliquei aqui, 
+                  inclusive animação de sprites que vo falar um pouco depois do 
+                  código, aí está: </P><PRE>
+#include &lt;allegro.h&gt;
+
+#include &lt;time.h&gt;
+
+#include &lt;stdlib.h&gt;
+
+#include &lt;stdio.h&gt;
+
+#include "glubDAT.h"
+
+
+
+#define MAX_GOTAS 15
+
+
+
+BITMAP *buffer;
+
+
+
+typedef struct OBJ
+
+{
+
+  int x, y;
+
+  int dy;
+
+  int w, h;
+
+  int ativo;
+
+  int count;
+
+  int index;
+
+} OBJ;
+
+
+
+OBJ playerO;
+
+OBJ gotasO[MAX_GOTAS];
+
+OBJ piaO;
+
+OBJ baldeO;
+
+
+
+float nivel_da_agua=5;
+
+int score = 0;
+
+int score_count;
+
+int level = 1;
+
+int lado = 0;
+
+int jogando = 0;
+
+
+
+DATAFILE *dat;
+
+BITMAP *gota;
+
+
+
+void desenha_gota(BITMAP *bmp);
+
+void init_all(void);
+
+void init_OBJ(void);
+
+void draw_screen(void);
+
+void controle(void);
+
+void update_OBJ(void);
+
+int colidio(struct OBJ obj1, struct OBJ obj2);
+
+void press_enter(void);
+
+
+
+volatile int logic_counter;
+
+
+
+void update_logic_counter()
+
+{
+
+  logic_counter++;
+
+}
+
+END_OF_FUNCTION(update_logic_counter);
+
+
+
+void desenha_gota(BITMAP *bmp)
+
+{
+
+  int azul = makecol(0,0,255);
+
+  int branco = makecol(255,255,255);
+
+
+
+  putpixel (bmp, 5, 0, azul);
+
+  putpixel (bmp, 6, 0, azul);
+
+
+
+  putpixel (bmp, 3, 1, azul);
+
+  putpixel (bmp, 4, 1, azul);
+
+  putpixel (bmp, 5, 1, azul);
+
+  putpixel (bmp, 6, 1, azul);
+
+
+
+  putpixel (bmp, 2, 2, azul);
+
+  putpixel (bmp, 3, 2, azul);
+
+  putpixel (bmp, 4, 2, azul);
+
+  putpixel (bmp, 5, 2, azul);
+
+  putpixel (bmp, 6, 2, azul);
+
+  putpixel (bmp, 7, 2, azul);
+
+
+
+  putpixel (bmp, 1, 3, azul);
+
+  putpixel (bmp, 2, 3, azul);
+
+  putpixel (bmp, 3, 3, branco);
+
+  putpixel (bmp, 4, 3, azul);
+
+  putpixel (bmp, 5, 3, azul);
+
+  putpixel (bmp, 6, 3, azul);
+
+  putpixel (bmp, 7, 3, azul);
+
+  putpixel (bmp, 8, 3, azul);
+
+
+
+  putpixel (bmp, 1, 4, azul);
+
+  putpixel (bmp, 2, 4, branco);
+
+  putpixel (bmp, 3, 4, azul);
+
+  putpixel (bmp, 4, 4, azul);
+
+  putpixel (bmp, 5, 4, azul);
+
+  putpixel (bmp, 6, 4, azul);
+
+  putpixel (bmp, 7, 4, azul);
+
+  putpixel (bmp, 8, 4, azul);
+
+
+
+  putpixel (bmp, 1, 5, azul);
+
+  putpixel (bmp, 2, 5, branco);
+
+  putpixel (bmp, 3, 5, azul);
+
+  putpixel (bmp, 4, 5, azul);
+
+  putpixel (bmp, 5, 5, azul);
+
+  putpixel (bmp, 6, 5, azul);
+
+  putpixel (bmp, 7, 5, azul);
+
+  putpixel (bmp, 8, 5, azul);
+
+
+
+  putpixel (bmp, 1, 6, azul);
+
+  putpixel (bmp, 2, 6, azul);
+
+  putpixel (bmp, 3, 6, azul);
+
+  putpixel (bmp, 4, 6, azul);
+
+  putpixel (bmp, 5, 6, azul);
+
+  putpixel (bmp, 6, 6, azul);
+
+  putpixel (bmp, 7, 6, azul);
+
+  putpixel (bmp, 8, 6, azul);
+
+
+
+  putpixel (bmp, 2, 7, azul);
+
+  putpixel (bmp, 3, 7, azul);
+
+  putpixel (bmp, 4, 7, azul);
+
+  putpixel (bmp, 5, 7, azul);
+
+  putpixel (bmp, 6, 7, azul);
+
+  putpixel (bmp, 7, 7, azul);
+
+
+
+  putpixel (bmp, 3, 8, azul);
+
+  putpixel (bmp, 4, 8, azul);
+
+  putpixel (bmp, 5, 8, azul);
+
+  putpixel (bmp, 6, 8, azul);
+
+}
+
+
+
+
+
+void init_all(void)
+
+{
+
+  srand(time(NULL));
+
+  allegro_init();
+
+  install_keyboard();
+
+  install_timer();
+
+
+
+  LOCK_VARIABLE(logic_counter);
+
+  LOCK_FUNCTION(update_logic_counter);
+
+  install_int_ex(update_logic_counter, BPS_TO_TIMER(60));
+
+
+
+  if (install_sound (DIGI_AUTODETECT, MIDI_NONE, NULL))
+
+    allegro_message("Erro ao tentar iniciar dispositivo de som.");
+
+
+
+  set_gfx_mode(GFX_SAFE, 320, 240, 0, 0);
+
+  buffer = create_bitmap (SCREEN_W, SCREEN_H);  clear_bitmap (buffer);
+
+
+
+  dat = load_datafile ("glub.dat");
+
+  set_pallete(dat[pal].dat);
+
+  gota = create_bitmap (10,10); clear_bitmap (gota);
+
+  desenha_gota(gota);
+
+
+
+  text_mode(-1);
+
+}
+
+
+
+void init_OBJ(void)
+
+{
+
+  int i;
+
+
+
+  playerO.w = 30;
+
+  playerO.h = 50;
+
+  playerO.x = SCREEN_W/2;
+
+  playerO.y = 215-playerO.h;
+
+  playerO.ativo = 1;
+
+  playerO.count = 0;
+
+  playerO.index = 1;
+
+
+
+  piaO.w = 30;
+
+  piaO.h = 30;
+
+  piaO.x = 320-piaO.w;
+
+  piaO.y = 215-piaO.h;
+
+  piaO.ativo = 1;
+
+  piaO.count = 0;
+
+  piaO.index = 0;
+
+
+
+  baldeO.w = 30;
+
+  baldeO.h = 30;
+
+  baldeO.x = playerO.x-10;
+
+  baldeO.y = playerO.y-5;
+
+  baldeO.ativo = 1;
+
+  baldeO.count = 0;
+
+  baldeO.index = 0;
+
+
+
+  for (i = 0; i &lt; MAX_GOTAS; i++)
+
+  {
+
+    gotasO[i].x = rand()%SCREEN_W;
+
+    gotasO[i].y = -10;
+
+    gotasO[i].dy = 1+(rand()%2);
+
+    gotasO[i].ativo = 1;
+
+    gotasO[i].w = gotasO[i].h = 10;
+
+  }
+
+}
+
+
+
+void draw_screen(void)
+
+{
+
+ int cinza = makecol(120,120,120), azul = makecol(0,0,255);
+
+ int i;
+
+
+
+ for (i = 0; i &lt; 5; i++)
+
+   line (buffer, 0, 215, SCREEN_W, 215, cinza);
+
+
+
+ for (i = nivel_da_agua; i &gt;= 0; i--)
+
+   line (buffer, 0, 240-i, SCREEN_W, 240-i, azul);
+
+
+
+ draw_sprite (buffer, dat[pia].dat, piaO.x, piaO.y);
+
+ draw_sprite (buffer, dat[balde].dat, baldeO.x, baldeO.y);
+
+
+
+ if (lado)
+
+   draw_sprite_h_flip (buffer, dat[playerO.index].dat, playerO.x, playerO.y);
+
+ else
+
+   draw_sprite (buffer, dat[playerO.index].dat, playerO.x, playerO.y);
+
+
+
+
+
+ for (i = 0; i &lt; MAX_GOTAS; i++)
+
+   if (gotasO[i].ativo)
+
+     draw_sprite (buffer, gota, gotasO[i].x, gotasO[i].y);
+
+
+
+
+
+ if (baldeO.count &gt;= 20) textout (buffer, font, "FULL !!!", 10, 10,  makecol(255,0,0));
+
+ textprintf (buffer, font, 10, 20, makecol(255,255,255), "LEVEL %d", level);
+
+ textprintf (buffer, font, 10, 30, makecol(255,255,255), "SCORE %d", score);
+
+
+
+ blit (buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+
+ clear (buffer);
+
+}
+
+
+
+void controle(void)
+
+{
+
+  if (key[KEY_LEFT])
+
+  {
+
+    lado = 0;
+
+    if (playerO.x &gt; 0)
+
+      playerO.x -= 2;
+
+
+
+    if (playerO.index == 3) playerO.index = 1; else playerO.index++;
+
+  }
+
+  if (key[KEY_RIGHT])
+
+  {
+
+    lado = 1;
+
+    if (playerO.x &lt; SCREEN_W);
+
+      playerO.x += 2;
+
+
+
+    if (playerO.index == 3) playerO.index = 1; else playerO.index++;
+
+  }
+
+  update_OBJ();
+
+}
+
+
+
+void update_OBJ(void)
+
+{
+
+  int i, next=0;
+
+
+
+  baldeO.x = (playerO.x)-10;
+
+  baldeO.y = playerO.y-5;
+
+
+
+  for (i = 0; i &lt; MAX_GOTAS; i++)
+
+  {
+
+    if (colidio (gotasO[i], baldeO))
+
+    {
+
+      play_sample (dat[smp1].dat, 255, 128, 1000, FALSE);
+
+      if (baldeO.count &lt; 20)
+
+      {
+
+        score+=10;
+
+        score_count+=10;
+
+        baldeO.count++;
+
+      }
+
+
+
+      gotasO[i].x = rand()%SCREEN_W;
+
+      gotasO[i].y = -10;
+
+      next = 1;
+
+    }
+
+    if (!next)
+
+    {
+
+      next = 0;
+
+
+
+      if (gotasO[i].y &lt; 210)
+
+      {
+
+        if (gotasO[i].ativo)
+
+          gotasO[i].y += gotasO[i].dy;
+
+      }
+
+      else
+
+      {
+
+        gotasO[i].dy = 1+(rand()%2);
+
+        gotasO[i].y = -10;
+
+        nivel_da_agua += 0.05;
+
+      }
+
+    }
+
+  }
+
+
+
+  if (baldeO.count &gt;= 20)
+
+  {
+
+    if (playerO.x == piaO.x)
+
+    {
+
+      play_sample (dat[smp2].dat, 255, 128, 1000, FALSE);
+
+      baldeO.count = 0;
+
+      level++;
+
+      //score = 0;
+
+    }
+
+  }
+
+
+
+  if (nivel_da_agua &gt; 25)
+
+  {
+
+    baldeO.count = 0;
+
+    level = 1;
+
+    score = 0;
+
+    score_count = 0;
+
+    nivel_da_agua = 5;
+
+    jogando = 0;
+
+  }
+
+
+
+  if (score_count == 300)
+
+  {
+
+    play_sample (dat[smp3].dat, 255, 128, 1000, FALSE);
+
+    level++;
+
+    score_count = 0;
+
+  }
+
+  if (score &gt; 20000)
+
+  {
+
+    play_sample (dat[smp3].dat, 255, 128, 1000, FALSE);
+
+    score = 0;
+
+    level++;
+
+  }
+
+  if (!(level%5)) nivel_da_agua = 5;
+
+}
+
+
+
+int colidio(struct OBJ obj1, struct OBJ obj2)
+
+{
+
+  if ((obj1.y+obj1.h) == obj2.y)
+
+    if (obj1.x &gt;= obj2.x)
+
+      if (obj1.x &lt;= obj2.x+obj2.w)
+
+        return 1;
+
+
+
+ return 0;
+
+}
+
+
+
+void press_enter(void)
+
+{
+
+  char *nome = "GLUB";
+
+  char *start = "PRESS START";
+
+  float x = 1;
+
+  BITMAP *texto;
+
+
+
+  texto = create_bitmap (text_length(font, nome), text_height(font));
+
+  clear_bitmap (texto);
+
+  textout (texto, font, nome, 0, 0, makecol(255,255,255));
+
+
+
+  clear_bitmap (buffer);
+
+
+
+  while (!key[KEY_ENTER])
+
+  {
+
+    stretch_sprite (buffer, texto, 0, 0, SCREEN_W, SCREEN_H);
+
+    textout (buffer, font, start, x, SCREEN_H-20, makecol(320-x,0,0));
+
+
+
+    if (x &lt; (SCREEN_W-text_length(font, start)))
+
+      x+=0.1;
+
+    else x *= -1;
+
+
+
+    blit (buffer, screen, 0, 0, 0, 0, SCREEN_W, SCREEN_H);
+
+    clear_bitmap (buffer);
+
+  }
+
+
+
+  jogando = 1;
+
+}
+
+
+
+int main()
+
+{
+
+  init_all();
+
+  init_OBJ();
+
+
+
+  while (!key[KEY_ESC])
+
+  {
+
+    if (!jogando) press_enter();
+
+    while(logic_counter)
+
+    {
+
+      controle();
+
+      logic_counter--;
+
+    }
+
+    draw_screen();
+
+  }
+
+ allegro_exit();
+
+ return 0;
+
+}
+
+END_OF_MAIN();
+
+
+</PRE>
+                  <P>Tá aí, não se preocupe com código que não entender, pode me 
+                  perguntar por e-mail ou no canal #arsludica (brasnet) todo dia 
+                  depois de 00:00. O código tá meio bagunçado pq escrevi às 
+                  pressas para colocar no tutorial. O arquivo "glubDAT.h" está 
+                  no zip, disponível no final do tutorial. Este exemplo serve 
+                  mais para explicar o uso de dx e dy. No caso do programa acima 
+                  só tem o dy já que eu só faço as gotas caírem seguindo o eixo 
+                  Y, não sofrendo qualquer modificação no eixo X, mas o 
+                  propósito e o mesmo. Você pode ver que eu sorteei valores 
+                  aleatórios para cada gota o que faz com que uma caia mais ou 
+                  menos rápido que outra. Vou explicar uma coisinha que é 
+                  animação, com nenhuma intenção de esgotar o assunto, só vou 
+                  mesmo dar uma idéia. </P>
+                  <P>Basicamente você deve pensar como os desenhos animados são 
+                  feitos, várias imagens se movendo rapidamente, dão a impressão 
+                  que estão realmente vivas, como o tom&amp;jerry mesmo. Então 
+                  em um programa você só deve fazer o mesmo para dar o efeito de 
+                  movimento. No glub usei uma técnica bem básica que é manter um 
+                  contador que indica em que quadro da animação o sprite se 
+                  encontra e uma outra variável que indica quantos quadros tem o 
+                  sprite. Vamos supor no caso do carinha do glub são 3, ele 
+                  andando, então: desenha na tela, incrementa o contador de 
+                  quadros, e faz isso até que chegue o último quadro; aí volta 
+                  para o primeiro. Basicamente é isso. Tudo bem, no glub tá 
+                  muito mal desenhado mas é por aí a coisa. Você deve ter o 
+                  contador, o limite, e um array para armazenar as várias 
+                  imagens que compõem a animação.</P><PRE>
+int contador=0;
+
+int maximo=4;
+
+BITMAP *animacao[maximo];
+
+</PRE>
+                  <P>Depois de iniciar todas as posições do array com as imagens 
+                  você deve ter uma função que desenha na tela.</P><PRE>
+void desenha()
+
+{ 
+
+
+
+ ...
+
+
+
+ while (!game_end)
+
+ {
+
+
+
+   ...
+
+
+
+   draw_sprite (buffer, animacao[contador], sprite.x, sprite.y);
+
+
+
+   ...
+
+   
+
+   if (contador &lt;= maximo) contador++; else contador = 0;
+
+ }
+
+
+
+ ...
+
+
+
+}
+
+</PRE>
+                  <P>No geral você deve fazer isso para animar alguma coisa na 
+                  tela. Mais explicações virão na parte 2 do tutorial.</P>
+                  <P>OK, isso é tudo.</P>
+                  <H2>Conclusão</H2>
+                  <H1>Conclusão</H1>
+                  <P>Espero que esse tutorial seja útil para vocês. Qualquer 
+                  duvida manda um e-mail, se eu souber eu respondo com no maximo 
+                  15 horas ;) </P>
+                  <P>Para o próximo tutorial da serie "Técnicas básicas para 
+                  Jogos 2D" irei falar sobre sistemas de partículas, e 
+                  implementar uma engine de um joguinho 2d básico estilo 
+                  mário... ate lá... </P><A 
+                  href="http://pjmoo.codigolivre.org.br/gdj/site/tutorial/08092002_181644/tut.zip">CODIGO 
+                  E IMAGENS DO TUTORIAL</A> 
+                  <DIV></DIV>
+                  <DIV></DIV></TD></TR>
+              <TR>
+                <TD align=middle><BR>
+                  <HR>
+
+                  <TABLE cellSpacing=2 cellPadding=2 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD align=middle><A target=_blank 
+                        noHREF="javascript:Janela('../mailfriendart.asp?artigo={SCRIPT_NAME}&amp;ID=22',350,490);"><IMG 
+                        alt="Enviar para um Amigo" 
+                        src="GDJ  Artigos  API  Allegro  Técnicas Básicas para Jogos 2D_arquivos/botao_enviar.gif" 
+                        border=0 ALGIN="CENTER" VALIGN="TOP"><BR>Enviar para um 
+                        Amigo</A></TD>
+                      <TD align=middle><FONT class=info><A 
+                        href="http://pjmoo.codigolivre.org.br/gdj/pag_artigo_leitura_impressao.php?ID=22" 
+                        target=_blank><IMG alt="Versão para Impressão" 
+                        src="GDJ  Artigos  API  Allegro  Técnicas Básicas para Jogos 2D_arquivos/botao_impressora.gif" 
+                        border=0 ALGIN="CENTER" VALIGN="TOP"><BR>Versão para 
+                        Impressão</A></FONT></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- AREA DE TEXTO - FIM --></TD></TR>
+        <TR>
+          <TD align=middle width="100%" HEIGTH="20"><B>
+            <DIV class=categoria_artigo>GDJ 2005 - Colaboração das Comunidades 
+            ArsLudica/PDJ 
+(2001/2003)</DIV></B></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></BODY></HTML>

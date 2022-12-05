@@ -1,0 +1,437 @@
+From: <Salvo pelo Microsoft Internet Explorer 7>
+Subject: =?Windows-1252?Q?A_Biblioteca_Gr=E1fica_Allegro?=
+Date: Mon, 23 Mar 2009 15:56:29 -0300
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0012_01C9ABCF.EDEE09B0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0012_01C9ABCF.EDEE09B0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/allegro.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>A Biblioteca Gr=E1fica Allegro</TITLE>
+<META http-equiv=3DCONTENT-TYPE content=3D"text/html; =
+charset=3Diso-8859-1">
+<META content=3D"MSHTML 6.00.5730.13" name=3DGENERATOR></HEAD>
+<BODY>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><IMG alt=3D"minerva ufrj" hspace=3D5=20
+      src=3D"http://equipe.nce.ufrj.br/adriano/figuras/min_peq.gif" =
+width=3D80></TD>
+    <TD>
+      <H3>A Biblioteca Gr=E1fica =
+Allegro</H3></TD></TR></TBODY></TABLE><IMG=20
+alt=3D"barra horizontal azul" hspace=3D5=20
+src=3D"http://equipe.nce.ufrj.br/adriano/figuras/bluebar.gif" =
+width=3D"100%"=20
+align=3Dleft><BR>=A92002 - Tiago da Concei=E7=E3o Mota<BR><BR><I>Powered =
+by vi</I>
+<P></P><A name=3Dindice>
+<OL>
+  <LI><A=20
+  =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/allegro=
+.html#primeira">A=20
+  Biblioteca Gr=E1fica Allegro</A>=20
+  <OL>
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/allegro=
+.html#introduc">Introdu=E7=E3o</A>=20
+
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/allegro=
+.html#instal">Instalando=20
+    o Allegro</A>=20
+    <OL>
+      <LI><A=20
+      =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/allegro=
+.html#mingw">Com=20
+      MinGw</A>=20
+      <LI><A=20
+      =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/allegro=
+.html#djgpp">Com=20
+      DJGPP</A> </LI></OL>
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/allegro=
+.html#pas_bas">Passos=20
+    B=E1sicos</A> </LI></OL>
+  <LI><A=20
+  =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/program=
+a.html">Programando=20
+  com o Allegro</A>=20
+  <OL>
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/program=
+a.html#esq">Esquema=20
+    de um Programa</A>=20
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/program=
+a.html#prog">Programando=20
+    com Exemplos</A> </LI></OL>
+  <LI><A=20
+  =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/tecnica=
+s.html">T=E9cnicas=20
+  de Programa=E7=E3o de Jogos</A>=20
+  <OL>
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/tecnica=
+s.html#double_buffering">Double=20
+    Buffering</A>=20
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/tecnica=
+s.html#scrolling">Scrolling</A>=20
+
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/tecnica=
+s.html#sprites">Sprites</A>=20
+
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/tecnica=
+s.html#detec_colisao">Detec=E7=E3o=20
+    de Colis=E3o</A> </LI></OL>
+  <LI><A=20
+  =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/montand=
+o.html">Montando=20
+  um Jogo Usando o Allegro</A>=20
+  <OL>
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/montand=
+o.html#geral">Vis=E3o=20
+    Geral do Jogo</A>=20
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/montand=
+o.html#defines">Defini=E7=F5es=20
+    e Outras Fun=E7=F5es</A>=20
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/montand=
+o.html#inic">As=20
+    Inicializa=E7=F5es</A>=20
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/montand=
+o.html#loop">O=20
+    Loop Principal</A>=20
+    <LI><A=20
+    =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/montand=
+o.html#final">As=20
+    Finaliza=E7=F5es</A> </LI></OL>
+  <LI><A=20
+  =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/funcoes=
+.html">As=20
+  Fun=E7=F5es do Allegro</A>=20
+  <LI><A=20
+  =
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/exemplo=
+s.html">Programas=20
+  Exemplo</A> </LI></OL><A name=3Dprimeira><IMG alt=3D"barra horizontal =
+azul" hspace=3D5=20
+src=3D"http://equipe.nce.ufrj.br/adriano/figuras/bluebar.gif" =
+width=3D"100%"=20
+align=3Dleft><BR><A name=3Dintroduc>
+<H2>1. Introdu=E7=E3o</H2>
+<P>Uma importante =E1rea da computa=E7=E3o, mas que normalmente =E9 =
+deixada em segundo=20
+plano no meio acad=EAmico, =E9 a de jogos. Os jogos, por=E9m, constituem =
+um ramo com=20
+grande potencial de explora=E7=E3o, devido ao uso de diversos elementos =
+da=20
+computa=E7=E3o em sua produ=E7=E3o.</P>
+<P>Al=E9m dos elementos mais aparentes para um leigo num jogo, como a =
+intelig=EAncia=20
+artifical (com destaque para os jogos de tabuleiro) e a computa=E7=E3o =
+gr=E1fica,=20
+outros est=E3o "escondidos", como o de algoritmos (visando a =
+efici=EAncia para=20
+respostas mais r=E1pidas pela m=E1quina) e de estruturas de dados =
+(facilitando ao=20
+criar uma abstra=E7=E3o para os objetos utilizados nos jogos).</P>
+<P>Assim, devido =E0 complexidade e =E0 completeza da =E1rea de jogos, =
+entendemos que=20
+estes s=E3o fonte inesgot=E1vel de pesquisas e, portanto, devem ter =
+maior foco no=20
+meio acad=EAmico.</P>
+<P>O objetivo principal desta apostila, no entanto, =E9 tentar ensinar a =
+usar,=20
+pelo menos de maneira b=E1sica, a biblioteca Allegro, uma das mais =
+populares=20
+ferramentas para confec=E7=E3o de jogos existente. Explica=E7=F5es de =
+algumas t=E9cnicas=20
+de programa=E7=E3o de jogos aparecer=E3o naturalmente como necessidade =
+para contornar=20
+determinados problemas e/ou simplificar determinadas tarefas.</P>
+<P>Como efeito da programa=E7=E3o de jogos utilizada nesta apostila, =
+pretendemos=20
+criar uma nova mentalidade a respeito dos mesmos, mostrando a =
+necessidade da=20
+pesquisa nessa =E1rea. Assim, como segundo objetivo e resultado do =
+primeiro, esta=20
+apostila visa introduzir o aluno ao mundo da programa=E7=E3o de jogos, =
+que pode, nos=20
+pr=F3ximos anos, tornar-se uma tend=EAncia no meio acad=EAmico, caso o =
+preconceito em=20
+rela=E7=E3o a ele seja superada.</P>
+<P>A apostila est=E1 dividida em dois blocos: um did=E1tico e outro de=20
+refer=EAncia.</P>
+<P>O primeiro bloco, por sua vez, est=E1 subdividido em quatro partes: a =
+primeira=20
+delas, da qual esta introdu=E7=E3o faz parte, apenas ensina como =
+instalar o Allegro=20
+e alguns passos b=E1sicos a serem tomados antes de come=E7ar a =
+programar; a <A=20
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/program=
+a.html">segunda</A>=20
+ensina como usar as fun=E7=F5es mais importantes do Allegro, sempre com =
+exemplos que=20
+ilustrem o uso das mesmas; a <A=20
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/tecnica=
+s.html">terceira</A>=20
+ensina algumas t=E9cnicas de programa=E7=E3o de jogos que foram =
+mostradas durante a=20
+segunda parte, ou que sejam interessantes para a confec=E7=E3o de um =
+jogo b=E1sico; e=20
+a <A=20
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/montand=
+o.html">quarta</A>=20
+ensina como montar um jogo utilizando as fun=E7=F5es mostradas na =
+segunda parte e=20
+algumas t=E9cnicas utilizadas na terceira.</P>
+<P>O segundo bloco cont=E9m um <A=20
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/funcoes=
+.html">guia=20
+de refer=EAncia</A> com as fun=E7=F5es do Allegro mais =FAteis, e deve =
+ser consultado=20
+quando as explica=E7=F5es do primeiro bloco n=E3o forem profundas o =
+suficiente, ou=20
+quando se desejar saber, de forma r=E1pida e eficiente, sobre o =
+funcionamento de=20
+determinada fun=E7=E3o.</P><IMG alt=3D"barra horizontal azul" hspace=3D5 =
+
+src=3D"http://equipe.nce.ufrj.br/adriano/figuras/bluebar.gif" =
+width=3D"100%"=20
+align=3Dleft><BR><A name=3Dinstal>
+<H2>2. Instalando o Allegro</H2>
+<P>Devido a restri=E7=F5es de compatibilidade com vers=F5es do sistema =
+Windows a=20
+instala=E7=E3o com MinGW deve ser a preferida. Para quem usa o sistema =
+Unix=20
+simplesmente siga os passos indicados no arquivo da bibliteca allegro. =
+<A=20
+name=3Dmingw>
+<H2>2.1 Com MINGW</H2>
+<P>Para instalar o MinGw v=E1 para <A=20
+href=3D"http://equipe.nce.ufrj.br/adriano/c/paginas.html#compiladores">co=
+mo=20
+conseguir compiladores.</A></FONT> Uma vez instalado o compilador =E9 =
+necess=E1rio=20
+trazer a biblioteca Allegro. H=E1 uma vers=E3o compactada em bin=E1rio =
+para o=20
+compilador MinGw no site <A =
+href=3D"http://www.allegro.cc/">allegro.cc</A>. Uma=20
+vez na p=E1gina procure pelo link Files e n=E3o Downloads como na =
+maioria das=20
+p=E1ginas. Basta ent=E3o descompactar o arquivo no diret=F3rio onde foi =
+instalado o=20
+compilador MinGw. Preste aten=E7=E3o que junto com os arquivos da =
+biblioteca s=E3o=20
+trazidos tr=EAs DLLs (all*.dll) que devem ser copiadas para o =
+diret=F3rio apropriado=20
+do Windows. Estas dlls estar=E3o no diret=F3rio principal do MinGw. =
+</P><A=20
+name=3Ddjgpp>
+<H2>2.2 Com DJGPP</H2>
+<P>Primeiramente, entre no site <A =
+href=3D"http://www.allegro.cc/">allegro.cc</A>=20
+para fazer o download da vers=E3o mais recente e est=E1vel. Caso exista =
+algum=20
+arquivo de nome <TT>all<B>xyz</B>.zip</TT> (vers=E3o=20
+<TT><B>x</B></TT>.<TT><B>y</B></TT>.<TT><B>z</B></TT>) entre os arquivos =
+de=20
+instala=E7=E3o do DJGPP/GCC, n=E3o ser=E1 necess=E1rio baix=E1-lo =
+novamente, ao menos que se=20
+deseje adquirir uma vers=E3o mais recente. A vers=E3o mais recente do =
+Allegro, at=E9 a=20
+=FAltima atualiza=E7=E3o desta p=E1gina, =E9 a 4.0.2, que pode ser =
+obtida clicando-se=20
+diretamente <A=20
+href=3D"http://208.247.248.26/~matthew/files/4.0.2/all402.zip">aqui</A>.<=
+/P>
+<P>Em seguida, crie um subdiret=F3rio dentro do diret=F3rio do DJGPP/GCC =
+
+(normalmente <TT>C:\DJGPP\Allegro</TT>) e, ent=E3o, extraia para este =
+diret=F3rio os=20
+arquivos do arquivo .ZIP anteriormente mencionado (caso o arquivo .ZIP =
+j=E1 possua=20
+uma indica=E7=E3o para cria=E7=E3o do diret=F3rio <TT>Allegro</TT>, =
+extraia o seu conte=FAdo=20
+para o diret=F3rio <TT>C:\DJGGP</TT>, por exemplo).</P>
+<P>O pr=F3ximo passo, e talvez o mais importante e (muito) demorado, =E9 =
+a=20
+compila=E7=E3o dos arquivos do Allegro, uma vez que o arquivo .ZIP =E9 =
+constitu=EDdo=20
+apenas pelos arquivos-fonte.<BR>Para isto, abra um Prompt do MS-DOS, =
+mude para o=20
+diret=F3rio do Allegro e, em seguida, digite <TT>make</TT>. Caso ocorra =
+algum erro=20
+durante o processo de compila=E7=E3o do Allegro, tente digitar <TT>make =
+all</TT>. Se=20
+ainda assim ocorrerem erros, tente executar o make novamente. Ao final =
+deste=20
+processo, digite <TT>make install</TT> para que o Allegro seja instalado =
+de=20
+forma correta, fazendo com que o GCC/DJGPP possa utiliz=E1-lo.</P>
+<P>Ap=F3s o make, =E9 recomend=E1vel verificar se os arquivos =
+<TT>allegro.h</TT> e=20
+<TT>liballeg.a</TT> est=E3o, respectivamente, nos diret=F3rios=20
+<TT>C:\DJGPP\Include</TT> e <TT>C:\DJGPP\Lib</TT>. Caso n=E3o estejam, =
+copie-os=20
+manualmente a partir do diret=F3rio do Allegro.</P>
+<P>Devido a alguns problemas com o make, resolvemos disponibilizar, =
+tamb=E9m, um=20
+link para a biblioteca Allegro pr=E9-compilada. Assim, clique <A=20
+href=3D"http://208.247.248.26/~matthew/files/4.0.2/allegro-4.0.2-djgpp.zi=
+p">aqui</A>=20
+para baixar o arquivo e, depois, apenas extraia o seu conte=FAdo para o =
+diret=F3rio=20
+do DJGPP (<TT>C:\DJGPP</TT>). N=E3o =E9 necess=E1rio o uso do =
+make.</P><IMG=20
+alt=3D"barra horizontal azul" hspace=3D5=20
+src=3D"http://equipe.nce.ufrj.br/adriano/figuras/bluebar.gif" =
+width=3D"100%"=20
+align=3Dleft><BR><A name=3Dpas_bas>
+<H2>3. Passos B=E1sicos</H2>
+<P>Assim como se faz com qualquer outra biblioteca, =E9 necess=E1rio =
+incluir o=20
+arquivo de cabe=E7alho do Allegro. Para tal, <B>AP=D3S</B> todas as =
+outras diretivas=20
+<TT>#include</TT> das bibliotecas padr=E3o (ex: <TT>stdio.h</TT>,=20
+<TT>stdlib.h</TT>), inclua a seguinte linha: <TT>
+<OL>#include &lt;allegro.h&gt; </OL></TT>
+<P></P>
+<P>O pr=F3ximo passo =E9 fazer com que o compilador C possa linkar =
+corretamente a=20
+biblioteca Allegro (liballeg.a).<BR>Para tanto, os usu=E1rios do RHIDE =
+devem ir ao=20
+menu Options-&gt;Libraries, adicionar a palavra <U>alleg</U> na primeira =
+linha=20
+em branco e marcar o quadrado ao lado. J=E1 para os usu=E1rios do GCC, =
+=E9 necess=E1rio=20
+adicionar o par=E2metro <U>-lalleg</U> =E0 linha de comando. Por =
+exemplo: <TT>
+<OL>gcc -o jogo.exe jogo.c -Wall -lalleg </OL></TT>
+<P></P><IMG alt=3D"barra horizontal azul" hspace=3D5=20
+src=3D"http://equipe.nce.ufrj.br/adriano/figuras/bluebar.gif" =
+width=3D"100%"=20
+align=3Dleft><BR>
+<P>
+<CENTER><A=20
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/allegro=
+.html#indice"><IMG=20
+height=3D30 hspace=3D5=20
+src=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/return.g=
+if"=20
+width=3D30 align=3Dcenter></A> <A=20
+href=3D"http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/allegro=
+.html#indice">=CDndice</A>=20
+</CENTER>
+<P></P></BODY></HTML>
+
+------=_NextPart_000_0012_01C9ABCF.EDEE09B0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://equipe.nce.ufrj.br/adriano/figuras/min_peq.gif
+
+R0lGODlhUABsAMT/AAAICAAQGAghOQgQGAgYKQgpSgAIEAAQIRhCcxhKhMDAwBAxWhA5axApShhC
+exA5cwghQhAxYxApUggYMQghShg5cxAxaxApWggYOQAIGAgQIRAhSggQKQAACAAAAAAAACH5BAEA
+AAoALAAAAABQAGwAAAX/oCKOZGmeaKqubOu+cCzPdG3fjiVtPMVvkIvFcSu6HBEIx+BpOp9PA2dj
+MVpJDU4Hyu1GJxLitbZhes9ozwBSGcM2gLQ8ram6V5y5nn65ny5xaFt7cwAbfiMYcxqDTwMHhFwZ
+En4TehNmTwKZkY5tVwN7DRpcFZxOBqdyDVakXpZQDLBOGgqNT7OEEEUUaBK3HggNUKzAHhO5ujYX
+aQwETx0Kw08KDlwGCKp7GDQVchXMTgEKEk8cCgxcDAudUNwyrk7GDApNBhMRIgz7+QqmuApCtXvy
+7sUGLgOS5YvwaQWCCwQGKIjQDkAHDRmc7DripcIsAglOINmnAgIhABAi/4QcsW7DShaKukBIsIXV
+iApZOhhL2IAeCVlzJoixYe0Mun4KFmjzgnJoNThnKBkRgGbBiAhL5RCwIyJBLy5SixRtcvGJTQUm
+B6LqMyJBLolW8miKEEdAIrXXkJJzoteGBS7RIhAYUQ6vTBIm4RpJS4wEO8NeBrAl19dGPEeEIaeZ
+cGcslEMTNcvBNoZiFzFZRcurXGNakwB57EpTjSvCvjJPNhZh7KGDAwZiAtGuTNVJQRvPngwWcbC3
+aqsjHBDgXLiJbBtyn0A3s+Ay3p7rMDWp9bhJWBrJzfojKyIZbQ+1XHuYPCM736RNAFzN+N7JuVzQ
+1afObE04UAEHK1UQQf8DDFKQhWZWZeIbDdkJUAEDIc2ST28CSOCTCUjYF0kGezUhFHoEjZDeOcXJ
+04EBBBDAwXT5VNfJIRpwZgNvHhggAn/mKZAeGpwBGYkBK3VHBhTR2AJFGzx6gcCQkUiAgCskzmBj
+byIYQ0QFVEIxQAKpRaJjDOk8oZ8CwjmxDz0OSCCiB+ekqRpoMXBBhDEbWHOiApdRgtV7PsogkJtC
+IoSfBwDk4mOLmmUAwYcxxOQEK1s2wY0D4j0hgTeQdcBBGCN0d6YL5ZlYjRca+BRPLQlAMEEAnVy0
+AYYKJJDEoQM4xYJnPYowpzwEMJEBdL/lqgACF17QgAQMRhvtAhVUkMD/bxJMYGRvZ/06wqFN0JMp
+F7VUk50BEEiwAAPMNkTChdC2+YQGAvi6AhgihKPRspuJIIG8XnRgkU4AK7fASzB0oCNNUYiQlWyQ
+MuocXjWkU6gCCmHsxTmAOrFGGxHINYAxo9WQVj+pesCKfOKI4EoHYTXABADrYguBjAboVFUNAunG
+ySHNQUFEcctJEwgHCAjAmghUpQKFbjKAqsYIvFFSABeYqipCep8agKdICkAKgawmP/GJZ/Qkc44D
+cZT772sVsHPqCQxwUot0PKvHdBNZgltoKEiG7QRnibHQAAQCMFKuAl/DIHUTB0TXBCueAUCEK/S0
+aNcwE9IQYAyZfniQ/7+0bD35olOn+TkiJ8x5pgMb0XqMCGnBlQkRoSzOOgo7mWCaTS3m02LWHqy+
+u2MdlSDARghkx4ppHmwUR5bHn+BeE1BHB+k7ZsAFi/ExOCCEDCTDd8KQrCQQTxt/TV3DPzPFkLLQ
+JoCaAT11OyGVGQxhN7cLlurCeQiTDwcEkGOwkAj4XpAASr0gNbojgWDEFJLyXMABC2xBBXIkg/kx
+yVcL2Baj2oCAQSCpWzGgiwcap0EISlAbCKqGcCKQtBpIgIY0UJ8XrmOBYdGsK/FgBQccWCnFzEB2
+yimVF96RAKg0wSoyKwFXXKCB7MkPCtQDlj36kb99eWOAU4CBh24Arv8AeWd2SQFXB1hhijUhjwD2
+Yp1rmqSAAMKHAR45xQRCMo0BOqwJHJgi66TGsS3hwz0D8ElxIngXWlAhjg9wVw0GYRP75OgwaAmE
+AeKIOjFpACMcyFEG89QECrgsDQNogx2Xtp4z0OtgYwiETcKUmzjJa5ROeoKkiHgFSgorMnFTxXFQ
+AA1cGiEQpkwUuSJwRg9cJwV26lX1cllJcl1NgC0oDydXgAQJKMGKJ/ClAkR0gOsZgJcnaM4zWxAB
+DICLTixgmAcKYDqP2RF7MICFIFVggaVwbAWBAI19RgaFVsVAIOgsQXfQ8E8VXKqeXTAACjVIFoT9
+4Z1faAACWjAIeo7/0wu6mWhJmgCXDTbuAhhlFAZYmQJxhumcIkBAKFiYgrFR4gENcMAAkGIBjHZA
+adGB1tjiOQiBiukqbcvQBCSJggRQhTMJOiMAGrASBmCgTQ1taRM8OqTOKYAJsCqRGpg6guwgZVBq
+wpPMulA0FYjTPm1wAIImIBEGwAwBxtHHFrYglcIEaEsd2IgzygfPFchzlk6wil09ABwCcWYLyxHi
+eBRAAQV+SF8mEkPEupBVFCDzlx7gxgI6MACppMdHA4BLHsLQBHQAkgRbkgoECsaFzobzdInSjwNy
+KrknxEmV+XFqGGQ5AswCIK4p9UJbtaqyX56FAaPYRaBEIJ9zJEAg//98XACIMC6GtuCzHSNC+ybr
+mjG5VhN/9IAYHJCJNXXXu4YVJwc76YHz2qUNdjIfEShiE7Y54bgKwOwelsu7JoBGAxEwoDyfGBCr
+mESywWLHLgJ0qA5s9L1psK0JOtqeBFy1Y05YThf1kw6JQG8ys7AwfQmhYRIcVgQ0bIIwxtMPAbNC
+KP4NUmj0t+OBtJgExKUdADhQLQgQgQEQWAD07BESzFIvE8uhrR4IfNsVliABG13ABDSpTE21RzvU
+RcUp8fLjEYhTFqHIAHuhkOB9+UOZ/xROG1jWjjKLALz2QQCPBkMVqZDicowNs3XOaxgqX1mct2DF
+BzGYK1f4iFMjuEDdVzVj51weImW1oJJNKtCmizHOCXa5p49bwA8ijORNcLLAm3DoD9useigIsI0F
+QoLqWtv61qhm9TR3zeteryAEADs=
+
+------=_NextPart_000_0012_01C9ABCF.EDEE09B0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://equipe.nce.ufrj.br/adriano/figuras/bluebar.gif
+
+R0lGODdhHAIEAKEAAAAAAAAAgAAA/wAAACwAAAAAHAIEAAAC/oSPqcsXbh6Qr85rM658Bg5+4kiW
+5omm6sqOgvl+8SzXAX3n+cvvfg/8CYPE4Y7IS96UAqZzCW1Gpc2k9bqkVrfcrvcLDovH5LL5jE57
+G2xKBAO3wOdyjb2Dx3s89v3H3xIoWBKjQ1NUVNPjY2izGMSIc2iESHk0hakVdanZ+eSZGUq1qVVp
+anlqCvTJmuW6laUmOzvLhuBmq4B7wdvnG+e3wTcc8pcCyDfYUoijo0zo6BId2diYqog6xISKuJrd
+CuopXvq6alV+RSsWW8VO5k4+Gu50rm6/1iCx4MY/1/tG598dYMYy6BmxwRigY89gKJMUrZKzSdam
+SZx08ZtGIVXaMn3qOI/UNlal6sWTt9HjlHYlOdHjAu/eF4/pZIYpAAA7
+
+------=_NextPart_000_0012_01C9ABCF.EDEE09B0
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://equipe.nce.ufrj.br/adriano/c/apostila/allegro/docs/return.gif
+
+R0lGODdhKAAoAOMAAAAAAAD//x6Q/+bm+ofO676+vi9PTwAAgHCAkAAA/wAAAAAAAAAAAAAAAAAA
+AAAAACwAAAAAKAAoAAAE/nDISau9eJrMOzbbUIxkaZ5oCkoF6L5wLMfiWqd4btZhq/84HssALO5a
+PaJxKbyNDlCBIBAgUAlYAqDY9D0TCWn1mtVykUPSISwoV7GA7dnmLUjb5Sw1YOwq7Xh5VlZXQH4k
+Um5jg4QEP4cjYoQBAHuNbzqQgJNxAIOLWTmaYlQACKeeoGVBaE4FYKWnsnGCdymasKanBbIInnm2
+J5oACbIlvb9YdwIow8Uos1nLYMKtdXE40W1SYAnVdH8/2gJhYAdH4Euo3OQJUOhJ6uvda3IkmkWo
+9O72I/hA+ty5O9CvwD+AvqBAKWjQWjgjCRc2c7iERESG/ihWHNGJVbqNJAUwljgIcuLHkqI0ovQY
+byVLFh5iZrDm8seKGThz6tzJsyeICAA7
+
+------=_NextPart_000_0012_01C9ABCF.EDEE09B0--

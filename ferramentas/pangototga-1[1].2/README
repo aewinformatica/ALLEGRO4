@@ -1,0 +1,14 @@
+PangoToTGA is used to create a glpyh sheet from a font.
+
+Usage:
+
+In the program, first select a font. There's a font selector letting you select
+any font Pango has access to. Next, select a character range. These are unicode
+ranges.
+
+Then, select a color range. The color range is used for anti-aliasing. There's
+currently no way to output non-antialiased fonts. Then export to a TGA. That's
+all, now load the TGA in Gimp, and start working on your bitmap font.
+
+The TGA will have a palette in the format the Allegro library expects it for its
+bitmap fons. The color range specifies the palette colors used for the font.

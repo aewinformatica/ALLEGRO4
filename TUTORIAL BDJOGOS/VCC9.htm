@@ -1,0 +1,436 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0052)http://www.bdjogos.com/biblioteca_conteudo.php?id=28 -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="VCC9_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="VCC9_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="VCC9_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background=VCC9_arquivos/bg.jpg topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT language=javascript src="VCC9_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="VCC9_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=VCC9_arquivos/linha_hor_cima.gif><IMG height=8 
+      src="VCC9_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="VCC9_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=VCC9_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background=VCC9_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="VCC9_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=VCC9_arquivos/linha_horizo.gif><IMG height=8 
+      src="VCC9_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="VCC9_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="VCC9_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=VCC9_arquivos/linha_hor_cima.gif><IMG height=8 
+      src="VCC9_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="VCC9_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=VCC9_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background=VCC9_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="VCC9_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=VCC9_arquivos/linha_horizo.gif><IMG height=8 
+      src="VCC9_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="VCC9_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="VCC9_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=VCC9_arquivos/linha_hor_cima.gif><IMG height=8 
+      src="VCC9_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="VCC9_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=VCC9_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background=VCC9_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="VCC9_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=VCC9_arquivos/linha_horizo.gif><IMG height=8 
+      src="VCC9_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="VCC9_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="VCC9_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=VCC9_arquivos/linha_hor_cima.gif><IMG height=8 
+      src="VCC9_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="VCC9_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=VCC9_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background=VCC9_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="VCC9_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=VCC9_arquivos/linha_horizo.gif><IMG height=8 
+      src="VCC9_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="VCC9_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="VCC9_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="VCC9_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="VCC9_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="VCC9_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="VCC9_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="VCC9_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background=VCC9_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="VCC9_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background=VCC9_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="VCC9_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="VCC9_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD class=conteudo vAlign=top><LINK href="VCC9_arquivos/estilos.css" 
+            type=text/css rel=stylesheet><SPAN class=titulos>INSTALANDO O 
+            ALLEGRO NO MICROSOFT VISUAL C++ 2008 EXPRESS EDITION</SPAN><BR>
+            <P class=conteudo><BR>Atualmente a biblioteca Allegro está na versão 
+            4.2.2 e pode ser configurada para qualquer tipo de compilador e em 
+            muitas plataformas. Nesse artigo estarei ensinando a instalar o 
+            Allegro no compilador Microsoft Visual C++ 2008. <BR><BR>Na medida 
+            do possível estarei acompanhando as versões mais novas da biblioteca 
+            e atualizando este documento. Se você preferir pode pegar a 
+            documentação em inglês no site oficial do Allegro. O documento 
+            original é somente texto. </P>
+            <P class=conteudo>Para facilitar o processo estarei exemplificando 
+            esse documento com imagens.<BR><BR>Com o Visual C++ 2008 instalado 
+            no computador baixe os arquivos binários <B>zipados</B> no site do 
+            allegro. <BR>Atualmente o nome é <STRONG>Microsoft Visual C++ 
+            8.0.zip</STRONG>.<BR><BR><B>Link para download:</B><BR><A 
+            class=conteudo href="http://www.allegro.cc/files/" 
+            target=_blank>Pacote Allegro para Visual C++</A></P>
+            <P class=conteudo>Após carregar o arquivo no computador prossiga com 
+            as instruções abaixo para a configuração do Visual C++. </P>
+            <TABLE cellPadding=5 width="100%" align=center border=0>
+              <TBODY>
+              <TR class=conteudo>
+                <TD>
+                  <DIV align=center>
+                  <P align=center>1) Após baixar o arquivo binário você deverá 
+                  descompactar ele em uma pasta qualquer. <BR>O resultado da 
+                  extração dos arquivos na pasta deve ser conforme 
+                  abaixo:<BR><BR><IMG src="VCC9_arquivos/extrair.png" 
+                  border=1></IMG> <BR><BR></P></DIV></TD></TR></TBODY></TABLE>
+            <TABLE cellPadding=5 width="100%" align=center border=0>
+              <TBODY>
+              <TR class=conteudo>
+                <TD>
+                  <P align=left>2) Se você fez a instalação padrão do Microsoft 
+                  Visual C++ 2008 Express Edition ele deve estar instalado na 
+                  pasta C:\Arquivos de programas\Microsoft Visual Studio 9.0\VC. 
+                  Caso contrário você deve saber onde se encontra a pasta do VC 
+                  para poder prosseguir com os passos abaixo. <BR><BR>Em uma 
+                  janela localize a pasta onde foi instalado o VC++ e nao outra 
+                  janela localize a pasta onde você extraiu os arquivos binários 
+                  referente a biblioteca Allegro. </P>
+                  <OL>
+                    <OL>
+                      <LI>Copie todo o <STRONG>conteúdo</STRONG> da pasta 
+                      Include dos arquivos binários e cole dentro da pasta 
+                      include do VC++. <A class=conteudo 
+                      href="http://www.bdjogos.com/imagens_conteudo/vc2008/include.png" 
+                      target=_blank>Visualize</A> 
+                      <LI>Copie todo o conteúdo da pasta lib dos arquivos 
+                      binários e cole dentro da pasta lib do VC++. <A 
+                      class=conteudo 
+                      href="http://www.bdjogos.com/imagens_conteudo/vc2008/lib.png" 
+                      target=_blank>Visualize</A> 
+                      <LI>Copie todo o conteúdo da pasta bin dos arquivos 
+                      binários e cole na pasta c:\Windows\System32. <A 
+                      class=conteudo 
+                      href="http://www.bdjogos.com/imagens_conteudo/vc2008/bin.png" 
+                      target=_blank>Visualize</A> 
+                      <LI>Copie <B>apenas</B> o arquivo “alld42.pdb” que se 
+                      encontra dentro da pasta lib dos arquivos binários e cole 
+                      na pasta c:\windows\system32. <A class=conteudo 
+                      href="http://www.bdjogos.com/imagens_conteudo/vc2008/alld42.png" 
+                      target=_blank>Visualize</A> </LI></OL></OL>Após fazer os 
+                  passos acima estamos prontos para iniciar um projeto no 
+                VC++.</TD></TR></TBODY></TABLE>
+            <P class=conteudo><BR></P>
+            <P class=conteudo><SPAN class=titulos>INICIANDO E CONFIGURANDO UM 
+            NOVO PROJETO </SPAN></P>
+            <P><SPAN class=conteudo></SPAN><SPAN class=conteudo>Após instalar o 
+            Allegro com os passos mencionados acima é necessário fazer algumas 
+            configurações para cada jogo que iremos criar. <BR>Segue abaixo os 
+            passos para efetuarmos as configurações necessárias.</SPAN></P>
+            <P class=conteudo><STRONG>Criando um projeto no Visual 
+            C++:</STRONG></P>
+            <OL>
+              <LI class=conteudo>Abra o VC++ 2008, Clique no menu 
+              File-&gt;New-&gt;Project 
+              <LI class=conteudo>Selecione o tipo do projeto como 
+              <STRONG>General</STRONG> em seguida selecione o <STRONG>Empty 
+              Project</STRONG>. Coloque o nome do projeto e da pasta se você 
+              quiser criar uma. 
+              <LI class=conteudo>Após o VC++ criar o projeto vá para o menu e 
+              clique no botão <STRONG>add new item</STRONG>. 
+              <LI class=conteudo>Selecione a categoria <STRONG>Code</STRONG> em 
+              seguida o <STRONG>C++ file (.cpp)</STRONG>. Chame esse arquivo de 
+              main e clique em Add </LI></OL>
+            <P class=conteudo>Se você fez tudo certinho até agora então você já 
+            deve ter a biblioteca Allegro instalada e um projeto novo iniciado. 
+            <BR>Agora precisamos fazer com que o nosso projeto encontre a 
+            biblioteca Allegro.<BR><BR>Se não fizermos essa parte ao incluirmos 
+            a biblioteca <ALLEGRO.H>no projeto o Visual C++ vai mostrar uma 
+            mensagem de erro dizendo que não encontra a biblioteca especificada. 
+            <BR><BR>Para a nossa sorte não precisamos mais fazer todas aquelas 
+            configurações no projeto que faziamos na versão do Visual C++ 2005. 
+            <BR>A maioria das configurações que precisavamos fazer, nessa 
+            versão, já vieram por padrão da Microsoft. <BR><BR>É necessário 
+            apenas mostrar ao nosso projeto que ele é dependente do arquivo 
+            <B>alld.lib</B> para encontrar a biblioteca Allegro. <BR>Faça 
+            conforme abaixo: </P>
+            <TABLE cellPadding=5 width="100%" align=center border=0>
+              <TBODY>
+              <TR>
+                <TD class=conteudo>
+                  <CENTER>
+                  <P>1) No seu projeto Clique no menu 
+                  <STRONG>Project</STRONG>-&gt; [Nome do projeto] 
+                  <STRONG>Property</STRONG>. A tela abaixo irá aparecer. 
+                  <BR>Aparentemente o campo Additional Dependencies vai estar em 
+                  branco. <BR><BR>Digite na linha em branco o texto: 
+                  <B>alld.lib</B>, em seguida clique em OK para confirmar a 
+                  alteração.<BR><BR><IMG src="VCC9_arquivos/vcalld.png" 
+                  border=1></IMG> </P>
+                  <P>&nbsp;</P></CENTER></TD></TR></TBODY></TABLE>
+            <P class=conteudo>Feito todos os passos acima o seu projeto já deve 
+            estar configurado para encontrar e utilizar a biblioteca Allegro no 
+            compilador Visual C++ Express Edition 2008. <BR></P>
+            <P class=conteudo><BR><BR><BR><SPAN class=titulos>TESTANDO A 
+            INSTALAÇÃO</SPAN></P>
+            <P><SPAN class=conteudo>A seguir vou ilustrar a maneira mais simples 
+            de testar a instalação da biblioteca Allegro no Visual C++. 
+            <BR>Copie e cole o código abaixo no seu projeto. </SPAN><BR><BR></P>
+            <HR>
+            <SPAN class=titulos_texto><SPAN 
+            class=conteudo>CÓDIGO...<BR></SPAN></SPAN>
+            <HR>
+            <SPAN class=comentario>//Código de Exemplo<BR></SPAN><SPAN 
+            class=codigo>#include &lt;allegro.h&gt;<BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(16);<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_WINDOWED, 
+            640, 480, 0, 0);<BR>&nbsp;&nbsp;&nbsp;allegro_message("Allegro: Alo 
+            Mundo");<BR><BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+            0;<BR>}<BR>END_OF_MAIN();<BR></SPAN><BR></SPAN></SPAN>
+            <HR>
+            <SPAN class=titulos_texto><SPAN class=conteudo>FIM DE 
+            CÓDIGO<BR></SPAN></SPAN>
+            <HR>
+            <BR>
+            <TABLE cellPadding=5 width="100%" align=center border=0>
+              <TBODY>
+              <TR class=conteudo>
+                <TD>
+                  <CENTER>1) Para compilar o código pressione: Ctrl + F7 <BR>2) 
+                  Para executar o programa pressione: F5<BR><BR><IMG 
+                  src="VCC9_arquivos/alomundo.png" border=1></IMG> 
+                  </CENTER><BR><BR></TD></TR></TBODY></TABLE>
+            <P><BR><BR><SPAN class=conteudo>Caro leitor, chegamos ao fim do 
+            procedimento de instalação da biblioteca Allegro 4.2.2 no compilador 
+            Visual C++ Express Edition. </SPAN></P>
+            <P><SPAN class=conteudo>Se você conseguiu fazer os passos e estiver 
+            vendo a tela acima PARABÉNS, a instalação foi efetuada com sucesso. 
+            <BR>Se houve algum problema durante os procedimentos citados acima 
+            tire suas dúvidas no fórum. <BR><BR>Abraço - 
+            BDJogos</SPAN><BR><BR><BR><SPAN class=conteudo><B>Contribuidor</B> 
+            <BR>Bruno A. Rovela<BR>24/04/2008 </SPAN></P>
+            <P class=conteudo><A class=conteudo 
+            href="javascript:history.go(-1)">Voltar </A></P></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background=VCC9_arquivos/111.jpg><IMG height=1 
+      src="VCC9_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background=VCC9_arquivos/111.jpg colSpan=2 height=1><IMG 
+      height=1 src="VCC9_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

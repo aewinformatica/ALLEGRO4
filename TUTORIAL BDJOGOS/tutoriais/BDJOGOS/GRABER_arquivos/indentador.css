@@ -1,0 +1,18 @@
+PRE.code {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 20px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 20px; PADDING-BOTTOM: 10px; BORDER-LEFT: #cccccc 1px solid; PADDING-TOP: 10px; BORDER-BOTTOM: #cccccc 1px solid
+}
+PRE.code SPAN.kwd {
+	COLOR: blue
+}
+PRE.code SPAN.str {
+	COLOR: #ff00ff
+}
+PRE.code SPAN.cmt1 {
+	COLOR: orange
+}
+PRE.code SPAN.cmt2 {
+	COLOR: green
+}
+PRE.code SPAN.opr {
+	FONT-WEIGHT: bold; COLOR: red
+}

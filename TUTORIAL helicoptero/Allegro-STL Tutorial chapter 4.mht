@@ -1,0 +1,412 @@
+From: <Salvo pelo Windows Internet Explorer 8>
+Subject: Allegro/STL Tutorial: chapter 4
+Date: Sun, 28 Aug 2011 23:34:26 -0300
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://alleg.sourceforge.net/docs/ovehk_stl_tutorial_en/tut4.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.6109
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD><TITLE>Allegro/STL Tutorial: chapter 4</TITLE>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type>
+<META name=3Dauthor content=3D"Ove K=E5ven">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.19120"></HEAD>
+<BODY aLink=3D#ff0000 link=3D#0000ef bgColor=3D#ffffff text=3D#000000 =
+vLink=3D#51188e>
+<H1>Chapter 4</H1>
+<H2>4. OOP Basics</H2>
+<H3>4.1 Object-Oriented Programming</H3>The OOP paradigm is based on the =
+human=20
+way to think of things, that each object in the known universe has =
+within itself=20
+its properties and its potential, that they are mostly self-contained =
+entities.=20
+This is also using in programming, since programs are often required to =
+deal=20
+with a lot of components of different kinds, where it can be an =
+advantage to let=20
+each of these become a self-contained object that can largely take care =
+of=20
+itself without depending on the main program to know how to do =
+everything the=20
+object has to do (encapsulation). This is especially useful in game =
+programming,=20
+since every detail in the game can be taken care of by its own =
+encapsulated OOP=20
+object quite independently from other objects. This lets each other has =
+its own=20
+mind independent from the others, and relieves the main game loop from =
+having to=20
+know anything about what the objects are actually doing.=20
+<P>So, what we are going to do is to write an OOP backbone that we can =
+base our=20
+game objects on, and then use it to write an action game. We will need =
+to make=20
+an object base class, and find some way of managing all the independent =
+objects=20
+so that they can be used. The latter is where STL comes in. But first, =
+we need=20
+to know to make a basic object class.=20
+<H3>4.2 C++ Classes</H3>The C++ programming language has much to offer =
+when it=20
+comes to OOP programming. (Of course, there might be better languages =
+when it=20
+comes to OOP, but only C++ is (mostly) compatible with the widely-used =
+C, in=20
+which Allegro was written.) We will start with a basic class definition =
+for our=20
+helicopter object. <PRE>class chopper {
+public:
+ int X,Y;
+};
+</PRE>In many ways, this is a lot like a <CODE>struct</CODE>, and can be =
+used in=20
+much the same way: <PRE>#include &lt;allegro.h&gt;
+#include "tutorial.h"
+
+#define MIN_Y 8
+
+DATAFILE*data;
+BITMAP*backdrop,*framebuf;
+
+class chopper {
+public:
+ int X,Y;
+};
+
+int main()
+{
+ allegro_init();
+ install_keyboard();
+ initialise_joystick();
+
+ data=3Dload_datafile("tutorial.dat");
+
+ set_gfx_mode(GFX_VGA,320,200,0,0);
+
+ set_palette((RGB*)data[TUT_GAMEPAL].dat);
+
+ // create 320x192 backdrop
+ backdrop=3Dcreate_bitmap(320,192);
+ for (int Y=3D0; Y&lt;128; Y++) hline(backdrop,0,Y,319, (Y/2)+128);
+ for (int Y=3D128; Y&lt;192; Y++) hline(backdrop,0,Y,319, =
+((Y-128)/2)+192);
+
+ // create 320x200 double buffer
+ framebuf=3Dcreate_bitmap(320,200);
+ clear(framebuf);
+
+ chopper Hero;
+ Hero.X=3D0; Hero.Y=3D100;
+ while (!key[KEY_ESC]) {
+  // build frame
+  blit(backdrop,framebuf,0,0,0,MIN_Y,320,200);
+  =
+draw_rle_sprite(framebuf,(RLE_SPRITE*)data[TUT_CHOPPER].dat,Hero.X,Hero.Y=
+);
+  // display frame
+  vsync();
+  blit(framebuf,screen,0,0,0,0,320,200);
+  // get user input
+  poll_joystick();
+  if (key[KEY_LEFT]||joy_left) Hero.X--;
+  if (key[KEY_RIGHT]||joy_right) Hero.X++;
+  if (key[KEY_UP]||joy_up) Hero.Y--;
+  if (key[KEY_DOWN]||joy_down) Hero.Y++;
+ }
+ return 0;
+}
+</PRE>but there is in fact a difference, as you would see if you tried =
+to do <PRE> chopper Hero=3D{0,100};
+</PRE>The <CODE>Hero</CODE> object is an instance of the =
+<CODE>chopper</CODE>=20
+class, and not just a plain structure, thus it would not work.=20
+<P>What the <B>public</B> clause means is that whatever is defined in =
+the class=20
+(or struct) after it, will be accessible to code outside the class =
+definition as=20
+well, which is necessary for parts of the class that isn't =
+self-contained. Since=20
+this class isn't self-contained at all yet, both fields (X and Y) have =
+to be=20
+marked <B>public</B>.=20
+<P>As a first step towards making the object self-contained, we will now =
+move=20
+the drawing and input code into it. <PRE>#include &lt;allegro.h&gt;
+#include "tutorial.h"
+
+#define MIN_Y 8
+
+DATAFILE*data;
+BITMAP*backdrop,*framebuf;
+
+class chopper {
+public:
+ int X,Y;
+ void draw(BITMAP*dest) {
+  draw_rle_sprite(dest,(RLE_SPRITE*)data[TUT_CHOPPER].dat,X,Y);
+ }
+ void input();
+};
+
+void chopper::input()
+{
+ if (key[KEY_LEFT]||joy_left) X--;
+ if (key[KEY_RIGHT]||joy_right) X++;
+ if (key[KEY_UP]||joy_up) Y--;
+ if (key[KEY_DOWN]||joy_down) Y++;
+}
+
+int main()
+{
+ allegro_init();
+ install_keyboard();
+ initialise_joystick();
+
+ data=3Dload_datafile("tutorial.dat");
+
+ set_gfx_mode(GFX_VGA,320,200,0,0);
+
+ set_palette((RGB*)data[TUT_GAMEPAL].dat);
+
+ // create 320x192 backdrop
+ backdrop=3Dcreate_bitmap(320,192);
+ for (int Y=3D0; Y&lt;128; Y++) hline(backdrop,0,Y,319, (Y/2)+128);
+ for (int Y=3D128; Y&lt;192; Y++) hline(backdrop,0,Y,319, =
+((Y-128)/2)+192);
+
+ // create 320x200 double buffer
+ framebuf=3Dcreate_bitmap(320,200);
+ clear(framebuf);
+
+ chopper Hero;
+ Hero.X=3D0; Hero.Y=3D100;
+ while (!key[KEY_ESC]) {
+  // build frame
+  blit(backdrop,framebuf,0,0,0,MIN_Y,320,200);
+  Hero.draw(framebuf);
+  // display frame
+  vsync();
+  blit(framebuf,screen,0,0,0,0,320,200);
+  // get user input
+  poll_joystick();
+  Hero.input();
+ }
+ return 0;
+}
+</PRE>This demonstrates two ways of defining a method. Both=20
+<CODE>chopper::draw()</CODE> and <CODE>chopper::input()</CODE> are =
+methods.=20
+Methods are much like functions, except that they operate on an object.=20
+<CODE>chopper::draw()</CODE> is declared and defined inline, this is =
+often=20
+useful to avoid unnecessary method call overhead.=20
+<H3>4.3 Constructors</H3>Clearly, we've come a long way towards the=20
+encapsulation we want, since the main game loop doesn't have to bother =
+about the=20
+coordinates within the object, but still we need to set the initial =
+position. So=20
+we should write a method for setting the initial position, but for this =
+we will=20
+use a special method, the constructor. The constructor of an object is =
+always=20
+called when it is created, and similarly there is a destructor that will =
+be=20
+called when it is destroyed. C++ automatically constructs an object when =
+you=20
+define a variable of the object type, and destroys it when it goes out =
+of scope,=20
+so it's not necessary to do this manually for automatic variables, like =
+our=20
+variable <CODE>Hero</CODE>.=20
+<P>We will define two constructors, the default constructor that sets a =
+default=20
+initial position, and a constructor where it is possible to specify the =
+initial=20
+position explicitly. C++ allows several functions, methods, and =
+operators with=20
+the same name but with different parameter lists to coexist, a feature =
+called=20
+"overloading", where the compiler automatically chooses the right =
+function=20
+according to the given parameters. We will use this feature to have two=20
+different constructors. Change the class definition to read: <PRE>class =
+chopper {
+ int X,Y;
+public:
+ chopper() { X=3DY=3D0; }
+ chopper(int _X,int _Y) { X=3D_X; Y=3D_Y; }
+ void draw(BITMAP*dest) {
+  draw_rle_sprite(dest,(RLE_SPRITE*)data[TUT_CHOPPER].dat,X,Y);
+ }
+ void input();
+};
+</PRE>Then remove the line <PRE> Hero.X=3D0; Hero.Y=3D100;
+</PRE>and try it. The object is now completely encapsulated, the main =
+loop=20
+doesn't know anything about X or Y. We have therefore taken them away =
+from under=20
+the <B>public</B> clause; they are thus now <B>private</B> to the =
+object, and=20
+hidden from everything else. Note that the helicopter now starts at the =
+top left=20
+of the screen, because we put the default position in the default =
+constructor to=20
+be 0,0. To try the alternate constructor, replace <PRE> chopper Hero;
+</PRE>with <PRE> chopper Hero(50,100);
+</PRE>This will still define the variable <CODE>Hero</CODE> to be of the =
+data=20
+type <CODE>chopper</CODE>, but since <CODE>chopper</CODE> is a class, =
+its=20
+constructor must be called when it is created. This means that we will =
+call the=20
+constructor that takes two integer values and use it, giving the values =
+50 and=20
+100, instead of using the default constructor. This alternate =
+constructor=20
+happens to set the initial position to the given values.=20
+<H3>4.4 Inheritance</H3>One of the most important advantages OOP has =
+over=20
+traditional procedural programming, is the concept of inheritance. This =
+means=20
+that it is possible to write a base class with all the basic and =
+abstract=20
+functionality, variables, and common interface you need, and then write =
+derived=20
+classes that inherits everything the base class has, and adds its own=20
+functionality. Not only can this reduce the amount of coding by letting =
+any=20
+derived class use the base class's functionality when it needs to, thus=20
+simplifying implementation of similar classes and structures, but there =
+is also=20
+another very important implication: the derived class is compatible with =
+the=20
+base class, and can be used in place of the base class. This allows a =
+system to=20
+override any of the base class functionality it wants, and use the new =
+objects=20
+where the base class would be used, thus adapting it to its own needs. =
+For us,=20
+this is very important; we can make an array of pointers to base class =
+objects,=20
+and go through this array at any time, calling the methods of its =
+elements.=20
+Depending on which derived class is present in this array, the =
+individual=20
+objects can respond in completely different ways to each other, without =
+the=20
+calling code having to know anything about it.=20
+<P>So, what we are going to do is to write a base class that we can use =
+as a=20
+foundation for our game elements. We will also use the Allegro-defined=20
+<CODE>fix</CODE> data type here, to enable sprites to move a fractional =
+amount=20
+of pixels per frame. This will enable objects to move slower than one =
+pixel per=20
+frame without standing totally still. Also, we won't bother to have a =
+default=20
+constructor. <PRE>class sprite {
+protected:
+ fix X,Y;
+public:
+ sprite(fix _X,fix _Y) { X=3D_X; Y=3D_Y; }
+ virtual ~sprite() {}
+ virtual void draw(BITMAP*dest) {}
+ virtual void animate() {}
+};
+</PRE>The <B>protected</B> clause is similar to <B>private</B>, except =
+that it=20
+allows derived classes to access the elements defined <B>protected</B>. =
+We have=20
+now also declared the methods <B>virtual</B>, which means that they are =
+encoded=20
+into the object structure in such a way that they can be overridden=20
+transparently by derived classes, even if the code that uses the object =
+thinks=20
+it's an instance the base class.=20
+<P>When we use this base class, this is how our program will look like. =
+<PRE>#include &lt;allegro.h&gt;
+#include "tutorial.h"
+
+#define MIN_Y 8
+
+DATAFILE*data;
+BITMAP*backdrop,*framebuf;
+
+class sprite {
+protected:
+ fix X,Y;
+public:
+ sprite(fix _X,fix _Y) { X=3D_X; Y=3D_Y; }
+ virtual ~sprite() {}
+ virtual void draw(BITMAP*dest) {}
+ virtual void animate() {}
+};
+
+class chopper : public sprite {
+public:
+ chopper(fix _X,fix _Y) : sprite(_X,_Y) {}
+ virtual void draw(BITMAP*dest) {
+  draw_rle_sprite(dest,(RLE_SPRITE*)data[TUT_CHOPPER].dat,X,Y);
+ }
+ virtual void animate();
+};
+
+void chopper::animate()
+{
+ // seems postfix operators aren't defined for the fix class
+ if (key[KEY_LEFT]||joy_left) --X;
+ if (key[KEY_RIGHT]||joy_right) ++X;
+ if (key[KEY_UP]||joy_up) --Y;
+ if (key[KEY_DOWN]||joy_down) ++Y;
+}
+
+int main()
+{
+ allegro_init();
+ install_keyboard();
+ initialise_joystick();
+
+ data=3Dload_datafile("tutorial.dat");
+
+ set_gfx_mode(GFX_VGA,320,200,0,0);
+
+ set_palette((RGB*)data[TUT_GAMEPAL].dat);
+
+ // create 320x192 backdrop
+ backdrop=3Dcreate_bitmap(320,192);
+ for (int Y=3D0; Y&lt;128; Y++) hline(backdrop,0,Y,319, (Y/2)+128);
+ for (int Y=3D128; Y&lt;192; Y++) hline(backdrop,0,Y,319, =
+((Y-128)/2)+192);
+
+ // create 320x200 double buffer
+ framebuf=3Dcreate_bitmap(320,200);
+ clear(framebuf);
+
+ chopper Hero(50,100);
+ while (!key[KEY_ESC]) {
+  // build frame
+  blit(backdrop,framebuf,0,0,0,MIN_Y,320,200);
+  Hero.draw(framebuf);
+  // display frame
+  vsync();
+  blit(framebuf,screen,0,0,0,0,320,200);
+  // get user input
+  poll_joystick();
+  Hero.animate();
+ }
+ return 0;
+}
+</PRE>As you can see, you use colons to inherit a base class, as well as =
+to use=20
+an inherited constructor. The base class is inherited <B>public</B> to =
+make=20
+public members of the base class remain public, and not turned private.=20
+<P>To learn more, proceed to the <A=20
+href=3D"http://alleg.sourceforge.net/docs/ovehk_stl_tutorial_en/tut5.html=
+">next=20
+chapter</A> </P></BODY></HTML>

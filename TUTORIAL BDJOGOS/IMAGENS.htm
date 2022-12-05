@@ -1,0 +1,754 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0051)http://www.bdjogos.com/biblioteca_conteudo.php?id=7 -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="IMAGENS_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="IMAGENS_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="IMAGENS_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background=IMAGENS_arquivos/bg.jpg topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT language=javascript src="IMAGENS_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="IMAGENS_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=IMAGENS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="IMAGENS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="IMAGENS_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=IMAGENS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background=IMAGENS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="IMAGENS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=IMAGENS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="IMAGENS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="IMAGENS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="IMAGENS_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=IMAGENS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="IMAGENS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="IMAGENS_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=IMAGENS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background=IMAGENS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="IMAGENS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=IMAGENS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="IMAGENS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="IMAGENS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="IMAGENS_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=IMAGENS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="IMAGENS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="IMAGENS_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=IMAGENS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background=IMAGENS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="IMAGENS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=IMAGENS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="IMAGENS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="IMAGENS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="IMAGENS_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=IMAGENS_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="IMAGENS_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="IMAGENS_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=IMAGENS_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background=IMAGENS_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="IMAGENS_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=IMAGENS_arquivos/linha_horizo.gif><IMG 
+      height=8 src="IMAGENS_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="IMAGENS_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="IMAGENS_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="IMAGENS_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="IMAGENS_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="IMAGENS_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="IMAGENS_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="IMAGENS_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background=IMAGENS_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="IMAGENS_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background=IMAGENS_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="IMAGENS_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="IMAGENS_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD class=conteudo vAlign=top><LINK 
+            href="IMAGENS_arquivos/estilos.css" type=text/css 
+            rel=stylesheet><SPAN class=titulos>DESENHANDO IMAGENS NA TELA</SPAN> 
+
+            <HR>
+
+            <P class=conteudo>O objetivo desse tutorial é ensinar a declarar as 
+            imagens e desenhá-las na tela de várias maneiras. <BR>De uma forma 
+            geral esse capítulo é o mais importante e não tão complexo como em 
+            outras linguagens. </P>
+            <P class=conteudo>Como foi mencionado nos primeiros capítulos o 
+            Allegro dispõe de funções para facilitar o desenvolvimento de jogos 
+            para iniciantes. <BR>Dentre elas, estão as funções para manipulação 
+            de imagens que veremos a seguir.</P>
+            <P class=conteudo><BR>Antes de iniciarmos o entendimento das funções 
+            vou definir algumas regras para que você possa entender de forma 
+            clara os exemplos.<BR>Certifique-se que ao testar os exemplos a 
+            configuração de vídeo e profundidade de cores no inicio do código 
+            estejam conforme abaixo.</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P align=center><STRONG>Definição do 
+                      Video</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P><STRONG>set_color_depth</STRONG>(32);<BR><STRONG>set_gfx_mode</STRONG>(GFX_AUTODETECT_WINDOWED, 
+                        640, 480, 0, 0);</P>
+                        <P>Profundidade de cores igual a 32 bits.<BR>A tela foi 
+                        configurada para aparecer em forma de janela de windows 
+                        em tamanho 640x480 
+                    pixels.<STRONG></STRONG></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo>Abaixo segue as imagens que iremos trabalhar.</P>
+            <TABLE cellSpacing=0 cellPadding=0 align=center border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top width=584>
+                  <P class=conteudo 
+              align=center><STRONG>Imagens</STRONG></P></TD></TR>
+              <TR>
+                <TD vAlign=top width=584>
+                  <P align=center>&nbsp;</P>
+                  <TABLE class=conteudo cellSpacing=0 cellPadding=5 border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top width=274>
+                        <P align=center>fundo.bmp<BR>Tamanho 
+                        640x480<BR>24bits</P></TD>
+                      <TD vAlign=top width=297>
+                        <P align=center>abc.bmp<BR>Tamanho 
+                      320x64<BR>24bits</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=274>
+                        <P align=center><IMG height=197 
+                        src="IMAGENS_arquivos/fundo.jpg" width=270 
+                      border=1></P></TD>
+                      <TD vAlign=top width=297>
+                        <P align=center><IMG height=52 
+                        src="IMAGENS_arquivos/abc.jpg" width=271 
+                    border=1></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=274>
+                        <P align=center>&nbsp;</P></TD>
+                      <TD width=297>
+                        <P align=center>&nbsp;</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=274>
+                        <P align=center>ninja.bmp<BR>Tamanho 
+                      228x52<BR>24bits</P></TD>
+                      <TD vAlign=top width=297>
+                        <P align=center>bdjogos.bmp<BR>Tamanho 
+                        215x76<BR>24bits</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top width=274>
+                        <P align=center><IMG height=52 
+                        src="IMAGENS_arquivos/ninja.jpg" width=228 
+                      border=1></P></TD>
+                      <TD vAlign=top width=297>
+                        <P align=center><IMG height=76 
+                        src="IMAGENS_arquivos/bdjogos.jpg" width=215 
+                        border=1></P></TD></TR></TBODY></TABLE>
+                  <P align=center><A class=conteudo 
+                  href="http://www.bdjogos.com/imagens_conteudo/alleg_bmps/bmps.zip">Baixar 
+                  Imagens</A> </P></TD></TR></TBODY></TABLE>
+            <P class=conteudo>Agora que definimos as imagens que iremos utilizar 
+            durante o aprendizado vamos começar a estudar os comandos.</P>
+            <P class=conteudo>&nbsp;</P>
+            <P class=conteudo>&nbsp;</P><SPAN class=titulos>DECLARANDO AS 
+            IMAGENS PARA UTILIZAÇÃO DURANTE O JOGO</SPAN> 
+            <HR>
+
+            <P><SPAN class=codigo>BITMAP *fundo = NULL;<BR>fundo = 
+            create_bitmap( 640, 480 );<BR>fundo = load_bitmap("</SPAN><SPAN 
+            class=conteudo2>fundo.bmp</SPAN><SPAN class=codigo>", NULL 
+            );</SPAN></P>
+            <P class=codigo>BITMAP *abc = NULL;<BR>abc = create_bitmap( 320, 64 
+            );<BR>abc = load_bitmap("<SPAN class=conteudo2>abc.bmp</SPAN>", NULL 
+            );</P>
+            <P class=codigo>BITMAP * ninja = NULL;<BR>ninja = create_bitmap( 
+            228, 52 );<BR>ninja = load_bitmap("<SPAN 
+            class=conteudo2>ninja.bmp</SPAN>", NULL );</P>
+            <P><SPAN class=codigo>BITMAP *bdjogos = NULL;<BR>bdjogos = 
+            create_bitmap( 215, 76 );<BR>bdjogos = load_bitmap("</SPAN><SPAN 
+            class=conteudo2>bdjogos.bmp</SPAN><SPAN class=codigo>", NULL 
+            );</SPAN><BR><BR><SPAN class=conteudo>Abaixo segue uma breve 
+            explicação dos comandos acima com base na imagem 
+            fundo.bmp.</SPAN></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=left><STRONG>BITMAP 
+                        *fundo;</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Esse comando declara um ponteiro que irá apontar para 
+                        a nossa imagem na memória. O Ponteiro aponta para o tipo 
+                        <STRONG>BITMAP</STRONG>.</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=left><STRONG>fundo = 
+                        create_bitmap(640, 480);</STRONG> </P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Esse comando define o tamanho da imagem que queremos 
+                        carregar na memória através da função 
+                        <STRONG>create_bitmap</STRONG>. <BR>Essa função recebe 
+                        como argumentos:</P>
+                        <OL>
+                          <LI><STRONG>Largura da imagem</STRONG>: 640 pixels 
+                          <LI><STRONG>Altura da imagem</STRONG>: 480 pixels 
+                        </LI></OL></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=left><STRONG>fundo = 
+                        load_bitmap( "fundo.bmp", NULL );</STRONG> </P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>O comando acima serve para carregar a imagem 
+                        fundo.bmp na memória através da função 
+                        <STRONG>load_bitmap</STRONG>. Essa função recebe como 
+                        argumentos:</P>
+                        <OL>
+                          <LI><STRONG>Caminho da imagem</STRONG>: fundo.bmp 
+                          <LI><STRONG>Paleta de cores</STRONG>: NULL </LI></OL>
+                        <TABLE cellSpacing=0 cellPadding=0 width="80%" 
+                        align=center bgColor=#000099 border=0>
+                          <TBODY>
+                          <TR>
+                            <TD>
+                              <TABLE cellSpacing=1 cellPadding=5 width="100%" 
+                              align=center border=0>
+                                <TBODY>
+                                <TR>
+                                <TD bgColor=#f7f7f7>
+                                <P class=titulos_texto><IMG height=17 
+                                src="IMAGENS_arquivos/pic_pisca.gif" 
+                                width=17>VOCÊ PRECISA SABER... </P>
+                                <P 
+                                class=conteudo><STRONG>&nbsp;</STRONG><STRONG>IMPORTANTE:</STRONG> 
+                                Certifique-se que a imagem esteja na mesma pasta 
+                                do jogo. Caso contrário o Allegro vai compilar, 
+                                mas não vai conseguir carregar a 
+                                imagem.</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+                        <P>&nbsp;</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P>&nbsp;</P>
+            <P class=conteudo>Escrevendo os comandos acima e executando o jogo 
+            você não verá absolutamente nada porque os comandos acima são apenas 
+            para declarar, definir e carregar a imagem. Até agora nós temos 
+            apenas a imagem disponível na memória para utilização no jogo. </P>
+            <P class=conteudo>Abaixo segue as funções responsáveis por desenhar 
+            as imagens na 
+            tela.<BR><BR><STRONG>blit<BR>masked_blit<BR>draw_sprite</STRONG><BR><BR>Todas 
+            as funções acima são responsáveis por desenhar a imagem na tela. No 
+            entanto, cada uma delas tem suas próprias especialidades. </P>
+            <P class=conteudo>Veremos abaixo.</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="95%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2>void <STRONG>blit</STRONG>(BITMAP 
+                        *source, BITMAP *dest, int source_x, int source_y, int 
+                        dest_x, int dest_y, int width, int height);</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>A função acima desenha uma imagem 
+                        “<STRONG>origem</STRONG>” na imagem 
+                        “<STRONG>destino</STRONG>” especificando as posições 
+                        tanto da imagem “<STRONG>origem</STRONG>” quanto a 
+                        imagem “<STRONG>destino</STRONG>” em seguida o tamanho 
+                        final. Em outras palavras podemos dizer que a função 
+                        acima corta um determinado pedaço da imagem 
+                        “<STRONG>origem</STRONG>” e cola na imagem 
+                        “<STRONG>destino</STRONG>”. </P>
+                        <P>Ela recebe como argumentos:</P>
+                        <OL>
+                          <LI><STRONG>Imagem de origem</STRONG>: abc 
+                          <LI><STRONG>Imagem de destino</STRONG>: screen 
+                          <LI><STRONG>Posição x da imagem de origem</STRONG>: 64 
+
+                          <LI><STRONG>Posição y da imagem de origem</STRONG>: 0 
+                          <LI><STRONG>Posição x da imagem de destino</STRONG>: 
+                          200 
+                          <LI><STRONG>Posição y da imagem de destino</STRONG>: 
+                          200 
+                          <LI><STRONG>Largura final da imagem</STRONG>: 640 
+                          <LI><STRONG>Altura final da imagem</STRONG>: 480 
+                        </LI></OL>
+                        <P><STRONG>Exemplo:</STRONG></P>
+                        <P>Logo no inicio definimos a imagem abc.bmp no tamanho 
+                        real 320x64. Agora, precisamos cortar e pegar apenas o 
+                        “B” para desenhar na tela. <BR><BR>Para sabermos qual a 
+                        largura de cada imagem devemos pegar a largura total do 
+                        desenho (320) e dividir pela quantidade de desenhos na 
+                        tela (5), teremos 64 pixels de largura para cada letra. 
+                        <BR><BR>Portanto, a largura final será de 64 pixels e a 
+                        altura permanece a mesma (64 pixels). Segue abaixo:</P>
+                        <P><SPAN class=comentario>// Abaixo segue o comando para 
+                        desenhar o fundo na 
+                        tela:</SPAN><BR><STRONG>blit</STRONG>( fundo, screen, 0, 
+                        0, 0, 0, 640, 480 );</P>
+                        <P><SPAN class=comentario>//Abaixo segue o comando para 
+                        desenhar a letra “B” na tela. 
+                        </SPAN><BR><STRONG>blit</STRONG>(abc, screen, 64, 0, 
+                        200, 200, 64, 64 );</P>
+                        <P>O exemplo acima deve mostrar o fundo com a imagem 
+                        fundo.bmp e a letra B na posição 200,200 na tela. 
+                        <BR><BR>Lembre-se que, como a cada imagem tem 64 pixels, 
+                        logo, a letra A está na posição x=0, a letra B está na 
+                        posição x = 64, C=128, D=192, E=256 e F = 320. <BR><BR>O 
+                        tamanho final será o tamanho do corte que eu fizer no 
+                        desenho. <BR>O mesmo procedimento se aplica para imagens 
+                        desenhadas na vertical. <BR>Ao invés de x = 64 teríamos 
+                        y = 64. </P>
+                        <P><STRONG>Para entender melhor pratique com as outras 
+                        letras.</STRONG></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="95%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=5 width="100%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2>void 
+                        <STRONG>masked_blit</STRONG>(BITMAP *source, BITMAP 
+                        *dest, int source_x, int source_y, int dest_x, int 
+                        dest_y, int width, int height);</P></TD></TR>
+                    <TR>
+                      <TD class=conteudo vAlign=top bgColor=#ffffff>
+                        <P>Essa função faz a mesma coisa que a função 
+                        <STRONG>blit</STRONG>, porém, produz um resultado 
+                        diferente. Se você tentar cortar a imagem ninja.bmp com 
+                        a função <STRONG>blit</STRONG> como fizemos com a imagem 
+                        abc.bmp você vai notar que a imagem terá um fundo lilás. 
+                        </P>
+                        <P><STRONG>IMPORTANTE</STRONG>: Esse fundo lilás é uma 
+                        cor que o Allegro identifica como sendo transparência da 
+                        imagem. Porém, nem todas as funções exibem essa cor de 
+                        forma transparente, como é o caso do 
+                        <STRONG>blit</STRONG>. Para isso o Allegro possui a 
+                        função <STRONG>masked_blit.</STRONG></P>
+                        <P><STRONG>Exemplo:</STRONG></P>
+                        <P><SPAN class=comentario>// Abaixo segue o comando para 
+                        desenhar o fundo na tela: </SPAN><BR>blit(fundo, screen, 
+                        0, 0, 0, 0, 640, 480 );</P>
+                        <P><SPAN class=comentario>// Abaixo segue o comando para 
+                        desenhar o ninja na tela: 
+                        </SPAN><BR><STRONG>masked_blit</STRONG>(ninja, screen, 
+                        152, 0, 200, 200, 38, 52 
+                        );<BR><STRONG>blit</STRONG>(ninja, screen, 152, 0, 200, 
+                        255, 38, 52 );</P>
+                        <P>Para desenhar a imagem fundo.bmp não será necessário 
+                        colocar a função com transparência porque não foi 
+                        utilizado a cor o lilás. O exemplo a cima deverá mostrar 
+                        o 4º desenho do ninja com o fundo transparente, e logo 
+                        abaixo com o fundo lilás usando a função 
+                        <STRONG>blit</STRONG> para mostrar a 
+                    diferença.</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="95%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=5 width="100%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2>void 
+                        <STRONG>draw_sprite</STRONG>(BITMAP *bmp, BITMAP 
+                        *sprite, int x, int y);</P></TD></TR>
+                    <TR>
+                      <TD class=conteudo vAlign=top bgColor=#ffffff>
+                        <P>Essa função apenas desenha a imagem em um outro 
+                        bitmap especificando as coordenadas x e y. Ela recebe 
+                        como argumentos:</P>
+                        <OL>
+                          <LI><STRONG>Imagem que recebe o desenho</STRONG>: 
+                          screen 
+                          <LI><STRONG>Imagem que será desenhada</STRONG>: 
+                          bdjogos 
+                          <LI><STRONG>Posição x</STRONG>: 0 
+                          <LI><STRONG>Posição y</STRONG>: 0 </LI></OL>
+                        <P><STRONG>Exemplo</STRONG>:</P>
+                        <P><STRONG>draw_sprite</STRONG>(screen, bdjogos, 0, 
+                        0);</P>
+                        <P>O exemplo acima desenha o logo da BDJogos no canto 
+                        superior esquerdo da tela. Se o logo tivesse cor de 
+                        fundo lilás essa função iria desenhar com o fundo 
+                        transparente. Idêntico a função 
+                        <STRONG>masked_blit.</STRONG></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo>A partir de um exemplo simples mostramos as 3 
+            funções mais usadas para desenhar uma imagem na tela. <BR>Cada uma 
+            com sua especialidade.</P>
+            <P class=titulos>&nbsp;</P>
+            <P class=titulos>&nbsp;</P>
+            <P class=titulos>&nbsp;</P>
+            <P class=titulos>&nbsp;</P>
+            <P class=titulos>&nbsp;</P>
+            <P class=titulos>ARRAY DE IMAGENS</P>
+            <HR>
+
+            <P class=conteudo>Assim como existe a necessidade de utilizar 
+            imagens para ilustração durante um desenvolvimento de jogo também 
+            existe a necessidade de usar arrays de imagens. </P>
+            <P class=conteudo>Para um melhor entendimento iremos utilizar o 
+            mesmo exemplo que fizemos anteriormente para cada imagem. Veja 
+            abaixo:</P>
+            <P class=conteudo><STRONG>Declaração:</STRONG></P>
+            <P class=codigo>BITMAP *imagens[4];<BR>imagens[0] = create_bitmap( 
+            640, 480 );<BR>imagens[0] = load_bitmap("fundo.bmp", 
+            NULL);<BR>imagens[1] = create_bitmap( 320, 64 );<BR>imagens[1] = 
+            load_bitmap("abc.bmp", NULL);<BR>imagens[2] = create_bitmap( 228, 52 
+            );<BR>imagens[2] = load_bitmap("ninja.bmp", NULL);<BR>imagens[3] = 
+            create_bitmap( 215, 76 );<BR>imagens[3] = load_bitmap("bdjogos.bmp", 
+            NULL);</P>
+            <P class=conteudo>Após carregar o array com as imagens o comando 
+            para desenhar as imagens sofre uma alteração bem simples. </P>
+            <P class=conteudo>Ao informar a imagem que você quer desenhar na 
+            tela você precisa informar a posição dela no array.<BR>A logo da 
+            BDJogos, por exemplo, está na posição 3 do array. </P>
+            <P class=conteudo>Portanto, o comando para desenhar a logo na tela 
+            ficaria da seguinte forma:</P>
+            <P class=codigo><STRONG>draw_sprite</STRONG>(screen, 
+            <STRONG>imagens[3]</STRONG>, 0, 0);</P>
+            <P class=conteudo>O comando acima segue da mesma forma para todos as 
+            funções de desenho. </P>
+            <P class=titulos>&nbsp;</P>
+            <P class=titulos>&nbsp;</P>
+            <P class=titulos>DESTRUINDO AS IMAGENS</P>
+            <HR>
+
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#000099 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=5 width="100%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=#f7f7f7>
+                        <P class=titulos_texto><IMG height=17 
+                        src="IMAGENS_arquivos/pic_pisca.gif" width=17>VOCÊ 
+                        PRECISA SABER... </P>
+                        <P class=conteudo>A regra é simples e muito importante. 
+                        </P>
+                        <P class=conteudo>Sempre que você for usar imagens na 
+                        memória do PC lembre-se de colocar o comando para 
+                        destruí-las no final do código. <BR>Mesmo sendo apenas 
+                        imagens para teste. </P>
+                        <P class=conteudo>Dessa forma seu computador não vai 
+                        ficar lento, não vai travar e o compilador não vai 
+                        sofrer tanto a cada 
+              execução.</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2 align=left>void 
+                        <STRONG>destroy_bitmap</STRONG>(BITMAP 
+                    *bitmap);</P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Essa função destrói um bitmap ou um sub-bitmap da 
+                        memória assim que o jogo for finalizado. </P>
+                        <P>Se você passar um ponteiro NULO para essa função ela 
+                        não vai fazer nada. <BR>O único bitmap que essa função 
+                        não pode destruir é o bitmap que representa o cursor na 
+                        tela. Ela recebe como argumentos:</P>
+                        <OL>
+                          <LI>Ponteiro de imagem: fundo / abc / ninja / bdjogos 
+                          </LI></OL>
+                        <P>&nbsp;</P>
+                        <P><STRONG>Exemplos</STRONG>:</P>
+                        <P><STRONG>destroy_bitmap</STRONG>(fundo);<BR><STRONG>destroy_bitmap</STRONG>(abc);<BR><STRONG>destroy_bitmap</STRONG>(ninja);<BR><STRONG>destroy_bitmap</STRONG>(bdjogos);</P>
+                        <P>Os exemplos acima destroem as imagens que utilizamos 
+                        nesse 
+            tutorial.</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo>Se as imagens estiverem dentro de um array é 
+            necessário fazer a seguinte rotina de destruição abaixo.</P>
+            <P class=conteudo>&nbsp;</P>
+            <P class=conteudo>&nbsp;</P><SPAN class=titulos>DESTRUINDO UM ARRAY 
+            DE IMAGENS</SPAN> 
+            <HR>
+
+            <P></P>
+            <TABLE class=conteudo cellSpacing=0 cellPadding=5 width="100%" 
+            align=center border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top width=576>
+                  <P><STRONG>ROTINA MANUAL</STRONG>:</P>
+                  <P>destroy_bitmap(imagens[0]);<BR>destroy_bitmap(imagens[1]);<BR>destroy_bitmap(imagens[2]);<BR>destroy_bitmap(imagens[3]);</P>
+                  <P><STRONG>ROTINA AUTOMATIZADA</STRONG>:</P>
+                  <P class=codigo>int = 0;</P>
+                  <P class=codigo>for ( i=0; i&lt;4; i++ )<BR>&nbsp;&nbsp; 
+                  destroy_bitmap( imagens[i] );</P></TD></TR></TBODY></TABLE>
+            <P class=conteudo>Assim como imagens, ponteiros também ocupam espaço 
+            na memória. <BR>Mesmo não sendo tão grandes é necessário destruí-los 
+            para que o sistema operacional utilize-o para outros fins.</P>
+            <P class=conteudo>Caro leitor, chegamos ao fim do entendimento das 
+            funções de manipulação de imagens.<BR>Qualquer dúvida entre em 
+            contato com o pessoal da BDJgos através do fórum.</P>
+            <P class=conteudo>Abraço<BR>BDJogos</P><BR><BR><SPAN 
+            class=conteudo><B>Contribuidor</B> <BR>Bruno A. Rovela<BR>10/07/2007 
+            </SPAN>
+            <P class=conteudo><A class=conteudo 
+            href="javascript:history.go(-1)">Voltar </A></P></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background=IMAGENS_arquivos/111.jpg><IMG height=1 
+      src="IMAGENS_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background=IMAGENS_arquivos/111.jpg colSpan=2 height=1><IMG 
+      height=1 src="IMAGENS_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

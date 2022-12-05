@@ -1,0 +1,536 @@
+From: <Salvo pelo Windows Internet Explorer 8>
+Subject: Allegro/STL Tutorial: chapter 6
+Date: Sun, 28 Aug 2011 23:33:31 -0300
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://alleg.sourceforge.net/docs/ovehk_stl_tutorial_en/tut6.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.6109
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD><TITLE>Allegro/STL Tutorial: chapter 6</TITLE>
+<META content=3D"text/html; charset=3Diso-8859-1" =
+http-equiv=3DContent-Type>
+<META name=3Dauthor content=3D"Ove K=E5ven">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.19120"></HEAD>
+<BODY aLink=3D#ff0000 link=3D#0000ef bgColor=3D#ffffff text=3D#000000 =
+vLink=3D#51188e>
+<H1>Chapter 6</H1>
+<H2>6. Basic Game Design</H2>
+<H3>6.1 The basic sprite system</H3>From the previous exercise, we have =
+a=20
+program where we could move two helicopter sprites around the screen, =
+and=20
+outside it. There are two improvements we want to do at this point; =
+first, we=20
+want the helicopter to stay on screen; second, we want the helicopter's =
+ceiling=20
+fan to look like it's moving. To make it easier to accomplish similar =
+things for=20
+the other objects we are soon going to create, we will implement some =
+more=20
+features into the base class, and make the <CODE>chopper</CODE> class =
+use these.=20
+We will also make a <CODE>background</CODE> class. The code now looks =
+like this:=20
+<PRE>#include &lt;allegro.h&gt;
+#include &lt;stl.h&gt;
+#include "tutorial.h"
+
+#define MIN_Y 8
+#define MAX_Y 180
+
+DATAFILE*data;
+BITMAP*backdrop,*framebuf;
+
+class sprite {
+protected:
+ fix X,Y;
+ RLE_SPRITE*image;
+public:
+ sprite(fix _X,fix _Y) { X=3D_X; Y=3D_Y; image=3DNULL; }
+ sprite(fix _X,fix _Y,RLE_SPRITE*img) { X=3D_X; Y=3D_Y; image=3Dimg; }
+ virtual ~sprite() {}
+ virtual void draw(BITMAP*dest) {
+  draw_rle_sprite(dest,image,X,Y);
+ }
+ virtual void clippos() { if (Y+image-&gt;h&gt;MAX_Y) =
+Y=3DMAX_Y-image-&gt;h; }
+ virtual void move(fix DX,fix DY) { X+=3DDX; Y+=3DDY; clippos(); }
+ virtual void place(fix NX,fix NY) { X=3DNX; Y=3DNY; clippos(); }
+ virtual int outside(fix _X,fix _Y) { return =
+(_X&lt;-image-&gt;w)||(_X&gt;=3DSCREEN_W); }
+ virtual bool animate() { return FALSE; }
+};
+
+typedef list&lt;sprite*&gt; sprite_list;
+
+sprite_list sprites;
+
+class background : public sprite {
+public:
+ background() : sprite(0,MIN_Y) {}
+ virtual void draw(BITMAP*dest) {
+  blit(backdrop,dest,0,0,X,Y,backdrop-&gt;w,backdrop-&gt;h);
+ }
+};
+
+class chopper : public sprite {
+protected:
+ int frame;
+public:
+ chopper(fix _X,fix _Y)
+  : sprite(_X,_Y,(RLE_SPRITE*)data[TUT_CHOPPER].dat) { frame=3D0; }
+ virtual void clippos() {
+  if (X&lt;0) X=3D0;
+  if (X+image-&gt;w&gt;SCREEN_W) X=3DSCREEN_W-image-&gt;w;
+  if (Y&lt;MIN_Y) Y=3DMIN_Y;
+  sprite::clippos();
+ }
+ virtual bool animate();
+};
+
+bool chopper::animate()
+{
+ fix DX=3D0,DY=3D0;
+
+ if (key[KEY_LEFT]||joy_left) --DX;
+ if (key[KEY_RIGHT]||joy_right) ++DX;
+ if (key[KEY_UP]||joy_up) --DY;
+ if (key[KEY_DOWN]||joy_down) ++DY;
+
+ move(DX,DY);
+
+ if (frame) { image=3D(RLE_SPRITE*)data[TUT_CHOPPER1].dat; frame=3D0; }
+       else { image=3D(RLE_SPRITE*)data[TUT_CHOPPER2].dat; frame=3D1; }
+
+ return FALSE;
+}
+
+class chopper2 : public chopper {
+public:
+ chopper2(fix _X,fix _Y) : chopper(_X,_Y) {}
+ virtual void move(fix DX,fix DY) { X-=3DDX; Y-=3DDY; clippos(); }
+};
+
+int main()
+{
+ allegro_init();
+ install_keyboard();
+ initialise_joystick();
+
+ data=3Dload_datafile("tutorial.dat");
+
+ set_gfx_mode(GFX_VGA,320,200,0,0);
+
+ set_palette((RGB*)data[TUT_GAMEPAL].dat);
+
+ // create 320x192 backdrop
+ backdrop=3Dcreate_bitmap(320,192);
+ for (int Y=3D0; Y&lt;128; Y++) hline(backdrop,0,Y,319, (Y/2)+128);
+ for (int Y=3D128; Y&lt;192; Y++) hline(backdrop,0,Y,319, =
+((Y-128)/2)+192);
+
+ // create 320x200 double buffer
+ framebuf=3Dcreate_bitmap(320,200);
+ clear(framebuf);
+
+ background Back;
+ chopper Hero(50,100);
+ chopper2 AnotherHero(250,50);
+ sprites.push_back(&amp;Back);
+ sprites.push_back(&amp;Hero);
+ sprites.push_back(&amp;AnotherHero);
+
+ while (!key[KEY_ESC]) {
+  // draw sprites
+  {
+   sprite_list::const_iterator spr=3Dsprites.begin();
+   while (spr!=3Dsprites.end()) {
+    (*spr)-&gt;draw(framebuf);
+    spr++;
+   }
+  }
+  // display frame
+  vsync();
+  blit(framebuf,screen,0,0,0,0,320,200);
+  // animate sprites
+  poll_joystick();
+  {
+   sprite_list::const_iterator spr=3Dsprites.begin();
+   while (spr!=3Dsprites.end()) {
+    (*spr)-&gt;animate();
+    spr++;
+   }
+  }
+ }
+ return 0;
+}
+</PRE>In the course of writing any application, and games are no =
+exception,=20
+there are often times when parts of the code has to be rethought and =
+rewritten.=20
+That is essentially what we have done here. We have moved the RLE sprite =
+drawing=20
+code and some coordinate manipulation code into the base class. The base =
+class'=20
+default <CODE>clippos()</CODE> makes sure no object falls below ground =
+level.=20
+Its default <CODE>outside()</CODE> checks if an object is totally =
+outside the=20
+screen in the horizontal direction, since this is the direction we want =
+the game=20
+to scroll. <CODE>chopper()</CODE> overrides <CODE>clippos()</CODE> to =
+keep the=20
+helicopter totally on-screen. (Note that it takes care of only three of =
+the=20
+edges, and calls upon the inherited <CODE>clippos()</CODE> to take care =
+of the=20
+fourth.) <CODE>chopper2</CODE> overrides the <CODE>move()</CODE> method =
+to=20
+reverse the direction moved, thus avoiding having to replace the entire=20
+<CODE>animate()</CODE> method. We have also created the =
+<CODE>background</CODE>=20
+class that overrides the default <CODE>draw()</CODE> method to draw the=20
+backdrop, and put an instance of this class into the sprite list, thus=20
+simplifying the game loop even further.=20
+<H3>6.2 Dynamic Sprites</H3>You might also have noticed that we have =
+made the=20
+<CODE>animate()</CODE> method return a <CODE>bool</CODE>. This was done =
+as a=20
+preparation for the dynamic sprites we are now going to create. If a =
+sprite is=20
+created dynamically, it should also be deleted when it is no longer =
+needed, to=20
+avoid running out of memory. To signal this, we will let the=20
+<CODE>animate()</CODE> method return <CODE>TRUE</CODE> when the sprite =
+is no=20
+longer needed. So, let's try it by writing a class that will handle the =
+lethal=20
+stuff we are going to throw at our poor enemies, and that signals that =
+it should=20
+be deleted when it hits the ground.=20
+<P>Since it's a good idea to have defined the velocity at which our =
+bombs will=20
+fall from the helicopter, we will add this somewhere at the top: =
+<PRE>#define BOMB_LAUNCH 1
+#define GRAVITY 0.1
+</PRE>Then we add the weaponry class itself. Add this before=20
+<CODE>chopper::animate()</CODE>: <PRE>class projectile : public sprite {
+ fix DX,DY;
+ int force;
+public:
+ projectile(fix _X,fix _Y,fix _DX,fix _DY,RLE_SPRITE*img,int power)
+  : sprite(_X,_Y,img) { DX=3D_DX; DY=3D_DY; force=3Dpower; }
+ virtual bool animate() {
+  move(DX,DY); DY+=3DGRAVITY;
+  return Y+image-&gt;h&gt;=3DMAX_Y;
+ }
+};
+</PRE>To launch bombs whenever Enter is pressed, change=20
+<CODE>chopper::animate()</CODE> to: <PRE>bool chopper::animate()
+{
+ fix DX=3D0,DY=3D0;
+
+ if (key[KEY_LEFT]||joy_left) --DX;
+ if (key[KEY_RIGHT]||joy_right) ++DX;
+ if (key[KEY_UP]||joy_up) --DY;
+ if (key[KEY_DOWN]||joy_down) ++DY;
+
+ move(DX,DY);
+
+ if (key[KEY_ENTER]||joy_b1) {
+  sprites.push_back(new projectile(X+32,Y+14,
+   BOMB_LAUNCH,0,(RLE_SPRITE*)data[TUT_BOMB].dat,5));
+ }
+
+ if (frame) { image=3D(RLE_SPRITE*)data[TUT_CHOPPER1].dat; frame=3D0; }
+       else { image=3D(RLE_SPRITE*)data[TUT_CHOPPER2].dat; frame=3D1; }
+
+ return FALSE;
+}
+</PRE>Finally, to delete the sprites that are no longer needed, we need =
+to=20
+change the animation code in the main game loop to: <PRE>  // animate =
+sprites
+  poll_joystick();
+  {
+   sprite_list::iterator spr=3Dsprites.begin();
+   while (spr!=3Dsprites.end()) {
+    sprite*itm=3D*spr;
+    if (itm-&gt;animate()) {
+     sprites.erase(spr++);
+     delete itm;
+    } else spr++;
+   }
+  }
+</PRE>This will save the current sprite, then call =
+<CODE>animate()</CODE>. If it=20
+returns true, it will remove the element from the list, move the =
+iterator to the=20
+next element, and then delete the sprite itself; otherwise, it will move =
+the=20
+iterator as before.=20
+<P>With this, the player is now able to pour out bombs at high volume, =
+which is=20
+definitely going to be of much value against his enemies, once he gets =
+any.=20
+<H3>6.3 Moving Bomb Launch</H3>A somewhat unrealistic thing about the =
+way we=20
+have launched these bombs, is their launch velocity when the helicopter =
+is=20
+moving, which is currently absolute, and thus exactly the same as if the =
+
+helicopter stood still. In our game, we want some more realism than that =
+(even=20
+if the extreme payload of explosives the player has at his disposal is =
+totally=20
+unrealistic), so we will make the initial bomb velocity relative to the =
+current=20
+helicopter velocity. This also makes it much more fun to try to launch =
+bombs as=20
+if they were projectiles by jerking the helicopter forward and upward =
+just as=20
+the bomb is launching.=20
+<P>First, to accurately calculate how much the helicopter has moved (its =
+current=20
+velocity), we will let the base class keep track of what the last =
+position was,=20
+by its <CODE>animate()</CODE> method. <PRE>class sprite {
+protected:
+ fix X,Y,LX,LY;
+ RLE_SPRITE*image;
+public:
+ sprite(fix _X,fix _Y) { LX=3DX=3D_X; LY=3DY=3D_Y; image=3DNULL; }
+ sprite(fix _X,fix _Y,RLE_SPRITE*img) { LX=3DX=3D_X; LY=3DY=3D_Y; =
+image=3Dimg; }
+ virtual ~sprite() {}
+ virtual void draw(BITMAP*dest) {
+  draw_rle_sprite(dest,image,X,Y);
+ }
+ virtual void clippos() { if (Y+image-&gt;h&gt;MAX_Y) =
+Y=3DMAX_Y-image-&gt;h; }
+ virtual void place(fix NX,fix NY) { X=3DNX; Y=3DNY; clippos(); }
+ virtual void move(fix DX,fix DY) { X+=3DDX; Y+=3DDY; clippos(); }
+ virtual int outside(fix _X,fix _Y) { return =
+(_X&lt;-image-&gt;w)||(_X&gt;=3DSCREEN_W); }
+ virtual bool animate() { LX=3DX; LY=3DY; return FALSE; }
+};
+</PRE>Of course, for this to work, the <CODE>animate()</CODE> method for =
+the=20
+derived classes has to call this. The <CODE>chopper</CODE> class'=20
+<CODE>animate()</CODE> method, after adding the difference between the =
+current=20
+and previous coordinates as the velocity to add to the bomb launch =
+velocity, and=20
+doubling the speed of the helicopter itself, is now: <PRE>bool =
+chopper::animate()
+{
+ sprite::animate();
+
+ fix DX=3D0,DY=3D0;
+
+ if (key[KEY_LEFT]||joy_left) DX-=3D2;
+ if (key[KEY_RIGHT]||joy_right) DX+=3D2;
+ if (key[KEY_UP]||joy_up) DY-=3D2;
+ if (key[KEY_DOWN]||joy_down) DY+=3D2;
+
+ move(DX,DY);
+
+ if (key[KEY_ENTER]||joy_b1||(mouse_b&amp;1)) {
+  sprites.push_back(new projectile(X+32,Y+14,
+   X-LX+BOMB_LAUNCH,Y-LY,(RLE_SPRITE*)data[TUT_BOMB].dat,5));
+ }
+
+ if (frame) { image=3D(RLE_SPRITE*)data[TUT_CHOPPER1].dat; frame=3D0; }
+       else { image=3D(RLE_SPRITE*)data[TUT_CHOPPER2].dat; frame=3D1; }
+
+ return FALSE;
+}
+</PRE>
+<H3>6.4 Mouse Control</H3>Another thing that I personally find makes the =
+program=20
+much more fun to mess with, is to control the helicopter with the mouse. =
+This=20
+enables it to move around the screen and launch bombs with ludicrous =
+velocities,=20
+but still, why not have all the fun we can get? Unfortunately, this =
+means we=20
+will have to dispense with the second helicopter. The full code is now: =
+<PRE>#include &lt;allegro.h&gt;
+#include &lt;stl.h&gt;
+#include "tutorial.h"
+
+#define MIN_Y 8
+#define MAX_Y 180
+#define BOMB_LAUNCH 1
+#define GRAVITY 0.1
+
+DATAFILE*data;
+BITMAP*backdrop,*framebuf;
+bool usemouse=3DFALSE;
+
+class sprite {
+protected:
+ fix X,Y,LX,LY;
+ RLE_SPRITE*image;
+public:
+ sprite(fix _X,fix _Y) { LX=3DX=3D_X; LY=3DY=3D_Y; image=3DNULL; }
+ sprite(fix _X,fix _Y,RLE_SPRITE*img) { LX=3DX=3D_X; LY=3DY=3D_Y; =
+image=3Dimg; }
+ virtual ~sprite() {}
+ virtual void draw(BITMAP*dest) {
+  draw_rle_sprite(dest,image,X,Y);
+ }
+ virtual void clippos() { if (Y+image-&gt;h&gt;MAX_Y) =
+Y=3DMAX_Y-image-&gt;h; }
+ virtual void place(fix NX,fix NY) { X=3DNX; Y=3DNY; clippos(); }
+ virtual void move(fix DX,fix DY) { X+=3DDX; Y+=3DDY; clippos(); }
+ virtual int outside(fix _X,fix _Y) { return =
+(_X&lt;-image-&gt;w)||(_X&gt;=3DSCREEN_W); }
+ virtual bool animate() { LX=3DX; LY=3DY; return FALSE; }
+};
+
+typedef list&lt;sprite*&gt; sprite_list;
+
+sprite_list sprites;
+
+class background : public sprite {
+public:
+ background() : sprite(0,MIN_Y) {}
+ virtual void draw(BITMAP*dest) {
+  blit(backdrop,dest,0,0,X,Y,backdrop-&gt;w,backdrop-&gt;h);
+ }
+};
+
+class chopper : public sprite {
+protected:
+ int frame;
+public:
+ chopper(fix _X,fix _Y)
+  : sprite(_X,_Y,(RLE_SPRITE*)data[TUT_CHOPPER].dat) {
+  frame=3D0;
+  position_mouse(X,Y);
+ }
+ virtual void clippos() {
+  if (X&lt;0) X=3D0;
+  if (X+image-&gt;w&gt;SCREEN_W) X=3DSCREEN_W-image-&gt;w;
+  if (Y&lt;MIN_Y) Y=3DMIN_Y;
+  sprite::clippos();
+ }
+ virtual bool animate();
+};
+
+class projectile : public sprite {
+ fix DX,DY;
+ int force;
+public:
+ projectile(fix _X,fix _Y,fix _DX,fix _DY,RLE_SPRITE*img,int power)
+  : sprite(_X,_Y,img) { DX=3D_DX; DY=3D_DY; force=3Dpower; }
+ virtual bool animate() {
+  move(DX,DY); DY+=3DGRAVITY;
+  return Y+image-&gt;h&gt;=3DMAX_Y;
+ }
+};
+
+bool chopper::animate()
+{
+ sprite::animate();
+ if (usemouse) place(mouse_x,mouse_y);
+
+ fix DX=3D0,DY=3D0;
+
+ if (key[KEY_LEFT]||joy_left) DX-=3D2;
+ if (key[KEY_RIGHT]||joy_right) DX+=3D2;
+ if (key[KEY_UP]||joy_up) DY-=3D2;
+ if (key[KEY_DOWN]||joy_down) DY+=3D2;
+
+ move(DX,DY);
+
+ if (usemouse) position_mouse(X,Y);
+
+ if (key[KEY_ENTER]||joy_b1||(mouse_b&amp;1)) {
+  sprites.push_back(new projectile(X+32,Y+14,
+   X-LX+BOMB_LAUNCH,Y-LY,(RLE_SPRITE*)data[TUT_BOMB].dat,5));
+ }
+
+ if (frame) { image=3D(RLE_SPRITE*)data[TUT_CHOPPER1].dat; frame=3D0; }
+       else { image=3D(RLE_SPRITE*)data[TUT_CHOPPER2].dat; frame=3D1; }
+
+ return FALSE;
+}
+
+int main()
+{
+ allegro_init();
+ install_keyboard();
+ // comment out the next line if you don't want mouse
+ usemouse=3D(install_mouse()!=3D-1);
+ initialise_joystick();
+
+ data=3Dload_datafile("tutorial.dat");
+
+ set_gfx_mode(GFX_VGA,320,200,0,0);
+
+ set_palette((RGB*)data[TUT_GAMEPAL].dat);
+
+ // create 320x192 backdrop
+ backdrop=3Dcreate_bitmap(320,192);
+ for (int Y=3D0; Y&lt;128; Y++) hline(backdrop,0,Y,319, (Y/2)+128);
+ for (int Y=3D128; Y&lt;192; Y++) hline(backdrop,0,Y,319, =
+((Y-128)/2)+192);
+
+ // create 320x200 double buffer
+ framebuf=3Dcreate_bitmap(320,200);
+ clear(framebuf);
+
+ background Back;
+ chopper Hero(50,100);
+ sprites.push_back(&amp;Back);
+ sprites.push_back(&amp;Hero);
+
+ while (!key[KEY_ESC]) {
+  // draw sprites
+  {
+   sprite_list::const_iterator spr=3Dsprites.begin();
+   while (spr!=3Dsprites.end()) {
+    (*spr)-&gt;draw(framebuf);
+    spr++;
+   }
+  }
+  // display frame
+  vsync();
+  blit(framebuf,screen,0,0,0,0,320,200);
+  // animate sprites
+  poll_joystick();
+  {
+   sprite_list::iterator spr=3Dsprites.begin();
+   while (spr!=3Dsprites.end()) {
+    sprite*itm=3D*spr;
+    if (itm-&gt;animate()) {
+     sprites.erase(spr++);
+     delete itm;
+    } else spr++;
+   }
+  }
+ }
+ return 0;
+}
+</PRE>It is reasonably clear what we've done; =
+<CODE>install_mouse()</CODE>=20
+returns <CODE>-1</CODE> if a mouse is not installed; =
+<CODE>mouse_x</CODE> and=20
+<CODE>mouse_y</CODE> contains the current mouse coordinates;=20
+<CODE>position_mouse</CODE> sets new coordinates (in case the keyboard =
+or=20
+joystick was used to move the helicopter). You can now hold down the =
+mouse=20
+button and move the mouse around to discover how the law of physics =
+relate to=20
+gameplay (and jerky mouse motion).=20
+<P>For more exciting gameplay, proceed to the <A=20
+href=3D"http://alleg.sourceforge.net/docs/ovehk_stl_tutorial_en/tut7.html=
+">next=20
+chapter</A> </P></BODY></HTML>

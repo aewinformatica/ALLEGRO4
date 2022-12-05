@@ -1,0 +1,286 @@
+<HTML>
+
+<HEAD><TITLE>Montando um Jogo Usando o Allegro</TITLE></HEAD>
+
+<BODY TEXT="#000000" LINK="#0000FF" VLINK="#800080" BGCOLOR="#FFFFFF">
+
+<P>Data da &uacute;ltima atualiza&ccedil;&atilde;o: 19/06/2002<BR>
+&copy;2002 - <A HREF="mailto:tiagomt@nce.ufrj.br">Tiago da Concei&ccedil;&atilde;o Mota</A><BR><BR>
+<I>Powered by vi</I></P>
+
+<H1>Montando um Jogo Usando o Allegro</H1>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<OL>
+	<LI><A HREF="#geral">Vis&atilde;o Geral do Jogo</A></LI>
+	<LI><A HREF="#defines">Defini&ccedil;&otilde;es e Outras Fun&ccedil;&otilde;es</A></LI>
+	<LI><A HREF="#inic">As Inicializa&ccedil;&otilde;es</A></LI>
+	<LI><A HREF="#loop">O Loop Principal</A></LI>
+	<LI><A HREF="#final">As Finaliza&ccedil;&otilde;es</A></LI>
+</OL>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<P>Esta parte da apostila ensina, passo a passo, como montar um <A HREF="../jogo/jogo.c">jogo</A> simples usando o Allegro. Como o objetivo principal desta parte &eacute; apenas esquematizar a montagem de um jogo, n&atilde;o vamos nos preocupar com detalhes de velocidade ou de est&eacute;tica.</P>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="geral">
+<H2>1. Vis&atilde;o Geral do Jogo</H2>
+
+<P>O objetivo do jogo que iremos montar &eacute; fazer desaparecer todos os monstros que andam pela tela; para isso, basta clic&aacute;-los com o ponteiro do mouse.</P>
+
+<P>Como os monstros t&ecirc;m velocidades diferentes, a pontua&ccedil;&atilde;o deve variar de acordo com a velocidade (quanto maior, mais pontos). Ao errar o clique (n&atilde;o clicar em nenhum monstro), o jogador perde pontos. Ao final da partida, depois que todos os monstros desaparecerem, &eacute; descontado do total de pontos um valor proporcional ao tempo transcorrido desde o in&iacute;cio da partida.</P>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="defines">
+<H2>2. Defini&ccedil;&otilde;es e Outras Fun&ccedil;&otilde;es</H2>
+
+<P>O cen&aacute;rio do jogo consistir&aacute; de duas partes: a parte esquerda da tela &eacute; onde os monstros se movimentam, e a parte direita &eacute; onde est&aacute; o placar, o contador de monstros e o tempo transcorrido. Definiremos que, do total de 800x600 da tela, 600x600 sejam da parte esquerda, e o resto, naturalmente, da direita. Para isso, escrevemos
+<TT><OL>
+#define ESP_PONTOS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;200<BR>
+#define ARENA_X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(MAX_X) - (ESP_PONTOS)<BR>
+#define ARENA_Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(MAX_Y)<BR>
+</OL></TT>
+</P>
+
+<P>Devemos definir, tamb&eacute;m, o n&uacute;mero de monstros que aparecer&atilde;o inicialmente, bem como os tamanhos horizontal e vertical de seu bitmap e os m&aacute;ximos deslocamentos horizontal e veritcal poss&iacute;veis. Para tanto, fazemos
+<TT><OL>
+#define MAX_MONSTRO&nbsp;&nbsp;&nbsp;&nbsp;30<BR>
+#define MONSTRO_X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32<BR>
+#define MONSTRO_Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32<BR>
+#define MAX_DX&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<BR>
+#define MAX_DY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<BR>
+</OL></TT>
+</P>
+
+<P>Utilizaremos um <A HREF="tecnicas.html#sprites">sprite</A> denominado <TT>MONSTRO</TT>, definido da seguinte maneira:
+<TT><OL>
+typedef struct _MONSTRO<BR>
+{<OL>
+	int x, y;<BR>
+	int dx, dy;<BR>
+	int show;<BR>
+</OL>} MONSTRO;<BR>
+</OL></TT></P>
+
+<P>Al&eacute;m dos <TT>#define</TT>'s, precisamos escrever a fun&ccedil;&atilde;o que ser&aacute; chamada pelo temporizador para incrementar o tempo. Note que, devido ao uso que se faz desta fun&ccedil;&atilde;o (temporizador), &eacute; necess&aacute;rio o uso da macro que se encontra no final daquela.
+<TT><OL>
+void aumenta_tempo (void)<BR>
+{<OL>
+	tempo++;<BR>
+</OL>}<BR>
+END_OF_FUNCTION(aumenta_tempo);<BR>
+</OL></TT>
+</P>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="inic">
+<H2>3. As Inicializa&ccedil;&otilde;es</H2>
+
+<P>Devemos, primeiramente, declarar as vari&aacute;veis que vamos utilizar no jogo. Para tal, dentro da fun&ccedil;&atilde;o <TT>principal</TT>, escrevemos</P>
+<TT><OL>
+MONSTRO monstro[MAX_MONSTRO];<BR>
+BITMAP *bmp_monstro;<BR>
+BITMAP *tela;<BR>
+PALETTE pal;<BR>
+SAMPLE *certo, *errado;<BR>
+MIDI *musica;<BR>
+int mx, my;<BR>
+int num_monstros;<BR>
+int pontos, maior;<BR>
+int acertou;<BR>
+int i;<BR>
+</OL></TT>
+H&aacute;, ainda, uma vari&aacute;vel a ser declarada como global
+<TT><OL>volatile int tempo;</OL></TT>
+e que ser&aacute; utilizada no contador de tempo.
+</P>
+
+<P>Podemos, ent&atilde;o, fazer as inicializa&ccedil;&otilde;es necess&aacute;rias. Primeiro, criamos o bitmap de <A HREF="tecnicas.html#double_buffering">double buffering</A>, declarado como a vari&aacute;vel <TT>tela</TT>,
+<TT><OL>tela = create_bitmap(MAX_X, MAX_Y);</OL></TT>
+Depois, carregamos o bitmap <TT>monstro.bmp</TT> na mem&oacute;ria
+<TT><OL>bmp_monstro = load_bitmap("monstro.bmp", pal);</OL></TT>
+e os waves e midis que ser&atilde;o utilizados
+<TT><OL>
+certo = load_sample("certo.wav");<BR>
+errado = load_sample("errado.wav");<BR>
+musica = load_midi("caverns.mid");<BR>
+</OL></TT>
+</P>
+
+<P>Ap&oacute;s isso, inicializamos com valores aleat&oacute;rios o vetor de elementos do tipo <TT>MONSTRO</TT>, da seguinte forma:
+<TT><OL>
+srand(time(0));<BR>
+for (i = 0; i < MAX_MONSTRO; i++)<BR>
+{<OL>
+	monstro[i].x = rand() % (ARENA_X - MONSTRO_X);<BR>
+	monstro[i].y = rand() % (ARENA_Y - MONSTRO_Y);<BR>
+	do<BR>
+	{<OL>
+		monstro[i].dx = (rand() % (MAX_DX * 2)) - MAX_DX;<BR>
+	</OL>} while (monstro[i].dx == 0);<BR>
+	do<BR>
+	{<OL>
+		monstro[i].dy = (rand() % (MAX_DY * 2)) - MAX_DY;<BR>
+	</OL>} while (monstro[i].dy == 0);<BR>
+	monstro[i].show = TRUE;<BR>
+</OL>}<BR>
+</OL></TT>
+e inicializamos o n&uacute;mero de monstros
+<TT><OL>num_monstros = MAX_MONSTRO;</OL></TT>
+</P>
+
+<P>Para terminar, inicializamos as vari&aacute;veis <TT>mx</TT> e <TT>my</TT>, que guardar&atilde;o os valores da &uacute;ltima posi&ccedil;&atilde;o do mouse
+<TT><OL>mx = my = -1;</OL></TT>
+e inicializamos, tamb&eacute;m, as vari&aacute;veis <TT>pontos</TT> e <TT>maior</TT>
+<TT><OL>
+pontos = 0;<BR>
+maior = get_config_int(NULL, "HighScore", 0);<BR>
+</OL></TT>
+</P>
+
+<P>Devemos, tamb&eacute;m, adicionar algumas linhas ao final da fun&ccedil;&atilde;o <TT>inicia</TT> (antes do &uacute;ltimo <TT>return</TT>) para que possamos utilizar algumas outras fun&ccedil;&otilde;es.
+<TT><OL>
+set_config_file("jogo.rec");<BR>
+<BR>
+LOCK_VARIABLE(tempo);<BR>
+LOCK_FUNCTION(aumenta_tempo);<BR>
+</OL></TT>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="loop">
+<H2>4. O Loop Principal</H2>
+
+<P>Antes de iniciarmos o loop principal do jogo, fazemos algumas chamadas de inicializa&ccedil;&atilde;o que, por certos motivos, foram preferencialmente deixadas para esta parte. Assim, podemos chamar uma fun&ccedil;&atilde;o de fade
+<TT><OL>fade_in(pal, 4);</OL></TT>
+a fun&ccedil;&atilde;o para iniciar a m&uacute;sica
+<TT><OL>play_midi(musica, TRUE);</OL></TT>
+zerar o tempo e iniciar o temporizador da fun&ccedil;&atilde;o <TT>aumenta_tempo</TT>
+<TT><OL>
+tempo = 0;<BR>
+install_int(aumenta_tempo, 1000);<BR>
+</OL></TT>
+
+<P>Ap&oacute;s isso, vamos, finalmente, ao loop principal. A parte <TT>do-while</TT> consiste de
+<TT><OL>
+clear_keybuf();<BR>
+do<BR>
+{<OL>
+<BR>
+/* Loop Principal */<BR>
+<BR>
+</OL>} while ((!key[KEY_ESC]) && (num_monstros &gt; 0));<BR>
+</OL></TT>
+</P>
+
+<P>Ent&atilde;o, dentro do loop principal, inserimos o restante do c&oacute;digo. Primeiro, as rotinas que ir&atilde;o gerenciar o clique com o bot&atilde;o do mouse
+<TT><OL>
+	if ((mouse_b & 1) &amp;&amp; ((mouse_x != mx) || (mouse_y != my)))<BR>
+	{<OL>
+		mx = mouse_x;<BR>
+		my = mouse_y;<BR>
+		for (i = 0, acertou = FALSE; i < MAX_MONSTRO; i++)<BR>
+		{<OL>
+			if ((mouse_x &gt;= monstro[i].x) &amp;&amp; (mouse_x &lt;= (monstro[i].x + MONSTRO_X)) &amp;&amp;<BR>
+			&nbsp;&nbsp;&nbsp;&nbsp;(mouse_y &gt;= monstro[i].y) &amp;&amp; (mouse_y &lt;= (monstro[i].y + MONSTRO_Y)) &amp;&amp;<BR>
+			&nbsp;&nbsp;&nbsp;&nbsp;(monstro[i].show))<BR>
+			{<OL>
+				monstro[i].show = FALSE;<BR>
+				acertou = TRUE;<BR>
+				pontos += (abs(monstro[i].dx) + abs(monstro[i].dy)) * 50;<BR>
+				num_monstros--;<BR>
+			</OL>}<BR>
+		</OL>}<BR>
+		if (acertou)<BR>
+		{<OL>
+			play_sample(certo, 255, 128, 1000, FALSE);<BR>
+		</OL>}<BR>
+		else<BR>
+		{<OL>
+			play_sample(errado, 255, 128, 1000, FALSE);<BR>
+			pontos -= 100;<BR>
+		</OL>}<BR>
+	</OL>}<BR>
+</OL></TT>
+e, depois, as rotinas de double buffering
+<TT><OL>
+	show_mouse(NULL);<BR>
+	clear(tela);<BR>
+	for (i = 0; i &lt; MAX_MONSTRO; i++)<BR>
+	{<OL>
+		if (monstro[i].show)<BR>
+		{<OL>
+			monstro[i].x += monstro[i].dx;<BR>
+			monstro[i].y += monstro[i].dy;<BR>
+			if ((monstro[i].x < 0) || (monstro[i].x > (ARENA_X - MONSTRO_X)))<BR>
+			{<OL>
+				monstro[i].dx = -monstro[i].dx;<BR>
+			</OL>}<BR>
+			if ((monstro[i].y < 0) || (monstro[i].y > (ARENA_Y - MONSTRO_Y)))<BR>
+			{<OL>
+				monstro[i].dy = -monstro[i].dy;<BR>
+			</OL>}<BR>
+			draw_sprite(tela, bmp_monstro, monstro[i].x, monstro[i].y);<BR>
+		</OL>}<BR>
+	</OL>}<BR>
+	imprime_placar(tela, pontos, maior, num_monstros);<BR>
+	show_mouse(tela);<BR>
+	blit(tela, screen, 0, 0, 0, 0, MAX_X, MAX_Y);<BR>
+</OL></TT>
+</P>
+
+<P>Com isso, terminamos o loop principal do jogo.</P>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<A NAME="final">
+<H2>5. As Finaliza&ccedil;&otilde;es</H2>
+
+<P>Quando sa&iacute;mos do loop principal, n&atilde;o podemos apenas terminar o programa. &Eacute; necess&aacute;rio fazer uma s&eacute;rie de chamadas, tais como a de parar a m&uacute;sica
+<TT><OL>stop_midi();</OL></TT>
+e a de remover o temporizador
+<TT><OL>remove_int(aumenta_tempo);</OL></TT>
+</P>
+
+<P>Al&eacute;m disso, precisamos calcular os pontos do jogador e, se for o caso, armazenar essa pontua&ccedil;&atilde;o como a maior at&eacute; o momento. Qualquer que seja a situa&ccedil;&atilde;o, devemos, tamb&eacute;m, imprimir esta pontua&ccedil;&atilde;o final obtida. Para isso,
+<TT><OL>
+pontos -= num_monstros * 50;<BR>
+pontos -= (tempo - 30) * 5 / 3;<BR>
+if (pontos &gt; maior)<BR>
+{<OL>
+	maior = pontos;<BR>
+	set_config_int(NULL, "HighScore", pontos);<BR>
+</OL>}<BR>
+clear(tela);<BR>
+imprime_placar(tela, pontos, maior, num_monstros);<BR>
+blit(tela, screen, 0, 0, 0, 0, MAX_X, MAX_Y);<BR>
+</OL></TT>
+Para que o jogador possa ver o seu placar, devemos, ainda, fazer um loop de espera por uma tecla. Assim,
+<TT><OL>
+while (key[KEY_ESC]);<BR>
+clear_keybuf();<BR>
+textout_centre(screen, font, "Pressione qualquer tecla para continuar", (ARENA_X) / 2,<BR>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(ARENA_Y) / 2 - 8, 8);<BR>
+while (!keypressed());<BR>
+</OL></TT>
+</P>
+
+<P>Apenas para finalizar de uma boa forma, utilizamos uma fun&ccedil;&atilde;o de fade
+<TT><OL>fade_out(4);</OL></TT>
+</P>
+
+<P><IMG WIDTH=100% SRC="y_bar.gif" ALT="---------------------------------------"></P>
+
+<P><CENTER>
+<A HREF="indice.htm"><IMG SRC="return.gif" HSPACE=5 HEIGHT=30 WIDTH=30 ALIGN=CENTER></A>
+<A HREF="indice.htm">&Iacute;ndice</A>
+</CENTER></P>
+
+</BODY>
+
+</HTML>

@@ -1,0 +1,987 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0051)http://www.bdjogos.com/biblioteca_conteudo.php?id=6 -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="TEXTO_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="TEXTO_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="TEXTO_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background=TEXTO_arquivos/bg.jpg topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT language=javascript src="TEXTO_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TEXTO_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=TEXTO_arquivos/linha_hor_cima.gif><IMG height=8 
+      src="TEXTO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TEXTO_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=TEXTO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background=TEXTO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TEXTO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TEXTO_arquivos/linha_horizo.gif><IMG height=8 
+      src="TEXTO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TEXTO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TEXTO_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=TEXTO_arquivos/linha_hor_cima.gif><IMG height=8 
+      src="TEXTO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TEXTO_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=TEXTO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background=TEXTO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TEXTO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TEXTO_arquivos/linha_horizo.gif><IMG height=8 
+      src="TEXTO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TEXTO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TEXTO_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=TEXTO_arquivos/linha_hor_cima.gif><IMG height=8 
+      src="TEXTO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TEXTO_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=TEXTO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background=TEXTO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TEXTO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TEXTO_arquivos/linha_horizo.gif><IMG height=8 
+      src="TEXTO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TEXTO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="TEXTO_arquivos/borda_cima1.gif" 
+    width=8></TD>
+    <TD width="97%" background=TEXTO_arquivos/linha_hor_cima.gif><IMG height=8 
+      src="TEXTO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="TEXTO_arquivos/borda_cima2.gif" 
+    width=8></TD></TR>
+  <TR>
+    <TD background=TEXTO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background=TEXTO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="TEXTO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=TEXTO_arquivos/linha_horizo.gif><IMG height=8 
+      src="TEXTO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="TEXTO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="TEXTO_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="TEXTO_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="TEXTO_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="TEXTO_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="TEXTO_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="TEXTO_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background=TEXTO_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="TEXTO_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background=TEXTO_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="TEXTO_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="TEXTO_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD class=conteudo vAlign=top><LINK 
+            href="TEXTO_arquivos/estilos.css" type=text/css rel=stylesheet>
+            <P><BR><SPAN class=titulos>FUNÇÕES DE TEXTO NO ALLEGRO</SPAN></P>
+            <P><BR><SPAN class=conteudo>Nesse artigo iremos aprender a usar as 
+            funções de texto que o allegro disponibiliza para ilustrar os Jogos. 
+            </SPAN></P>
+            <P><SPAN class=conteudo>Como sabemos, todos os jogos possuem textos, 
+            sejam eles em formato de histórias ou conversas. <BR>Segue abaixo 
+            algumas telas para ilustração de alguns textos. 
+            <SPAN><BR></SPAN></SPAN></P><SPAN class=conteudo><SPAN>
+            <TABLE cellSpacing=1 cellPadding=2 width="98%" align=center 
+border=0>
+              <TBODY>
+              <TR>
+                <TD align=middle>
+                  <DIV align=center><IMG height=200 
+                  src="TEXTO_arquivos/donkeykong1.jpg" width=250 
+                border=1></DIV></TD>
+                <TD>
+                  <DIV align=center><IMG height=200 
+                  src="TEXTO_arquivos/mario2.jpg" width=250 
+border=1></DIV></TD></TR>
+              <TR>
+                <TD align=middle height=25>
+                  <DIV align=center>Donkey Kong</DIV></TD>
+                <TD align=middle>
+                  <DIV align=center>Mario World</DIV></TD></TR>
+              <TR>
+                <TD>&nbsp;</TD>
+                <TD align=middle>&nbsp;</TD></TR>
+              <TR>
+                <TD>
+                  <DIV align=center><IMG height=200 
+                  src="TEXTO_arquivos/mario3.jpg" width=250 border=1></DIV></TD>
+                <TD align=middle>
+                  <DIV align=center><IMG height=200 
+                  src="TEXTO_arquivos/megaman1.jpg" width=250 
+              border=1></DIV></TD></TR>
+              <TR>
+                <TD align=middle>
+                  <DIV align=center>Mario 64</DIV></TD>
+                <TD align=middle>
+                  <DIV align=center>Megaman 7</DIV></TD></TR>
+              <TR>
+                <TD>&nbsp;</TD>
+                <TD align=middle>&nbsp;</TD></TR>
+              <TR>
+                <TD>
+                  <DIV align=center><IMG height=200 
+                  src="TEXTO_arquivos/zelda1.jpg" width=250 border=1></DIV></TD>
+                <TD>
+                  <DIV align=center><IMG height=200 
+                  src="TEXTO_arquivos/tetris1.jpg" width=250 
+              border=1></DIV></TD></TR>
+              <TR>
+                <TD align=middle>
+                  <DIV align=center>Zelda</DIV></TD>
+                <TD align=middle>
+                  <DIV align=center>Tetris</DIV></TD></TR>
+              <TR>
+                <TD>&nbsp;</TD>
+                <TD align=middle>&nbsp;</TD></TR>
+              <TR>
+                <TD>
+                  <DIV align=center><IMG height=200 
+                  src="TEXTO_arquivos/castlevania2.jpg" width=250 
+                border=1></DIV></TD>
+                <TD>
+                  <DIV align=center><IMG height=200 
+                  src="TEXTO_arquivos/castlevania1.jpg" width=250 
+                border=1></DIV></TD></TR>
+              <TR>
+                <TD align=middle>
+                  <DIV align=center>Castlevania 1</DIV></TD>
+                <TD align=middle>
+                  <DIV align=center>Castlevania Dawn od 
+              Sorrow</DIV></TD></TR></TBODY></TABLE></SPAN></SPAN>
+            <P class=conteudo><SPAN><BR><BR><SPAN class=conteudo>Como podemos 
+            observar acima todos os jogos possuem um texto na tela. Independente 
+            de ser jogo antigo ou novo, 2d ou 3d cada caso é um caso. 
+            </SPAN></SPAN></P>
+            <P class=conteudo><SPAN><SPAN class=conteudo>Jogos de RPG, por 
+            exemplo, usam bastante texto para contar a história durante o jogo. 
+            Principalmente na conversa com os NPS (Personagens controlados pelo 
+            computador através de inteligência artificial ou não). Outros jogos 
+            mostram apenas pontuação, vida ou informações especiais referente ao 
+            personagem.<BR></SPAN></SPAN></P>
+            <P class=conteudo><SPAN><SPAN class=conteudo>Antes de manipular as 
+            funções você deve prestar atenção para os seguintes 
+            itens:<BR></SPAN></SPAN></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#000099 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=5 width="100%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=#f7f7f7>
+                        <P class=conteudo>- Em todas as funções no argumento que 
+                        pede o tipo de fonte sempre vamos utilizar a fonte 
+                        padrão do allegro. Portanto, iremos sempre responder que 
+                        o tipo de fonte utiliza é 
+                        <STRONG>font</STRONG>.<BR><BR>- Em toda função texto 
+                        precisamos especificar onde iremos escrever. Nesse caso 
+                        iremos direcionar o nosso texto para variável global 
+                        <STRONG>screen, ou seja, direto para a tela do 
+                        usuário.</STRONG><BR><BR>- A configuração da tela que 
+                        iremos usar é de 640x480. Portanto as variáveis globais 
+                        do allegro <STRONG>SCREEN_W</STRONG> guarda a largura 
+                        máxima da tela 640 e<STRONG> SCREEN_H</STRONG> guarda a 
+                        altura máxima da tela 
+              480.</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo><SPAN><SPAN class=conteudo><BR><BR>Feito e 
+            entendido essas considerações o resultado de todos esses exemplos 
+            serão o mesmo para todos. </SPAN></SPAN></P>
+            <P class=conteudo><SPAN><SPAN class=conteudo>Em outros artigos 
+            iremos aprender a utilizar uma fonte personalizada e a desvantagem 
+            de utilizar diretamente a variável screen.<BR>Abaixo segue algumas 
+            funções mais importantes que são utilizadas para trabalhar com 
+            textos no allegro:<BR><BR>- int <B>text_length</B><BR>- int 
+            <B>text_height</B><BR>- void <B>textout_ex</B><BR>- void 
+            <B>textout_right_ex</B><BR>- void <B>textout_centre_ex</B><BR>- void 
+            <B>textout_justify_ex</B><BR>- void <B>textprintf_ex</B><BR>- void 
+            <B>textprintf_right_ex</B><BR>- void 
+            <B>textprintf_centre_ex</B><BR>- void 
+            <B>textprintf_justify_ex</B><BR><BR><B>IMPORTANTE: </B>Sempre que 
+            você escrever um texto na tela a coordenada x,y inicial, ou seja, 
+            x=0 e y=0 de cada texto está localizado no canto superior esquerdo 
+            do texto conforme a figura abaixo:<BR></SPAN></SPAN></P><SPAN 
+            class=conteudo><SPAN><SPAN class=conteudo>
+            <CENTER><IMG src="TEXTO_arquivos/coesquerda.jpg"> 
+            </CENTER></SPAN></SPAN></SPAN>
+            <P class=conteudo><SPAN><SPAN class=conteudo><BR>Nesse caso o texto 
+            seria escrito da esquerda para a direita a partir da posição 
+            informada.<BR>Ao estudar as funções de alinhamento você vai perceber 
+            que a posição inicial de cada texto pode ser 
+            alterada.</SPAN></SPAN></P>
+            <P class=conteudo><SPAN><SPAN class=conteudo>Dessa forma a posição 
+            inicial varia de acordo com o objetivo da 
+            função.<BR></SPAN><BR></SPAN></P>
+            <P class=conteudo><SPAN><BR></SPAN></P><SPAN class=conteudo><SPAN>
+            <HR width="50%" SIZE=1>
+            <SPAN class=titulos>FUNÇÕES REFERENTE AO TAMANHO DO 
+            TEXTO</SPAN><BR><BR></SPAN></SPAN>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo2 align=middle bgColor=#ffffff>int 
+                        <B>text_length</B>(const FONT *f, const char *str);<A 
+                        id=text_length name=text_length></A></TD></TR>
+                    <TR>
+                      <TD bgColor=#ffffff>Essa função retorna um valor inteiro 
+                        com a largura do texto em pixel. Ela recebe como 
+                        argumentos:<BR><BR>-<B>Tipo da fonte:</B> 
+                        font<BR>-<B>Texto:</B> "Allegro 4.2.1"<BR><BR>A largura 
+                        em pixels aumenta ou diminui conforme o tamanho do texto 
+                        informado.<BR><BR><B>Exemplo:</B><BR><BR>int 
+                        iLargura=0;<BR><BR>iLargura = <B>text_length</B>(font, 
+                        "Allegro 4.2.1");<BR><BR>No exemplo acima a variável 
+                        iLargura recebe a largura do texto “Allegro 4.2.1” em 
+                        pixels. <BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+            <SPAN class=conteudo><SPAN><BR><BR></SPAN></SPAN>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo2 align=middle bgColor=#ffffff>int 
+                        <B>text_height</B>(const FONT *f)<A id=text_height 
+                        name=text_height></A></TD></TR>
+                    <TR>
+                      <TD bgColor=#ffffff>Essa função retorna um valor inteiro 
+                        com o comprimento do texto em pixel. Em outras palavras 
+                        retorna a altura da fonte. Ela recebe como 
+                        argumentos:<BR><BR>- Tipo da fonte: font<BR><BR>Como 
+                        vimos no inicio desse artigo sempre iremos usar o tipo 
+                        de fonte padrão do allegro. Com base no retorno dessa 
+                        função você pode monitorar os espaçamento entre os 
+                        textos na vertical da maneira que 
+                        quiser.<BR><BR><B>Exemplo:</B><BR><BR>int iAltura_Fonte 
+                        = 0;<BR><BR>iAltura_Fonte = text_height(font);<BR><BR>No 
+                        exemplo acima a variável iAltura_Fonte recebe a altura 
+                        máxima da fonte que utilizamos para escrever um 
+                        determinado texto. Se você estiver usando a fonte padrão 
+                        do allegro o retorno deverá ser 8 
+                    pixels.<BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo>&nbsp;</P>
+            <P class=conteudo><SPAN><BR></SPAN></P><SPAN class=conteudo><SPAN>
+            <HR>
+            </SPAN></SPAN>
+            <P class=conteudo><SPAN><SPAN class=titulos>FUNÇÕES REFERENTES AO 
+            ALINHAMENTO DO TEXTO</SPAN></SPAN></P>
+            <P class=conteudo><SPAN><BR></SPAN></P><SPAN 
+            class=conteudo><SPAN></SPAN></SPAN>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo2 align=middle bgColor=#ffffff>void 
+                        <B>textout_ex</B>(BITMAP *bmp, const FONT *f, const char 
+                        *s, int x, int y, int color, int bg);<A id=textout_ex 
+                        name=textout_ex></A></TD></TR>
+                    <TR>
+                      <TD bgColor=#ffffff>Essa função é bem simples e a mais 
+                        usada por ser responsável em escrever o texto na tela da 
+                        esquerda para a direita. Dessa forma ela não precisa 
+                        alterar a coordenada inicial do texto, permanece no 
+                        canto superior esquerdo. Essa função recebe como 
+                        argumentos:<BR><BR>- <B>Destino do texto:</B> screen 
+                        <BR>- <B>Tipo da fonte:</B> font<BR>- <B>Texto:</B> 
+                        “Allegro 4.2.1”<BR>- <B>Posição x e posição y:</B> 
+                        10,10<BR>- <B>Cor do texto:</B> makecol(0, 0, 255) - 
+                        (Azul)<BR>- <B>Cor de fundo do texto:</B> -1 - 
+                        (Transparente)<BR><BR><B>Exemplo:</B><BR><BR><B>textout_ex</B>(screen, 
+                        font, "Allegro 4.2.1", 10, 10, makecol(0, 0, 255), 
+                        -1);<BR><BR>O exempo acima mostra o texto "Allegro 
+                        4.2.1" em azul com fundo 
+                  transparente.”<BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+
+            <P>&nbsp;</P><SPAN class=conteudo><SPAN></SPAN></SPAN>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo2 align=middle bgColor=#ffffff>void 
+                        <B>textout_right_ex</B>(BITMAP *bmp, const FONT *f, 
+                        const char *s, int x, int y, int color, int bg);<A 
+                        id=textout_right_ex name=textout_right_ex></A></TD></TR>
+                    <TR>
+                      <TD bgColor=#ffffff>Essa função é responsável por 
+                        alinhar o texto a direita. Essa função recebe como 
+                        argumentos:<BR><BR>- <B>Destino do texto:</B> 
+                        screen<BR>- <B>Tipo da fonte:</B> font<BR>- 
+                        <B>Texto:</B> “Texto alinhado a direita”<BR>- <B>Posição 
+                        x:</B> SCREEN_W = 640<BR>- <B>Posição y:</B> 0<BR>- 
+                        <B>Cor do texto:</B> makecol(255,255,0) – Amarelo<BR>- 
+                        <B>Cor do fundo do texto:</B> -1 - 
+                        Transparente<BR><BR><B>Exemplo:</B><BR><BR><B>textout_right_ex</B>(screen, 
+                        font, "Texto alinhado a direita",SCREEN_W, 0, 
+                        makecol(255,255,0), -1);<BR><BR>O exemplo acima deve 
+                        mostrar o texto alinhado no canto superior direito da 
+                        tela. É importante lembrar que a variável SCREEN_W 
+                        guarda o tamanho total da largura da tela. Nesse caso 
+                        ela guarda o valor 640.<BR>Note que essa função altera a 
+                        coordenada inicial do texto para o canto superior 
+                        direito do texto conforme a figura abaixo:<BR><BR>
+                        <CENTER><IMG src="TEXTO_arquivos/codireita.jpg"> 
+                        </CENTER><BR>Dessa forma x = 640 e o texto vai ser 
+                        alinhado até o final da tela independente do seu 
+                        tamanho. Se você usar a função textout_ex irá perceber 
+                        que não vai ser impresso nenhum texto na tela porque o 
+                        texto será impresso a partir da posição 640 que está 
+                        fora dos limites da tela. Se você fizer SCREEN_W –10 irá 
+                        ver o começo do 
+              texto.<BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+            <SPAN class=conteudo><SPAN><BR><BR></SPAN></SPAN>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo2 align=middle bgColor=#ffffff>void 
+                        <B>textout_centre_ex</B>(BITMAP *bmp, const FONT *f, 
+                        const char *s, int x, y, int color, int bg); <A 
+                        id=textout_centre_ex name=textout_centre_ex></A></TD></TR>
+                    <TR>
+                      <TD bgColor=#ffffff>
+                        <P>Essa função é responsável por centralizar o texto a 
+                        partir da posição x,y que você informar alterando a 
+                        coordenada inicial da função para o centro do texto. 
+                        Essa função recebe como argumentos:<BR><BR>- <B>Destino 
+                        do texto:</B> screen<BR>- <B>Tipo de fonte:</B> 
+                        font<BR>- <B>Texto:</B> “Game Over”<BR>- <B>Posição x e 
+                        y da fonte na tela:</B> x = Metade da largura máxima da 
+                        tela (320) e y = Metade da altura máxima da tela 
+                        (240).<BR>- <B>Cor do texto:</B> makecol(255, 0, 0) - 
+                        Vermelho<BR>- <B>Cor do fundo do texto:</B> makecol(0, 
+                        255, 0) - 
+                        Verde<BR><BR><B>Exemplo:</B><BR><BR><B>textout_centre_ex</B>(screen, 
+                        font, "GAME OVER",SCREEN_W / 2, SCREEN_H / 
+                        2,makecol(255, 0, 0), makecol(0, 255, 0));<BR><BR>O 
+                        exemplo deve mostrar o texto “Game Over” no centro da 
+                        tela com a cor do fundo verde e texto em vermelho. </P>
+                        <P>Essa função se encarrega de centralizar o texto 
+                        independente do tamanho a partir da posição x,y 
+                        informada.<BR>Note que essa função é do tipo que altera 
+                        a coordenada inicial x,y do texto. Nesse caso a 
+                        coordenada inicial de cada texto é no centro conforme a 
+                        figura abaixo:<BR></P>
+                        <CENTER><IMG src="TEXTO_arquivos/cocentro.jpg"> 
+                        </CENTER><BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+            <SPAN class=conteudo><SPAN><BR><BR></SPAN></SPAN>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo2 align=middle bgColor=#ffffff>void 
+                        <B>textout_justify_ex</B>(BITMAP *bmp, const FONT *f, 
+                        const char *s, int x1, int x2, int y, int diff, int 
+                        color, int bg);<A id=textout_justify_ex 
+                        name=textout_justify_ex></A></TD></TR>
+                    <TR>
+                      <TD bgColor=#ffffff>Essa função é responsável por 
+                        justificar o texto. O resultado é o mesmo quando 
+                        justificamos os texto no Microsoft Office Word. Essa 
+                        função recebe como argumentos:<BR><BR>- <B>Destino do 
+                        texto:</B> screen<BR>- <B>O tipo de fonte:</B> font<BR>- 
+                        <B>Texto:</B> sLinhas[i] – 4 linhas com um array 
+                        iniciando de 0 a 3.<BR>sLinhas[0] - "Desenha o texto 
+                        justificado"<BR>sLinhas[1] - "conforme foi 
+                        especificado"<BR>sLinhas[2] - "no tamanho informado 
+                        de"<BR>sLinhas[3] - "cada campo, como no word"<BR>- 
+                        <B>Posição x inicial de onde você quer justificar o 
+                        texto:</B> 0<BR>- <B>Posição y final de onde você quer 
+                        justificar o texto:</B> 200 pixels<BR>- <B>Espaço entre 
+                        as linhas:</B> 8 pixels – usamos a função 
+                        <B>text_height</B> para tornar a rotina genérica para 
+                        outros tipos de textos.<BR>- <B>Diferença entre os 
+                        espaços das palavras:</B> 80 pixels. Esses 80 pixels é 
+                        dividido entre as palavras que compõem a linha. Dessa 
+                        forma o texto fica a linhado de ponta a ponta.<BR>- 
+                        <B>Cor do texto:</B> makecol(255, 255, 0)<BR>- <B>Cor do 
+                        fundo do texto:</B> -1 - 
+                        Transparente<BR><BR><B>Exemplo:</B><BR><BR>
+                        <HR>
+                        <SPAN class=titulos_texto>CÓDIGO...</SPAN> 
+                        <HR>
+                        <SPAN class=codigo>int y=0;<BR>int i=0;<BR><BR>char 
+                        *cLinhas[] = {"Desenha o texto 
+                        justificado",<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"conforme 
+                        foi 
+                        especificado",<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"no 
+                        tamanho informado 
+                        de",<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"cada 
+                        campo, como no word", NULL};<BR><BR>vline(screen, 200, 
+                        0, SCREEN_H-1, makecol(0, 255, 0));<BR><BR>for (i = 
+                        0;i&lt;4;i++) <SPAN class=comentario>// de 0 a 3 
+                        faça</SPAN><BR>{&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<B>textout_justify_ex</B>(screen, 
+                        font, cLinhas[i], 0, 200,i*text_height(font), 80, 
+                        makecol(255, 255, 0),-1);<BR>}<BR><BR>readkey(); </SPAN>
+                        <HR>
+                        <SPAN class=titulos_texto>FIM DE CÓDIGO</SPAN> 
+                        <HR>
+
+                        <P><BR>No exemplo acima criamos um array de caracteres 
+                        para podermos montar algumas frases. <BR>Nesse array 
+                        temos 4 linha de textos. Para o compilador cada linha 
+                        representa uma posição no array. <BR>Dessa forma temos a 
+                        posição 0,1,2 e 3.</P>
+                        <P>A função <B>vline</B> é responsável por traçar uma 
+                        linha vertical na tela. <BR>Nesse exemplo foi usada 
+                        apenas para melhorar a visualização do texto 
+                        justificado. <BR>Veremos essa função em detalhes em 
+                        outro tópico.</P>
+                        <P>Para podermos justificar todas as linhas devemos 
+                        fazer um contador de 0 a 3.<BR>A função 
+                        <B>text_height</B> pega a altura de cada linha em pixels 
+                        e multiplica pela posição da linha. <BR>Dessa forma cada 
+                        linha terá a distância de 8 pixels que é a altura da 
+                        fonte padrão do allegro. 
+                      (i*<B>text_height</B>(font))</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo><SPAN><BR></SPAN></P>
+            <P class=conteudo><SPAN><BR></SPAN></P><SPAN class=conteudo><SPAN>
+            <HR>
+            </SPAN></SPAN>
+            <P class=conteudo><SPAN><SPAN class=titulos>FUNÇÕES REFERENTES AO 
+            ALINHAMENTO DO TEXTO COM IMPRESSÃO DE VARIÁVEIS</SPAN></SPAN></P>
+            <P class=conteudo>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#000099 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=5 width="100%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=#f7f7f7>
+                        <P class=conteudo><SPAN class=titulos_texto><IMG 
+                        height=17 src="TEXTO_arquivos/pic_pisca.gif" 
+                        width=17>VOCÊ PRECISA SABER... </SPAN></P>
+                        <P class=conteudo>Se você for utilizar textos muito 
+                        longos o manual do Allegro não aconselha a utilizar as 
+                        funções abaixo. 
+            </P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo><SPAN>Caso seja necessário utilizar você deverá 
+            intercalar essas funções com uma função auxiliar chamada 
+            <B>uszprintf</B> que é responsável por reservar o espaço necessário 
+            para alocar o texto inteiro. </SPAN></P>
+            <P class=conteudo><SPAN>Como o objetivo do artigo é ser o mais 
+            fácil, rápido e prático não iremos abordar exemplos com textos 
+            longos.<BR>Você vai perceber que no final da sintaxe de cada função 
+            existe “...” (Três pontinhos).</SPAN><BR><SPAN>Esses pontos indicam 
+            que você pode informar mais algum argumento. Esses argumentos não 
+            são obrigatórios, ou seja, você usa se quiser.<BR></SPAN></P>
+            <P class=conteudo><SPAN>Nos exemplos abaixo vamos exemplificar um 
+            resultado da pontuação de um jogador. <BR>Dessa forma, sempre que 
+            você compilar o programa você vai ver quanto o jogador fez de 
+            pontuação.<BR><BR>Como as funções abaixo se tratam de funções de 
+            alinhamento a regra para mudanças de coordenadas independentes da 
+            função é a mesma que as anteriores. <BR></SPAN></P><SPAN 
+            class=conteudo><SPAN></SPAN></SPAN>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo2 align=middle bgColor=#ffffff>void 
+                        <B>textprintf_ex</B>(BITMAP *bmp, const FONT *f, int x, 
+                        int y, int color, int bg, const char *fmt, ...);<A 
+                        id=textprintf_ex name=textprintf_ex></A></TD></TR>
+                    <TR>
+                      <TD bgColor=#ffffff>Essa função é responsável por 
+                        escrever o texto na tela da esquerda para a direita. 
+                        Dessa forma ela não precisa alterar a coordenada inicial 
+                        do texto, permanece no canto superior esquerdo. Essa 
+                        função recebe como argumentos:<BR><BR>- <B>Destino do 
+                        texto:</B> screen <BR>- <B>Tipo da fonte:</B> font<BR>- 
+                        <B>Posição x e posição y:</B> 0,0<BR>- <B>Cor do 
+                        texto:</B> makecol(0, 0, 255) - (Azul)<BR>- <B>Cor de 
+                        fundo do texto:</B> -1 - (Transparente)<BR>- 
+                        <B>Texto:</B> “Pontuacao.: %d”<BR>- <B>Continuação dos 
+                        argumentos:</B> 
+                        iPontos<BR><BR><B>Exemplo:</B><BR><BR>int 
+                        iPontos=1100;<BR><BR><B>textprintf_ex</B>(screen, font, 
+                        0, 0,makecol(0, 0, 255), -1,"Pontuacao.: 
+                        %d",iPontos);<BR><BR>O exempo acima mostra o texto 
+                        "Pontuacao.: %d" em azul com fundo 
+                    transparente.”<BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+            <SPAN class=conteudo><SPAN><BR><BR></SPAN></SPAN>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo2 align=middle bgColor=#ffffff>void 
+                        <B>textprintf_right_ex</B>(BITMAP *bmp, const FONT *f, 
+                        int x, y, color, bg, const char *fmt, ...);<A 
+                        id=textprintf_right_ex 
+                    name=textprintf_right_ex></A></TD></TR>
+                    <TR>
+                      <TD bgColor=#ffffff>Essa função é responsável por 
+                        alinhar o texto a direita. Essa função recebe como 
+                        argumentos:<BR><BR>- <B>Destino do texto:</B> 
+                        screen<BR>- <B>Tipo da fonte:</B> font<BR>- <B>Posição 
+                        x:</B> SCREEN_W = 640<BR>- <B>Posição y:</B> 0<BR>- 
+                        <B>Cor do texto:</B> makecol(255,255,0) – Amarelo<BR>- 
+                        <B>Cor do fundo do texto:</B> -1 - Transparente<BR>- 
+                        <B>Texto:</B> “Pontuacao.: %d”<BR>- <B>Continuação dos 
+                        argumentos:</B> 
+                        iPontos<BR><BR><B>Exemplo:</B><BR><BR>int 
+                        iPontos=1100;<BR><BR><B>textprintf_right_ex</B>(screen, 
+                        font,SCREEN_W, 0, makecol(255,255,0), -1,"Pontuacao.: 
+                        %d",iPontos);<BR><BR>O exemplo acima deve mostrar o 
+                        texto “Pontuacao.: 1100” alinhado no canto superior 
+                        direito da 
+            tela.<BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><SPAN 
+            class=conteudo><SPAN><BR></SPAN></SPAN>
+            <HR width="50%" SIZE=1>
+            <SPAN class=conteudo><SPAN><BR></SPAN></SPAN>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo2 align=middle bgColor=#ffffff>void 
+                        <B>textprintf_centre_ex</B>(BITMAP *bmp, const FONT *f, 
+                        int x, int y, int color, int bg, const char *fmt, 
+                        ...);<A id=textprintf_centre_ex 
+                        name=textprintf_centre_ex></A></TD></TR>
+                    <TR>
+                      <TD bgColor=#ffffff>Essa função é responsável por 
+                        centralizar o texto a partir da posição x,y que você 
+                        informar alterando a coordenada inicial da função para o 
+                        centro do texto. Essa função recebe como 
+                        argumentos:<BR><BR>- <B>Destino do texto:</B> 
+                        screen<BR>- <B>Tipo de fonte:</B> font<BR>- <B>Posição x 
+                        e y da fonte na tela:</B> x = Metade da largura máxima 
+                        da tela (320) e y = Metade da altura máxima da tela 
+                        (240).<BR>- <B>Cor do texto:</B> makecol(255, 0, 0) - 
+                        Vermelho<BR>- <B>Cor do fundo do texto:</B> makecol(0, 
+                        255, 0) - Verde<BR>- <B>Texto:</B> “Pontuacao.: %d”<BR>- 
+                        <B>Continuação dos argumentos:</B> 
+                        iPontos<BR><BR><B>Exemplo:</B><BR><BR>int 
+                        iPontos=1100;<BR><BR><B>textprintf_centre_ex</B>(screen, 
+                        font, SCREEN_W/2, SCREEN_H/2, makecol(255, 0, 0), 
+                        makecol(0, 255, 0),"Pontuacao.: 1100",iPontos);<BR><BR>O 
+                        exemplo acima deve mostrar o texto “Pontuacao.: 1100” no 
+                        centro da tela com a cor do fundo verde e o texto em 
+                        vermelho. A própria função se encarrega de centralizar o 
+                        texto independente do tamanho a partir da posição x,y 
+                        informada.<BR></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+            <SPAN class=conteudo><SPAN><BR><BR></SPAN></SPAN>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo2 align=middle bgColor=#ffffff>void 
+                        <B>textprintf_justify_ex</B>(BITMAP *bmp, const FONT *f, 
+                        int x1, x2, y, diff, color, bg, const char *fmt, ...);<A 
+                        id=textprintf_justify_ex 
+                      name=textprintf_justify_ex></A></TD></TR>
+                    <TR>
+                      <TD bgColor=#ffffff>Essa função é responsável por 
+                        justificar o texto. O resultado é o mesmo quando 
+                        justificamos os texto no Microsoft Office Word. Essa 
+                        função recebe como argumentos:<BR><BR>- <B>Destino do 
+                        texto:</B> screen<BR>- <B>O tipo de fonte:</B> font<BR>- 
+                        <B>Posição x inicial de onde você quer justificar o 
+                        texto:</B> 0<BR>- <B>Posição y final de onde você quer 
+                        justificar o texto:</B> 200 pixels<BR>- <B>Espaço entre 
+                        as linhas:</B> 8 pixels – usamos a função 
+                        <B>text_height</B> para tornar a rotina genérica para 
+                        outros tipos de textos.<BR>- <B>Diferença entre os 
+                        espaços das palavras:</B> 80 pixels. Esses 80 pixels é 
+                        dividido entre as palavras que compõem a linha. Dessa 
+                        forma o texto fica a linhado de ponta a ponta.<BR>- 
+                        <B>Cor do texto:</B> makecol(255, 255, 0)<BR>- <B>Cor do 
+                        fundo do texto:</B> -1 - Transparente<BR>- <B>Texto:</B> 
+                        sLinhas[i] – 4 linhas com um array iniciando de 0 a 
+                        3.<BR>sLinhas[0] - "Desenha o texto 
+                        justificado"<BR>sLinhas[1] - "conforme foi 
+                        especificado"<BR>sLinhas[2] - "o total de pontos que 
+                        o"<BR>sLinhas[3] - "jogador fez foi %d pontos"<BR>- 
+                        <B>Continuação dos argumentos:</B> 
+                        iPontos<BR><BR><B>Exemplo:</B><BR><BR><SPAN 
+                        class=codigo><BR></SPAN>
+                        <HR>
+                        <SPAN class=titulos_texto>CÓDIGO...</SPAN> 
+                        <HR>
+                        <SPAN class=codigo>int y=0;<BR>int i=0;<BR>int 
+                        iPontos=10;<BR><BR>char *cLinhas[] = {"Desenha o texto 
+                        justificado",<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"conforme 
+                        foi 
+                        especificado",<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"o 
+                        total de pontos que 
+                        o",<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"jogador 
+                        fez foi %d pontos", NULL};<BR><BR>vline(screen, 200, 0, 
+                        SCREEN_H-1, makecol(0, 255, 0));<BR><BR>for (i = 
+                        0;i&lt;4;i++) <SPAN class=comentario>// de 0 a 3 
+                        faça</SPAN><BR>{&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<B>textprintf_justify_ex</B>(screen, 
+                        font, 0, 200,i*text_height(font), 80, makecol(255, 255, 
+                        0),-1,cLinhas[i],iPontos);<BR>}<BR><BR>readkey(); 
+                        </SPAN><BR>
+                        <HR>
+                        <SPAN class=titulos_texto>FIM DE CÓDIGO</SPAN> 
+                        <HR>
+
+                        <P><BR>No exemplo acima criamos um array de caracteres 
+                        para podermos montar algumas frases. <BR>Nesse array 
+                        temos 4 linha de textos. Para o compilador cada linha 
+                        representa uma posição no array. </P>
+                        <P>Dessa forma temos a posição 0,1,2 e 3.</P>
+                        <P>A função <B>vline</B> é responsável por traçar uma 
+                        linha vertical na tela. <BR>Nesse exemplo foi usada 
+                        apenas para melhorar a visualização do texto 
+                        justificado. <BR>Veremos essa função em detalhes em 
+                        outro tópico.</P>
+                        <P>Para podermos justificar todas as linhas devemos 
+                        fazer um contador de 0 a 3. <BR><BR>A função 
+                        <B>text_height</B> pega a altura de cada linha em pixels 
+                        e multiplica pela posição da linha. </P>
+                        <P>Dessa forma cada linha terá a distância de 8 pixels 
+                        que é a altura da fonte padrão do allegro. 
+                        (i*<B>text_height</B>(font))<BR></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+
+            <P><SPAN class=conteudo><SPAN><BR></SPAN></SPAN></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo2 align=middle 
+                        bgColor=#ffffff>void<B><STRONG> set_uformat(int 
+                        type);</STRONG></B><A id=set_uformat 
+                        name=set_uformat></A></TD></TR>
+                    <TR>
+                      <TD bgColor=#ffffff>Essa função define a codificação 
+                        atual do texto que você quer utilizar. Isso vai afetar 
+                        todas as partes do Allegro no seu jogo. Recebe como 
+                        argumento apenas o tipo de codificação. Os tipos 
+                        suportados estão abaixo: 
+                        <P><STRONG>U_ASCII</STRONG> - Caracteres da tabela 
+                        ASCII. Permite utilizar caracteres com 
+                        acentos.<BR><STRONG>U_ASCII_CP</STRONG> – Página de 
+                        código alternativo de 8 
+                        bits.<BR><STRONG>U_UNICODE</STRONG> – Caracteres no 
+                        formato Unicode<BR><STRONG>U_UTF8</STRONG> - Caracteres 
+                        no formato UTF-8. Não permite acentuação.</P>
+                        <P>Por padrão, se você não definir a codificação o 
+                        allegro vai utilizar o U_UTF8. Caso você queira usar 
+                        textos com acentuação siga o exemplo abaixo.</P>
+                        <P><STRONG>Exemplo</STRONG>:</P>
+                        <P><STRONG>set_uformat</STRONG>( U_ASCII );</P>
+                        <P>Obs: Impreterivelmente você deve utilizar essa função 
+                        antes da função que inicia o allegro. Conforme 
+                        abaixo.</P>
+                        <P><STRONG>set_uformat</STRONG>( U_ASCII 
+                        );</P><STRONG>allegro_init</STRONG>();</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+            <BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD class=conteudo2 align=middle 
+                        bgColor=#ffffff>int<STRONG> 
+                        get_uformat(void);</STRONG><A id=get_uformat 
+                        name=get_uformat></A></TD></TR>
+                    <TR>
+                      <TD bgColor=#ffffff>Essa função é responsável por 
+                        retornar o tipo de codificação de texto que você está 
+                        utilizando no momento. Ela só é útil se você estiver 
+                        escrevendo um jogo para lidar com vários tipos de 
+                        codificação de texto, um addon, por exemplo. 
+                        <P><STRONG>Exemplo</STRONG>:</P>
+                        <P class=codigo>switch( <STRONG>get_uformat</STRONG>() ) 
+                        <BR>{<BR>&nbsp;&nbsp; case 
+                        <STRONG>U_ASCII</STRONG>:<BR>&nbsp;&nbsp; 
+                        allegro_message("Você está usando a codificação 
+                        U_ASCII");<BR>&nbsp;&nbsp; break;</P>
+                        <P class=codigo>&nbsp;&nbsp; case 
+                        <STRONG>U_UTF8</STRONG>:<BR>&nbsp;&nbsp; 
+                        allegro_message("Você está usando a codificação 
+                        U_UTF8");<BR>&nbsp;&nbsp; break;</P><SPAN 
+                        class=codigo>}</SPAN></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+
+            <P class=conteudo><SPAN><BR><BR>Caro leitor chegamos ao fim do 
+            entendimento do funcionamento das funções de texto do allegro. 
+            </SPAN></P>
+            <P class=conteudo><SPAN>Não necessariamente um jogo deve utilizar 
+            essas funções. <BR>Com prática você poderá desenvolver sua própria 
+            tabela de fontes através de imagens interativas e 
+            personalizadas.</SPAN></P>
+            <P class=conteudo>&nbsp;</P>
+            <P class=conteudo><SPAN><SPAN class=titulos_texto>Última 
+            atualização: 22/02/2008 
+            </SPAN><BR><BR>Abraço<BR>BDJogos<BR><BR><BR><SPAN 
+            class=conteudo><B>Contribuidor</B> <BR>Bruno A. Rovela<BR>21/06/2007 
+            </SPAN></SPAN></P>
+            <P class=conteudo><A class=conteudo 
+            href="javascript:history.go(-1)">Voltar </A></P></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background=TEXTO_arquivos/111.jpg><IMG height=1 
+      src="TEXTO_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background=TEXTO_arquivos/111.jpg colSpan=2 height=1><IMG 
+      height=1 src="TEXTO_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

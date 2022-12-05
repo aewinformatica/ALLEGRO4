@@ -1,0 +1,599 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0051)http://www.bdjogos.com/biblioteca_conteudo.php?id=9 -->
+<HTML><HEAD><TITLE></TITLE>
+<META content="" name=title>
+<META 
+content="Biblioteca de programação de jogos brasileira. Conteúdo Aberto! A Biblioteca dos Desenvolvedores de jogos" 
+name=description>
+<META 
+content="Jogos Biblioteca biblio Desenvolvimento Desenvolvedores Desenvolver programa programação games melhor ambicioso programações progra programar c/ c/c++ c++ java asp pascal algoritmo bdjogos exercícios nintendo Allegro Desenvolvimento de Jogos Programação de Jogos Desenvolvimento para Consoles Programação para Consoles ds nintendods visual double buffer 3d graficos 3D matematica aritme timer int string" 
+name=keywords>
+<META content=www.bdjogos.com.br name=url>
+<META content=Portuguese name=language>
+<META content="Adriano Waltrick - Bruno A. Rovela" name=author>
+<META content=GNU name=copyright>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"><LINK 
+href="ROTACAO_arquivos/estilos.css" type=text/css rel=stylesheet><LINK 
+href="ROTACAO_arquivos/indentador.css" type=text/css rel=stylesheet>
+<SCRIPT language=javascript src="ROTACAO_arquivos/indentador.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY vLink=#cd1006 aLink=#cd1006 link=#cd1006 bgColor=#ffffff leftMargin=0 
+background=ROTACAO_arquivos/bg.jpg topMargin=0 marginheight="0" marginwidth="0">
+<SCRIPT language=javascript src="ROTACAO_arquivos/posicao_mouse.js" 
+type=text/javascript></SCRIPT>
+
+<SCRIPT language=javascript>
+/*
+Autor 			: Adriano
+Data  			: 18/08/2006
+Descrição		: faz uma layer seguir o mouse
+*/
+function atualiza_pos_layer( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y+30;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y+30;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y+30;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_pos_layer2( vlayer )
+{	
+	vlayer.style.visibility = 'visible';
+	getMouse_Posicao(document.onmousemove);
+			
+	
+	vlayer.top  = pos_mouse_y-130;
+	vlayer.left = pos_mouse_x+10;
+	
+	vlayer.style.top  = pos_mouse_y-130;
+	vlayer.style.left = pos_mouse_x+10;
+
+	
+	vlayer.style.pixelTop = pos_mouse_y-130;
+	vlayer.style.pixelLeft = pos_mouse_x+10;
+}
+
+function atualiza_layer( vlayer )
+{
+	vlayer.style.visibility = 'hidden';
+}
+</SCRIPT>
+
+<STYLE type=text/css>#layer_menu1 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 220px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu2 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu3 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_menu4 {
+	Z-INDEX: 1; LEFT: 10px; VISIBILITY: hidden; WIDTH: 150px; CURSOR: hand; POSITION: absolute; TOP: 10px; HEIGHT: 25px
+}
+#layer_procurar {
+	Z-INDEX: 2; LEFT: 584px; WIDTH: 196px; POSITION: absolute; TOP: 47px; HEIGHT: 25px
+}
+</STYLE>
+
+<DIV id=layer_menu1>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="ROTACAO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=ROTACAO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="ROTACAO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="ROTACAO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=ROTACAO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Conheça a iniciativa da Biblioteca dos 
+      Desenvolvedores</TD>
+    <TD background=ROTACAO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="ROTACAO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=ROTACAO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="ROTACAO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="ROTACAO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu2>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="ROTACAO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=ROTACAO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="ROTACAO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="ROTACAO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=ROTACAO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Índice da Biblioteca</TD>
+    <TD background=ROTACAO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="ROTACAO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=ROTACAO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="ROTACAO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="ROTACAO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu3>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="ROTACAO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=ROTACAO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="ROTACAO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="ROTACAO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=ROTACAO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Área dos Usuários</TD>
+    <TD background=ROTACAO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="ROTACAO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=ROTACAO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="ROTACAO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="ROTACAO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_menu4>
+<TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+  <TBODY>
+  <TR>
+    <TD width="1%"><IMG height=8 src="ROTACAO_arquivos/borda_cima1.gif" 
+      width=8></TD>
+    <TD width="97%" background=ROTACAO_arquivos/linha_hor_cima.gif><IMG 
+      height=8 src="ROTACAO_arquivos/linha_hor_cima.gif" width=8></TD>
+    <TD width="2%"><IMG height=8 src="ROTACAO_arquivos/borda_cima2.gif" 
+      width=8></TD></TR>
+  <TR>
+    <TD background=ROTACAO_arquivos/linha_vertical.gif>
+      <DIV align=left></DIV></TD>
+    <TD class=conteudo bgColor=#ffffff>Fórum de Discussão</TD>
+    <TD background=ROTACAO_arquivos/linha_ver_di.gif>&nbsp;</TD></TR>
+  <TR>
+    <TD><IMG height=8 src="ROTACAO_arquivos/borda_baixo1.gif" width=8></TD>
+    <TD vAlign=center background=ROTACAO_arquivos/linha_horizo.gif><IMG 
+      height=8 src="ROTACAO_arquivos/linha_horizo.gif" width=8></TD>
+    <TD><IMG height=8 src="ROTACAO_arquivos/borda_baixo2.gif" 
+  width=8></TD></TR></TBODY></TABLE></DIV>
+<DIV id=layer_procurar>
+<TABLE cellSpacing=1 cellPadding=2 width="100%" border=0>
+  <FORM id=form1 name=form1 action=procurar.php method=post>
+  <TBODY>
+  <TR>
+    <TD><LABEL>
+      <DIV align=right><INPUT class=conteudo2 size=15 name=procurar> 
+      </DIV></LABEL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=right><INPUT class=conteudo2 type=submit value=Pesquisar name=Submit> 
+      </DIV></TD></TR></FORM></TBODY></TABLE></DIV>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=top colSpan=2 height=101>
+      <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top width=235 height=101><A 
+            href="http://www.bdjogos.com/"><IMG alt="" 
+            src="ROTACAO_arquivos/index_01.jpg" border=0></A></TD>
+          <TD vAlign=top width=81><A 
+            onmousemove=atualiza_pos_layer(layer_menu1); 
+            onmouseout=atualiza_layer(layer_menu1); 
+            href="http://www.bdjogos.com/conteudo.php"><IMG 
+            src="ROTACAO_arquivos/index_02.jpg" border=0> </A></TD>
+          <TD vAlign=top width=73><A 
+            onmousemove=atualiza_pos_layer(layer_menu2); 
+            onmouseout=atualiza_layer(layer_menu2); 
+            href="http://www.bdjogos.com/biblioteca.php"><IMG 
+            src="ROTACAO_arquivos/index_03.jpg" border=0></A></TD>
+          <TD vAlign=top width=80><A 
+            onmousemove=atualiza_pos_layer(layer_menu3); 
+            onmouseout=atualiza_layer(layer_menu3); 
+            href="http://www.bdjogos.com/usuarios.php"><IMG 
+            src="ROTACAO_arquivos/index_04.jpg" border=0></A></TD>
+          <TD vAlign=top width=90><A 
+            onmousemove=atualiza_pos_layer(layer_menu4); 
+            onmouseout=atualiza_layer(layer_menu4); 
+            href="http://www.bdjogos.com/forum/"><IMG alt=Forúm 
+            src="ROTACAO_arquivos/index_05.jpg" border=0></A></TD>
+          <TD vAlign=top width=221><IMG alt="" 
+            src="ROTACAO_arquivos/index_06.jpg"></TD></TR></TBODY></TABLE></TD>
+    <TD vAlign=top width=1 background=ROTACAO_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="ROTACAO_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD width=27 height=10></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=22></TD>
+    <TD width=228></TD>
+    <TD width=25></TD>
+    <TD vAlign=top width=1 background=ROTACAO_arquivos/111.jpg rowSpan=2><IMG 
+      height=1 src="ROTACAO_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD height=333>&nbsp;</TD>
+    <TD vAlign=top colSpan=5>
+      <TABLE cellSpacing=0 cellPadding=0 width=728 bgColor=#ffffff border=0>
+        <TBODY>
+        <TR>
+          <TD vAlign=top colSpan=3 height=21><IMG height=21 
+            src="ROTACAO_arquivos/sub-1.jpg" width=728></TD></TR>
+        <TR>
+          <TD width=10 height=303>&nbsp;</TD>
+          <TD class=conteudo vAlign=top><LINK 
+            href="ROTACAO_arquivos/estilos.css" type=text/css 
+            rel=stylesheet><SPAN class=titulos>OPERAÇÕES COM IMAGENS (ROTAÇÃO E 
+            ESCALA)</SPAN> 
+            <HR>
+
+            <P class=conteudo>Nesse capitulo iremos aprender a usar as funções 
+            de rotação e escala que o Allegro disponibiliza para os 
+            programadores. Abaixo segue a imagem que iremos utilizar e uma lista 
+            das funções.</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="50%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=0 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P align=center><STRONG>Imagem</STRONG></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P align=center><IMG height=76 
+                        src="ROTACAO_arquivos/bdjogos.jpg" width=215 
+                        border=1></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <UL>
+              <LI class=conteudo><STRONG>rotate_sprite</STRONG> 
+              <LI class=conteudo><STRONG>rotate_sprite_v_flip</STRONG> 
+              <LI class=conteudo><STRONG>rotate_scaled_sprite</STRONG> 
+              <LI class=conteudo><STRONG>rotate_scaled_sprite_v_flip</STRONG> 
+              </LI></UL>
+            <P class=conteudo>Todas as funções de rotação e escala possuem o 
+            argumento <STRONG>angle</STRONG> ou <STRONG>scale</STRONG> que são 
+            do tipo <STRONG>fixed</STRONG>. <BR>Em especial para esse argumento, 
+            devemos fazer a conversão do valor inteiro para fixo. </P>
+            <P class=conteudo>A função responsável por essa conversão é 
+            <STRONG>itofix (int)</STRONG>.<BR></P>
+            <TABLE cellSpacing=0 cellPadding=0 width="80%" align=center 
+            bgColor=#000099 border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE cellSpacing=1 cellPadding=5 width="100%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD bgColor=#f7f7f7>
+                        <P class=titulos_texto><IMG height=17 
+                        src="ROTACAO_arquivos/pic_pisca.gif" width=17>VOCÊ 
+                        PRECISA SABER... </P>
+                        <P class=conteudo><STRONG>Ângulo com o valor positivo 
+                        rotaciona a imagem no sentido horário. 
+                        </STRONG><BR><STRONG>Ângulo com valor negativo rotaciona 
+                        imagem no sentido 
+                    anti-horário.</STRONG></P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P class=titulos>&nbsp;</P>
+            <P class=titulos>FUNÇÕES DE ROTAÇÃO </P>
+            <HR>
+
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2>void 
+                        <STRONG>rotate_sprite</STRONG>(BITMAP *bmp, BITMAP 
+                        *sprite, int x, int y, fixed angle);<A id=rotate_sprite 
+                        name=rotate_sprite></A></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Essa função rotaciona qualquer imagem. </P>
+                        <P>No entanto, ela não segue as regras do mundo real. 
+                        Por exemplo, para nós um circulo cheio tem 360 graus, 
+                        para essa função um circulo cheio tem 256 graus. Assim 
+                        como para cada um dos 4 lados de uma circunferência 
+                        temos 90 graus, nessa função cada lado tem 64 graus. Ela 
+                        recebe como argumentos:</P>
+                        <UL>
+                          <LI><STRONG>Destino da imagem rotacionada</STRONG>: 
+                          screen 
+                          <LI><STRONG>Imagem que devemos rotacionar</STRONG>: 
+                          bdjogos 
+                          <LI><STRONG>Posição x</STRONG>: 0 
+                          <LI><STRONG>Posição y</STRONG>: 0 
+                          <LI><STRONG>Ângulo da imagem</STRONG>: itofix(0) – 
+                          Zero Graus </LI></UL>
+                        <P><STRONG>Exemplos</STRONG>:</P>
+                        <P><STRONG>rotate_sprite</STRONG>(screen, bdjogos, 0, 0, 
+                        itofix(0)); // 0 
+                        graus<BR><STRONG>rotate_sprite</STRONG>(screen, bdjogos, 
+                        0, 155, itofix(64)); // 90 
+                        graus<BR><STRONG>rotate_sprite</STRONG>(screen, bdjogos, 
+                        0, 310, itofix(128)); // 180 
+                        graus<BR><STRONG>rotate_sprite</STRONG>(screen, bdjogos, 
+                        0, 400, itofix(256)); // 360 graus</P>
+                        <P>O exemplo acima deve rotacionar a imagem em 64 graus, 
+                        o que é equivalente a 90 graus para nós. 
+                    </P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+
+            <P>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD vAlign=top>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2>void 
+                        <STRONG>rotate_sprite_v_flip</STRONG>(BITMAP *bmp, 
+                        BITMAP *sprite, int x, int y, fixed angle);<A 
+                        id=rotate_sprite_v_flip 
+                        name=rotate_sprite_v_flip></A></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Essa função funciona como o 
+                        <STRONG>rotate_sprite</STRONG>, mas inverte a imagem 
+                        verticalmente antes de girá-la. Ela recebe como 
+                        argumentos:</P>
+                        <UL>
+                          <LI><STRONG>Destino da imagem rotacionada</STRONG>: 
+                          screen 
+                          <LI><STRONG>Imagem que devemos rotacionar</STRONG>: 
+                          bdjogos 
+                          <LI><STRONG>Posição x</STRONG>: 0 
+                          <LI><STRONG>Posição y</STRONG>: 0 
+                          <LI><STRONG>Ângulo da imagem</STRONG>: itofix(0) – 
+                          Zero Graus </LI></UL>
+                        <P><STRONG>Exemplos:</STRONG></P>
+                        <P><STRONG>rotate_sprite_v_flip</STRONG>(screen, 
+                        bdjogos, 0, 0, 
+                        itofix(0));<BR><STRONG>rotate_sprite_v_flip</STRONG>(screen, 
+                        bdjogos, 0, 155, 
+                        itofix(64));<BR><STRONG>rotate_sprite_v_flip</STRONG>(screen, 
+                        bdjogos, 0, 310, 
+                        itofix(128));<BR><STRONG>rotate_sprite_v_flip</STRONG>(screen, 
+                        bdjogos, 0, 400, itofix(256));</P>O exemplo acima 
+                        inverte a imagem verticalmente antes de 
+                    rotacionar.</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo>Veja a diferença clara entre as duas funções 
+            escrevendo o código abaixo no seu compilador.</P>
+            <HR>
+            <SPAN class=titulos>CÓDIGO...</SPAN> 
+            <HR>
+            <SPAN class=codigo>#include &lt;allegro.h&gt;<BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(32);<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_WINDOWED, 
+            640, 480, 0, 0);<BR><BR>&nbsp;&nbsp;&nbsp;BITMAP 
+            *bdjogos=NULL;<BR>&nbsp;&nbsp;&nbsp;bdjogos = 
+            create_bitmap(215,76);<BR>&nbsp;&nbsp;&nbsp;bdjogos = 
+            load_bitmap("bdjogos.bmp",NULL);<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;rotate_sprite(screen, 
+            bdjogos, 0, 0, 
+            itofix(0));<BR>&nbsp;&nbsp;&nbsp;rotate_sprite(screen, bdjogos, 0, 
+            155, itofix(64));<BR>&nbsp;&nbsp;&nbsp;rotate_sprite(screen, 
+            bdjogos, 0, 310, 
+            itofix(128));<BR>&nbsp;&nbsp;&nbsp;rotate_sprite(screen, bdjogos, 0, 
+            400, itofix(256));<BR><BR>&nbsp;&nbsp;&nbsp;rotate_sprite(screen, 
+            bdjogos, 200, 155, 
+            itofix(32));<BR><BR>&nbsp;&nbsp;&nbsp;rotate_sprite_v_flip(screen, 
+            bdjogos, 300, 0, 
+            itofix(0));<BR>&nbsp;&nbsp;&nbsp;rotate_sprite_v_flip(screen, 
+            bdjogos, 300, 155, 
+            itofix(64));<BR>&nbsp;&nbsp;&nbsp;rotate_sprite_v_flip(screen, 
+            bdjogos, 300, 310, 
+            itofix(128));<BR>&nbsp;&nbsp;&nbsp;rotate_sprite_v_flip(screen, 
+            bdjogos, 300, 400, 
+            itofix(256));<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;readkey();<BR>&nbsp;&nbsp;&nbsp;destroy_bitmap(bdjogos);<BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+            0;<BR>}<BR>END_OF_MAIN();<BR></SPAN><BR>
+            <HR>
+            <SPAN class=titulos>FIM DO CÓDIGO</SPAN> 
+            <HR>
+
+            <P class=conteudo>O código acima deve deixar claro a diferença entre 
+            as duas funções.<BR>Execute e confira o resultado...</P>
+            <CENTER>
+            <P><IMG src="ROTACAO_arquivos/rotacao.jpg" border=1></P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P>
+            <P>&nbsp;</P></CENTER><BR><SPAN class=titulos>FUNÇÕES DE ROTAÇÃO E 
+            ESCALA</SPAN> 
+            <HR>
+            <BR>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2>void 
+                        <STRONG>rotate_scaled_sprite</STRONG>(BITMAP *bmp, 
+                        BITMAP *sprite, int x, int y, fixed angle, fixed 
+                        scale);<A id=rotate_scaled_sprite 
+                        name=rotate_scaled_sprite></A></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Essa função aumenta a escala e rotaciona ao mesmo 
+                        tempo. </P>
+                        <P>Se você precisar utilizar essas duas opções ao mesmo 
+                        tempo essa função é perfeita. Ela recebe como 
+                        argumentos:</P>
+                        <UL>
+                          <LI><STRONG>Destino da imagem rotacionada e 
+                          ampliada</STRONG>: screen 
+                          <LI><STRONG>Imagem que devemos rotacionar ou 
+                          ampliar</STRONG>: bdjogos 
+                          <LI><STRONG>Posição x</STRONG>: 0 
+                          <LI><STRONG>Posição y</STRONG>: 100 
+                          <LI><STRONG>Ângulo da imagem</STRONG>: itofix(0) – 
+                          Zero Graus 
+                          <LI><STRONG>Escala da imagem</STRONG>: 2 </LI></UL>
+                        <P><STRONG>Exemplo</STRONG>:</P><SPAN 
+                        class=comentario>//Imagem com escala maior 
+                        </SPAN><BR><STRONG>rotate_scaled_sprite</STRONG>(screen, 
+                        bdjogos, 0, 0, itofix(0), itofix(2)); 
+                        <P>O exemplo acima mostra a imagem ampliada em 2x o 
+                        tamanho dela. A escala sempre vai ser a quantidade de 
+                        vezes que você quer expandir a imagem. Nesse caso a 
+                        imagem foi expandida duas 
+                vezes.</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <HR width="50%" SIZE=1>
+
+            <P>&nbsp;</P>
+            <TABLE cellSpacing=0 cellPadding=0 width="90%" align=center 
+            bgColor=#cccccc border=0>
+              <TBODY>
+              <TR>
+                <TD>
+                  <TABLE class=conteudo cellSpacing=1 cellPadding=5 width="100%" 
+                  align=center border=0>
+                    <TBODY>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P class=conteudo2>void 
+                        <STRONG>rotate_scaled_sprite_v_flip</STRONG>(BITMAP 
+                        *bmp, BITMAP *sprite, int x, int y, fixed angle, fixed 
+                        scale);<A id=rotate_scaled_sprite_v_flip 
+                        name=rotate_scaled_sprite_v_flip></A></P></TD></TR>
+                    <TR>
+                      <TD vAlign=top bgColor=#ffffff>
+                        <P>Essa função aumenta a escala e rotaciona ao mesmo 
+                        tempo. Se você precisar utilizar essas duas opções ao 
+                        mesmo tempo essa função é perfeita. Ela recebe como 
+                        argumentos:</P>
+                        <UL>
+                          <LI><STRONG>Destino da imagem rotacionada e 
+                          ampliada</STRONG>: screen 
+                          <LI><STRONG>Imagem que devemos rotacionar ou 
+                          ampliar</STRONG>: bdjogos 
+                          <LI><STRONG>Posição x</STRONG>: 0 
+                          <LI><STRONG>Posição y</STRONG>: 100 
+                          <LI><STRONG>Ângulo da imagem</STRONG>: itofix(0) – 
+                          Zero Graus 
+                          <LI><STRONG>Escala da imagem</STRONG>: 2 </LI></UL>
+                        <P><STRONG>Exemplo</STRONG>:</P><SPAN 
+                        class=comentario>//Imagem invertida e com escala maior 
+                        </SPAN><BR><STRONG>rotate_scaled_sprite_v_flip</STRONG>(screen, 
+                        bdjogos, 0, 0, itofix(0), itofix(2)); 
+                        <P>O exemplo acima mostra a imagem invertida e ampliada 
+                        em 2x o tamanho dela. A escala sempre vai ser a 
+                        quantidade de vezes que você quer expandir a imagem. 
+                        Nesse caso a imagem foi expandida duas 
+                    vezes.</P></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+            <P class=conteudo>Para exemplificar o resultado das duas funções 
+            segue o código abaixo. </P>
+            <P class=conteudo>&nbsp;</P>
+            <HR>
+            <SPAN class=titulos>CÓDIGO...</SPAN> 
+            <HR>
+            <SPAN class=codigo>#include &lt;allegro.h&gt;<BR><BR>int 
+            main()<BR>{<BR>&nbsp;&nbsp;&nbsp;allegro_init();<BR>&nbsp;&nbsp;&nbsp;install_keyboard();<BR>&nbsp;&nbsp;&nbsp;set_color_depth(32);<BR>&nbsp;&nbsp;&nbsp;set_gfx_mode(GFX_AUTODETECT_WINDOWED, 
+            640, 480, 0, 0);<BR><BR>&nbsp;&nbsp;&nbsp;BITMAP 
+            *bdjogos=NULL;<BR>&nbsp;&nbsp;&nbsp;bdjogos = 
+            create_bitmap(215,76);;<BR>&nbsp;&nbsp;&nbsp;bdjogos = 
+            load_bitmap("bdjogos.bmp",NULL);<BR><BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>// Imagem normal sem rotação e escala 
+            </SPAN><BR>&nbsp;&nbsp;&nbsp;rotate_scaled_sprite(screen, bdjogos, 
+            0, 0, itofix(0), 
+            itofix(1));<BR>&nbsp;&nbsp;&nbsp;rotate_scaled_sprite(screen, 
+            bdjogos, 215, 0, itofix(0), 
+            itofix(1));<BR>&nbsp;&nbsp;&nbsp;rotate_scaled_sprite(screen, 
+            bdjogos, 0, 76, itofix(0), 
+            itofix(1));<BR>&nbsp;&nbsp;&nbsp;rotate_scaled_sprite(screen, 
+            bdjogos, 215, 76, itofix(0), 
+            itofix(1));<BR>&nbsp;&nbsp;&nbsp;<BR>&nbsp;&nbsp;&nbsp;<SPAN 
+            class=comentario>//Imagem invertida sem rotação com 2 vezes o seu 
+            tamanho</SPAN><BR>&nbsp;&nbsp;&nbsp;rotate_scaled_sprite_v_flip(screen, 
+            bdjogos, 0, 200, itofix(0), 
+            itofix(2));<BR><BR>&nbsp;&nbsp;&nbsp;readkey();<BR>&nbsp;&nbsp;&nbsp;destroy_bitmap(bdjogos);<BR>&nbsp;&nbsp;&nbsp;allegro_exit();<BR>&nbsp;&nbsp;&nbsp;return 
+            0;<BR>}<BR>END_OF_MAIN();<BR></SPAN><BR>
+            <HR>
+            <SPAN class=titulos>FIM DO CÓDIGO</SPAN> 
+            <HR>
+            <BR><SPAN class=conteudo>Copie o código acima para o seu compilador 
+            e execute para conferir o resultado. <BR><BR></SPAN>
+            <CENTER><SPAN class=conteudo><IMG src="ROTACAO_arquivos/escala.jpg" 
+            border=1></SPAN> </CENTER><SPAN class=conteudo><BR><BR></SPAN>
+            <P class=conteudo>Caro leitor, chegamos ao fim do entendimento das 
+            funções de rotação e escala de imagens.<BR>Qualquer dúvida entre em 
+            contato com o pessoal da BDJgos através do fórum.</P>
+            <P class=conteudo>Abraço<BR>BDJogos</P><BR><BR><SPAN 
+            class=conteudo><B>Contribuidor</B> <BR>Bruno A. Rovela<BR>10/07/2007 
+            </SPAN>
+            <P class=conteudo><A class=conteudo 
+            href="javascript:history.go(-1)">Voltar </A></P></TD>
+          <TD width=10>&nbsp;</TD></TR>
+        <TR>
+          <TD height=9></TD>
+          <TD></TD>
+          <TD></TD></TR></TBODY></TABLE></TD>
+    <TD>&nbsp;</TD></TR></TBODY></TABLE>
+<SCRIPT 
+language=javascript>
+salva_codigo();
+JsCC_convert();
+numeracao();
+</SCRIPT>
+
+<TABLE cellSpacing=0 cellPadding=0 width=781 border=0>
+  <TBODY>
+  <TR>
+    <TD vAlign=center align=middle width=780 height=65>
+      <P class=conteudo><STRONG><FONT 
+      color=#000000>01/06/2007</FONT></STRONG><FONT color=#000000> (C) 
+      Copyright. Todos os Direitos Reservados. <A class=codigo 
+      href="http://www.bdjogos.com/copy.php">Leia a política de privacidade do 
+      portal. </A><BR>É proibida a cópia de conteúdo deste site de acordo com a 
+      Lei Brasileira de Direitos Autorais.</FONT></P></TD>
+    <TD vAlign=top width=1 background=ROTACAO_arquivos/111.jpg><IMG height=1 
+      src="ROTACAO_arquivos/111.jpg" width=1></TD></TR>
+  <TR>
+    <TD vAlign=top background=ROTACAO_arquivos/111.jpg colSpan=2 height=1><IMG 
+      height=1 src="ROTACAO_arquivos/111.jpg" width=1></TD></TR></TBODY></TABLE>
+<SCRIPT type=text/javascript>
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</SCRIPT>
+
+<SCRIPT type=text/javascript>
+var pageTracker = _gat._getTracker("UA-1936336-1");
+pageTracker._initData();
+pageTracker._trackPageview();
+</SCRIPT>
+</BODY></HTML>

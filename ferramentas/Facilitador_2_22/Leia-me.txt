@@ -1,0 +1,44 @@
+Facilitador de Trabalho chato pra Caralho
+Alexandre Abdalla
+versão: 2.22
+
+
+Como usar ?
+
+4 Opções por enquanto:
+
+fundo:
+Limpa o fundo para o padrão 255,0,255 RGB.
+A cor de fundo eh considerada a cor do primeiro pixel da imagem (0,0)
+
+strips:
+Recorta uma Strip necessariamente horizontal de N imagens
+com espaçamento e salva em varios arquivos de saída.
+
+massa:
+Converte qualquer N imagens (0 < N < 10000) para *.pcx 24 bits.
+Tambem limpa a cor de fundo (semelhante a opção fundo) de todas as imagens,
+permite rotaciona-las e renomea-las.
+NOVO: Agora tambem permite salvar imagens com canal alpha (32 bits)
+E carrega-las diretamente no data sem precisar ficar carregando pelo grabber.
+Quando voce opta por isso o arquivo será salvo em targa (*.tga)
+
+
+data:
+operacao exclusiva para o uso do Allegro e requer o uso do programa dat.exe
+tambem do Allegro. Le N arquivos de forma semelhante a Edicao em Massa.
+Salva em um aqruivo de compactacao DATA (*.dat), ordenado pelo nome e 
+com compressao global. Permite salvar arquivos de cabecalho 
+associados ao data e selecao de senha.
+
+Dica:
+Copie para a pasta onde será manipulada as imagens
+isso facilita na hora de colocar o endereço do arquivo de entrada.
+
+
+Atualizações:
+
+- Bug do Bloqueio do driver de som reparado
+- Incrementação de Alpha para salvar em arquivo.
+- Controle de Eventos sob controle do S.O. (agora mais rapido e eficiente)
+- Carregamento de arquivo em massa sem ser somente PCX (agora: BMP, PCX, TGA, LBM)
